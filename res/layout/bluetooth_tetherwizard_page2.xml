@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/image" android:paddingTop="@com.htc:dimen/margin_l" android:paddingBottom="@com.htc:dimen/margin_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_intro_bluetooth_tethering" />
+        <View style="@style/inset_line_divider" />
+        <TextView android:textAppearance="@com.htc:style/list_body_primary_m" android:id="@id/desc" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingTop="@com.htc:dimen/spacing_2" android:paddingRight="@com.htc:dimen/margin_l" android:paddingBottom="@com.htc:dimen/margin_xs_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bluetooth_tetherwizard_description2" />
+        <View style="@style/inset_line_divider" />
+        <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/bluetooth_tetherwizard_devicename" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@com.htc:style/list_primary_m" />
+        </com.htc.widget.HtcListItem>
+        <View style="@style/inset_line_divider" />
+    </LinearLayout>
+</ScrollView>

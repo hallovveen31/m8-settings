@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d files</item>
+        <item quantity="zero">%d file</item>
+        <item quantity="one">%d file</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d próbálkozási lehetőség maradt a készülék adatainak törlése előtt.</item>
+        <item quantity="one">%1$d próbálkozási lehetőség maradt a készülék adatainak törlése előtt.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Ön %1$d lépésre van attól, hogy fejlesztő legyen.</item>
+        <item quantity="one">Ön %1$d lépésre van attól, hogy fejlesztő legyen.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">A jelszónak legalább %d betűt kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1 betűt kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">A jelszónak legalább %d kisbetűt kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1 kisbetűt kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">A jelszónak legalább %d nagybetűt kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1 nagybetűt kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">A jelszónak legalább %d számot kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1 számot kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">A jelszónak legalább %d speciális karaktert kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1 speciális karaktert kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">A jelszónak legalább %d, betűktől eltérő karaktert kell tartalmaznia.</item>
+        <item quantity="one">A jelszónak legalább 1, betűktől eltérő karaktert kell tartalmaznia.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d alkalmazás tudja olvasni az értesítéseket</item>
+        <item quantity="one">%d alkalmazás tudja olvasni az értesítéseket</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s nyomtató található</item>
+        <item quantity="one">%1$s nyomtató található</item>
+    </plurals>
+</resources>

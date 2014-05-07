@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/print_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/print_print_jobs" android:key="print_jobs_category" android:order="0" />
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/print_settings_title" android:key="print_services_category" android:order="1" />
+</com.htc.preference.HtcPreferenceScreen>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="finger_entering_path_x">
+        <item>1080</item>
+        <item>953</item>
+        <item>692</item>
+        <item>557</item>
+        <item>507</item>
+        <item>512</item>
+        <item>515</item>
+        <item>518</item>
+        <item>519</item>
+        <item>521</item>
+    </integer-array>
+    <integer-array name="finger_entering_path_y">
+        <item>-143</item>
+        <item>-120</item>
+        <item>-60</item>
+        <item>-56</item>
+        <item>3</item>
+        <item>4</item>
+        <item>6</item>
+        <item>6</item>
+        <item>7</item>
+        <item>7</item>
+    </integer-array>
+    <integer-array name="finger_swiping_path_x">
+        <item>521</item>
+        <item>567</item>
+        <item>761</item>
+    </integer-array>
+    <integer-array name="finger_swiping_path_y">
+        <item>7</item>
+        <item>7</item>
+        <item>7</item>
+    </integer-array>
+    <integer-array name="finger_leaving_path_x">
+        <item>761</item>
+        <item>879</item>
+        <item>1040</item>
+        <item>1080</item>
+    </integer-array>
+    <integer-array name="finger_leaving_path_y">
+        <item>7</item>
+        <item>6</item>
+        <item>-123</item>
+        <item>-143</item>
+    </integer-array>
+</resources>

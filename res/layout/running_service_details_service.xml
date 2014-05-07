@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/service" layout="@layout/specific_running_processes_item" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/comp_description" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_l" style="@com.htc:style/list_body_primary_m" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/control_buttons_panel" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l" android:layout_below="@id/comp_description">
+            <com.htc.widget.HtcRimButton android:layout_gravity="center" android:id="@id/left_button" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" style="@com.htc:style/button_primary_m" />
+            <com.htc.widget.HtcRimButton android:layout_gravity="center" android:id="@id/right_button" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:singleLine="true" android:layout_weight="1.0" style="@com.htc:style/button_primary_m" />
+        </LinearLayout>
+        <View android:id="@id/comp_service_divider" style="@style/inset_line_divider" />
+    </RelativeLayout>
+</LinearLayout>

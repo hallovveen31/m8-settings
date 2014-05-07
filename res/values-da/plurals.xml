@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d filer</item>
+        <item quantity="zero">%d fil</item>
+        <item quantity="one">%d fil</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d forsøg tilbage, før enhedens data slettes.</item>
+        <item quantity="one">%1$d forsøg tilbage, før enhedens data slettes.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Du er nu %1$d trin fra at være udvikler.</item>
+        <item quantity="one">Du er nu %1$d trin fra at være udvikler.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d små bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét lille bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d store bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét stort bogstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d tal.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 tal.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d specialtegn.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét specialtegn.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d tegn, der ikke er bogstaver.</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst ét tegn, der ikke er et bogstav.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d programmer kan læse meddelelser</item>
+        <item quantity="one">%d program kan læse meddelelser</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s printere fundet</item>
+        <item quantity="one">%1$s printere fundet</item>
+    </plurals>
+</resources>

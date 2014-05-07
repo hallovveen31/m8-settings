@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d bestanden</item>
+        <item quantity="zero">%d bestand</item>
+        <item quantity="one">%d bestand</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d pogingen resterend voordat de toestelgegevens worden verwijderd</item>
+        <item quantity="one">%1$d poging resterend voordat de toestelgegevens worden verwijderd</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Je bent nu %1$d stappen verwijderd van ontwikkelaar zijn.</item>
+        <item quantity="one">Je bent nu %1$d stap verwijderd van ontwikkelaar zijn.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Wachtwoord moet ten minste %d letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één letter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Wachtwoord moet ten minste %d kleine letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één kleine letter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Wachtwoord moet ten minste %d hoofdletters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één hoofdletter bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Wachtwoord moet ten minste %d cijfers bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één cijfer bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Wachtwoord moet ten minste %d speciale symbolen bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één speciaal symbool bevatten.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Wachtwoord moet ten minste %d andere tekens dan letters bevatten.</item>
+        <item quantity="one">Wachtwoord moet ten minste één ander teken dan letters bevatten.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d app kunnen meldingen lezen</item>
+        <item quantity="one">%d app kan meldingen lezen</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s printers gevonden</item>
+        <item quantity="one">%1$s printer gevonden</item>
+    </plurals>
+</resources>

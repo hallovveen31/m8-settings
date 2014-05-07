@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:orientation="vertical" android:id="@id/all_details" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:id="@id/header_listitem_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItemColorIcon android:id="@id/icon" htc:imageMode="none" />
+                <com.htc.widget.HtcListItem2LineTextProgressBar android:id="@id/progress" />
+            </com.htc.widget.HtcListItem>
+            <View android:id="@id/header_item_divider" android:background="@com.htc:drawable/common_list_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <include android:id="@id/htc_two_buttons_panel" layout="@layout/htc_two_buttons_panel" />
+        <com.htc.widget.HtcListItemSeparator android:layout_width="fill_parent" android:layout_height="wrap_content" htc:leftText="@string/details_subtitle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/details" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.htc.widget.HtcListItemSeparator android:id="@id/service_separator" android:layout_width="fill_parent" android:layout_height="wrap_content" htc:leftText="@string/services_subtitle" />
+        <LinearLayout android:orientation="vertical" android:id="@id/services" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

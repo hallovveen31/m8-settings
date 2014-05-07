@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/wifi_section">
+        <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/spacing_2" android:layout_marginBottom="@com.htc:dimen/margin_xs_2" android:text="@string/vpn_lockdown_summary" style="@com.htc:style/list_body_primary_m" />
+        </com.htc.widget.HtcListItem>
+        <View style="@style/inset_line_divider" />
+        <com.htc.widget.HtcListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@com.htc:style/HtcListView" />
+    </LinearLayout>
+</ScrollView>

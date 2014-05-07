@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/wifi_section">
+        <LinearLayout android:id="@id/editor" android:visibility="gone" style="@style/wifi_section">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_name">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/name" android:inputType="textCapWords" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_type">
+                    <com.htc.widget.HtcSpinner android:entries="@array/vpn_types" android:id="@id/type" android:prompt="@string/vpn_type" style="@style/wifi_item_spinner" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_server">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/server" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <LinearLayout android:orientation="vertical" android:id="@id/mppe" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem2LineText android:id="@id/vpn_mppe" />
+                    <com.htc.widget.HtcCheckBox android:id="@id/mppe_checkbox" />
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/l2tp" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_l2tp_secret">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/l2tp_secret" android:hint="@string/vpn_not_used" android:password="true" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:id="@id/ipsec_psk" android:visibility="gone" style="@style/wifi_section">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_ipsec_identifier">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/ipsec_identifier" android:hint="@string/vpn_not_used" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_ipsec_secret">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/ipsec_secret" android:password="true" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ipsec_user" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_ipsec_user_cert">
+                        <com.htc.widget.HtcSpinner android:id="@id/ipsec_user_cert" android:prompt="@string/vpn_ipsec_user_cert" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:id="@id/ipsec_peer" android:visibility="gone" style="@style/wifi_section">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_ipsec_ca_cert">
+                        <com.htc.widget.HtcSpinner android:id="@id/ipsec_ca_cert" android:prompt="@string/vpn_ipsec_ca_cert" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_ipsec_server_cert">
+                        <com.htc.widget.HtcSpinner android:id="@id/ipsec_server_cert" android:prompt="@string/vpn_ipsec_server_cert" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/show_options_group" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem2LineText android:id="@id/vpn_show_options" />
+                    <com.htc.widget.HtcCheckBox android:id="@id/show_options" />
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@id/options" android:visibility="gone" style="@style/wifi_section">
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_search_domains">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/search_domains" android:hint="@string/vpn_not_used" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_dns_servers">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/dns_servers" android:hint="@string/vpn_not_used" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_routes">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/routes" android:hint="@string/vpn_not_used" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+        </LinearLayout>
+        <LinearLayout android:id="@id/login" android:visibility="gone" style="@style/wifi_section">
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_username">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/username" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vpn_password">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/password" android:password="true" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:id="@id/save_login_area" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/vpn_save_login" />
+                <com.htc.widget.HtcCheckBox android:id="@id/save_login" />
+            </com.htc.widget.HtcListItem>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

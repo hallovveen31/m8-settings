@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d filer</item>
+        <item quantity="zero">%d fil</item>
+        <item quantity="one">%d fil</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d forsøk gjenstår før enhetens data blir slettet.</item>
+        <item quantity="one">%1$d forsøk gjenstår før enhetens data blir slettet.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Du er nå %1$d trinn unna å være utvikler.</item>
+        <item quantity="one">Du er nå %1$d trinn unna å være utvikler.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Passordet må inneholde minst %d bokstaver</item>
+        <item quantity="one">Passordet må inneholde minst én bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Passordet må inneholde minst %d små bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst én liten bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Passordet må inneholde minst %d store bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst én stor bokstav.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Passordet må inneholde minst %d sifre.</item>
+        <item quantity="one">Passordet må inneholde minst ett siffer.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Passordet må inneholde minst %d spesialtegn.</item>
+        <item quantity="one">Passordet må inneholde minst ett spesialtegn.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Passordet må inneholde minst %d tegn som ikke er bokstaver.</item>
+        <item quantity="one">Passordet må inneholde minst ett tegn som ikke er en bokstav.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d-apper kan lese varslinger</item>
+        <item quantity="one">%d-appen kan lese varslinger</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s skrivere funnet</item>
+        <item quantity="one">%1$s skriver funnet</item>
+    </plurals>
+</resources>

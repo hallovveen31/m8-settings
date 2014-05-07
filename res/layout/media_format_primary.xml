@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcOverlapLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htcfooter="http://schemas.android.com/apk/res/com.htc">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" style="?com.htc:attr/htcListItemStyle">
+        <LinearLayout android:orientation="vertical" android:padding="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <TextView android:id="@id/initiate_media_format_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/media_format_desc" style="@com.htc:style/list_body_primary_l" />
+        </LinearLayout>
+    </ScrollView>
+    <com.htc.widget.HtcFooter android:id="@id/footerbar1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.htc.widget.HtcFooterButton android:id="@id/initiate_media_format_button" android:text="@string/media_format_button_text" />
+    </com.htc.widget.HtcFooter>
+</com.htc.widget.HtcOverlapLayout>

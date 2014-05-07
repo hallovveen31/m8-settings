@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d datoteke/a</item>
+        <item quantity="zero">%d datoteka</item>
+        <item quantity="one">%d datoteka</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d preostalih pokušaja pre brisanja podataka sa uređaja.</item>
+        <item quantity="one">%1$d preostaо pokušaj pre brisanja podataka sa uređaja.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Sada ste na %1$d koraka od toga da postanete programer.</item>
+        <item quantity="one">Sada ste na %1$d korak od toga da postanete programer.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d slova.</item>
+        <item quantity="one">Lozinka mora da sadrži najmanje 1 slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d mala slova.</item>
+        <item quantity="one">Lozinka mora da sadrži najmanje 1 malo slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d velika slova.</item>
+        <item quantity="one">Lozinka mora da sadrži najmanje 1 veliko slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d cifre.</item>
+        <item quantity="one">Lozinka mora da sadrži najmanje 1 cifru.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d specijalnih simbola.</item>
+        <item quantity="one">Lozinka mora sadržati najmanje 1 specijalan simbol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Lozinka mora imati najmanje %d neslovnih znakova.</item>
+        <item quantity="one">Lozinka mora imati najmanje 1 neslovni znak.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplikacija može da čita obaveštenja</item>
+        <item quantity="one">%d aplikacija može da čita obaveštenja</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Pronađeno je %1$s štampača</item>
+        <item quantity="one">Pronađen je %1$s štampač</item>
+    </plurals>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_gravity="left" android:id="@id/remind_dialog_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/vzw_remind_dialog_message" style="@com.htc:style/list_primary_m" />
+        <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:id="@id/remind_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m">
+            <com.htc.widget.HtcCheckBox android:id="@id/remind_dialog_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:text="@string/dont_remind_again" style="@com.htc:style/list_secondary_l" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/settings_bluetooth_signal_0" />
+    <item android:id="@id/level" android:drawable="@drawable/settings_bluetooth_signal_2" />
+</layer-list>

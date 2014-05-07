@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@id/htcmini_setup_wizard_anim_bt" android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="700" android:drawable="@drawable/accessoryservice_icon_intro_prepare_01" />
+    <item android:duration="1000" android:drawable="@drawable/accessoryservice_icon_intro_prepare_02" />
+    <item android:duration="1000" android:drawable="@drawable/accessoryservice_icon_intro_prepare_03" />
+    <item android:duration="1000" android:drawable="@drawable/accessoryservice_icon_intro_prepare_04" />
+    <item android:duration="1000" android:drawable="@drawable/accessoryservice_icon_intro_prepare_05" />
+    <item android:duration="500" android:drawable="@drawable/accessoryservice_icon_intro_prepare_06" />
+    <item android:duration="500" android:drawable="@drawable/accessoryservice_icon_intro_prepare_07" />
+    <item android:duration="500" android:drawable="@drawable/accessoryservice_icon_intro_prepare_08" />
+    <item android:duration="500" android:drawable="@drawable/accessoryservice_icon_intro_prepare_09" />
+    <item android:duration="2000" android:drawable="@drawable/accessoryservice_icon_intro_prepare_10" />
+</animation-list>

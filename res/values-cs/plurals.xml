@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d souborů</item>
+        <item quantity="zero">%d soubor</item>
+        <item quantity="one">%d soubor</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Máte již jen %1$d pokusů. Pak budou data zařízení odstraněna.</item>
+        <item quantity="one">Máte již jen %1$d pokus. Pak budou data zařízení odstraněna.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Teď jste %1$d kroků od toho, abyste se stal vývojářem.</item>
+        <item quantity="one">Teď jste %1$d krok od toho, abyste se stal vývojářem.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Požadovaný minimální počet písmen v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat nejméně jedno písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Požadovaný minimální počet malých písmen v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat nejméně jedno malé písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Požadovaný minimální počet velkých písmen v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat nejméně jedno velké písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Požadovaný minimální počet číslic v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat alespoň jednu číslici.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Požadovaný minimální počet zvláštních symbolů v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat nejméně jeden zvláštní symbol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Požadovaný minimální počet nepísmenných znaků v heslu: %d.</item>
+        <item quantity="one">Heslo musí obsahovat nejméně jeden znak jiný než písmeno.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplikace mohou číst oznámení</item>
+        <item quantity="one">%d aplikace může číst oznámení</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Nalezeno %1$s tiskáren</item>
+        <item quantity="one">Nalezena %1$s tiskárna</item>
+    </plurals>
+</resources>

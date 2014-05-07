@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d 個のファイル</item>
+        <item quantity="zero">%d 個のファイル</item>
+        <item quantity="one">%d 個のファイル</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">デバイスのデータを削除するまで、あと %1$d 回試すことができます。</item>
+        <item quantity="one">デバイスのデータを削除するまで、あと %1$d 回試すことができます。</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">お客様は、デベロッパーになるまでにあと %1$d ステップをクリアしなければなりません。</item>
+        <item quantity="one">お客様は、デベロッパーになるまでにあと %1$d ステップをクリアしなければなりません。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">パスワードには英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">パスワードには小文字の英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには小文字の英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">パスワードには大文字の英字が%d文字以上必要です。</item>
+        <item quantity="one">パスワードには大文字の英字が1文字以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">パスワードには数字が%d個以上必要です。</item>
+        <item quantity="one">パスワードには数字が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">パスワードには記号が%d個以上必要です。</item>
+        <item quantity="one">パスワードには記号が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">パスワードには記号または数字が%d個以上必要です。</item>
+        <item quantity="one">パスワードには記号または数字が1つ以上必要です。</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d アプリは通知を読み取れません</item>
+        <item quantity="one">%d アプリは通知を読み取れません</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s 台のプリンタが見つかりました</item>
+        <item quantity="one">%1$s 台のプリンタが見つかりました</item>
+    </plurals>
+</resources>

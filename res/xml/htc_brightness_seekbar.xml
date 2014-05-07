@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcListItem android:id="@id/seekbar_container" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:layout_gravity="left" android:id="@id/brightness_level_text" android:paddingTop="@com.htc:dimen/margin_xs" android:paddingBottom="@com.htc:dimen/leading" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@com.htc:style/list_primary_m" />
+        <com.htc.widget.HtcSeekBar android:id="@id/seekbar" android:paddingLeft="0.0px" android:paddingRight="0.0px" android:paddingBottom="@com.htc:dimen/spacing_3" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.htc.widget.HtcListItem>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left|center" android:orientation="vertical" android:paddingTop="@com.htc:dimen/margin_m" android:paddingBottom="@com.htc:dimen/margin_m" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dnd_digital_clock_width">
+        <TextView android:id="@id/schedule_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dnd_schedule_endtime_margin" android:singleLine="true" style="@com.htc:style/fixed_list_primary_xxs" />
+        <TextView android:id="@id/schedule_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dnd_schedule_endtime_margin" android:singleLine="true" style="@com.htc:style/fixed_list_primary_xxs" />
+    </LinearLayout>
+    <LinearLayout android:gravity="left|center" android:orientation="vertical" android:id="@id/schedule_repeat_description_layout" android:paddingTop="@com.htc:dimen/margin_m" android:paddingBottom="@com.htc:dimen/margin_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:id="@id/schedule_allowed_contacts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@com.htc:style/fixed_list_primary_m" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/days_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@id/sun" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/mon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/tue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/wed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/thu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/fri" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginRight="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+            <TextView android:id="@id/sat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" style="@style/dnd_schedule_repeat_days_disabled" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:background="@drawable/common_list_item_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l" />
+    <com.htc.widget.HtcCheckBox android:id="@id/function_selected" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:focusable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

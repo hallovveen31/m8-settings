@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d tiedostoa</item>
+        <item quantity="zero">%d tiedosto</item>
+        <item quantity="one">%d tiedosto</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d yritystä jää jäljelle ennen kuin laitteen data poistetaan.</item>
+        <item quantity="one">%1$d yritys jää jäljelle ennen kuin laitteen data poistetaan.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Olet nyt %1$d vaiheen päässä kehittäjäksi tulemisesta.</item>
+        <item quantity="one">Olet nyt %1$d vaiheen päässä kehittäjäksi tulemisesta.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d kirjainta.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi kirjain.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d pientä kirjainta.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi pieni kirjain.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d isoa kirjainta.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi iso kirjain.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d numeroa.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi numero.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d erikoismerkkiä.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi erikoismerkki.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Salasanan tulee sisältää vähintään %d merkkiä, jotka eivät ole kirjaimia.</item>
+        <item quantity="one">Salasanan tulee sisältää vähintään yksi merkki, joka ei ole kirjain.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d sovellusta voi lukea ilmoituksia</item>
+        <item quantity="one">%d sovellus voi lukea ilmoituksia</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s tulostinta löytyi</item>
+        <item quantity="one">%1$s tulostin löytyi</item>
+    </plurals>
+</resources>

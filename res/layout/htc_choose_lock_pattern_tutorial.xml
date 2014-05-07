@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcOverlapLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htcfooter="http://schemas.android.com/apk/res/com.htc">
+    <com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient android:orientation="vertical" android:id="@id/topLayout" android:layout_width="wrap_content" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:gravity="center_vertical" android:id="@id/lock_title" android:background="@com.htc:drawable/section_divider_top" android:paddingLeft="@dimen/htc_pin_subtitle_padding" android:paddingRight="@dimen/htc_pin_subtitle_padding" android:layout_width="fill_parent" android:layout_height="@dimen/htc_pin_subtitle_height" android:text="@string/lockpassword_choose_your_pattern_header" style="@com.htc:style/fixed_list_body_primary_s" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.lockscreen.view.HtcLockPatternView android:layout_gravity="center_horizontal" android:id="@id/lockPattern" android:layout_width="@dimen/lockpattern_layout_width" android:layout_height="@dimen/lockpattern_layout_height" />
+                <TextView android:id="@id/footerText" android:paddingLeft="@dimen/lockscreen_side_padding" android:paddingRight="@dimen/lockscreen_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/lockpattern_tutorial_footer_hint_margin_top" android:text="@string/htc_lock_intro_message" style="@com.htc:style/list_primary_m" />
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/common_button_bar2" />
+    </com.android.internal.widget.LinearLayoutWithDefaultTouchRecepient>
+</com.htc.widget.HtcOverlapLayout>

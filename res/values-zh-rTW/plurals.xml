@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d 檔案</item>
+        <item quantity="zero">%d 檔案</item>
+        <item quantity="one">%d 檔案</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">在刪除裝置資料前，還剩下 %1$d 次嘗試機會。</item>
+        <item quantity="one">在刪除裝置資料前，還剩下 %1$d 次嘗試機會。</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">還剩下 %1$d 個步驟就可以成為開發人員。</item>
+        <item quantity="one">還剩下 %1$d 個步驟就可以成為開發人員。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">密碼至少必須包含 %d 個字母。</item>
+        <item quantity="one">密碼至少必須包含 1 個字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">密碼至少必須包含 %d 個小寫字母。</item>
+        <item quantity="one">密碼至少必須包含 1 個小寫字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">密碼至少必須包含 %d 個大寫字母。</item>
+        <item quantity="one">密碼至少必須包含 1 個大寫字母。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">密碼至少必須包含 %d 個數字。</item>
+        <item quantity="one">密碼至少必須包含 1 個數字。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">密碼至少必須包含 %d 個特殊符號。</item>
+        <item quantity="one">密碼至少必須包含 1 個特殊符號。</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">密碼至少必須包含 %d 個非字母字元。</item>
+        <item quantity="one">密碼至少必須包含 1 個非字母字元。</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d 個應用程式可以讀取通知</item>
+        <item quantity="one">%d 個應用程式可以讀取通知</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">找到 %1$s 台印表機</item>
+        <item quantity="one">找到 %1$s 台印表機</item>
+    </plurals>
+</resources>

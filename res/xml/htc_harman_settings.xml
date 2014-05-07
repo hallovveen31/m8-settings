@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/htc_harman_settings_title" android:key="harman_settings_root"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settings.framework.preference.harman.HtcHarmanSignalDoctorSwitchPreference android:key="HtcHarmanSignalDoctorSwitchPreference" />
+    <com.android.settings.framework.preference.harman.HtcHarmanLiveStageSwitchPreference android:key="HtcHarmanLiveStageSwitchPreference" />
+</com.htc.preference.HtcPreferenceScreen>

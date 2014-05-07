@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/header_switch_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@com.htc:dimen/htc_list_item_height" style="?com.htc:attr/htcListItemStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@com.htc:dimen/margin_m" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_m" android:layout_weight="1.0">
+        <TextView android:ellipsize="end" android:id="@*android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+        <TextView android:ellipsize="end" android:id="@*android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:layout_below="@*android:id/title" android:layout_alignLeft="@*android:id/title" style="@com.htc:style/list_secondary_m" />
+    </RelativeLayout>
+    <ImageView android:background="@com.htc:drawable/common_div" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l" />
+    <com.htc.widget.HtcToggleButtonLight android:layout_gravity="center" android:id="@id/switchWidget" android:focusable="false" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d datoteke/a</item>
+        <item quantity="zero">%d datoteka</item>
+        <item quantity="one">%d datoteka</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Ostaje još %1$d pokušaja prije brisanja podataka uređaja.</item>
+        <item quantity="one">Ostaje još %1$d pokušaj prije brisanja podataka uređaja.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Sada ste %1$d koraka od toga da postanete razvojni programer.</item>
+        <item quantity="one">Sada ste %1$d korak od toga da postanete razvojni programer.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko slova: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jedno slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko malih slova: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jedno malo slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko velikih slova: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jedno veliko slovo.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko brojčanih znamenki: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jednu brojčanu znamenku.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko posebnih znakova: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jedan posebni simbol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Zaporka mora sadržavati barem ovoliko znakova koji nisu slova: %d.</item>
+        <item quantity="one">Zaporka mora sadržavati barem jedan znak koji nije slovo.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d aplikacija može čitati obavijesti</item>
+        <item quantity="one">%d aplikacija može čitati obavijesti</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Pronađeno %1$s pisača</item>
+        <item quantity="one">Pronađen %1$s pisač</item>
+    </plurals>
+</resources>

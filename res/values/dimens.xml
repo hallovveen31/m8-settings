@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="device_memory_usage_button_width">16.0dip</dimen>
+    <dimen name="device_memory_usage_button_height">32.0dip</dimen>
+    <dimen name="action_bar_switch_padding">16.0dip</dimen>
+    <dimen name="app_icon_size">56.0dip</dimen>
+    <dimen name="screen_margin_sides">64.0dip</dimen>
+    <dimen name="screen_margin_top">72.0dip</dimen>
+    <dimen name="screen_margin_bottom">48.0dip</dimen>
+    <dimen name="content_margin_left">16.0dip</dimen>
+    <dimen name="description_margin_top">26.0dip</dimen>
+    <dimen name="description_margin_sides">40.0dip</dimen>
+    <dimen name="bind_app_widget_dialog_checkbox_bottom_padding">16.0dip</dimen>
+    <dimen name="installed_app_details_bullet_offset">8.0dip</dimen>
+    <dimen name="data_usage_chart_height">252.0dip</dimen>
+    <dimen name="data_usage_chart_optimalWidth">440.0dip</dimen>
+    <dimen name="volume_seekbar_side_margin">8.0dip</dimen>
+    <dimen name="crypt_clock_size">100.0sp</dimen>
+    <item type="dimen" name="setup_title_height">14.999998%</item>
+    <item type="dimen" name="setup_border_width">4.999995%</item>
+    <dimen name="setup_margin_bottom">0.0dip</dimen>
+    <dimen name="setup_title_size">25.0dip</dimen>
+    <dimen name="setup_button_size">32.0dip</dimen>
+    <dimen name="setup_item_margin">16.0dip</dimen>
+    <dimen name="divider_height">3.0dip</dimen>
+    <dimen name="divider_margin_top">6.0dip</dimen>
+    <dimen name="divider_margin_bottom">7.0dip</dimen>
+    <dimen name="vert_divider_width">1.0dip</dimen>
+    <dimen name="header_icon_width">28.0dip</dimen>
+    <dimen name="appwidget_min_width">260.0dip</dimen>
+    <dimen name="appwidget_min_height">40.0dip</dimen>
+    <dimen name="pager_tabs_padding">0.0dip</dimen>
+    <dimen name="appwidget_preview_width">140.0dip</dimen>
+    <dimen name="appwidget_preview_height">80.0dip</dimen>
+    <dimen name="keyguard_appwidget_picker_max_width">800.0dip</dimen>
+    <dimen name="keyguard_appwidget_picker_margin_left">6.0dip</dimen>
+    <dimen name="keyguard_appwidget_picker_margin_right">6.0dip</dimen>
+    <dimen name="circle_avatar_size">48.0dip</dimen>
+    <dimen name="circle_avatar_frame_stroke_width">1.0dip</dimen>
+    <dimen name="circle_avatar_frame_shadow_radius">3.0dip</dimen>
+    <dimen name="update_user_photo_popup_min_width">300.0dip</dimen>
+    <dimen name="captioning_preview_height">200.0dip</dimen>
+    <item type="dimen" name="settings_side_margin">@*android:dimen/preference_fragment_padding_side</item>
+    <dimen name="dnd_fontAlarmDay">38.0px</dimen>
+    <dimen name="dnd_digital_clock_width">249.0px</dimen>
+    <dimen name="dnd_schedule_endtime_margin">2.0px</dimen>
+    <dimen name="htc_task_manager_height">124.0px</dimen>
+    <dimen name="datetime_number_table_tumblers_layout_width">92.0dip</dimen>
+    <dimen name="datetime_number_table_tumblers_layout_height">171.0dip</dimen>
+    <dimen name="datetime_number_table_timer_line_layout_width">71.0dip</dimen>
+    <item type="dimen" name="datetime_number_table_table_view_layout_width">@dimen/datetime_number_table_timer_line_layout_width</item>
+    <dimen name="datetime_number_table_table_view_layout_height">154.0dip</dimen>
+    <item type="dimen" name="datetime_number_table_shadow_layout_width">@dimen/datetime_number_table_tumblers_layout_width</item>
+    <item type="dimen" name="datetime_number_table_shadow_layout_height">@dimen/datetime_number_table_tumblers_layout_height</item>
+    <item type="dimen" name="datetime_number_text_layout_width">@dimen/datetime_number_table_timer_line_layout_width</item>
+    <dimen name="datetime_number_text_layout_height">48.0dip</dimen>
+    <dimen name="datetime_number_text_text_size">40.0sp</dimen>
+    <item type="dimen" name="datetime_date_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</item>
+    <dimen name="datetime_date_picker_title_text_size">18.0sp</dimen>
+    <item type="dimen" name="datetime_time_picker_title_width">@dimen/datetime_number_table_tumblers_layout_width</item>
+    <dimen name="datetime_time_picker_title_text_size">18.0sp</dimen>
+    <dimen name="lock_spacer_margin_top">6.0dip</dimen>
+    <dimen name="lock_password_text_size">32.0sp</dimen>
+    <dimen name="lock_password_margin_top">23.0dip</dimen>
+    <dimen name="lock_keyboard_margin_bottom">30.0dip</dimen>
+    <dimen name="lock_pin_edit_width">160.0dip</dimen>
+    <dimen name="lock_pin_keyboard_width">320.0dip</dimen>
+    <dimen name="battery_bar_layout_width">300.0dip</dimen>
+    <dimen name="battery_bar_layout_height">14.0dip</dimen>
+    <dimen name="lock_pattern_title_height">63.0dip</dimen>
+    <dimen name="lock_pattern_foot_height">63.0dip</dimen>
+    <dimen name="btn_circle_margin_right">10.0dip</dimen>
+    <dimen name="progress_bar_margin_right">10.0dip</dimen>
+    <dimen name="list_item_title_padding_left">10.0px</dimen>
+    <dimen name="preference_widget_wifi_signal_padding_right">8.0px</dimen>
+    <dimen name="wifi_dialog_content_margin">3.0px</dimen>
+    <dimen name="wifi_dialog_content_xs_margin">4.0px</dimen>
+    <dimen name="wifi_dialog_line_margin">10.0px</dimen>
+    <dimen name="auto_sync_toggle_right_padding">10.0dip</dimen>
+    <dimen name="access_legal_padding">10.0dip</dimen>
+    <dimen name="access_legal_margin">10.0dip</dimen>
+    <dimen name="access_legal_width">268.0dip</dimen>
+    <item type="dimen" name="setting_app_icon_size">@dimen/dummy_dimen</item>
+    <item type="dimen" name="settings_list_item_divider_height">@com.htc:dimen/htc_list_item_divider_height</item>
+    <dimen name="gsensor_grid_height">250.0dip</dimen>
+    <dimen name="regulatory_kddi_text_size">21.0dip</dimen>
+    <dimen name="regulatory_kddi_text_size_60pt">21.0dip</dimen>
+    <dimen name="regulatory_kddi_text_size_48pt">17.0dip</dimen>
+    <dimen name="regulatory_kddi_text_size_32pt">11.0dip</dimen>
+    <dimen name="regulatory_kddi_margin1">44.0dip</dimen>
+    <dimen name="regulatory_kddi_margin2">10.0dip</dimen>
+    <dimen name="regulatory_kddi_margin3">9.0dip</dimen>
+    <dimen name="regulatory_kddi_margin4">8.0dip</dimen>
+    <dimen name="fingerprint_tutorial_image_margin_top">317.0px</dimen>
+    <dimen name="fingerprint_tutorial_arrow_animation_margin_top">366.0px</dimen>
+    <dimen name="fingerprint_tutorial_arrow_image_width">81.0px</dimen>
+    <dimen name="fingerprint_tutorial_arrow_image_height">48.0px</dimen>
+    <dimen name="fingerprint_tutorial_reader_size">192.0px</dimen>
+    <dimen name="fingerprint_tutorial_reader_margin_top">335.0px</dimen>
+    <dimen name="fingerprint_tutorial_reader_margin_left">324.0px</dimen>
+    <dimen name="fingerprint_arrow_margin_s">-9.0px</dimen>
+    <dimen name="fingerprint_arrow_margin">-18.0px</dimen>
+    <dimen name="fingerprint_tutorial_text_margin_top">84.0px</dimen>
+    <dimen name="fingerprint_scan_title_margin_top">305.0px</dimen>
+    <dimen name="fingerprint_scan_margin_top">116.0px</dimen>
+    <dimen name="fingerprint_scan_width">435.0px</dimen>
+    <dimen name="fingerprint_scan_height">435.0px</dimen>
+    <dimen name="fingerprint_scan_arrow_image_width">162.0px</dimen>
+    <dimen name="fingerprint_scan_arrow_image_height">96.0px</dimen>
+    <dimen name="fingerprint_scan_message_margin_top">122.0px</dimen>
+    <dimen name="fingerprint_naming_title_margin_top">290.0px</dimen>
+    <dimen name="fingerprint_naming_margin_between_palms">90.0px</dimen>
+    <dimen name="fingerprint_naming_palms_margin_top">117.0px</dimen>
+    <dimen name="fingerprint_naming_edittext_margin_top">72.0px</dimen>
+    <dimen name="fingerprint_naming_left_little_margin_left">22.0px</dimen>
+    <dimen name="fingerprint_naming_left_little_margin_top">222.0px</dimen>
+    <dimen name="fingerprint_naming_left_ring_margin_left">80.0px</dimen>
+    <dimen name="fingerprint_naming_left_ring_margin_top">127.0px</dimen>
+    <dimen name="fingerprint_naming_left_middle_margin_left">176.0px</dimen>
+    <dimen name="fingerprint_naming_left_middle_margin_top">74.0px</dimen>
+    <dimen name="fingerprint_naming_left_index_margin_left">283.0px</dimen>
+    <dimen name="fingerprint_naming_left_index_margin_top">91.0px</dimen>
+    <dimen name="fingerprint_naming_left_thumb_margin_left">392.0px</dimen>
+    <dimen name="fingerprint_naming_left_thumb_margin_top">261.0px</dimen>
+    <dimen name="fingerprint_naming_right_thumb_margin_left">540.0px</dimen>
+    <dimen name="fingerprint_naming_right_thumb_margin_top">261.0px</dimen>
+    <dimen name="fingerprint_naming_right_index_margin_left">646.0px</dimen>
+    <dimen name="fingerprint_naming_right_index_margin_top">91.0px</dimen>
+    <dimen name="fingerprint_naming_right_middle_margin_left">755.0px</dimen>
+    <dimen name="fingerprint_naming_right_middle_margin_top">74.0px</dimen>
+    <dimen name="fingerprint_naming_right_ring_margin_left">850.0px</dimen>
+    <dimen name="fingerprint_naming_right_ring_margin_top">127.0px</dimen>
+    <dimen name="fingerprint_naming_right_little_margin_left">910.0px</dimen>
+    <dimen name="fingerprint_naming_right_little_margin_top">222.0px</dimen>
+    <dimen name="fingerprint_naming_selector_width">150.0px</dimen>
+    <dimen name="fingerprint_naming_selector_height">150.0px</dimen>
+    <dimen name="fingerprint_waiting_bg_margin_top">360.0px</dimen>
+    <dimen name="fingerprint_waiting_bg_margin_left">101.0px</dimen>
+    <dimen name="fingerprint_secondary_font_size">24.0px</dimen>
+    <dimen name="edit_pin_pref_padding">5.0dip</dimen>
+    <dimen name="htc_progressbar_height">6.0px</dimen>
+    <dimen name="tile_height">100.0dip</dimen>
+    <dimen name="tile_line_1_margin_top">12.329987dip</dimen>
+    <dimen name="tile_line_2_margin_top">1.3299866dip</dimen>
+    <dimen name="tile_line_3_margin_top">2.669983dip</dimen>
+    <dimen name="notification_img_view_size">192.0px</dimen>
+    <dimen name="notification_text_margin_left">24.0px</dimen>
+    <dimen name="htc_gridview_spacing">3.0dip</dimen>
+    <dimen name="htc_gridview_padding">3.3299866dip</dimen>
+    <dimen name="htc_gridview_griditem_border_width">1.0px</dimen>
+    <item type="dimen" name="htc_common_M2">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="htc_common_M1">@com.htc:dimen/margin_l</item>
+    <dimen name="title_height">48.0dip</dimen>
+    <dimen name="dummy_dimen">5.0px</dimen>
+    <item type="dimen" name="gsensor_scale">1.0</item>
+    <dimen name="lock_bio_info_height">64.0dip</dimen>
+    <dimen name="unlock_pin_title_padding_top">53.0dip</dimen>
+    <item type="dimen" name="unlock_pin_input_padding_top">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_input_padding_bottom">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_input_padding_right">@com.htc:dimen/margin_l</item>
+    <item type="dimen" name="unlock_pin_input_padding_left">@com.htc:dimen/margin_l</item>
+    <item type="dimen" name="unlock_pin_side_gap">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_hint_padding_top">@com.htc:dimen/margin_s</item>
+    <dimen name="unlock_pin_with">339.0dip</dimen>
+    <dimen name="unlock_pin_height">295.0dip</dimen>
+    <item type="dimen" name="Pinkeyboard_margin_top">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="Pinkeyboard_margin_left">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="lockscreen_side_padding">@com.htc:dimen/margin_l</item>
+    <dimen name="lockpattern_tutorial_footer_hint_margin_top">1.0dip</dimen>
+    <dimen name="lockpattern_margin_top">17.0dip</dimen>
+    <dimen name="lockpattern_footer_hint_margin_top">21.0dip</dimen>
+    <dimen name="lockpattern_footer_hint_margin_bottom">34.0dip</dimen>
+    <item type="dimen" name="lockscreen_bottom_padding">@com.htc:dimen/margin_m_2</item>
+    <dimen name="lockpattern_layout_width">288.0dip</dimen>
+    <dimen name="lockpattern_layout_height">288.0dip</dimen>
+    <dimen name="spacekiller_height">0.0dip</dimen>
+    <dimen name="htc_pin_subtitle_height">40.0dip</dimen>
+    <item type="dimen" name="htc_pin_subtitle_padding">@com.htc:dimen/margin_m</item>
+    <dimen name="uak_list_view_icon_width">48.0dip</dimen>
+    <dimen name="uak_list_view_icon_height">48.0dip</dimen>
+    <dimen name="sliding_handle_height">55.0px</dimen>
+    <dimen name="launcher_hv_textsize">27.0px</dimen>
+    <dimen name="uak_list_icon_margin_left">7.0dip</dimen>
+    <dimen name="uak_list_icon_margin_right">9.0dip</dimen>
+    <dimen name="lockscreen_01">14.0sp</dimen>
+    <dimen name="lockscreen_03">15.0sp</dimen>
+    <dimen name="lockscreen_04">20.0sp</dimen>
+    <dimen name="lockscreen_05">12.0sp</dimen>
+    <dimen name="lockscreen_06">13.0sp</dimen>
+    <dimen name="lockscreen_07">12.0sp</dimen>
+    <dimen name="lockscreen_08">30.0sp</dimen>
+    <dimen name="lockscreen_09">12.0sp</dimen>
+    <dimen name="lockscreen_10">27.0sp</dimen>
+    <dimen name="lockscreen_11">15.0sp</dimen>
+    <dimen name="lockscreen_12">16.0sp</dimen>
+    <dimen name="lockscreen_13">14.0sp</dimen>
+    <dimen name="lockscreen_14">24.0sp</dimen>
+    <dimen name="lockscreen_15">15.0sp</dimen>
+    <dimen name="lockscreen_16">13.0sp</dimen>
+    <dimen name="lockscreen_17">13.0sp</dimen>
+    <dimen name="lockscreen_18">8.0sp</dimen>
+    <dimen name="lockscreen_19">11.0sp</dimen>
+    <dimen name="lockscreen_20">15.0sp</dimen>
+    <dimen name="lockscreen_21">12.0sp</dimen>
+    <dimen name="world_clock_01">11.0sp</dimen>
+    <dimen name="world_clock_02">15.0sp</dimen>
+    <dimen name="world_clock_03">17.0sp</dimen>
+    <dimen name="world_clock_04">30.0sp</dimen>
+    <dimen name="world_clock_05">13.0sp</dimen>
+    <dimen name="world_clock_06">9.0sp</dimen>
+    <dimen name="world_clock_07">30.0sp</dimen>
+    <dimen name="world_clock_08">13.0sp</dimen>
+    <dimen name="world_clock_09">9.0sp</dimen>
+    <dimen name="world_clock_10">13.0sp</dimen>
+</resources>

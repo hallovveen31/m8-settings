@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="white">#ffffffff</item>
+    <item type="drawable" name="black">#ff000000</item>
+    <item type="drawable" name="notification_template_icon_bg">#ff2c2e2f</item>
+    <item type="drawable" name="common_list_item_divider">@com.htc:drawable/common_list_divider</item>
+</resources>

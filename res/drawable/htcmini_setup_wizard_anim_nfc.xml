@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@id/htcmini_setup_wizard_anim_nfc" android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="300" android:drawable="@drawable/accessoryservice_icon_intro_nfc_01" />
+    <item android:duration="300" android:drawable="@drawable/accessoryservice_icon_intro_nfc_02" />
+    <item android:duration="300" android:drawable="@drawable/accessoryservice_icon_intro_nfc_03" />
+    <item android:duration="300" android:drawable="@drawable/accessoryservice_icon_intro_nfc_04" />
+    <item android:duration="2000" android:drawable="@drawable/accessoryservice_icon_intro_nfc_05" />
+</animation-list>

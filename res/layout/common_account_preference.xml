@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.accounts.MyHtcListItem2LineText android:id="@id/stamp" />
+    <com.htc.widget.HtcImageButton android:id="@id/syncStatusIcon" android:focusable="false" android:clickable="false" />
+    <com.htc.widget.HtcImageButton android:id="@id/menuIcon" android:focusable="false" android:visibility="gone" android:clickable="true" />
+</com.htc.widget.HtcListItem>

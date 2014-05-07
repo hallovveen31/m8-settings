@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/service" layout="@layout/specific_running_processes_item" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="center_vertical" android:id="@id/comp_description" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l" style="@com.htc:style/list_body_primary_m" />
+        <View style="@style/inset_line_divider" />
+    </RelativeLayout>
+</LinearLayout>

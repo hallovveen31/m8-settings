@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:padding="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <TextView android:id="@id/master_clear_description_p1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/htc_master_clear_desc_p1" style="@com.htc:style/list_body_primary_l" />
+            <TextView android:id="@id/master_clear_description_p2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:text="@string/htc_master_clear_desc_p2" style="@com.htc:style/list_body_primary_l" />
+            <TextView android:id="@id/also_erases_external" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:text="@string/master_clear_desc_also_erases_external" style="@com.htc:style/list_body_primary_l" />
+            <TextView android:id="@id/accounts_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:text="@string/htc_master_clear_accounts" style="@com.htc:style/list_body_primary_l" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/accounts" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <View style="@style/inset_line_divider" />
+        <LinearLayout android:orientation="vertical" android:padding="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <TextView android:id="@id/erase_external_option_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/master_clear_desc_erase_external_storage" style="@com.htc:style/list_body_primary_l" />
+            <TextView android:id="@id/erase_encrypted_sd_card_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:text="@string/htc_erase_encrypted_sd_card_description" style="@com.htc:style/list_body_primary_l" />
+        </LinearLayout>
+        <View style="@style/inset_line_divider" />
+        <com.htc.widget.HtcListItem android:id="@id/erase_internal_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem2LineText android:id="@id/erase_internal_text" />
+            <com.htc.widget.HtcCheckBox android:id="@id/erase_internal_checkbox" android:focusable="false" android:clickable="false" />
+        </com.htc.widget.HtcListItem>
+        <View android:id="@id/erase_external_divider" style="@style/inset_line_divider" />
+        <com.htc.widget.HtcListItem android:id="@id/erase_external_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem2LineText android:id="@id/erase_external_text" />
+            <com.htc.widget.HtcCheckBox android:id="@id/erase_external_checkbox" android:focusable="false" android:clickable="false" />
+        </com.htc.widget.HtcListItem>
+    </LinearLayout>
+</ScrollView>

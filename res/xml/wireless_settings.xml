@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/wireless_networks_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.SmsListPreference android:persistent="false" android:title="@string/sms_application_title" android:key="sms_application" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/vpn_settings_title" android:key="vpn_settings" android:fragment="com.android.settings.vpn2.VpnSettings" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/mocana_vpn_title" android:key="mocanavpn">
+        <intent android:targetPackage="com.mocana.vpn.android.gui" android:targetClass="com.mocana.vpn.android.gui.activity.MocanaVPNStartActivity" />
+    </com.htc.preference.HtcPreferenceScreen>
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/tether_settings_title" android:key="tether_settings" android:fragment="com.android.settings.TetherSettings" />
+    <com.android.settings.framework.preference.wireless.HtcMiniPlusPreference android:title="@string/htc_mini_plus_settings_title" android:key="htc_mini" />
+    <com.android.settings.framework.preference.wireless.HtcNfcSwitchPreference android:persistent="false" android:title="@string/nfc_quick_toggle_title" android:key="advance_nfc" android:summary="@string/nfc_quick_toggle_summary" android:fragment="com.android.settings.nfc.AdvanceNfcSettings" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/nfc_quick_toggle_title" android:key="vzw_nfc_settings" android:summary="@string/nfc_quick_toggle_summary" android:fragment="com.android.settings.nfc.AdvanceNfcSettings" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/sprint_touch_manager_title" android:key="sprint_touch_manager" android:summary="@string/sprint_touch_manager_summary" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/osaifu_keitai_settings_title" android:key="kddi_nfc_settings" android:summary="@string/osaifu_keitai_settings_summary" android:fragment="com.android.settings.nfc.KDDINfcSettings" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/proxy_settings_title" android:key="proxy_settings" android:fragment="com.android.settings.ProxySelector" />
+    <com.htc.preference.HtcCheckBoxPreference android:title="@string/wifi_location_settings" android:key="toggle_wifi_location" android:summary="@string/wifi_location_settings_summary" />
+    <com.android.settings.WifiCallSwitchPreference android:persistent="false" android:key="button_wifi_calling_key" />
+</com.htc.preference.HtcPreferenceScreen>

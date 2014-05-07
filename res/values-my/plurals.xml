@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d files</item>
+        <item quantity="zero">%d file</item>
+        <item quantity="one">%d file</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">ဖုန္းအခ်က္အလက္မ်ားကို မပယ္ဖ်က္ခင္ %1$d မ်ားသာ က်န္ရစ္သည္။</item>
+        <item quantity="one">ဖုန္းအခ်က္အလက္မ်ားကို မပယ္ဖ်က္ခင္ %1$d သာ က်န္ရစ္သည္။</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">ယခုသင္ %1$d မွဖန္တီးသူအျဖစ္မွ ထြက္ခြါသြားမည္ျဖစ္သည္။</item>
+        <item quantity="one">ယခုသင္ %1$d မွဖန္တီးသူအျဖစ္မွ ထြက္ခြါသြားမည္ျဖစ္သည္။</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other"> %d </item>
+        <item quantity="one"></item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d အက္ပ္မ်ားက အသိေပးခ်က္မ်ားကို ဖတ္မရ</item>
+        <item quantity="one">%d အက္ပ္က အသိေပးခ်က္မ်ားကို ဖတ္မရ</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">ပရင္တာမ်ား %1$s ခုေတြ႕သည္</item>
+        <item quantity="one">ပရင္တာ %1$s ခုေတြ႕သည္</item>
+    </plurals>
+</resources>

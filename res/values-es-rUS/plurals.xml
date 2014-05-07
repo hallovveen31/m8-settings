@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d archivos</item>
+        <item quantity="zero">%d archivo</item>
+        <item quantity="one">%d archivo</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d intentos restantes antes de que los datos del dispositivo sean eliminados.</item>
+        <item quantity="one">%1$d intento restante antes de que los datos del dispositivo sean eliminados.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Ahora está a %1$d pasos de ser un desarrollador.</item>
+        <item quantity="one">Ahora está a %1$d paso de ser un desarrollador.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">La contraseña debe tener al menos %d letras.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">La contraseña debe tener al menos %d letras minúsculas.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra minúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">La contraseña debe tener al menos %d letras mayúsculas.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra mayúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">La contraseña debe tener al menos %d dígitos numéricos.</item>
+        <item quantity="one">La contraseña debe tener al menos un dígito numérico.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">La contraseña debe tener al menos %d símbolos especiales.</item>
+        <item quantity="one">La contraseña debe tener al menos un símbolo especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">La contraseña debe tener al menos %d caracteres que no sean letras.</item>
+        <item quantity="one">La contraseña debe tener al menos un carácter que no sea una letra.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Las aplicaciones %d pueden leer notificaciones</item>
+        <item quantity="one">La aplicación %d puede leer las notificaciones</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s impresoras encontradas</item>
+        <item quantity="one">%1$s impresora encontrada</item>
+    </plurals>
+</resources>

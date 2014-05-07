@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/wifi_section">
+        <LinearLayout style="@style/wifi_section">
+            <TextView android:id="@id/message" style="@style/wifi_message_style" />
+        </LinearLayout>
+        <View style="@style/inset_line_divider" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <LinearLayout style="@style/wifi_password_input_section">
+                <TextView android:text="@string/bluetooth_pin_values_hint" style="@style/wifi_input_title_style" />
+                <com.htc.widget.HtcAutoCompleteTextView android:id="@id/text" android:singleLine="true" android:inputType="textPassword" style="@style/wifi_item_edittext" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/alphanumeric_pin_area" style="@style/wifi_password_checkbox_section">
+                <com.htc.widget.HtcCheckBox android:id="@id/alphanumeric_pin" style="@style/wifi_list_item_checkbox_style" />
+                <TextView android:text="@string/bluetooth_enable_alphanumeric_pin" style="@style/wifi_password_checkbox_label" />
+            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/inset_line_divider" />
+        <LinearLayout style="@style/wifi_section">
+            <TextView android:id="@id/message_below_pin" style="@style/wifi_message_style" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

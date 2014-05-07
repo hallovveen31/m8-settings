@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dnd_fontAlarmDay">26.0px</dimen>
+    <dimen name="dnd_digital_clock_width">166.0px</dimen>
+    <dimen name="htc_task_manager_height">164.0px</dimen>
+    <dimen name="setting_app_icon_size">72.0px</dimen>
+    <dimen name="fingerprint_secondary_font_size">34.0px</dimen>
+    <dimen name="htc_progressbar_height">10.0px</dimen>
+    <dimen name="notification_img_view_size">128.0px</dimen>
+    <dimen name="notification_text_margin_left">16.0px</dimen>
+    <dimen name="lock_bio_info_height">64.0dip</dimen>
+    <dimen name="unlock_pin_title_padding_top">53.0dip</dimen>
+    <item type="dimen" name="unlock_pin_input_padding_top">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_input_padding_bottom">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_input_padding_right">@com.htc:dimen/margin_l</item>
+    <item type="dimen" name="unlock_pin_input_padding_left">@com.htc:dimen/margin_l</item>
+    <item type="dimen" name="unlock_pin_side_gap">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="unlock_pin_hint_padding_top">@com.htc:dimen/margin_s</item>
+    <dimen name="unlock_pin_with">339.0dip</dimen>
+    <dimen name="unlock_pin_height">295.0dip</dimen>
+    <item type="dimen" name="Pinkeyboard_margin_top">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="Pinkeyboard_margin_left">@com.htc:dimen/margin_m</item>
+    <item type="dimen" name="lockscreen_side_padding">@com.htc:dimen/margin_l</item>
+    <dimen name="lockpattern_tutorial_footer_hint_margin_top">1.0dip</dimen>
+    <dimen name="lockpattern_margin_top">17.0dip</dimen>
+    <dimen name="lockpattern_footer_hint_margin_top">21.0dip</dimen>
+    <dimen name="lockpattern_footer_hint_margin_bottom">34.0dip</dimen>
+    <item type="dimen" name="lockscreen_bottom_padding">@com.htc:dimen/margin_m_2</item>
+    <dimen name="lockpattern_layout_width">288.0dip</dimen>
+    <dimen name="lockpattern_layout_height">288.0dip</dimen>
+    <dimen name="spacekiller_height">0.0dip</dimen>
+    <dimen name="htc_pin_subtitle_height">40.0dip</dimen>
+    <item type="dimen" name="htc_pin_subtitle_padding">@com.htc:dimen/margin_m</item>
+    <dimen name="htc_list_item_separator_with_text_height">60.0px</dimen>
+    <dimen name="htc_icon_text_width">148.0px</dimen>
+    <dimen name="htcmini_setup_page_margin_top">130.0px</dimen>
+    <dimen name="fixed_lockscreen_01">28.0px</dimen>
+    <dimen name="fixed_lockscreen_03">29.0px</dimen>
+    <dimen name="fixed_lockscreen_04">40.0px</dimen>
+    <dimen name="fixed_lockscreen_05">24.0px</dimen>
+    <dimen name="fixed_lockscreen_06">27.0px</dimen>
+    <dimen name="fixed_lockscreen_07">24.0px</dimen>
+    <dimen name="fixed_lockscreen_08">60.0px</dimen>
+    <dimen name="fixed_lockscreen_09">24.0px</dimen>
+    <dimen name="fixed_lockscreen_10">55.0px</dimen>
+    <dimen name="fixed_lockscreen_11">31.0px</dimen>
+    <dimen name="fixed_lockscreen_12">32.0px</dimen>
+    <dimen name="fixed_lockscreen_13">28.0px</dimen>
+    <dimen name="fixed_lockscreen_14">48.0px</dimen>
+    <dimen name="fixed_lockscreen_15">29.0px</dimen>
+    <dimen name="fixed_lockscreen_16">27.0px</dimen>
+    <dimen name="fixed_lockscreen_17">27.0px</dimen>
+    <dimen name="fixed_lockscreen_18">16.0px</dimen>
+    <dimen name="fixed_lockscreen_19">23.0px</dimen>
+    <dimen name="fixed_lockscreen_20">31.0px</dimen>
+    <dimen name="fixed_lockscreen_21">24.0px</dimen>
+    <dimen name="fixed_world_clock_01">21.0px</dimen>
+    <dimen name="fixed_world_clock_02">29.0px</dimen>
+    <dimen name="fixed_world_clock_03">34.0px</dimen>
+    <dimen name="fixed_world_clock_04">60.0px</dimen>
+    <dimen name="fixed_world_clock_05">27.0px</dimen>
+    <dimen name="fixed_world_clock_06">19.0px</dimen>
+    <dimen name="fixed_world_clock_07">60.0px</dimen>
+    <dimen name="fixed_world_clock_08">27.0px</dimen>
+    <dimen name="fixed_world_clock_09">19.0px</dimen>
+    <dimen name="fixed_world_clock_10">25.0px</dimen>
+</resources>

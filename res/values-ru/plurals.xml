@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d файлов</item>
+        <item quantity="zero">%d файл</item>
+        <item quantity="one">%d файл</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Осталось %1$d попыток, после чего данные устройства будут удалены.</item>
+        <item quantity="one">Осталась %1$d попытка, после чего данные устройства будут удалены.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Вы в %1$d шагах от того, чтобы стать разработчиком.</item>
+        <item quantity="one">Вы в %1$d шаге от того, чтобы стать разработчиком.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Пароль должен содержать буквы (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы одну букву.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Пароль должен содержать строчные буквы (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы одну строчную букву.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Пароль должен содержать заглавные буквы (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы одну заглавную букву.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Пароль должен содержать цифры (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы одну цифру.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Пароль должен содержать специальные символы (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы один специальный символ.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Пароль должен содержать небуквенные символы (не менее %d).</item>
+        <item quantity="one">Пароль должен содержать хотя бы один небуквенный символ.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d приложений может читать уведомления</item>
+        <item quantity="one">%d приложение может читать уведомления</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Найдено %1$s принтеров</item>
+        <item quantity="one">Найден %1$s принтер</item>
+    </plurals>
+</resources>

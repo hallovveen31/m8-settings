@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/app_assoc_item" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@com.htc:dimen/htc_list_item_height" style="?com.htc:attr/htcListItemStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/app_icon" android:layout_width="@dimen/setting_app_icon_size" android:layout_height="@dimen/setting_app_icon_size" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:layout_marginTop="@com.htc:dimen/spacing" android:layout_marginRight="@com.htc:dimen/margin_m" android:layout_marginBottom="@com.htc:dimen/spacing" android:layout_weight="1.0">
+        <TextView android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="5" style="@com.htc:style/list_primary_m_bold" />
+        <TextView android:id="@id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="5" android:layout_below="@id/title" android:layout_alignLeft="@id/title" style="@com.htc:style/list_secondary_m" />
+    </RelativeLayout>
+    <com.htc.widget.HtcRadioButton android:layout_gravity="center_vertical" android:id="@id/radio_select" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</LinearLayout>

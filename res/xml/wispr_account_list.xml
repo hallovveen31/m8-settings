@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/whisper_account_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcPreference android:persistent="false" android:title="@string/whisper_add_account" android:key="key_whisper_add_account" />
+</com.htc.preference.HtcPreferenceScreen>

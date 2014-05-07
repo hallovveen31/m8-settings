@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.CheckableHtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.widget.HtcListItemColorIcon android:id="@id/sms_image" />
+    <com.htc.widget.HtcListItemSingleText android:id="@id/sms_text" />
+    <com.htc.widget.HtcRadioButton android:id="@*android:id/checkbox" />
+</com.htc.widget.CheckableHtcListItem>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/all_details" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="@com.htc:style/list_body_primary_m" android:id="@id/description" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingTop="@com.htc:dimen/spacing" android:paddingRight="@com.htc:dimen/margin_l" android:paddingBottom="@com.htc:dimen/margin_s" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?com.htc:attr/htcListItemStyle" />
+    </LinearLayout>
+</ScrollView>

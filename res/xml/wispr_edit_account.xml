@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/whisper_edit_account_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcEditTextPreference android:persistent="false" android:title="@string/whisper_service_provider" android:key="key_wispr_account" android:summary="@string/wifi_proxy_not_set" />
+    <com.htc.preference.HtcEditTextPreference android:persistent="false" android:title="@string/whisper_username" android:key="key_wispr_username" android:summary="@string/wifi_proxy_not_set" />
+    <com.htc.preference.HtcEditTextPreference android:persistent="false" android:title="@string/whisper_password" android:key="key_wispr_password" android:summary="@string/wifi_proxy_not_set" android:inputType="textPassword" />
+</com.htc.preference.HtcPreferenceScreen>

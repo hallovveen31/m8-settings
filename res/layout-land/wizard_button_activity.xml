@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/content_layout" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <FrameLayout android:id="@id/image_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/animation" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/divider" android:background="@com.htc:drawable/common_div" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    <ScrollView android:layout_width="0.0px" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem android:id="@id/desc_item" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem2LineText android:id="@id/desc" />
+                </com.htc.widget.HtcListItem>
+                <LinearLayout android:orientation="vertical" android:id="@id/option" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.htc.widget.HtcListItemSeparator android:layout_width="fill_parent" android:layout_height="wrap_content" htc:leftText="@string/htcmini_option_separator" />
+                    <ListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@com.htc:style/HtcListView" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/htc_list_item" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.htc.widget.HtcImageButton android:id="@id/stream_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <ImageView android:paddingTop="@com.htc:dimen/margin_xs_2" android:paddingBottom="@com.htc:dimen/margin_xs_2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@com.htc:drawable/common_div" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/seek_panel" android:paddingTop="@com.htc:dimen/spacing_2" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:layout_gravity="left" android:id="@id/message" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@com.htc:style/button_primary_m" />
+            <com.htc.widget.HtcSeekBar android:id="@id/seekbar" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingTop="@com.htc:dimen/leading" android:paddingRight="@com.htc:dimen/margin_l" android:paddingBottom="@com.htc:dimen/margin_xs_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

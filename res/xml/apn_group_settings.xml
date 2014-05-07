@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/apn_settings" android:key="apn_list"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/htc_apn_group_4g" android:key="apn_list_group1" />
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/htc_apn_group_non_4g" android:key="apn_list_group2" />
+</com.htc.preference.HtcPreferenceScreen>

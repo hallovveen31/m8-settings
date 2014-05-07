@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appwidget_preview_width">120.0dip</dimen>
+    <dimen name="appwidget_preview_height">70.0dip</dimen>
+    <dimen name="keyguard_appwidget_picker_margin_left">2.0dip</dimen>
+    <dimen name="keyguard_appwidget_picker_margin_right">2.0dip</dimen>
+    <dimen name="captioning_preview_height">100.0dip</dimen>
+    <dimen name="unlock_pin_title_padding_top">22.0dip</dimen>
+    <item type="dimen" name="unlock_pin_side_gap">@com.htc:dimen/margin_l</item>
+    <item type="dimen" name="unlock_pin_hint_padding_top">@com.htc:dimen/margin_s</item>
+    <dimen name="unlock_pin_with">346.0dip</dimen>
+    <dimen name="unlock_pin_height">267.0dip</dimen>
+    <dimen name="Pinkeyboard_margin_top">3.0dip</dimen>
+    <item type="dimen" name="Pinkeyboard_margin_left">@com.htc:dimen/margin_s</item>
+    <dimen name="lockpattern_margin_top">3.6599731dip</dimen>
+    <dimen name="lockpattern_footer_hint_margin_top">14.659973dip</dimen>
+    <item type="dimen" name="lockscreen_bottom_padding">@com.htc:dimen/margin_m_2</item>
+    <dimen name="lockpattern_layout_width">273.29688dip</dimen>
+    <dimen name="lockpattern_layout_height">273.29688dip</dimen>
+    <dimen name="spacekiller_height">75.0dip</dimen>
+    <dimen name="appwidget_width">421.0dip</dimen>
+    <dimen name="appwidget_height">68.0dip</dimen>
+    <item type="dimen" name="unlock_pin_side_gap_right">@com.htc:dimen/margin_l</item>
+    <dimen name="unlock_pin_margin_right">-2.0dip</dimen>
+    <dimen name="Pinkeyboardbg_margin_top">-8.0dip</dimen>
+    <dimen name="lockpattern_margin_right">3.6599731dip</dimen>
+    <item type="dimen" name="lockpattern_footer_hint_margin_left">@com.htc:dimen/margin_l</item>
+    <dimen name="lockpattern_footer_hint_margin_right">3.6599731dip</dimen>
+</resources>

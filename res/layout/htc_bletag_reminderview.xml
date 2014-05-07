@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/tile_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/line1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@dimen/tile_line_1_margin_top" android:layout_marginRight="@com.htc:dimen/margin_l" android:singleLine="true" style="@style/fixed_lockscreen_09" />
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/line2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@dimen/tile_line_2_margin_top" android:layout_marginRight="@com.htc:dimen/margin_l" android:singleLine="true" style="@style/fixed_lockscreen_10" />
+    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/line3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@dimen/tile_line_3_margin_top" android:layout_marginRight="@com.htc:dimen/margin_l" android:singleLine="true" style="@style/fixed_lockscreen_11" />
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/display_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/display_settings" android:order="0" />
+    <com.android.settings.framework.preference.display.HtcBrightnessPreference android:order="4" />
+    <com.android.settings.framework.preference.display.HtcScreenTimeoutListPreference android:order="5" />
+    <com.android.settings.framework.preference.display.HtcDreamSettingsPreference android:key="screensaver" android:order="7" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/notification_flash_settings" android:key="notification_flash_settings" android:summary="@string/notify_flash_settings_summary2" android:order="8" android:fragment="com.android.settings.NotificationFlashSettings" />
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/notification_pulse_title" android:key="notification_pulse" android:order="11" />
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/gsensor_settings" android:key="gsensor_group" android:order="14" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/gsensor_settings_title" android:order="15">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.GSensorCalibration" />
+    </com.htc.preference.HtcPreferenceScreen>
+    <com.htc.preference.HtcPreference android:title="@string/gyro_settings_title" android:key="gyro_calibration" android:order="16">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.GyroscopeCalibration" />
+    </com.htc.preference.HtcPreference>
+</com.htc.preference.HtcPreferenceScreen>

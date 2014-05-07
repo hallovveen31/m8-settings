@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/dialog_layout" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:id="@id/warning_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/htc_develop_option_warning_summary" style="@com.htc:style/list_body_primary_m" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/warning_text">
+            <com.htc.widget.HtcCheckBox android:id="@id/ask_again_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:id="@id/ask_again_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_s" android:text="@string/htc_develop_option_remember_choice" style="@com.htc:style/list_secondary_m" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

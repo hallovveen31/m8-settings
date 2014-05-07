@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@*android:id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:contentDescription="@null" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/automatic_container" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingTop="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:paddingBottom="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/automatic_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/automatic_brightness" android:layout_weight="1.0" style="@com.htc:style/list_primary_m_bold" />
+            <com.htc.widget.HtcCheckBox android:id="@id/automatic_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:layout_gravity="left" android:id="@id/brightness_level_text" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@com.htc:style/list_primary_m_bold" />
+        <com.htc.widget.HtcSeekBar android:id="@*android:id/seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

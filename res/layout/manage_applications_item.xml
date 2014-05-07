@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <com.htc.widget.HtcListItemColorIcon android:id="@id/app_icon" htc:imageMode="none" />
+    <com.htc.widget.HtcListItem2LineText android:id="@id/app_text" />
+    <com.htc.widget.HtcListItem2LineStamp android:id="@id/app_stamp" />
+    <com.android.settings.framework.widget.HtcColorFilterImageView android:id="@id/app_on_sdcard" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_indicator_connected" />
+</com.htc.widget.HtcListItem>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/common_wifi" android:key="hotspot_category_title" />
+    <com.android.settings.framework.preference.wireless.HtcWifiHotspotSwitchPreference android:key="HtcWifiHotspotSwitchPreference" />
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/common_usb" android:key="tethering_category_title" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/Smart_USB" android:key="toggle_smart_usb" android:summary="@com.htc:string/st_none" />
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/internet_sharing_title" android:key="usb_tether_settings" android:summary="@string/internet_sharing_summary" />
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/htc_sync_manager_title" android:key="enable_hsm_settings" android:summary="@string/hsm_summary" />
+    <com.htc.preference.HtcSwitchPreference android:persistent="false" android:title="@string/chargeonly_title" android:key="toggle_charge_only" android:summary="@string/chargeonly_summary" android:defaultValue="false" />
+    <com.htc.preference.HtcPreferenceCategory android:title="@string/common_bluetooth" android:key="bt_tethering_catrogry_title" />
+    <com.android.settings.framework.preference.wireless.HtcBluetoothTetheringSwitchPreference android:key="HtcBluetoothTetheringSwitchPreference" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/tethering_help_button_text" android:key="tethering_help" />
+</com.htc.preference.HtcPreferenceScreen>

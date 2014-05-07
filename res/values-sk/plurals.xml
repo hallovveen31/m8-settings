@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">Súbory: %d</item>
+        <item quantity="zero">Súbory: %d</item>
+        <item quantity="one">Súbory: %d</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Počet zostávajúcich pokusov pred odstránením údajov zariadenia: %1$d.</item>
+        <item quantity="one">Počet zostávajúcich pokusov pred odstránením údajov zariadenia: %1$d.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Kroky, ktoré vás delia od toho, aby ste sa stali vývojárom: %1$d.</item>
+        <item quantity="one">Už len %1$d krok vás delí do toho, aby ste sa stali vývojárom.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Heslo musí obsahovať najmenej %d písmen.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jedno písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Heslo musí obsahovať najmenej %d malých písmen.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jedno malé písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Heslo musí obsahovať najmenej %d veľkých písmen.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jedno veľké písmeno.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Heslo musí obsahovať najmenej %d číslic.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jednu číslicu.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Heslo musí obsahovať najmenej %d špeciálnych znakov.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jeden špeciálny symbol.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Heslo musí obsahovať najmenej %d znakov iných ako písmená.</item>
+        <item quantity="one">Heslo musí obsahovať najmenej jeden znak iný ako písmeno.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Aplikácie, ktoré môžu čítať upozornenia: %d</item>
+        <item quantity="one">%d aplikácia, ktorá môže čítať upozornenia</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Nájdené tlačiarne: %1$s</item>
+        <item quantity="one">Našla sa %1$s tlačiareň</item>
+    </plurals>
+</resources>

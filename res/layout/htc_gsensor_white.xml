@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_calibration_title" android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.widget.HtcFooter android:id="@id/bottomPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.htc.widget.HtcFooterButton android:id="@id/button_calibration" android:text="@string/calibration" />
+    </com.htc.widget.HtcFooter>
+    <RelativeLayout android:id="@id/mid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/bottomPanel" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/common_divider" android:background="@com.htc:drawable/common_list_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_centerInParent="true" />
+        <RelativeLayout android:id="@id/upper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/common_divider">
+            <ImageView android:id="@id/img_cylinder_h" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_base" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/img_bubble_h" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_bubble" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/img_blk_lines_upper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_marker" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/lower" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/common_divider">
+            <ImageView android:id="@id/img_cylinder_v" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_base" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/img_bubble_v" android:background="@drawable/settings_g_sensor_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/img_blk_lines_lower" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_marker" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+%1$s:  If you use a 3rd party app, it may directly collect your personal information or require %2$s to disclose your personal information, including location information (where applicable), to the app provider or some other 3rd party. 
+
+Which Privacy Policy Applies?  %2$s's Privacy Policy and Terms of Use do not apply to apps on your handset that are solely provided by 3rd parties.  The 3rd party’s policies apply to your use of this app.   
+
+Where Can I Find More Information About the 3rd Party’s Policies?  Check the app’s terms of use and/or the app provider’s policies for more information about how the app will collect, access, use and disclose your information.  Privacy Policies, Terms of Use and other consumer notices MAY BE available on the provider's website.  Be sure you are comfortable with the policies before you use an app.
+
+Where Can I Find my carrier’s Privacy Policy?  Separately, if you have questions about %2$s's Privacy Policy, please visit %3$s and click on the “Privacy Policy" link.  

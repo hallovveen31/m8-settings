@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcOverlapLayout android:orientation="vertical" android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:id="@id/app_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:secondaryProgress="0" style="?com.htc:attr/htcProgressBarStyleHorizontalFull" />
+        <com.htc.widget.HtcListItemSeparator android:id="@id/separator" android:layout_width="fill_parent" android:layout_height="wrap_content" htc:textMode="whitelist" htc:leftText="@string/chooseoperator" />
+        <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+            <com.htc.widget.HtcListView android:id="@*android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" style="@com.htc:style/HtcListView" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.htc.widget.HtcFooter android:orientation="horizontal" android:id="@id/footer_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.htc.widget.HtcFooterButton android:id="@id/back" android:text="@com.htc:string/va_back" />
+        <com.htc.widget.HtcFooterButton android:id="@id/next" android:text="@com.htc:string/va_next" />
+    </com.htc.widget.HtcFooter>
+</com.htc.widget.HtcOverlapLayout>

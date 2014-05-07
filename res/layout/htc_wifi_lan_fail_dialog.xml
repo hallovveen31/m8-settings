@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?com.htc:attr/htcListItemStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="@com.htc:dimen/htc_list_item_height" android:layout_weight="1.0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/icon_btn_cellphone_light" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/wifi_manager_connection_error" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/icon_btn_wifi_light" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/wifi_manager_connection" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_btn_global_light" />
+    </LinearLayout>
+    <View android:background="#ffbbbbbb" android:layout_width="fill_parent" android:layout_height="2.0px" />
+    <com.htc.widget.HtcListItem android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.htc.widget.HtcRimButton android:id="@id/troubleshooting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_troubleshooting_dialog_title" style="@com.htc:style/button_primary_m" />
+    </com.htc.widget.HtcListItem>
+</LinearLayout>

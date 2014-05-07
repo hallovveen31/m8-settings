@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/root" android:paddingBottom="@dimen/htc_common_M1" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <com.android.settings.framework.widget.HtcSquareRelativeLayout android:id="@id/background" android:background="@com.htc:color/list_item_bg_center_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.android.internal.widget.SubtitleView android:id="@id/preview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/captioning_preview_characters" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </com.android.settings.framework.widget.HtcSquareRelativeLayout>
+    <TextView android:gravity="start" android:id="@id/summary" android:paddingLeft="@dimen/htc_common_M2" android:paddingRight="@dimen/htc_common_M2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/background" style="@com.htc:style/list_primary_xxs" />
+</RelativeLayout>

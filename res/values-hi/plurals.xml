@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d फ़ाइलें</item>
+        <item quantity="zero">%d फ़ाइल</item>
+        <item quantity="one">%d फ़ाइल</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d प्रयास शेष इससे पहले कि उपकरण डेटा हटाए जाएं।</item>
+        <item quantity="one">%1$d प्रयास शेष इससे पहले कि उपकरण डेटा हटाए जाएं।</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">अब आप डेवलपर बनने से %1$d चरण दूर हैं।</item>
+        <item quantity="one">आप अब एक डेवलपर होने से %1$d चरण दूर हैं।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">पासवर्ड में कम से कम %d अक्षर होने चाहिए।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 अक्षर होना चाहिए।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">पासवर्ड में कम से कम %d लोअरकेस अक्षर होने चाहिए।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 लोअरकेस अक्षर होना चाहिए।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">पासवर्ड में कम से कम %d अपरकेस अक्षर होने चाहिए।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 अपरकेस अक्षर होना चाहिए।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">पासवर्ड में कम से कम %d संख्यात्मक अंक होने चाहिए।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 संख्यात्मक अंक होना चाहिए।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">पासवर्ड में कम से कम %d विशेष प्रतीक होने चाहिए।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 विशेष प्रतीक होना चाहिए।</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">पासवर्ड में कम से कम %d वर्ण ऐसे होने चाहिए जो अक्षर न हों।</item>
+        <item quantity="one">पासवर्ड में कम से कम 1 वर्ण ऐसा होना चाहिए जो अक्षर न हों।</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d एप्लिकेशन सूचनाएं पढ़ सकते हैं।</item>
+        <item quantity="one">%d एप्लिकेशन सूचनाएं पढ़ सकता है।</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s प्रिंटर मिले</item>
+        <item quantity="one">%1$s प्रिंटर मिला</item>
+    </plurals>
+</resources>

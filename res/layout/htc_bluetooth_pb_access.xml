@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/bluetooth_pb_remember_choice_area" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@com.htc:dimen/margin_s_2">
+        <com.htc.widget.HtcCheckBox android:gravity="center_vertical" android:id="@id/bluetooth_pb_remember_choice" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:paddingLeft="@com.htc:dimen/margin_s" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bluetooth_pb_remember_choice" style="@com.htc:style/list_secondary_m" />
+    </LinearLayout>
+</ScrollView>

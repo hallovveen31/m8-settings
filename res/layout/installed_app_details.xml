@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htc="http://schemas.android.com/apk/res/com.htc">
+    <LinearLayout android:orientation="vertical" android:id="@id/all_details" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <include android:id="@id/app_snippet" layout="@layout/manage_applications_item" />
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:id="@id/notification_switch_item" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/notification_switch_text" />
+                <com.htc.widget.HtcCheckBox android:id="@id/notification_switch" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/hardware_acceleration_switch_item" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/hardware_acceleration_switch_text" />
+                <com.htc.widget.HtcCheckBox android:id="@id/hardware_acceleration_switch" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l">
+                <com.htc.widget.HtcRimButton android:layout_gravity="center" android:id="@id/force_stop_button" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" style="@com.htc:style/button_primary_m" />
+                <com.htc.widget.HtcRimButton android:layout_gravity="center" android:id="@id/disable_button" android:paddingLeft="@com.htc:dimen/margin_m" android:paddingRight="@com.htc:dimen/margin_m" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m" android:singleLine="true" android:layout_weight="1.0" style="@com.htc:style/button_primary_m" />
+            </LinearLayout>
+            <View android:id="@id/force_stop_panel_divider" style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <com.htc.widget.HtcListItem android:id="@id/uninstall_button_item" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.htc.widget.HtcRimButton android:layout_gravity="center" android:id="@id/uninstall_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" style="@com.htc:style/button_primary_m" />
+        </com.htc.widget.HtcListItem>
+        <com.htc.widget.HtcListItemSeparator android:id="@id/storage_category" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/total_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/total_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/application_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/application_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/external_code_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/external_code_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View android:id="@id/external_code_divider" style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/data_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/data_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/external_data_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/external_data_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View android:id="@id/external_data_divider" style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <include android:id="@id/data_buttons_panel" layout="@layout/htc_two_buttons_panel" />
+        <com.htc.widget.HtcListItemSeparator android:id="@id/cache_header" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/cache_size_prefix" />
+                <com.htc.widget.HtcListItem2LineStamp android:id="@id/cache_size_text" />
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </RelativeLayout>
+        <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.htc.widget.HtcRimButton android:id="@id/clear_cache_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/clear_cache_btn_text" android:layout_centerHorizontal="true" style="@com.htc:style/button_primary_m" />
+        </com.htc.widget.HtcListItem>
+        <com.htc.widget.HtcListItemSeparator android:id="@id/auto_launch_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.htc.widget.HtcListItemLabeledLayout android:id="@id/auto_launch">
+                <com.htc.widget.HtcRimButton android:id="@id/clear_activities_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/clear_activities" android:layout_centerHorizontal="true" style="@com.htc:style/button_primary_m" />
+            </com.htc.widget.HtcListItemLabeledLayout>
+        </com.htc.widget.HtcListItem>
+        <LinearLayout android:orientation="vertical" android:id="@id/screen_compatibility_section" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@*android:color/black" android:gravity="center_vertical" android:background="@com.htc:drawable/section_divider_top" android:paddingLeft="@com.htc:dimen/margin_m" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/screen_compatibility_label" style="@com.htc:style/separator_primary_m" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="6.0dip" android:paddingTop="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/screen_compatibility_text" android:layout_alignParentLeft="true" style="@com.htc:style/list_secondary_m" />
+            <com.htc.widget.HtcCheckBox android:layout_gravity="left" android:id="@id/ask_compatibility_cb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/ask_compatibility" />
+            <com.htc.widget.HtcCheckBox android:layout_gravity="left" android:id="@id/enable_compatibility_cb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/enable_compatibility" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/permissions_section" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.htc.widget.HtcListItemSeparator android:id="@id/permissions_category" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <TextView android:textAppearance="@com.htc:style/list_body_primary_m" android:textColor="@color/security_settings_billing_desc_color" android:id="@id/security_settings_billing_desc" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:layout_marginBottom="@com.htc:dimen/margin_m" android:text="@string/security_settings_billing_desc" />
+            <LinearLayout android:orientation="vertical" android:id="@id/security_settings_billing_list" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@com.htc:dimen/margin_m" android:layout_marginBottom="@com.htc:dimen/margin_m">
+                <TextView android:textAppearance="@com.htc:style/list_body_primary_m" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/security_settings_premium_sms_desc" />
+                <com.htc.widget.HtcSpinner android:id="@id/security_settings_premium_sms_list" android:paddingTop="@com.htc:dimen/spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:spinnerMode="dropdown" />
+            </LinearLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@com.htc:style/list_body_primary_m" android:gravity="center_vertical" android:id="@id/security_settings_desc" android:paddingLeft="@com.htc:dimen/margin_l" android:paddingRight="@com.htc:dimen/margin_l" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_m" android:layout_marginBottom="@com.htc:dimen/margin_m" android:text="@string/security_settings_desc" />
+                <View style="@style/inset_line_divider" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/security_settings_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

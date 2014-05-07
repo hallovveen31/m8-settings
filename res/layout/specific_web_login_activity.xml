@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcOverlapLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htcfooter="http://schemas.android.com/apk/res/com.htc">
+    <com.htc.widget.HtcFooter android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.htc.widget.HtcFooterButton android:id="@id/cancel_btn" htcfooter:footer_display_mode="mode_alwaysright" />
+    </com.htc.widget.HtcFooter>
+    <LinearLayout android:orientation="vertical" android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.htc.wrap.android.webkit.HtcWrapWebView android:id="@id/login_webview" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/notice_countdown" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@com.htc:dimen/spacing_2" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_xs_2" style="@com.htc:style/list_body_primary_m" />
+    </LinearLayout>
+</com.htc.widget.HtcOverlapLayout>

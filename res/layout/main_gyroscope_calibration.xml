@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@com.htc:drawable/common_app_bkg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.widget.HtcFooter android:id="@id/footer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.htc.widget.HtcFooterButton android:textColor="@*android:color/white" android:id="@id/button_calibration" android:text="@string/calibration" />
+    </com.htc.widget.HtcFooter>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/footer" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/divider" android:background="@com.htc:drawable/common_list_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_centerInParent="true" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/divider">
+            <ImageView android:id="@id/upper_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_base" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/upper_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_bubble" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/upper_marker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_marker" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/divider">
+            <ImageView android:id="@id/lower_base" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_base" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/lower_bubble" android:background="@drawable/settings_g_sensor_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/lower_marker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_g_sensor_marker" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

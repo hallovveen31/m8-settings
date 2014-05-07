@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/topLayout" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:gravity="center_horizontal" android:id="@id/fingerprint_primary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m_2" android:layout_marginTop="@dimen/fingerprint_scan_title_margin_top" android:layout_marginRight="@com.htc:dimen/margin_m_2" android:text="@string/fingerprint_status_confirmed" style="@com.htc:style/list_primary_m" />
+            <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="@dimen/fingerprint_scan_width" android:layout_height="@dimen/fingerprint_scan_height" android:layout_marginTop="@dimen/fingerprint_scan_margin_top">
+                <ImageView android:layout_gravity="center" android:id="@id/fingerprint_status_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fingerprint_hit_scan" />
+                <ImageView android:layout_gravity="center" android:id="@id/fingerprint_panel" android:visibility="gone" android:layout_width="@dimen/fingerprint_scan_width" android:layout_height="@dimen/fingerprint_scan_height" android:src="@drawable/fingerprint_panel_scan" android:scaleType="fitXY" />
+                <ImageView android:layout_gravity="center" android:id="@id/fingerprint_frame" android:layout_width="@dimen/fingerprint_scan_width" android:layout_height="@dimen/fingerprint_scan_height" android:src="@drawable/fingerprint_panel" android:scaleType="fitXY" />
+                <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/fingerprint_tutorial_scan_arrow_1" android:layout_width="@dimen/fingerprint_scan_arrow_image_width" android:layout_height="@dimen/fingerprint_scan_arrow_image_height" android:src="@drawable/fingerprint_arrow" />
+                    <ImageView android:id="@id/fingerprint_tutorial_scan_arrow_2" android:layout_width="@dimen/fingerprint_scan_arrow_image_width" android:layout_height="@dimen/fingerprint_scan_arrow_image_height" android:layout_marginTop="@dimen/fingerprint_arrow_margin" android:src="@drawable/fingerprint_arrow" />
+                    <ImageView android:id="@id/fingerprint_tutorial_scan_arrow_3" android:layout_width="@dimen/fingerprint_scan_arrow_image_width" android:layout_height="@dimen/fingerprint_scan_arrow_image_height" android:layout_marginTop="@dimen/fingerprint_arrow_margin" android:src="@drawable/fingerprint_arrow" />
+                </LinearLayout>
+            </FrameLayout>
+            <TextView android:gravity="left" android:id="@id/fingerprint_secondary_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_m_2" android:layout_marginTop="@dimen/fingerprint_scan_message_margin_top" android:layout_marginRight="@com.htc:dimen/margin_m_2" android:text="@string/fingerprint_instruction_message" style="@com.htc:style/list_secondary_m" />
+        </LinearLayout>
+    </ScrollView>
+    <com.htc.widget.HtcFooter android:id="@id/footer_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.htc.widget.HtcFooterButton android:gravity="center" android:id="@id/use_alt_lock_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.htc.widget.HtcFooter>
+</LinearLayout>

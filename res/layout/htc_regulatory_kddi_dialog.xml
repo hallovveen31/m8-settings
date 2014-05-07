@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/dialog_layout" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/line1" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/RegulatoryKddiFontStyle60pt" />
+    <ImageView android:id="@id/rp_kddi_rt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/regulatory_kddi_margin3" android:layout_below="@id/line1" />
+    <TextView android:id="@id/line2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginTop="@dimen/regulatory_kddi_margin1" android:layout_toRightOf="@id/rp_kddi_rt" style="@style/RegulatoryKddiFontStyle60pt" />
+    <TextView android:id="@id/line3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/regulatory_kddi_margin2" android:layout_below="@id/line2" android:layout_alignLeft="@id/line2" style="@style/RegulatoryKddiFontStyle60pt" />
+    <ImageView android:id="@id/rp_kddi_wifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_s" android:layout_below="@id/rp_kddi_rt" />
+    <ImageView android:id="@id/rp_kddi_bt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_s" android:layout_toRightOf="@id/rp_kddi_wifi" android:layout_alignTop="@id/rp_kddi_wifi" />
+    <ImageView android:id="@id/rp_kddi_i" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_s" android:layout_below="@id/rp_kddi_wifi" />
+    <TextView android:id="@id/rp_kddi_text1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_xs" android:layout_marginTop="@dimen/regulatory_kddi_margin4" android:text="@string/htc_regulatory_kddi_fixed_text_1" android:layout_toRightOf="@id/rp_kddi_i" android:layout_below="@id/rp_kddi_wifi" style="@style/RegulatoryKddiFontStyle48pt" />
+    <TextView android:id="@id/rp_kddi_text2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/htc_regulatory_kddi_fixed_text_2" android:layout_below="@id/rp_kddi_i" style="@style/RegulatoryKddiFontStyle32pt" />
+    <TextView android:id="@id/rp_kddi_text3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/htc_regulatory_kddi_fixed_text_3" android:layout_below="@id/rp_kddi_text2" style="@style/RegulatoryKddiFontStyle32pt" />
+</RelativeLayout>

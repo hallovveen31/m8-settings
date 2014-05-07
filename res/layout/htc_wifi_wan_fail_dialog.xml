@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/wifi_section">
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@com.htc:dimen/htc_list_item_height">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/icon_btn_cellphone_light" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/wifi_manager_connection" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/icon_btn_wifi_light" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@com.htc:dimen/margin_m" android:src="@drawable/wifi_manager_connection_error" />
+            <ImageView android:id="@id/global" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_btn_global_light" />
+        </LinearLayout>
+        <View style="@style/inset_line_divider" />
+        <LinearLayout style="@style/wifi_section">
+            <LinearLayout style="@style/wifi_password_input_section">
+                <com.htc.widget.HtcRimButton android:id="@id/troubleshooting" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@com.htc:dimen/margin_s" android:text="@string/wifi_troubleshooting_dialog_title" style="@com.htc:style/button_primary_m" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/do_not_show_again_area" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/wifi_password_checkbox_section">
+                <com.htc.widget.HtcCheckBox android:id="@id/checkbox_do_not_show_again" style="@style/wifi_list_item_checkbox_style" />
+                <TextView android:text="@string/wifi_wan_fail_do_not_show_again" style="@style/wifi_password_checkbox_label" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

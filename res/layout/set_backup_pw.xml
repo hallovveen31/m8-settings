@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcOverlapLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:htcfooter="http://schemas.android.com/apk/res/com.htc">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.htc.widget.HtcListItemLabeledLayout android:text="@string/current_backup_pw_prompt">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/current_backup_pw" android:layout_width="fill_parent" android:layout_height="wrap_content" android:password="true" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.htc.widget.HtcListItemLabeledLayout android:text="@string/new_backup_pw_prompt">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/new_backup_pw" android:layout_width="fill_parent" android:layout_height="wrap_content" android:password="true" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.htc.widget.HtcListItemLabeledLayout android:text="@string/confirm_new_backup_pw_prompt">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/confirm_new_backup_pw" android:layout_width="fill_parent" android:layout_height="wrap_content" android:password="true" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.htc.widget.HtcFooter android:id="@id/footerbar1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.htc.widget.HtcFooterButton android:id="@id/backup_pw_cancel_button" android:text="@string/backup_pw_cancel_button_text" />
+        <com.htc.widget.HtcFooterButton android:id="@id/backup_pw_set_button" android:text="@com.htc:string/dl_ok" />
+    </com.htc.widget.HtcFooter>
+</com.htc.widget.HtcOverlapLayout>

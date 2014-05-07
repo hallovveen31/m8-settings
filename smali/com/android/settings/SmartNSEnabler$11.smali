@@ -1,0 +1,158 @@
+.class Lcom/android/settings/SmartNSEnabler$11;
+.super Ljava/lang/Thread;
+.source "SmartNSEnabler.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/settings/SmartNSEnabler;->enablePCModem()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/android/settings/SmartNSEnabler;
+
+
+# direct methods
+.method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
+    .locals 0
+    .parameter
+
+    .prologue
+    .line 1280
+    iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 1283
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    .line 1284
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$200(Lcom/android/settings/SmartNSEnabler;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "hasTethered"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$200(Lcom/android/settings/SmartNSEnabler;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "isNSOpening"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 1286
+    :cond_0
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$400(Lcom/android/settings/SmartNSEnabler;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/android/settings/SmartNSUtility;->setNetSharing(ZLandroid/content/Context;)V
+
+    .line 1287
+    invoke-static {}, Lcom/android/settings/SmartNSEnabler;->access$1700()Landroid/os/ConditionVariable;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0xbb8
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/ConditionVariable;->block(J)Z
+
+    .line 1290
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$200(Lcom/android/settings/SmartNSEnabler;)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    const-string v1, "ps_enabled"
+
+    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1292
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$400(Lcom/android/settings/SmartNSEnabler;)Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "com.htc.android.stop_IPT"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
+
+    .line 1293
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$400(Lcom/android/settings/SmartNSEnabler;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->waitIPTClose(Landroid/content/Context;)V
+
+    .line 1296
+    :cond_2
+    iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$11;->this$0:Lcom/android/settings/SmartNSEnabler;
+
+    #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->access$400(Lcom/android/settings/SmartNSEnabler;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/android/settings/SmartNSUtility;->StartCTModem(Landroid/content/Context;Z)V
+
+    .line 1297
+    invoke-static {}, Landroid/os/Looper;->loop()V
+
+    .line 1298
+    return-void
+.end method

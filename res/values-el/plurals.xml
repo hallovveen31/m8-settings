@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d αρχεία</item>
+        <item quantity="zero">%d αρχείο</item>
+        <item quantity="one">%d αρχείο</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">%1$d απόπειρες απομένουν πριν από τη διαγραφή των δεδομένων της συσκευής.</item>
+        <item quantity="one">%1$d απόπειρες απομένουν πριν από τη διαγραφή των δεδομένων της συσκευής.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Απέχετε πλέον %1$d βήματα από το να γίνετε προγραμματιστής.</item>
+        <item quantity="one">Απέχετε %1$d βήμα από το να γίνετε προγραμματιστής.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d γράμματα.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 γράμμα.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d πεζά γράμματα.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 πεζό γράμμα.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d κεφαλαία γράμματα.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 κεφαλαίο γράμμα.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d αριθμητικά ψηφία.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 αριθμητικό ψηφίο.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d ειδικά σύμβολα.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 ειδικό σύμβολο.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον %d χαρακτήρες που δεν είναι γράμματα.</item>
+        <item quantity="one">Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 1 χαρακτήρα που δεν είναι γράμμα.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d εφαρμογές μπορούν να διαβάσουν ειδοποιήσεις</item>
+        <item quantity="one">%d εφαρμογή μπορεί να διαβάσει ειδοποιήσεις</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Βρέθηκαν %1$s εκτυπωτές</item>
+        <item quantity="one">Βρέθηκε %1$s εκτυπωτής</item>
+    </plurals>
+</resources>

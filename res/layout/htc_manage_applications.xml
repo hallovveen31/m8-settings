@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/list_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.htc.widget.HtcListItem android:id="@id/progress_item" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.android.settings.framework.widget.HtcListItem1LineTextStorageBar android:id="@id/progress" />
+        </com.htc.widget.HtcListItem>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+            <com.htc.widget.HtcListView android:id="@*android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@com.htc:style/HtcListView" />
+            <com.htc.widget.HtcEmptyView android:id="@*android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/htc_no_applications" />
+        </FrameLayout>
+    </LinearLayout>
+    <view android:id="@id/running_processes" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.android.settings.applications.RunningProcessesView" />
+</LinearLayout>

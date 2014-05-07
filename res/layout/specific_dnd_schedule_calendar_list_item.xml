@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/dnd_digital_clock_width">
+        <TextView android:id="@id/schedule_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@com.htc:style/fixed_list_primary_xxs" />
+        <TextView android:id="@id/schedule_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dnd_schedule_endtime_margin" android:singleLine="true" style="@com.htc:style/fixed_list_primary_xxs" />
+    </LinearLayout>
+    <com.htc.widget.HtcListItem2LineText android:id="@id/text" />
+</com.htc.widget.HtcListItem>

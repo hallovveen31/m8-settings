@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d failų</item>
+        <item quantity="zero">%d failas</item>
+        <item quantity="one">%d failas</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Liko %1$d band. iki įrenginio duomenų panaikinimo.</item>
+        <item quantity="one">Liko %1$d bandymas iki įrenginio duomenų panaikinimo.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Jums liko dar %1$d žingsniai, kol tapsite kūrėju.</item>
+        <item quantity="one">Jums liko dar %1$d žingsnis, kol tapsite kūrėju.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Slaptažodyje turi būti bent %d raidės (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 raidė.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Slaptažodyje turi būti bent %d mažosios (-ųjų) raidės (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 mažoji raidė.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Slaptažodyje turi būti bent %d didžiosios (-iųjų) raidės (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 didžioji raidė.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Slaptažodyje turi būti bent %d skaičiai (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 skaičius.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Slaptažodyje turi būti bent %d specialūs (-ių) simboliai (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 specialus simbolis.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Slaptažodyje turi būti bent %d neraidiniai (-ių) simboliai (-ių).</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 neraidinis simbolis.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d programos gali skaityti perspėjimus</item>
+        <item quantity="one">%d programa gali skaityti perspėjimus</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Rasta spausdintuvų: %1$s</item>
+        <item quantity="one">Rastas %1$s spausdintuvas</item>
+    </plurals>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:id="@id/fingerprint_waiting_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/fingerprint_waiting_bg" android:paddingLeft="@dimen/fingerprint_waiting_bg_margin_left" android:paddingTop="@dimen/fingerprint_waiting_bg_margin_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fingerprint_device_02" />
+    <com.android.settings.framework.widget.HtcChangingDrawableImageView android:id="@id/fingerprint_waiting_finger" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fingerprint_finger_01" />
+</FrameLayout>

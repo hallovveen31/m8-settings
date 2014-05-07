@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout style="@style/wifi_section">
+        <LinearLayout android:id="@id/info" style="@style/wifi_section" />
+        <LinearLayout android:orientation="vertical" android:id="@id/message" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <TextView android:id="@id/err_message" android:text="@string/wifi_wep_error_try_again_title" style="@style/wifi_message_style" />
+            <View style="@style/inset_line_divider" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/type" android:visibility="gone" style="@style/wifi_section">
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_ssid">
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/ssid" android:singleLine="true" android:maxLength="32" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_security">
+                    <com.htc.widget.HtcSpinner android:entries="@array/wifi_security" android:id="@id/security" android:prompt="@string/wifi_security" style="@style/wifi_item_spinner" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/security_fields" android:visibility="gone" style="@style/wifi_section">
+            <LinearLayout android:id="@id/eap" android:visibility="gone" style="@style/wifi_section">
+                <LinearLayout android:id="@id/eap_extend_fields" style="@style/wifi_section">
+                    <com.htc.widget.HtcListItem android:id="@id/l_method" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_method">
+                            <com.htc.widget.HtcSpinner android:entries="@array/wifi_eap_method" android:id="@id/method" android:prompt="@string/wifi_eap_method" style="@style/wifi_item_spinner" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                    <View style="@style/inset_line_divider" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/cck_encryption_fields" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+                        <LinearLayout style="@style/wifi_password_input_section">
+                            <TextView android:text="@string/encryption_title" style="@style/wifi_input_title_style" />
+                            <com.htc.widget.HtcSpinner android:entries="@array/wifi_security_encryption_type_entries" android:id="@id/encryption_spinner" android:prompt="@string/encryption_title" style="@style/wifi_item_spinner" />
+                        </LinearLayout>
+                        <LinearLayout android:id="@id/cckm_checkbox_area" style="@style/wifi_password_checkbox_section">
+                            <com.htc.widget.HtcCheckBox android:id="@id/cckm_checkbox" style="@style/wifi_list_item_checkbox_style" />
+                            <TextView android:text="@string/cckm_desc_text" style="@style/wifi_password_checkbox_label" />
+                        </LinearLayout>
+                        <View style="@style/inset_line_divider" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/l_phase2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/please_select_phase2">
+                                <com.htc.widget.HtcSpinner android:entries="@array/wifi_phase2_entries" android:id="@id/phase2" android:prompt="@string/please_select_phase2" style="@style/wifi_item_spinner" />
+                            </com.htc.widget.HtcListItemLabeledLayout>
+                        </com.htc.widget.HtcListItem>
+                        <View style="@style/inset_line_divider" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/l_identity" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_identity">
+                            <com.htc.widget.HtcAutoCompleteTextView android:id="@id/identity" android:singleLine="true" android:inputType="textEmailAddress" style="@style/wifi_item_edittext" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                    <View style="@style/inset_line_divider" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/wapi_psk_fields" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem2LineText android:id="@id/wapi_hex_mode" />
+                    <com.htc.widget.HtcCheckBox android:id="@id/wapi_hex_checkbox" />
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/password_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+                <LinearLayout style="@style/wifi_password_input_section">
+                    <LinearLayout style="@style/wifi_section_2">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/password_title" style="@style/wifi_input_title_style" />
+                        <TextView android:textColor="@*android:color/holo_red_dark" android:id="@id/invalid_password" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/wifi_invalid_password" style="@style/wifi_input_title_style" />
+                    </LinearLayout>
+                    <com.htc.widget.HtcAutoCompleteTextView android:id="@id/password" android:password="true" android:singleLine="true" style="@style/wifi_item_edittext" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/show_password_layout" style="@style/wifi_password_checkbox_section">
+                    <com.htc.widget.HtcCheckBox android:id="@id/show_password" style="@style/wifi_list_item_checkbox_style" />
+                    <TextView android:text="@string/wifi_show_password" style="@style/wifi_password_checkbox_label" />
+                </LinearLayout>
+                <View style="@style/inset_line_divider" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/wapi_cert_fields" android:visibility="gone" style="@style/wifi_section">
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wapi_security_asu_certificate">
+                        <com.htc.widget.HtcSpinner android:id="@id/certificate_spinner" android:prompt="@string/wapi_security_asu_certificate" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wapi_security_user_certificate">
+                        <com.htc.widget.HtcSpinner android:id="@id/clientcertificate_spinner" android:prompt="@string/wapi_security_user_certificate" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/wifi_advanced_toggle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.htc.widget.HtcListItem android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem2LineText android:id="@id/wifi_show_advanced" />
+                <com.htc.widget.HtcCheckBox android:id="@id/wifi_advanced_togglebox" />
+            </com.htc.widget.HtcListItem>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/wifi_advanced_fields" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+            <View style="@style/inset_line_divider" />
+            <LinearLayout android:id="@id/cmcc_eap_extend_fields" style="@style/wifi_section">
+                <com.htc.widget.HtcListItem android:id="@id/cmcc_l_method" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_method">
+                        <com.htc.widget.HtcSpinner android:entries="@array/wifi_eap_method" android:id="@id/cmcc_method" android:prompt="@string/wifi_eap_method" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <LinearLayout android:orientation="vertical" android:id="@id/cmcc_l_phase2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/please_select_phase2">
+                            <com.htc.widget.HtcSpinner android:entries="@array/wifi_phase2_entries" android:id="@id/cmcc_phase2" android:prompt="@string/please_select_phase2" style="@style/wifi_item_spinner" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                    <View style="@style/inset_line_divider" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.htc.widget.HtcListItem android:id="@id/proxy_settings_fields" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/proxy_settings_title">
+                    <com.htc.widget.HtcSpinner android:entries="@array/wifi_proxy_settings" android:id="@id/proxy_settings" android:prompt="@string/proxy_settings_title" style="@style/wifi_item_spinner" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+            <View style="@style/inset_line_divider" />
+            <LinearLayout android:id="@id/proxy_fields" android:visibility="gone" style="@style/wifi_section">
+                <LinearLayout android:orientation="vertical" android:id="@id/proxy_warning_limited_support" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?com.htc:attr/htcListItemStyle">
+                    <TextView android:text="@string/proxy_warning_limited_support" style="@style/wifi_message_style" />
+                    <View style="@style/inset_line_divider" />
+                </LinearLayout>
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/proxy_hostname_label">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/proxy_hostname" android:hint="@string/proxy_hostname_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/proxy_port_label">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/proxy_port" android:hint="@string/proxy_port_hint" android:singleLine="true" android:inputType="number" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/proxy_exclusionlist_label">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/proxy_exclusionlist" android:hint="@string/proxy_exclusionlist_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ip_fields" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_ip_settings">
+                        <com.htc.widget.HtcSpinner android:entries="@array/wifi_ip_settings" android:id="@id/ip_settings" android:prompt="@string/wifi_ip_settings" style="@style/wifi_item_spinner" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:id="@id/staticip" android:visibility="gone" style="@style/wifi_section">
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_ip_address">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/ipaddress" android:hint="@string/wifi_ip_address_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_gateway">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/gateway" android:hint="@string/wifi_gateway_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_network_prefix_length">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/network_prefix_length" android:hint="@string/wifi_network_prefix_length_hint" android:singleLine="true" android:inputType="number" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_dns1">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/dns1" android:hint="@string/wifi_dns1_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+                <View style="@style/inset_line_divider" />
+                <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_dns2">
+                        <com.htc.widget.HtcAutoCompleteTextView android:id="@id/dns2" android:hint="@string/wifi_dns2_hint" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                    </com.htc.widget.HtcListItemLabeledLayout>
+                </com.htc.widget.HtcListItem>
+            </LinearLayout>
+            <LinearLayout android:id="@id/eap_cert_fields" android:visibility="gone" style="@style/wifi_section">
+                <View style="@style/inset_line_divider" />
+                <LinearLayout android:orientation="vertical" android:id="@id/l_ca_cert" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_ca_cert">
+                            <com.htc.widget.HtcSpinner android:id="@id/ca_cert" android:prompt="@string/wifi_eap_ca_cert" style="@style/wifi_item_spinner" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                    <View style="@style/inset_line_divider" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/l_user_cert" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_user_cert">
+                            <com.htc.widget.HtcSpinner android:id="@id/user_cert" android:prompt="@string/wifi_eap_user_cert" style="@style/wifi_item_spinner" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                    <View style="@style/inset_line_divider" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/l_anonymous" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_eap_anonymous">
+                            <com.htc.widget.HtcAutoCompleteTextView android:id="@id/anonymous" android:singleLine="true" android:inputType="textNoSuggestions" style="@style/wifi_item_edittext" />
+                        </com.htc.widget.HtcListItemLabeledLayout>
+                    </com.htc.widget.HtcListItem>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/wepindex" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcListItemLabeledLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_security_wepkey_index_label">
+                    <com.htc.widget.HtcSpinner android:entries="@array/wifi_wep_index" android:id="@id/wepindex_spinner" android:prompt="@string/wifi_security_wepkey_index_label" style="@style/wifi_item_spinner" />
+                </com.htc.widget.HtcListItemLabeledLayout>
+            </com.htc.widget.HtcListItem>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/manage_open_networks_notify" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View style="@style/inset_line_divider" />
+            <com.htc.widget.HtcListItem android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.htc.widget.HtcRimButton android:id="@id/wifi_open_notification_block_button" android:text="@string/wifi_open_notification_block_text" style="@style/wifi_item_button" />
+            </com.htc.widget.HtcListItem>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/osaifu_keitai_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/osaifu_keitai_lock_title" android:key="toggle_felica_lock" />
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/osaifu_keitai_rw_p2p_title" android:key="toggle_nfc" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/kddi_android_beam_settings_title" android:key="android_beam_settings" android:fragment="com.android.settings.nfc.AndroidBeam" />
+    <com.htc.preference.HtcPreferenceScreen android:title="@string/osaifu_keitai_lock_password_change_title" android:key="change_password" android:summary="@string/osaifu_keitai_lock_password_change_summary" />
+    <com.htc.preference.HtcPreferenceScreen android:persistent="false" android:title="@string/osaifu_keitai_lock_password_initialize_title" android:key="initialize_password" android:summary="@string/osaifu_keitai_lock_password_initialize_summary" />
+</com.htc.preference.HtcPreferenceScreen>

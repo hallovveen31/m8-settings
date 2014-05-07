@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:id="@id/fingerprint_selection_hit" android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_01" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_02" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_03" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_04" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_05" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_06" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_07" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_08" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_09" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_10" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_11" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_12" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_13" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_14" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_15" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_16" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_17" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_18" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_19" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_20" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_21" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_22" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_23" />
+    <item android:duration="45" android:drawable="@drawable/fingerprint_selection_hit_24" />
+    <item android:duration="396" android:drawable="@*android:color/transparent" />
+</animation-list>

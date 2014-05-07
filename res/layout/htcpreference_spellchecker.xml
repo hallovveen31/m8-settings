@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/pref_all" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/pref_left_button" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@com.htc:dimen/margin_l" android:layout_marginTop="@com.htc:dimen/margin_s" android:layout_marginRight="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_s" android:layout_weight="1.0">
+            <TextView android:ellipsize="end" android:id="@*android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" style="@com.htc:style/list_primary_m" />
+            <TextView android:id="@*android:id/summary" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:layout_below="@*android:id/title" android:layout_alignLeft="@*android:id/title" style="@com.htc:style/list_secondary_m" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:background="@com.htc:drawable/common_div" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@com.htc:dimen/margin_l" android:layout_marginBottom="@com.htc:dimen/margin_l" />
+    <com.htc.widget.HtcRadioButton android:id="@id/pref_radio" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

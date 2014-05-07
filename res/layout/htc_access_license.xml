@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/access_legal_padding" android:paddingBottom="@dimen/access_legal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_intro_access" android:scaleType="fitCenter" />
+        <TextView android:textColor="#ff000000" android:gravity="center" android:layout_width="@dimen/access_legal_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/access_legal_margin" android:text="@string/access_legal_content" />
+    </LinearLayout>
+</ScrollView>

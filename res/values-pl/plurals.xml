@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d plików</item>
+        <item quantity="zero">%d plik</item>
+        <item quantity="one">%d plik</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Pozostała liczba prób, po których dane urządzenia zostaną usunięte, wynosi %1$d.</item>
+        <item quantity="one">Pozostała liczba prób, po których dane urządzenia zostaną usunięte, wynosi %1$d.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Pozostało ci %1$d kroków od zostania programistą.</item>
+        <item quantity="one">Pozostał ci %1$d krok od zostania programistą.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Hasło musi zawierać litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Hasło musi zawierać małe litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną małą literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Hasło musi zawierać wielkie litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną wielką literę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Hasło musi zawierać cyfry (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jedną cyfrę.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Hasło musi zawierać symbole specjalne (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jeden symbol specjalny.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Hasło musi zawierać znaki inne niż litery (co najmniej %d).</item>
+        <item quantity="one">Hasło musi zawierać co najmniej jeden znak niebędący literą.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">Aplikacje %d mogą czytać powiadomienia</item>
+        <item quantity="one">Aplikacja %d może czytać powiadomienia</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">Znaleziono %1$s drukarki</item>
+        <item quantity="one">Znaleziono %1$s drukarkę</item>
+    </plurals>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/print_print_job"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.htc.preference.HtcPreference android:key="print_job_preference" />
+    <com.htc.preference.HtcPreference android:layout="@layout/print_job_summary" android:key="print_job_message_preference" />
+</com.htc.preference.HtcPreferenceScreen>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.htc.preference.HtcPreferenceScreen android:title="@string/nfc_quick_toggle_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.htc.preference.HtcCheckBoxPreference android:persistent="false" android:title="@string/vzw_nfc_handovers_prompt_title" android:key="enable_nfc_handover_prompt" />
+</com.htc.preference.HtcPreferenceScreen>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d개 파일</item>
+        <item quantity="zero">%d개 파일</item>
+        <item quantity="one">%d개 파일</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">장치 데이터를 삭제하기 전까지 %1$d 시도들이 남았습니다.</item>
+        <item quantity="one">장치 데이터를 삭제하기 전까지 %1$d 시도가 남았습니다.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">개발자가 되려면 현재 %1$d 단계 남았습니다.</item>
+        <item quantity="one">개발자가 되려면 현재 %1$d 단계 남았습니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">비밀번호에는 적어도 %d개의 문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">비밀번호에는 적어도 %d개의 소문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 소문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">비밀번호에는 적어도 %d개의 대문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 대문자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">비밀번호에는 적어도 %d개의 숫자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 숫자가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">비밀번호에는 적어도 %d개의 특수 기호가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 적어도 하나의 특수 기호가 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">비밀번호에는 적어도 %d개 이상의 글자가 아닌 문자가 포함되어야 합니다.</item>
+        <item quantity="one">비밀번호에는 글자가 아닌 문자가 한 개 이상 포함되어야 합니다.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d 응용 프로그램들이 알림을 읽을 수 있음</item>
+        <item quantity="one">%d 응용 프로그램이 알림을 읽을 수 있음</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s 프린터 찾음</item>
+        <item quantity="one">%1$s 프린터 찾음</item>
+    </plurals>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d faili</item>
+        <item quantity="zero">%d fails</item>
+        <item quantity="one">%d fails</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">Atlikuši %1$d mēģinājumi pirms ierīces datu izdzēšanas.</item>
+        <item quantity="one">Atlicis %1$d mēģinājums pirms ierīces datu izdzēšanas.</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">Tagad esat %1$d soļu attālumā līdz kļūšanai par izstrādātāju.</item>
+        <item quantity="one">Tagad esat %1$d soļa attālumā līdz kļūšanai par izstrādātāju.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parolē ir jābūt vismaz %d burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d mazajiem burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 mazajam burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d lielajiem burtiem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 lielajam burtam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parolē ir jābūt vismaz %d cipariem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 ciparam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parolē ir jābūt vismaz %d īpašajiem simboliem.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 īpašajam simbolam.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parolē ir jābūt vismaz %d rakstzīmēm, kas nav burti.</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 rakstzīmei, kas nav burts.</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">%d lietojumprogrammas nevar nolasīt paziņojumus</item>
+        <item quantity="one">%d lietojumprogramma nevar nolasīt paziņojumus</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">%1$s printeri atrasti</item>
+        <item quantity="one">%1$s printeris atrasts</item>
+    </plurals>
+</resources>

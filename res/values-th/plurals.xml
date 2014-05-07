@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="htc_stoarge_statistic_file_number">
+        <item quantity="other">%d ไฟล์</item>
+        <item quantity="zero">%d ไฟล์</item>
+        <item quantity="one">%d ไฟล์</item>
+    </plurals>
+    <plurals name="htc_decrypt_storage_trying_attempt_hint">
+        <item quantity="other">ยังเหลืออืก %1$d ครั้งก่อนที่ข้อมูลอุปกรณ์จะถูกลบ</item>
+        <item quantity="one">ยังเหลืออืก %1$d ครั้งก่อนที่ข้อมูลอุปกรณ์จะถูกลบ</item>
+    </plurals>
+    <plurals name="show_dev_countdown">
+        <item quantity="other">ตอนนี้ คุณยังมีขั้นตอนอีก %1$d ขั้น เพื่อให้มีสถานะเป็นนักพัฒนา</item>
+        <item quantity="one">ตอนนี้ คุณยังมีขั้นตอนอีก %1$d ขั้น เพื่อให้มีสถานะเป็นนักพัฒนา</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">รหัสผ่านต้องมีตัวอักษรอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีตัวอักษรอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">รหัสผ่านต้องมีอักษรตัวพิมพ์เล็กอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักษรตัวพิมพ์เล็กอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักษรตัวพิมพ์ใหญ่อย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">รหัสผ่านต้องมีตัวเลขอย่างน้อย %d ตำแหน่ง</item>
+        <item quantity="one">รหัสผ่านต้องมีตัวเลขอย่างน้อย 1 ตำแหน่ง</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">รหัสผ่านต้องมีสัญลักษณ์พิเศษอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีสัญลักษณ์พิเศษอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">รหัสผ่านต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย %d ตัว</item>
+        <item quantity="one">รหัสผ่านต้องมีอักขระที่ไม่ใช่ตัวอักษรอย่างน้อย 1 ตัว</item>
+    </plurals>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="other">แอพพลิเคชั่น %d สามารถอ่านการแจ้งเตือน</item>
+        <item quantity="one">แอพพลิเคชั่น %d สามารถอ่านการแจ้งเตือน</item>
+    </plurals>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="other">พบเครื่องพิมพ์ %1$s</item>
+        <item quantity="one">พบเครื่องพิมพ์ %1$s</item>
+    </plurals>
+</resources>
