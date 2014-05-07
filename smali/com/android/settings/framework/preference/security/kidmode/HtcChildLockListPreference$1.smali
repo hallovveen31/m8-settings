@@ -30,14 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
 
-    .prologue
-    .line 172
     iput-object p1, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
@@ -49,21 +42,13 @@
 # virtual methods
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 6
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 176
     move-object v2, p2
 
-    .line 178
-    .local v2, view:Landroid/view/View;
     if-nez v2, :cond_0
 
-    .line 179
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
@@ -79,8 +64,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 181
-    .local v0, inflater:Landroid/view/LayoutInflater;
     const v3, 0x7f04007c
 
     const/4 v4, 0x0
@@ -89,7 +72,6 @@
 
     move-result-object v2
 
-    .line 186
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mIsAlignLastControl:Z
@@ -105,13 +87,10 @@
 
     move-object v3, v2
 
-    .line 187
     check-cast v3, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v3, v5}, Lcom/htc/widget/HtcListItem;->setLastComponentAlign(Z)V
 
-    .line 191
-    .end local v0           #inflater:Landroid/view/LayoutInflater;
     :cond_0
     const v3, 0x1020014
 
@@ -121,8 +100,6 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 194
-    .local v1, textView:Lcom/htc/widget/HtcListItem2LineText;
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntries:[Ljava/lang/String;
@@ -132,7 +109,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 195
     if-ltz p1, :cond_1
 
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
@@ -146,7 +122,6 @@
 
     if-ge p1, v3, :cond_1
 
-    .line 196
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntries:[Ljava/lang/String;
@@ -158,7 +133,6 @@
 
     invoke-virtual {v1, v3}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 197
     iget-object v3, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntriesDescription:[Ljava/lang/String;
@@ -170,7 +144,6 @@
 
     invoke-virtual {v1, v3}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 201
     :cond_1
     return-object v2
 .end method

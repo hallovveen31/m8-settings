@@ -71,34 +71,26 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 548
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 549
-    .local v0, version:I
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 550
     new-instance v1, Landroid/support/v4/view/ViewCompat$KitKatViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$KitKatViewCompatImpl;-><init>()V
 
     sput-object v1, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
-    .line 564
     :goto_0
     return-void
 
-    .line 551
     :cond_0
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_1
 
-    .line 552
     new-instance v1, Landroid/support/v4/view/ViewCompat$JbMr1ViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$JbMr1ViewCompatImpl;-><init>()V
@@ -107,13 +99,11 @@
 
     goto :goto_0
 
-    .line 553
     :cond_1
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_2
 
-    .line 554
     new-instance v1, Landroid/support/v4/view/ViewCompat$JBViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$JBViewCompatImpl;-><init>()V
@@ -122,13 +112,11 @@
 
     goto :goto_0
 
-    .line 555
     :cond_2
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_3
 
-    .line 556
     new-instance v1, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$ICSViewCompatImpl;-><init>()V
@@ -137,13 +125,11 @@
 
     goto :goto_0
 
-    .line 557
     :cond_3
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_4
 
-    .line 558
     new-instance v1, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;-><init>()V
@@ -152,13 +138,11 @@
 
     goto :goto_0
 
-    .line 559
     :cond_4
     const/16 v1, 0x9
 
     if-lt v0, v1, :cond_5
 
-    .line 560
     new-instance v1, Landroid/support/v4/view/ViewCompat$GBViewCompatImpl;
 
     invoke-direct {v1}, Landroid/support/v4/view/ViewCompat$GBViewCompatImpl;-><init>()V
@@ -167,7 +151,6 @@
 
     goto :goto_0
 
-    .line 562
     :cond_5
     new-instance v1, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;
 
@@ -181,21 +164,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 534
     return-void
 .end method
 
 .method public static canScrollHorizontally(Landroid/view/View;I)Z
     .locals 1
-    .parameter "v"
-    .parameter "direction"
 
-    .prologue
-    .line 574
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->canScrollHorizontally(Landroid/view/View;I)Z
@@ -207,11 +183,7 @@
 
 .method public static canScrollVertically(Landroid/view/View;I)Z
     .locals 1
-    .parameter "v"
-    .parameter "direction"
 
-    .prologue
-    .line 585
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->canScrollVertically(Landroid/view/View;I)Z
@@ -223,10 +195,7 @@
 
 .method public static getAccessibilityNodeProvider(Landroid/view/View;)Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 899
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;
@@ -238,10 +207,7 @@
 
 .method public static getAlpha(Landroid/view/View;)F
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 910
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getAlpha(Landroid/view/View;)F
@@ -253,10 +219,7 @@
 
 .method public static getImportantForAccessibility(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 837
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getImportantForAccessibility(Landroid/view/View;)I
@@ -268,10 +231,7 @@
 
 .method public static getLabelFor(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 984
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getLabelFor(Landroid/view/View;)I
@@ -283,10 +243,7 @@
 
 .method public static getLayerType(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 973
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getLayerType(Landroid/view/View;)I
@@ -298,10 +255,7 @@
 
 .method public static getLayoutDirection(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1043
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getLayoutDirection(Landroid/view/View;)I
@@ -313,10 +267,7 @@
 
 .method public static getMeasuredHeightAndState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1133
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getMeasuredHeightAndState(Landroid/view/View;)I
@@ -328,10 +279,7 @@
 
 .method public static getMeasuredState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1144
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getMeasuredState(Landroid/view/View;)I
@@ -343,10 +291,7 @@
 
 .method public static getMeasuredWidthAndState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1119
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getMeasuredWidthAndState(Landroid/view/View;)I
@@ -358,10 +303,7 @@
 
 .method public static getOverScrollMode(Landroid/view/View;)I
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 598
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getOverScrollMode(Landroid/view/View;)I
@@ -373,10 +315,7 @@
 
 .method public static getParentForAccessibility(Landroid/view/View;)Landroid/view/ViewParent;
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1075
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getParentForAccessibility(Landroid/view/View;)Landroid/view/ViewParent;
@@ -388,10 +327,7 @@
 
 .method public static hasTransientState(Landroid/view/View;)Z
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 747
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->hasTransientState(Landroid/view/View;)Z
@@ -403,10 +339,7 @@
 
 .method public static isOpaque(Landroid/view/View;)Z
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1088
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->isOpaque(Landroid/view/View;)Z
@@ -418,57 +351,37 @@
 
 .method public static onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
-    .parameter "v"
-    .parameter "event"
 
-    .prologue
-    .line 684
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 685
     return-void
 .end method
 
 .method public static onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
     .locals 1
-    .parameter "v"
-    .parameter "info"
 
-    .prologue
-    .line 720
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 721
     return-void
 .end method
 
 .method public static onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
-    .parameter "v"
-    .parameter "event"
 
-    .prologue
-    .line 651
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->onPopulateAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 652
     return-void
 .end method
 
 .method public static performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 1
-    .parameter "view"
-    .parameter "action"
-    .parameter "arguments"
 
-    .prologue
-    .line 872
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
@@ -480,28 +393,17 @@
 
 .method public static postInvalidateOnAnimation(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 771
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->postInvalidateOnAnimation(Landroid/view/View;)V
 
-    .line 772
     return-void
 .end method
 
 .method public static postInvalidateOnAnimation(Landroid/view/View;IIII)V
     .locals 6
-    .parameter "view"
-    .parameter "left"
-    .parameter "top"
-    .parameter "right"
-    .parameter "bottom"
 
-    .prologue
-    .line 789
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     move-object v1, p0
@@ -516,49 +418,32 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->postInvalidateOnAnimation(Landroid/view/View;IIII)V
 
-    .line 790
     return-void
 .end method
 
 .method public static postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 1
-    .parameter "view"
-    .parameter "action"
 
-    .prologue
-    .line 803
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->postOnAnimation(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 804
     return-void
 .end method
 
 .method public static postOnAnimationDelayed(Landroid/view/View;Ljava/lang/Runnable;J)V
     .locals 1
-    .parameter "view"
-    .parameter "action"
-    .parameter "delayMillis"
 
-    .prologue
-    .line 820
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1, p2, p3}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->postOnAnimationDelayed(Landroid/view/View;Ljava/lang/Runnable;J)V
 
-    .line 821
     return-void
 .end method
 
 .method public static resolveSizeAndState(III)I
     .locals 1
-    .parameter "size"
-    .parameter "measureSpec"
-    .parameter "childMeasuredState"
 
-    .prologue
-    .line 1105
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->resolveSizeAndState(III)I
@@ -570,122 +455,81 @@
 
 .method public static setAccessibilityDelegate(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
     .locals 1
-    .parameter "v"
-    .parameter "delegate"
 
-    .prologue
-    .line 735
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setAccessibilityDelegate(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
 
-    .line 736
     return-void
 .end method
 
 .method public static setHasTransientState(Landroid/view/View;Z)V
     .locals 1
-    .parameter "view"
-    .parameter "hasTransientState"
 
-    .prologue
-    .line 758
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setHasTransientState(Landroid/view/View;Z)V
 
-    .line 759
     return-void
 .end method
 
 .method public static setImportantForAccessibility(Landroid/view/View;I)V
     .locals 1
-    .parameter "view"
-    .parameter "mode"
 
-    .prologue
-    .line 854
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setImportantForAccessibility(Landroid/view/View;I)V
 
-    .line 855
     return-void
 .end method
 
 .method public static setLabelFor(Landroid/view/View;I)V
     .locals 1
-    .parameter "view"
-    .parameter "labeledId"
 
-    .prologue
-    .line 995
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setLabelFor(Landroid/view/View;I)V
 
-    .line 996
     return-void
 .end method
 
 .method public static setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
     .locals 1
-    .parameter "view"
-    .parameter "paint"
 
-    .prologue
-    .line 1029
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
 
-    .line 1030
     return-void
 .end method
 
 .method public static setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
     .locals 1
-    .parameter "view"
-    .parameter "layerType"
-    .parameter "paint"
 
-    .prologue
-    .line 953
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 954
     return-void
 .end method
 
 .method public static setLayoutDirection(Landroid/view/View;I)V
     .locals 1
-    .parameter "view"
-    .parameter "layoutDirection"
 
-    .prologue
-    .line 1063
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setLayoutDirection(Landroid/view/View;I)V
 
-    .line 1064
     return-void
 .end method
 
 .method public static setOverScrollMode(Landroid/view/View;I)V
     .locals 1
-    .parameter "v"
-    .parameter "overScrollMode"
 
-    .prologue
-    .line 614
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setOverScrollMode(Landroid/view/View;I)V
 
-    .line 615
     return-void
 .end method
 
@@ -693,10 +537,7 @@
 # virtual methods
 .method public getAccessibilityLiveRegion(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1156
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p1}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->getAccessibilityLiveRegion(Landroid/view/View;)I
@@ -708,15 +549,10 @@
 
 .method public setAccessibilityLiveRegion(Landroid/view/View;I)V
     .locals 1
-    .parameter "view"
-    .parameter "mode"
 
-    .prologue
-    .line 1188
     sget-object v0, Landroid/support/v4/view/ViewCompat;->IMPL:Landroid/support/v4/view/ViewCompat$ViewCompatImpl;
 
     invoke-interface {v0, p1, p2}, Landroid/support/v4/view/ViewCompat$ViewCompatImpl;->setAccessibilityLiveRegion(Landroid/view/View;I)V
 
-    .line 1189
     return-void
 .end method

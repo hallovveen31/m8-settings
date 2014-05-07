@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNetSharingApnDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,13 +34,10 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 93
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 94
     const-string v1, "SmartNetSharingApnDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -79,7 +73,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     #getter for: Lcom/android/settings/SmartNetSharingApnDialog;->sp:Landroid/content/SharedPreferences;
@@ -95,7 +88,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 97
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     #getter for: Lcom/android/settings/SmartNetSharingApnDialog;->mContext:Landroid/content/Context;
@@ -111,11 +103,8 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 100
     const/4 v0, 0x0
 
-    .line 101
-    .local v0, count:I
     :goto_0
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
@@ -136,7 +125,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 102
     const-string v1, "SmartNetSharingApnDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -159,7 +147,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     #getter for: Lcom/android/settings/SmartNetSharingApnDialog;->pause:Landroid/os/ConditionVariable;
@@ -171,13 +158,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/ConditionVariable;->block(J)Z
 
-    .line 104
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 107
-    .end local v0           #count:I
     :cond_0
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
@@ -192,7 +176,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 108
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     #getter for: Lcom/android/settings/SmartNetSharingApnDialog;->mContext:Landroid/content/Context;
@@ -202,7 +185,6 @@
 
     invoke-static {v5, v1}, Lcom/android/settings/SmartNSUtility;->setDiagEnabled(ZLandroid/content/Context;)V
 
-    .line 109
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
     #getter for: Lcom/android/settings/SmartNetSharingApnDialog;->mContext:Landroid/content/Context;
@@ -212,7 +194,6 @@
 
     invoke-static {v5, v1}, Lcom/android/settings/SmartNSUtility;->setMLEnabled(ZLandroid/content/Context;)V
 
-    .line 110
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
@@ -224,7 +205,6 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/SmartNSUtility;->setDataConnection(ZLandroid/content/Context;)V
 
-    .line 113
     :cond_1
     iget-object v1, p0, Lcom/android/settings/SmartNetSharingApnDialog$2;->this$0:Lcom/android/settings/SmartNetSharingApnDialog;
 
@@ -241,9 +221,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 114
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 115
     return-void
 .end method

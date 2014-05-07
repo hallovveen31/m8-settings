@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 194
     iput-object p1, p0, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference$1;->this$0:Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,24 +33,17 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 197
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 198
-    .local v0, action:Ljava/lang/String;
     invoke-static {}, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;->access$000()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 199
     invoke-static {}, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;->access$100()Ljava/lang/String;
 
     move-result-object v3
@@ -78,7 +68,6 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     :cond_0
     const-string v3, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
 
@@ -88,7 +77,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 203
     const-string v3, "android.bluetooth.device.extra.DEVICE"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -97,14 +85,10 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 204
-    .local v1, device:Landroid/bluetooth/BluetoothDevice;
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 205
-    .local v2, name:Ljava/lang/String;
     if-eqz v2, :cond_2
 
     const-string v3, "HTC Mini"
@@ -123,16 +107,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 207
     :cond_1
     iget-object v3, p0, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference$1;->this$0:Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;
 
     #calls: Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;->updateUI()V
     invoke-static {v3}, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;->access$500(Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;)V
 
-    .line 210
-    .end local v1           #device:Landroid/bluetooth/BluetoothDevice;
-    .end local v2           #name:Ljava/lang/String;
     :cond_2
     return-void
 .end method

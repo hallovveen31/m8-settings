@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/DeviceProfilesSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$3;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 343
     iget-object v2, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$3;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
 
     #getter for: Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mHtcTagManager:Lcom/android/settings/bluetooth/HtcTagManager;
@@ -64,8 +59,6 @@
 
     move-result v1
 
-    .line 344
-    .local v1, rssi:I
     iget-object v2, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$3;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
 
     #getter for: Lcom/android/settings/bluetooth/DeviceProfilesSettings;->mHtcTagManager:Lcom/android/settings/bluetooth/HtcTagManager;
@@ -88,13 +81,10 @@
 
     move-result v0
 
-    .line 345
-    .local v0, battery:I
     iget-object v2, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$3;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
 
     #calls: Lcom/android/settings/bluetooth/DeviceProfilesSettings;->refreshTagValues(II)V
     invoke-static {v2, v1, v0}, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->access$300(Lcom/android/settings/bluetooth/DeviceProfilesSettings;II)V
 
-    .line 346
     return-void
 .end method

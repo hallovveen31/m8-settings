@@ -32,10 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 419
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$1;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -47,13 +44,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 419
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/DataUsageSummary$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
@@ -63,16 +56,12 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 2
-    .parameter "params"
 
-    .prologue
-    .line 424
     const-wide/16 v0, 0x7d0
 
     :try_start_0
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 425
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$1;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #getter for: Lcom/android/settings/DataUsageSummary;->mStatsService:Landroid/net/INetworkStatsService;
@@ -85,19 +74,16 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 429
     :goto_0
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 427
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 426
     :catch_1
     move-exception v0
 
@@ -106,13 +92,9 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 419
     check-cast p1, Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/DataUsageSummary$1;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
@@ -120,25 +102,20 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 1
-    .parameter "result"
 
-    .prologue
-    .line 434
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$1;->this$0:Lcom/android/settings/DataUsageSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/DataUsageSummary;->isAdded()Z
+    invoke-virtual {v0}, Landroid/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 435
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$1;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #calls: Lcom/android/settings/DataUsageSummary;->updateBody()V
     invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$100(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 437
     :cond_0
     return-void
 .end method

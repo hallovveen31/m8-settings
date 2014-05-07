@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 627
     iput-object p1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +37,10 @@
 .method public queueIdle()Z
     .locals 3
 
-    .prologue
-    .line 632
     new-instance v0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3$1;-><init>(Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;)V
 
-    .line 645
-    .local v0, getRingtoneRunnable:Ljava/lang/Runnable;
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     #getter for: Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->mRingtoneCleanup:Z
@@ -57,20 +50,17 @@
 
     if-nez v1, :cond_0
 
-    .line 646
     new-instance v1, Ljava/lang/Thread;
 
     invoke-direct {v1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 649
     :goto_0
     const/4 v1, 0x0
 
     return v1
 
-    .line 648
     :cond_0
     const-string v1, "RingerVolume"
 

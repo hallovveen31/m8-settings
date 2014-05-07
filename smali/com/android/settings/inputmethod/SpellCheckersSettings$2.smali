@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/SpellCheckersSettings;Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 132
     iput-object p1, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$2;->this$0:Lcom/android/settings/inputmethod/SpellCheckersSettings;
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$2;->val$scp:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$2;->this$0:Lcom/android/settings/inputmethod/SpellCheckersSettings;
 
     iget-object v1, p0, Lcom/android/settings/inputmethod/SpellCheckersSettings$2;->val$scp:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
@@ -56,6 +48,5 @@
     #calls: Lcom/android/settings/inputmethod/SpellCheckersSettings;->changeCurrentSpellChecker(Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;)V
     invoke-static {v0, v1}, Lcom/android/settings/inputmethod/SpellCheckersSettings;->access$100(Lcom/android/settings/inputmethod/SpellCheckersSettings;Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;)V
 
-    .line 136
     return-void
 .end method

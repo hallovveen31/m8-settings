@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1046
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,10 +34,8 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 1049
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -54,8 +49,6 @@
 
     move-result v0
 
-    .line 1052
-    .local v0, hasTethered:Z
     if-nez v0, :cond_0
 
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
@@ -73,7 +66,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1053
     :cond_0
     invoke-static {}, Lcom/android/settings/SmartNSEnabler;->access$1700()Landroid/os/ConditionVariable;
 
@@ -83,7 +75,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/ConditionVariable;->block(J)Z
 
-    .line 1055
     :cond_1
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -94,22 +85,18 @@
 
     invoke-static {v2}, Lcom/android/settings/SmartNSEnabler;->waitIPTClose(Landroid/content/Context;)V
 
-    .line 1058
     const-string v2, "SmartNS_Enabler"
 
     const-string v3, "enable Smart Network Sharing"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1061
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.android.start_IPT"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1063
-    .local v1, intent:Landroid/content/Intent;
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -129,7 +116,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1064
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$6;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -139,6 +125,5 @@
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1065
     return-void
 .end method

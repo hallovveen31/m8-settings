@@ -31,11 +31,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuffer;
 
     const/16 v1, 0x400
@@ -49,11 +46,7 @@
 
 .method static synthetic access$002(Lcom/android/settings/framework/io/GZIPReader$GZIPContent;Ljava/lang/Exception;)Ljava/lang/Exception;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 24
     iput-object p1, p0, Lcom/android/settings/framework/io/GZIPReader$GZIPContent;->mException:Ljava/lang/Exception;
 
     return-object p1
@@ -61,10 +54,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/io/GZIPReader$GZIPContent;)Ljava/lang/StringBuffer;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/android/settings/framework/io/GZIPReader$GZIPContent;->mContent:Ljava/lang/StringBuffer;
 
     return-object v0
@@ -75,8 +65,6 @@
 .method public getContent()Ljava/lang/StringBuffer;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/settings/framework/io/GZIPReader$GZIPContent;->mContent:Ljava/lang/StringBuffer;
 
     return-object v0
@@ -85,8 +73,6 @@
 .method public getException()Ljava/lang/Exception;
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/settings/framework/io/GZIPReader$GZIPContent;->mException:Ljava/lang/Exception;
 
     return-object v0
@@ -95,8 +81,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

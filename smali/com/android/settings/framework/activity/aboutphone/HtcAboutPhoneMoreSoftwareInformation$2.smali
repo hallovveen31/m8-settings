@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneMoreSoftwareInformation;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneMoreSoftwareInformation$2;->this$0:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneMoreSoftwareInformation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public isSupported()Z
     .locals 1
 
-    .prologue
-    .line 75
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcAboutPhoneFeatureFlags;->supportSoftwareRootedStatus()Z
 
     move-result v0

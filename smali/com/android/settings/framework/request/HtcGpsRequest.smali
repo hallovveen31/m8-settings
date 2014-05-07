@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,21 +14,15 @@
 
 .method public static turnOff(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 45
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 56
     :cond_0
     :goto_0
     return-void
 
-    .line 49
     :cond_1
     const-string v0, "com.android.settings.request.GPS_OFF"
 
@@ -44,7 +36,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 53
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -60,21 +51,15 @@
 
 .method public static turnOn(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 25
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 36
     :cond_0
     :goto_0
     return-void
 
-    .line 29
     :cond_1
     const-string v0, "com.android.settings.request.GPS_ON"
 
@@ -88,7 +73,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0

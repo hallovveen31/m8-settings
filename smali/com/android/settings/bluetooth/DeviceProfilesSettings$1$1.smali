@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;Landroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->this$1:Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->val$intent:Landroid/content/Intent;
@@ -45,10 +41,8 @@
 .method public run()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 121
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->val$intent:Landroid/content/Intent;
 
     const-string v5, "android.bluetooth.device.extra.DEVICE"
@@ -59,8 +53,6 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 122
-    .local v1, device:Landroid/bluetooth/BluetoothDevice;
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->this$1:Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;
 
     iget-object v4, v4, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
@@ -74,8 +66,6 @@
 
     move-result-object v0
 
-    .line 123
-    .local v0, cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->val$intent:Landroid/content/Intent;
 
     const-string v5, "com.htc.bluetooth.le.SERVICE_TYPE"
@@ -84,8 +74,6 @@
 
     move-result v2
 
-    .line 124
-    .local v2, type:I
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->val$intent:Landroid/content/Intent;
 
     const-string v5, "com.htc.bluetooth.le.SERVICE_VALUE"
@@ -94,8 +82,6 @@
 
     move-result v3
 
-    .line 125
-    .local v3, value:I
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->this$1:Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;
 
     iget-object v4, v4, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
@@ -107,12 +93,10 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 126
     const/16 v4, 0x1820
 
     if-ne v2, v4, :cond_1
 
-    .line 127
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->this$1:Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;
 
     iget-object v4, v4, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;
@@ -129,18 +113,15 @@
     #calls: Lcom/android/settings/bluetooth/DeviceProfilesSettings;->refreshTagValues(II)V
     invoke-static {v4, v5, v3}, Lcom/android/settings/bluetooth/DeviceProfilesSettings;->access$300(Lcom/android/settings/bluetooth/DeviceProfilesSettings;II)V
 
-    .line 132
     :cond_0
     :goto_0
     return-void
 
-    .line 128
     :cond_1
     const/16 v4, 0x1812
 
     if-ne v2, v4, :cond_0
 
-    .line 129
     iget-object v4, p0, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1$1;->this$1:Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;
 
     iget-object v4, v4, Lcom/android/settings/bluetooth/DeviceProfilesSettings$1;->this$0:Lcom/android/settings/bluetooth/DeviceProfilesSettings;

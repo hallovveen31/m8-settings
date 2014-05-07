@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiApEnabler;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 264
     iput-object p1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     iput-boolean p2, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->val$isEnable:Z
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 266
     iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     #getter for: Lcom/android/settings/wifi/WifiApEnabler;->remindDialog:I
@@ -58,7 +50,6 @@
 
     if-nez v1, :cond_1
 
-    .line 267
     iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     iget-boolean v2, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->val$isEnable:Z
@@ -66,12 +57,10 @@
     #calls: Lcom/android/settings/wifi/WifiApEnabler;->showRemindDialog(Z)V
     invoke-static {v1, v2}, Lcom/android/settings/wifi/WifiApEnabler;->access$500(Lcom/android/settings/wifi/WifiApEnabler;Z)V
 
-    .line 277
     :cond_0
     :goto_0
     return-void
 
-    .line 270
     :cond_1
     iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
@@ -82,7 +71,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 271
     iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     #getter for: Lcom/android/settings/wifi/WifiApEnabler;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -94,8 +82,6 @@
 
     move-result v0
 
-    .line 272
-    .local v0, currentstate:I
     const/16 v1, 0xd
 
     if-eq v0, v1, :cond_0
@@ -104,7 +90,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 273
     iget-object v1, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     iget-boolean v2, p0, Lcom/android/settings/wifi/WifiApEnabler$3;->val$isEnable:Z

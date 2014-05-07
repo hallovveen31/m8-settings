@@ -35,12 +35,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 366
     new-instance v0, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     const-string v1, "projection_900913"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;->projection_custBeijing54:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
-    .line 365
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
@@ -77,16 +74,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 365
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -94,10 +87,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
     .locals 1
-    .parameter
 
-    .prologue
-    .line 365
     const-class v0, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,11 +102,9 @@
 .method public static values()[Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
     .locals 1
 
-    .prologue
-    .line 365
     sget-object v0, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;->$VALUES:[Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
-    invoke-virtual {v0}, [Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

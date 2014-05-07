@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     const-class v0, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,40 +24,25 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 42
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;)V
 
-    .line 43
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 52
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 61
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 62
     return-void
 .end method
 
@@ -68,8 +51,6 @@
 .method protected getCustomKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 68
     sget-object v0, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->KEY:Ljava/lang/String;
 
     return-object v0
@@ -78,8 +59,6 @@
 .method protected bridge synthetic getCustomSummary()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 28
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getCustomSummary()Ljava/lang/String;
 
     move-result-object v0
@@ -90,9 +69,7 @@
 .method protected getCustomSummary()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 79
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -102,8 +79,7 @@
 
     if-nez v0, :cond_0
 
-    .line 80
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -113,12 +89,11 @@
 
     move-result-object v0
 
-    .line 82
     :goto_0
     return-object v0
 
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -134,8 +109,6 @@
 .method protected bridge synthetic getCustomTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 28
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getCustomTitle()Ljava/lang/String;
 
     move-result-object v0
@@ -146,9 +119,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 73
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -163,15 +134,12 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/Boolean;
     .locals 4
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 88
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -202,12 +170,8 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Z)Z
     .locals 3
-    .parameter "context"
-    .parameter "newState"
 
-    .prologue
-    .line 95
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/location/HtcAllowWifiAlwaysScanPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

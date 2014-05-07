@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 393
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 395
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mUserLock:Ljava/lang/Object;
@@ -48,7 +43,6 @@
 
     monitor-enter v1
 
-    .line 396
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
 
@@ -66,7 +60,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/UserManager;->removeUser(I)Z
 
-    .line 397
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$7;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
@@ -78,13 +71,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 398
     monitor-exit v1
 
-    .line 399
     return-void
 
-    .line 398
     :catchall_0
     move-exception v0
 

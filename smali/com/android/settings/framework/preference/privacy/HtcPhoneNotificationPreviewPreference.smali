@@ -12,40 +12,25 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsDatabaseCheckboxPreference;-><init>(Landroid/content/Context;)V
 
-    .line 31
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 39
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsDatabaseCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 40
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 48
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbsDatabaseCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 49
     return-void
 .end method
 
@@ -54,8 +39,6 @@
 .method protected getCustomDatabaseDefaultValue()Z
     .locals 1
 
-    .prologue
-    .line 73
     const/4 v0, 0x1
 
     return v0
@@ -64,8 +47,6 @@
 .method protected getCustomDatabaseKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 68
     const-string v0, "htc_phone_notification_preview"
 
     return-object v0
@@ -74,8 +55,6 @@
 .method protected getCustomDatabaseTable()Lcom/android/settings/framework/database/HtcDatabaseTable;
     .locals 1
 
-    .prologue
-    .line 63
     sget-object v0, Lcom/android/settings/framework/database/HtcDatabaseTable;->SECURE:Lcom/android/settings/framework/database/HtcDatabaseTable;
 
     return-object v0
@@ -84,8 +63,6 @@
 .method protected bridge synthetic getCustomSummary()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 21
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->getCustomSummary()Ljava/lang/String;
 
     move-result-object v0
@@ -96,9 +73,7 @@
 .method protected getCustomSummary()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 84
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -114,8 +89,6 @@
 .method protected bridge synthetic getCustomTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 21
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->getCustomTitle()Ljava/lang/String;
 
     move-result-object v0
@@ -126,9 +99,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 78
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -143,31 +114,24 @@
 
 .method protected onApplyDemoModeInBackground(Z)V
     .locals 1
-    .parameter "checked"
 
-    .prologue
-    .line 53
     if-nez p1, :cond_0
 
-    .line 54
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->performClickInForeground(Lcom/htc/preference/HtcPreferenceScreen;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;->performClickInForeground(Lcom/htc/preference/HtcPreferenceScreen;)V
 
-    .line 56
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->isEnabled()Z
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 57
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/privacy/HtcPhoneNotificationPreviewPreference;->setEnabledInForeground(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;->setEnabledInForeground(Z)V
 
-    .line 59
     :cond_1
     return-void
 .end method

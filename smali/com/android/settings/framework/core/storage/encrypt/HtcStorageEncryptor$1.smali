@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 75
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->values()[Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->PHONE_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->SD_CARD:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

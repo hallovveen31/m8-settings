@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,10 +14,7 @@
 
 .method public static isAutoMirrored(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
-    .parameter "drawable"
 
-    .prologue
-    .line 30
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
 
     move-result v0
@@ -29,13 +24,8 @@
 
 .method public static setAutoMirrored(Landroid/graphics/drawable/Drawable;Z)V
     .locals 0
-    .parameter "drawable"
-    .parameter "mirrored"
 
-    .prologue
-    .line 26
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
 
-    .line 27
     return-void
 .end method

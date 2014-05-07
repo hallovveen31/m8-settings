@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChargeOnlyEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 185
     iput-object p1, p0, Lcom/android/settings/ChargeOnlyEnabler$2;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,16 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 189
     if-eqz p2, :cond_0
 
-    .line 191
     const-string v1, "SmartNS_ChargeOnly_Enabler"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -72,7 +64,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -85,18 +76,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     const-string v1, "enabled"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 197
-    .local v0, enabled:Z
     if-eqz v0, :cond_1
 
-    .line 199
     iget-object v1, p0, Lcom/android/settings/ChargeOnlyEnabler$2;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     #getter for: Lcom/android/settings/ChargeOnlyEnabler;->mHandler:Landroid/os/Handler;
@@ -108,14 +95,12 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 200
     invoke-static {p1}, Lcom/android/settings/ChargeOnlyEnabler;->isCharging(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 201
     iget-object v1, p0, Lcom/android/settings/ChargeOnlyEnabler$2;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     #getter for: Lcom/android/settings/ChargeOnlyEnabler;->mContext:Landroid/content/Context;
@@ -125,14 +110,10 @@
 
     invoke-static {v1}, Lcom/android/settings/ChargeOnlyEnabler;->addNotification(Landroid/content/Context;)V
 
-    .line 213
-    .end local v0           #enabled:Z
     :cond_0
     :goto_0
     return-void
 
-    .line 205
-    .restart local v0       #enabled:Z
     :cond_1
     iget-object v1, p0, Lcom/android/settings/ChargeOnlyEnabler$2;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 

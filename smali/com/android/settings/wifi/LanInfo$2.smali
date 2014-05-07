@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/LanInfo;Landroid/app/Activity;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 150
     iput-object p1, p0, Lcom/android/settings/wifi/LanInfo$2;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     iput-object p2, p0, Lcom/android/settings/wifi/LanInfo$2;->val$activity:Landroid/app/Activity;
@@ -44,14 +40,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/settings/wifi/LanInfo$2;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 153
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 351
     iput-object p1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$7;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 353
     iget-object v0, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$7;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #calls: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->setHotspotStatus()V
     invoke-static {v0}, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->access$900(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;)V
 
-    .line 354
     return-void
 .end method

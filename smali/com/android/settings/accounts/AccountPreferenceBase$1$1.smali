@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceBase$1;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 113
     iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceBase$1$1;->this$1:Lcom/android/settings/accounts/AccountPreferenceBase$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +37,11 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 115
     iget-object v0, p0, Lcom/android/settings/accounts/AccountPreferenceBase$1$1;->this$1:Lcom/android/settings/accounts/AccountPreferenceBase$1;
 
     iget-object v0, v0, Lcom/android/settings/accounts/AccountPreferenceBase$1;->this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
 
     invoke-virtual {v0}, Lcom/android/settings/accounts/AccountPreferenceBase;->onSyncStateUpdated()V
 
-    .line 116
     return-void
 .end method

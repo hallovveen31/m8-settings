@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 44
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler$1;->this$0:Lcom/android/settings/bluetooth/BluetoothEnabler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 49
     const-string v1, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v2, -0x8000
@@ -49,12 +42,9 @@
 
     move-result v0
 
-    .line 50
-    .local v0, state:I
     iget-object v1, p0, Lcom/android/settings/bluetooth/BluetoothEnabler$1;->this$0:Lcom/android/settings/bluetooth/BluetoothEnabler;
 
     invoke-virtual {v1, v0}, Lcom/android/settings/bluetooth/BluetoothEnabler;->handleStateChanged(I)V
 
-    .line 51
     return-void
 .end method

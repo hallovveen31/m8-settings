@@ -32,14 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary$CycleEditorFragment;Landroid/widget/NumberPicker;Lcom/android/settings/net/NetworkPolicyEditor;Landroid/net/NetworkTemplate;Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 1749
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$CycleEditorFragment;
 
     iput-object p2, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->val$cycleDayPicker:Landroid/widget/NumberPicker;
@@ -59,34 +52,25 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1752
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->val$cycleDayPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v2}, Landroid/widget/NumberPicker;->getValue()I
 
     move-result v0
 
-    .line 1753
-    .local v0, cycleDay:I
     new-instance v2, Landroid/text/format/Time;
 
     invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
     iget-object v1, v2, Landroid/text/format/Time;->timezone:Ljava/lang/String;
 
-    .line 1754
-    .local v1, cycleTimezone:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->val$editor:Lcom/android/settings/net/NetworkPolicyEditor;
 
     iget-object v3, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->val$template:Landroid/net/NetworkTemplate;
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/settings/net/NetworkPolicyEditor;->setPolicyCycleDay(Landroid/net/NetworkTemplate;ILjava/lang/String;)V
 
-    .line 1755
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$CycleEditorFragment$1;->val$target:Lcom/android/settings/DataUsageSummary;
 
     const/4 v3, 0x1
@@ -94,6 +78,5 @@
     #calls: Lcom/android/settings/DataUsageSummary;->updatePolicy(Z)V
     invoke-static {v2, v3}, Lcom/android/settings/DataUsageSummary;->access$600(Lcom/android/settings/DataUsageSummary;Z)V
 
-    .line 1756
     return-void
 .end method

@@ -15,11 +15,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 15
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     iput-boolean v0, p0, Lcom/android/settings/wifi/HotspotMaxConnReceiver;->DEBUG:Z
@@ -31,17 +28,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 19
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 20
-    .local v0, action:Ljava/lang/String;
     iget-boolean v2, p0, Lcom/android/settings/wifi/HotspotMaxConnReceiver;->DEBUG:Z
 
     if-eqz v2, :cond_0
@@ -68,7 +59,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     :cond_0
     const-string v2, "com.htc.hotspot.max_client_noty"
 
@@ -78,27 +68,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 22
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 23
-    .local v1, i:Landroid/content/Intent;
     const-class v2, Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
     invoke-virtual {v1, p1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    .line 24
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 25
     invoke-virtual {p1, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 27
-    .end local v1           #i:Landroid/content/Intent;
     :cond_1
     return-void
 .end method

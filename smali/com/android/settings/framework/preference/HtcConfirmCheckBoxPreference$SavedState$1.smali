@@ -31,8 +31,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 233
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,10 +40,7 @@
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
     .locals 1
-    .parameter "in"
 
-    .prologue
-    .line 235
     new-instance v0, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
 
     invoke-direct {v0, p1}, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -55,10 +50,7 @@
 
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 233
     invoke-virtual {p0, p1}, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
 
     move-result-object v0
@@ -68,10 +60,7 @@
 
 .method public newArray(I)[Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
     .locals 1
-    .parameter "size"
 
-    .prologue
-    .line 239
     new-array v0, p1, [Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
 
     return-object v0
@@ -79,10 +68,7 @@
 
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 233
     invoke-virtual {p0, p1}, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState$1;->newArray(I)[Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;
 
     move-result-object v0

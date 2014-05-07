@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 403
     invoke-static {}, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->values()[Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->NO_PERMS:Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->DANGEROUS_ONLY:Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->NORMAL_ONLY:Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->BOTH:Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$State;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

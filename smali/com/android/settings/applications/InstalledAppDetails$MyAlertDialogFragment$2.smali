@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1789
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1791
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetails;
@@ -59,7 +52,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1792
     const-string v0, "Settings:InstalledAppDetails"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,12 +85,10 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1809
     :cond_0
     :goto_0
     return-void
 
-    .line 1798
     :cond_1
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
@@ -113,12 +103,10 @@
 
     if-nez v0, :cond_2
 
-    .line 1799
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 1800
     const-string v0, "Settings:InstalledAppDetails"
 
     const-string v1, "DLG_FACTORY_RESET, onClick, getOwner().mAppEntry is null"
@@ -127,7 +115,6 @@
 
     goto :goto_0
 
-    .line 1807
     :cond_2
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$2;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
@@ -148,7 +135,7 @@
 
     iget-object v1, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v1, v1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     #calls: Lcom/android/settings/applications/InstalledAppDetails;->uninstallPkg(Ljava/lang/String;ZZ)V
     invoke-static {v0, v1, v2, v2}, Lcom/android/settings/applications/InstalledAppDetails;->access$900(Lcom/android/settings/applications/InstalledAppDetails;Ljava/lang/String;ZZ)V

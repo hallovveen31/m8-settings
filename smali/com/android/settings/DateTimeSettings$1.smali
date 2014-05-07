@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DateTimeSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 634
     iput-object p1, p0, Lcom/android/settings/DateTimeSettings$1;->this$0:Lcom/android/settings/DateTimeSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 638
     iget-object v0, p0, Lcom/android/settings/DateTimeSettings$1;->this$0:Lcom/android/settings/DateTimeSettings;
 
     #getter for: Lcom/android/settings/DateTimeSettings;->updateHandler:Landroid/os/Handler;
@@ -54,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 650
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/DockService;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 589
     iput-object p1, p0, Lcom/android/settings/bluetooth/DockService$3;->this$0:Lcom/android/settings/bluetooth/DockService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 3
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 591
     sget-boolean v0, Lcom/android/settings/bluetooth/DockService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 592
     const-string v0, "DockService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -71,7 +63,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 594
     :cond_0
     iget-object v0, p0, Lcom/android/settings/bluetooth/DockService$3;->this$0:Lcom/android/settings/bluetooth/DockService;
 
@@ -82,7 +73,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 595
     iget-object v0, p0, Lcom/android/settings/bluetooth/DockService$3;->this$0:Lcom/android/settings/bluetooth/DockService;
 
     iget-object v1, p0, Lcom/android/settings/bluetooth/DockService$3;->this$0:Lcom/android/settings/bluetooth/DockService;
@@ -98,15 +88,13 @@
 
     invoke-static {v0, v1, p2}, Lcom/android/settings/bluetooth/LocalBluetoothPreferences;->saveDockAutoConnectSetting(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 601
     :goto_0
     return-void
 
-    .line 598
     :cond_1
     iget-object v0, p0, Lcom/android/settings/bluetooth/DockService$3;->this$0:Lcom/android/settings/bluetooth/DockService;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/DockService;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 

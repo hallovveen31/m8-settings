@@ -23,10 +23,7 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 18
     iput-object p1, p0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$EventParams;->this$0:Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

@@ -45,7 +45,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const v7, 0x7f0c0f39
 
     const/4 v6, 0x3
@@ -56,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 410
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
     const-string v1, "Continue"
@@ -67,7 +65,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->Continue:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    .line 411
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
     const-string v1, "ContinueDisabled"
@@ -78,7 +75,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->ContinueDisabled:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    .line 412
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
     const-string v1, "Retry"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->Retry:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    .line 413
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
     const-string v1, "RetryDisabled"
@@ -96,7 +91,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->RetryDisabled:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    .line 409
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
@@ -124,36 +118,24 @@
 
 .method private constructor <init>(Ljava/lang/String;IIZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "text"
-    .parameter "enabled"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IZ)V"
         }
     .end annotation
 
-    .prologue
-    .line 418
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 419
     iput p3, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->text:I
 
-    .line 420
     iput-boolean p4, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->enabled:Z
 
-    .line 421
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 409
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -168,11 +150,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
     .locals 1
 
-    .prologue
-    .line 409
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -48,71 +48,54 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 23
     invoke-direct {p0}, Lcom/amap/mapapi/map/x;-><init>()V
 
-    .line 28
     const-string v0, ""
 
     iput-object v0, p0, Lcom/amap/mapapi/map/w;->a:Ljava/lang/String;
 
-    .line 33
     const/16 v0, 0x12
 
     iput v0, p0, Lcom/amap/mapapi/map/w;->b:I
 
-    .line 38
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/amap/mapapi/map/w;->c:I
 
-    .line 43
     iput-boolean v3, p0, Lcom/amap/mapapi/map/w;->d:Z
 
-    .line 48
     iput-boolean v3, p0, Lcom/amap/mapapi/map/w;->e:Z
 
-    .line 53
     iput-boolean v1, p0, Lcom/amap/mapapi/map/w;->f:Z
 
-    .line 58
     iput-boolean v1, p0, Lcom/amap/mapapi/map/w;->g:Z
 
-    .line 63
     iput-boolean v1, p0, Lcom/amap/mapapi/map/w;->h:Z
 
-    .line 68
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/amap/mapapi/map/w;->i:J
 
-    .line 73
     iput-object v2, p0, Lcom/amap/mapapi/map/w;->j:Lcom/amap/mapapi/map/bb;
 
-    .line 78
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/amap/mapapi/map/w;->k:I
 
-    .line 83
     const-string v0, ""
 
     iput-object v0, p0, Lcom/amap/mapapi/map/w;->l:Ljava/lang/String;
 
-    .line 88
     iput-object v2, p0, Lcom/amap/mapapi/map/w;->m:Lcom/amap/mapapi/map/h;
 
-    .line 93
     iput-object v2, p0, Lcom/amap/mapapi/map/w;->n:Lcom/amap/mapapi/map/j;
 
-    .line 98
     iput-object v2, p0, Lcom/amap/mapapi/map/w;->o:Lcom/amap/mapapi/core/t;
 
     return-void
@@ -123,43 +106,33 @@
 .method protected a()V
     .locals 2
 
-    .prologue
-    .line 152
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->n:Lcom/amap/mapapi/map/j;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/amap/mapapi/map/j;->a(Lcom/amap/mapapi/map/h;)V
 
-    .line 153
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->m:Lcom/amap/mapapi/map/h;
 
     invoke-virtual {v0}, Lcom/amap/mapapi/map/h;->c()V
 
-    .line 154
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->o:Lcom/amap/mapapi/core/t;
 
     invoke-virtual {v0}, Lcom/amap/mapapi/core/t;->clear()V
 
-    .line 159
     return-void
 .end method
 
 .method protected a(Landroid/graphics/Canvas;)V
     .locals 5
-    .parameter
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->o:Lcom/amap/mapapi/core/t;
 
     if-nez v0, :cond_1
 
-    .line 148
     :cond_0
     return-void
 
-    .line 131
     :cond_1
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->o:Lcom/amap/mapapi/core/t;
 
@@ -181,31 +154,25 @@
 
     check-cast v0, Lcom/amap/mapapi/map/at$a;
 
-    .line 133
     iget v1, v0, Lcom/amap/mapapi/map/at$a;->g:I
 
     if-gez v1, :cond_3
 
-    .line 134
     iget-boolean v1, p0, Lcom/amap/mapapi/map/w;->e:Z
 
     if-eqz v1, :cond_2
 
-    .line 137
     invoke-static {}, Lcom/amap/mapapi/map/at;->c()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 143
     :goto_1
     iget-object v0, v0, Lcom/amap/mapapi/map/at$a;->f:Landroid/graphics/PointF;
 
-    .line 144
     if-eqz v1, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 145
     iget v3, v0, Landroid/graphics/PointF;->x:F
 
     iget v0, v0, Landroid/graphics/PointF;->y:F
@@ -216,7 +183,6 @@
 
     goto :goto_0
 
-    .line 140
     :cond_3
     iget-object v1, p0, Lcom/amap/mapapi/map/w;->m:Lcom/amap/mapapi/map/h;
 
@@ -231,35 +197,26 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
-    .parameter
 
-    .prologue
-    .line 102
     if-ne p0, p1, :cond_0
 
-    .line 103
     const/4 v0, 0x1
 
-    .line 110
     :goto_0
     return v0
 
-    .line 105
     :cond_0
     instance-of v0, p1, Lcom/amap/mapapi/map/w;
 
     if-nez v0, :cond_1
 
-    .line 106
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 108
     :cond_1
     check-cast p1, Lcom/amap/mapapi/map/w;
 
-    .line 110
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->a:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/amap/mapapi/map/w;->a:Ljava/lang/String;
@@ -274,8 +231,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 116
     iget v0, p0, Lcom/amap/mapapi/map/w;->k:I
 
     return v0
@@ -284,8 +239,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 122
     iget-object v0, p0, Lcom/amap/mapapi/map/w;->a:Ljava/lang/String;
 
     return-object v0

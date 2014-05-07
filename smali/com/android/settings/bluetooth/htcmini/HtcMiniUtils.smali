@@ -28,18 +28,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 16
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     sput-boolean v0, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->DEBUG:Z
 
-    .line 26
     sput-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailableChecked:Z
 
-    .line 27
     sput-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailable:Z
 
     return-void
@@ -48,8 +44,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,10 +51,7 @@
 
 .method public static getSetupOption(Landroid/content/Context;)I
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 43
     invoke-static {p0}, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->isNfcAvailable(Landroid/content/Context;)Z
 
     move-result v1
@@ -69,8 +60,6 @@
 
     const/4 v0, 0x0
 
-    .line 44
-    .local v0, defValue:I
     :goto_0
     invoke-static {p0}, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -84,8 +73,6 @@
 
     return v1
 
-    .line 43
-    .end local v0           #defValue:I
     :cond_0
     const/4 v0, 0x1
 
@@ -94,10 +81,7 @@
 
 .method private static getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 39
     const-string v0, "htcmini_settings"
 
     const/4 v1, 0x0
@@ -111,26 +95,19 @@
 
 .method static isNfcAvailable(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 29
     sget-boolean v2, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailableChecked:Z
 
     if-nez v2, :cond_0
 
-    .line 30
     sput-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailableChecked:Z
 
-    .line 31
     invoke-static {p0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    .line 32
-    .local v0, adapter:Landroid/nfc/NfcAdapter;
     if-eqz v0, :cond_1
 
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSkuId()I
@@ -144,7 +121,6 @@
     :goto_0
     sput-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailable:Z
 
-    .line 33
     sget-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -173,15 +149,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
-    .end local v0           #adapter:Landroid/nfc/NfcAdapter;
     :cond_0
     sget-boolean v1, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->bIsNfcAvailable:Z
 
     return v1
 
-    .line 32
-    .restart local v0       #adapter:Landroid/nfc/NfcAdapter;
     :cond_1
     const/4 v1, 0x0
 
@@ -190,11 +162,7 @@
 
 .method public static persistSetupOption(Landroid/content/Context;I)V
     .locals 2
-    .parameter "context"
-    .parameter "value"
 
-    .prologue
-    .line 49
     invoke-static {p0}, Lcom/android/settings/bluetooth/htcmini/HtcMiniUtils;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -203,15 +171,11 @@
 
     move-result-object v0
 
-    .line 50
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
     const-string v1, "option"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 51
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 52
     return-void
 .end method

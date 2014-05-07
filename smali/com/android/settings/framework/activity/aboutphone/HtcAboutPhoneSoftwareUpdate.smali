@@ -83,21 +83,16 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 186
     sput-boolean v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->waitting:Z
 
-    .line 319
     sput-boolean v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->threadIsRun:Z
 
-    .line 381
     const-wide/16 v0, -0x1
 
     sput-wide v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->clickTime:J
 
-    .line 480
     const-string v0, "content://com.htc.android.provider.omadmlib/commondata"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->CONTENT_URI_NOTES:Landroid/net/Uri;
 
-    .line 574
     sput v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
     return-void
@@ -115,62 +109,50 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;-><init>()V
 
-    .line 53
     const-string v0, "com.htc.android.omadm.action.countdownOmcSecond"
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->countdownSecond:Ljava/lang/String;
 
-    .line 55
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 185
     const-string v0, "com.htc.android.omadm.action.countdownOmcSession"
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->countdownAction:Ljava/lang/String;
 
-    .line 321
     const-string v0, "com.htc.android.omadm.action.runsession"
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->runSessionAction:Ljava/lang/String;
 
-    .line 460
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$1;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->runSessionReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 567
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
-    .line 576
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$2;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$2;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcStateReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 598
     const-string v0, "HtcAboutPhoneSoftwareUpdate"
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
-    .line 642
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$4;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$4;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mDisplayHandlerAlert:Landroid/os/Handler;
 
-    .line 662
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$5;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$5;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
@@ -182,10 +164,7 @@
 
 .method static synthetic access$000(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)Ljava/lang/String;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->countdownSecond:Ljava/lang/String;
 
     return-object v0
@@ -193,10 +172,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->checkOmcRunning()V
 
     return-void
@@ -204,10 +180,7 @@
 
 .method static synthetic access$200(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)Z
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 42
     iget-boolean v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
     return v0
@@ -215,10 +188,7 @@
 
 .method static synthetic access$300(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)Landroid/os/Handler;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mDisplayHandlerAlert:Landroid/os/Handler;
 
     return-object v0
@@ -226,11 +196,7 @@
 
 .method static synthetic access$402(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;I)I
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 42
     iput p1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->phoneState:I
 
     return p1
@@ -239,11 +205,9 @@
 .method private checkOmcRunning()V
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 571
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -256,10 +220,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
-    .line 572
     return-void
 
-    .line 571
     :cond_0
     const/4 v0, 0x0
 
@@ -268,33 +230,24 @@
 
 .method public static closeCursor(Landroid/database/Cursor;)V
     .locals 1
-    .parameter "mCursor"
 
-    .prologue
-    .line 555
     if-eqz p0, :cond_0
 
-    .line 556
     :try_start_0
     invoke-interface {p0}, Landroid/database/Cursor;->deactivate()V
 
-    .line 557
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 563
     :cond_0
     :goto_0
     return-void
 
-    .line 560
     :catch_0
     move-exception v0
 
-    .line 561
-    .local v0, e:Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -302,29 +255,21 @@
 .method private doPlugin()V
     .locals 4
 
-    .prologue
-    .line 100
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceActivity;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
 
     move-result-object v0
 
-    .line 101
-    .local v0, preferenceManager:Lcom/htc/preference/HtcPreferenceManager;
     invoke-virtual {v0, p0}, Lcom/htc/preference/HtcPreferenceManager;->createPreferenceScreen(Landroid/content/Context;)Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v1
 
-    .line 102
-    .local v1, root:Lcom/htc/preference/HtcPreferenceScreen;
     const v2, 0x7f0c0600
 
-    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceScreen;->setTitle(I)V
+    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreference;->setTitle(I)V
 
-    .line 103
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->setPreferenceScreen(Lcom/htc/preference/HtcPreferenceScreen;)V
+    invoke-virtual {p0, v1}, Lcom/htc/preference/HtcPreferenceActivity;->setPreferenceScreen(Lcom/htc/preference/HtcPreferenceScreen;)V
 
-    .line 105
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceActivity;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
 
     move-result-object v2
 
@@ -334,20 +279,17 @@
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mFumo:Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 106
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mFumo:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 107
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mFumo:Lcom/htc/preference/HtcPreferenceScreen;
 
     const v3, 0x7f0c0604
 
-    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreferenceScreen;->setTitle(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreference;->setTitle(I)V
 
-    .line 110
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceActivity;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
 
     move-result-object v2
 
@@ -357,20 +299,17 @@
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 111
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 112
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
     const v3, 0x7f0c0602
 
-    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreferenceScreen;->setTitle(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreference;->setTitle(I)V
 
-    .line 114
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceActivity;->getPreferenceManager()Lcom/htc/preference/HtcPreferenceManager;
 
     move-result-object v2
 
@@ -380,43 +319,34 @@
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 115
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 116
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
     const v3, 0x7f0c0603
 
-    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreferenceScreen;->setTitle(I)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreference;->setTitle(I)V
 
-    .line 118
     new-instance v2, Lcom/android/settings/framework/preference/update/HtcFOTAPreference;
 
     invoke-direct {v2, p0}, Lcom/android/settings/framework/preference/update/HtcFOTAPreference;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mHtcSoftwareUpdate:Lcom/android/settings/framework/preference/update/HtcFOTAPreference;
 
-    .line 119
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mHtcSoftwareUpdate:Lcom/android/settings/framework/preference/update/HtcFOTAPreference;
 
     invoke-virtual {v2, v1}, Lcom/android/settings/framework/preference/update/HtcFOTAPreference;->addToParent(Lcom/htc/preference/HtcPreferenceScreen;)Z
 
-    .line 120
     return-void
 .end method
 
 .method public static getAIRPlane(Landroid/content/ContentResolver;)I
     .locals 1
-    .parameter "contentResolver"
 
-    .prologue
-    .line 523
     invoke-static {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->initCommonProvider(Landroid/content/ContentResolver;)V
 
-    .line 524
     const-string v0, "AIRPLANE_MODE"
 
     invoke-static {p0, v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getIntkey(Landroid/content/ContentResolver;Ljava/lang/String;)I
@@ -428,50 +358,34 @@
 
 .method private static getColumnInt(Landroid/database/Cursor;Ljava/lang/String;)I
     .locals 3
-    .parameter "cur"
-    .parameter "columnName"
 
-    .prologue
-    .line 512
     const/4 v0, -0x1
 
-    .line 513
-    .local v0, ColumnValue:I
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 515
     invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 516
-    .local v1, t_nColumnIndex:I
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 518
-    .end local v1           #t_nColumnIndex:I
     :cond_0
     invoke-static {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->closeCursor(Landroid/database/Cursor;)V
 
-    .line 519
     return v0
 .end method
 
 .method public static getIntkey(Landroid/content/ContentResolver;Ljava/lang/String;)I
     .locals 7
-    .parameter "contentResolver"
-    .parameter "columnName"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 505
     const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
@@ -480,8 +394,6 @@
 
     aput-object p1, v2, v0
 
-    .line 507
-    .local v2, project:[Ljava/lang/String;
     sget-object v1, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->CONTENT_URI_NOTES:Landroid/net/Uri;
 
     const-string v3, "_id=1"
@@ -494,8 +406,6 @@
 
     move-result-object v6
 
-    .line 508
-    .local v6, mCursor:Landroid/database/Cursor;
     invoke-static {v6, p1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getColumnInt(Landroid/database/Cursor;Ljava/lang/String;)I
 
     move-result v0
@@ -505,13 +415,9 @@
 
 .method public static getOmcRunning(Landroid/content/ContentResolver;)I
     .locals 1
-    .parameter "contentResolver"
 
-    .prologue
-    .line 529
     invoke-static {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->initCommonProvider(Landroid/content/ContentResolver;)V
 
-    .line 530
     const-string v0, "OMC_RUNNING"
 
     invoke-static {p0, v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getIntkey(Landroid/content/ContentResolver;Ljava/lang/String;)I
@@ -523,12 +429,9 @@
 
 .method public static initCommonProvider(Landroid/content/ContentResolver;)V
     .locals 8
-    .parameter "contentResolver"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 484
     const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
@@ -539,8 +442,6 @@
 
     aput-object v1, v2, v0
 
-    .line 486
-    .local v2, project:[Ljava/lang/String;
     sget-object v1, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->CONTENT_URI_NOTES:Landroid/net/Uri;
 
     const-string v3, "_id=1"
@@ -553,63 +454,45 @@
 
     move-result-object v6
 
-    .line 487
-    .local v6, mCursor:Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 489
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v7
 
-    .line 490
-    .local v7, tIsEntryFound:Z
     if-nez v7, :cond_0
 
-    .line 492
     const-string v0, "OMADMLib"
 
     const-string v1, "no command data"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     :cond_0
     invoke-static {v6}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->closeCursor(Landroid/database/Cursor;)V
 
-    .line 501
-    .end local v7           #tIsEntryFound:Z
     :cond_1
     return-void
 .end method
 
 .method public static setIntkey(Landroid/content/ContentResolver;Ljava/lang/String;I)I
     .locals 6
-    .parameter "contentResolver"
-    .parameter "columnName"
-    .parameter "value"
 
-    .prologue
     const/4 v5, -0x1
 
-    .line 539
     :try_start_0
     invoke-static {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->initCommonProvider(Landroid/content/ContentResolver;)V
 
-    .line 542
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 543
-    .local v1, values:Landroid/content/ContentValues;
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-virtual {v1, p1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 544
     sget-object v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->CONTENT_URI_NOTES:Landroid/net/Uri;
 
     const-string v3, "_id=1"
@@ -621,26 +504,19 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 549
-    .end local v1           #values:Landroid/content/ContentValues;
     :goto_0
     return v5
 
-    .line 545
     :catch_0
     move-exception v0
 
-    .line 546
-    .local v0, e:Ljava/lang/Exception;
     :try_start_1
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 549
-    .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
@@ -651,35 +527,27 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "icicle"
 
-    .prologue
     const/high16 v5, 0x40b0
 
     const/4 v3, 0x0
 
-    .line 65
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 66
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 71
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 72
-    .local v0, omcIntentFilter:Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->countdownSecond:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 73
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcStateReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
@@ -693,20 +561,16 @@
     const-string v2, "com.htc.permission.APP_PLATFORM"
 
     :goto_0
-    invoke-virtual {p0, v4, v0, v2, v3}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v0, v2, v3}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 74
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 75
-    .local v1, omcRunSessionIntentFilter:Landroid/content/IntentFilter;
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->runSessionAction:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 76
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->runSessionReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
@@ -720,49 +584,36 @@
     const-string v2, "com.htc.permission.APP_PLATFORM"
 
     :goto_1
-    invoke-virtual {p0, v4, v1, v2, v3}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {p0, v4, v1, v2, v3}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 81
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getBaseContext()Landroid/content/Context;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mContext:Landroid/content/Context;
 
-    .line 82
     invoke-direct {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->doPlugin()V
 
-    .line 94
     return-void
 
-    .end local v1           #omcRunSessionIntentFilter:Landroid/content/IntentFilter;
     :cond_0
     move-object v2, v3
 
-    .line 73
     goto :goto_0
 
-    .restart local v1       #omcRunSessionIntentFilter:Landroid/content/IntentFilter;
     :cond_1
     move-object v2, v3
 
-    .line 76
     goto :goto_1
 .end method
 
 .method protected onCreateDialog(I)Landroid/app/Dialog;
     .locals 3
-    .parameter "id"
 
-    .prologue
-    .line 605
     const/4 v0, 0x0
 
-    .line 606
-    .local v0, title:Ljava/lang/CharSequence;
     packed-switch p1, :pswitch_data_0
 
-    .line 617
     :goto_0
     new-instance v1, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$3;
 
@@ -770,60 +621,51 @@
 
     iput-object v1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    .line 634
     iget-object v1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mProgressDialog:Landroid/app/ProgressDialog;
 
-    invoke-virtual {v1, v0}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 635
     iget-object v1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mProgressDialog:Landroid/app/ProgressDialog;
 
     const v2, 0x7f0c0606
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 636
     iget-object v1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mProgressDialog:Landroid/app/ProgressDialog;
 
     return-object v1
 
-    .line 608
     :pswitch_0
     const v1, 0x7f0c0602
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 609
     goto :goto_0
 
-    .line 611
     :pswitch_1
     const v1, 0x7f0c0603
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 612
     goto :goto_0
 
-    .line 614
     :pswitch_2
     const v1, 0x7f0c0604
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getText(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 606
     nop
 
     :pswitch_data_0
@@ -837,62 +679,45 @@
 .method public onDestroy()V
     .locals 1
 
-    .prologue
-    .line 311
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcStateReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 312
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->runSessionReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {p0, v0}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 313
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onDestroy()V
 
-    .line 315
     return-void
 .end method
 
 .method protected onListItemClick(Ljava/lang/Object;Landroid/view/View;IJ)V
     .locals 6
-    .parameter "l"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    .line 253
     const/4 v2, 0x0
 
-    .line 255
-    .local v2, throwIntent:Landroid/content/Intent;
     iput p3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mPosition:I
 
-    .line 258
     iget v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->phoneState:I
 
     if-eqz v3, :cond_0
 
-    .line 259
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v4, "voice talking can\'t trigger DM session"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     :goto_0
     return-void
 
-    .line 264
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -902,7 +727,6 @@
 
     if-ne v3, v5, :cond_1
 
-    .line 265
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v4, "enable AIR Plane mode can\'t run any session"
@@ -911,67 +735,52 @@
 
     goto :goto_0
 
-    .line 269
     :cond_1
     invoke-direct {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->checkOmcRunning()V
 
-    .line 270
     iget-boolean v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
     if-eqz v3, :cond_4
 
-    .line 271
     sget v3, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
     if-nez v3, :cond_2
 
-    .line 273
     const/16 v3, 0x3c
 
     sput v3, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
-    .line 277
     :cond_2
     :try_start_0
     sget-boolean v3, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->threadIsRun:Z
 
     if-nez v3, :cond_3
 
-    .line 278
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
 
-    .line 279
-    .local v0, cthread:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
-    invoke-virtual {v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 289
-    .end local v0           #cthread:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
     :cond_3
     :goto_1
     invoke-virtual {p0, p3, v5, v4}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startSession(IZZ)V
 
     goto :goto_0
 
-    .line 285
     :catch_0
     move-exception v1
 
-    .line 286
-    .local v1, e:Ljava/lang/Exception;
     :try_start_1
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
-    .line 289
-    .end local v1           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
@@ -979,40 +788,33 @@
 
     throw v3
 
-    .line 295
     :cond_4
     sput v4, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
-    .line 297
     const-string v3, "OMADMLib"
 
     const-string v4, "normal start session"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v3, :cond_5
 
-    .line 299
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->dismiss()V
 
-    .line 300
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v4, "normal,mAlertDialog.dismiss()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 301
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcAlertDialog;->cancel()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->cancel()V
 
-    .line 303
     :cond_5
     invoke-virtual {p0, p3, v5, v5}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startSession(IZZ)V
 
@@ -1022,118 +824,92 @@
 .method protected onPause()V
     .locals 2
 
-    .prologue
-    .line 136
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 137
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 138
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v1, "onPause(),mAlertDialog.dismiss()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->cancel()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->cancel()V
 
-    .line 141
     :cond_0
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onPause()V
 
-    .line 142
     return-void
 .end method
 
 .method public onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
     .locals 8
-    .parameter "preferenceScreen"
-    .parameter "preference"
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    .line 189
     iget-object v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v7, "onPreferenceTreeClick"
 
     invoke-static {v6, v7}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     const/4 v3, 0x0
 
-    .line 191
-    .local v3, throwIntent:Landroid/content/Intent;
     const/4 v2, 0x0
 
-    .line 192
-    .local v2, position:I
     iget-object v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
     if-ne p2, v6, :cond_1
 
-    .line 193
     const/4 v2, 0x1
 
-    .line 198
     :cond_0
     :goto_0
     iput v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mPosition:I
 
-    .line 201
     iget v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->phoneState:I
 
     if-eqz v6, :cond_3
 
-    .line 202
     iget-object v5, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v6, "voice talking can\'t trigger DM session"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
     :goto_1
     return v4
 
-    .line 194
     :cond_1
     iget-object v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
     if-ne p2, v6, :cond_2
 
-    .line 195
     const/4 v2, 0x2
 
     goto :goto_0
 
-    .line 196
     :cond_2
     iget-object v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mHtcSoftwareUpdate:Lcom/android/settings/framework/preference/update/HtcFOTAPreference;
 
     if-ne p2, v6, :cond_0
 
-    .line 197
-    invoke-super {p0, p1, p2}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
+    invoke-super {p0, p1, p2}, Lcom/htc/preference/HtcPreferenceActivity;->onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
 
     move-result v4
 
     goto :goto_1
 
-    .line 207
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
@@ -1143,7 +919,6 @@
 
     if-ne v6, v5, :cond_4
 
-    .line 208
     iget-object v5, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v6, "enable AIR Plane mode can\'t run any session"
@@ -1152,46 +927,36 @@
 
     goto :goto_1
 
-    .line 212
     :cond_4
     invoke-direct {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->checkOmcRunning()V
 
-    .line 213
     iget-boolean v6, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
     if-eqz v6, :cond_7
 
-    .line 214
     sget v6, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
     if-nez v6, :cond_5
 
-    .line 216
     const/16 v6, 0x3c
 
     sput v6, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
-    .line 220
     :cond_5
     :try_start_0
     sget-boolean v6, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->threadIsRun:Z
 
     if-nez v6, :cond_6
 
-    .line 221
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;)V
 
-    .line 222
-    .local v0, cthread:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
-    invoke-virtual {v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;->start()V
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 232
-    .end local v0           #cthread:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate$CountDownThread;
     :cond_6
     :goto_2
     invoke-virtual {p0, v2, v5, v4}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startSession(IZZ)V
@@ -1199,24 +964,18 @@
     :goto_3
     move v4, v5
 
-    .line 248
     goto :goto_1
 
-    .line 228
     :catch_0
     move-exception v1
 
-    .line 229
-    .local v1, e:Ljava/lang/Exception;
     :try_start_1
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_2
 
-    .line 232
-    .end local v1           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v6
 
@@ -1224,40 +983,33 @@
 
     throw v6
 
-    .line 238
     :cond_7
     sput v4, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
-    .line 240
     const-string v4, "OMADMLib"
 
     const-string v6, "normal start session"
 
     invoke-static {v4, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v4, :cond_8
 
-    .line 242
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v4}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v4}, Landroid/app/Dialog;->dismiss()V
 
-    .line 243
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v6, "normal,mAlertDialog.dismiss()"
 
     invoke-static {v4, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     iget-object v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v4}, Lcom/htc/widget/HtcAlertDialog;->cancel()V
+    invoke-virtual {v4}, Landroid/app/Dialog;->cancel()V
 
-    .line 246
     :cond_8
     invoke-virtual {p0, v2, v5, v5}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startSession(IZZ)V
 
@@ -1267,29 +1019,22 @@
 .method protected onResume()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 149
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v2}, Lcom/android/internal/telephony/Phone;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v0
 
-    .line 150
-    .local v0, call:Lcom/android/internal/telephony/Call;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->getEarliestConnection()Lcom/android/internal/telephony/Connection;
 
     move-result-object v1
 
-    .line 152
-    .local v1, con:Lcom/android/internal/telephony/Connection;
     if-eqz v1, :cond_0
 
-    .line 153
     const-string v2, "OMADMLib"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1338,9 +1083,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1354,66 +1098,54 @@
 
     if-nez v1, :cond_2
 
-    .line 162
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mFumo:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 163
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 164
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v6}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 177
     :goto_0
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v2, :cond_1
 
-    .line 178
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->dismiss()V
 
-    .line 179
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->TAG:Ljava/lang/String;
 
     const-string v3, "onResume(),mAlertDialog.dismiss()"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcAlertDialog;->cancel()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->cancel()V
 
-    .line 182
     :cond_1
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onResume()V
 
-    .line 183
     return-void
 
-    .line 170
     :cond_2
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mFumo:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 171
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCidc:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 172
     iget-object v2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mCiprl:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v2, v5}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
     goto :goto_0
 .end method
@@ -1421,11 +1153,8 @@
 .method public onStart()V
     .locals 3
 
-    .prologue
-    .line 123
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->onStart()V
 
-    .line 126
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->mContext:Landroid/content/Context;
 
     const-string v1, "phone"
@@ -1442,20 +1171,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 133
     return-void
 .end method
 
 .method protected startSession(IZZ)V
     .locals 9
-    .parameter "position"
-    .parameter "showDialog"
-    .parameter "runSession"
 
-    .prologue
     const/4 v8, 0x1
 
-    .line 384
     const-string v4, "OMADMLib"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1484,17 +1207,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     const/4 v1, 0x0
 
-    .line 387
-    .local v1, throwIntent:Landroid/content/Intent;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 389
-    .local v2, tmp:J
     sget-wide v4, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->clickTime:J
 
     const-wide/16 v6, -0x1
@@ -1503,39 +1221,30 @@
 
     if-nez v4, :cond_2
 
-    .line 390
     sput-wide v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->clickTime:J
 
-    .line 403
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 404
-    .local v0, intent:Landroid/content/Intent;
     const-string v4, "SECONDS"
 
     sget v5, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->second:I
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 405
     if-eqz p2, :cond_1
 
-    .line 407
     const-string v4, "pos"
 
     invoke-virtual {v0, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 408
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 411
     :cond_1
     if-nez p3, :cond_3
 
-    .line 412
     const-string v4, "OMADMLib"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1558,12 +1267,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
-    .end local v0           #intent:Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 393
     :cond_2
     sget-wide v4, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->clickTime:J
 
@@ -1575,29 +1281,23 @@
 
     if-gez v4, :cond_0
 
-    .line 394
     const-string v4, "OMADMLib"
 
     const-string v5, "<<<< click too close >>>>"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     sput-wide v2, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->clickTime:J
 
     goto :goto_0
 
-    .line 416
-    .restart local v0       #intent:Landroid/content/Intent;
     :cond_3
     invoke-direct {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->checkOmcRunning()V
 
-    .line 417
     iget-boolean v4, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->omcRunning:Z
 
     if-eqz v4, :cond_4
 
-    .line 418
     const-string v4, "OMADMLib"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1624,15 +1324,13 @@
 
     goto :goto_0
 
-    .line 422
     :cond_4
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 426
     :pswitch_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1640,30 +1338,24 @@
 
     invoke-static {v4, v5, v8}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->setIntkey(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 429
     new-instance v1, Landroid/content/Intent;
 
-    .end local v1           #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.intent.action.CI_DM"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 430
-    .restart local v1       #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.trigger"
 
     const/4 v5, 0x2
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 433
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 
-    .line 437
     :pswitch_1
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1671,28 +1363,22 @@
 
     invoke-static {v4, v5, v8}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->setIntkey(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 440
     new-instance v1, Landroid/content/Intent;
 
-    .end local v1           #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.intent.action.CI_DM"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 441
-    .restart local v1       #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.trigger"
 
     invoke-virtual {v1, v4, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 443
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto :goto_0
 
-    .line 447
     :pswitch_2
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
 
@@ -1700,28 +1386,22 @@
 
     invoke-static {v4, v5, v8}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->setIntkey(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 450
     new-instance v1, Landroid/content/Intent;
 
-    .end local v1           #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.intent.action.CI_DM"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 451
-    .restart local v1       #throwIntent:Landroid/content/Intent;
     const-string v4, "com.smithmicro.DM.trigger"
 
     const/4 v5, 0x3
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 453
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareUpdate;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {p0, v1}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     goto/16 :goto_0
 
-    .line 422
     nop
 
     :pswitch_data_0

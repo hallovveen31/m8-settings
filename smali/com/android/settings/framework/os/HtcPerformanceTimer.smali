@@ -15,8 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method public static getTimestamp()J
     .locals 2
 
-    .prologue
-    .line 57
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -39,8 +35,6 @@
 .method public getElapsedTime()J
     .locals 2
 
-    .prologue
-    .line 85
     iget-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mElapsedTime:J
 
     return-wide v0
@@ -49,8 +43,6 @@
 .method public getEndingLog()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,8 +87,6 @@
 .method public getStartingLog()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,15 +113,12 @@
 .method public start()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 29
     invoke-static {}, Lcom/android/settings/framework/os/HtcPerformanceTimer;->getTimestamp()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mStartTime:J
 
-    .line 30
     invoke-virtual {p0}, Lcom/android/settings/framework/os/HtcPerformanceTimer;->getStartingLog()Ljava/lang/String;
 
     move-result-object v0
@@ -142,15 +129,12 @@
 .method public stop()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 41
     invoke-static {}, Lcom/android/settings/framework/os/HtcPerformanceTimer;->getTimestamp()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mEndTime:J
 
-    .line 42
     iget-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mEndTime:J
 
     iget-wide v2, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mStartTime:J
@@ -159,7 +143,6 @@
 
     iput-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mElapsedTime:J
 
-    .line 44
     iget-wide v0, p0, Lcom/android/settings/framework/os/HtcPerformanceTimer;->mElapsedTime:J
 
     const-wide/16 v2, 0x0
@@ -168,7 +151,6 @@
 
     if-gez v0, :cond_0
 
-    .line 45
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Have you invoked start()?"
@@ -177,7 +159,6 @@
 
     throw v0
 
-    .line 47
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/framework/os/HtcPerformanceTimer;->getEndingLog()Ljava/lang/String;
 

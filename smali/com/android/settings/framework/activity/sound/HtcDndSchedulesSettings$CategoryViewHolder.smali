@@ -22,8 +22,6 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 341
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ViewHolder;-><init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$1;)V
@@ -33,10 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$1;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 341
     invoke-direct {p0}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$CategoryViewHolder;-><init>()V
 
     return-void

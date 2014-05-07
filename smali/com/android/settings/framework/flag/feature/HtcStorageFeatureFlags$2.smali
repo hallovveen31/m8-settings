@@ -17,11 +17,7 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;Ljava/lang/Boolean;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 716
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/content/custom/property/HtcBooleanProperty;-><init>(Ljava/lang/String;Ljava/lang/Boolean;)V
 
     return-void
@@ -31,10 +27,7 @@
 # virtual methods
 .method protected getCustomValue(Landroid/content/Context;)Ljava/lang/Boolean;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 720
     invoke-super {p0, p1}, Lcom/android/settings/framework/content/custom/property/HtcBooleanProperty;->getCustomValue(Landroid/content/Context;)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -76,10 +69,7 @@
 
 .method protected bridge synthetic getCustomValue(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 716
     invoke-virtual {p0, p1}, Lcom/android/settings/framework/flag/feature/HtcStorageFeatureFlags$2;->getCustomValue(Landroid/content/Context;)Ljava/lang/Boolean;
 
     move-result-object v0

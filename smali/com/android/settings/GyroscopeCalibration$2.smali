@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/GyroscopeCalibration;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,19 +36,13 @@
 # virtual methods
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .parameter "sensor"
-    .parameter "accuracy"
 
-    .prologue
-    .line 381
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 11
-    .parameter "event"
 
-    .prologue
     const-wide/16 v9, 0xc8
 
     const-wide v5, 0x400921fb54442d18L
@@ -60,7 +51,6 @@
 
     const/4 v7, 0x1
 
-    .line 385
     iget-object v3, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v3}, Landroid/hardware/Sensor;->getType()I
@@ -71,7 +61,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 389
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->BUBBLE_LEVEL_BOUNDARY:[I
@@ -86,14 +75,12 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/android/settings/GyroscopeCalibration$DPIType;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
     aget v0, v3, v4
 
-    .line 390
-    .local v0, boundary:I
     iget-object v3, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v3, v3, v7
@@ -108,18 +95,14 @@
 
     double-to-float v1, v3
 
-    .line 391
-    .local v1, xValue:F
     int-to-float v3, v0
 
     cmpl-float v3, v1, v3
 
     if-lez v3, :cond_3
 
-    .line 392
     int-to-float v1, v0
 
-    .line 395
     :cond_0
     :goto_0
     iget-object v3, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -138,18 +121,14 @@
 
     double-to-float v2, v3
 
-    .line 396
-    .local v2, yValue:F
     int-to-float v3, v0
 
     cmpl-float v3, v2, v3
 
     if-lez v3, :cond_4
 
-    .line 397
     int-to-float v2, v0
 
-    .line 403
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
@@ -168,13 +147,11 @@
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubbleAnim:Landroid/view/animation/TranslateAnimation;
     invoke-static {v3, v4}, Lcom/android/settings/GyroscopeCalibration;->access$1902(Lcom/android/settings/GyroscopeCalibration;Landroid/view/animation/TranslateAnimation;)Landroid/view/animation/TranslateAnimation;
 
-    .line 404
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubblePosition:F
     invoke-static {v3, v1}, Lcom/android/settings/GyroscopeCalibration;->access$2002(Lcom/android/settings/GyroscopeCalibration;F)F
 
-    .line 406
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -182,9 +159,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillBefore(Z)V
+    invoke-virtual {v3, v7}, Landroid/view/animation/Animation;->setFillBefore(Z)V
 
-    .line 407
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -192,9 +168,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v3, v7}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 408
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -202,9 +177,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v9, v10}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v3, v9, v10}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 409
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubble:Landroid/widget/ImageView;
@@ -219,9 +193,8 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 411
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     new-instance v4, Landroid/view/animation/TranslateAnimation;
@@ -240,7 +213,6 @@
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubbleAnim:Landroid/view/animation/TranslateAnimation;
     invoke-static {v3, v4}, Lcom/android/settings/GyroscopeCalibration;->access$2202(Lcom/android/settings/GyroscopeCalibration;Landroid/view/animation/TranslateAnimation;)Landroid/view/animation/TranslateAnimation;
 
-    .line 412
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     neg-float v4, v2
@@ -248,7 +220,6 @@
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubblePosition:F
     invoke-static {v3, v4}, Lcom/android/settings/GyroscopeCalibration;->access$2302(Lcom/android/settings/GyroscopeCalibration;F)F
 
-    .line 413
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -256,9 +227,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillBefore(Z)V
+    invoke-virtual {v3, v7}, Landroid/view/animation/Animation;->setFillBefore(Z)V
 
-    .line 414
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -266,9 +236,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v3, v7}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 415
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubbleAnim:Landroid/view/animation/TranslateAnimation;
@@ -276,9 +245,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v9, v10}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v3, v9, v10}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 416
     iget-object v3, p0, Lcom/android/settings/GyroscopeCalibration$2;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubble:Landroid/widget/ImageView;
@@ -293,18 +261,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 418
-    .end local v0           #boundary:I
-    .end local v1           #xValue:F
-    .end local v2           #yValue:F
     :cond_2
     return-void
 
-    .line 393
-    .restart local v0       #boundary:I
-    .restart local v1       #xValue:F
     :cond_3
     neg-int v3, v0
 
@@ -314,15 +275,12 @@
 
     if-gez v3, :cond_0
 
-    .line 394
     neg-int v3, v0
 
     int-to-float v1, v3
 
     goto/16 :goto_0
 
-    .line 398
-    .restart local v2       #yValue:F
     :cond_4
     neg-int v3, v0
 
@@ -332,7 +290,6 @@
 
     if-gez v3, :cond_1
 
-    .line 399
     neg-int v3, v0
 
     int-to-float v2, v3

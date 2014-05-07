@@ -21,10 +21,7 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 133
     iput-object p1, p0, Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference$ConfirmEnforceFragment;->this$0:Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference;
 
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
@@ -36,32 +33,23 @@
 # virtual methods
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 4
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 136
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference$ConfirmEnforceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 138
-    .local v1, context:Landroid/content/Context;
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v0, v1}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 139
-    .local v0, builder:Lcom/htc/widget/HtcAlertDialog$Builder;
     const v2, 0x7f0c1045
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 140
     const v2, 0x7f0c1046
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 142
     const v2, 0x104000a
 
     new-instance v3, Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference$ConfirmEnforceFragment$1;
@@ -70,7 +58,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 149
     const/high16 v2, 0x104
 
     new-instance v3, Lcom/android/settings/framework/preference/developer/HtcProtectSdCardPreference$ConfirmEnforceFragment$2;
@@ -79,7 +66,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 156
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
 
     move-result-object v2

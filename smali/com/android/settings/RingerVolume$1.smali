@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RingerVolume;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 163
     iput-object p1, p0, Lcom/android/settings/RingerVolume$1;->this$0:Lcom/android/settings/RingerVolume;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,15 +33,11 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
-    .parameter "msg"
 
-    .prologue
-    .line 166
     iget-object v0, p0, Lcom/android/settings/RingerVolume$1;->this$0:Lcom/android/settings/RingerVolume;
 
     #calls: Lcom/android/settings/RingerVolume;->updateSlidersAndMutedStates()V
     invoke-static {v0}, Lcom/android/settings/RingerVolume;->access$000(Lcom/android/settings/RingerVolume;)V
 
-    .line 167
     return-void
 .end method

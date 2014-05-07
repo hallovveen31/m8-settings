@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/DockService;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 577
     iput-object p1, p0, Lcom/android/settings/bluetooth/DockService$2;->this$0:Lcom/android/settings/bluetooth/DockService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,17 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;IZ)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
-    .parameter "isChecked"
 
-    .prologue
-    .line 579
     sget-boolean v0, Lcom/android/settings/bluetooth/DockService;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 580
     const-string v0, "DockService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,7 +73,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :cond_0
     iget-object v0, p0, Lcom/android/settings/bluetooth/DockService$2;->this$0:Lcom/android/settings/bluetooth/DockService;
 
@@ -93,6 +83,5 @@
 
     aput-boolean p3, v0, p2
 
-    .line 583
     return-void
 .end method

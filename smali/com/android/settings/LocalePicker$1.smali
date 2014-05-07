@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/LocalePicker;Landroid/content/Context;Ljava/util/Locale;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 50
     iput-object p1, p0, Lcom/android/settings/LocalePicker$1;->this$0:Lcom/android/settings/LocalePicker;
 
     iput-object p2, p0, Lcom/android/settings/LocalePicker$1;->val$context:Landroid/content/Context;
@@ -50,8 +45,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/settings/LocalePicker$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -64,11 +57,9 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 55
     iget-object v0, p0, Lcom/android/settings/LocalePicker$1;->val$locale:Ljava/util/Locale;
 
     invoke-static {v0}, Lcom/android/settings/LocalePicker;->updateLocale(Ljava/util/Locale;)V
 
-    .line 56
     return-void
 .end method

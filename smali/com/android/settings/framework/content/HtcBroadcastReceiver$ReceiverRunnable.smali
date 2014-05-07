@@ -30,30 +30,21 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/content/HtcBroadcastReceiver;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->this$0:Lcom/android/settings/framework/content/HtcBroadcastReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput-object p2, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->mContext:Landroid/content/Context;
 
-    .line 78
     iput-object p3, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->mIntent:Landroid/content/Intent;
 
-    .line 79
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->mUiHandler:Landroid/os/Handler;
 
-    .line 80
     return-void
 .end method
 
@@ -62,13 +53,10 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 112
     const/4 v0, 0x1
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->this$0:Lcom/android/settings/framework/content/HtcBroadcastReceiver;
 
     iget-object v1, p0, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;->mContext:Landroid/content/Context;
@@ -79,6 +67,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/settings/framework/content/HtcBroadcastReceiver;->onReceiveInBackground(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Handler;)V
 
-    .line 123
     return-void
 .end method

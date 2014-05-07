@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -22,13 +20,9 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "mContext"
-    .parameter "intent"
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 16
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -37,19 +31,15 @@
 
     if-nez v2, :cond_1
 
-    .line 28
     :cond_0
     :goto_0
     return-void
 
-    .line 18
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 20
-    .local v0, action:Ljava/lang/String;
     const-string v2, "SmartNS_NSWifiReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -72,15 +62,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     const-string v2, "WirelessSettings"
 
     invoke-virtual {p1, v2, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 23
-    .local v1, sp:Landroid/content/SharedPreferences;
     const-string v2, "SmartNS_NSWifiReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -123,7 +110,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     invoke-static {p1}, Lcom/android/settings/SmartNSUtility;->isWifiOn(Landroid/content/Context;)Z
 
     move-result v2
@@ -138,7 +124,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 26
     invoke-static {v5, p1}, Lcom/android/settings/SmartNSUtility;->setNetSharing(ZLandroid/content/Context;)V
 
     goto :goto_0

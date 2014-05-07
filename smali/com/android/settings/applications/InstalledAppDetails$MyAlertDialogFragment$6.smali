@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1889
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$6;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1891
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$6;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetails;
@@ -57,7 +50,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1892
     const-string v0, "Settings:InstalledAppDetails"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -91,12 +83,10 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1912
     :cond_0
     :goto_0
     return-void
 
-    .line 1900
     :cond_1
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$6;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
@@ -111,12 +101,10 @@
 
     if-nez v0, :cond_2
 
-    .line 1901
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 1902
     const-string v0, "Settings:InstalledAppDetails"
 
     const-string v1, "DLG_DISABLE, onClick, getOwner().mAppEntry is null"
@@ -125,7 +113,6 @@
 
     goto :goto_0
 
-    .line 1909
     :cond_2
     new-instance v1, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;
 
@@ -164,7 +151,7 @@
 
     aput-object v0, v2, v3
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method

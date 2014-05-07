@@ -26,19 +26,13 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/location/RecentLocationApps;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "packageName"
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;->this$0:Lcom/android/settings/location/RecentLocationApps;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p2, p0, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;->mPackage:Ljava/lang/String;
 
-    .line 63
     return-void
 .end method
 
@@ -46,25 +40,19 @@
 # virtual methods
 .method public onPreferenceClick(Lcom/htc/preference/HtcPreference;)Z
     .locals 7
-    .parameter "preference"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 68
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 69
-    .local v2, args:Landroid/os/Bundle;
     const-string v0, "package"
 
     iget-object v1, p0, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;->mPackage:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
     iget-object v0, p0, Lcom/android/settings/location/RecentLocationApps$PackageEntryClickedListener;->this$0:Lcom/android/settings/location/RecentLocationApps;
 
     #getter for: Lcom/android/settings/location/RecentLocationApps;->mActivity:Lcom/htc/preference/HtcPreferenceActivity;
@@ -86,7 +74,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/preference/HtcPreferenceActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
-    .line 72
     const/4 v0, 0x1
 
     return v0

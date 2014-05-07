@@ -31,8 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,14 +40,9 @@
 # virtual methods
 .method public bridge synthetic forConstantValue(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 17
     check-cast p1, Ljavax/annotation/Nonnull;
 
-    .end local p1
     invoke-virtual {p0, p1, p2}, Ljavax/annotation/Nonnull$Checker;->forConstantValue(Ljavax/annotation/Nonnull;Ljava/lang/Object;)Ljavax/annotation/meta/When;
 
     move-result-object v0
@@ -59,17 +52,11 @@
 
 .method public forConstantValue(Ljavax/annotation/Nonnull;Ljava/lang/Object;)Ljavax/annotation/meta/When;
     .locals 1
-    .parameter "qualifierqualifierArgument"
-    .parameter "value"
 
-    .prologue
-    .line 21
     if-nez p2, :cond_0
 
-    .line 22
     sget-object v0, Ljavax/annotation/meta/When;->NEVER:Ljavax/annotation/meta/When;
 
-    .line 23
     :goto_0
     return-object v0
 

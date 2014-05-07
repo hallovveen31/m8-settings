@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 959
     iput-object p1, p0, Lcom/android/settings/RadioInfo$10;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 2
-    .parameter "item"
 
-    .prologue
-    .line 961
     iget-object v0, p0, Lcom/android/settings/RadioInfo$10;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -54,7 +48,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/Phone;->getDataCallList(Landroid/os/Message;)V
 
-    .line 962
     const/4 v0, 0x1
 
     return v0

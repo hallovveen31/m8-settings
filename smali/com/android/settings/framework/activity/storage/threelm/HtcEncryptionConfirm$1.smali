@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 58
     iput-object p1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,40 +36,34 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "v"
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    .line 61
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 109
     :goto_0
     return-void
 
-    .line 66
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
     invoke-static {v1}, Lcom/android/settings/framework/core/security/crypto/HtcXorCrypto;->decrypt(Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 67
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -82,8 +73,6 @@
 
     move-result-object v0
 
-    .line 70
-    .local v0, password:Ljava/lang/String;
     sget-object v1, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$3;->$SwitchMap$com$android$settings$framework$core$storage$HtcIStorageVolume$StorageType:[I
 
     iget-object v2, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
@@ -93,7 +82,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -101,11 +90,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 105
     :goto_1
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -115,10 +103,9 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 107
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -130,7 +117,6 @@
 
     goto :goto_0
 
-    .line 73
     :pswitch_0
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
@@ -143,7 +129,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 74
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
     #getter for: Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
@@ -153,15 +138,14 @@
 
     invoke-interface {v1, v0, v5}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume;->encrypt(Ljava/lang/String;Z)V
 
-    .line 79
     :goto_2
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -169,7 +153,7 @@
 
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v3}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -183,7 +167,6 @@
 
     goto :goto_1
 
-    .line 76
     :cond_1
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
@@ -196,7 +179,6 @@
 
     goto :goto_2
 
-    .line 86
     :pswitch_1
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
@@ -209,7 +191,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 87
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
     #getter for: Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
@@ -219,15 +200,14 @@
 
     invoke-interface {v1, v0, v5}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume;->encrypt(Ljava/lang/String;Z)V
 
-    .line 92
     :goto_3
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -235,7 +215,7 @@
 
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v3}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v3
 
@@ -249,7 +229,6 @@
 
     goto/16 :goto_1
 
-    .line 89
     :cond_2
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
@@ -262,7 +241,6 @@
 
     goto :goto_3
 
-    .line 98
     :pswitch_2
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm$1;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionConfirm;
 
@@ -275,7 +253,6 @@
 
     goto/16 :goto_1
 
-    .line 70
     nop
 
     :pswitch_data_0

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcListActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 305
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcListActivity$2;->this$0:Lcom/android/settings/framework/app/HtcListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,7 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 6
-    .parameter "parent"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
 
-    .prologue
-    .line 308
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcListActivity$2;->this$0:Lcom/android/settings/framework/app/HtcListActivity;
 
     move-object v1, p1
@@ -60,6 +51,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/settings/framework/app/HtcListActivity;->onListItemClick(Lcom/htc/widget/HtcListView;Landroid/view/View;IJ)V
 
-    .line 309
     return-void
 .end method

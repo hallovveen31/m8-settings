@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,7 +41,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->TAG:Ljava/lang/String;
 
-    .line 28
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->DEBUG:Z
@@ -53,21 +50,15 @@
 
 .method public constructor <init>(Lcom/android/settings/framework/core/storage/HtcIStorageVolume;)V
     .locals 0
-    .parameter "volume"
 
-    .prologue
-    .line 38
     invoke-direct {p0, p1}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;-><init>(Lcom/android/settings/framework/core/storage/HtcIStorageVolume;)V
 
-    .line 39
     return-void
 .end method
 
 .method static synthetic access$000()Z
     .locals 1
 
-    .prologue
-    .line 22
     sget-boolean v0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->DEBUG:Z
 
     return v0
@@ -75,12 +66,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 22
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->runCrypto(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
 
     return-void
@@ -88,27 +74,19 @@
 
 .method private runCrypto(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
     .locals 6
-    .parameter "actionType"
-    .parameter "password"
 
-    .prologue
-    .line 85
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcStorageManager;->getMountService()Landroid/os/storage/IMountService;
 
     move-result-object v2
 
-    .line 86
-    .local v2, service:Landroid/os/storage/IMountService;
     sget-object v3, Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;->ENCRYPT:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     if-ne p1, v3, :cond_0
 
     const/4 v1, 0x1
 
-    .line 90
-    .local v1, encrypt:Z
     :goto_0
-    iget-object v3, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
+    iget-object v3, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
 
     invoke-interface {v3}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume;->getContext()Landroid/content/Context;
 
@@ -122,26 +100,19 @@
 
     invoke-static {v3, v4, v1}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 109
     if-eqz v1, :cond_1
 
-    .line 110
     :try_start_0
     invoke-interface {v2, p2}, Landroid/os/storage/IMountService;->enableFilesystemEncryption(Ljava/lang/String;)I
 
-    .line 118
     :goto_1
     return-void
 
-    .line 86
-    .end local v1           #encrypt:Z
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 112
-    .restart local v1       #encrypt:Z
     :cond_1
     invoke-interface {v2, p2}, Landroid/os/storage/IMountService;->disableFilesystemEncryption(Ljava/lang/String;)I
     :try_end_0
@@ -149,12 +120,9 @@
 
     goto :goto_1
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
-    .local v0, e:Landroid/os/RemoteException;
     sget-object v3, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -182,11 +150,7 @@
 
 .method private runCryptoInNewThread(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
     .locals 2
-    .parameter "actionType"
-    .parameter "password"
 
-    .prologue
-    .line 61
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;
@@ -197,7 +161,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 81
     return-void
 .end method
 
@@ -205,64 +168,48 @@
 # virtual methods
 .method public decrypt(Ljava/lang/String;)V
     .locals 1
-    .parameter "password"
 
-    .prologue
-    .line 51
     sget-boolean v0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
     const-string v0, "decrypt(...)"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->log(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->log(Ljava/lang/String;)V
 
-    .line 54
     :cond_0
     sget-object v0, Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;->DECRYPT:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     invoke-direct {p0, v0, p1}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->runCryptoInNewThread(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
 
-    .line 55
     return-void
 .end method
 
 .method public encrypt(Ljava/lang/String;)V
     .locals 1
-    .parameter "password"
 
-    .prologue
-    .line 43
     sget-boolean v0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 44
     const-string v0, "encrypt(...)"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->log(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->log(Ljava/lang/String;)V
 
-    .line 46
     :cond_0
     sget-object v0, Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;->ENCRYPT:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     invoke-direct {p0, v0, p1}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->runCryptoInNewThread(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
 
-    .line 47
     return-void
 .end method
 
 .method public isEncrypted()Z
     .locals 3
 
-    .prologue
-    .line 122
     const/4 v0, 0x0
 
-    .line 124
-    .local v0, encrypted:Z
-    iget-object v1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
+    iget-object v1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
 
     invoke-interface {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume;->getContext()Landroid/content/Context;
 
@@ -278,12 +225,10 @@
 
     move-result v0
 
-    .line 128
     sget-boolean v1, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -302,9 +247,8 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->log(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->log(Ljava/lang/String;)V
 
-    .line 131
     :cond_0
     return v0
 .end method

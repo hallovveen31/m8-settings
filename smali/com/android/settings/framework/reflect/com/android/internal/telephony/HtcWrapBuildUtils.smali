@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 18
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -43,12 +41,10 @@
 
     sput-object v1, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->TAG:Ljava/lang/String;
 
-    .line 21
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v1, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->DEBUG:Z
 
-    .line 29
     :try_start_0
     const-class v2, Lcom/android/internal/telephony/HtcBuildUtils;
 
@@ -66,24 +62,17 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
-    .local v0, e:Ljava/lang/NoSuchMethodException;
     :cond_0
     :goto_0
     return-void
 
-    .line 31
-    .end local v0           #e:Ljava/lang/NoSuchMethodException;
     :catch_0
     move-exception v0
 
-    .line 32
-    .restart local v0       #e:Ljava/lang/NoSuchMethodException;
     sget-boolean v1, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 33
     sget-object v1, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->TAG:Ljava/lang/String;
 
     const-string v2, "NoSuchMethodException"
@@ -96,8 +85,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Lcom/android/internal/telephony/HtcBuildUtils;-><init>()V
 
     return-void
@@ -106,23 +93,17 @@
 .method public static KDDI_WORDING_CONFIG()Z
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 40
     sget-object v2, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->sMethod_KDDI_WORDING_CONFIG:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_0
 
     move v2, v3
 
-    .line 50
-    .local v0, e:Ljava/lang/Exception;
     :goto_0
     return v2
 
-    .line 45
-    .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     :try_start_0
     sget-object v4, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->sMethod_KDDI_WORDING_CONFIG:Ljava/lang/reflect/Method;
@@ -137,11 +118,8 @@
 
     move-result-object v1
 
-    .line 47
-    .local v1, result:Ljava/lang/Object;
     check-cast v1, Ljava/lang/Boolean;
 
-    .end local v1           #result:Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -150,12 +128,9 @@
 
     goto :goto_0
 
-    .line 48
     :catch_0
     move-exception v0
 
-    .line 49
-    .restart local v0       #e:Ljava/lang/Exception;
     sget-object v2, Lcom/android/settings/framework/reflect/com/android/internal/telephony/HtcWrapBuildUtils;->TAG:Ljava/lang/String;
 
     const-string v4, "failed to invoke KDDI_WORDING_CONFIG()"
@@ -164,6 +139,5 @@
 
     move v2, v3
 
-    .line 50
     goto :goto_0
 .end method

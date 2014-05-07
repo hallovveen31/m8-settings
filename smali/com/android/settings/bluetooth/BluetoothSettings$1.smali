@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 485
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "v"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 488
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -53,21 +47,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 489
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
 
-    #calls: Lcom/android/settings/bluetooth/BluetoothSettings;->isRestrictedAndNotPinProtected()Z
+    #calls: Lcom/android/settings/RestrictedSettingsFragment;->isRestrictedAndNotPinProtected()Z
     invoke-static {v0}, Lcom/android/settings/bluetooth/BluetoothSettings;->access$000(Lcom/android/settings/bluetooth/BluetoothSettings;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 501
     :goto_0
     return-void
 
-    .line 490
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -75,16 +66,12 @@
 
     check-cast v7, Lcom/android/settings/bluetooth/CachedBluetoothDevice;
 
-    .line 492
-    .local v7, device:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     new-instance v2, Landroid/os/Bundle;
 
     const/4 v0, 0x1
 
     invoke-direct {v2, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 493
-    .local v2, args:Landroid/os/Bundle;
     const-string v0, "device"
 
     invoke-virtual {v7}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
@@ -93,10 +80,9 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 495
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/BluetoothSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -118,9 +104,6 @@
 
     goto :goto_0
 
-    .line 499
-    .end local v2           #args:Landroid/os/Bundle;
-    .end local v7           #device:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     :cond_1
     const-string v0, "BluetoothSettings"
 

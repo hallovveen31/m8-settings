@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 101
     invoke-static {}, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->values()[Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->ALL:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->RUNNING:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->THIRD_PARTY:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

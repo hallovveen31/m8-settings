@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/MasterClearConfirm;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/settings/MasterClearConfirm$1;->this$0:Lcom/android/settings/MasterClearConfirm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,25 +36,20 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 73
     invoke-static {}, Lcom/android/settings/Utils;->isMonkeyRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 92
     :goto_0
     return-void
 
-    .line 78
     :cond_0
     iget-object v0, p0, Lcom/android/settings/MasterClearConfirm$1;->this$0:Lcom/android/settings/MasterClearConfirm;
 
-    invoke-virtual {v0}, Lcom/android/settings/MasterClearConfirm;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

@@ -25,10 +25,7 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/receiver/HtcBluetoothOnOffReceiver;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 23
     iput-object p1, p0, Lcom/android/settings/framework/receiver/HtcBluetoothOnOffReceiver$EventParams;->this$0:Lcom/android/settings/framework/receiver/HtcBluetoothOnOffReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,8 +38,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -23,20 +23,13 @@
 # direct methods
 .method constructor <init>(II)V
     .locals 0
-    .parameter "width"
-    .parameter "height"
 
-    .prologue
-    .line 439
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 440
     iput p1, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
 
-    .line 441
     iput p2, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
 
-    .line 442
     return-void
 .end method
 
@@ -44,18 +37,13 @@
 # virtual methods
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 0
-    .parameter "canvas"
 
-    .prologue
-    .line 466
     return-void
 .end method
 
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .prologue
-    .line 451
     iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
 
     return v0
@@ -64,8 +52,6 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .prologue
-    .line 446
     iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
 
     return v0
@@ -74,8 +60,6 @@
 .method public getMinimumHeight()I
     .locals 1
 
-    .prologue
-    .line 461
     iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mHeight:I
 
     return v0
@@ -84,8 +68,6 @@
 .method public getMinimumWidth()I
     .locals 1
 
-    .prologue
-    .line 456
     iget v0, p0, Lcom/android/settings/ActivityPicker$EmptyDrawable;->mWidth:I
 
     return v0
@@ -94,8 +76,6 @@
 .method public getOpacity()I
     .locals 1
 
-    .prologue
-    .line 478
     const/4 v0, -0x3
 
     return v0
@@ -103,18 +83,12 @@
 
 .method public setAlpha(I)V
     .locals 0
-    .parameter "alpha"
 
-    .prologue
-    .line 470
     return-void
 .end method
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 0
-    .parameter "cf"
 
-    .prologue
-    .line 474
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/flag/feature/HtcSecurityFeatureFlags;->isDebugMode:Z
@@ -23,8 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,10 +29,8 @@
 .method public static final isSIMPinSettingEnabled()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 112
     const-string v1, "wifi_only"
 
     invoke-static {v1, v0}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getBoolean(Ljava/lang/String;Z)Z
@@ -62,18 +56,14 @@
 .method public static final supportAuCardWording()Z
     .locals 1
 
-    .prologue
-    .line 127
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isKddiSku()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 128
     const/4 v0, 0x1
 
-    .line 130
     :goto_0
     return v0
 
@@ -86,8 +76,6 @@
 .method public static supportAutoStartManager()Z
     .locals 1
 
-    .prologue
-    .line 212
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcAutoStartManager;->support()Z
 
     move-result v0
@@ -98,8 +86,6 @@
 .method public static supportBypassLockScreenOnWake()Z
     .locals 2
 
-    .prologue
-    .line 182
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v0
@@ -124,8 +110,6 @@
 .method public static final supportEncryptTablet()Z
     .locals 2
 
-    .prologue
-    .line 42
     const-string v0, "HTC__A07"
 
     invoke-static {}, Lcom/android/settings/framework/flag/HtcSkuFlags;->getCurrentCID()Ljava/lang/String;
@@ -151,29 +135,21 @@
 
 .method public static final supportKidMode(Landroid/content/Context;)Z
     .locals 6
-    .parameter "context"
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 75
     const-string v4, "ro.kidmode.enable"
 
     invoke-static {v4, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 78
-    .local v2, support:Z
     if-eqz v2, :cond_0
 
-    .line 79
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 82
-    .local v1, pm:Landroid/content/pm/PackageManager;
     invoke-static {}, Lcom/android/settings/framework/preference/security/kidmode/HtcParentDashboardPreference;->getParentDashboardIntent()Landroid/content/Intent;
 
     move-result-object v4
@@ -184,8 +160,6 @@
 
     move-result-object v0
 
-    .line 85
-    .local v0, list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
@@ -195,15 +169,9 @@
     :goto_0
     and-int/2addr v2, v3
 
-    .line 87
-    .end local v0           #list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    .end local v1           #pm:Landroid/content/pm/PackageManager;
     :cond_0
     return v2
 
-    .line 85
-    .restart local v0       #list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    .restart local v1       #pm:Landroid/content/pm/PackageManager;
     :cond_1
     const/4 v3, 0x0
 
@@ -213,8 +181,6 @@
 .method public static supportLockScreenNotification()Z
     .locals 2
 
-    .prologue
-    .line 167
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v0
@@ -239,8 +205,6 @@
 .method public static supportPermissionManager()Z
     .locals 1
 
-    .prologue
-    .line 196
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager;->support()Z
 
     move-result v0
@@ -251,8 +215,6 @@
 .method public static final supportSIMLockSettings()Z
     .locals 2
 
-    .prologue
-    .line 142
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v0
@@ -275,10 +237,8 @@
 
     if-nez v0, :cond_0
 
-    .line 149
     const/4 v0, 0x1
 
-    .line 151
     :goto_0
     return v0
 
@@ -291,8 +251,6 @@
 .method public static final supportShowEncryptionOptionOnSecurityPage()Z
     .locals 1
 
-    .prologue
-    .line 99
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v0

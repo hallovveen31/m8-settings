@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,20 +55,15 @@
 
 .method constructor <init>(I)V
     .locals 1
-    .parameter "maximumCapacity"
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
-    .line 33
     return-void
 .end method
 
@@ -78,25 +71,18 @@
 # virtual methods
 .method public add(Lcom/android/settings/framework/activity/HtcWrapHeader;)V
     .locals 1
-    .parameter "header"
 
-    .prologue
-    .line 40
     monitor-enter p0
 
-    .line 41
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 42
     monitor-exit p0
 
-    .line 43
     return-void
 
-    .line 42
     :catchall_0
     move-exception v0
 
@@ -109,10 +95,7 @@
 
 .method public get(I)Lcom/android/settings/framework/activity/HtcWrapHeader;
     .locals 1
-    .parameter "index"
 
-    .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -126,25 +109,18 @@
 
 .method public remove(Lcom/android/settings/framework/activity/HtcWrapHeader;)V
     .locals 1
-    .parameter "header"
 
-    .prologue
-    .line 50
     monitor-enter p0
 
-    .line 51
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 52
     monitor-exit p0
 
-    .line 53
     return-void
 
-    .line 52
     :catchall_0
     move-exception v0
 
@@ -158,8 +134,6 @@
 .method public size()I
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -172,11 +146,8 @@
 .method public sortByOrder()V
     .locals 6
 
-    .prologue
-    .line 59
     monitor-enter p0
 
-    .line 60
     :try_start_0
     iget-object v4, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
@@ -186,22 +157,16 @@
 
     invoke-static {v4, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 61
     const/4 v2, 0x0
 
-    .line 62
-    .local v2, idx:I
     iget-object v4, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
     move v3, v2
 
-    .end local v2           #idx:I
-    .local v3, idx:I
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -215,31 +180,19 @@
 
     check-cast v0, Lcom/android/settings/framework/activity/HtcWrapHeader;
 
-    .line 63
-    .local v0, header:Lcom/android/settings/framework/activity/HtcWrapHeader;
     add-int/lit8 v2, v3, 0x1
 
-    .end local v3           #idx:I
-    .restart local v2       #idx:I
     iput v3, v0, Lcom/android/settings/framework/activity/HtcWrapHeader;->index:I
 
     move v3, v2
 
-    .end local v2           #idx:I
-    .restart local v3       #idx:I
     goto :goto_0
 
-    .line 65
-    .end local v0           #header:Lcom/android/settings/framework/activity/HtcWrapHeader;
     :cond_0
     monitor-exit p0
 
-    .line 66
     return-void
 
-    .line 65
-    .end local v1           #i$:Ljava/util/Iterator;
-    .end local v3           #idx:I
     :catchall_0
     move-exception v4
 
@@ -253,11 +206,8 @@
 .method public toArray()[Lcom/android/settings/framework/activity/HtcWrapHeader;
     .locals 2
 
-    .prologue
-    .line 85
     monitor-enter p0
 
-    .line 86
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
@@ -267,20 +217,14 @@
 
     new-array v0, v1, [Lcom/android/settings/framework/activity/HtcWrapHeader;
 
-    .line 87
-    .local v0, array:[Lcom/android/settings/framework/activity/HtcWrapHeader;
     iget-object v1, p0, Lcom/android/settings/framework/activity/HtcWrapHeaderList;->mWrapHeaders:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 88
     monitor-exit p0
 
-    .line 89
     return-object v0
 
-    .line 88
-    .end local v0           #array:[Lcom/android/settings/framework/activity/HtcWrapHeader;
     :catchall_0
     move-exception v1
 

@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DevelopmentSettings;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 1498
     iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$2;->this$0:Lcom/android/settings/DevelopmentSettings;
 
     iput-object p2, p0, Lcom/android/settings/DevelopmentSettings$2;->val$newRuntimeValue:Ljava/lang/String;
@@ -49,23 +44,17 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1501
     const-string v1, "persist.sys.dalvik.vm.lib"
 
     iget-object v2, p0, Lcom/android/settings/DevelopmentSettings$2;->val$newRuntimeValue:Ljava/lang/String;
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1502
     iget-object v1, p0, Lcom/android/settings/DevelopmentSettings$2;->this$0:Lcom/android/settings/DevelopmentSettings;
 
     invoke-virtual {v1}, Lcom/android/settings/DevelopmentSettings;->pokeSystemProperties()V
 
-    .line 1503
     iget-object v1, p0, Lcom/android/settings/DevelopmentSettings$2;->val$context:Landroid/content/Context;
 
     const-string v2, "power"
@@ -76,12 +65,9 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 1505
-    .local v0, pm:Landroid/os/PowerManager;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->reboot(Ljava/lang/String;)V
 
-    .line 1506
     return-void
 .end method

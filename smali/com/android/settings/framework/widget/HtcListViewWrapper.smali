@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/android/settings/framework/widget/HtcListViewWrapper;->TAG:Ljava/lang/String;
 
-    .line 58
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/widget/HtcListViewWrapper$1;
@@ -69,8 +66,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,11 +73,7 @@
 
 .method public static fillEmptySpace(Landroid/widget/ListView;Z)V
     .locals 2
-    .parameter "listView"
-    .parameter "isFillEmptySpace"
 
-    .prologue
-    .line 30
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v0
@@ -93,21 +84,15 @@
 
     if-gtz v0, :cond_0
 
-    .line 31
     invoke-virtual {p0, p1}, Landroid/widget/ListView;->fillEmptySpace(Z)V
 
-    .line 36
     :cond_0
     return-void
 .end method
 
 .method public static fillEmptySpace(Lcom/htc/widget/HtcListView;Z)V
     .locals 4
-    .parameter "listView"
-    .parameter "isFillEmptySpace"
 
-    .prologue
-    .line 47
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v0
@@ -118,7 +103,6 @@
 
     if-gtz v0, :cond_0
 
-    .line 51
     sget-object v0, Lcom/android/settings/framework/widget/HtcListViewWrapper;->sMethod_fillEmptySpace:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     const/4 v1, 0x1
@@ -135,7 +119,6 @@
 
     invoke-virtual {v0, p0, v1}, Lcom/android/settings/framework/reflect/HtcMethodReference;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     :cond_0
     return-void
 .end method

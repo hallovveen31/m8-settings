@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WpsDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 149
     iput-object p1, p0, Lcom/android/settings/wifi/WpsDialog$2;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$2;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WpsDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 153
     return-void
 .end method

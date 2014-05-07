@@ -32,10 +32,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 478
     iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -45,11 +42,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment;Lcom/android/settings/users/AppRestrictionsFragment$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 478
     invoke-direct {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;-><init>(Lcom/android/settings/users/AppRestrictionsFragment;)V
 
     return-void
@@ -59,13 +52,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 478
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
@@ -75,16 +64,12 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 1
-    .parameter "params"
 
-    .prologue
-    .line 482
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #calls: Lcom/android/settings/users/AppRestrictionsFragment;->fetchAndMergeApps()V
     invoke-static {v0}, Lcom/android/settings/users/AppRestrictionsFragment;->access$400(Lcom/android/settings/users/AppRestrictionsFragment;)V
 
-    .line 483
     const/4 v0, 0x0
 
     return-object v0
@@ -92,13 +77,9 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 478
     check-cast p1, Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
@@ -106,23 +87,17 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 1
-    .parameter "result"
 
-    .prologue
-    .line 488
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$AppLoadingTask;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #calls: Lcom/android/settings/users/AppRestrictionsFragment;->populateApps()V
     invoke-static {v0}, Lcom/android/settings/users/AppRestrictionsFragment;->access$500(Lcom/android/settings/users/AppRestrictionsFragment;)V
 
-    .line 489
     return-void
 .end method
 
 .method protected onPreExecute()V
     .locals 0
 
-    .prologue
-    .line 493
     return-void
 .end method

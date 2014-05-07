@@ -40,8 +40,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 28
     const-string v0, "com.htc.sdk.service.cloudstorage.main.CloudStorageManager"
 
     invoke-static {v0}, Lcom/android/settings/framework/content/HtcClassManager;->getClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -50,32 +48,26 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sClass:Ljava/lang/Class;
 
-    .line 31
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->DROPBOX:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->DROPBOX:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
-    .line 32
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->SKYDRIVE:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->SKYDRIVE:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
-    .line 33
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->AUCLOUD:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->AUCLOUD:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
-    .line 34
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->VDISK:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->VDISK:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
-    .line 35
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->GOOGLEDRIVE:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->GOOGLEDRIVE:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
 
-    .line 47
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager$1;
@@ -86,7 +78,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sMethod_getInstance:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 62
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager$2;
@@ -97,7 +88,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sMethod_isServiceEnabled:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 82
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager$3;
@@ -114,8 +104,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,8 +112,6 @@
 .method static synthetic access$000()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sClass:Ljava/lang/Class;
 
     return-object v0
@@ -133,9 +119,6 @@
 
 .method public static getInstance(Landroid/content/Context;Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;I)Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
     .locals 6
-    .parameter "context"
-    .parameter "service"
-    .parameter "pluginVersion"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -147,10 +130,8 @@
         }
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 111
     sget-object v2, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sMethod_getInstance:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     const/4 v3, 0x3
@@ -163,7 +144,7 @@
 
     const/4 v4, 0x1
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -181,15 +162,11 @@
 
     move-result-object v0
 
-    .line 114
-    .local v0, instance:Ljava/lang/Object;
     if-nez v0, :cond_0
 
-    .line 119
     :goto_0
     return-object v1
 
-    .line 116
     :cond_0
     sget-object v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/IGoogledrive;->sClass:Ljava/lang/Class;
 
@@ -199,14 +176,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 117
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/IGoogledrive;
 
     invoke-direct {v1, v0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/IGoogledrive;-><init>(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 119
     :cond_1
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
 
@@ -217,12 +192,7 @@
 
 .method public static getServiceName(Landroid/content/Context;Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;I)Ljava/lang/String;
     .locals 5
-    .parameter "context"
-    .parameter "service"
-    .parameter "pluginVersion"
 
-    .prologue
-    .line 145
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sMethod_getServiceName:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     const/4 v1, 0x0
@@ -237,7 +207,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -262,12 +232,7 @@
 
 .method public static isServiceEnabled(Landroid/content/Context;Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;I)Z
     .locals 5
-    .parameter "context"
-    .parameter "service"
-    .parameter "pluginVersion"
 
-    .prologue
-    .line 131
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->sMethod_isServiceEnabled:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     const/4 v1, 0x0
@@ -282,7 +247,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v4
 

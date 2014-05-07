@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 538
     iput-object p1, p0, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,13 +33,9 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v5, -0x1
 
-    .line 543
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;->KEY_SELECTED_VALUE:Ljava/lang/String;
@@ -54,13 +47,10 @@
 
     move-result v0
 
-    .line 545
-    .local v0, selectedValue:I
     sget-boolean v2, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v2, :cond_0
 
-    .line 546
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -84,15 +74,12 @@
     #calls: Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;->Log(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;->access$100(Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;Ljava/lang/String;)V
 
-    .line 548
     :cond_0
     if-ne v0, v5, :cond_1
 
-    .line 557
     :goto_0
     return-void
 
-    .line 553
     :cond_1
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;
 
@@ -100,9 +87,8 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 555
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,11 +113,9 @@
 
     move-result-object v1
 
-    .line 556
-    .local v1, summary:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference$1;->this$0:Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/framework/preference/security/HtcInactivityTimeListPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method

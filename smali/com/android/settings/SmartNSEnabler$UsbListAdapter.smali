@@ -34,25 +34,15 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/SmartNSEnabler;Landroid/content/Context;I[Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "context"
-    .parameter "resourceId"
-    .parameter "objects"
 
-    .prologue
-    .line 1331
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
-    .line 1332
     invoke-direct {p0, p2, p3, p4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
 
-    .line 1333
     iput-object p4, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->listItem:[Ljava/lang/String;
 
-    .line 1334
     iput-object p2, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
-    .line 1335
     return-void
 .end method
 
@@ -60,19 +50,13 @@
 # virtual methods
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 9
-    .parameter "position"
-    .parameter "view"
-    .parameter "viewgroup"
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v7, 0x0
 
-    .line 1338
     if-nez p2, :cond_0
 
-    .line 1339
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const-string v6, "layout_inflater"
@@ -83,16 +67,12 @@
 
     check-cast v2, Landroid/view/LayoutInflater;
 
-    .line 1340
-    .local v2, mInflater:Landroid/view/LayoutInflater;
     const v5, 0x7f06004e
 
     invoke-virtual {v2, v5, p3, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p2
 
-    .line 1342
-    .end local v2           #mInflater:Landroid/view/LayoutInflater;
     :cond_0
     const v5, 0x7f090328
 
@@ -102,8 +82,6 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 1343
-    .local v1, listItemText:Lcom/htc/widget/HtcListItem2LineText;
     const v5, 0x7f09003d
 
     invoke-virtual {p2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -112,18 +90,14 @@
 
     check-cast v3, Lcom/htc/widget/HtcRadioButton;
 
-    .line 1344
-    .local v3, tb:Lcom/htc/widget/HtcRadioButton;
     if-nez v3, :cond_2
 
-    .line 1345
     const-string v5, "SmartNS_Enabler"
 
     const-string v6, "tb = null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1346
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -131,19 +105,14 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v5}, Landroid/app/Dialog;->dismiss()V
 
-    .line 1347
     const/4 p2, 0x0
 
-    .line 1384
-    .end local p2
     :cond_1
     :goto_0
     return-object p2
 
-    .line 1350
-    .restart local p2
     :cond_2
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -158,8 +127,6 @@
 
     move-result v4
 
-    .line 1351
-    .local v4, type:I
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mTypeArray:Ljava/util/ArrayList;
@@ -177,30 +144,23 @@
 
     invoke-static {v5}, Lcom/android/settings/SmartNSEnabler;->access$602(I)I
 
-    .line 1353
     invoke-static {}, Lcom/android/settings/SmartNSEnabler;->access$600()I
 
     move-result v5
 
     if-ne p1, v5, :cond_4
 
-    .line 1354
-    invoke-virtual {v3, v8}, Lcom/htc/widget/HtcRadioButton;->setChecked(Z)V
+    invoke-virtual {v3, v8}, Lcom/htc/widget/HtcCompoundButton;->setChecked(Z)V
 
-    .line 1358
     :goto_1
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->listItem:[Ljava/lang/String;
 
     aget-object v0, v5, p1
 
-    .line 1359
-    .local v0, item:Ljava/lang/String;
     invoke-virtual {v1, v0}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(Ljava/lang/String;)V
 
-    .line 1360
     invoke-virtual {v1, v7}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextSingleLine(Z)V
 
-    .line 1362
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mTypeArray:Ljava/util/ArrayList;
@@ -220,12 +180,10 @@
 
     if-nez v5, :cond_5
 
-    .line 1363
     const/16 v5, 0x8
 
     invoke-virtual {v1, v5}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 1381
     :cond_3
     :goto_2
     instance-of v5, p2, Lcom/htc/widget/HtcListItem;
@@ -244,22 +202,17 @@
 
     move-object v5, p2
 
-    .line 1382
     check-cast v5, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v5, v8}, Lcom/htc/widget/HtcListItem;->setLastComponentAlign(Z)V
 
     goto :goto_0
 
-    .line 1356
-    .end local v0           #item:Ljava/lang/String;
     :cond_4
-    invoke-virtual {v3, v7}, Lcom/htc/widget/HtcRadioButton;->setChecked(Z)V
+    invoke-virtual {v3, v7}, Lcom/htc/widget/HtcCompoundButton;->setChecked(Z)V
 
     goto :goto_1
 
-    .line 1364
-    .restart local v0       #item:Ljava/lang/String;
     :cond_5
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -280,14 +233,12 @@
 
     if-ne v5, v8, :cond_7
 
-    .line 1365
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
-    .line 1366
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c0751
@@ -300,7 +251,6 @@
 
     goto :goto_2
 
-    .line 1368
     :cond_6
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
@@ -314,7 +264,6 @@
 
     goto :goto_2
 
-    .line 1369
     :cond_7
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -337,7 +286,6 @@
 
     if-ne v5, v6, :cond_8
 
-    .line 1370
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c0511
@@ -350,7 +298,6 @@
 
     goto :goto_2
 
-    .line 1371
     :cond_8
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -373,7 +320,6 @@
 
     if-ne v5, v6, :cond_9
 
-    .line 1372
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c074e
@@ -386,7 +332,6 @@
 
     goto/16 :goto_2
 
-    .line 1373
     :cond_9
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -409,7 +354,6 @@
 
     if-ne v5, v6, :cond_a
 
-    .line 1374
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c0530
@@ -422,7 +366,6 @@
 
     goto/16 :goto_2
 
-    .line 1375
     :cond_a
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -445,7 +388,6 @@
 
     if-ne v5, v6, :cond_b
 
-    .line 1376
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c0536
@@ -458,7 +400,6 @@
 
     goto/16 :goto_2
 
-    .line 1378
     :cond_b
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -481,7 +422,6 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 1379
     iget-object v5, p0, Lcom/android/settings/SmartNSEnabler$UsbListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0c0551

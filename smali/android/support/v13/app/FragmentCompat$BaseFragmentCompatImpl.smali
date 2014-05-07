@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,20 +30,12 @@
 # virtual methods
 .method public setMenuVisibility(Landroid/app/Fragment;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "visible"
 
-    .prologue
-    .line 33
     return-void
 .end method
 
 .method public setUserVisibleHint(Landroid/app/Fragment;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "deferStart"
 
-    .prologue
-    .line 35
     return-void
 .end method

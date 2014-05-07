@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,13 +14,8 @@
 
 .method public static setUserVisibleHint(Landroid/app/Fragment;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "isVisible"
 
-    .prologue
-    .line 23
     invoke-virtual {p0, p1}, Landroid/app/Fragment;->setUserVisibleHint(Z)V
 
-    .line 24
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1139
     iput-object p1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,9 @@
 # virtual methods
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
-    .parameter "parent"
-    .parameter "v"
-    .parameter "pos"
-    .parameter "id"
 
-    .prologue
     const/16 v3, 0xc8
 
-    .line 1141
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->mHandler:Landroid/os/Handler;
@@ -61,15 +52,12 @@
 
     move-result-object v0
 
-    .line 1142
-    .local v0, msg:Landroid/os/Message;
     invoke-static {}, Lcom/android/settings/RadioInfo;->access$1500()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 1144
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->mHtcDTUPreferredNetworkLabels:[Ljava/lang/String;
@@ -83,7 +71,6 @@
 
     if-ne p3, v1, :cond_1
 
-    .line 1145
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -93,12 +80,10 @@
 
     invoke-interface {v1, v3, v0}, Lcom/android/internal/telephony/Phone;->setPreferredNetworkType(ILandroid/os/Message;)V
 
-    .line 1168
     :cond_0
     :goto_0
     return-void
 
-    .line 1147
     :cond_1
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
@@ -113,7 +98,6 @@
 
     if-ne p3, v1, :cond_2
 
-    .line 1148
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -127,7 +111,6 @@
 
     goto :goto_0
 
-    .line 1149
     :cond_2
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
@@ -142,7 +125,6 @@
 
     if-ne p3, v1, :cond_3
 
-    .line 1150
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -156,7 +138,6 @@
 
     goto :goto_0
 
-    .line 1152
     :cond_3
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
@@ -169,7 +150,6 @@
 
     goto :goto_0
 
-    .line 1157
     :cond_4
     if-ltz p3, :cond_0
 
@@ -184,7 +164,6 @@
 
     if-gt p3, v1, :cond_0
 
-    .line 1160
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->mHtcPreferredNetworkLabels:[Ljava/lang/String;
@@ -198,7 +177,6 @@
 
     if-ne p3, v1, :cond_5
 
-    .line 1161
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -210,7 +188,6 @@
 
     goto :goto_0
 
-    .line 1163
     :cond_5
     iget-object v1, p0, Lcom/android/settings/RadioInfo$22;->this$0:Lcom/android/settings/RadioInfo;
 
@@ -226,9 +203,6 @@
 
 .method public onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
-    .parameter "parent"
 
-    .prologue
-    .line 1171
     return-void
 .end method

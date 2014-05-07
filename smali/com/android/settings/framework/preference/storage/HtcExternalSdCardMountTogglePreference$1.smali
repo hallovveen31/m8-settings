@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 112
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference$1;->this$0:Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference$1;->this$0:Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;
 
     #calls: Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;->updateSummaryInForeground()V
     invoke-static {v0}, Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;->access$000(Lcom/android/settings/framework/preference/storage/HtcExternalSdCardMountTogglePreference;)V
 
-    .line 117
     return-void
 .end method

@@ -32,14 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary$LimitEditorFragment;Landroid/widget/NumberPicker;Lcom/android/settings/net/NetworkPolicyEditor;Landroid/net/NetworkTemplate;Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 1873
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$LimitEditorFragment;
 
     iput-object p2, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$bytesPicker:Landroid/widget/NumberPicker;
@@ -59,16 +52,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 6
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1877
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$bytesPicker:Landroid/widget/NumberPicker;
 
-    invoke-virtual {v2}, Landroid/widget/NumberPicker;->clearFocus()V
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->clearFocus()V
 
-    .line 1879
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$bytesPicker:Landroid/widget/NumberPicker;
 
     invoke-virtual {v2}, Landroid/widget/NumberPicker;->getValue()I
@@ -81,15 +69,12 @@
 
     mul-long v0, v2, v4
 
-    .line 1880
-    .local v0, bytes:J
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$editor:Lcom/android/settings/net/NetworkPolicyEditor;
 
     iget-object v3, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$template:Landroid/net/NetworkTemplate;
 
     invoke-virtual {v2, v3, v0, v1}, Lcom/android/settings/net/NetworkPolicyEditor;->setPolicyLimitBytes(Landroid/net/NetworkTemplate;J)V
 
-    .line 1881
     iget-object v2, p0, Lcom/android/settings/DataUsageSummary$LimitEditorFragment$1;->val$target:Lcom/android/settings/DataUsageSummary;
 
     const/4 v3, 0x0
@@ -97,6 +82,5 @@
     #calls: Lcom/android/settings/DataUsageSummary;->updatePolicy(Z)V
     invoke-static {v2, v3}, Lcom/android/settings/DataUsageSummary;->access$600(Lcom/android/settings/DataUsageSummary;Z)V
 
-    .line 1882
     return-void
 .end method

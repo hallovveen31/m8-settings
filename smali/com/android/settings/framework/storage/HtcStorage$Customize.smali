@@ -18,8 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/android/settings/framework/storage/HtcCustomizedStorage;-><init>()V
 
     return-void

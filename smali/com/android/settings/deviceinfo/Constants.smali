@@ -55,7 +55,6 @@
 .method static constructor <clinit>()V
     .locals 15
 
-    .prologue
     const/4 v14, 0x5
 
     const/4 v13, 0x3
@@ -66,21 +65,18 @@
 
     const/4 v11, 0x0
 
-    .line 46
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v4, Lcom/android/settings/deviceinfo/Constants;->ExclusionTargetsForMiscFiles:Ljava/util/List;
 
-    .line 49
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/io/File;
@@ -103,7 +99,6 @@
 
     sput-object v4, Lcom/android/settings/deviceinfo/Constants;->EXTERNAL_STORAGE_ANDROID_DATA_DIRECTORY:Ljava/io/File;
 
-    .line 58
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;
@@ -128,7 +123,6 @@
 
     invoke-virtual {v4, v11, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 62
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;
@@ -155,7 +149,6 @@
 
     invoke-virtual {v4, v12, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 67
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;
@@ -206,7 +199,6 @@
 
     invoke-virtual {v4, v10, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 76
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;
@@ -283,7 +275,6 @@
 
     invoke-virtual {v4, v13, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 89
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     const/4 v5, 0x4
@@ -308,7 +299,6 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 93
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     new-instance v5, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;
@@ -327,14 +317,11 @@
 
     invoke-virtual {v4, v14, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 99
     const/4 v1, 0x0
 
-    .local v1, j:I
     :goto_0
     if-ge v1, v14, :cond_1
 
-    .line 100
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->mMediaDirs:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -345,35 +332,25 @@
 
     iget-object v0, v4, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;->mDirPaths:[Ljava/lang/String;
 
-    .line 101
-    .local v0, dirs:[Ljava/lang/String;
     array-length v3, v0
 
-    .line 102
-    .local v3, len:I
     if-lez v3, :cond_0
 
-    .line 103
     const/4 v2, 0x0
 
-    .local v2, k:I
     :goto_1
     if-ge v2, v3, :cond_0
 
-    .line 104
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->ExclusionTargetsForMiscFiles:Ljava/util/List;
 
     aget-object v5, v0, v2
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 103
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 108
-    .end local v2           #k:I
     :cond_0
     sget-object v4, Lcom/android/settings/deviceinfo/Constants;->ExclusionTargetsForMiscFiles:Ljava/util/List;
 
@@ -405,14 +382,10 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 111
-    .end local v0           #dirs:[Ljava/lang/String;
-    .end local v3           #len:I
     :cond_1
     return-void
 .end method
@@ -420,27 +393,18 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     return-void
 .end method
 
 .method static getDirectory(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 2
-    .parameter "variableName"
-    .parameter "defaultPath"
 
-    .prologue
-    .line 53
     invoke-static {p0}, Ljava/lang/System;->getenv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 54
-    .local v0, path:Ljava/lang/String;
     if-nez v0, :cond_0
 
     new-instance v1, Ljava/io/File;

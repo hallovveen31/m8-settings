@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 615
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onEvent(Lcom/htc/fingerprintapi/HtcFingerprint$FingerprintEvent;)V
     .locals 3
-    .parameter "event"
 
-    .prologue
-    .line 618
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$000()Z
 
     move-result v0
@@ -75,18 +69,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 619
     :cond_0
     iget v0, p1, Lcom/htc/fingerprintapi/HtcFingerprint$FingerprintEvent;->eventID:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 626
     :cond_1
     :goto_0
     return-void
 
-    .line 621
     :pswitch_0
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$000()Z
 
@@ -104,7 +95,6 @@
 
     goto :goto_0
 
-    .line 619
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_0

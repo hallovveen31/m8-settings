@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 109
     iput-object p1, p0, Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference$2;->this$0:Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,19 +36,13 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 111
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.CHARM_SET"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 112
-    .local v0, intent:Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
     const-string v2, "com.htc.sense.mms"
@@ -62,22 +53,19 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 115
     const-string v1, "notification_settings"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 116
     iget-object v1, p0, Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference$2;->this$0:Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/charm/HtcCharmMessagePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 117
     return-void
 .end method

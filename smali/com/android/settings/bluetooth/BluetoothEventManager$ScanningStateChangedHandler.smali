@@ -26,19 +26,13 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothEventManager;Z)V
     .locals 0
-    .parameter
-    .parameter "started"
 
-    .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
     iput-boolean p2, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->mStarted:Z
 
-    .line 244
     return-void
 .end method
 
@@ -46,12 +40,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
-    .parameter "device"
 
-    .prologue
-    .line 247
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothEventManager;->mCallbacks:Ljava/util/Collection;
@@ -61,7 +50,6 @@
 
     monitor-enter v3
 
-    .line 248
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
@@ -74,7 +62,6 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -88,17 +75,12 @@
 
     check-cast v0, Lcom/android/settings/bluetooth/BluetoothCallback;
 
-    .line 249
-    .local v0, callback:Lcom/android/settings/bluetooth/BluetoothCallback;
     iget-boolean v2, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->mStarted:Z
 
     invoke-interface {v0, v2}, Lcom/android/settings/bluetooth/BluetoothCallback;->onScanningStateChanged(Z)V
 
     goto :goto_0
 
-    .line 251
-    .end local v0           #callback:Lcom/android/settings/bluetooth/BluetoothCallback;
-    .end local v1           #i$:Ljava/util/Iterator;
     :catchall_0
     move-exception v2
 
@@ -108,14 +90,12 @@
 
     throw v2
 
-    .restart local v1       #i$:Ljava/util/Iterator;
     :cond_0
     :try_start_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 252
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$ScanningStateChangedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothEventManager;->mDeviceManager:Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;
@@ -127,6 +107,5 @@
 
     invoke-virtual {v2, v3}, Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;->onScanningStateChanged(Z)V
 
-    .line 253
     return-void
 .end method

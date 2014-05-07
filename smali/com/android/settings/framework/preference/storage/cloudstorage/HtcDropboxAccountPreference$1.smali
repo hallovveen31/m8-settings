@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +37,9 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 96
     iget-object v1, p0, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -52,11 +47,8 @@
 
     move-result-object v0
 
-    .line 99
-    .local v0, accountInfo:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/HtcCloudStorageAccount;
     if-nez v0, :cond_0
 
-    .line 100
     invoke-static {}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -65,11 +57,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     :goto_0
     return-void
 
-    .line 103
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;
 
@@ -80,14 +70,12 @@
     #setter for: Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->mSummary:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->access$102(Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 105
     invoke-static {}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->access$200()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 106
     invoke-static {}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -119,11 +107,10 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_1
     iget-object v1, p0, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;
 
-    #calls: Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->syncStateFromDataSourceInBackground()V
+    #calls: Lcom/android/settings/framework/preference/HtcAbsStatusPreference;->syncStateFromDataSourceInBackground()V
     invoke-static {v1}, Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;->access$300(Lcom/android/settings/framework/preference/storage/cloudstorage/HtcDropboxAccountPreference;)V
 
     goto :goto_0

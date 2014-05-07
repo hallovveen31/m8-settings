@@ -14,12 +14,9 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
-    .line 50
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothVisibilityTimeoutFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -33,7 +30,6 @@
 
     iput-object v0, p0, Lcom/android/settings/bluetooth/BluetoothVisibilityTimeoutFragment;->mDiscoverableEnabler:Lcom/android/settings/bluetooth/BluetoothDiscoverableEnabler;
 
-    .line 52
     return-void
 .end method
 
@@ -41,31 +37,22 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothVisibilityTimeoutFragment;->mDiscoverableEnabler:Lcom/android/settings/bluetooth/BluetoothDiscoverableEnabler;
 
     invoke-virtual {v0, p2}, Lcom/android/settings/bluetooth/BluetoothDiscoverableEnabler;->setDiscoverableTimeout(I)V
 
-    .line 65
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothVisibilityTimeoutFragment;->dismiss()V
+    invoke-virtual {p0}, Landroid/app/DialogFragment;->dismiss()V
 
-    .line 66
     return-void
 .end method
 
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 3
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 56
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/bluetooth/BluetoothVisibilityTimeoutFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 

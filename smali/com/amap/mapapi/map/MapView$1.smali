@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/map/MapView;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 615
     iput-object p1, p0, Lcom/amap/mapapi/map/MapView$1;->a:Lcom/amap/mapapi/map/MapView;
 
     invoke-direct {p0}, Lcom/amap/mapapi/map/bb;-><init>()V
@@ -36,12 +33,7 @@
 # virtual methods
 .method public a(III)Ljava/lang/String;
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

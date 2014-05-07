@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 154
     invoke-static {}, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;->values()[Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;->BACKUP:Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;->RESTORE:Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$BackupState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

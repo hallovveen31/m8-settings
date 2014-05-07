@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 162
     iput-object p1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$2;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 165
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$2;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;
 
     const/16 v1, 0x37
@@ -54,12 +48,11 @@
 
     if-nez v0, :cond_0
 
-    .line 168
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$2;->this$0:Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -91,9 +84,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 186
     :cond_0
     return-void
 .end method

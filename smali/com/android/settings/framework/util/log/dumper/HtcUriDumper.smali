@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,8 +54,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Lcom/android/settings/framework/util/log/dumper/HtcAbsDumper;-><init>()V
 
     return-void
@@ -67,12 +63,7 @@
 # virtual methods
 .method public appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/net/Uri;)V
     .locals 3
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "uri"
 
-    .prologue
-    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -827,21 +818,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 58
     return-void
 .end method
 
 .method public bridge synthetic appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 16
     check-cast p3, Landroid/net/Uri;
 
-    .end local p3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcUriDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/net/Uri;)V
 
     return-void
@@ -850,8 +834,6 @@
 .method public getClassName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 28
     const-class v0, Landroid/net/Uri;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -864,8 +846,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 23
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcUriDumper;->TAG:Ljava/lang/String;
 
     return-object v0

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TtsEngineSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$1;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,26 +36,20 @@
 # virtual methods
 .method public onInit(I)V
     .locals 2
-    .parameter "status"
 
-    .prologue
-    .line 72
     if-eqz p1, :cond_0
 
-    .line 73
     iget-object v0, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$1;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/tts/TtsEngineSettingsFragment;->finishFragment()V
+    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->finishFragment()V
 
-    .line 82
     :goto_0
     return-void
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$1;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/tts/TtsEngineSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 

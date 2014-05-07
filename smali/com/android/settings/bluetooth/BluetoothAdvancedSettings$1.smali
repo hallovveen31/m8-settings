@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 44
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 46
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 47
-    .local v0, action:Ljava/lang/String;
     const-string v2, "com.htc.android.bluetooth.HtcBluetoothFtp.action.SERVICE_STATE_CHANGED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 48
     const-string v2, "com.htc.android.bluetooth.HtcBluetoothFtp.extra.SERVICE_STATE"
 
     const/4 v3, -0x1
@@ -64,8 +54,6 @@
 
     move-result v1
 
-    .line 49
-    .local v1, state:I
     invoke-static {}, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;->access$000()Z
 
     move-result v2
@@ -94,7 +82,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     :cond_0
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
@@ -105,18 +92,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 51
     packed-switch v1, :pswitch_data_0
 
-    .line 69
-    .end local v1           #state:I
     :cond_1
     :goto_0
     :pswitch_0
     return-void
 
-    .line 53
-    .restart local v1       #state:I
     :pswitch_1
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
@@ -131,7 +113,6 @@
 
     goto :goto_0
 
-    .line 56
     :pswitch_2
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
@@ -146,8 +127,6 @@
 
     goto :goto_0
 
-    .line 60
-    .end local v1           #state:I
     :cond_2
     const-string v2, "android.intent.action.MEDIA_EJECT"
 
@@ -189,7 +168,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 65
     :cond_3
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
@@ -200,7 +178,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 66
     iget-object v2, p0, Lcom/android/settings/bluetooth/BluetoothAdvancedSettings$1;->this$0:Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothAdvancedSettings;->mHtcBluetoothFtpCheckBox:Lcom/htc/preference/HtcCheckBoxPreference;
@@ -215,11 +192,10 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcCheckBoxPreference;->setEnabled(Z)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
     goto :goto_0
 
-    .line 51
     nop
 
     :pswitch_data_0

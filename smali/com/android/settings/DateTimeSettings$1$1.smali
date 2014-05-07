@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DateTimeSettings$1;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 638
     iput-object p1, p0, Lcom/android/settings/DateTimeSettings$1$1;->this$1:Lcom/android/settings/DateTimeSettings$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,21 +37,16 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 641
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$1$1;->this$1:Lcom/android/settings/DateTimeSettings$1;
 
     iget-object v2, v2, Lcom/android/settings/DateTimeSettings$1;->this$0:Lcom/android/settings/DateTimeSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/DateTimeSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 643
-    .local v0, activity:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 644
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$1$1;->this$1:Lcom/android/settings/DateTimeSettings$1;
 
@@ -64,17 +56,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 648
     :cond_0
     :goto_0
     return-void
 
-    .line 645
     :catch_0
     move-exception v1
 
-    .line 646
-    .local v1, e:Ljava/lang/Exception;
     const-string v2, "DateTimeSettings"
 
     const-string v3, "updateTimeAndDateDisplay fail"

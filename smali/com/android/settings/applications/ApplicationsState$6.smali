@@ -25,11 +25,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 249
     new-instance v0, Lcom/android/settings/applications/CanBeOnSdCardChecker;
 
     invoke-direct {v0}, Lcom/android/settings/applications/CanBeOnSdCardChecker;-><init>()V
@@ -43,10 +40,7 @@
 # virtual methods
 .method public filterApp(Landroid/content/pm/ApplicationInfo;)Z
     .locals 1
-    .parameter "info"
 
-    .prologue
-    .line 258
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$6;->mCanBeOnSdCardChecker:Lcom/android/settings/applications/CanBeOnSdCardChecker;
 
     invoke-virtual {v0, p1}, Lcom/android/settings/applications/CanBeOnSdCardChecker;->check(Landroid/content/pm/ApplicationInfo;)Z
@@ -59,12 +53,9 @@
 .method public init()V
     .locals 1
 
-    .prologue
-    .line 253
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$6;->mCanBeOnSdCardChecker:Lcom/android/settings/applications/CanBeOnSdCardChecker;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/CanBeOnSdCardChecker;->init()V
 
-    .line 254
     return-void
 .end method

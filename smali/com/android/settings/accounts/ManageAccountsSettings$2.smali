@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/ManageAccountsSettings;Lcom/android/settings/AccountPreference;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 394
     iput-object p1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$2;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     iput-object p2, p0, Lcom/android/settings/accounts/ManageAccountsSettings$2;->val$accountPref:Lcom/android/settings/AccountPreference;
@@ -50,14 +45,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 396
     iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$2;->val$accountPref:Lcom/android/settings/AccountPreference;
 
     iget-object v1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$2;->val$updateTime:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/AccountPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 397
     return-void
 .end method

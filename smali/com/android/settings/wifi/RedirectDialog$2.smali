@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$2;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,16 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$2;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     #calls: Lcom/android/settings/wifi/RedirectDialog;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, p1, p2}, Lcom/android/settings/wifi/RedirectDialog;->access$000(Lcom/android/settings/wifi/RedirectDialog;Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 128
     return-void
 .end method

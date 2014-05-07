@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/widget/EditText;Landroid/hardware/display/WifiDisplay;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 578
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     iput-object p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->val$nameEditText:Landroid/widget/EditText;
@@ -49,11 +44,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 581
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->val$nameEditText:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -68,8 +59,6 @@
 
     move-result-object v0
 
-    .line 582
-    .local v0, name:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -88,11 +77,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 583
     :cond_0
     const/4 v0, 0x0
 
-    .line 585
     :cond_1
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$11;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
@@ -109,6 +96,5 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/hardware/display/DisplayManager;->renameWifiDisplay(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 586
     return-void
 .end method

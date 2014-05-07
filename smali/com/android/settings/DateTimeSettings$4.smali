@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DateTimeSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 772
     iput-object p1, p0, Lcom/android/settings/DateTimeSettings$4;->this$0:Lcom/android/settings/DateTimeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 775
     invoke-static {}, Lcom/android/settings/DateTimeSettings;->access$200()Z
 
     move-result v2
@@ -56,14 +49,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 776
     :cond_0
     invoke-static {}, Lcom/android/settings/DateTimeFormatFromSIE;->getSIEDefaultTimeFormatSetting()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 777
-    .local v1, sieDefaultTimeFormat:Ljava/lang/String;
     invoke-static {}, Lcom/android/settings/DateTimeSettings;->access$200()Z
 
     move-result v2
@@ -92,7 +82,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     :cond_1
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -100,7 +89,6 @@
 
     if-nez v2, :cond_2
 
-    .line 779
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$4;->this$0:Lcom/android/settings/DateTimeSettings;
 
     #getter for: Lcom/android/settings/DateTimeSettings;->mDateFormat:Lcom/android/settings/widget/HtcListPreferenceDateFormat;
@@ -108,9 +96,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/widget/HtcListPreferenceDateFormat;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 785
     :goto_0
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$4;->this$0:Lcom/android/settings/DateTimeSettings;
 
@@ -121,14 +108,12 @@
 
     invoke-virtual {v2}, Lcom/android/settings/widget/HtcListPreferenceDateFormat;->showParentDialog()V
 
-    .line 786
     return-void
 
-    .line 781
     :cond_2
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$4;->this$0:Lcom/android/settings/DateTimeSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/DateTimeSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -138,8 +123,6 @@
 
     move-result-object v0
 
-    .line 782
-    .local v0, defaultTimeFormat:Ljava/lang/String;
     invoke-static {}, Lcom/android/settings/DateTimeSettings;->access$200()Z
 
     move-result v2
@@ -168,7 +151,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     :cond_3
     iget-object v2, p0, Lcom/android/settings/DateTimeSettings$4;->this$0:Lcom/android/settings/DateTimeSettings;
 
@@ -177,7 +159,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/widget/HtcListPreferenceDateFormat;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Lcom/htc/preference/HtcListPreference;->setValue(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

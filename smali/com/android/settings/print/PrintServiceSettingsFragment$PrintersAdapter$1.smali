@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 668
     iput-object p1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
@@ -36,10 +33,7 @@
 # virtual methods
 .method protected performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
     .locals 8
-    .parameter "constraint"
 
-    .prologue
-    .line 671
     iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
@@ -49,7 +43,6 @@
 
     monitor-enter v7
 
-    .line 672
     :try_start_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -57,29 +50,22 @@
 
     if-eqz v6, :cond_0
 
-    .line 673
     const/4 v5, 0x0
 
     monitor-exit v7
 
-    .line 687
     :goto_0
     return-object v5
 
-    .line 675
     :cond_0
     new-instance v5, Landroid/widget/Filter$FilterResults;
 
     invoke-direct {v5}, Landroid/widget/Filter$FilterResults;-><init>()V
 
-    .line 676
-    .local v5, results:Landroid/widget/Filter$FilterResults;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 677
-    .local v1, filteredPrinters:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v6
@@ -88,8 +74,6 @@
 
     move-result-object v0
 
-    .line 678
-    .local v0, constraintLowerCase:Ljava/lang/String;
     iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
@@ -101,15 +85,11 @@
 
     move-result v4
 
-    .line 679
-    .local v4, printerCount:I
     const/4 v2, 0x0
 
-    .local v2, i:I
     :goto_1
     if-ge v2, v4, :cond_2
 
-    .line 680
     iget-object v6, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mPrinters:Ljava/util/List;
@@ -123,8 +103,6 @@
 
     check-cast v3, Landroid/print/PrinterInfo;
 
-    .line 681
-    .local v3, printer:Landroid/print/PrinterInfo;
     invoke-virtual {v3}, Landroid/print/PrinterInfo;->getName()Ljava/lang/String;
 
     move-result-object v6
@@ -139,38 +117,26 @@
 
     if-eqz v6, :cond_1
 
-    .line 682
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 679
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 685
-    .end local v3           #printer:Landroid/print/PrinterInfo;
     :cond_2
     iput-object v1, v5, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
-    .line 686
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v6
 
     iput v6, v5, Landroid/widget/Filter$FilterResults;->count:I
 
-    .line 687
     monitor-exit v7
 
     goto :goto_0
 
-    .line 688
-    .end local v0           #constraintLowerCase:Ljava/lang/String;
-    .end local v1           #filteredPrinters:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
-    .end local v2           #i:I
-    .end local v4           #printerCount:I
-    .end local v5           #results:Landroid/widget/Filter$FilterResults;
     :catchall_0
     move-exception v6
 
@@ -183,11 +149,7 @@
 
 .method protected publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
     .locals 6
-    .parameter "constraint"
-    .parameter "results"
 
-    .prologue
-    .line 695
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLock:Ljava/lang/Object;
@@ -197,7 +159,6 @@
 
     monitor-enter v4
 
-    .line 696
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
@@ -210,14 +171,11 @@
 
     move-result v0
 
-    .line 697
-    .local v0, oldPrinterCount:I
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #setter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mLastSearchString:Ljava/lang/CharSequence;
     invoke-static {v3, p1}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->access$1302(Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 698
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
@@ -227,10 +185,8 @@
 
     invoke-interface {v3}, Ljava/util/List;->clear()V
 
-    .line 699
     if-nez p2, :cond_1
 
-    .line 700
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
@@ -247,7 +203,6 @@
 
     invoke-interface {v3, v5}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 705
     :goto_0
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
@@ -264,17 +219,13 @@
 
     const/4 v2, 0x1
 
-    .line 706
-    .local v2, resultCountChanged:Z
     :goto_1
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 707
     if-eqz v2, :cond_0
 
-    .line 708
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     iget-object v3, v3, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
@@ -282,25 +233,19 @@
     #calls: Lcom/android/settings/print/PrintServiceSettingsFragment;->announceSearchResult()V
     invoke-static {v3}, Lcom/android/settings/print/PrintServiceSettingsFragment;->access$1400(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
 
-    .line 710
     :cond_0
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
-    invoke-virtual {v3}, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v3}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 711
     return-void
 
-    .line 702
-    .end local v2           #resultCountChanged:Z
     :cond_1
     :try_start_1
     iget-object v1, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/List;
 
-    .line 703
-    .local v1, printers:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
     iget-object v3, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter$1;->this$1:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;->mFilteredPrinters:Ljava/util/List;
@@ -312,9 +257,6 @@
 
     goto :goto_0
 
-    .line 706
-    .end local v0           #oldPrinterCount:I
-    .end local v1           #printers:Ljava/util/List;,"Ljava/util/List<Landroid/print/PrinterInfo;>;"
     :catchall_0
     move-exception v3
 
@@ -324,8 +266,6 @@
 
     throw v3
 
-    .line 705
-    .restart local v0       #oldPrinterCount:I
     :cond_2
     const/4 v2, 0x0
 

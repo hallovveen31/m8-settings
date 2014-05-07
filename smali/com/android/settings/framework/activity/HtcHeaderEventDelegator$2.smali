@@ -30,13 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/htc/widget/HtcCheckBox;Lcom/htc/preference/HtcPreferenceActivity;Lcom/android/settings/framework/activity/HtcWrapHeader;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$activity:Lcom/htc/preference/HtcPreferenceActivity;
@@ -54,16 +48,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 145
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 146
     invoke-static {}, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +69,7 @@
 
     iget-object v2, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v2}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v2
 
@@ -94,20 +83,18 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 149
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$activity:Lcom/htc/preference/HtcPreferenceActivity;
 
-    invoke-virtual {v0}, Lcom/htc/preference/HtcPreferenceActivity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -117,7 +104,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/htc/wrap/android/provider/HtcWrapSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 152
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$2;->val$activity:Lcom/htc/preference/HtcPreferenceActivity;
 
@@ -129,6 +115,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/htc/preference/HtcPreferenceActivity;->onHeaderClick(Lcom/htc/preference/HtcPreferenceActivity$Header;I)V
 
-    .line 153
     return-void
 .end method

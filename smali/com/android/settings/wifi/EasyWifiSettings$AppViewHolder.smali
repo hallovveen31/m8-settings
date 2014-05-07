@@ -28,8 +28,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 305
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,10 +37,6 @@
 # virtual methods
 .method updateSizeText(Lcom/android/settings/wifi/EasyWifiSettings;I)V
     .locals 0
-    .parameter "ma"
-    .parameter "whichSize"
 
-    .prologue
-    .line 312
     return-void
 .end method

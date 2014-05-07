@@ -22,8 +22,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 342
     invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
     return-void
@@ -31,21 +29,15 @@
 
 .method public static newInstance(Landroid/app/Fragment;)Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;
     .locals 2
-    .parameter "targetFragment"
 
-    .prologue
-    .line 346
     new-instance v0, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;
 
     invoke-direct {v0}, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;-><init>()V
 
-    .line 347
-    .local v0, warningFragment:Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+    invoke-virtual {v0, p0, v1}, Landroid/app/Fragment;->setTargetFragment(Landroid/app/Fragment;I)V
 
-    .line 348
     return-object v0
 .end method
 
@@ -53,25 +45,19 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 3
-    .parameter "dialog"
 
-    .prologue
-    .line 391
     const-string v1, "AdvanceNfcSettings"
 
     const-string v2, "Cancel turn on NFC"
 
     invoke-static {v1, v2}, Lcom/android/settings/nfc/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
-    invoke-virtual {p0}, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/settings/nfc/AdvanceNfcSettings;
 
-    .line 393
-    .local v0, targetFragment:Lcom/android/settings/nfc/AdvanceNfcSettings;
     if-eqz v0, :cond_0
 
     #getter for: Lcom/android/settings/nfc/AdvanceNfcSettings;->mEnableNfcToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
@@ -81,14 +67,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 394
     const-string v1, "AdvanceNfcSettings"
 
     const-string v2, "Update toggle button."
 
     invoke-static {v1, v2}, Lcom/android/settings/nfc/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 395
     #getter for: Lcom/android/settings/nfc/AdvanceNfcSettings;->mEnableNfcToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
     invoke-static {v0}, Lcom/android/settings/nfc/AdvanceNfcSettings;->access$100(Lcom/android/settings/nfc/AdvanceNfcSettings;)Lcom/android/settings/framework/widget/HtcToggleButton;
 
@@ -96,32 +80,26 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/framework/widget/HtcToggleButton;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 397
     :cond_0
     invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCancel(Landroid/content/DialogInterface;)V
 
-    .line 398
     return-void
 .end method
 
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
     .locals 4
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 353
     const-string v1, "AdvanceNfcSettings"
 
     const-string v2, "onCreateDialog"
 
     invoke-static {v1, v2}, Lcom/android/settings/nfc/LogUtil;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 354
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -163,13 +141,11 @@
 
     move-result-object v0
 
-    .line 385
-    .local v0, dialog:Lcom/htc/widget/HtcAlertDialog;
-    invoke-virtual {p0}, Lcom/android/settings/nfc/AdvanceNfcSettings$TurnOnNfcWarningFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -181,6 +157,5 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 386
     return-object v0
 .end method

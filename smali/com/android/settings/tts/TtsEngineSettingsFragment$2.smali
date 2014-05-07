@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TtsEngineSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$2;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 89
     const-string v0, "android.speech.tts.engine.TTS_DATA_INSTALLED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,13 +46,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 90
     iget-object v0, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$2;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
     #calls: Lcom/android/settings/tts/TtsEngineSettingsFragment;->checkTtsData()V
     invoke-static {v0}, Lcom/android/settings/tts/TtsEngineSettingsFragment;->access$100(Lcom/android/settings/tts/TtsEngineSettingsFragment;)V
 
-    .line 92
     :cond_0
     return-void
 .end method

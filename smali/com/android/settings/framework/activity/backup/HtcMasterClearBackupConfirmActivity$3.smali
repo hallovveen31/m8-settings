@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 103
     iput-object p1, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity$3;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,28 +36,22 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 1
-    .parameter "dialog"
 
-    .prologue
-    .line 107
     invoke-static {}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 108
     const-string v0, "[Backup][Confirm][Cancel] triggered by pressing the back key"
 
     #calls: Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;->access$100(Ljava/lang/String;)V
 
-    .line 111
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity$3;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupConfirmActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 112
     return-void
 .end method

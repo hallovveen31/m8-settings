@@ -41,7 +41,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -52,7 +51,6 @@
 
     const/4 v2, 0x0
 
-    .line 64
     new-instance v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     const-string v1, "DEFAULT"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DEFAULT:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 67
     new-instance v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     const-string v1, "DISABLE_BUTTON_ENABLED"
@@ -70,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 70
     new-instance v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     const-string v1, "DISABLE_BUTTON_DISABLED"
@@ -79,7 +75,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 73
     new-instance v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     const-string v1, "UNINSTALL_BUTTON_ENABLED"
@@ -88,7 +83,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 76
     new-instance v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     const-string v1, "UNINSTALL_BUTTON_DISABLED"
@@ -97,7 +91,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 58
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
@@ -129,16 +122,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -146,43 +135,34 @@
 
 .method public static getConfiguredButtonState(I)Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
     .locals 1
-    .parameter "value"
 
-    .prologue
-    .line 85
     packed-switch p0, :pswitch_data_0
 
-    .line 96
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DEFAULT:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     :goto_0
     return-object v0
 
-    .line 87
     :pswitch_0
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     goto :goto_0
 
-    .line 89
     :pswitch_1
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     goto :goto_0
 
-    .line 91
     :pswitch_2
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     goto :goto_0
 
-    .line 93
     :pswitch_3
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     goto :goto_0
 
-    .line 85
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -194,10 +174,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 58
     const-class v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -212,11 +189,9 @@
 .method public static values()[Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
     .locals 1
 
-    .prologue
-    .line 58
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->$VALUES:[Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

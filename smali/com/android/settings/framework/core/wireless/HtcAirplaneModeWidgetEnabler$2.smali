@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 350
     invoke-static {}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->values()[Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_INIT:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_ON:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

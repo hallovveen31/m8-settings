@@ -32,10 +32,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/wifi/WifiStatusReceiver;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 487
     iput-object p1, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -45,11 +42,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/wifi/WifiStatusReceiver;Lcom/android/settings/wifi/WifiStatusReceiver$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 487
     invoke-direct {p0, p1}, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;-><init>(Lcom/android/settings/wifi/WifiStatusReceiver;)V
 
     return-void
@@ -59,13 +52,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 487
     check-cast p1, [Ljava/lang/String;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->doInBackground([Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -75,30 +64,21 @@
 
 .method protected varargs doInBackground([Ljava/lang/String;)Ljava/lang/String;
     .locals 14
-    .parameter "urls"
 
-    .prologue
-    .line 491
     const-string v10, "Android-Wifi/0.1"
 
     invoke-static {v10}, Landroid/net/http/AndroidHttpClient;->newInstance(Ljava/lang/String;)Landroid/net/http/AndroidHttpClient;
 
     move-result-object v0
 
-    .line 492
-    .local v0, client:Landroid/net/http/AndroidHttpClient;
     new-instance v5, Lorg/apache/http/client/methods/HttpGet;
 
     const-string v10, "http://www.verizon.com"
 
     invoke-direct {v5, v10}, Lorg/apache/http/client/methods/HttpGet;-><init>(Ljava/lang/String;)V
 
-    .line 493
-    .local v5, request:Lorg/apache/http/client/methods/HttpGet;
     const/4 v8, 0x0
 
-    .line 494
-    .local v8, trigger:Z
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
@@ -114,15 +94,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     :cond_0
     :try_start_0
     invoke-virtual {v0, v5}, Landroid/net/http/AndroidHttpClient;->execute(Lorg/apache/http/client/methods/HttpUriRequest;)Lorg/apache/http/HttpResponse;
 
     move-result-object v6
 
-    .line 497
-    .local v6, response:Lorg/apache/http/HttpResponse;
     invoke-interface {v6}, Lorg/apache/http/HttpResponse;->getStatusLine()Lorg/apache/http/StatusLine;
 
     move-result-object v10
@@ -131,12 +108,8 @@
 
     move-result v7
 
-    .line 499
-    .local v7, statusCode:I
     const/4 v4, 0x0
 
-    .line 500
-    .local v4, redirect:Ljava/lang/String;
     const/16 v10, 0x12d
 
     if-eq v7, v10, :cond_1
@@ -153,7 +126,6 @@
 
     if-ne v7, v10, :cond_2
 
-    .line 502
     :cond_1
     const-string v10, "Location"
 
@@ -161,33 +133,23 @@
 
     move-result-object v2
 
-    .line 503
-    .local v2, header:Lorg/apache/http/Header;
     invoke-interface {v2}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 506
-    .end local v2           #header:Lorg/apache/http/Header;
     :cond_2
     const/4 v3, 0x0
 
-    .line 507
-    .local v3, host:Ljava/lang/String;
     if-eqz v4, :cond_3
 
-    .line 508
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v9
 
-    .line 509
-    .local v9, uri:Landroid/net/Uri;
     invoke-virtual {v9}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 510
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
@@ -239,8 +201,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 513
-    .end local v9           #uri:Landroid/net/Uri;
     :cond_3
     if-eqz v4, :cond_5
 
@@ -262,14 +222,12 @@
 
     if-nez v10, :cond_5
 
-    .line 514
     :cond_4
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #setter for: Lcom/android/settings/wifi/WifiStatusReceiver;->mVzwRedirectURL:Ljava/lang/String;
     invoke-static {v10, v4}, Lcom/android/settings/wifi/WifiStatusReceiver;->access$402(Lcom/android/settings/wifi/WifiStatusReceiver;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 516
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->mVzwRedirectURL:Ljava/lang/String;
@@ -285,10 +243,8 @@
 
     if-eqz v10, :cond_5
 
-    .line 517
     const/4 v8, 0x1
 
-    .line 518
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->DEBUG:Z
@@ -307,11 +263,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 526
     :cond_5
     invoke-virtual {v0}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 528
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->mVzwRedirectURL:Ljava/lang/String;
@@ -323,7 +277,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 529
     new-instance v10, Lcom/android/settings/wifi/WifiStatusReceiver$VzwWISPrDataConnection;
 
     iget-object v11, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
@@ -338,25 +291,17 @@
 
     new-array v12, v12, [Ljava/lang/String;
 
-    .end local v3           #host:Ljava/lang/String;
-    .end local v4           #redirect:Ljava/lang/String;
-    .end local v6           #response:Lorg/apache/http/HttpResponse;
-    .end local v7           #statusCode:I
     :goto_0
-    invoke-virtual {v10, v11, v12}, Lcom/android/settings/wifi/WifiStatusReceiver$VzwWISPrDataConnection;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v10, v11, v12}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 532
     :cond_6
     const/4 v10, 0x0
 
     return-object v10
 
-    .line 522
     :catch_0
     move-exception v1
 
-    .line 523
-    .local v1, e:Ljava/lang/Exception;
     :try_start_1
     const-string v10, "WifiStatusReceiver"
 
@@ -370,7 +315,7 @@
 
     move-result-object v11
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v12
 
@@ -384,15 +329,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 524
-    invoke-virtual {v5}, Lorg/apache/http/client/methods/HttpGet;->abort()V
+    invoke-virtual {v5}, Lorg/apache/http/client/methods/HttpRequestBase;->abort()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 526
     invoke-virtual {v0}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 528
     iget-object v10, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->mVzwRedirectURL:Ljava/lang/String;
@@ -404,7 +346,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 529
     new-instance v10, Lcom/android/settings/wifi/WifiStatusReceiver$VzwWISPrDataConnection;
 
     iget-object v11, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
@@ -421,14 +362,11 @@
 
     goto :goto_0
 
-    .line 526
-    .end local v1           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v10
 
     invoke-virtual {v0}, Landroid/net/http/AndroidHttpClient;->close()V
 
-    .line 528
     iget-object v11, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
 
     #getter for: Lcom/android/settings/wifi/WifiStatusReceiver;->mVzwRedirectURL:Ljava/lang/String;
@@ -440,7 +378,6 @@
 
     if-eqz v8, :cond_7
 
-    .line 529
     new-instance v11, Lcom/android/settings/wifi/WifiStatusReceiver$VzwWISPrDataConnection;
 
     iget-object v12, p0, Lcom/android/settings/wifi/WifiStatusReceiver$VzwDataConnection;->this$0:Lcom/android/settings/wifi/WifiStatusReceiver;
@@ -455,9 +392,8 @@
 
     new-array v13, v13, [Ljava/lang/String;
 
-    invoke-virtual {v11, v12, v13}, Lcom/android/settings/wifi/WifiStatusReceiver$VzwWISPrDataConnection;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v11, v12, v13}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 526
     :cond_7
     throw v10
 .end method

@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp;Lcom/android/settings/framework/app/HtcIInternalHost;Landroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 302
     iput-object p1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp$1;->this$0:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp$1;->val$host:Lcom/android/settings/framework/app/HtcIInternalHost;
@@ -49,10 +44,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "arg0"
 
-    .prologue
-    .line 306
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp$1;->val$host:Lcom/android/settings/framework/app/HtcIInternalHost;
 
     iget-object v1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneHelp$1;->val$intent:Landroid/content/Intent;
@@ -61,6 +53,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/settings/framework/content/HtcSettingsContext;->startIntent(Lcom/android/settings/framework/app/HtcIInternalHost;Landroid/content/Intent;Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;)V
 
-    .line 308
     return-void
 .end method

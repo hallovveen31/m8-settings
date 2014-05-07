@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/OperatorPickerSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/android/settings/OperatorPickerSetupWizard$1;->this$0:Lcom/android/settings/OperatorPickerSetupWizard;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,19 +33,14 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter "msg"
 
-    .prologue
-    .line 65
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 70
     :goto_0
     return-void
 
-    .line 67
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/OperatorPickerSetupWizard$1;->this$0:Lcom/android/settings/OperatorPickerSetupWizard;
 
@@ -59,7 +51,6 @@
 
     goto :goto_0
 
-    .line 65
     nop
 
     :pswitch_data_0

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SettingsLicenseActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 245
     iput-object p1, p0, Lcom/android/settings/SettingsLicenseActivity$2;->this$0:Lcom/android/settings/SettingsLicenseActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 2
-    .parameter "view"
-    .parameter "url"
 
-    .prologue
-    .line 250
     const-wide/16 v0, 0xfa
 
     :try_start_0
@@ -48,17 +41,14 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 253
     :goto_0
     iget-object v0, p0, Lcom/android/settings/SettingsLicenseActivity$2;->this$0:Lcom/android/settings/SettingsLicenseActivity;
 
     #calls: Lcom/android/settings/SettingsLicenseActivity;->showWebView()V
     invoke-static {v0}, Lcom/android/settings/SettingsLicenseActivity;->access$000(Lcom/android/settings/SettingsLicenseActivity;)V
 
-    .line 254
     return-void
 
-    .line 251
     :catch_0
     move-exception v0
 

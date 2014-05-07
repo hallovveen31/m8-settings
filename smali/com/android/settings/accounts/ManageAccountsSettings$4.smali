@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/ManageAccountsSettings;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 410
     iput-object p1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$4;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     iput-boolean p2, p0, Lcom/android/settings/accounts/ManageAccountsSettings$4;->val$anySyncFailed:Z
@@ -45,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 412
     iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$4;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     #getter for: Lcom/android/settings/accounts/ManageAccountsSettings;->mErrorInfoView:Landroid/view/View;
@@ -56,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 413
     iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$4;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     #getter for: Lcom/android/settings/accounts/ManageAccountsSettings;->mErrorInfoView:Landroid/view/View;
@@ -73,11 +66,9 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 416
     :cond_0
     return-void
 
-    .line 413
     :cond_1
     const/16 v0, 0x8
 

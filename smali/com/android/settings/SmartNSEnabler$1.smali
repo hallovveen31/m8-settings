@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 208
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$1;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onPreferenceClick(Lcom/htc/preference/HtcPreference;)Z
     .locals 1
-    .parameter "preference"
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$1;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -50,9 +44,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 211
     const/4 v0, 0x0
 
     return v0

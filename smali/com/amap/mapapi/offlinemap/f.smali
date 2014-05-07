@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 11
     const-string v0, ""
 
     const-string v1, ""
@@ -29,34 +27,22 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/amap/mapapi/offlinemap/f;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 12
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Lcom/amap/mapapi/offlinemap/f;->a:Ljava/lang/String;
 
-    .line 16
     iput-object p2, p0, Lcom/amap/mapapi/offlinemap/f;->b:Ljava/lang/String;
 
-    .line 17
     iput-object p3, p0, Lcom/amap/mapapi/offlinemap/f;->c:Ljava/lang/String;
 
-    .line 18
     iput p4, p0, Lcom/amap/mapapi/offlinemap/f;->d:I
 
-    .line 19
     return-void
 .end method
 
@@ -65,8 +51,6 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/amap/mapapi/offlinemap/f;->a:Ljava/lang/String;
 
     return-object v0
@@ -75,8 +59,6 @@
 .method public b()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/amap/mapapi/offlinemap/f;->b:Ljava/lang/String;
 
     return-object v0
@@ -85,8 +67,6 @@
 .method public c()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/amap/mapapi/offlinemap/f;->c:Ljava/lang/String;
 
     return-object v0
@@ -95,8 +75,6 @@
 .method public d()I
     .locals 1
 
-    .prologue
-    .line 46
     iget v0, p0, Lcom/amap/mapapi/offlinemap/f;->d:I
 
     return v0

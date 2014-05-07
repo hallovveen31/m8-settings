@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/HtcTtsEnginePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 156
     iput-object p1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,18 +36,13 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 7
-    .parameter "v"
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 159
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 160
-    .local v2, args:Landroid/os/Bundle;
     const-string v0, "name"
 
     iget-object v1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
@@ -64,7 +56,6 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
     const-string v0, "label"
 
     iget-object v1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
@@ -78,7 +69,6 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
     iget-object v0, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
 
     #getter for: Lcom/android/settings/tts/HtcTtsEnginePreference;->mVoiceCheckData:Landroid/content/Intent;
@@ -88,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
     const-string v0, "voices"
 
     iget-object v1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
@@ -100,7 +89,6 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 170
     :cond_0
     iget-object v0, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$2;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
 
@@ -130,6 +118,5 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/preference/HtcPreferenceActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
-    .line 173
     return-void
 .end method

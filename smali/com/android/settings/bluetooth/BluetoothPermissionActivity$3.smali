@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothPermissionActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 191
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$3;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 193
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$3;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mRememberChoice:Lcom/htc/widget/HtcCheckBox;
@@ -50,8 +44,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->performClick()Z
 
-    .line 194
     return-void
 .end method

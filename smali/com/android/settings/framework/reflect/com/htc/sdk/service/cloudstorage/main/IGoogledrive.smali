@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "com.htc.sdk.service.cloudstorage.main.IGoogledrive"
 
     invoke-static {v0}, Lcom/android/settings/framework/content/HtcClassManager;->getClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -39,12 +37,8 @@
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "instance"
 
-    .prologue
-    .line 25
     invoke-direct {p0, p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;-><init>(Ljava/lang/Object;)V
 
-    .line 26
     return-void
 .end method

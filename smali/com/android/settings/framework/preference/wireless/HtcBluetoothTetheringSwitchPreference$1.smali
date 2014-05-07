@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 376
     iput-object p1, p0, Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference$1;->this$0:Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
     .locals 1
-    .parameter "profile"
-    .parameter "proxy"
 
-    .prologue
-    .line 378
     iget-object v0, p0, Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference$1;->this$0:Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;
 
     #getter for: Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
@@ -53,19 +46,14 @@
 
     check-cast p2, Landroid/bluetooth/BluetoothPan;
 
-    .end local p2
     invoke-virtual {v0, p2}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 379
     return-void
 .end method
 
 .method public onServiceDisconnected(I)V
     .locals 2
-    .parameter "profile"
 
-    .prologue
-    .line 381
     iget-object v0, p0, Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference$1;->this$0:Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;
 
     #getter for: Lcom/android/settings/framework/preference/wireless/HtcBluetoothTetheringSwitchPreference;->mBluetoothPan:Ljava/util/concurrent/atomic/AtomicReference;
@@ -77,6 +65,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 382
     return-void
 .end method

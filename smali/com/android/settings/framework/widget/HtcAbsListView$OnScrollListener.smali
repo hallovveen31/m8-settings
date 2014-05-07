@@ -21,8 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,16 +30,9 @@
 # virtual methods
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
-    .parameter "view"
-    .parameter "firstVisibleItem"
-    .parameter "visibleItemCount"
-    .parameter "totalItemCount"
 
-    .prologue
-    .line 54
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/settings/framework/widget/HtcAbsListView$OnScrollListener;->onScroll(Ljava/lang/Object;III)V
 
-    .line 56
     return-void
 .end method
 
@@ -50,14 +41,9 @@
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 0
-    .parameter "view"
-    .parameter "scrollState"
 
-    .prologue
-    .line 45
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/framework/widget/HtcAbsListView$OnScrollListener;->onScrollStateChanged(Ljava/lang/Object;I)V
 
-    .line 46
     return-void
 .end method
 

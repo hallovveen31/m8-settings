@@ -24,10 +24,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/bluetooth/BluetoothEventManager;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$DeviceDisappearedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/bluetooth/BluetoothEventManager;Lcom/android/settings/bluetooth/BluetoothEventManager$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 291
     invoke-direct {p0, p1}, Lcom/android/settings/bluetooth/BluetoothEventManager$DeviceDisappearedHandler;-><init>(Lcom/android/settings/bluetooth/BluetoothEventManager;)V
 
     return-void
@@ -51,12 +44,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
-    .parameter "device"
 
-    .prologue
-    .line 294
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$DeviceDisappearedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothEventManager;->mDeviceManager:Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;
@@ -68,11 +56,8 @@
 
     move-result-object v0
 
-    .line 295
-    .local v0, cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     if-nez v0, :cond_1
 
-    .line 296
     const-string v3, "BluetoothEventManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -95,12 +80,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     :cond_0
     :goto_0
     return-void
 
-    .line 299
     :cond_1
     invoke-static {v0}, Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;->onDeviceDisappeared(Lcom/android/settings/bluetooth/CachedBluetoothDevice;)Z
 
@@ -108,7 +91,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 300
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$DeviceDisappearedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothEventManager;->mCallbacks:Ljava/util/Collection;
@@ -118,7 +100,6 @@
 
     monitor-enter v4
 
-    .line 301
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothEventManager$DeviceDisappearedHandler;->this$0:Lcom/android/settings/bluetooth/BluetoothEventManager;
 
@@ -131,7 +112,6 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -145,15 +125,10 @@
 
     check-cast v1, Lcom/android/settings/bluetooth/BluetoothCallback;
 
-    .line 302
-    .local v1, callback:Lcom/android/settings/bluetooth/BluetoothCallback;
     invoke-interface {v1, v0}, Lcom/android/settings/bluetooth/BluetoothCallback;->onDeviceDeleted(Lcom/android/settings/bluetooth/CachedBluetoothDevice;)V
 
     goto :goto_1
 
-    .line 304
-    .end local v1           #callback:Lcom/android/settings/bluetooth/BluetoothCallback;
-    .end local v2           #i$:Ljava/util/Iterator;
     :catchall_0
     move-exception v3
 
@@ -163,7 +138,6 @@
 
     throw v3
 
-    .restart local v2       #i$:Ljava/util/Iterator;
     :cond_2
     :try_start_1
     monitor-exit v4

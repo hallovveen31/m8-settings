@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -53,7 +52,6 @@
 
     const/4 v3, 0x0
 
-    .line 21
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_ERROR"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 27
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_INIT"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_INIT:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 33
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_SYNC"
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 39
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_FAKE_OFF"
@@ -89,7 +84,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_FAKE_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 44
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_OFF"
@@ -98,7 +92,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 49
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_TURNING_ON"
@@ -109,7 +102,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 54
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_ON"
@@ -120,7 +112,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 59
     new-instance v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     const-string v1, "STATE_TURNING_OFF"
@@ -131,7 +122,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    .line 15
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
@@ -181,16 +171,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -198,43 +184,34 @@
 
 .method public static getBaseState(I)Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 70
     sparse-switch p0, :sswitch_data_0
 
-    .line 89
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     :goto_0
     return-object v0
 
-    .line 74
     :sswitch_0
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     goto :goto_0
 
-    .line 76
     :sswitch_1
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     goto :goto_0
 
-    .line 78
     :sswitch_2
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     goto :goto_0
 
-    .line 85
     :sswitch_3
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     goto :goto_0
 
-    .line 70
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -253,10 +230,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 15
     const-class v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -271,11 +245,9 @@
 .method public static values()[Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->$VALUES:[Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

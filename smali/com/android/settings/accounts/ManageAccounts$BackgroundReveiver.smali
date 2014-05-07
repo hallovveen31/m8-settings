@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/ManageAccounts;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 716
     iput-object p1, p0, Lcom/android/settings/accounts/ManageAccounts$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccounts;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 719
     sget-object v1, Lcom/android/settings/accounts/Util;->ACTION_TAP_TO_TOP:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,7 +46,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 720
     invoke-static {}, Lcom/android/settings/accounts/ManageAccounts;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -62,17 +54,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 721
     iget-object v1, p0, Lcom/android/settings/accounts/ManageAccounts$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccounts;
 
     invoke-virtual {v1}, Lcom/android/settings/accounts/ManageAccounts;->backToTop()V
 
-    .line 729
     :cond_0
     :goto_0
     return-void
 
-    .line 722
     :cond_1
     sget-object v1, Lcom/android/settings/accounts/Util;->ACTION_AUTO_SYNC_STATE_CHANGED:Ljava/lang/String;
 
@@ -86,7 +75,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 724
     iget-object v1, p0, Lcom/android/settings/accounts/ManageAccounts$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccounts;
 
     #getter for: Lcom/android/settings/accounts/ManageAccounts;->mAutoSyncToggle:Lcom/android/settings/accounts/OptionTogglePreference;
@@ -94,12 +82,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/accounts/OptionTogglePreference;->isChecked()Z
+    invoke-virtual {v1}, Landroid/preference/TwoStatePreference;->isChecked()Z
 
     move-result v0
 
-    .line 725
-    .local v0, isChecked:Z
     iget-object v1, p0, Lcom/android/settings/accounts/ManageAccounts$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccounts;
 
     #getter for: Lcom/android/settings/accounts/ManageAccounts;->mAutoSyncToggle:Lcom/android/settings/accounts/OptionTogglePreference;
@@ -112,9 +98,8 @@
     const/4 v1, 0x1
 
     :goto_1
-    invoke-virtual {v2, v1}, Lcom/android/settings/accounts/OptionTogglePreference;->setChecked(Z)V
+    invoke-virtual {v2, v1}, Landroid/preference/TwoStatePreference;->setChecked(Z)V
 
-    .line 726
     invoke-static {}, Lcom/android/settings/accounts/ManageAccounts;->access$300()Ljava/lang/String;
 
     move-result-object v1
@@ -125,7 +110,6 @@
 
     goto :goto_0
 
-    .line 725
     :cond_2
     const/4 v1, 0x0
 

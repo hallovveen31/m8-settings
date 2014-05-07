@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationFlashSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 561
     iput-object p1, p0, Lcom/android/settings/NotificationFlashSettings$3;->this$0:Lcom/android/settings/NotificationFlashSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 563
     return-void
 .end method

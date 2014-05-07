@@ -52,18 +52,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 62
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;-><init>()V
 
-    .line 94
     new-instance v0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$1;-><init>(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 162
     new-instance v0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$2;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$2;-><init>(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;)V
@@ -75,10 +71,7 @@
 
 .method static synthetic access$000(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;)Lcom/htc/widget/HtcFooterButton;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mInitiateButton:Lcom/htc/widget/HtcFooterButton;
 
     return-object v0
@@ -86,10 +79,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;)Lcom/android/settings/framework/widget/HtcParagraphContainerView;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     return-object v0
@@ -97,11 +87,7 @@
 
 .method static synthetic access$200(Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;I)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 62
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->runKeyguardConfirmation(I)Z
 
     move-result v0
@@ -111,46 +97,34 @@
 
 .method private getToDoButton(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;)Lcom/htc/widget/HtcFooterButton;
     .locals 3
-    .parameter "actionType"
 
-    .prologue
-    .line 300
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 301
-    .local v0, activity:Landroid/app/Activity;
     new-instance v1, Lcom/htc/widget/HtcFooterButton;
 
     invoke-direct {v1, v0}, Lcom/htc/widget/HtcFooterButton;-><init>(Landroid/content/Context;)V
 
-    .line 309
-    .local v1, button:Lcom/htc/widget/HtcFooterButton;
     const v2, 0x2040265
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcFooterButton;->setText(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 310
     iget-object v2, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mInitiateListener:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcFooterButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 311
     return-object v1
 .end method
 
 .method private runKeyguardConfirmation(I)Z
     .locals 5
-    .parameter "request"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 364
     new-instance v3, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -160,18 +134,14 @@
 
     move-result v0
 
-    .line 365
-    .local v0, quality:I
     const/high16 v3, 0x2
 
     if-ge v0, v3, :cond_1
 
-    .line 379
     :cond_0
     :goto_0
     return v2
 
-    .line 370
     :cond_1
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFingerprintFeatureFlags;->supportFingerprintStorageEncryption()Z
 
@@ -185,21 +155,18 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 378
     :cond_2
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 379
-    .local v1, res:Landroid/content/res/Resources;
     new-instance v2, Lcom/android/settings/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -226,25 +193,18 @@
 
 .method private showFinalConfirmation(Ljava/lang/String;)V
     .locals 7
-    .parameter "password"
 
-    .prologue
-    .line 408
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 409
-    .local v2, bundle:Landroid/os/Bundle;
     const-string v0, "password"
 
     invoke-virtual {v2, v0, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
     invoke-static {v2}, Lcom/android/settings/framework/core/security/crypto/HtcXorCrypto;->encrypt(Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 414
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -258,7 +218,7 @@
 
     iget v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -272,14 +232,12 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/preference/HtcPreferenceActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
-    .line 419
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 420
     return-void
 .end method
 
@@ -288,8 +246,6 @@
 .method protected getParentFragmentName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 424
     const-class v0, Lcom/android/settings/deviceinfo/Memory;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -302,8 +258,6 @@
 .method protected getParentFragmentTitleResId()I
     .locals 1
 
-    .prologue
-    .line 429
     const v0, 0x7f0c0e4e
 
     return v0
@@ -311,25 +265,17 @@
 
 .method public onActivityCreated(Landroid/os/Bundle;)V
     .locals 6
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 337
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalFragment;->onActivityCreated(Landroid/os/Bundle;)V
 
-    .line 338
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 339
-    .local v0, activity:Landroid/app/Activity;
     invoke-virtual {v0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 340
-    .local v2, intent:Landroid/content/Intent;
     const-string v4, "android.app.action.START_ENCRYPTION"
 
     invoke-virtual {v2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -342,7 +288,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 342
     const-string v4, "device_policy"
 
     invoke-virtual {v0, v4}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -351,52 +296,35 @@
 
     check-cast v1, Landroid/app/admin/DevicePolicyManager;
 
-    .line 344
-    .local v1, dpm:Landroid/app/admin/DevicePolicyManager;
     if-eqz v1, :cond_0
 
-    .line 345
     invoke-virtual {v1}, Landroid/app/admin/DevicePolicyManager;->getStorageEncryptionStatus()I
 
     move-result v3
 
-    .line 346
-    .local v3, status:I
     const/4 v4, 0x1
 
     if-eq v3, v4, :cond_0
 
-    .line 349
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 353
-    .end local v1           #dpm:Landroid/app/admin/DevicePolicyManager;
-    .end local v3           #status:I
     :cond_0
     return-void
 .end method
 
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 2
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
 
-    .prologue
-    .line 387
     invoke-super {p0, p1, p2, p3}, Lcom/android/settings/framework/app/HtcInternalFragment;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 389
     const/16 v1, 0x37
 
     if-eq p1, v1, :cond_1
 
-    .line 404
     :cond_0
     :goto_0
     return-void
 
-    .line 395
     :cond_1
     const/4 v1, -0x1
 
@@ -404,29 +332,24 @@
 
     if-eqz p3, :cond_0
 
-    .line 396
     const-string v1, "password"
 
     invoke-virtual {p3, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 397
-    .local v0, password:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 399
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/security/KeyStore;->unlock(Ljava/lang/String;)Z
 
-    .line 401
     invoke-direct {p0, v0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->showFinalConfirmation(Ljava/lang/String;)V
 
     goto :goto_0
@@ -434,11 +357,7 @@
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 9
-    .parameter "inflater"
-    .parameter "container"
-    .parameter "savedState"
 
-    .prologue
     const/4 v4, 0x0
 
     const v8, 0x7f0c09b4
@@ -447,11 +366,8 @@
 
     const/4 v6, 0x0
 
-    .line 192
     sget-object v1, Lcom/android/settings/framework/flag/feature/HtcStorageFeatureFlags;->isEncryptionEnabled:Lcom/android/settings/framework/content/custom/property/HtcIProperty;
 
-    .line 194
-    .local v1, property:Lcom/android/settings/framework/content/custom/property/HtcIProperty;,"Lcom/android/settings/framework/content/custom/property/HtcIProperty<Ljava/lang/Boolean;>;"
     invoke-interface {v1}, Lcom/android/settings/framework/content/custom/property/HtcIProperty;->get()Ljava/lang/Object;
 
     move-result-object v3
@@ -464,8 +380,7 @@
 
     if-nez v3, :cond_0
 
-    .line 195
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -477,8 +392,7 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 197
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -486,11 +400,9 @@
 
     move-object v3, v4
 
-    .line 290
     :goto_0
     return-object v3
 
-    .line 201
     :cond_0
     const v3, 0x7f040065
 
@@ -500,21 +412,18 @@
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mContentView:Landroid/view/View;
 
-    .line 203
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 204
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v4, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 206
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mContentView:Landroid/view/View;
 
     const v4, 0x7f0900a1
@@ -527,32 +436,26 @@
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
-    .line 210
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 211
-    .local v0, bundle:Landroid/os/Bundle;
     invoke-static {v0}, Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;->getActionTypeFrom(Landroid/os/Bundle;)Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
-    .line 212
     invoke-static {v0}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->getStorageTypeFrom(Landroid/os/Bundle;)Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    .line 213
     sget-boolean v3, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v3, :cond_1
 
-    .line 214
     const-string v3, "HtcEncryptionSettings"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -577,7 +480,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 215
     const-string v3, "HtcEncryptionSettings"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -602,7 +504,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     :cond_1
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
@@ -612,7 +513,6 @@
 
     if-nez v3, :cond_3
 
-    .line 218
     :cond_2
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
@@ -670,7 +570,6 @@
 
     throw v3
 
-    .line 226
     :cond_3
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
@@ -678,9 +577,7 @@
 
     move-result-object v2
 
-    .line 227
-    .local v2, toDoButton:Lcom/htc/widget/HtcFooterButton;
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -698,15 +595,13 @@
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mContentView:Landroid/view/View;
 
-    .line 230
     iput-object v2, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mInitiateButton:Lcom/htc/widget/HtcFooterButton;
 
-    .line 233
     sget-object v3, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings$3;->$SwitchMap$com$android$settings$framework$core$storage$HtcIStorageVolume$StorageType:[I
 
     iget-object v4, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v4}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v4}, Ljava/lang/Enum;->ordinal()I
 
     move-result v4
 
@@ -714,21 +609,18 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 286
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
-    .line 290
     :cond_4
     :goto_1
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mContentView:Landroid/view/View;
 
     goto/16 :goto_0
 
-    .line 235
     :pswitch_0
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
@@ -736,12 +628,10 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 236
     sget v3, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_confirm_title:I
 
     iput v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 237
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     sget v4, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_settings_description:I
@@ -750,13 +640,11 @@
 
     goto :goto_1
 
-    .line 239
     :cond_5
     sget v3, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_confirm_title:I
 
     iput v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 240
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     sget v4, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_settings_description:I
@@ -765,7 +653,6 @@
 
     goto :goto_1
 
-    .line 244
     :pswitch_1
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcStorageFeatureFlags;->isPhoneStorageFuse()Z
 
@@ -773,17 +660,14 @@
 
     if-nez v3, :cond_7
 
-    .line 247
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     sget-object v4, Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;->ENCRYPT:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
     if-ne v3, v4, :cond_6
 
-    .line 248
     iput v7, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 249
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     const v4, 0x7f0c09ad
@@ -792,13 +676,11 @@
 
     goto :goto_1
 
-    .line 251
     :cond_6
     const v3, 0x7f0c09af
 
     iput v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 252
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     const v4, 0x7f0c09b0
@@ -807,7 +689,6 @@
 
     goto :goto_1
 
-    .line 258
     :cond_7
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
@@ -815,28 +696,23 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 261
     iput v7, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 264
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     invoke-virtual {v3, v8}, Lcom/android/settings/framework/widget/HtcParagraphContainerView;->setText(I)V
 
-    .line 270
     :cond_8
     sget-object v3, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    .line 274
     sget-object v3, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     invoke-static {v0, v3}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->setStorageTypeTo(Landroid/os/Bundle;Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;)Z
 
     goto :goto_1
 
-    .line 280
     :pswitch_2
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mActionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
 
@@ -844,19 +720,16 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 281
     const v3, 0x7f0c09b2
 
     iput v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mTitleId:I
 
-    .line 282
     iget-object v3, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mDescription:Lcom/android/settings/framework/widget/HtcParagraphContainerView;
 
     invoke-virtual {v3, v8}, Lcom/android/settings/framework/widget/HtcParagraphContainerView;->setText(I)V
 
     goto :goto_1
 
-    .line 233
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -868,27 +741,22 @@
 .method public onPause()V
     .locals 2
 
-    .prologue
-    .line 324
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;->onPause()V
 
-    .line 325
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     if-ne v0, v1, :cond_0
 
-    .line 326
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    invoke-virtual {v0, v1}, Landroid/content/ContextWrapper;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 328
     :cond_0
     return-void
 .end method
@@ -896,19 +764,15 @@
 .method public onResume()V
     .locals 3
 
-    .prologue
-    .line 316
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;->onResume()V
 
-    .line 317
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     if-ne v0, v1, :cond_0
 
-    .line 318
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -916,9 +780,8 @@
 
     iget-object v2, p0, Lcom/android/settings/framework/activity/storage/threelm/HtcEncryptionSettings;->mIntentFilter:Landroid/content/IntentFilter;
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 320
     :cond_0
     return-void
 .end method

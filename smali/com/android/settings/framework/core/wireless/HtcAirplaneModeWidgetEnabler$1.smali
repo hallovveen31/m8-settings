@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 604
     iput-object p1, p0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler$1;->this$0:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +37,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 608
     iget-object v0, p0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler$1;->this$0:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler;
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeWidgetEnabler;->onHandleStateChangedInBackground(Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;)V
 
-    .line 609
     return-void
 .end method

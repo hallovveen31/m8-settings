@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/storage/HtcMediaFormat;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/settings/framework/activity/storage/HtcMediaFormat$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMediaFormat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMediaFormat$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMediaFormat;
 
     const/16 v1, 0x37
@@ -54,13 +48,11 @@
 
     if-nez v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMediaFormat$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMediaFormat;
 
     #calls: Lcom/android/settings/framework/activity/storage/HtcMediaFormat;->showFinalConfirmation()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/storage/HtcMediaFormat;->access$100(Lcom/android/settings/framework/activity/storage/HtcMediaFormat;)V
 
-    .line 131
     :cond_0
     return-void
 .end method

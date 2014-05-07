@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccessibilitySettings$ToggleAccessibilityServicePreferenceFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 730
     iput-object p1, p0, Lcom/android/settings/AccessibilitySettings$ToggleAccessibilityServicePreferenceFragment$2;->this$0:Lcom/android/settings/AccessibilitySettings$ToggleAccessibilityServicePreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,9 @@
 # virtual methods
 .method public onInit(I)V
     .locals 0
-    .parameter "status"
 
-    .prologue
-    .line 733
     if-nez p1, :cond_0
 
-    .line 736
     :cond_0
     return-void
 .end method

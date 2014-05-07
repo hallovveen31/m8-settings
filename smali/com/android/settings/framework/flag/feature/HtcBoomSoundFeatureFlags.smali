@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static final getBoomSoundSettingsVisibility()Z
     .locals 1
 
-    .prologue
-    .line 18
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isSupportBoomSound()Z
 
     move-result v0

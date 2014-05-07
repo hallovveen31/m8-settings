@@ -18,8 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 858
     invoke-direct {p0}, Lcom/android/settings/Settings;-><init>()V
 
     return-void
@@ -29,13 +27,9 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 861
     invoke-super {p0, p1}, Lcom/android/settings/Settings;->onCreate(Landroid/os/Bundle;)V
 
-    .line 864
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v1
@@ -46,22 +40,15 @@
 
     if-ltz v1, :cond_0
 
-    .line 865
     const v0, 0x7f0c0a5f
 
-    .line 869
-    .local v0, titleRes:I
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/Settings$HtcTransferMyStuffSetupWizardSettingsActivity;->setTitle(I)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->setTitle(I)V
 
-    .line 870
     return-void
 
-    .line 867
-    .end local v0           #titleRes:I
     :cond_0
     const v0, 0x7f0c0a60
 
-    .restart local v0       #titleRes:I
     goto :goto_0
 .end method

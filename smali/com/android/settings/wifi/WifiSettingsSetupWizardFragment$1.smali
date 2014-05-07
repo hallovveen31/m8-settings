@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 117
     iput-object p1, p0, Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment$1;->this$0:Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onPreferenceChange(Lcom/htc/preference/HtcPreference;Ljava/lang/Object;)Z
     .locals 4
-    .parameter "preference"
-    .parameter "value"
 
-    .prologue
-    .line 120
     instance-of v1, p1, Lcom/htc/preference/HtcCheckBoxPreference;
 
     if-eqz v1, :cond_0
@@ -52,16 +45,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 122
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    .line 123
-    .local v0, checked:Z
     const-string v1, "OOBE_WifiSettingsSetupWizardFragment"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -84,14 +73,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     iget-object v1, p0, Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment$1;->this$0:Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;
 
     #setter for: Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;->mbMobileNetworkChecked:Z
     invoke-static {v1, v0}, Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;->access$002(Lcom/android/settings/wifi/WifiSettingsSetupWizardFragment;Z)Z
 
-    .line 126
-    .end local v0           #checked:Z
     :cond_0
     const/4 v1, 0x1
 

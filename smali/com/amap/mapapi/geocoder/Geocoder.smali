@@ -20,51 +20,34 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     invoke-static {p1}, Lcom/amap/mapapi/core/b;->a(Landroid/content/Context;)Lcom/amap/mapapi/core/b;
 
-    .line 27
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/amap/mapapi/geocoder/Geocoder;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 28
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter
-    .parameter
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     invoke-static {p1}, Lcom/amap/mapapi/core/b;->a(Landroid/content/Context;)Lcom/amap/mapapi/core/b;
 
-    .line 32
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/amap/mapapi/geocoder/Geocoder;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 33
     return-void
 .end method
 
 .method private a(DDIZ)Ljava/util/List;
     .locals 8
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(DDIZ)",
@@ -81,13 +64,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 71
     sget-boolean v0, Lcom/amap/mapapi/core/e;->a:Z
 
     if-eqz v0, :cond_3
 
-    .line 72
     const-wide/32 v0, 0xf4240
 
     invoke-static {v0, v1}, Lcom/amap/mapapi/core/e;->a(J)D
@@ -108,7 +88,6 @@
 
     if-lez v0, :cond_1
 
-    .line 74
     :cond_0
     new-instance v0, Lcom/amap/mapapi/core/AMapException;
 
@@ -134,7 +113,6 @@
 
     throw v0
 
-    .line 78
     :cond_1
     const-wide/32 v0, 0x2faf080
 
@@ -156,7 +134,6 @@
 
     if-lez v0, :cond_3
 
-    .line 80
     :cond_2
     new-instance v0, Lcom/amap/mapapi/core/AMapException;
 
@@ -182,20 +159,16 @@
 
     throw v0
 
-    .line 85
     :cond_3
     if-gtz p5, :cond_4
 
-    .line 86
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 91
     :goto_0
     return-object v0
 
-    .line 88
     :cond_4
     new-instance v7, Lcom/amap/mapapi/core/p;
 
@@ -223,8 +196,7 @@
 
     invoke-direct {v7, v0, v1, v2, v3}, Lcom/amap/mapapi/core/p;-><init>(Lcom/amap/mapapi/core/q;Ljava/net/Proxy;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
-    invoke-virtual {v7}, Lcom/amap/mapapi/core/p;->g()Ljava/lang/Object;
+    invoke-virtual {v7}, Lcom/amap/mapapi/core/m;->g()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -235,12 +207,6 @@
 
 .method private a(Ljava/util/List;DDDDI)Ljava/util/List;
     .locals 9
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -255,19 +221,14 @@
         }
     .end annotation
 
-    .prologue
-    .line 156
     const/4 v1, 0x0
 
-    .line 157
     if-eqz p1, :cond_2
 
-    .line 158
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 159
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -286,17 +247,14 @@
 
     check-cast v1, Landroid/location/Address;
 
-    .line 160
     invoke-virtual {v1}, Landroid/location/Address;->getLongitude()D
 
     move-result-wide v4
 
-    .line 161
     invoke-virtual {v1}, Landroid/location/Address;->getLatitude()D
 
     move-result-wide v6
 
-    .line 162
     cmpg-double v8, v4, p8
 
     if-gtz v8, :cond_0
@@ -313,7 +271,6 @@
 
     if-ltz v4, :cond_0
 
-    .line 165
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v4
@@ -322,7 +279,6 @@
 
     if-ge v4, v0, :cond_0
 
-    .line 166
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -330,24 +286,17 @@
     :cond_1
     move-object v1, v2
 
-    .line 171
     :cond_2
     return-object v1
 .end method
 
 .method private a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 36
     iput-object p1, p0, Lcom/amap/mapapi/geocoder/Geocoder;->b:Landroid/content/Context;
 
-    .line 38
     iput-object p2, p0, Lcom/amap/mapapi/geocoder/Geocoder;->a:Ljava/lang/String;
 
-    .line 39
     return-void
 .end method
 
@@ -355,9 +304,6 @@
 # virtual methods
 .method public getFromLocation(DDI)Ljava/util/List;
     .locals 7
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(DDI)",
@@ -374,8 +320,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -395,8 +339,6 @@
 
 .method public getFromLocationName(Ljava/lang/String;I)Ljava/util/List;
     .locals 11
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -415,8 +357,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 176
     const-wide/32 v0, 0xf4240
 
     invoke-static {v0, v1}, Lcom/amap/mapapi/core/e;->a(J)D
@@ -456,12 +396,6 @@
 
 .method public getFromLocationName(Ljava/lang/String;IDDDD)Ljava/util/List;
     .locals 13
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -480,11 +414,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 98
     if-nez p1, :cond_0
 
-    .line 99
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "locationName == null"
@@ -493,13 +424,11 @@
 
     throw v2
 
-    .line 101
     :cond_0
     sget-boolean v2, Lcom/amap/mapapi/core/e;->a:Z
 
     if-eqz v2, :cond_8
 
-    .line 102
     const-wide/32 v2, 0xf4240
 
     invoke-static {v2, v3}, Lcom/amap/mapapi/core/e;->a(J)D
@@ -520,7 +449,6 @@
 
     if-lez v2, :cond_2
 
-    .line 106
     :cond_1
     new-instance v2, Lcom/amap/mapapi/core/AMapException;
 
@@ -548,7 +476,6 @@
 
     throw v2
 
-    .line 110
     :cond_2
     const-wide/32 v2, 0x2faf080
 
@@ -570,7 +497,6 @@
 
     if-lez v2, :cond_4
 
-    .line 114
     :cond_3
     new-instance v2, Lcom/amap/mapapi/core/AMapException;
 
@@ -598,7 +524,6 @@
 
     throw v2
 
-    .line 119
     :cond_4
     const-wide/32 v2, 0xf4240
 
@@ -620,7 +545,6 @@
 
     if-lez v2, :cond_6
 
-    .line 123
     :cond_5
     new-instance v2, Lcom/amap/mapapi/core/AMapException;
 
@@ -648,7 +572,6 @@
 
     throw v2
 
-    .line 128
     :cond_6
     const-wide/32 v2, 0x2faf080
 
@@ -670,7 +593,6 @@
 
     if-lez v2, :cond_8
 
-    .line 132
     :cond_7
     new-instance v2, Lcom/amap/mapapi/core/AMapException;
 
@@ -698,21 +620,17 @@
 
     throw v2
 
-    .line 138
     :cond_8
     if-gtz p2, :cond_a
 
-    .line 139
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 149
     :cond_9
     :goto_0
     return-object v3
 
-    .line 141
     :cond_a
     new-instance v2, Lcom/amap/mapapi/geocoder/a;
 
@@ -734,14 +652,12 @@
 
     invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/mapapi/geocoder/a;-><init>(Lcom/amap/mapapi/geocoder/b;Ljava/net/Proxy;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
-    invoke-virtual {v2}, Lcom/amap/mapapi/geocoder/a;->g()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/amap/mapapi/core/m;->g()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/List;
 
-    .line 145
     sget-boolean v2, Lcom/amap/mapapi/core/e;->a:Z
 
     if-eqz v2, :cond_9
@@ -758,7 +674,6 @@
 
     move v12, p2
 
-    .line 146
     invoke-direct/range {v2 .. v12}, Lcom/amap/mapapi/geocoder/Geocoder;->a(Ljava/util/List;DDDDI)Ljava/util/List;
 
     move-result-object v3
@@ -768,9 +683,6 @@
 
 .method public getFromRawGpsLocation(DDI)Ljava/util/List;
     .locals 10
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(DDI)",
@@ -787,18 +699,15 @@
         }
     .end annotation
 
-    .prologue
     const/4 v5, 0x0
 
     const-wide/16 v8, 0x0
 
-    .line 50
     :try_start_0
     new-instance v0, Lcom/amap/mapapi/core/GeoPoint$b;
 
     invoke-direct {v0, p3, p4, p1, p2}, Lcom/amap/mapapi/core/GeoPoint$b;-><init>(DD)V
 
-    .line 51
     new-instance v1, Lcom/amap/mapapi/core/i;
 
     iget-object v2, p0, Lcom/amap/mapapi/geocoder/Geocoder;->b:Landroid/content/Context;
@@ -813,25 +722,20 @@
 
     invoke-direct {v1, v0, v2, v3, v4}, Lcom/amap/mapapi/core/i;-><init>(Lcom/amap/mapapi/core/GeoPoint$b;Ljava/net/Proxy;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
-    invoke-virtual {v1}, Lcom/amap/mapapi/core/i;->g()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/amap/mapapi/core/m;->g()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/amap/mapapi/core/GeoPoint$b;
 
-    .line 54
     if-eqz v0, :cond_1
 
-    .line 55
     iget-wide v3, v0, Lcom/amap/mapapi/core/GeoPoint$b;->a:D
 
-    .line 56
     iget-wide v1, v0, Lcom/amap/mapapi/core/GeoPoint$b;->b:D
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
     :goto_0
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -859,22 +763,18 @@
 
     move-object v0, v5
 
-    .line 65
     :goto_1
     return-object v0
 
-    .line 58
     :catch_0
     move-exception v0
 
-    .line 59
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     goto :goto_1
 
-    .line 65
     :cond_0
     const/4 v6, 0x0
 

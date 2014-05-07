@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ClassicSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/settings/ClassicSettings$1;->this$0:Lcom/android/settings/ClassicSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 179
     iget-object v0, p0, Lcom/android/settings/ClassicSettings$1;->this$0:Lcom/android/settings/ClassicSettings;
 
     iget-object v1, p0, Lcom/android/settings/ClassicSettings$1;->this$0:Lcom/android/settings/ClassicSettings;
@@ -57,6 +51,5 @@
     #calls: Lcom/android/settings/ClassicSettings;->switchToParent(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/ClassicSettings;->access$100(Lcom/android/settings/ClassicSettings;Ljava/lang/String;)V
 
-    .line 180
     return-void
 .end method

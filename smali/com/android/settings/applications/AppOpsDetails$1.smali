@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/AppOpsDetails;ILcom/android/settings/applications/AppOpsState$AppOpEntry;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 156
     iput-object p1, p0, Lcom/android/settings/applications/AppOpsDetails$1;->this$0:Lcom/android/settings/applications/AppOpsDetails;
 
     iput p2, p0, Lcom/android/settings/applications/AppOpsDetails$1;->val$switchOp:I
@@ -49,11 +44,7 @@
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 5
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 159
     iget-object v0, p0, Lcom/android/settings/applications/AppOpsDetails$1;->this$0:Lcom/android/settings/applications/AppOpsDetails;
 
     iget-object v1, v0, Lcom/android/settings/applications/AppOpsDetails;->mAppOps:Landroid/app/AppOpsManager;
@@ -87,10 +78,8 @@
     :goto_0
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/app/AppOpsManager;->setMode(IILjava/lang/String;I)V
 
-    .line 162
     return-void
 
-    .line 159
     :cond_0
     const/4 v0, 0x1
 

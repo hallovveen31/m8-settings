@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 203
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 7
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,16 +46,12 @@
         }
     .end annotation
 
-    .prologue
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    .line 206
     if-nez p3, :cond_1
 
-    .line 207
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v3, 0x7f0900df
@@ -75,12 +64,11 @@
 
     iput-object v3, v6, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 208
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v3, v3, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v3}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v3
 
@@ -88,24 +76,19 @@
 
     move v1, v4
 
-    .line 209
-    .local v1, isChecked:Z
     :goto_0
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v3, v3, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v3, v1}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
+    invoke-virtual {v3, v1}, Lcom/htc/widget/HtcCompoundButton;->setChecked(Z)V
 
-    .line 211
     if-eqz v1, :cond_3
 
-    .line 213
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->setAutomaticMode(I)V
 
-    .line 214
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v4, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
@@ -117,7 +100,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->setUnderlyingAutoBrightness(I)V
 
-    .line 224
     :goto_1
     invoke-static {}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->access$200()Z
 
@@ -125,7 +107,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 225
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mContext:Landroid/content/Context;
@@ -137,14 +118,10 @@
 
     move-result-object v2
 
-    .line 226
-    .local v2, packageName:Ljava/lang/String;
     if-eqz v1, :cond_4
 
     const-string v0, "enable"
 
-    .line 228
-    .local v0, checkedState:Ljava/lang/String;
     :goto_2
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
@@ -152,7 +129,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->Log(Ljava/lang/String;)V
 
-    .line 229
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -191,7 +167,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->Log(Ljava/lang/String;)V
 
-    .line 231
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -220,16 +195,12 @@
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->Log(Ljava/lang/String;)V
 
-    .line 232
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const-string v4, "-"
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->Log(Ljava/lang/String;)V
 
-    .line 235
-    .end local v0           #checkedState:Ljava/lang/String;
-    .end local v2           #packageName:Ljava/lang/String;
     :cond_0
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
@@ -238,27 +209,21 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcListView;->invalidateViews()V
+    invoke-virtual {v3}, Landroid/widget/AbsListView;->invalidateViews()V
 
-    .line 237
-    .end local v1           #isChecked:Z
     :cond_1
     return-void
 
     :cond_2
     move v1, v5
 
-    .line 208
     goto/16 :goto_0
 
-    .line 217
-    .restart local v1       #isChecked:Z
     :cond_3
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     invoke-virtual {v3, v5}, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->setAutomaticMode(I)V
 
-    .line 218
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v4, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
@@ -272,8 +237,6 @@
 
     goto/16 :goto_1
 
-    .line 226
-    .restart local v2       #packageName:Ljava/lang/String;
     :cond_4
     const-string v0, "disable"
 

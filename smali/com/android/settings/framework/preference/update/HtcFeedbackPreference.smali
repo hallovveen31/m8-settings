@@ -18,66 +18,45 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 36
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/htc/preference/HtcPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
-    .line 37
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->initialize()V
 
-    .line 38
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/htc/preference/HtcPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
-    .line 45
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->initialize()V
 
-    .line 46
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 53
     invoke-direct {p0, p1, p2, p3}, Lcom/htc/preference/HtcPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
-    .line 54
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->initialize()V
 
-    .line 55
     return-void
 .end method
 
@@ -85,23 +64,17 @@
 # virtual methods
 .method public addToParent(Lcom/htc/preference/HtcPreferenceScreen;)Z
     .locals 1
-    .parameter "parent"
 
-    .prologue
-    .line 98
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
     if-eqz v0, :cond_0
 
-    .line 99
-    invoke-virtual {p1, p0}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {p1, p0}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 100
     const/4 v0, 0x1
 
-    .line 102
     :goto_0
     return v0
 
@@ -113,14 +86,9 @@
 
 .method public addToParent(Lcom/htc/preference/HtcPreferenceScreen;I)Z
     .locals 1
-    .parameter "parent"
-    .parameter "order"
 
-    .prologue
-    .line 107
-    invoke-virtual {p0, p2}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->setOrder(I)V
+    invoke-virtual {p0, p2}, Lcom/htc/preference/HtcPreference;->setOrder(I)V
 
-    .line 108
     invoke-virtual {p0, p1}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->addToParent(Lcom/htc/preference/HtcPreferenceScreen;)Z
 
     move-result v0
@@ -131,20 +99,16 @@
 .method protected applyDemoMode()V
     .locals 1
 
-    .prologue
-    .line 92
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isDisabledInDemoMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 93
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->setEnabled(Z)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -152,41 +116,31 @@
 .method protected initialize()V
     .locals 9
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    .line 61
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->getKey()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getKey()Ljava/lang/String;
 
     move-result-object v6
 
     if-nez v6, :cond_0
 
-    .line 62
     const-string v6, "feedback_options"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->setKey(Ljava/lang/String;)V
+    invoke-virtual {p0, v6}, Lcom/htc/preference/HtcPreference;->setKey(Ljava/lang/String;)V
 
-    .line 65
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 66
-    .local v0, context:Landroid/content/Context;
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 67
-    .local v2, pm:Landroid/content/pm/PackageManager;
     const/4 v1, 0x0
 
-    .line 69
-    .local v1, feedbackRes:Landroid/content/res/Resources;
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
@@ -204,13 +158,11 @@
     :goto_0
     iput-boolean v4, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
-    .line 73
     :try_start_0
     iget-boolean v4, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
     if-eqz v4, :cond_1
 
-    .line 74
     const-string v4, "com.htc.feedback"
 
     invoke-virtual {v2, v4}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
@@ -219,12 +171,10 @@
 
     move-result-object v1
 
-    .line 79
     :cond_1
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 80
     const-string v4, "setting_name"
 
     const-string v5, "string"
@@ -235,25 +185,21 @@
 
     move-result v3
 
-    .line 81
-    .local v3, titleResId:I
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v4}, Lcom/htc/preference/HtcPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 82
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "com.htc.feedback.REPORT_SETTINGS"
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->setIntent(Landroid/content/Intent;)V
+    invoke-virtual {p0, v4}, Lcom/htc/preference/HtcPreference;->setIntent(Landroid/content/Intent;)V
 
-    .line 83
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -261,27 +207,21 @@
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 88
-    .end local v3           #titleResId:I
     :goto_2
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->applyDemoMode()V
 
-    .line 89
     return-void
 
     :cond_2
     move v4, v5
 
-    .line 69
     goto :goto_0
 
-    .line 85
     :cond_3
     iput-boolean v5, p0, Lcom/android/settings/framework/preference/update/HtcFeedbackPreference;->mAllowAdd:Z
 
     goto :goto_2
 
-    .line 76
     :catch_0
     move-exception v4
 

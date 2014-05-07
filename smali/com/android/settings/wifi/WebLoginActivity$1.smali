@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WebLoginActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/settings/wifi/WebLoginActivity$1;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$1;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     const/4 v1, 0x1
@@ -49,6 +44,5 @@
     #calls: Lcom/android/settings/wifi/WebLoginActivity;->checkConnectedWIFIStatus(Z)V
     invoke-static {v0, v1}, Lcom/android/settings/wifi/WebLoginActivity;->access$000(Lcom/android/settings/wifi/WebLoginActivity;Z)V
 
-    .line 133
     return-void
 .end method

@@ -71,8 +71,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 76
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/WirelessSettings;->DEBUG:Z
@@ -83,16 +81,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 136
     invoke-direct {p0, v0}, Lcom/android/settings/RestrictedSettingsFragment;-><init>(Ljava/lang/String;)V
 
-    .line 117
     iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
-    .line 139
     new-instance v0, Lcom/android/settings/WirelessSettings$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -103,16 +97,12 @@
 
     iput-object v0, p0, Lcom/android/settings/WirelessSettings;->mAirplaneModeObserver:Landroid/database/ContentObserver;
 
-    .line 137
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/android/settings/WirelessSettings;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 72
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->onAirplaneModeChanged()V
 
     return-void
@@ -121,45 +111,32 @@
 .method private doPlugin()V
     .locals 4
 
-    .prologue
-    .line 461
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 465
-    .local v0, context:Landroid/content/Context;
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v2
 
-    .line 468
-    .local v2, root:Lcom/htc/preference/HtcPreferenceScreen;
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->supportDataUsage()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 469
     new-instance v1, Lcom/android/settings/framework/preference/wireless/HtcDataUsagePreference;
 
     invoke-direct {v1, v0}, Lcom/android/settings/framework/preference/wireless/HtcDataUsagePreference;-><init>(Landroid/content/Context;)V
 
-    .line 470
-    .local v1, preference:Lcom/htc/preference/HtcPreference;
     const/4 v3, -0x2
 
     invoke-virtual {v1, v3}, Lcom/htc/preference/HtcPreference;->setOrder(I)V
 
-    .line 471
-    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 472
-    invoke-virtual {p0, v1}, Lcom/android/settings/WirelessSettings;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->addCallback(Ljava/lang/Object;)V
 
-    .line 476
-    .end local v1           #preference:Lcom/htc/preference/HtcPreference;
     :cond_0
     invoke-static {v0}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->supportHtcSyncManager(Landroid/content/Context;)Z
 
@@ -167,33 +144,25 @@
 
     if-eqz v3, :cond_1
 
-    .line 477
     new-instance v1, Lcom/android/settings/framework/preference/wireless/HtcSyncManagerPreference;
 
     invoke-direct {v1, v0}, Lcom/android/settings/framework/preference/wireless/HtcSyncManagerPreference;-><init>(Landroid/content/Context;)V
 
-    .line 480
-    .restart local v1       #preference:Lcom/htc/preference/HtcPreference;
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    .line 481
     const/4 v3, -0x3
 
     invoke-virtual {v1, v3}, Lcom/htc/preference/HtcPreference;->setOrder(I)V
 
-    .line 485
     :goto_0
-    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 486
-    invoke-virtual {p0, v1}, Lcom/android/settings/WirelessSettings;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->addCallback(Ljava/lang/Object;)V
 
-    .line 490
-    .end local v1           #preference:Lcom/htc/preference/HtcPreference;
     :cond_1
     invoke-static {v0}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->supportMediaLinkSettings(Landroid/content/Context;)Z
 
@@ -201,25 +170,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 491
     new-instance v1, Lcom/android/settings/framework/preference/wireless/HtcMediaLinkPreference;
 
     invoke-direct {v1, v0}, Lcom/android/settings/framework/preference/wireless/HtcMediaLinkPreference;-><init>(Landroid/content/Context;)V
 
-    .line 492
-    .restart local v1       #preference:Lcom/htc/preference/HtcPreference;
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Lcom/htc/preference/HtcPreference;->setOrder(I)V
 
-    .line 493
-    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceScreen;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v2, v1}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 494
-    invoke-virtual {p0, v1}, Lcom/android/settings/WirelessSettings;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->addCallback(Ljava/lang/Object;)V
 
-    .line 498
-    .end local v1           #preference:Lcom/htc/preference/HtcPreference;
     :cond_2
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->isBluetoothAvailable()Z
 
@@ -227,26 +189,19 @@
 
     if-eqz v3, :cond_3
 
-    .line 499
     const-string v3, "htc_mini"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v3}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;
 
-    .line 500
-    .restart local v1       #preference:Lcom/htc/preference/HtcPreference;
-    invoke-virtual {p0, v1}, Lcom/android/settings/WirelessSettings;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->addCallback(Ljava/lang/Object;)V
 
-    .line 503
-    .end local v1           #preference:Lcom/htc/preference/HtcPreference;
     :cond_3
     return-void
 
-    .line 483
-    .restart local v1       #preference:Lcom/htc/preference/HtcPreference;
     :cond_4
     const/4 v3, -0x1
 
@@ -258,18 +213,12 @@
 .method private getSprintTouchManagerVersion()I
     .locals 5
 
-    .prologue
-    .line 434
     const/4 v2, -0x1
 
-    .line 435
-    .local v2, version:I
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 437
-    .local v1, packageManager:Landroid/content/pm/PackageManager;
     :try_start_0
     const-string v3, "com.sequent.controlpanel"
 
@@ -279,22 +228,16 @@
 
     move-result-object v0
 
-    .line 438
-    .local v0, packageInfo:Landroid/content/pm/PackageInfo;
     if-eqz v0, :cond_0
 
-    .line 439
     iget v2, v0, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 444
-    .end local v0           #packageInfo:Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     return v2
 
-    .line 441
     :catch_0
     move-exception v3
 
@@ -304,14 +247,11 @@
 .method private initSmsApplicationSetting()V
     .locals 11
 
-    .prologue
-    .line 236
     const-string v10, "initSmsApplicationSetting:"
 
     invoke-direct {p0, v10}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
 
-    .line 237
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v10
 
@@ -319,41 +259,26 @@
 
     move-result-object v9
 
-    .line 241
-    .local v9, smsApplications:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;>;"
     invoke-interface {v9}, Ljava/util/Collection;->size()I
 
     move-result v0
 
-    .line 242
-    .local v0, count:I
     new-array v2, v0, [Ljava/lang/CharSequence;
 
-    .line 243
-    .local v2, entries:[Ljava/lang/CharSequence;
     new-array v4, v0, [Ljava/lang/CharSequence;
 
-    .line 244
-    .local v4, entryValues:[Ljava/lang/CharSequence;
     new-array v3, v0, [Landroid/graphics/drawable/Drawable;
 
-    .line 246
-    .local v3, entryImages:[Landroid/graphics/drawable/Drawable;
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
-    .line 247
-    .local v7, packageManager:Landroid/content/pm/PackageManager;
     const/4 v5, 0x0
 
-    .line 248
-    .local v5, i:I
     invoke-interface {v9}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .local v6, i$:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
@@ -367,18 +292,14 @@
 
     check-cast v8, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
 
-    .line 249
-    .local v8, smsApplicationData:Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     iget-object v10, v8, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mApplicationName:Ljava/lang/String;
 
     aput-object v10, v2, v5
 
-    .line 250
     iget-object v10, v8, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
 
     aput-object v10, v4, v5
 
-    .line 252
     :try_start_0
     iget-object v10, v8, Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;->mPackageName:Ljava/lang/String;
 
@@ -390,18 +311,14 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 256
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 253
     :catch_0
     move-exception v1
 
-    .line 254
-    .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     invoke-virtual {v7}, Landroid/content/pm/PackageManager;->getDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v10
@@ -410,48 +327,35 @@
 
     goto :goto_1
 
-    .line 258
-    .end local v1           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
-    .end local v8           #smsApplicationData:Lcom/android/internal/telephony/SmsApplication$SmsApplicationData;
     :cond_0
     iget-object v10, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v10, v2}, Lcom/android/settings/SmsListPreference;->setEntries([Ljava/lang/CharSequence;)V
+    invoke-virtual {v10, v2}, Lcom/htc/preference/HtcListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 259
     iget-object v10, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v10, v4}, Lcom/android/settings/SmsListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
+    invoke-virtual {v10, v4}, Lcom/htc/preference/HtcListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 260
     iget-object v10, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
     invoke-virtual {v10, v3}, Lcom/android/settings/SmsListPreference;->setEntryDrawables([Landroid/graphics/drawable/Drawable;)V
 
-    .line 261
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->updateSmsApplicationSetting()V
 
-    .line 262
     return-void
 .end method
 
 .method private isBluetoothAvailable()Z
     .locals 2
 
-    .prologue
-    .line 454
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 455
-    .local v0, mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
     if-nez v0, :cond_0
 
-    .line 456
     const/4 v1, 0x0
 
-    .line 457
     :goto_0
     return v1
 
@@ -464,8 +368,6 @@
 .method private isFelickLockEnable()Z
     .locals 2
 
-    .prologue
-    .line 450
     const/16 v0, 0x1f
 
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSkuId()I
@@ -488,11 +390,9 @@
 .method private isOrangeTagExist()Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 580
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -506,8 +406,6 @@
 
     move-result-object v0
 
-    .line 581
-    .local v0, resolveInfoList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -524,25 +422,19 @@
 
 .method public static isRadioAllowed(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
-    .parameter "context"
-    .parameter "type"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 269
     invoke-static {p0}, Lcom/android/settings/AirplaneModeEnabler;->isAirplaneModeOn(Landroid/content/Context;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 275
     :cond_0
     :goto_0
     return v1
 
-    .line 273
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -554,8 +446,6 @@
 
     move-result-object v0
 
-    .line 275
-    .local v0, toggleable:Ljava/lang/String;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -573,8 +463,6 @@
 .method private isSmsSupported()Z
     .locals 1
 
-    .prologue
-    .line 280
     iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mTm:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getPhoneType()I
@@ -596,32 +484,26 @@
 
 .method private log(Ljava/lang/String;)V
     .locals 1
-    .parameter "s"
 
-    .prologue
-    .line 265
     const-string v0, "WirelessSettings"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 266
     return-void
 .end method
 
 .method private onAirplaneModeChanged()V
     .locals 7
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    .line 148
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v3}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
@@ -631,8 +513,6 @@
 
     move-result-object v2
 
-    .line 151
-    .local v2, toggleable:Ljava/lang/String;
     if-eqz v2, :cond_0
 
     const-string v3, "wifi"
@@ -643,17 +523,16 @@
 
     if-nez v3, :cond_1
 
-    .line 152
     :cond_0
     const-string v3, "vpn_settings"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v3}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v3
 
     check-cast v3, Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -666,9 +545,8 @@
     move v4, v5
 
     :goto_0
-    invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 155
     :cond_1
     if-eqz v2, :cond_2
 
@@ -680,20 +558,16 @@
 
     if-nez v3, :cond_3
 
-    .line 156
     :cond_2
     const-string v3, "advance_nfc"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v3}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
-    .line 157
-    .local v1, nfc:Lcom/htc/preference/HtcPreference;
     if-eqz v1, :cond_3
 
-    .line 158
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -708,23 +582,18 @@
     :goto_1
     invoke-virtual {v1, v3}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 161
-    .end local v1           #nfc:Lcom/htc/preference/HtcPreference;
     :cond_3
     const-string v3, "kddi_nfc_settings"
 
-    invoke-virtual {p0, v3}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v3}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v0
 
     check-cast v0, Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 162
-    .local v0, kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     if-eqz v0, :cond_4
 
-    .line 163
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -735,71 +604,53 @@
     if-nez v3, :cond_7
 
     :goto_2
-    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 165
     :cond_4
     return-void
 
-    .end local v0           #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_5
     move v4, v6
 
-    .line 152
     goto :goto_0
 
-    .restart local v1       #nfc:Lcom/htc/preference/HtcPreference;
     :cond_6
     move v3, v6
 
-    .line 158
     goto :goto_1
 
-    .end local v1           #nfc:Lcom/htc/preference/HtcPreference;
-    .restart local v0       #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_7
     move v5, v6
 
-    .line 163
     goto :goto_2
 .end method
 
 .method private setWifiLocationEnabled(Z)V
     .locals 2
-    .parameter "enable"
 
-    .prologue
-    .line 506
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 507
-    .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.android.HtcLocationAwareQifi.PSAVER_LOCATION_AWARE_WIFI_STATE_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 508
     const-string v1, "enable"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 509
     return-void
 .end method
 
 .method private updateSmsApplicationSetting()V
     .locals 6
 
-    .prologue
-    .line 219
     const-string v4, "updateSmsApplicationSetting:"
 
     invoke-direct {p0, v4}, Lcom/android/settings/WirelessSettings;->log(Ljava/lang/String;)V
 
-    .line 220
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -809,34 +660,25 @@
 
     move-result-object v0
 
-    .line 221
-    .local v0, appName:Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 222
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 224
-    .local v2, packageName:Ljava/lang/String;
     iget-object v4, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v4}, Lcom/android/settings/SmsListPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Lcom/htc/preference/HtcListPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 225
-    .local v3, values:[Ljava/lang/CharSequence;
     const/4 v1, 0x0
 
-    .local v1, i:I
     :goto_0
     array-length v4, v3
 
     if-ge v1, v4, :cond_0
 
-    .line 226
     aget-object v4, v3, v1
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
@@ -845,35 +687,25 @@
 
     if-eqz v4, :cond_1
 
-    .line 227
     iget-object v4, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v4, v1}, Lcom/android/settings/SmsListPreference;->setValueIndex(I)V
+    invoke-virtual {v4, v1}, Lcom/htc/preference/HtcListPreference;->setValueIndex(I)V
 
-    .line 228
     iget-object v4, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
     iget-object v5, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v5}, Lcom/android/settings/SmsListPreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v5}, Lcom/htc/preference/HtcListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v5
 
     aget-object v5, v5, v1
 
-    invoke-virtual {v4, v5}, Lcom/android/settings/SmsListPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v4, v5}, Lcom/htc/preference/HtcListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 233
-    .end local v1           #i:I
-    .end local v2           #packageName:Ljava/lang/String;
-    .end local v3           #values:[Ljava/lang/CharSequence;
     :cond_0
     return-void
 
-    .line 225
-    .restart local v1       #i:I
-    .restart local v2       #packageName:Ljava/lang/String;
-    .restart local v3       #values:[Ljava/lang/CharSequence;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -884,17 +716,11 @@
 # virtual methods
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 2
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
 
-    .prologue
-    .line 571
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 572
     const-string v0, "exit_ecm_result"
 
     const/4 v1, 0x0
@@ -905,23 +731,18 @@
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 577
     :cond_0
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 13
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 285
     invoke-super {p0, p1}, Lcom/android/settings/RestrictedSettingsFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 287
     const-string v11, "connectivity"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v11}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v11
 
@@ -929,10 +750,9 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mCm:Landroid/net/ConnectivityManager;
 
-    .line 288
     const-string v11, "phone"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v11}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v11
 
@@ -940,12 +760,10 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mTm:Landroid/telephony/TelephonyManager;
 
-    .line 290
     const v11, 0x7f06005d
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->addPreferencesFromResource(I)V
 
-    .line 292
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v11
@@ -954,28 +772,22 @@
 
     const/4 v3, 0x1
 
-    .line 294
-    .local v3, isSecondaryUser:Z
     :goto_0
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    .line 296
-    .local v1, activity:Landroid/app/Activity;
     const-string v11, "advance_nfc"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v8
 
     check-cast v8, Lcom/android/settings/framework/preference/wireless/HtcNfcSwitchPreference;
 
-    .line 298
-    .local v8, nfc:Lcom/android/settings/framework/preference/wireless/HtcNfcSwitchPreference;
     const-string v11, "sms_application"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
@@ -983,38 +795,31 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    .line 299
     iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
-    invoke-virtual {v11, p0}, Lcom/android/settings/SmsListPreference;->setOnPreferenceChangeListener(Lcom/htc/preference/HtcPreference$OnPreferenceChangeListener;)V
+    invoke-virtual {v11, p0}, Lcom/htc/preference/HtcPreference;->setOnPreferenceChangeListener(Lcom/htc/preference/HtcPreference$OnPreferenceChangeListener;)V
 
-    .line 300
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->initSmsApplicationSetting()V
 
-    .line 302
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->isOrangeTagExist()Z
 
     move-result v11
 
     if-eqz v11, :cond_0
 
-    .line 303
     const v11, 0x7f0c0002
 
-    invoke-virtual {v8, v11}, Lcom/android/settings/framework/preference/wireless/HtcNfcSwitchPreference;->setSummary(I)V
+    invoke-virtual {v8, v11}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
-    .line 306
     :cond_0
     const-string v11, "kddi_nfc_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v4
 
     check-cast v4, Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 309
-    .local v4, kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     new-instance v11, Lcom/android/settings/nfc/NfcEnabler;
 
     const/4 v12, 0x0
@@ -1023,8 +828,7 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
-    .line 311
-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v11
 
@@ -1034,8 +838,6 @@
 
     move-result-object v10
 
-    .line 315
-    .local v10, toggleable:Ljava/lang/String;
     if-eqz v10, :cond_1
 
     const-string v11, "wifi"
@@ -1046,17 +848,16 @@
 
     if-nez v11, :cond_2
 
-    .line 317
     :cond_1
     const-string v11, "vpn_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
     check-cast v11, Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v12
 
@@ -1069,45 +870,40 @@
     const/4 v12, 0x1
 
     :goto_1
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 319
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 320
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "vpn_settings"
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v12}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 323
     :cond_3
     sget-boolean v11, Lcom/android/settings/wifi/CustomUtil;->SUPPORT_MOCANA_VPN:Z
 
     if-nez v11, :cond_4
 
-    .line 324
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "mocanavpn"
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v12}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 328
     :cond_4
     if-eqz v10, :cond_5
 
@@ -1119,7 +915,6 @@
 
     if-nez v11, :cond_5
 
-    .line 333
     :cond_5
     if-eqz v10, :cond_6
 
@@ -1131,15 +926,14 @@
 
     if-nez v11, :cond_7
 
-    .line 334
     :cond_6
     const-string v11, "advance_nfc"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v11
 
@@ -1154,49 +948,41 @@
     :goto_2
     invoke-virtual {v12, v11}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 338
     :cond_7
     const-string v11, "vzw_nfc_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v7
 
     check-cast v7, Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 341
-    .local v7, mVzwNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     invoke-static {v1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v11
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
-    .line 342
     iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
     if-nez v11, :cond_10
 
-    .line 343
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 344
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v4}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v4}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 345
     const/4 v11, 0x0
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
-    .line 353
     :goto_3
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->isBluetoothAvailable()Z
 
@@ -1204,25 +990,20 @@
 
     if-nez v11, :cond_8
 
-    .line 354
     const-string v11, "htc_mini"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/settings/framework/preference/wireless/HtcMiniPlusPreference;
 
-    .line 355
-    .local v0, HtcMiniPlusSettings:Lcom/htc/preference/HtcPreference;
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v0}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v0}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 358
-    .end local v0           #HtcMiniPlusSettings:Lcom/htc/preference/HtcPreference;
     :cond_8
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
@@ -1230,35 +1011,32 @@
 
     if-eqz v11, :cond_12
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "advance_nfc"
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
     if-eqz v11, :cond_12
 
-    .line 359
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 360
     const/4 v11, 0x0
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
-    .line 365
     :goto_4
     const-string v11, "sprint_touch_manager"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
@@ -1266,7 +1044,6 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mSprintTouchManager:Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 366
     const/4 v11, 0x1
 
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->getSprintTouchManagerVersion()I
@@ -1275,16 +1052,14 @@
 
     if-lt v11, v12, :cond_9
 
-    .line 367
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mSprintTouchManager:Lcom/htc/preference/HtcPreferenceScreen;
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 378
     :cond_9
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->isSmsSupported()Z
 
@@ -1292,21 +1067,17 @@
 
     if-nez v11, :cond_a
 
-    .line 379
     const-string v11, "sms_application"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->removePreference(Ljava/lang/String;)V
+    invoke-virtual {p0, v11}, Lcom/android/settings/SettingsPreferenceFragment;->removePreference(Ljava/lang/String;)V
 
-    .line 383
     :cond_a
     const-string v11, "proxy_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v6
 
-    .line 384
-    .local v6, mGlobalProxy:Lcom/htc/preference/HtcPreference;
     const-string v11, "device_policy"
 
     invoke-virtual {v1, v11}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1315,15 +1086,12 @@
 
     check-cast v5, Landroid/app/admin/DevicePolicyManager;
 
-    .line 387
-    .local v5, mDPM:Landroid/app/admin/DevicePolicyManager;
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v6}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v6}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 388
     invoke-virtual {v5}, Landroid/app/admin/DevicePolicyManager;->getGlobalProxyAdmin()Landroid/content/ComponentName;
 
     move-result-object v11
@@ -1335,7 +1103,6 @@
     :goto_5
     invoke-virtual {v6, v11}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 391
     const-string v11, "connectivity"
 
     invoke-virtual {v1, v11}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1344,8 +1111,6 @@
 
     check-cast v2, Landroid/net/ConnectivityManager;
 
-    .line 393
-    .local v2, cm:Landroid/net/ConnectivityManager;
     if-nez v3, :cond_b
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->isTetheringSupported()Z
@@ -1354,25 +1119,23 @@
 
     if-nez v11, :cond_14
 
-    .line 394
     :cond_b
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "tether_settings"
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v12}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 400
     :goto_6
     const-string v11, "toggle_wifi_location"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
@@ -1380,21 +1143,18 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 401
     iget-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
     if-eqz v11, :cond_c
 
-    .line 404
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     iget-object v12, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 421
     :cond_c
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->enableTmoWifiIms()Z
 
@@ -1402,14 +1162,13 @@
 
     if-eqz v11, :cond_15
 
-    .line 422
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "button_wifi_calling_key"
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
@@ -1417,50 +1176,28 @@
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
-    .line 428
     :goto_7
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->doPlugin()V
 
-    .line 429
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->requestHandlers()V
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->requestHandlers()V
 
-    .line 431
     return-void
 
-    .line 292
-    .end local v1           #activity:Landroid/app/Activity;
-    .end local v2           #cm:Landroid/net/ConnectivityManager;
-    .end local v3           #isSecondaryUser:Z
-    .end local v4           #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
-    .end local v5           #mDPM:Landroid/app/admin/DevicePolicyManager;
-    .end local v6           #mGlobalProxy:Lcom/htc/preference/HtcPreference;
-    .end local v7           #mVzwNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
-    .end local v8           #nfc:Lcom/android/settings/framework/preference/wireless/HtcNfcSwitchPreference;
-    .end local v10           #toggleable:Ljava/lang/String;
     :cond_d
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 317
-    .restart local v1       #activity:Landroid/app/Activity;
-    .restart local v3       #isSecondaryUser:Z
-    .restart local v4       #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
-    .restart local v8       #nfc:Lcom/android/settings/framework/preference/wireless/HtcNfcSwitchPreference;
-    .restart local v10       #toggleable:Ljava/lang/String;
     :cond_e
     const/4 v12, 0x0
 
     goto/16 :goto_1
 
-    .line 334
     :cond_f
     const/4 v11, 0x0
 
     goto/16 :goto_2
 
-    .line 346
-    .restart local v7       #mVzwNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_10
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->isFelickLockEnable()Z
 
@@ -1468,79 +1205,66 @@
 
     if-eqz v11, :cond_11
 
-    .line 347
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v8}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 348
     const/4 v11, 0x0
 
     iput-object v11, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
     goto/16 :goto_3
 
-    .line 350
     :cond_11
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v4}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v4}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
     goto/16 :goto_3
 
-    .line 362
     :cond_12
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
-    invoke-virtual {v11, v7}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v7}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
     goto/16 :goto_4
 
-    .line 388
-    .restart local v5       #mDPM:Landroid/app/admin/DevicePolicyManager;
-    .restart local v6       #mGlobalProxy:Lcom/htc/preference/HtcPreference;
     :cond_13
     const/4 v11, 0x0
 
     goto :goto_5
 
-    .line 396
-    .restart local v2       #cm:Landroid/net/ConnectivityManager;
     :cond_14
     const-string v11, "tether_settings"
 
-    invoke-virtual {p0, v11}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v11}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v9
 
-    .line 397
-    .local v9, p:Lcom/htc/preference/HtcPreference;
     const v11, 0x7f0c054f
 
     invoke-virtual {v9, v11}, Lcom/htc/preference/HtcPreference;->setTitle(I)V
 
     goto :goto_6
 
-    .line 424
-    .end local v9           #p:Lcom/htc/preference/HtcPreference;
     :cond_15
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v11
 
     const-string v12, "button_wifi_calling_key"
 
-    invoke-virtual {p0, v12}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v12}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v11, v12}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
     goto :goto_7
 .end method
@@ -1548,38 +1272,31 @@
 .method public onPause()V
     .locals 2
 
-    .prologue
-    .line 552
     invoke-super {p0}, Lcom/android/settings/RestrictedSettingsFragment;->onPause()V
 
-    .line 555
     iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
     if-eqz v0, :cond_0
 
-    .line 556
     iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
     invoke-virtual {v0}, Lcom/android/settings/nfc/NfcEnabler;->pause()V
 
-    .line 563
     :cond_0
     iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
     if-eqz v0, :cond_1
 
-    .line 564
     iget-object v0, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
     invoke-virtual {v0}, Lcom/android/settings/WifiCallSwitchPreference;->pause()V
 
-    .line 566
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -1587,46 +1304,36 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 567
     return-void
 .end method
 
 .method public onPreferenceChange(Lcom/htc/preference/HtcPreference;Ljava/lang/Object;)Z
     .locals 4
-    .parameter "preference"
-    .parameter "newValue"
 
-    .prologue
-    .line 586
     iget-object v1, p0, Lcom/android/settings/WirelessSettings;->mSmsApplicationPreference:Lcom/android/settings/SmsListPreference;
 
     if-ne p1, v1, :cond_1
 
     if-eqz p2, :cond_1
 
-    .line 587
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/SmsApplication;->setDefaultApplication(Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 588
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->updateSmsApplicationSetting()V
 
-    .line 591
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.setting.DEFAULT_SMS_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 592
-    .local v0, intent:Landroid/content/Intent;
     const-string v1, "package_name"
 
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -1635,8 +1342,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 593
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1644,12 +1350,10 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 594
     sget-boolean v1, Lcom/android/settings/WirelessSettings;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 595
     const-string v1, "WirelessSettings"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1676,12 +1380,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     :cond_0
     const/4 v1, 0x1
 
-    .line 601
-    .end local v0           #intent:Landroid/content/Intent;
     :goto_0
     return v1
 
@@ -1693,31 +1394,24 @@
 
 .method public onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
     .locals 9
-    .parameter "preferenceScreen"
-    .parameter "preference"
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 183
     iget-object v7, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
     if-ne p2, v7, :cond_2
 
-    .line 184
     iget-object v7, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
     invoke-virtual {v7}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v5
 
-    .line 186
-    .local v5, state:Z
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v7}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
@@ -1728,28 +1422,21 @@
     :goto_0
     invoke-static {v7, v8, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 187
     invoke-direct {p0, v5}, Lcom/android/settings/WirelessSettings;->setWifiLocationEnabled(Z)V
 
-    .line 215
-    .end local v5           #state:Z
     :cond_0
     :goto_1
-    invoke-super {p0, p1, p2}, Lcom/android/settings/RestrictedSettingsFragment;->onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
+    invoke-super {p0, p1, p2}, Lcom/htc/preference/HtcPreferenceFragment;->onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
 
     move-result v6
 
     return v6
 
-    .line 186
-    .restart local v5       #state:Z
     :cond_1
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 190
-    .end local v5           #state:Z
     :cond_2
     invoke-static {}, Lcom/android/internal/telephony/HtcBuildUtils;->enableTmoWifiIms()Z
 
@@ -1761,93 +1448,70 @@
 
     if-ne p2, v7, :cond_3
 
-    .line 191
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 192
-    .local v1, data:Landroid/content/Intent;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 193
-    .local v0, bundle:Landroid/os/Bundle;
     const-string v7, "CallerType"
 
     invoke-virtual {v0, v7, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 194
     const/high16 v6, 0x1420
 
     invoke-virtual {v1, v6}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 195
     invoke-virtual {v1, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 196
     const-string v6, "com.movial.wificall"
 
     const-string v7, "com.movial.wificall.Settings"
 
     invoke-virtual {v1, v6, v7}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 199
     :try_start_0
-    invoke-virtual {p0, v1}, Lcom/android/settings/WirelessSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v1}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 200
     :catch_0
     move-exception v2
 
-    .line 201
-    .local v2, e:Landroid/content/ActivityNotFoundException;
-    invoke-virtual {v2}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
-    .line 205
-    .end local v0           #bundle:Landroid/os/Bundle;
-    .end local v1           #data:Landroid/content/Intent;
-    .end local v2           #e:Landroid/content/ActivityNotFoundException;
     :cond_3
     iget-object v6, p0, Lcom/android/settings/WirelessSettings;->mSprintTouchManager:Lcom/htc/preference/HtcPreferenceScreen;
 
     if-ne p2, v6, :cond_0
 
-    .line 206
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    .line 207
-    .local v4, intent:Landroid/content/Intent;
     const-string v6, "com.sequent.controlpanel"
 
     const-string v7, "com.sequent.controlpanel.MainActivity"
 
     invoke-virtual {v4, v6, v7}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 209
     :try_start_1
-    invoke-virtual {p0, v4}, Lcom/android/settings/WirelessSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v4}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_1
 
-    .line 210
     :catch_1
     move-exception v3
 
-    .line 211
-    .local v3, exception:Landroid/content/ActivityNotFoundException;
-    invoke-virtual {v3}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
+    invoke-virtual {v3}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 .end method
@@ -1855,38 +1519,32 @@
 .method public onResume()V
     .locals 7
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v4, 0x0
 
-    .line 520
     invoke-super {p0}, Lcom/android/settings/RestrictedSettingsFragment;->onResume()V
 
-    .line 523
     iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
     if-eqz v2, :cond_0
 
-    .line 524
     iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mNfcEnabler:Lcom/android/settings/nfc/NfcEnabler;
 
     invoke-virtual {v2}, Lcom/android/settings/nfc/NfcEnabler;->resume()V
 
-    .line 527
     :cond_0
     iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
     if-eqz v2, :cond_1
 
-    .line 528
     iget-object v5, p0, Lcom/android/settings/WirelessSettings;->mWifiLocationCheckbox:Lcom/htc/preference/HtcCheckBoxPreference;
 
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1903,26 +1561,22 @@
     :goto_0
     invoke-virtual {v5, v2}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 532
     :cond_1
     const-string v2, "kddi_nfc_settings"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/WirelessSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcPreferenceScreen;
 
-    .line 533
-    .local v1, kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     if-eqz v1, :cond_3
 
-    .line 534
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1936,24 +1590,20 @@
 
     move v0, v3
 
-    .line 535
-    .local v0, airplaneModeOn:Z
     :goto_1
     if-nez v0, :cond_2
 
     move v4, v3
 
     :cond_2
-    invoke-virtual {v1, v4}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v1, v4}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 541
-    .end local v0           #airplaneModeOn:Z
     :cond_3
-    invoke-virtual {p0}, Lcom/android/settings/WirelessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v2}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -1967,45 +1617,34 @@
 
     invoke-virtual {v2, v4, v3, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 545
     iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
     if-eqz v2, :cond_4
 
-    .line 546
     iget-object v2, p0, Lcom/android/settings/WirelessSettings;->mWifiCallSwitchPreference:Lcom/android/settings/WifiCallSwitchPreference;
 
     invoke-virtual {v2}, Lcom/android/settings/WifiCallSwitchPreference;->resume()V
 
-    .line 548
     :cond_4
     return-void
 
-    .end local v1           #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_5
     move v2, v4
 
-    .line 528
     goto :goto_0
 
-    .restart local v1       #kddiNfcSettings:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_6
     move v0, v4
 
-    .line 534
     goto :goto_1
 .end method
 
 .method public onStart()V
     .locals 0
 
-    .prologue
-    .line 513
-    invoke-super {p0}, Lcom/android/settings/RestrictedSettingsFragment;->onStart()V
+    invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->onStart()V
 
-    .line 515
     invoke-direct {p0}, Lcom/android/settings/WirelessSettings;->initSmsApplicationSetting()V
 
-    .line 516
     return-void
 .end method

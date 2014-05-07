@@ -31,8 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,44 +40,33 @@
 # virtual methods
 .method public final compare(Lcom/android/internal/os/PkgUsageStats;Lcom/android/internal/os/PkgUsageStats;)I
     .locals 8
-    .parameter "a"
-    .parameter "b"
 
-    .prologue
     const-wide/16 v6, 0x0
 
-    .line 85
     iget-wide v2, p1, Lcom/android/internal/os/PkgUsageStats;->usageTime:J
 
     iget-wide v4, p2, Lcom/android/internal/os/PkgUsageStats;->usageTime:J
 
     sub-long v0, v2, v4
 
-    .line 86
-    .local v0, ret:J
     cmp-long v2, v0, v6
 
     if-nez v2, :cond_0
 
-    .line 87
     const/4 v2, 0x0
 
-    .line 92
     :goto_0
     return v2
 
-    .line 89
     :cond_0
     cmp-long v2, v0, v6
 
     if-gez v2, :cond_1
 
-    .line 90
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 92
     :cond_1
     const/4 v2, -0x1
 
@@ -88,17 +75,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 83
     check-cast p1, Lcom/android/internal/os/PkgUsageStats;
 
-    .end local p1
     check-cast p2, Lcom/android/internal/os/PkgUsageStats;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/UsageStats$UsageTimeComparator;->compare(Lcom/android/internal/os/PkgUsageStats;Lcom/android/internal/os/PkgUsageStats;)I
 
     move-result v0

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NetSharingTypeEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 86
     iput-object p1, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "type_choose"
 
-    .prologue
-    .line 89
     const-string v0, "NetSharingTypeEnabler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,7 +59,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     iget-object v0, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
 
     #getter for: Lcom/android/settings/NetSharingTypeEnabler;->editor:Landroid/content/SharedPreferences$Editor;
@@ -78,7 +70,6 @@
 
     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 91
     iget-object v0, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
 
     #getter for: Lcom/android/settings/NetSharingTypeEnabler;->editor:Landroid/content/SharedPreferences$Editor;
@@ -88,7 +79,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 92
     iget-object v0, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
 
     #getter for: Lcom/android/settings/NetSharingTypeEnabler;->mDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -96,9 +86,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 93
     iget-object v0, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
 
     iget-object v1, p0, Lcom/android/settings/NetSharingTypeEnabler$1;->this$0:Lcom/android/settings/NetSharingTypeEnabler;
@@ -110,6 +99,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/NetSharingTypeEnabler;->checkInterface(Landroid/content/Context;)V
 
-    .line 94
     return-void
 .end method

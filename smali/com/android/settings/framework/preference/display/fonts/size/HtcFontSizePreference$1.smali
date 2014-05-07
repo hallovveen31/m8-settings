@@ -30,14 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;Landroid/content/Context;II[Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
-    .parameter "x3"
 
-    .prologue
-    .line 220
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II[Ljava/lang/Object;)V
@@ -49,23 +42,15 @@
 # virtual methods
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 10
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v9, 0x0
 
-    .line 224
     move-object v5, p2
 
-    .line 226
-    .local v5, view:Landroid/view/View;
     if-nez v5, :cond_1
 
-    .line 227
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->mContext:Landroid/content/Context;
@@ -81,15 +66,12 @@
 
     check-cast v3, Landroid/view/LayoutInflater;
 
-    .line 228
-    .local v3, inflater:Landroid/view/LayoutInflater;
     const v6, 0x7f04007d
 
     invoke-virtual {v3, v6, p3, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v5
 
-    .line 231
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->mIsAlignLastControl:Z
@@ -105,12 +87,10 @@
 
     move-object v6, v5
 
-    .line 232
     check-cast v6, Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v6, v8}, Lcom/htc/widget/HtcListItem;->setLastComponentAlign(Z)V
 
-    .line 235
     :cond_0
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
@@ -127,13 +107,8 @@
 
     move-result v0
 
-    .line 237
-    .local v0, backgroundId:I
     invoke-virtual {v5, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 241
-    .end local v0           #backgroundId:I
-    .end local v3           #inflater:Landroid/view/LayoutInflater;
     :cond_1
     const v6, 0x1020014
 
@@ -143,25 +118,18 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItem1LineCenteredText;
 
-    .line 245
-    .local v1, centerTextView:Lcom/htc/widget/HtcListItem1LineCenteredText;
-    invoke-virtual {v1, v9}, Lcom/htc/widget/HtcListItem1LineCenteredText;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v1, v9}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 248
-    .local v2, childView:Landroid/view/View;
     instance-of v6, v2, Landroid/widget/TextView;
 
     if-eqz v6, :cond_2
 
     move-object v4, v2
 
-    .line 249
     check-cast v4, Landroid/widget/TextView;
 
-    .line 250
-    .local v4, textView:Landroid/widget/TextView;
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->mPixel:[I
@@ -175,10 +143,9 @@
 
     invoke-virtual {v4, v9, v6}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 251
     iget-object v6, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
-    invoke-virtual {v6}, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->getEntries()[Ljava/lang/CharSequence;
+    invoke-virtual {v6}, Lcom/htc/preference/HtcListPreference;->getEntries()[Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -186,8 +153,6 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 254
-    .end local v4           #textView:Landroid/widget/TextView;
     :cond_2
     return-object v5
 .end method

@@ -21,8 +21,6 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 2
-    .parameter
-    .parameter "indent"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -33,22 +31,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 22
-    .local p1, klass:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->mBuilder:Ljava/lang/StringBuilder;
 
-    .line 23
     if-nez p1, :cond_0
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The parameter \'klass\' should not be null."
@@ -57,11 +49,9 @@
 
     throw v0
 
-    .line 27
     :cond_0
     iput-object p1, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->CLASS:Ljava/lang/Class;
 
-    .line 28
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,17 +72,12 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->PREFIX:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
 .method private append(Ljava/lang/StringBuilder;Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcAssistedDumper;
     .locals 2
-    .parameter "builder"
-    .parameter "line"
 
-    .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,7 +104,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
     return-object p0
 .end method
 
@@ -127,10 +111,7 @@
 # virtual methods
 .method public append(Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcAssistedDumper;
     .locals 1
-    .parameter "line"
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->mBuilder:Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v0, p1}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->append(Ljava/lang/StringBuilder;Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcAssistedDumper;
@@ -143,14 +124,10 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 52
-    .local v0, out:Ljava/lang/StringBuilder;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,7 +166,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
     iget-object v1, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->mBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
@@ -198,12 +174,10 @@
 
     if-nez v1, :cond_0
 
-    .line 57
     const-string v1, "The instance is null."
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->append(Ljava/lang/StringBuilder;Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcAssistedDumper;
 
-    .line 63
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -227,14 +201,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 65
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 59
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->mBuilder:Ljava/lang/StringBuilder;
 

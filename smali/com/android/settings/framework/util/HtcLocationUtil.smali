@@ -30,8 +30,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 33
     const-class v0, Lcom/android/settings/framework/util/HtcLocationUtil;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -40,7 +38,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
-    .line 35
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
@@ -51,19 +48,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 496
     return-void
 .end method
 
 .method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 32
     sget-object v0, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -72,8 +64,6 @@
 .method static synthetic access$100()Z
     .locals 1
 
-    .prologue
-    .line 32
     sget-boolean v0, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     return v0
@@ -81,13 +71,9 @@
 
 .method public static enableAGPS(Landroid/content/Context;Z)V
     .locals 7
-    .parameter "context"
-    .parameter "network_enabled"
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 367
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -114,7 +100,6 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :cond_0
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isCtSku()Z
 
@@ -122,7 +107,6 @@
 
     if-nez v3, :cond_2
 
-    .line 370
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_1
@@ -133,28 +117,21 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
     :cond_1
     :goto_0
     return-void
 
-    .line 374
     :cond_2
     if-eqz p1, :cond_9
 
-    .line 375
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->getUserAGpsIsEnabled(Landroid/content/Context;)Z
 
     move-result v2
 
-    .line 376
-    .local v2, userEnabled:Z
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->isMobileDataEnable(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 377
-    .local v1, isMobileDataEnabled:Z
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
@@ -165,8 +142,6 @@
 
     move-result v0
 
-    .line 379
-    .local v0, isGPSEnabled:Z
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_3
@@ -213,16 +188,13 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     :cond_3
     if-eqz v2, :cond_7
 
-    .line 386
     if-eqz v1, :cond_6
 
     if-eqz v0, :cond_6
 
-    .line 387
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_4
@@ -233,16 +205,11 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 388
     :cond_4
     const/4 v3, 0x1
 
     invoke-static {p0, v3}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
-    .line 410
-    .end local v0           #isGPSEnabled:Z
-    .end local v1           #isMobileDataEnabled:Z
-    .end local v2           #userEnabled:Z
     :cond_5
     :goto_1
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
@@ -277,16 +244,11 @@
 
     goto :goto_0
 
-    .line 391
-    .restart local v0       #isGPSEnabled:Z
-    .restart local v1       #isMobileDataEnabled:Z
-    .restart local v2       #userEnabled:Z
     :cond_6
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_5
 
-    .line 392
     sget-object v3, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -321,7 +283,6 @@
 
     goto :goto_1
 
-    .line 400
     :cond_7
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
@@ -333,16 +294,11 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     :cond_8
     invoke-static {p0, v6}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
     goto :goto_1
 
-    .line 406
-    .end local v0           #isGPSEnabled:Z
-    .end local v1           #isMobileDataEnabled:Z
-    .end local v2           #userEnabled:Z
     :cond_9
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
@@ -354,7 +310,6 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     :cond_a
     invoke-static {p0, v6}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
@@ -363,11 +318,7 @@
 
 .method public static enableGPS(Landroid/content/Context;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "enabled"
 
-    .prologue
-    .line 458
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -376,31 +327,25 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 461
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcLocationFeatureFlags;->isSupportAGPS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 462
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateAGPSWithGPS(Landroid/content/Context;Z)V
 
-    .line 464
     :cond_0
     return-void
 .end method
 
 .method public static getGpsTimeSyncEnabled(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 158
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -424,12 +369,9 @@
 
 .method public static getSystemAGpsIsEnabled(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 42
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -455,14 +397,11 @@
 
 .method public static getUserAGpsIsEnabled(Landroid/content/Context;)Z
     .locals 5
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 81
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->getSystemAGpsIsEnabled(Landroid/content/Context;)Z
 
     move-result v3
@@ -471,8 +410,6 @@
 
     move v0, v1
 
-    .line 82
-    .local v0, systemValueAsDefault:I
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -489,36 +426,26 @@
     :goto_1
     return v1
 
-    .end local v0           #systemValueAsDefault:I
     :cond_0
     move v0, v2
 
-    .line 81
     goto :goto_0
 
-    .restart local v0       #systemValueAsDefault:I
     :cond_1
     move v1, v2
 
-    .line 82
     goto :goto_1
 .end method
 
 .method public static handleGPS(Landroid/content/Context;ZZ)V
     .locals 6
-    .parameter "context"
-    .parameter "enabled"
-    .parameter "confirmed"
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 429
     sget-boolean v3, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 430
     sget-object v3, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -541,7 +468,6 @@
 
     invoke-static {v3, v4}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 432
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -553,11 +479,8 @@
 
     move-result v0
 
-    .line 434
-    .local v0, currentState:Z
     if-ne v0, p1, :cond_2
 
-    .line 435
     sget-boolean v2, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v2, :cond_1
@@ -584,12 +507,10 @@
 
     invoke-static {v2, v3}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_1
     :goto_0
     return-void
 
-    .line 437
     :cond_2
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
@@ -597,7 +518,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 440
     if-ne v2, p1, :cond_4
 
     if-nez p2, :cond_4
@@ -614,44 +534,35 @@
 
     if-nez v3, :cond_4
 
-    .line 442
     if-nez p1, :cond_3
 
     :goto_1
     invoke-static {p0, v2}, Lcom/android/settings/framework/util/HtcLocationUtil;->enableGPS(Landroid/content/Context;Z)V
 
-    .line 443
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/android/settings/framework/activity/location/VzwGpsWarningDialog;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 444
-    .local v1, intent:Landroid/content/Intent;
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 445
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 442
-    .end local v1           #intent:Landroid/content/Intent;
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 448
     :cond_4
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcLocationUtil;->enableGPS(Landroid/content/Context;Z)V
 
     goto :goto_0
 
-    .line 452
     :cond_5
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcLocationUtil;->enableGPS(Landroid/content/Context;Z)V
 
@@ -660,14 +571,11 @@
 
 .method public static isAgpsDisabled(Landroid/content/Context;)Z
     .locals 11
-    .parameter "context"
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 323
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
@@ -678,11 +586,8 @@
 
     move-result v0
 
-    .line 326
-    .local v0, enableMccMnc46003Solution:Z
     if-nez v0, :cond_1
 
-    .line 327
     sget-boolean v7, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v7, :cond_0
@@ -693,48 +598,35 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     :cond_0
     :goto_0
     return v6
 
-    .line 331
     :cond_1
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isCtSku()Z
 
     move-result v1
 
-    .line 332
-    .local v1, isCT:Z
     invoke-static {}, Lcom/android/settings/framework/util/HtcLocationUtil;->isCTNetworkAvailable()Z
 
     move-result v2
 
-    .line 333
-    .local v2, isCTNetworkAvailable:Z
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->isGpsEnabled(Landroid/content/Context;)Z
 
     move-result v3
 
-    .line 334
-    .local v3, isGpsEnabled:Z
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->getSystemAGpsIsEnabled(Landroid/content/Context;)Z
 
     move-result v4
 
-    .line 335
-    .local v4, isSystemAgpsEnabled:Z
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->getUserAGpsIsEnabled(Landroid/content/Context;)Z
 
     move-result v5
 
-    .line 337
-    .local v5, isUserAgpsEnabled:Z
     sget-boolean v8, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 338
     sget-object v8, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -757,7 +649,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     sget-object v8, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -780,7 +671,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     sget-object v8, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -803,7 +693,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     sget-object v8, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -826,7 +715,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     sget-object v8, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -849,11 +737,9 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     :cond_2
     if-eqz v1, :cond_0
 
-    .line 346
     if-eqz v2, :cond_3
 
     if-eqz v3, :cond_0
@@ -871,8 +757,6 @@
 .method public static isCTNetworkAvailable()Z
     .locals 4
 
-    .prologue
-    .line 250
     sget-boolean v1, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -913,13 +797,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 256
     :cond_0
     sget-boolean v1, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isDualPhoneEnable:Z
 
     if-eqz v1, :cond_2
 
-    .line 258
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->getDefault()Lcom/htc/telephony/HtcTelephonyManager;
 
     move-result-object v1
@@ -930,8 +812,6 @@
 
     move-result-object v0
 
-    .line 266
-    .local v0, strMccMnc:Ljava/lang/String;
     :goto_0
     sget-boolean v1, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
@@ -959,7 +839,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
     :cond_1
     const-string v1, "46003"
 
@@ -969,14 +848,11 @@
 
     return v1
 
-    .line 259
-    .end local v0           #strMccMnc:Ljava/lang/String;
     :cond_2
     sget-boolean v1, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isDualGSMPhoneEnable:Z
 
     if-eqz v1, :cond_3
 
-    .line 261
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->getDefault()Lcom/htc/telephony/HtcTelephonyManager;
 
     move-result-object v1
@@ -987,11 +863,8 @@
 
     move-result-object v0
 
-    .restart local v0       #strMccMnc:Ljava/lang/String;
     goto :goto_0
 
-    .line 264
-    .end local v0           #strMccMnc:Ljava/lang/String;
     :cond_3
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -1001,16 +874,12 @@
 
     move-result-object v0
 
-    .restart local v0       #strMccMnc:Ljava/lang/String;
     goto :goto_0
 .end method
 
 .method public static isGpsEnabled(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 58
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1026,10 +895,7 @@
 
 .method public static isMobileDataEnable(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 235
     const-string v1, "connectivity"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1038,16 +904,12 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 237
-    .local v0, connectivity:Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_0
 
-    .line 238
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getMobileDataEnabled()Z
 
     move-result v1
 
-    .line 240
     :goto_0
     return v1
 
@@ -1059,10 +921,7 @@
 
 .method public static isNetworkLocationProviderEnabled(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 64
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1078,14 +937,9 @@
 
 .method public static setGpsTimeSyncEnabled(Landroid/content/Context;ZZ)V
     .locals 4
-    .parameter "context"
-    .parameter "value"
-    .parameter "needConfirm"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 122
     sget-boolean v1, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -1128,13 +982,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :cond_0
     if-nez p1, :cond_1
 
     if-eqz p2, :cond_1
 
-    .line 124
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v1, p0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -1177,11 +1029,9 @@
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog$Builder;->show()Lcom/htc/widget/HtcAlertDialog;
 
-    .line 147
     :goto_0
     return-void
 
-    .line 144
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1201,15 +1051,11 @@
 
 .method public static showUseAgpsWarningDialog(Landroid/content/Context;)V
     .locals 5
-    .parameter "context"
 
-    .prologue
-    .line 172
     sget-boolean v2, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v2, :cond_0
 
-    .line 173
     sget-object v2, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1236,12 +1082,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     :cond_0
     const v1, 0x7f0c0871
 
-    .line 177
-    .local v1, warningTitleId:I
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isCtSku()Z
 
     move-result v2
@@ -1250,8 +1093,6 @@
 
     const v0, 0x7f0c04e1
 
-    .line 180
-    .local v0, warningMessageId:I
     :goto_0
     new-instance v2, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -1293,11 +1134,8 @@
 
     invoke-virtual {v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->show()Lcom/htc/widget/HtcAlertDialog;
 
-    .line 198
     return-void
 
-    .line 177
-    .end local v0           #warningMessageId:I
     :cond_1
     const v0, 0x7f0c04e0
 
@@ -1306,11 +1144,7 @@
 
 .method private static updateAGPSWithGPS(Landroid/content/Context;Z)V
     .locals 4
-    .parameter "context"
-    .parameter "gpsEnable"
 
-    .prologue
-    .line 466
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_0
@@ -1321,24 +1155,19 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     :cond_0
     if-eqz p1, :cond_5
 
-    .line 469
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcLocationUtil;->getUserAGpsIsEnabled(Landroid/content/Context;)Z
 
     move-result v0
 
-    .line 471
-    .local v0, userAgps:Z
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcLocationFeatureFlags;->getAssistedGPSVisibility()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 472
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isCuSku()Z
 
     move-result v1
@@ -1357,11 +1186,9 @@
 
     if-eqz v1, :cond_3
 
-    .line 473
     :cond_1
     invoke-static {p0, v0}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
-    .line 474
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_2
@@ -1388,14 +1215,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
-    .end local v0           #userAgps:Z
     :cond_2
     :goto_0
     return-void
 
-    .line 477
-    .restart local v0       #userAgps:Z
     :cond_3
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
@@ -1425,11 +1248,9 @@
 
     goto :goto_0
 
-    .line 483
     :cond_4
     invoke-static {p0, v0}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
-    .line 484
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_2
@@ -1458,8 +1279,6 @@
 
     goto :goto_0
 
-    .line 488
-    .end local v0           #userAgps:Z
     :cond_5
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
@@ -1471,7 +1290,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     :cond_6
     const/4 v1, 0x0
 
@@ -1482,31 +1300,21 @@
 
 .method public static updateAGpsUISettings(Landroid/content/Context;Z)V
     .locals 0
-    .parameter "context"
-    .parameter "enable"
 
-    .prologue
-    .line 107
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateUserAGpsSettings(Landroid/content/Context;Z)V
 
-    .line 108
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcLocationUtil;->updateSystemAGpsSettings(Landroid/content/Context;Z)V
 
-    .line 109
     return-void
 .end method
 
 .method public static updateSystemAGpsSettings(Landroid/content/Context;Z)V
     .locals 5
-    .parameter "context"
-    .parameter "enable"
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 47
     sget-boolean v0, Lcom/android/settings/framework/util/HtcLocationUtil;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1533,7 +1341,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1548,7 +1355,6 @@
     :goto_0
     invoke-static {v3, v4, v0}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 53
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1560,29 +1366,22 @@
     :goto_1
     invoke-static {v0, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 55
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 48
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 53
     goto :goto_1
 .end method
 
 .method private static updateUserAGpsSettings(Landroid/content/Context;Z)V
     .locals 3
-    .parameter "context"
-    .parameter "enable"
 
-    .prologue
-    .line 96
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -1596,10 +1395,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 98
     return-void
 
-    .line 96
     :cond_0
     const/4 v0, 0x0
 
@@ -1608,22 +1405,17 @@
 
 .method public static warnInfoMobileNetwork(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 205
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 206
     sget-object v0, Lcom/android/settings/framework/util/HtcLocationUtil;->TAG:Ljava/lang/String;
 
     const-string v1, "warnInfoMobileNetwork()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     :cond_0
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -1663,6 +1455,5 @@
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog$Builder;->show()Lcom/htc/widget/HtcAlertDialog;
 
-    .line 228
     return-void
 .end method

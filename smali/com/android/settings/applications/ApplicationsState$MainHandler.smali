@@ -35,10 +35,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ApplicationsState;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 341
     iput-object p1, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -50,20 +47,15 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter "msg"
 
-    .prologue
-    .line 351
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 383
     :cond_0
     :goto_0
     return-void
 
-    .line 353
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -71,7 +63,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 354
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v1, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -84,7 +75,6 @@
 
     goto :goto_0
 
-    .line 358
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -92,7 +82,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 359
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -101,7 +90,6 @@
 
     goto :goto_0
 
-    .line 363
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -109,7 +97,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 364
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -118,7 +105,6 @@
 
     goto :goto_0
 
-    .line 368
     :pswitch_3
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -126,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 369
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v1, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -139,7 +124,6 @@
 
     goto :goto_0
 
-    .line 373
     :pswitch_4
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -147,7 +131,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 374
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v0, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -156,7 +139,6 @@
 
     goto :goto_0
 
-    .line 378
     :pswitch_5
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
@@ -164,7 +146,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 379
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$MainHandler;->this$0:Lcom/android/settings/applications/ApplicationsState;
 
     iget-object v1, v0, Lcom/android/settings/applications/ApplicationsState;->mCurCallbacks:Lcom/android/settings/applications/ApplicationsState$Callbacks;
@@ -185,7 +166,6 @@
 
     goto :goto_1
 
-    .line 351
     nop
 
     :pswitch_data_0

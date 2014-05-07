@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 456
     iput-object p1, p0, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$2;->this$0:Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 460
     iget-object v0, p0, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$2;->this$0:Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;
 
     iget-object v1, p0, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$2;->this$0:Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;
@@ -56,16 +49,13 @@
     #setter for: Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;->mClickedDialogEntryIndex:I
     invoke-static {v0, v1}, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;->access$602(Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;I)I
 
-    .line 461
     iget-object v0, p0, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$2;->this$0:Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, p1, v1}, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 463
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 464
     return-void
 .end method

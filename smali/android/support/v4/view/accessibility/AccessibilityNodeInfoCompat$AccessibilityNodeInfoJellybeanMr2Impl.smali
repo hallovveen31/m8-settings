@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 730
     invoke-direct {p0}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat$AccessibilityNodeInfoJellybeanImpl;-><init>()V
 
     return-void
@@ -29,10 +27,7 @@
 # virtual methods
 .method public getViewIdResourceName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
-    .parameter "info"
 
-    .prologue
-    .line 734
     invoke-static {p1}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatJellybeanMr2;->getViewIdResourceName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -42,13 +37,8 @@
 
 .method public setViewIdResourceName(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 0
-    .parameter "info"
-    .parameter "viewId"
 
-    .prologue
-    .line 739
     invoke-static {p1, p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompatJellybeanMr2;->setViewIdResourceName(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 740
     return-void
 .end method

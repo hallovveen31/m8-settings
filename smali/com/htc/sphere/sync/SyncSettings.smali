@@ -69,8 +69,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 33
     const-string v0, "content://com.htc.settings.accountsync.SYNC"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -79,7 +77,6 @@
 
     sput-object v0, Lcom/htc/sphere/sync/SyncSettings;->AUTHORITY_URI:Landroid/net/Uri;
 
-    .line 103
     sget-object v0, Lcom/htc/sphere/sync/SyncSettings;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "sync_settings"
@@ -90,14 +87,12 @@
 
     sput-object v0, Lcom/htc/sphere/sync/SyncSettings;->SYNC_SETTING_CONTENT_URI:Landroid/net/Uri;
 
-    .line 108
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/htc/sphere/sync/SyncSettings;->PROJECTION_MAP:Ljava/util/Map;
 
-    .line 141
     sget-object v0, Lcom/htc/sphere/sync/SyncSettings;->AUTHORITY_URI:Landroid/net/Uri;
 
     const-string v1, "extras"
@@ -108,6 +103,5 @@
 
     sput-object v0, Lcom/htc/sphere/sync/SyncSettings;->SYNC_EXTRAS_CONTENT_URI:Landroid/net/Uri;
 
-    .line 14
     return-void
 .end method

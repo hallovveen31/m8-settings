@@ -23,12 +23,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor;Lcom/android/settings/framework/core/storage/HtcIStorageVolume;Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter
 
-    .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor$1;->this$0:Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor;
 
     iput-object p3, p0, Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor$1;->val$mThis:Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;
@@ -52,8 +47,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor$1;->val$mThis:Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;->getFunctionEnabledProperty()Lcom/android/settings/framework/content/custom/property/HtcIProperty;
@@ -75,8 +68,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor$1;->val$mThis:Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;->getUiEnabledProperty()Lcom/android/settings/framework/content/custom/property/HtcIProperty;
@@ -98,8 +89,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/encrypt/HtcPhoneStorageEncryptor$1;->val$mThis:Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/core/storage/encrypt/HtcStorageEncryptor;->getUiVisibleProperty()Lcom/android/settings/framework/content/custom/property/HtcIProperty;

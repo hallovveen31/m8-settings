@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;ZLandroid/content/SharedPreferences;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 357
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$5;->this$0:Lcom/android/settings/users/UserSettings;
 
     iput-boolean p2, p0, Lcom/android/settings/users/UserSettings$5;->val$longMessageDisplayed:Z
@@ -49,22 +44,16 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 359
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$5;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->addUserNow()V
     invoke-static {v0}, Lcom/android/settings/users/UserSettings;->access$1000(Lcom/android/settings/users/UserSettings;)V
 
-    .line 360
     iget-boolean v0, p0, Lcom/android/settings/users/UserSettings$5;->val$longMessageDisplayed:Z
 
     if-nez v0, :cond_0
 
-    .line 361
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$5;->val$preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -81,7 +70,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 364
     :cond_0
     return-void
 .end method

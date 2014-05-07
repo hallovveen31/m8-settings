@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,40 +48,25 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;)V
 
-    .line 35
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 44
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 52
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
     return-void
 .end method
 
@@ -92,8 +75,6 @@
 .method protected getCustomKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 56
     const-string v0, "keep_screen_on"
 
     return-object v0
@@ -102,9 +83,7 @@
 .method protected getCustomSummary()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 66
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcStayAwakePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -120,9 +99,7 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 61
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcStayAwakePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -137,13 +114,10 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/Boolean;
     .locals 3
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 71
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcStayAwakePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -161,8 +135,6 @@
 
     const/4 v0, 0x1
 
-    .line 73
-    .local v0, value:Z
     :cond_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -173,12 +145,8 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Z)Z
     .locals 4
-    .parameter "context"
-    .parameter "newState"
 
-    .prologue
-    .line 78
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcStayAwakePreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -197,12 +165,8 @@
 
     move-result v0
 
-    .line 83
-    .local v0, success:Z
     return v0
 
-    .line 78
-    .end local v0           #success:Z
     :cond_0
     const/4 v1, 0x0
 

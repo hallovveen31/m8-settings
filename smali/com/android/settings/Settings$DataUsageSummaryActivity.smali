@@ -18,8 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 882
     invoke-direct {p0}, Lcom/android/settings/Settings;-><init>()V
 
     return-void
@@ -29,13 +27,9 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 888
     invoke-super {p0, p1}, Lcom/android/settings/Settings;->onCreate(Landroid/os/Bundle;)V
 
-    .line 889
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
@@ -50,13 +44,9 @@
 
     move-result-object v0
 
-    .line 892
-    .local v0, intent:Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 893
-    invoke-virtual {p0}, Lcom/android/settings/Settings$DataUsageSummaryActivity;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 894
     return-void
 .end method

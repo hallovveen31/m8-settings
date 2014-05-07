@@ -49,7 +49,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -60,7 +59,6 @@
 
     const/4 v3, 0x0
 
-    .line 129
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "Init"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->Init:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 130
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "Show"
@@ -78,7 +75,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->Show:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 131
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "AddFingerprint"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->AddFingerprint:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 132
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "ConfirmCredentials"
@@ -96,7 +91,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->ConfirmCredentials:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 133
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "EnableFingerprintLock"
@@ -105,7 +99,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->EnableFingerprintLock:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 134
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "ChangeAltLock"
@@ -116,7 +109,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->ChangeAltLock:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 135
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "SetQuickLauch"
@@ -127,7 +119,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->SetQuickLauch:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 136
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "DeleteFingerprint"
@@ -138,7 +129,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->DeleteFingerprint:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 137
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     const-string v1, "Finish"
@@ -149,7 +139,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->Finish:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    .line 128
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
@@ -205,16 +194,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 128
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -222,10 +207,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 128
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -240,11 +222,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
     .locals 1
 
-    .prologue
-    .line 128
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$Stage;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

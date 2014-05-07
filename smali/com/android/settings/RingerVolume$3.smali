@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RingerVolume;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 486
     iput-object p1, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "view"
 
-    .prologue
     const/16 v7, 0x8
 
     const/4 v6, 0x0
 
-    .line 491
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mLayoutInitFinish:Z
@@ -56,20 +50,17 @@
 
     if-nez v3, :cond_0
 
-    .line 492
     const-string v3, "RingerVolume"
 
     const-string v4, "chkBoxView onClick wait for init layout..."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     :cond_0
     instance-of v3, p1, Landroid/widget/Checkable;
 
     if-eqz v3, :cond_1
 
-    .line 495
     const-string v3, "RingerVolume"
 
     const-string v4, "onClick chkBoxView NOT instanceof Checkable!!"
@@ -79,24 +70,18 @@
     :cond_1
     move-object v0, p1
 
-    .line 497
     check-cast v0, Landroid/widget/Checkable;
 
-    .line 498
-    .local v0, htcchkBox:Landroid/widget/Checkable;
     invoke-interface {v0}, Landroid/widget/Checkable;->isChecked()Z
 
     move-result v1
 
-    .line 499
-    .local v1, isChecked:Z
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$100()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 500
     const-string v3, "RingerVolume"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -133,7 +118,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 503
     :cond_2
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$700()Z
 
@@ -141,13 +125,10 @@
 
     if-eq v1, v3, :cond_5
 
-    .line 504
     invoke-static {v1}, Lcom/android/settings/RingerVolume;->access$702(Z)Z
 
-    .line 505
     if-nez v1, :cond_6
 
-    .line 506
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mAudioManager:Landroid/media/AudioManager;
@@ -158,7 +139,6 @@
     #calls: Lcom/android/settings/RingerVolume;->setNotificationUseRingVolume(Landroid/media/AudioManager;I)V
     invoke-static {v3, v6}, Lcom/android/settings/RingerVolume;->access$900(Landroid/media/AudioManager;I)V
 
-    .line 507
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     iget-object v4, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
@@ -175,7 +155,6 @@
     #calls: Lcom/android/settings/RingerVolume;->syncNotificationWithRingerMode(I)V
     invoke-static {v3, v4}, Lcom/android/settings/RingerVolume;->access$1000(Lcom/android/settings/RingerVolume;I)V
 
-    .line 508
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$1100()I
@@ -185,7 +164,6 @@
     #calls: Lcom/android/settings/RingerVolume;->updateSlidersAndMutedStatesInternal(I)V
     invoke-static {v3, v4}, Lcom/android/settings/RingerVolume;->access$500(Lcom/android/settings/RingerVolume;I)V
 
-    .line 509
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$1100()I
 
     move-result v3
@@ -207,7 +185,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 511
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mLayout:[Landroid/view/View;
@@ -223,7 +200,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 513
     :cond_3
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
@@ -234,7 +210,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 514
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mUseRingForNotifyDivider:Landroid/view/View;
@@ -244,7 +219,6 @@
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 527
     :cond_4
     :goto_0
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$1400()I
@@ -268,7 +242,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 528
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mLayout:[Landroid/view/View;
@@ -290,18 +263,14 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 529
-    .local v2, ringVolumeTitle:Landroid/widget/TextView;
     if-eqz v2, :cond_5
 
-    .line 530
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$700()Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
-    .line 531
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$1500()[I
 
     move-result-object v3
@@ -314,13 +283,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 541
-    .end local v2           #ringVolumeTitle:Landroid/widget/TextView;
     :cond_5
     :goto_1
     return-void
 
-    .line 517
     :cond_6
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
@@ -334,7 +300,6 @@
     #calls: Lcom/android/settings/RingerVolume;->setNotificationUseRingVolume(Landroid/media/AudioManager;I)V
     invoke-static {v3, v4}, Lcom/android/settings/RingerVolume;->access$900(Landroid/media/AudioManager;I)V
 
-    .line 518
     invoke-static {}, Lcom/android/settings/RingerVolume;->access$1100()I
 
     move-result v3
@@ -356,7 +321,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 520
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mLayout:[Landroid/view/View;
@@ -372,7 +336,6 @@
 
     invoke-virtual {v3, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 522
     :cond_7
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
@@ -383,7 +346,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 523
     iget-object v3, p0, Lcom/android/settings/RingerVolume$3;->this$0:Lcom/android/settings/RingerVolume;
 
     #getter for: Lcom/android/settings/RingerVolume;->mUseRingForNotifyDivider:Landroid/view/View;
@@ -395,8 +357,6 @@
 
     goto :goto_0
 
-    .line 533
-    .restart local v2       #ringVolumeTitle:Landroid/widget/TextView;
     :cond_8
     const v3, 0x204029a
 

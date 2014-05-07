@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 104
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$1;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,10 @@
 # virtual methods
 .method public onFailure(I)V
     .locals 3
-    .parameter "reason"
 
-    .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$1;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/RedirectDialog;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalActivity;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -59,14 +53,11 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 111
     return-void
 .end method
 
 .method public onSuccess()V
     .locals 0
 
-    .prologue
-    .line 106
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 2078
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$4;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,14 +33,10 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 2081
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$4;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/InstalledAppDetails$4;->getResultCode()I
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultCode()I
 
     move-result v0
 
@@ -55,10 +48,8 @@
     #calls: Lcom/android/settings/applications/InstalledAppDetails;->updateForceStopButton(Z)V
     invoke-static {v1, v0}, Lcom/android/settings/applications/InstalledAppDetails;->access$2000(Lcom/android/settings/applications/InstalledAppDetails;Z)V
 
-    .line 2082
     return-void
 
-    .line 2081
     :cond_0
     const/4 v0, 0x0
 

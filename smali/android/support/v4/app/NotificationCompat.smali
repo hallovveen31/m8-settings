@@ -41,26 +41,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 153
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 154
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplJellybean;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplJellybean;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
-    .line 162
     :goto_0
     return-void
 
-    .line 155
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -68,7 +63,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 156
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplIceCreamSandwich;-><init>()V
@@ -77,7 +71,6 @@
 
     goto :goto_0
 
-    .line 157
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -85,7 +78,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 158
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb;
 
     invoke-direct {v0}, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplHoneycomb;-><init>()V
@@ -94,7 +86,6 @@
 
     goto :goto_0
 
-    .line 160
     :cond_2
     new-instance v0, Landroid/support/v4/app/NotificationCompat$NotificationCompatImplBase;
 
@@ -108,19 +99,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 819
     return-void
 .end method
 
 .method static synthetic access$000()Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
     .locals 1
 
-    .prologue
-    .line 34
     sget-object v0, Landroid/support/v4/app/NotificationCompat;->IMPL:Landroid/support/v4/app/NotificationCompat$NotificationCompatImpl;
 
     return-object v0

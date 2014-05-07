@@ -15,8 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     return-void
@@ -24,13 +22,10 @@
 
 .method private runKeyguardConfirmation(I)Z
     .locals 5
-    .parameter "request"
 
-    .prologue
-    .line 43
     new-instance v2, Lcom/android/internal/widget/LockPatternUtils;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -40,41 +35,33 @@
 
     move-result v0
 
-    .line 44
-    .local v0, quality:I
     const/high16 v2, 0x2
 
     if-ge v0, v2, :cond_0
 
-    .line 45
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
-    .line 46
     const/4 v2, 0x0
 
-    .line 50
     :goto_0
     return v2
 
-    .line 49
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 50
-    .local v1, res:Landroid/content/res/Resources;
     new-instance v2, Lcom/android/settings/ChooseLockSettingsHelper;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v3
 
@@ -103,31 +90,22 @@
 # virtual methods
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 4
-    .parameter "requestCode"
-    .parameter "resultCode"
-    .parameter "data"
 
-    .prologue
-    .line 58
     invoke-super {p0, p1, p2, p3}, Landroid/app/Fragment;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 60
     const/16 v1, 0x37
 
     if-eq p1, v1, :cond_0
 
-    .line 61
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 77
     :goto_0
     return-void
 
-    .line 67
     :cond_0
     const/4 v1, -0x1
 
@@ -135,30 +113,25 @@
 
     if-eqz p3, :cond_1
 
-    .line 68
     const-string v1, "password"
 
     invoke-virtual {p3, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 69
-    .local v0, password:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 71
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Landroid/security/KeyStore;->unlock(Ljava/lang/String;)Z
 
-    .line 72
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -168,19 +141,16 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {v1, v2}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 73
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 76
-    .end local v0           #password:Ljava/lang/String;
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -191,17 +161,11 @@
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
-    .parameter "inflater"
-    .parameter "container"
-    .parameter "savedState"
 
-    .prologue
-    .line 31
     const/16 v0, 0x37
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/activity/storage/threelm/HtcExternalSdCardMountToggleSettings;->runKeyguardConfirmation(I)Z
 
-    .line 32
     const/4 v0, 0x0
 
     return-object v0

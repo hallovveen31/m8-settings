@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;Ljava/util/List;Landroid/widget/ListPopupWindow;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 1208
     iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     iput-object p2, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->val$items:Ljava/util/List;
@@ -49,10 +44,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -63,9 +54,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 1211
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->val$items:Ljava/util/List;
 
     invoke-interface {v1, p3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -74,45 +62,37 @@
 
     check-cast v0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$AdapterItem;
 
-    .line 1212
-    .local v0, item:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$AdapterItem;
     iget v1, v0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$AdapterItem;->id:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1222
     :goto_0
     return-void
 
-    .line 1214
     :pswitch_0
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     #calls: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->choosePhoto()V
     invoke-static {v1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->access$2700(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;)V
 
-    .line 1215
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->val$listPopupWindow:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/ListPopupWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1218
     :pswitch_1
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     #calls: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->takePhoto()V
     invoke-static {v1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->access$2800(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;)V
 
-    .line 1219
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$3;->val$listPopupWindow:Landroid/widget/ListPopupWindow;
 
     invoke-virtual {v1}, Landroid/widget/ListPopupWindow;->dismiss()V
 
     goto :goto_0
 
-    .line 1212
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

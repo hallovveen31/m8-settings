@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 212
     invoke-static {}, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->values()[Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESUME_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WebLoginActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 280
     iput-object p1, p0, Lcom/android/settings/wifi/WebLoginActivity$4;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 282
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$4;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     #getter for: Lcom/android/settings/wifi/WebLoginActivity;->mCountDownTimer:Landroid/os/CountDownTimer;
@@ -51,7 +46,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 283
     invoke-static {}, Lcom/android/settings/wifi/WebLoginActivity;->access$500()Z
 
     move-result v0
@@ -89,7 +83,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$4;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
@@ -100,7 +93,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 285
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$4;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     #getter for: Lcom/android/settings/wifi/WebLoginActivity;->mNoticeCountDown:Landroid/widget/TextView;
@@ -110,9 +102,8 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 286
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$4;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     #getter for: Lcom/android/settings/wifi/WebLoginActivity;->mCountDownTimer:Landroid/os/CountDownTimer;
@@ -122,7 +113,6 @@
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 289
     :cond_1
     return-void
 .end method

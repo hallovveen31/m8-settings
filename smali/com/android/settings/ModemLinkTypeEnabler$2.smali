@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ModemLinkTypeEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 114
     iput-object p1, p0, Lcom/android/settings/ModemLinkTypeEnabler$2;->this$0:Lcom/android/settings/ModemLinkTypeEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 116
     return-void
 .end method

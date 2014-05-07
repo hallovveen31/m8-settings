@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothPermissionActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 180
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$2;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "view"
 
-    .prologue
-    .line 182
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result v0
@@ -51,24 +45,18 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 188
-    .end local p1
     :goto_0
     return-void
 
-    .line 183
-    .restart local p1
     :cond_0
     check-cast p1, Lcom/htc/widget/HtcCheckBox;
 
-    .end local p1
-    invoke-virtual {p1}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {p1}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 184
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$2;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     const/4 v1, 0x1
@@ -78,7 +66,6 @@
 
     goto :goto_0
 
-    .line 186
     :cond_1
     iget-object v0, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$2;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 

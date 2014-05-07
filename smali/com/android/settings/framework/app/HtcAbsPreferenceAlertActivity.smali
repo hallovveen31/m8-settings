@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,11 +51,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 57
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;-><init>()V
 
-    .line 63
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     sget-object v1, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->TAG:Ljava/lang/String;
@@ -72,8 +67,6 @@
 .method private attachPreferenceManager()V
     .locals 9
 
-    .prologue
-    .line 145
     :try_start_0
     const-class v4, Lcom/htc/preference/HtcPreferenceManager;
 
@@ -91,13 +84,10 @@
 
     move-result-object v0
 
-    .line 147
-    .local v0, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<Lcom/htc/preference/HtcPreferenceManager;>;"
     const/4 v4, 0x1
 
-    invoke-virtual {v0, v4}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    .line 148
     const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -112,8 +102,6 @@
 
     check-cast v2, Lcom/htc/preference/HtcPreferenceManager;
 
-    .line 154
-    .local v2, mgr:Lcom/htc/preference/HtcPreferenceManager;
     const-class v4, Lcom/htc/preference/HtcPreference;
 
     const-string v5, "onAttachedToHierarchy"
@@ -132,13 +120,10 @@
 
     move-result-object v3
 
-    .line 158
-    .local v3, onAttachedToHierarchyMethod:Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    .line 161
     iget-object v4, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->mPreference:Lcom/htc/preference/HtcDialogPreference;
 
     const/4 v5, 0x1
@@ -153,19 +138,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
-    .end local v0           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<Lcom/htc/preference/HtcPreferenceManager;>;"
-    .end local v2           #mgr:Lcom/htc/preference/HtcPreferenceManager;
-    .end local v3           #onAttachedToHierarchyMethod:Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
-    .line 163
     :catch_0
     move-exception v1
 
-    .line 164
-    .local v1, e:Ljava/lang/Exception;
     iget-object v4, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     const-string v5, "Failed to attach the PreferenceManager"
@@ -178,31 +156,24 @@
 .method private bindPreference()V
     .locals 1
 
-    .prologue
-    .line 84
     invoke-virtual {p0, p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->onCreatePreference(Landroid/content/Context;)Lcom/htc/preference/HtcDialogPreference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->mPreference:Lcom/htc/preference/HtcDialogPreference;
 
-    .line 101
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->mPreference:Lcom/htc/preference/HtcDialogPreference;
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->addCallback(Ljava/lang/Object;)V
 
-    .line 102
-    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->requestHandlers()V
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->requestHandlers()V
 
-    .line 103
     return-void
 .end method
 
 .method private setupDialogDismissRelationship()V
     .locals 2
 
-    .prologue
-    .line 173
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->mPreference:Lcom/htc/preference/HtcDialogPreference;
 
     check-cast v0, Lcom/android/settings/framework/preference/HtcIPreferenceListener$ISetupDialogDismissRelationship;
@@ -213,22 +184,18 @@
 
     invoke-interface {v0, v1}, Lcom/android/settings/framework/preference/HtcIPreferenceListener$ISetupDialogDismissRelationship;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 182
     return-void
 .end method
 
 .method private simulateClick()V
     .locals 2
 
-    .prologue
-    .line 188
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->mPreference:Lcom/htc/preference/HtcDialogPreference;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/preference/HtcAbsPreference;->performClick(Lcom/htc/preference/HtcPreference;Lcom/htc/preference/HtcPreferenceScreen;)V
 
-    .line 189
     return-void
 .end method
 
@@ -236,16 +203,11 @@
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 75
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 76
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->bindPreference()V
 
-    .line 77
     return-void
 .end method
 
@@ -255,16 +217,11 @@
 .method public onDisplay()V
     .locals 0
 
-    .prologue
-    .line 127
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->attachPreferenceManager()V
 
-    .line 128
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->setupDialogDismissRelationship()V
 
-    .line 129
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcAbsPreferenceAlertActivity;->simulateClick()V
 
-    .line 130
     return-void
 .end method

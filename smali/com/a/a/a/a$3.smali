@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 481
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     return-void
@@ -30,14 +28,11 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 483
     invoke-static {}, Lcom/a/a/a/a;->d()Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startScan()Z
 
-    .line 484
     return-void
 .end method

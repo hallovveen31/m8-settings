@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 331
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$4;->this$0:Lcom/android/settings/users/UserSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 333
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$4;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->removeUserNow()V
     invoke-static {v0}, Lcom/android/settings/users/UserSettings;->access$900(Lcom/android/settings/users/UserSettings;)V
 
-    .line 334
     return-void
 .end method

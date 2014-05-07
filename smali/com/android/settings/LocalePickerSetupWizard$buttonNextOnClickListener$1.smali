@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 316
     iput-object p1, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener$1;->this$1:Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 319
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener$1;->this$1:Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;
 
     iget-object v0, v0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
@@ -53,7 +48,6 @@
 
     invoke-virtual {v0}, Lcom/android/settings/LocalePickerSetupWizardFragment;->updateLocale()V
 
-    .line 320
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener$1;->this$1:Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;
 
     iget-object v0, v0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
@@ -67,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 321
     return-void
 .end method

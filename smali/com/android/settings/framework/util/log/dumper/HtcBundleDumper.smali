@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,7 +54,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->TAG:Ljava/lang/String;
 
-    .line 42
     const-string v0, "[Pp][Aa][Ss][Ss][Ww][Oo][Er][Dd]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -71,8 +68,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lcom/android/settings/framework/util/log/dumper/HtcAbsDumper;-><init>()V
 
     return-void
@@ -82,19 +77,12 @@
 # virtual methods
 .method public appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 11
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "bundle"
 
-    .prologue
-    .line 59
     if-nez p3, :cond_1
 
-    .line 109
     :cond_0
     return-void
 
-    .line 64
     :cond_1
     invoke-virtual {p3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -104,8 +92,6 @@
 
     move-result-object v2
 
-    .line 71
-    .local v2, itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     const-string v7, ":key_value_format:"
 
     const-string v8, "%1$s: %2$s"
@@ -114,8 +100,6 @@
 
     move-result-object v0
 
-    .line 74
-    .local v0, format:Ljava/lang/String;
     :cond_2
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -124,21 +108,16 @@
 
     if-eqz v7, :cond_0
 
-    .line 75
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 76
-    .local v3, key:Ljava/lang/String;
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v6
 
-    .line 78
-    .local v6, value:Ljava/lang/Object;
     sget-object v7, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->sPasswordPattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v7, v3}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -151,14 +130,10 @@
 
     move-result-object v3
 
-    .line 82
     instance-of v1, v6, Landroid/os/Bundle;
 
-    .line 85
-    .local v1, hasSubBundle:Z
     if-eqz v6, :cond_3
 
-    .line 86
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,8 +166,6 @@
 
     move-result-object v5
 
-    .line 92
-    .local v5, type:Ljava/lang/String;
     :goto_1
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -231,10 +204,8 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 99
     if-eqz v1, :cond_2
 
-    .line 100
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -253,8 +224,6 @@
 
     move-result-object v4
 
-    .line 101
-    .local v4, subPrefix:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -281,13 +250,10 @@
 
     invoke-virtual {p1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 102
     check-cast v6, Landroid/os/Bundle;
 
-    .end local v6           #value:Ljava/lang/Object;
     invoke-virtual {p0, p1, v4, v6}, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 103
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -316,34 +282,22 @@
 
     goto/16 :goto_0
 
-    .line 88
-    .end local v4           #subPrefix:Ljava/lang/String;
-    .end local v5           #type:Ljava/lang/String;
-    .restart local v6       #value:Ljava/lang/Object;
     :cond_3
     const-string v5, ""
 
-    .restart local v5       #type:Ljava/lang/String;
     goto :goto_1
 
     :cond_4
     move-object v7, v6
 
-    .line 92
     goto :goto_2
 .end method
 
 .method public bridge synthetic appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 19
     check-cast p3, Landroid/os/Bundle;
 
-    .end local p3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/os/Bundle;)V
 
     return-void
@@ -352,8 +306,6 @@
 .method public getClassName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 53
     const-class v0, Landroid/os/Bundle;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -366,8 +318,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->TAG:Ljava/lang/String;
 
     return-object v0

@@ -197,7 +197,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -208,7 +207,6 @@
 
     const/4 v3, 0x0
 
-    .line 98
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_auto_time"
@@ -217,7 +215,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_auto_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 99
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_auto_time_zone"
@@ -226,7 +223,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_auto_time_zone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 100
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_accelerometer_rotation"
@@ -235,7 +231,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_accelerometer_rotation:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 101
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_inactivity_time"
@@ -244,7 +239,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_inactivity_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 102
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_screen_off_timeout"
@@ -253,7 +247,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_off_timeout:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 103
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_animation_scale_jb"
@@ -264,7 +257,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_animation_scale_jb:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 104
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_application_automatic_startup"
@@ -275,7 +267,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_application_automatic_startup:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 105
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_application_notification"
@@ -286,7 +277,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_application_notification:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 106
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_3d_home_screen"
@@ -297,7 +287,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_3d_home_screen:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 107
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_wireless_sleep_mode_enabled"
@@ -308,7 +297,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_mode_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 108
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_wireless_sleep_start_time"
@@ -319,7 +307,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_start_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 109
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_wireless_sleep_end_time"
@@ -330,7 +317,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_end_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 110
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_time_12_24"
@@ -341,7 +327,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_time_12_24:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 111
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_wifi_sleep_policy"
@@ -352,7 +337,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_wifi_sleep_policy:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 112
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_airplane_mode_toggleable_radios"
@@ -363,7 +347,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_airplane_mode_toggleable_radios:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 113
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_airplane_mode_radios"
@@ -374,7 +357,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_airplane_mode_radios:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 114
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htcspeak_default_lang"
@@ -385,7 +367,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htcspeak_default_lang:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 115
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_power_save_3g"
@@ -396,7 +377,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_power_save_3g:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 116
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_audible_touch_tones"
@@ -407,7 +387,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_audible_touch_tones:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 117
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_screen_brightness_mode"
@@ -418,7 +397,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_brightness_mode:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 118
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_screen_brightness"
@@ -429,7 +407,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_brightness:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 119
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_screen_auto_brightness_max"
@@ -440,7 +417,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_auto_brightness_max:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 121
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_music"
@@ -451,7 +427,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 122
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_ring"
@@ -462,7 +437,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_ring:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 123
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_alarm"
@@ -473,7 +447,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_alarm:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 124
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_music_speaker"
@@ -484,7 +457,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_speaker:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 125
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_music_headset"
@@ -495,7 +467,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_headset:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 126
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_music_headphone"
@@ -506,7 +477,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_headphone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 127
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_volume_music_bt"
@@ -517,7 +487,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_bt:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 129
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_recent_apps_button"
@@ -528,7 +497,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_recent_apps_button:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 136
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_gestures_enabled"
@@ -539,7 +507,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_gestures_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 143
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_font_size"
@@ -550,7 +517,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_font_size:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 150
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_compass_warning"
@@ -561,7 +527,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_compass_warning:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 157
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_show_all_quick_tips"
@@ -572,7 +537,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_show_all_quick_tips:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 162
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_install_non_market_apps"
@@ -583,7 +547,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_install_non_market_apps:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 163
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_location_providers_allowed"
@@ -594,7 +557,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 164
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_location_network_providers_allowed"
@@ -605,7 +567,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_network_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 165
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_location_gps_providers_allowed"
@@ -616,7 +577,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_gps_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 167
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_location_vzw_lbs_providers_allowed"
@@ -627,7 +587,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_vzw_lbs_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 168
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_fastboot_allowed"
@@ -638,7 +597,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_fastboot_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 169
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_phone_finder_enabled"
@@ -649,7 +607,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_phone_finder_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 170
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_data_roaming_allowed"
@@ -660,7 +617,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 171
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_data_roaming_sound_allowed"
@@ -671,7 +627,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_sound_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 172
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_national_roaming_allowed"
@@ -682,7 +637,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_national_roaming_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 173
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_vzw_global_roaming_options"
@@ -693,7 +647,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_vzw_global_roaming_options:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 174
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_data_roaming_slot2"
@@ -704,7 +657,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_slot2:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 176
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_wimax_on"
@@ -715,7 +667,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wimax_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 179
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_backup_enabled"
@@ -726,7 +677,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_backup_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 181
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_message_notification_preview"
@@ -737,7 +687,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_message_notification_preview:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 182
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_phone_notification_preview"
@@ -748,7 +697,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_phone_notification_preview:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 185
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_mobile_network_on"
@@ -759,7 +707,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_mobile_network_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 188
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_sound_effects_enabled"
@@ -770,7 +717,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_sound_effects_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 189
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_lockscreen_sounds_enabled"
@@ -781,7 +727,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_lockscreen_sounds_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 192
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "show_2g_ui"
@@ -792,7 +737,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->show_2g_ui:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 193
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_2g_on"
@@ -803,7 +747,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_2g_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 194
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_night_turn_off_wifi"
@@ -814,7 +757,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_night_turn_off_wifi:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 197
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_user_powersaver_enable"
@@ -825,7 +767,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_user_powersaver_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 198
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_powersaver_reduce_CPU"
@@ -836,7 +777,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_reduce_CPU:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 199
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_powersaver_screen_brightness"
@@ -847,7 +787,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_screen_brightness:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 200
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_powersaver_haptic_feedback"
@@ -858,7 +797,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_haptic_feedback:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 201
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_powersaver_connectivity"
@@ -869,7 +807,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_connectivity:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 202
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_abnormal_app_monitor_enable"
@@ -880,7 +817,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_abnormal_app_monitor_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 203
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_hide_ui_user_powersaver"
@@ -891,7 +827,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_hide_ui_user_powersaver:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 204
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_hide_ui_powersaver_connectivity"
@@ -902,7 +837,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_hide_ui_powersaver_connectivity:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 206
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_nfc_on"
@@ -913,7 +847,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_nfc_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 207
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_dual_sim_ringtone_mode"
@@ -924,7 +857,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_dual_sim_ringtone_mode:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 208
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_app_storage_loc"
@@ -935,7 +867,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_app_storage_loc:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 210
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_ringtone"
@@ -946,7 +877,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 211
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_ringtone_mode_cdma"
@@ -957,7 +887,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone_mode_cdma:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 212
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_ringtone_mode_wcdma"
@@ -968,7 +897,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone_mode_wcdma:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 213
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_notification_sound"
@@ -979,7 +907,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_notification_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 214
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_alarm_alert"
@@ -990,7 +917,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_alarm_alert:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 215
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_calendar_sound"
@@ -1001,7 +927,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_calendar_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 216
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_message_sound"
@@ -1012,7 +937,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_message_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 217
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_email_sound"
@@ -1023,7 +947,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_email_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 218
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_task_sound"
@@ -1034,7 +957,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_task_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 221
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_assisted_gps_enabled"
@@ -1045,7 +967,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_assisted_gps_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 223
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_htc_pull_to_fresh_sound_enabled"
@@ -1056,7 +977,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_pull_to_fresh_sound_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 224
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_home_button_default_option"
@@ -1067,7 +987,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_home_button_default_option:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 225
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_support_button_default_option"
@@ -1078,7 +997,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_support_button_default_option:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 237
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_package_verifier_enable"
@@ -1089,7 +1007,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_package_verifier_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 246
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_stay_on_while_plugged_in"
@@ -1100,7 +1017,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_stay_on_while_plugged_in:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 254
     new-instance v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     const-string v1, "def_emergency_tone"
@@ -1111,7 +1027,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_emergency_tone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    .line 94
     const/16 v0, 0x53
 
     new-array v0, v0, [Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
@@ -1611,16 +1526,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 94
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -1628,10 +1539,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 94
     const-class v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -1646,11 +1554,9 @@
 .method public static values()[Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
     .locals 1
 
-    .prologue
-    .line 94
     sget-object v0, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->$VALUES:[Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

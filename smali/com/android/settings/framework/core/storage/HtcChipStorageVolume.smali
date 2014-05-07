@@ -21,10 +21,8 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 148
     new-instance v0, Landroid/os/storage/StorageVolume;
 
     new-instance v1, Ljava/io/File;
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/storage/HtcChipStorageVolume;->VOLUME:Landroid/os/storage/StorageVolume;
 
-    .line 159
     new-instance v0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->CHIP_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
@@ -70,15 +67,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 168
     sget-object v0, Lcom/android/settings/framework/core/storage/HtcChipStorageVolume;->VOLUME:Landroid/os/storage/StorageVolume;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcChipStorageVolume;->METADATA:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/framework/core/storage/HtcStorageVolume;-><init>(Landroid/os/storage/StorageVolume;Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;)V
 
-    .line 169
     return-void
 .end method
 
@@ -86,10 +80,7 @@
 # virtual methods
 .method public getRawTotalAvailableSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 5
-    .parameter "statFs"
 
-    .prologue
-    .line 187
     new-instance v0, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
 
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcChipStorageVolume$ChipInfo;->getChipTotalSpace()J
@@ -108,14 +99,10 @@
 .method public getState()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 173
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcStorageManager;->getPhoneStorageVolume()Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
 
     move-result-object v0
 
-    .line 176
-    .local v0, phoneVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
     if-eqz v0, :cond_0
 
     if-eqz v0, :cond_1
@@ -126,11 +113,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 178
     :cond_0
     const-string v1, "mounted"
 
-    .line 180
     :goto_0
     return-object v1
 

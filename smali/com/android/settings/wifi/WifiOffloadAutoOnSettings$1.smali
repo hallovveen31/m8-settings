@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 3
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,34 +46,26 @@
         }
     .end annotation
 
-    .prologue
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
-    .line 118
     if-nez p3, :cond_1
 
-    .line 119
     iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
     #calls: Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->setupTimer()V
     invoke-static {v1}, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->access$000(Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;)V
 
-    .line 120
     iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 129
     :cond_0
     :goto_0
     return-void
 
-    .line 121
     :cond_1
     if-ne p3, v2, :cond_0
 
-    .line 122
     iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
     #getter for: Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->mWifiOffloadManager:Lcom/android/settings/wifi/WifiOffloadManager;
@@ -90,7 +75,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/settings/wifi/WifiOffloadManager;->persistNeverAutoTurnOn(Z)V
 
-    .line 123
     iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
     #getter for: Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->mWifiOffloadManager:Lcom/android/settings/wifi/WifiOffloadManager;
@@ -102,22 +86,18 @@
 
     move-result-object v0
 
-    .line 124
-    .local v0, wifiManager:Landroid/net/wifi/WifiManager;
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 125
     sput-boolean v2, Lcom/android/settings/wifi/WifiOffloadManager;->mDontReset:Z
 
-    .line 127
     :cond_2
     iget-object v1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$1;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method

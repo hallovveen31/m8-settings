@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodPreference;Lcom/android/settings/inputmethod/InputMethodPreference;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 276
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodPreference$6;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$6;->val$chkPref:Lcom/android/settings/inputmethod/InputMethodPreference;
@@ -44,17 +40,12 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 279
     iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodPreference$6;->val$chkPref:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     invoke-virtual {v0, v1, v1}, Lcom/android/settings/inputmethod/InputMethodPreference;->setChecked(ZZ)V
 
-    .line 280
     return-void
 .end method

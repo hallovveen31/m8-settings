@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 632
     iput-object p1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3$1;->this$2:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 634
     const-string v0, "RingerVolume"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,10 +78,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     monitor-enter p0
 
-    .line 636
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3$1;->this$2:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;
 
@@ -99,7 +92,6 @@
 
     if-nez v0, :cond_0
 
-    .line 637
     iget-object v0, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3$1;->this$2:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;
 
     iget-object v0, v0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$3;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
@@ -138,13 +130,11 @@
     #setter for: Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->mRingtone:Landroid/media/Ringtone;
     invoke-static {v0, v1}, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->access$1402(Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;Landroid/media/Ringtone;)Landroid/media/Ringtone;
 
-    .line 640
     :goto_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 642
     const-string v0, "RingerVolume"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -186,10 +176,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     return-void
 
-    .line 639
     :cond_0
     :try_start_1
     const-string v0, "RingerVolume"
@@ -200,7 +188,6 @@
 
     goto :goto_0
 
-    .line 640
     :catchall_0
     move-exception v0
 

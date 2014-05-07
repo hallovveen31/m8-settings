@@ -11,8 +11,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -21,12 +19,8 @@
 .method public static final getAppsTitleResId()I
     .locals 3
 
-    .prologue
-    .line 103
     const v0, 0x7f0c0f49
 
-    .line 106
-    .local v0, resId:I
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v1
@@ -43,34 +37,23 @@
 
     if-eqz v1, :cond_0
 
-    .line 108
     const v0, 0x7f0c0aaa
 
-    .line 111
     :cond_0
     return v0
 .end method
 
 .method public static getUnknownSourcesVisibility(Landroid/content/Context;)Z
     .locals 6
-    .parameter "context"
 
-    .prologue
-    .line 30
     const-string v0, "unknown_sources_visibility"
 
-    .line 32
-    .local v0, KEY:Ljava/lang/String;
     const/4 v2, 0x1
 
-    .line 35
-    .local v2, visible:Z
     invoke-static {p0}, Lcom/htc/preference/HtcPreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 36
-    .local v1, sp:Landroid/content/SharedPreferences;
     const-string v4, "unknown_sources_visibility"
 
     invoke-interface {v1, v4}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
@@ -79,7 +62,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 37
     const-string v4, "unknown_sources_visibility"
 
     invoke-interface {v1, v4, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -88,15 +70,9 @@
 
     move v3, v2
 
-    .line 46
-    .end local v2           #visible:Z
-    .local v3, visible:Z
     :goto_0
     return v3
 
-    .line 42
-    .end local v3           #visible:Z
-    .restart local v2       #visible:Z
     :cond_0
     const-string v4, "unknown_sources_visibility"
 
@@ -104,7 +80,6 @@
 
     move-result v2
 
-    .line 44
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v4
@@ -119,29 +94,18 @@
 
     move v3, v2
 
-    .line 46
-    .end local v2           #visible:Z
-    .restart local v3       #visible:Z
     goto :goto_0
 .end method
 
 .method public static setUnknownSourcesVisibility(Landroid/content/Context;Z)Z
     .locals 4
-    .parameter "context"
-    .parameter "visible"
 
-    .prologue
-    .line 58
     const-string v0, "unknown_sources_visibility"
 
-    .line 61
-    .local v0, KEY:Ljava/lang/String;
     invoke-static {p0}, Lcom/htc/preference/HtcPreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 62
-    .local v1, sp:Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -162,8 +126,6 @@
 .method public static final supportAutomaticStartup()Z
     .locals 1
 
-    .prologue
-    .line 80
     const/4 v0, 0x1
 
     return v0
@@ -172,8 +134,6 @@
 .method public static final supportNotification()Z
     .locals 1
 
-    .prologue
-    .line 96
     const/4 v0, 0x1
 
     return v0

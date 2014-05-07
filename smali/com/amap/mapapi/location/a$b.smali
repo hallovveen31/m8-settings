@@ -31,34 +31,23 @@
 # direct methods
 .method public constructor <init>(JFLandroid/location/LocationListener;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 371
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/amap/mapapi/location/a$b;->e:Z
 
-    .line 372
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/amap/mapapi/location/a$b;->f:Landroid/location/Location;
 
-    .line 376
     iput-wide p1, p0, Lcom/amap/mapapi/location/a$b;->a:J
 
-    .line 377
     iput p3, p0, Lcom/amap/mapapi/location/a$b;->b:F
 
-    .line 378
     iput-object p4, p0, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 
-    .line 379
     return-void
 .end method
 
@@ -66,31 +55,24 @@
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
-    .parameter
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 392
     if-ne p0, p1, :cond_1
 
-    .line 404
     :cond_0
     :goto_0
     return v0
 
-    .line 394
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 395
     goto :goto_0
 
-    .line 396
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -104,29 +86,23 @@
 
     move v0, v1
 
-    .line 397
     goto :goto_0
 
-    .line 398
     :cond_3
     check-cast p1, Lcom/amap/mapapi/location/a$b;
 
-    .line 399
     iget-object v2, p0, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 
     if-nez v2, :cond_4
 
-    .line 400
     iget-object v2, p1, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 
     if-eqz v2, :cond_0
 
     move v0, v1
 
-    .line 401
     goto :goto_0
 
-    .line 402
     :cond_4
     iget-object v2, p0, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 
@@ -140,16 +116,12 @@
 
     move v0, v1
 
-    .line 403
     goto :goto_0
 .end method
 
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 383
-    .line 385
     iget-object v0, p0, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 
     if-nez v0, :cond_0
@@ -159,10 +131,8 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 387
     return v0
 
-    .line 385
     :cond_0
     iget-object v0, p0, Lcom/amap/mapapi/location/a$b;->c:Landroid/location/LocationListener;
 

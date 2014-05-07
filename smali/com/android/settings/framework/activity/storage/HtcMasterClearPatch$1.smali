@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 46
     iput-object p1, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onStorageStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "path"
-    .parameter "oldState"
-    .parameter "newState"
 
-    .prologue
-    .line 51
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     const-string v1, "onStorageStateChanged(): SdCardStorage: "
@@ -54,7 +45,6 @@
     #calls: Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->Log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->access$000(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;Ljava/lang/String;)V
 
-    .line 53
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +68,6 @@
     #calls: Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->Log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->access$000(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;Ljava/lang/String;)V
 
-    .line 54
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,7 +91,6 @@
     #calls: Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->Log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->access$000(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;Ljava/lang/String;)V
 
-    .line 55
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -126,13 +114,11 @@
     #calls: Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->Log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->access$000(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;Ljava/lang/String;)V
 
-    .line 57
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch$1;->this$0:Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;
 
     #calls: Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->updateExternalStorageContainer()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;->access$100(Lcom/android/settings/framework/activity/storage/HtcMasterClearPatch;)V
 
-    .line 58
     return-void
 .end method

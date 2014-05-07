@@ -3,8 +3,8 @@
 .source "HtcCloudStorageVolume.java"
 
 # interfaces
-.implements Lcom/android/settings/framework/core/storage/cloud/HtcICloudStorageVolume;
 .implements Lcom/android/settings/framework/app/HtcActivityListener$OnResumeInBackgroundListener;
+.implements Lcom/android/settings/framework/core/storage/cloud/HtcICloudStorageVolume;
 
 
 # annotations
@@ -68,8 +68,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +94,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->TAG:Ljava/lang/String;
 
-    .line 44
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->DEBUG:Z
@@ -106,17 +103,11 @@
 
 .method public constructor <init>(Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;)V
     .locals 2
-    .parameter "account"
 
-    .prologue
-    .line 58
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     iput-object p0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mThis:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
 
-    .line 54
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->TAG:Ljava/lang/String;
@@ -125,21 +116,18 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
-    .line 55
     new-instance v0, Lcom/android/settings/framework/os/response/HtcResponser;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/os/response/HtcResponser;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
-    .line 59
     invoke-static {}, Lcom/android/settings/framework/app/HtcSettingsApplication;->getApplication()Landroid/app/Application;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mContext:Landroid/content/Context;
 
-    .line 60
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;->getCloud()Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;
@@ -152,7 +140,6 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mService:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
 
-    .line 62
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mService:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->getAccountManager()Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;
@@ -161,19 +148,14 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccountManager:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;
 
-    .line 63
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccount:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
 
-    .line 64
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;)Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mThis:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
 
     return-object v0
@@ -181,10 +163,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;)Lcom/android/settings/framework/os/response/HtcResponser;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
     return-object v0
@@ -192,25 +171,17 @@
 
 .method private runHeavyTask(Ljava/lang/Runnable;)V
     .locals 2
-    .parameter "task"
 
-    .prologue
-    .line 362
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/Thread;
 
     invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 363
-    .local v0, thread:Ljava/lang/Thread;
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
 
-    .line 364
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 365
     return-void
 .end method
 
@@ -218,11 +189,7 @@
 # virtual methods
 .method public addOnResponseListener(Lcom/android/settings/framework/os/response/HtcIResponser$OnResponseListener;)Z
     .locals 1
-    .parameter "listener"
 
-    .prologue
-    .line 343
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
     invoke-virtual {v0, p1}, Lcom/android/settings/framework/os/response/HtcResponser;->addOnResponseListener(Lcom/android/settings/framework/os/response/HtcIResponser$OnResponseListener;)Z
@@ -234,25 +201,17 @@
 
 .method public broadcast(Landroid/os/Message;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 358
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
     invoke-virtual {v0, p1}, Lcom/android/settings/framework/os/response/HtcResponser;->broadcast(Landroid/os/Message;)V
 
-    .line 359
     return-void
 .end method
 
 .method public canEncrypt()Z
     .locals 1
 
-    .prologue
-    .line 181
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -261,9 +220,6 @@
 .method public bridge synthetic clone()Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
     .locals 1
 
-    .prologue
-    .line 37
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     invoke-virtual {p0}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->clone()Lcom/android/settings/framework/core/storage/cloud/HtcICloudStorageVolume;
 
     move-result-object v0
@@ -274,9 +230,6 @@
 .method public clone()Lcom/android/settings/framework/core/storage/cloud/HtcICloudStorageVolume;
     .locals 2
 
-    .prologue
-    .line 70
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -286,19 +239,14 @@
     :try_end_0
     .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 74
     :goto_0
     return-object v1
 
-    .line 71
     :catch_0
     move-exception v0
 
-    .line 72
-    .local v0, e:Ljava/lang/CloneNotSupportedException;
-    invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 74
     const/4 v1, 0x0
 
     goto :goto_0
@@ -312,9 +260,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     invoke-virtual {p0}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->clone()Lcom/android/settings/framework/core/storage/cloud/HtcICloudStorageVolume;
 
     move-result-object v0
@@ -324,11 +269,7 @@
 
 .method public decrypt(Ljava/lang/String;)V
     .locals 1
-    .parameter "password"
 
-    .prologue
-    .line 319
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -338,12 +279,7 @@
 
 .method public decrypt(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "password"
-    .parameter "wait"
 
-    .prologue
-    .line 324
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -353,11 +289,7 @@
 
 .method public encrypt(Ljava/lang/String;)V
     .locals 1
-    .parameter "password"
 
-    .prologue
-    .line 309
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -367,12 +299,7 @@
 
 .method public encrypt(Ljava/lang/String;Z)V
     .locals 1
-    .parameter "password"
-    .parameter "wait"
 
-    .prologue
-    .line 314
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -383,9 +310,6 @@
 .method public format()Z
     .locals 1
 
-    .prologue
-    .line 299
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -395,11 +319,7 @@
 
 .method public format(Z)Z
     .locals 1
-    .parameter "wait"
 
-    .prologue
-    .line 304
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -410,9 +330,6 @@
 .method public getAccount()Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
     .locals 1
 
-    .prologue
-    .line 369
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccount:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
 
     return-object v0
@@ -421,9 +338,6 @@
 .method public getAppsSpace()V
     .locals 1
 
-    .prologue
-    .line 259
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -434,9 +348,6 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 79
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -445,9 +356,6 @@
 .method public getDependencyPaths()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 127
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return-object v0
@@ -456,9 +364,6 @@
 .method public getEncryptor()Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor;
     .locals 1
 
-    .prologue
-    .line 191
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -469,9 +374,6 @@
 .method public getIndex()I
     .locals 1
 
-    .prologue
-    .line 102
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, -0x1
 
     return v0
@@ -480,9 +382,6 @@
 .method public getMediaFilesSpace()V
     .locals 1
 
-    .prologue
-    .line 269
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -493,9 +392,6 @@
 .method public getPath()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 132
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -514,7 +410,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/property/CloudStorageConst$ServicePluginName;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -554,9 +450,6 @@
 .method public getPathFile()Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 142
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -566,11 +459,7 @@
 
 .method public getRawTotalAvailableSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 1
-    .parameter "statFs"
 
-    .prologue
-    .line 254
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -581,9 +470,6 @@
 .method public getStatFs()Lcom/android/settings/framework/core/storage/HtcStatFs;
     .locals 1
 
-    .prologue
-    .line 84
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -594,9 +480,6 @@
 .method public getState()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 155
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccountManager:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;
 
@@ -608,29 +491,22 @@
 
     if-eqz v1, :cond_0
 
-    .line 156
     const-string v1, "mounted"
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 161
     :goto_0
     return-object v1
 
-    .line 158
     :catch_0
     move-exception v0
 
-    .line 159
-    .local v0, e:Ljava/lang/Exception;
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     const-string v2, "Failed to invoke getState()"
 
     invoke-static {v1, v2, v0}, Lcom/android/settings/framework/util/log/HtcLog;->e(Lcom/android/settings/framework/util/log/HtcLog$TagInfo;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 161
-    .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     const-string v1, "unmounted"
 
@@ -640,9 +516,6 @@
 .method public getTotalAvailableSpace()Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 1
 
-    .prologue
-    .line 196
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->getTotalAvailableSpace(Z)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
@@ -654,11 +527,7 @@
 
 .method public getTotalAvailableSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 1
-    .parameter "statFs"
 
-    .prologue
-    .line 249
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -668,29 +537,21 @@
 
 .method public getTotalAvailableSpace(Z)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 9
-    .parameter "wait"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const-wide/16 v4, 0x0
 
-    .line 210
     if-eqz p1, :cond_1
 
-    .line 211
     new-instance v2, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
 
     invoke-direct {v2}, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;-><init>()V
 
-    .line 214
-    .local v2, tas:Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     iget-object v3, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mService:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
 
     iget-object v4, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccount:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
 
     invoke-virtual {v3, v4}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->init(Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;)V
 
-    .line 217
     :try_start_0
     iget-object v3, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mAccountManager:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;
 
@@ -700,11 +561,8 @@
 
     move-result-object v1
 
-    .line 218
-    .local v1, quota:Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 219
     const-string v3, "quota_total"
 
     invoke-virtual {v1, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -713,7 +571,6 @@
 
     iput-wide v3, v2, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;->totalSpace:J
 
-    .line 221
     iget-wide v3, v2, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;->totalSpace:J
 
     const-string v5, "quota_used"
@@ -736,26 +593,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
-    .end local v1           #quota:Landroid/os/Bundle;
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mService:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;
 
     invoke-virtual {v3}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->release()V
 
-    .line 243
-    .end local v2           #tas:Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     :goto_1
     return-object v2
 
-    .line 225
-    .restart local v2       #tas:Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     :catch_0
     move-exception v0
 
-    .line 226
-    .local v0, e:Ljava/lang/Exception;
     iget-object v3, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     const-string v4, "Failed to invoke getTotalAvailableSpace()"
@@ -764,9 +613,6 @@
 
     goto :goto_0
 
-    .line 233
-    .end local v0           #e:Ljava/lang/Exception;
-    .end local v2           #tas:Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     :cond_1
     new-instance v3, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;
 
@@ -774,7 +620,6 @@
 
     invoke-direct {p0, v3}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->runHeavyTask(Ljava/lang/Runnable;)V
 
-    .line 243
     new-instance v2, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
 
     invoke-direct {v2, v4, v5, v4, v5}, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;-><init>(JJ)V
@@ -785,9 +630,6 @@
 .method public getType()Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
     .locals 1
 
-    .prologue
-    .line 97
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     sget-object v0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->CLOUD_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     return-object v0
@@ -796,9 +638,6 @@
 .method public hasDependencyPaths()Z
     .locals 1
 
-    .prologue
-    .line 122
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -807,9 +646,6 @@
 .method public isEmulated()Z
     .locals 1
 
-    .prologue
-    .line 171
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -818,9 +654,6 @@
 .method public isEncrypted()Z
     .locals 1
 
-    .prologue
-    .line 186
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -829,9 +662,6 @@
 .method public isMountable()Z
     .locals 1
 
-    .prologue
-    .line 166
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -840,9 +670,6 @@
 .method public isPrimary()Z
     .locals 1
 
-    .prologue
-    .line 107
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -851,9 +678,6 @@
 .method public isRemovable()Z
     .locals 1
 
-    .prologue
-    .line 176
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x1
 
     return v0
@@ -862,9 +686,6 @@
 .method public isSecondary()Z
     .locals 1
 
-    .prologue
-    .line 112
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -873,9 +694,6 @@
 .method public isTertiary()Z
     .locals 1
 
-    .prologue
-    .line 117
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     const/4 v0, 0x0
 
     return v0
@@ -884,9 +702,6 @@
 .method public mount()Z
     .locals 1
 
-    .prologue
-    .line 279
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -896,11 +711,7 @@
 
 .method public mount(Z)Z
     .locals 1
-    .parameter "wait"
 
-    .prologue
-    .line 284
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -910,57 +721,39 @@
 
 .method public onResumeInBackground(Landroid/app/Activity;)V
     .locals 1
-    .parameter "activity"
 
-    .prologue
-    .line 92
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     sget-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESUME_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->refresh(Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;)V
 
-    .line 93
     return-void
 .end method
 
 .method public refresh(Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;)V
     .locals 1
-    .parameter "lifecycle"
 
-    .prologue
-    .line 329
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$2;
 
     invoke-direct {v0, p0, p1}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$2;-><init>(Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;)V
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->runHeavyTask(Ljava/lang/Runnable;)V
 
-    .line 339
     return-void
 .end method
 
 .method public removeAllOnResponseListeners()V
     .locals 1
 
-    .prologue
-    .line 353
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/os/response/HtcResponser;->removeAllOnResponseListeners()V
 
-    .line 354
     return-void
 .end method
 
 .method public removeOnResponseListener(Lcom/android/settings/framework/os/response/HtcIResponser$OnResponseListener;)Z
     .locals 1
-    .parameter "listener"
 
-    .prologue
-    .line 348
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mResponser:Lcom/android/settings/framework/os/response/HtcResponser;
 
     invoke-virtual {v0, p1}, Lcom/android/settings/framework/os/response/HtcResponser;->removeOnResponseListener(Lcom/android/settings/framework/os/response/HtcIResponser$OnResponseListener;)Z
@@ -973,9 +766,6 @@
 .method public stopGettingAppsSpace()V
     .locals 1
 
-    .prologue
-    .line 264
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -986,9 +776,6 @@
 .method public stopGettingMediaFilesSpace()V
     .locals 1
 
-    .prologue
-    .line 274
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -999,9 +786,6 @@
 .method public unmount()Z
     .locals 1
 
-    .prologue
-    .line 289
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1011,11 +795,7 @@
 
 .method public unmount(Z)Z
     .locals 1
-    .parameter "wait"
 
-    .prologue
-    .line 294
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume<TCloudService;>;"
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

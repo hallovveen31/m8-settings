@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/PSActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/settings/PSActivity$1;->this$0:Lcom/android/settings/PSActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +36,7 @@
 # virtual methods
 .method public onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
     .locals 2
-    .parameter "arg0"
-    .parameter "arg1"
-    .parameter "keyevent"
 
-    .prologue
-    .line 111
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v0
@@ -53,12 +45,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 113
     iget-object v0, p0, Lcom/android/settings/PSActivity$1;->this$0:Lcom/android/settings/PSActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/PSActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 115
     :cond_0
     const/4 v0, 0x0
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1104
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$9;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 6
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,27 +46,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 1107
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/settings/DataUsageSummary$CycleItem;
 
-    .line 1108
-    .local v0, cycle:Lcom/android/settings/DataUsageSummary$CycleItem;
     instance-of v1, v0, Lcom/android/settings/DataUsageSummary$CycleChangeItem;
 
     if-eqz v1, :cond_0
 
-    .line 1111
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$9;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-static {v1}, Lcom/android/settings/DataUsageSummary$CycleEditorFragment;->show(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 1114
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$9;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #getter for: Lcom/android/settings/DataUsageSummary;->mCycleSpinner:Landroid/widget/Spinner;
@@ -83,13 +69,11 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v2}, Landroid/widget/Spinner;->setSelection(I)V
+    invoke-virtual {v1, v2}, Landroid/widget/AbsSpinner;->setSelection(I)V
 
-    .line 1128
     :goto_0
     return-void
 
-    .line 1124
     :cond_0
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$9;->this$0:Lcom/android/settings/DataUsageSummary;
 
@@ -104,7 +88,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/android/settings/widget/ChartDataUsageView;->setVisibleRange(JJ)V
 
-    .line 1126
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$9;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #calls: Lcom/android/settings/DataUsageSummary;->updateDetailData()V
@@ -115,7 +98,6 @@
 
 .method public onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -124,8 +106,5 @@
         }
     .end annotation
 
-    .prologue
-    .line 1133
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/PSActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/settings/PSActivity$6;->this$0:Lcom/android/settings/PSActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,13 +33,9 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 221
     const-string v2, "PSReceiver_PSActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -69,7 +62,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -82,34 +74,25 @@
 
     if-eqz v2, :cond_1
 
-    .line 225
     const-string v2, "plugged"
 
     invoke-virtual {p2, v2, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 226
-    .local v1, pluggedType:I
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_0
 
     const/4 v0, 0x1
 
-    .line 227
-    .local v0, USB:Z
     :cond_0
     if-nez v0, :cond_1
 
-    .line 228
     iget-object v2, p0, Lcom/android/settings/PSActivity$6;->this$0:Lcom/android/settings/PSActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/PSActivity;->finish()V
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
-    .line 231
-    .end local v0           #USB:Z
-    .end local v1           #pluggedType:I
     :cond_1
     return-void
 .end method

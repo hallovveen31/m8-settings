@@ -218,8 +218,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -227,904 +225,505 @@
 
 .method public static getName(I)Ljava/lang/String;
     .locals 1
-    .parameter "deviceType"
 
-    .prologue
-    .line 577
     packed-switch p0, :pswitch_data_0
 
-    .line 873
     :pswitch_0
     const-string v0, "UNKNOWN"
 
-    .line 875
-    .local v0, name:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 579
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1
     const-string v0, "HTC Generic"
 
-    .line 580
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 582
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2
     const-string v0, "Globalive WWE"
 
-    .line 583
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 585
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3
     const-string v0, "HTC ISR"
 
-    .line 586
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 588
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4
     const-string v0, "HTC WWE For US Brightpoint"
 
-    .line 589
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 591
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5
     const-string v0, "HTC WWE MMR"
 
-    .line 592
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 594
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_6
     const-string v0, "Bell Mobility WWE"
 
-    .line 595
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 597
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_7
     const-string v0, "BrightstarUS WWE"
 
-    .line 598
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 600
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_8
     const-string v0, "Cingular USA"
 
-    .line 601
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 603
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_9
     const-string v0, "Cricket US"
 
-    .line 604
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 606
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_a
     const-string v0, "Rogers WWE"
 
-    .line 607
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 609
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_b
     const-string v0, "Sprint WWE"
 
-    .line 610
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 612
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_c
     const-string v0, "TMOUS"
 
-    .line 613
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 615
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_d
     const-string v0, "UTSTARCOM WWE Generic"
 
-    .line 616
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 618
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_e
     const-string v0, "VERIZON WWE"
 
-    .line 619
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 621
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_f
     const-string v0, "Brightstar AMX SPA"
 
-    .line 622
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 624
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_10
     const-string v0, "BrightStar SPA"
 
-    .line 625
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 627
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_11
     const-string v0, "BrightStar Telcel SPA"
 
-    .line 628
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 630
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_12
     const-string v0, "BrightStar Telefonica"
 
-    .line 631
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 633
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_13
     const-string v0, "HTC LA AMX SPA"
 
-    .line 634
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 636
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_14
     const-string v0, "HTC LA Entel SPA"
 
-    .line 637
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 639
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_15
     const-string v0, "HTC LA ESN Telcel"
 
-    .line 640
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 642
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_16
     const-string v0, "HTC LA Iusacell MX SPA"
 
-    .line 643
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 645
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_17
     const-string v0, "HTC LA SPA"
 
-    .line 646
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 648
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_18
     const-string v0, "HTC LA Telefonica SPA"
 
-    .line 649
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 651
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_19
     const-string v0, "HTCCN CHS"
 
-    .line 652
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 654
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1a
     const-string v0, "HTCCN CHS CMCC"
 
-    .line 655
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 657
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1b
     const-string v0, "HTCCN CHS CT"
 
-    .line 658
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 660
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1c
     const-string v0, "HTCCN CHS CT LAB"
 
-    .line 661
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 663
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1d
     const-string v0, "HTCCN CHS CU"
 
-    .line 664
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 666
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1e
     const-string v0, "HTCCN CHS LAB"
 
-    .line 667
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 669
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_1f
     const-string v0, "KDDI JP"
 
-    .line 670
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 672
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_20
     const-string v0, "hTC Asia AUS"
 
-    .line 673
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 675
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_21
     const-string v0, "hTC Asia India"
 
-    .line 676
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 678
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_22
     const-string v0, "hTC Asia SEA WWE"
 
-    .line 679
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 681
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_23
     const-string v0, "hTC Asia WWE"
 
-    .line 682
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 684
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_24
     const-string v0, "Optus AU"
 
-    .line 685
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 687
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_25
     const-string v0, "Telstra WWE"
 
-    .line 688
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 690
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_26
     const-string v0, "TELUS WWE"
 
-    .line 691
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 693
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_27
     const-string v0, "Bouygues FR"
 
-    .line 694
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 696
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_28
     const-string v0, "H3G AT"
 
-    .line 697
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 699
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_29
     const-string v0, "H3G UK"
 
-    .line 700
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 702
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2a
     const-string v0, "HTC Europe"
 
-    .line 703
-    .restart local v0       #name:Ljava/lang/String;
     goto :goto_0
 
-    .line 705
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2b
     const-string v0, "HTC RUS"
 
-    .line 706
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 708
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2c
     const-string v0, "O2 DE"
 
-    .line 709
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 711
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2d
     const-string v0, "O2 UK"
 
-    .line 712
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 714
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2e
     const-string v0, "Orange CH Generic"
 
-    .line 715
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 717
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_2f
     const-string v0, "Orange ES"
 
-    .line 718
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 720
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_30
     const-string v0, "Orange FR"
 
-    .line 721
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 723
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_31
     const-string v0, "Orange PL"
 
-    .line 724
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 726
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_32
     const-string v0, "Orange UK"
 
-    .line 727
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 729
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_33
     const-string v0, "Telecom NZ WWE"
 
-    .line 730
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 732
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_34
     const-string v0, "TIM IT (Telecom Italian)"
 
-    .line 733
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 735
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_35
     const-string v0, "TMO AT"
 
-    .line 736
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 738
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_36
     const-string v0, "TMO AT TeleRing"
 
-    .line 739
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 741
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_37
     const-string v0, "TMO CZ"
 
-    .line 742
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 744
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_38
     const-string v0, "TMO DE"
 
-    .line 745
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 747
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_39
     const-string v0, "TMO NL"
 
-    .line 748
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 750
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3a
     const-string v0, "TMO PL"
 
-    .line 751
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 753
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3b
     const-string v0, "TMO UK"
 
-    .line 754
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 756
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3c
     const-string v0, "Voda-Hutch AU"
 
-    .line 757
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 759
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3d
     const-string v0, "Vodafone AT"
 
-    .line 760
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 762
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3e
     const-string v0, "Vodafone CH GER"
 
-    .line 763
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 765
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_3f
     const-string v0, "Vodafone FRA (FR)"
 
-    .line 766
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 768
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_40
     const-string v0, "Vodafone GER (DE)"
 
-    .line 769
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 771
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_41
     const-string v0, "Vodafone NL"
 
-    .line 772
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 774
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_42
     const-string v0, "Vodafone PTG"
 
-    .line 775
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 777
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_43
     const-string v0, "Vodafone SPA (ES)"
 
-    .line 778
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 780
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_44
     const-string v0, "Vodafone UK"
 
-    .line 781
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 783
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_45
     const-string v0, "HTC Arabic"
 
-    .line 784
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 786
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_46
     const-string v0, "hTC Asia HK CHT"
 
-    .line 787
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 789
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_47
     const-string v0, "Chunghwa Telecom"
 
-    .line 790
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 792
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_48
     const-string v0, "FET TW"
 
-    .line 793
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 795
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_49
     const-string v0, "hTC Asia TW"
 
-    .line 796
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 798
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4a
     const-string v0, "TWM TW"
 
-    .line 799
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 801
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4b
     const-string v0, "APTG TW"
 
-    .line 802
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 804
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4c
     const-string v0, "H3G_ITA"
 
-    .line 805
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 807
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4d
     const-string v0, "H3G_SWE"
 
-    .line 808
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 810
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4e
     const-string v0, "HTC_WWE_MMR_UT"
 
-    .line 811
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 813
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_4f
     const-string v0, "KDDI_ODM_JP"
 
-    .line 814
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 816
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_50
     const-string v0, "KT_KR"
 
-    .line 817
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 819
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_51
     const-string v0, "METROPCS_US"
 
-    .line 820
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 822
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_52
     const-string v0, "OPENMOBILE_US"
 
-    .line 823
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 825
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_53
     const-string v0, "ORANGE_ES_CAT"
 
-    .line 826
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 828
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_54
     const-string v0, "ORANGE_FR_B2B_TLS"
 
-    .line 829
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 831
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_55
     const-string v0, "SPRINT_WWE_BOOST"
 
-    .line 832
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 834
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_56
     const-string v0, "TMO_GR"
 
-    .line 835
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 837
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_57
     const-string v0, "US_CELLULAR_WWE"
 
-    .line 838
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 840
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_58
     const-string v0, "VIRGIN_MOBILE"
 
-    .line 841
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 843
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_59
     const-string v0, "VODAFONE_AU"
 
-    .line 844
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 846
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5a
     const-string v0, "VODAFONE_GR"
 
-    .line 847
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 849
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5b
     const-string v0, "VODAFONE_ITA"
 
-    .line 850
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 852
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5c
     const-string v0, "VODAFONE_UK_NFC"
 
-    .line 853
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 855
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5d
     const-string v0, "VODAFONE_ZA_WWE_VODACOM"
 
-    .line 856
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 858
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5e
     const-string v0, "CELLSOUTH_WWE"
 
-    .line 859
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 861
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_5f
     const-string v0, "ENTERPRISE_CHT_TW"
 
-    .line 862
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 864
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_60
     const-string v0, "TSMC_TW"
 
-    .line 865
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 867
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_61
     const-string v0, "TELEFONICA"
 
-    .line 868
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 870
-    .end local v0           #name:Ljava/lang/String;
     :pswitch_62
     const-string v0, "SPRINT_WWE_VM"
 
-    .line 871
-    .restart local v0       #name:Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 577
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

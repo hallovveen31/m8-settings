@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/HtcTagLockScreen;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 78
     iput-object p1, p0, Lcom/android/settings/bluetooth/HtcTagLockScreen$2;->this$0:Lcom/android/settings/bluetooth/HtcTagLockScreen;
 
     invoke-direct {p0}, Lcom/htc/reminderview/service/HtcReminderClient;-><init>()V
@@ -36,10 +33,7 @@
 # virtual methods
 .method public onViewModeChange(I)V
     .locals 3
-    .parameter "viewMode"
 
-    .prologue
-    .line 81
     invoke-static {}, Lcom/android/settings/bluetooth/HtcTagLockScreen;->access$000()Z
 
     move-result v0
@@ -68,7 +62,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :cond_0
     return-void
 .end method
@@ -76,8 +69,6 @@
 .method public unlock()V
     .locals 2
 
-    .prologue
-    .line 87
     invoke-static {}, Lcom/android/settings/bluetooth/HtcTagLockScreen;->access$000()Z
 
     move-result v0
@@ -90,7 +81,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     :cond_0
     return-void
 .end method

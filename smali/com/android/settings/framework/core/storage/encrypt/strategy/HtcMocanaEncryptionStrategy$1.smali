@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;->this$0:Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;
 
     iput-object p2, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;->val$actionType:Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;
@@ -50,26 +45,18 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 65
     const/4 v0, 0x0
 
-    .line 67
-    .local v0, timer:Lcom/android/settings/framework/os/HtcPerformanceTimer;
     invoke-static {}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->access$000()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 68
     new-instance v0, Lcom/android/settings/framework/os/HtcPerformanceTimer;
 
-    .end local v0           #timer:Lcom/android/settings/framework/os/HtcPerformanceTimer;
     invoke-direct {v0}, Lcom/android/settings/framework/os/HtcPerformanceTimer;-><init>()V
 
-    .line 69
-    .restart local v0       #timer:Lcom/android/settings/framework/os/HtcPerformanceTimer;
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;->this$0:Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -94,9 +81,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->log(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->log(Ljava/lang/String;)V
 
-    .line 73
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;->this$0:Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;
 
@@ -107,14 +93,12 @@
     #calls: Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->runCrypto(Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
     invoke-static {v1, v2, v3}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->access$100(Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;Lcom/android/settings/framework/core/storage/encrypt/HtcIStorageEncryptor$ActionType;Ljava/lang/String;)V
 
-    .line 75
     invoke-static {}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->access$000()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 76
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy$1;->this$0:Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -139,9 +123,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcMocanaEncryptionStrategy;->log(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->log(Ljava/lang/String;)V
 
-    .line 79
     :cond_1
     return-void
 .end method

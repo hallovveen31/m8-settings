@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1818
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$3;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1820
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$3;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetails;
@@ -59,7 +52,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1821
     const-string v0, "Settings:InstalledAppDetails"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,11 +85,9 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1827
     :goto_0
     return-void
 
-    .line 1826
     :cond_0
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$3;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 

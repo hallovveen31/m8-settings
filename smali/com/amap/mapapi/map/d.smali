@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/map/c;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 103
     iput-object p1, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +37,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 105
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
-    .line 107
     :try_start_0
     iget-object v2, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
@@ -58,7 +52,6 @@
 
     move-object v2, v0
 
-    .line 110
     :goto_0
     iget-object v1, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
@@ -66,14 +59,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 111
     iget-object v1, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
-    iget-object v1, v1, Lcom/amap/mapapi/map/c;->e:Lcom/amap/mapapi/map/ai;
+    iget-object v1, v1, Lcom/amap/mapapi/map/af;->e:Lcom/amap/mapapi/map/ai;
 
     if-nez v1, :cond_1
 
-    .line 112
     iget-object v1, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     const/4 v3, 0x0
@@ -82,15 +73,12 @@
 
     goto :goto_0
 
-    .line 175
     :catch_0
     move-exception v0
 
-    .line 178
     :cond_0
     return-void
 
-    .line 114
     :cond_1
     iget-object v1, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
@@ -98,7 +86,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 115
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/c;->c:Lcom/amap/mapapi/map/ar;
@@ -117,7 +104,6 @@
 
     move-object v1, v0
 
-    .line 118
     :goto_1
     if-eqz v1, :cond_2
 
@@ -129,10 +115,8 @@
 
     move-object v0, v1
 
-    .line 119
     goto :goto_0
 
-    .line 121
     :cond_2
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
@@ -140,26 +124,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
     if-eqz v1, :cond_6
 
-    .line 133
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     iget-boolean v0, v0, Lcom/amap/mapapi/map/c;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 136
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
-    iget-object v0, v0, Lcom/amap/mapapi/map/c;->e:Lcom/amap/mapapi/map/ai;
+    iget-object v0, v0, Lcom/amap/mapapi/map/af;->e:Lcom/amap/mapapi/map/ai;
 
     if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
-    iget-object v0, v0, Lcom/amap/mapapi/map/c;->e:Lcom/amap/mapapi/map/ai;
+    iget-object v0, v0, Lcom/amap/mapapi/map/af;->e:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->e:Lcom/amap/mapapi/map/ai$c;
     :try_end_0
@@ -169,17 +150,15 @@
 
     move-object v0, v1
 
-    .line 137
     goto :goto_0
 
-    .line 141
     :cond_3
     :try_start_1
     iget-object v0, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     iget-object v3, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
-    iget-object v3, v3, Lcom/amap/mapapi/map/c;->e:Lcom/amap/mapapi/map/ai;
+    iget-object v3, v3, Lcom/amap/mapapi/map/af;->e:Lcom/amap/mapapi/map/ai;
 
     iget-object v3, v3, Lcom/amap/mapapi/map/ai;->e:Lcom/amap/mapapi/map/ai$c;
 
@@ -194,7 +173,6 @@
 
     move-result-object v0
 
-    .line 147
     :goto_2
     if-eqz v0, :cond_4
 
@@ -205,7 +183,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 148
     iget-object v2, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
 
     iget-object v2, v2, Lcom/amap/mapapi/map/c;->c:Lcom/amap/mapapi/map/ar;
@@ -214,7 +191,6 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/amap/mapapi/map/ar;->a(Ljava/util/List;Z)V
 
-    .line 152
     :cond_4
     :goto_3
     iget-object v2, p0, Lcom/amap/mapapi/map/d;->a:Lcom/amap/mapapi/map/c;
@@ -227,7 +203,6 @@
 
     if-ne v2, v3, :cond_8
 
-    .line 154
     const-wide/16 v2, 0x32
 
     :try_start_3
@@ -239,26 +214,21 @@
 
     move-object v0, v1
 
-    .line 157
     goto :goto_0
 
-    .line 143
     :catch_1
     move-exception v0
 
-    .line 144
     :try_start_4
-    invoke-virtual {v0}, Lcom/amap/mapapi/core/AMapException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     move-object v0, v2
 
     goto :goto_2
 
-    .line 155
     :catch_2
     move-exception v2
 
-    .line 156
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
@@ -271,7 +241,6 @@
 
     move-object v0, v1
 
-    .line 157
     goto/16 :goto_0
 
     :cond_5

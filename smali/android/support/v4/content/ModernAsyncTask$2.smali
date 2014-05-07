@@ -28,11 +28,7 @@
 # direct methods
 .method constructor <init>(Landroid/support/v4/content/ModernAsyncTask;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 118
-    .local p0, this:Landroid/support/v4/content/ModernAsyncTask$2;,"Landroid/support/v4/content/ModernAsyncTask.2;"
     iput-object p1, p0, Landroid/support/v4/content/ModernAsyncTask$2;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
     const/4 v0, 0x0
@@ -58,9 +54,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 120
-    .local p0, this:Landroid/support/v4/content/ModernAsyncTask$2;,"Landroid/support/v4/content/ModernAsyncTask.2;"
     iget-object v0, p0, Landroid/support/v4/content/ModernAsyncTask$2;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
     #getter for: Landroid/support/v4/content/ModernAsyncTask;->mTaskInvoked:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -72,17 +65,15 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 122
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 123
     iget-object v0, p0, Landroid/support/v4/content/ModernAsyncTask$2;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
     iget-object v1, p0, Landroid/support/v4/content/ModernAsyncTask$2;->this$0:Landroid/support/v4/content/ModernAsyncTask;
 
-    iget-object v2, p0, Landroid/support/v4/content/ModernAsyncTask$2;->mParams:[Ljava/lang/Object;
+    iget-object v2, p0, Landroid/support/v4/content/ModernAsyncTask$WorkerRunnable;->mParams:[Ljava/lang/Object;
 
     invoke-virtual {v1, v2}, Landroid/support/v4/content/ModernAsyncTask;->doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
 

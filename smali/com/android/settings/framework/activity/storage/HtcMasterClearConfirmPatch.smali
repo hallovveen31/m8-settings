@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +14,7 @@
 
 .method public static doFactoryDataReset(Landroid/content/Context;ZZ)V
     .locals 2
-    .parameter "context"
-    .parameter "eraseInternalSdCard"
-    .parameter "eraseSdCard"
 
-    .prologue
-    .line 24
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -46,6 +39,5 @@
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 34
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 358
     iput-object p1, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings$SummaryReceiver;->this$0:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 358
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings$SummaryReceiver;-><init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;)V
 
     return-void
@@ -48,11 +41,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 360
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings$SummaryReceiver;->this$0:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;
 
     invoke-static {}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;->access$100()Ljava/lang/String;
@@ -68,7 +57,6 @@
     #setter for: Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;->mIsUpdaterProcessing:Z
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;->access$002(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;Z)Z
 
-    .line 361
     invoke-static {}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSettings;->access$200()Lcom/android/settings/framework/preference/update/HtcFOTAPreference;
 
     move-result-object v0
@@ -82,6 +70,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/preference/update/HtcFOTAPreference;->setDownloadSummary(Z)V
 
-    .line 362
     return-void
 .end method

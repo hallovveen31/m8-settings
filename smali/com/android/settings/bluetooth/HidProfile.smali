@@ -41,8 +41,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/settings/bluetooth/HidProfile;->V:Z
@@ -52,25 +50,15 @@
 
 .method constructor <init>(Landroid/content/Context;Lcom/android/settings/bluetooth/LocalBluetoothAdapter;Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;)V
     .locals 2
-    .parameter "context"
-    .parameter "adapter"
-    .parameter "deviceManager"
-    .parameter "profileManager"
 
-    .prologue
-    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     iput-object p2, p0, Lcom/android/settings/bluetooth/HidProfile;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
-    .line 87
     iput-object p3, p0, Lcom/android/settings/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;
 
-    .line 88
     iput-object p4, p0, Lcom/android/settings/bluetooth/HidProfile;->mProfileManager:Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;
 
-    .line 89
     new-instance v0, Lcom/android/settings/bluetooth/HidProfile$InputDeviceServiceListener;
 
     const/4 v1, 0x0
@@ -81,15 +69,12 @@
 
     invoke-virtual {p2, p1, v0, v1}, Lcom/android/settings/bluetooth/LocalBluetoothAdapter;->getProfileProxy(Landroid/content/Context;Landroid/bluetooth/BluetoothProfile$ServiceListener;I)V
 
-    .line 91
     return-void
 .end method
 
 .method static synthetic access$000()Z
     .locals 1
 
-    .prologue
-    .line 34
     sget-boolean v0, Lcom/android/settings/bluetooth/HidProfile;->V:Z
 
     return v0
@@ -97,10 +82,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/bluetooth/HidProfile;)Landroid/bluetooth/BluetoothInputDevice;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     return-object v0
@@ -108,11 +90,7 @@
 
 .method static synthetic access$102(Lcom/android/settings/bluetooth/HidProfile;Landroid/bluetooth/BluetoothInputDevice;)Landroid/bluetooth/BluetoothInputDevice;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     return-object p1
@@ -120,10 +98,7 @@
 
 .method static synthetic access$200(Lcom/android/settings/bluetooth/HidProfile;)Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mDeviceManager:Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;
 
     return-object v0
@@ -131,10 +106,7 @@
 
 .method static synthetic access$300(Lcom/android/settings/bluetooth/HidProfile;)Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mLocalAdapter:Lcom/android/settings/bluetooth/LocalBluetoothAdapter;
 
     return-object v0
@@ -142,10 +114,7 @@
 
 .method static synthetic access$400(Lcom/android/settings/bluetooth/HidProfile;)Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mProfileManager:Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;
 
     return-object v0
@@ -153,11 +122,7 @@
 
 .method static synthetic access$502(Lcom/android/settings/bluetooth/HidProfile;Z)Z
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 34
     iput-boolean p1, p0, Lcom/android/settings/bluetooth/HidProfile;->mIsProfileReady:Z
 
     return p1
@@ -165,35 +130,28 @@
 
 .method static getHidClassDrawable(Landroid/bluetooth/BluetoothClass;)I
     .locals 1
-    .parameter "btClass"
 
-    .prologue
-    .line 178
     invoke-virtual {p0}, Landroid/bluetooth/BluetoothClass;->getDeviceClass()I
 
     move-result v0
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 185
     const v0, 0x7f0200e3
 
     :goto_0
     return v0
 
-    .line 181
     :sswitch_0
     const v0, 0x7f0200de
 
     goto :goto_0
 
-    .line 183
     :sswitch_1
     const v0, 0x7f0200ec
 
     goto :goto_0
 
-    .line 178
     nop
 
     :sswitch_data_0
@@ -208,17 +166,13 @@
 # virtual methods
 .method public connect(Landroid/bluetooth/BluetoothDevice;)Z
     .locals 1
-    .parameter "device"
 
-    .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 103
     :goto_0
     return v0
 
@@ -234,17 +188,13 @@
 
 .method public disconnect(Landroid/bluetooth/BluetoothDevice;)Z
     .locals 1
-    .parameter "device"
 
-    .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 108
     :goto_0
     return v0
 
@@ -261,8 +211,6 @@
 .method protected finalize()V
     .locals 4
 
-    .prologue
-    .line 190
     sget-boolean v2, Lcom/android/settings/bluetooth/HidProfile;->V:Z
 
     if-eqz v2, :cond_0
@@ -273,30 +221,24 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_0
     iget-object v2, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-eqz v2, :cond_2
 
-    .line 193
     :try_start_0
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 194
-    .local v0, mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
     if-eqz v0, :cond_1
 
-    .line 195
     const/4 v2, 0x4
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     invoke-virtual {v0, v2, v3}, Landroid/bluetooth/BluetoothAdapter;->closeProfileProxy(ILandroid/bluetooth/BluetoothProfile;)V
 
-    .line 196
     :cond_1
     const/4 v2, 0x0
 
@@ -304,18 +246,13 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
-    .end local v0           #mBluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
     :cond_2
     :goto_0
     return-void
 
-    .line 197
     :catch_0
     move-exception v1
 
-    .line 198
-    .local v1, t:Ljava/lang/Throwable;
     const-string v2, "HidProfile"
 
     const-string v3, "Error cleaning up HID proxy"
@@ -327,21 +264,16 @@
 
 .method public getConnectionStatus(Landroid/bluetooth/BluetoothDevice;)I
     .locals 3
-    .parameter "device"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 112
     iget-object v1, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v1, :cond_0
 
-    .line 117
     :goto_0
     return v2
 
-    .line 115
     :cond_0
     iget-object v1, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -349,8 +281,6 @@
 
     move-result-object v0
 
-    .line 117
-    .local v0, deviceList:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -388,16 +318,11 @@
 
 .method public getDrawableResource(Landroid/bluetooth/BluetoothClass;)I
     .locals 1
-    .parameter "btClass"
 
-    .prologue
-    .line 171
     if-nez p1, :cond_0
 
-    .line 172
     const v0, 0x7f02008b
 
-    .line 174
     :goto_0
     return v0
 
@@ -411,10 +336,7 @@
 
 .method public getNameResource(Landroid/bluetooth/BluetoothDevice;)I
     .locals 1
-    .parameter "device"
 
-    .prologue
-    .line 153
     const v0, 0x7f0c0cdb
 
     return v0
@@ -423,8 +345,6 @@
 .method public getOrdinal()I
     .locals 1
 
-    .prologue
-    .line 148
     const/4 v0, 0x3
 
     return v0
@@ -432,17 +352,13 @@
 
 .method public getPreferred(Landroid/bluetooth/BluetoothDevice;)I
     .locals 1
-    .parameter "device"
 
-    .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 129
     :goto_0
     return v0
 
@@ -458,19 +374,13 @@
 
 .method public getSummaryResourceForDevice(Landroid/bluetooth/BluetoothDevice;)I
     .locals 2
-    .parameter "device"
 
-    .prologue
-    .line 157
     invoke-virtual {p0, p1}, Lcom/android/settings/bluetooth/HidProfile;->getConnectionStatus(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result v0
 
-    .line 158
-    .local v0, state:I
     packed-switch v0, :pswitch_data_0
 
-    .line 166
     :pswitch_0
     invoke-static {v0}, Lcom/android/settings/bluetooth/Utils;->getConnectionStateSummary(I)I
 
@@ -479,19 +389,16 @@
     :goto_0
     return v1
 
-    .line 160
     :pswitch_1
     const v1, 0x7f0c0cf5
 
     goto :goto_0
 
-    .line 163
     :pswitch_2
     const v1, 0x7f0c0cef
 
     goto :goto_0
 
-    .line 158
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -503,8 +410,6 @@
 .method public isAutoConnectable()Z
     .locals 1
 
-    .prologue
-    .line 98
     const/4 v0, 0x1
 
     return v0
@@ -513,8 +418,6 @@
 .method public isConnectable()Z
     .locals 1
 
-    .prologue
-    .line 94
     const/4 v0, 0x1
 
     return v0
@@ -522,17 +425,13 @@
 
 .method public isPreferred(Landroid/bluetooth/BluetoothDevice;)Z
     .locals 2
-    .parameter "device"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 123
     iget-object v1, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v1, :cond_1
 
-    .line 124
     :cond_0
     :goto_0
     return v0
@@ -554,8 +453,6 @@
 .method public isProfileReady()Z
     .locals 1
 
-    .prologue
-    .line 80
     iget-boolean v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mIsProfileReady:Z
 
     return v0
@@ -563,27 +460,20 @@
 
 .method public setPreferred(Landroid/bluetooth/BluetoothDevice;Z)V
     .locals 2
-    .parameter "device"
-    .parameter "preferred"
 
-    .prologue
     const/16 v1, 0x64
 
-    .line 133
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     if-nez v0, :cond_1
 
-    .line 141
     :cond_0
     :goto_0
     return-void
 
-    .line 134
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 135
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     invoke-virtual {v0, p1}, Landroid/bluetooth/BluetoothInputDevice;->getPriority(Landroid/bluetooth/BluetoothDevice;)I
@@ -592,14 +482,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 136
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
     invoke-virtual {v0, p1, v1}, Landroid/bluetooth/BluetoothInputDevice;->setPriority(Landroid/bluetooth/BluetoothDevice;I)Z
 
     goto :goto_0
 
-    .line 139
     :cond_2
     iget-object v0, p0, Lcom/android/settings/bluetooth/HidProfile;->mService:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -613,8 +501,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 144
     const-string v0, "HID"
 
     return-object v0

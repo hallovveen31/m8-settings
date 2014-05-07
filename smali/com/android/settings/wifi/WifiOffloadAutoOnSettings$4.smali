@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 265
     iput-object p1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$4;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "arg0"
-    .parameter "arg1"
 
-    .prologue
-    .line 267
     iget-object v0, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$4;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 268
     return-void
 .end method

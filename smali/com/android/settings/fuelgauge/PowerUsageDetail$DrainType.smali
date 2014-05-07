@@ -47,7 +47,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -58,7 +57,6 @@
 
     const/4 v3, 0x0
 
-    .line 22
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "IDLE"
@@ -67,7 +65,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->IDLE:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 23
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "CELL"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->CELL:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 24
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "PHONE"
@@ -85,7 +81,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->PHONE:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 25
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "WIFI"
@@ -94,7 +89,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->WIFI:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 26
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "BLUETOOTH"
@@ -103,7 +97,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->BLUETOOTH:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 27
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "SCREEN"
@@ -114,7 +107,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->SCREEN:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 28
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "APP"
@@ -125,7 +117,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->APP:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 29
     new-instance v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     const-string v1, "USER"
@@ -136,7 +127,6 @@
 
     sput-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->USER:Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    .line 21
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
@@ -186,16 +176,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 21
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -203,10 +189,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 21
     const-class v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -221,11 +204,9 @@
 .method public static values()[Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
     .locals 1
 
-    .prologue
-    .line 21
     sget-object v0, Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->$VALUES:[Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;
 
-    invoke-virtual {v0}, [Lcom/android/settings/fuelgauge/PowerUsageDetail$DrainType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

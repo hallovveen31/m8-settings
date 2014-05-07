@@ -30,10 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 284
     iput-object p1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;->this$1:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     invoke-direct {p0, p1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;-><init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
@@ -46,8 +43,6 @@
 .method protected initialValue()Landroid/graphics/Rect;
     .locals 1
 
-    .prologue
-    .line 287
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -58,8 +53,6 @@
 .method protected bridge synthetic initialValue()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 284
     invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;->initialValue()Landroid/graphics/Rect;
 
     move-result-object v0

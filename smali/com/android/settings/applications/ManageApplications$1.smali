@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ManageApplications;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 273
     iput-object p1, p0, Lcom/android/settings/applications/ManageApplications$1;->this$0:Lcom/android/settings/applications/ManageApplications;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,33 +36,18 @@
 # virtual methods
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
-    .parameter "s"
 
-    .prologue
-    .line 286
     return-void
 .end method
 
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "count"
-    .parameter "after"
 
-    .prologue
-    .line 282
     return-void
 .end method
 
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "before"
-    .parameter "count"
 
-    .prologue
-    .line 277
     return-void
 .end method

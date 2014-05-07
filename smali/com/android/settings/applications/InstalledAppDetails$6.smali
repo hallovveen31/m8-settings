@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 446
     invoke-static {}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->values()[Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DISABLE_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DEFAULT:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_DISABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->UNINSTALL_BUTTON_ENABLED:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

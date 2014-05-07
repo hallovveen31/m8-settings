@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 245
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->finishFragment()V
+    invoke-virtual {v0}, Lcom/android/settings/SettingsPreferenceFragment;->finishFragment()V
 
-    .line 246
     return-void
 .end method

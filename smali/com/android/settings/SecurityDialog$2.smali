@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SecurityDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 113
     iput-object p1, p0, Lcom/android/settings/SecurityDialog$2;->this$0:Lcom/android/settings/SecurityDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 115
     iget-object v0, p0, Lcom/android/settings/SecurityDialog$2;->this$0:Lcom/android/settings/SecurityDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/SecurityDialog;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 116
     return-void
 .end method

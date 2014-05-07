@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;Lcom/htc/preference/HtcCheckBoxPreference;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 160
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$2;->this$0:Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$2;->val$chkPref:Lcom/htc/preference/HtcCheckBoxPreference;
@@ -49,18 +44,13 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 163
     iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$2;->val$chkPref:Lcom/htc/preference/HtcCheckBoxPreference;
 
     invoke-virtual {v0, v3}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 164
     iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$2;->this$0:Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
 
     iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$2;->this$0:Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
@@ -74,6 +64,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/android/settings/inputmethod/InputMethodAndSubtypeUtil;->setSubtypesPreferenceEnabled(Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;Ljava/util/List;Ljava/lang/String;Z)V
 
-    .line 167
     return-void
 .end method

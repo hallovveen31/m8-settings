@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiSettingsSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 159
     iput-object p1, p0, Lcom/android/settings/wifi/WifiSettingsSetupWizard$1;->this$0:Lcom/android/settings/wifi/WifiSettingsSetupWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,19 +37,15 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 162
     const-string v0, "OOBE_WifiSettingsSetupWizard"
 
     const-string v1, "recreate"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettingsSetupWizard$1;->this$0:Lcom/android/settings/wifi/WifiSettingsSetupWizard;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WifiSettingsSetupWizard;->recreate()V
+    invoke-virtual {v0}, Landroid/app/Activity;->recreate()V
 
-    .line 164
     return-void
 .end method

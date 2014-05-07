@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 492
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->values()[Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
     move-result-object v0
@@ -41,7 +39,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -57,7 +55,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->FUSE_NON_PRIMARY_STORAGE:Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -73,7 +71,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->NON_FUSE_PRIMARY_STORAGE:Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -89,7 +87,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->SD_CARD:Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -105,7 +103,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->FUSE_PRIMARY_STORAGE:Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -115,7 +113,6 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 257
     :goto_4
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->values()[Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
@@ -132,7 +129,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->SD_CARD:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -148,7 +145,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->PHONE_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -171,7 +168,6 @@
 
     goto :goto_5
 
-    .line 492
     :catch_2
     move-exception v0
 

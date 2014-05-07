@@ -21,13 +21,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 44
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
-    .line 45
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mHasCustomizedData:Z
@@ -38,8 +35,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,42 +42,33 @@
 
 .method public static get(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 62
     sget-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mHasCustomizedData:Z
 
     if-eqz v0, :cond_1
 
-    .line 63
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 66
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->readCustomizedData(Landroid/content/Context;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mHasCustomizedData:Z
 
-    .line 67
     sget-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mHasCustomizedData:Z
 
     if-nez v0, :cond_0
 
-    .line 68
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->readDefaultData(Landroid/content/Context;)V
 
-    .line 77
     :cond_0
     :goto_0
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
     return-object v0
 
-    .line 75
     :cond_1
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->readDefaultData(Landroid/content/Context;)V
 
@@ -91,12 +77,9 @@
 
 .method private static readCustomizedData(Landroid/content/Context;)Z
     .locals 6
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 86
     const-string v3, "system"
 
     const-string v4, "deviceData1"
@@ -105,22 +88,16 @@
 
     move-result-object v0
 
-    .line 89
-    .local v0, customizedData:Lcom/android/settings/framework/storage/customize/HtcCustomizedData;
     invoke-virtual {v0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedData;->getCustomizedData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 92
-    .local v1, softwareNumber:Landroid/os/Bundle;
     if-nez v1, :cond_1
 
-    .line 106
     :cond_0
     :goto_0
     return v2
 
-    .line 96
     :cond_1
     const-string v3, "sw_number"
 
@@ -130,12 +107,10 @@
 
     sput-object v3, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
-    .line 98
     sget-boolean v3, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v3, :cond_2
 
-    .line 99
     const-string v3, "HtcCustomizedSoftwareNumber"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -160,7 +135,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :cond_2
     sget-object v3, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
@@ -184,7 +158,6 @@
 
     if-nez v3, :cond_0
 
-    .line 106
     const/4 v2, 0x1
 
     goto :goto_0
@@ -192,22 +165,17 @@
 
 .method private static readDefaultData(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 114
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 115
     const-string v0, "HtcCustomizedSoftwareNumber"
 
     const-string v1, "no SIE data, read default data"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_0
     const-string v0, "ro.product.version"
 
@@ -227,6 +195,5 @@
 
     sput-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedSoftwareNumber;->mSoftwareNumber:Ljava/lang/String;
 
-    .line 123
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SoundSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 376
     iput-object p1, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,10 +33,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter "msg"
 
-    .prologue
-    .line 378
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mIsPause:Z
@@ -49,12 +43,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 418
     :cond_0
     :goto_0
     return-void
 
-    .line 380
     :cond_1
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -63,7 +55,6 @@
     :pswitch_0
     goto :goto_0
 
-    .line 382
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -80,7 +71,6 @@
 
     goto :goto_0
 
-    .line 385
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -97,13 +87,11 @@
 
     goto :goto_0
 
-    .line 390
     :pswitch_3
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     invoke-virtual {v0}, Lcom/android/settings/SoundSettings;->UpdateCustomizeProfileEntry()V
 
-    .line 391
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     iget-object v1, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
@@ -123,7 +111,6 @@
     #calls: Lcom/android/settings/SoundSettings;->updateSilentListSummaryAndNotify(I)V
     invoke-static {v0, v1}, Lcom/android/settings/SoundSettings;->access$800(Lcom/android/settings/SoundSettings;I)V
 
-    .line 392
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     #calls: Lcom/android/settings/SoundSettings;->showSoundProfile()V
@@ -131,7 +118,6 @@
 
     goto :goto_0
 
-    .line 395
     :pswitch_4
     const-string v0, "SoundSettings"
 
@@ -139,13 +125,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 396
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     #calls: Lcom/android/settings/SoundSettings;->notifyVolumeChange()V
     invoke-static {v0}, Lcom/android/settings/SoundSettings;->access$400(Lcom/android/settings/SoundSettings;)V
 
-    .line 397
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mHandler:Landroid/os/Handler;
@@ -172,7 +156,6 @@
 
     goto :goto_0
 
-    .line 400
     :pswitch_5
     const-string v0, "SoundSettings"
 
@@ -180,7 +163,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     iget-object v1, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
@@ -202,7 +184,6 @@
 
     goto :goto_0
 
-    .line 405
     :pswitch_6
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -219,7 +200,6 @@
 
     goto/16 :goto_0
 
-    .line 408
     :pswitch_7
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -236,7 +216,6 @@
 
     goto/16 :goto_0
 
-    .line 411
     :pswitch_8
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -256,14 +235,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 412
     const-string v0, "SoundSettings"
 
     const-string v1, "add mRingtoneSlot2 in CallCategory"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mCallCategory:Lcom/htc/preference/HtcPreferenceCategory;
@@ -278,9 +255,8 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceCategory;->addPreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 414
     iget-object v0, p0, Lcom/android/settings/SoundSettings$2;->this$0:Lcom/android/settings/SoundSettings;
 
     const/4 v1, 0x1
@@ -290,7 +266,6 @@
 
     goto/16 :goto_0
 
-    .line 380
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

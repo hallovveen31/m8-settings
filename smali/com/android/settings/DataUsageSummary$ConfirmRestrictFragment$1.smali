@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1988
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,29 +36,21 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1991
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment$1;->this$0:Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/DataUsageSummary$ConfirmRestrictFragment;->getTargetFragment()Landroid/app/Fragment;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getTargetFragment()Landroid/app/Fragment;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/settings/DataUsageSummary;
 
-    .line 1992
-    .local v0, target:Lcom/android/settings/DataUsageSummary;
     if-eqz v0, :cond_0
 
-    .line 1993
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/settings/DataUsageSummary;->setRestrictBackground(Z)V
 
-    .line 1995
     :cond_0
     return-void
 .end method

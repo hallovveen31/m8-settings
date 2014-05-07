@@ -37,8 +37,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/settings/applications/AppOpsSummary;->TAG:Ljava/lang/String;
 
-    .line 61
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/settings/applications/AppOpsState$OpsTemplate;
@@ -108,19 +105,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;-><init>()V
 
-    .line 71
     return-void
 .end method
 
 .method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     sget-object v0, Lcom/android/settings/applications/AppOpsSummary;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -131,22 +123,18 @@
 .method protected getParentFragmentName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 156
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager;->support()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 157
     const-class v0, Lcom/android/settings/SecuritySettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 160
     :goto_0
     return-object v0
 
@@ -161,18 +149,14 @@
 .method protected getParentFragmentTitleResId()I
     .locals 1
 
-    .prologue
-    .line 166
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager;->support()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 167
     const v0, 0x7f0c0c5f
 
-    .line 170
     :goto_0
     return v0
 
@@ -186,15 +170,9 @@
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 7
-    .parameter "inflater"
-    .parameter "container"
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 117
     iput-object p1, p0, Lcom/android/settings/applications/AppOpsSummary;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 119
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mInflater:Landroid/view/LayoutInflater;
 
     const v5, 0x7f040055
@@ -205,15 +183,11 @@
 
     move-result-object v2
 
-    .line 120
-    .local v2, rootView:Landroid/view/View;
     iput-object p2, p0, Lcom/android/settings/applications/AppOpsSummary;->mContentContainer:Landroid/view/ViewGroup;
 
-    .line 121
     iput-object v2, p0, Lcom/android/settings/applications/AppOpsSummary;->mRootView:Landroid/view/View;
 
-    .line 123
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsSummary;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -225,19 +199,16 @@
 
     iput-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mPageNames:[Ljava/lang/CharSequence;
 
-    .line 125
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mContext:Landroid/content/Context;
 
     if-nez v4, :cond_0
 
-    .line 126
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsSummary;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
     iput-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mContext:Landroid/content/Context;
 
-    .line 129
     :cond_0
     const v4, 0x7f090012
 
@@ -249,73 +220,58 @@
 
     iput-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mViewPager:Lcom/htc/view/viewpager/HtcViewPager;
 
-    .line 130
     new-instance v0, Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsSummary;->getChildFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getChildFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v4
 
     invoke-direct {v0, p0, v4}, Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;-><init>(Lcom/android/settings/applications/AppOpsSummary;Landroid/app/FragmentManager;)V
 
-    .line 131
-    .local v0, adapter:Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mViewPager:Lcom/htc/view/viewpager/HtcViewPager;
 
     invoke-virtual {v4, v0}, Lcom/htc/view/viewpager/HtcViewPager;->setAdapter(Lcom/htc/view/viewpager/HtcPagerAdapter;)V
 
-    .line 132
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mViewPager:Lcom/htc/view/viewpager/HtcViewPager;
 
     invoke-virtual {v4, v0}, Lcom/htc/view/viewpager/HtcViewPager;->setOnPageChangeListener(Lcom/htc/view/viewpager/HtcViewPager$OnPageChangeListener;)V
 
-    .line 134
     new-instance v3, Lcom/htc/view/tabbar/TabBar;
 
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mContext:Landroid/content/Context;
 
     invoke-direct {v3, v4}, Lcom/htc/view/tabbar/TabBar;-><init>(Landroid/content/Context;)V
 
-    .line 135
-    .local v3, tabBar:Lcom/htc/view/tabbar/TabBar;
     new-instance v1, Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;
 
     invoke-direct {v1}, Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;-><init>()V
 
-    .line 136
-    .local v1, params:Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;
     const/16 v4, 0x30
 
     iput v4, v1, Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;->gravity:I
 
-    .line 137
     const/4 v4, -0x1
 
-    iput v4, v1, Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;->width:I
+    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 138
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Lcom/htc/view/tabbar/TabBar;->getBarHeight(Landroid/content/Context;)I
 
     move-result v4
 
-    iput v4, v1, Lcom/htc/view/viewpager/HtcViewPager$LayoutParams;->height:I
+    iput v4, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 139
-    invoke-virtual {v3, v1}, Lcom/htc/view/tabbar/TabBar;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 141
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsSummary;->mViewPager:Lcom/htc/view/viewpager/HtcViewPager;
 
-    invoke-virtual {v4, v3}, Lcom/htc/view/viewpager/HtcViewPager;->addView(Landroid/view/View;)V
+    invoke-virtual {v4, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 146
     instance-of v4, p2, Landroid/preference/PreferenceFrameLayout;
 
     if-eqz v4, :cond_1
 
-    .line 147
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v4
@@ -326,7 +282,6 @@
 
     iput-boolean v5, v4, Landroid/preference/PreferenceFrameLayout$LayoutParams;->removeBorders:Z
 
-    .line 150
     :cond_1
     return-object v2
 .end method

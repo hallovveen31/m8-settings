@@ -46,7 +46,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -57,7 +56,6 @@
 
     const/4 v3, 0x0
 
-    .line 21
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_ERROR"
@@ -66,7 +64,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_ERROR:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 27
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_INIT"
@@ -75,7 +72,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_INIT:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 33
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_INIT_OFF"
@@ -84,7 +80,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_INIT_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 39
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_SYNC"
@@ -93,7 +88,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_SYNC:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 44
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_APPLY_POLICY"
@@ -102,7 +96,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_APPLY_POLICY:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 50
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_AIRPLANE_MODE_CHANGED"
@@ -113,7 +106,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_AIRPLANE_MODE_CHANGED:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 56
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_OFF"
@@ -124,7 +116,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 59
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_TURNING_ON"
@@ -135,7 +126,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 62
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_ON"
@@ -146,7 +136,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 65
     new-instance v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     const-string v1, "STATE_TURNING_OFF"
@@ -157,7 +146,6 @@
 
     sput-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    .line 15
     const/16 v0, 0xa
 
     new-array v0, v0, [Lcom/android/settings/bluetooth/HtcBluetoothState;
@@ -219,16 +207,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -236,43 +220,34 @@
 
 .method public static getBaseState(I)Lcom/android/settings/bluetooth/HtcBluetoothState;
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 75
     packed-switch p0, :pswitch_data_0
 
-    .line 85
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_ERROR:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     :goto_0
     return-object v0
 
-    .line 77
     :pswitch_0
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     goto :goto_0
 
-    .line 79
     :pswitch_1
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     goto :goto_0
 
-    .line 81
     :pswitch_2
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     goto :goto_0
 
-    .line 83
     :pswitch_3
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     goto :goto_0
 
-    .line 75
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_0
@@ -284,10 +259,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/bluetooth/HtcBluetoothState;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 15
     const-class v0, Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -302,11 +274,9 @@
 .method public static values()[Lcom/android/settings/bluetooth/HtcBluetoothState;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lcom/android/settings/bluetooth/HtcBluetoothState;->$VALUES:[Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v0}, [Lcom/android/settings/bluetooth/HtcBluetoothState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

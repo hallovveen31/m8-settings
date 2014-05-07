@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/HotspotMaxConnDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 79
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
-    .local v0, action:Ljava/lang/String;
     const-string v3, "android.net.hotspot.ASSOCLIST"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 81
     iget-object v3, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
     #getter for: Lcom/android/settings/wifi/HotspotMaxConnDialog;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -67,8 +57,6 @@
 
     move-result-object v2
 
-    .line 82
-    .local v2, str:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
     #calls: Lcom/android/settings/wifi/HotspotMaxConnDialog;->parseClientCount(Ljava/lang/String;)I
@@ -76,8 +64,6 @@
 
     move-result v1
 
-    .line 83
-    .local v1, connection:I
     iget-object v3, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
     #getter for: Lcom/android/settings/wifi/HotspotMaxConnDialog;->DEBUG:Z
@@ -109,7 +95,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_0
     iget-object v3, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
@@ -120,14 +105,10 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 85
     iget-object v3, p0, Lcom/android/settings/wifi/HotspotMaxConnDialog$1;->this$0:Lcom/android/settings/wifi/HotspotMaxConnDialog;
 
-    invoke-virtual {v3}, Lcom/android/settings/wifi/HotspotMaxConnDialog;->finish()V
+    invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
-    .line 88
-    .end local v1           #connection:I
-    .end local v2           #str:Ljava/lang/String;
     :cond_1
     return-void
 .end method

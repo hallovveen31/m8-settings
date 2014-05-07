@@ -41,14 +41,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const v4, 0x7f0c0c2b
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 390
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
     const-string v1, "Cancel"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->Cancel:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
-    .line 391
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
     const-string v1, "CancelDisabled"
@@ -66,7 +63,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->CancelDisabled:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
-    .line 389
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
@@ -86,36 +82,24 @@
 
 .method private constructor <init>(Ljava/lang/String;IIZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "text"
-    .parameter "enabled"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IZ)V"
         }
     .end annotation
 
-    .prologue
-    .line 397
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 398
     iput p3, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->text:I
 
-    .line 399
     iput-boolean p4, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->enabled:Z
 
-    .line 400
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 389
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -130,11 +114,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
     .locals 1
 
-    .prologue
-    .line 389
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

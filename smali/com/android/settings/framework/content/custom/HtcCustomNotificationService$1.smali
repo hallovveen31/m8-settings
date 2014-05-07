@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService$1;->this$0:Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;
 
     iput-object p2, p0, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService$1;->val$context:Landroid/content/Context;
@@ -50,8 +45,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService$1;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService$1;->val$intent:Landroid/content/Intent;
@@ -59,11 +52,9 @@
     #calls: Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;->doCustomization(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;->access$000(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 73
     iget-object v0, p0, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService$1;->this$0:Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/content/custom/HtcCustomNotificationService;->stopSelf()V
+    invoke-virtual {v0}, Landroid/app/Service;->stopSelf()V
 
-    .line 74
     return-void
 .end method

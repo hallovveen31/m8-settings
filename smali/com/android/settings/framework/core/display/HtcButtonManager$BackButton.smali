@@ -41,12 +41,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 105
     new-instance v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     const-string v1, "ALWAYS_GO_BACK"
@@ -55,7 +53,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->ALWAYS_GO_BACK:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    .line 106
     new-instance v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     const-string v1, "PRESS_FOR_BACK_AND_LONG_PRESS_FOR_MENU"
@@ -64,7 +61,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->PRESS_FOR_BACK_AND_LONG_PRESS_FOR_MENU:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    .line 104
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
@@ -84,35 +80,24 @@
 
 .method private constructor <init>(Ljava/lang/String;IIZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "value"
-    .parameter "isNavigationButtonVisible"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IZ)V"
         }
     .end annotation
 
-    .prologue
-    .line 124
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 125
     iput p3, p0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->mValue:I
 
-    .line 126
     iput-boolean p4, p0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->mIsNavigationButtonVisible:Z
 
-    .line 127
     return-void
 .end method
 
 .method public static final getDefaultBackButton()Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     .locals 1
 
-    .prologue
-    .line 159
     sget-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->ALWAYS_GO_BACK:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     return-object v0
@@ -120,39 +105,24 @@
 
 .method public static toBackButton(I)Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     .locals 1
-    .parameter "value"
 
-    .prologue
-    .line 190
     packed-switch p0, :pswitch_data_0
 
-    .line 198
     sget-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->ALWAYS_GO_BACK:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    .line 200
-    .local v0, backButton:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     :goto_0
     return-object v0
 
-    .line 192
-    .end local v0           #backButton:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     :pswitch_0
     sget-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->ALWAYS_GO_BACK:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    .line 193
-    .restart local v0       #backButton:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     goto :goto_0
 
-    .line 195
-    .end local v0           #backButton:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     :pswitch_1
     sget-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->PRESS_FOR_BACK_AND_LONG_PRESS_FOR_MENU:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    .line 196
-    .restart local v0       #backButton:Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     goto :goto_0
 
-    .line 190
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -162,26 +132,20 @@
 
 .method public static toBackButton(Ljava/lang/String;)Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     .locals 4
-    .parameter "value"
 
-    .prologue
-    .line 170
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 171
     invoke-static {}, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->getDefaultBackButton()Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     move-result-object v1
 
-    .line 178
     :goto_0
     return-object v1
 
-    .line 175
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -200,12 +164,9 @@
 
     goto :goto_0
 
-    .line 176
     :catch_0
     move-exception v0
 
-    .line 177
-    .local v0, e:Ljava/lang/NumberFormatException;
     invoke-static {}, Lcom/android/settings/framework/core/display/HtcButtonManager;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -230,7 +191,6 @@
 
     invoke-static {v1, v2, v0}, Lcom/android/settings/framework/util/log/HtcLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 178
     invoke-static {}, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->getDefaultBackButton()Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     move-result-object v1
@@ -240,10 +200,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 104
     const-class v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -258,11 +215,9 @@
 .method public static values()[Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
     .locals 1
 
-    .prologue
-    .line 104
     sget-object v0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->$VALUES:[Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -276,8 +231,6 @@
 .method public getValue()I
     .locals 1
 
-    .prologue
-    .line 135
     iget v0, p0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->mValue:I
 
     return v0
@@ -286,8 +239,6 @@
 .method public isNavigationButtonVisible()Z
     .locals 1
 
-    .prologue
-    .line 144
     iget-boolean v0, p0, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->mIsNavigationButtonVisible:Z
 
     return v0
@@ -296,13 +247,11 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 149
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/core/display/HtcButtonManager$BackButton;->name()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v1
 

@@ -55,8 +55,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
-    .line 439
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "Tutorial"
@@ -77,7 +75,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Tutorial:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 447
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "Naming"
@@ -98,7 +95,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Naming:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 454
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "Processing"
@@ -119,7 +115,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Processing:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 461
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "Success"
@@ -140,7 +135,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Success:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 468
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "Fail"
@@ -161,7 +155,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Fail:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 475
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     const-string v1, "SetAltLock"
@@ -182,7 +175,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->SetAltLock:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    .line 437
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
@@ -230,13 +222,6 @@
 
 .method private constructor <init>(Ljava/lang/String;IIIILcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "headerMessage"
-    .parameter "footerMessage"
-    .parameter "statusImg"
-    .parameter "leftMode"
-    .parameter "rightMode"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(III",
@@ -246,35 +231,24 @@
         }
     .end annotation
 
-    .prologue
-    .line 493
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 494
     iput p3, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->headerMessage:I
 
-    .line 495
     iput-object p6, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->leftMode:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$LeftButtonMode;
 
-    .line 496
     iput-object p7, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->rightMode:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$RightButtonMode;
 
-    .line 497
     iput p4, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->footerMessage:I
 
-    .line 498
     iput p5, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->statusImg:I
 
-    .line 499
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 437
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -289,11 +263,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
     .locals 1
 
-    .prologue
-    .line 437
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 351
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$WifiServiceHandler;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/wifi/RedirectDialog;Lcom/android/settings/wifi/RedirectDialog$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 351
     invoke-direct {p0, p1}, Lcom/android/settings/wifi/RedirectDialog$WifiServiceHandler;-><init>(Lcom/android/settings/wifi/RedirectDialog;)V
 
     return-void
@@ -48,9 +41,6 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 0
-    .parameter "msg"
 
-    .prologue
-    .line 355
     return-void
 .end method

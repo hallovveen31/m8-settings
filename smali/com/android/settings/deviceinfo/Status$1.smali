@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/deviceinfo/Status;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 157
     iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$1;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 161
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
-    .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 163
     iget-object v1, p0, Lcom/android/settings/deviceinfo/Status$1;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     #getter for: Lcom/android/settings/deviceinfo/Status;->mBatteryLevel:Lcom/htc/preference/HtcPreference;
@@ -69,7 +59,6 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 164
     iget-object v1, p0, Lcom/android/settings/deviceinfo/Status$1;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     #getter for: Lcom/android/settings/deviceinfo/Status;->mBatteryStatus:Lcom/htc/preference/HtcPreference;
@@ -79,7 +68,7 @@
 
     iget-object v2, p0, Lcom/android/settings/deviceinfo/Status$1;->this$0:Lcom/android/settings/deviceinfo/Status;
 
-    invoke-virtual {v2}, Lcom/android/settings/deviceinfo/Status;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -89,7 +78,6 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 166
     :cond_0
     return-void
 .end method

@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 366
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$BaseViewCompatImpl;-><init>()V
 
     return-void
@@ -29,10 +27,7 @@
 # virtual methods
 .method public isOpaque(Landroid/view/View;)Z
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 369
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatEclairMr1;->isOpaque(Landroid/view/View;)Z
 
     move-result v0

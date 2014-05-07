@@ -19,13 +19,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 47
     invoke-direct {p0, p1}, Lcom/android/settings/framework/receiver/HtcAbsReceiver;-><init>(Landroid/content/Context;)V
 
-    .line 48
     return-void
 .end method
 
@@ -34,8 +30,6 @@
 .method protected acquirePermission()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 58
     const/4 v0, 0x0
 
     return-object v0
@@ -43,27 +37,19 @@
 
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 65
     iget-object v1, p0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;->mOnScreenOnOffListener:Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$OnScreenOnOffChangedListener;
 
     if-nez v1, :cond_0
 
-    .line 79
     :goto_0
     return-void
 
-    .line 70
     :cond_0
     new-instance v0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$EventParams;
 
     invoke-direct {v0, p0}, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$EventParams;-><init>(Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;)V
 
-    .line 72
-    .local v0, params:Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$EventParams;
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -76,12 +62,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 73
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$EventParams;->powerOn:Z
 
-    .line 78
     :goto_1
     iget-object v1, p0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;->mOnScreenOnOffListener:Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$OnScreenOnOffChangedListener;
 
@@ -89,7 +73,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_1
     const/4 v1, 0x0
 
@@ -100,31 +83,22 @@
 
 .method protected setIntentFilter(Landroid/content/IntentFilter;)V
     .locals 1
-    .parameter "intentFilter"
 
-    .prologue
-    .line 52
     const-string v0, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 53
     const-string v0, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method
 
 .method public setOnScreenOnOffListener(Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$OnScreenOnOffChangedListener;)V
     .locals 0
-    .parameter "listener"
 
-    .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver;->mOnScreenOnOffListener:Lcom/android/settings/framework/receiver/HtcScreenOnOffReceiver$OnScreenOnOffChangedListener;
 
-    .line 90
     return-void
 .end method

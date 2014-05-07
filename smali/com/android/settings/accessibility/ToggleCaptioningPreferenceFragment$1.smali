@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 147
     iput-object p1, p0, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,23 +36,18 @@
 # virtual methods
 .method public onBeforeCheckedChanged(Lcom/android/settings/accessibility/ToggleSwitch;Z)Z
     .locals 4
-    .parameter "toggleSwitch"
-    .parameter "checked"
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 150
     invoke-virtual {p1, p2}, Lcom/android/settings/accessibility/ToggleSwitch;->setCheckedInternal(Z)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
@@ -68,7 +60,6 @@
     :goto_0
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 153
     iget-object v0, p0, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;
 
     #getter for: Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;->mPropsFragment:Lcom/android/settings/accessibility/CaptionPropertiesFragment;
@@ -76,13 +67,12 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/accessibility/CaptionPropertiesFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {v0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/htc/preference/HtcPreferenceScreen;->setEnabled(Z)V
+    invoke-virtual {v0, p2}, Lcom/htc/preference/HtcPreferenceGroup;->setEnabled(Z)V
 
-    .line 154
     iget-object v0, p0, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment$1;->this$0:Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;
 
     #getter for: Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;->mPreviewText:Lcom/android/internal/widget/SubtitleView;
@@ -95,18 +85,15 @@
     move v0, v1
 
     :goto_1
-    invoke-virtual {v2, v0}, Lcom/android/internal/widget/SubtitleView;->setVisibility(I)V
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 155
     return v1
 
     :cond_0
     move v0, v1
 
-    .line 151
     goto :goto_0
 
-    .line 154
     :cond_1
     const/4 v0, 0x4
 

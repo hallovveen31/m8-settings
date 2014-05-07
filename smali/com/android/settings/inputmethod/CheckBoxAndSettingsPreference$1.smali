@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 63
     iput-object p1, p0, Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference$1;->this$0:Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "arg0"
 
-    .prologue
-    .line 66
     iget-object v0, p0, Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference$1;->this$0:Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference;
 
     invoke-virtual {v0}, Lcom/android/settings/inputmethod/CheckBoxAndSettingsPreference;->onCheckBoxClicked()V
 
-    .line 67
     return-void
 .end method

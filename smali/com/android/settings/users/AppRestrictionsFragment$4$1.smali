@@ -32,10 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment$4;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1052
     iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$4$1;->this$1:Lcom/android/settings/users/AppRestrictionsFragment$4;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -47,13 +44,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 1052
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$4$1;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
@@ -63,10 +56,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 3
-    .parameter "params"
 
-    .prologue
-    .line 1055
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$4$1;->this$1:Lcom/android/settings/users/AppRestrictionsFragment$4;
 
     iget-object v0, v0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
@@ -104,7 +94,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/UserManager;->setUserIcon(ILandroid/graphics/Bitmap;)V
 
-    .line 1057
     const/4 v0, 0x0
 
     return-object v0

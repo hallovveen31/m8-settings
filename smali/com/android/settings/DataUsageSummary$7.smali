@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1080
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$7;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,23 +36,18 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 1083
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$7;->this$0:Lcom/android/settings/DataUsageSummary;
 
-    invoke-virtual {v0}, Lcom/android/settings/DataUsageSummary;->isAdded()Z
+    invoke-virtual {v0}, Landroid/app/Fragment;->isAdded()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1087
     :goto_0
     return-void
 
-    .line 1086
     :cond_0
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$7;->this$0:Lcom/android/settings/DataUsageSummary;
 
@@ -66,7 +58,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/DataUsageSummary;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/VoWifiSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1047
     iput-object p1, p0, Lcom/android/settings/wifi/VoWifiSettings$9;->this$0:Lcom/android/settings/wifi/VoWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "id"
 
-    .prologue
-    .line 1050
     iget-object v0, p0, Lcom/android/settings/wifi/VoWifiSettings$9;->this$0:Lcom/android/settings/wifi/VoWifiSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/VoWifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -54,15 +47,13 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
-    .line 1051
     iget-object v0, p0, Lcom/android/settings/wifi/VoWifiSettings$9;->this$0:Lcom/android/settings/wifi/VoWifiSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/VoWifiSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 1052
     return-void
 .end method

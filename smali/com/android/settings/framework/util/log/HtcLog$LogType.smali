@@ -45,7 +45,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -56,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 175
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "VERBOSE"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->VERBOSE:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 183
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "DEBUG"
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->DEBUG:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 191
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "INFO"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->INFO:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 199
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "WARN"
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->WARN:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 207
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "ERROR"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ERROR:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 217
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "ASSERT"
@@ -112,7 +105,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ASSERT:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 223
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     const-string v1, "CRITICAL"
@@ -123,7 +115,6 @@
 
     sput-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->CRITICAL:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    .line 170
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/settings/framework/util/log/HtcLog$LogType;
@@ -167,16 +158,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 170
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -184,10 +171,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcLog$LogType;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 170
     const-class v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -202,11 +186,9 @@
 .method public static values()[Lcom/android/settings/framework/util/log/HtcLog$LogType;
     .locals 1
 
-    .prologue
-    .line 170
     sget-object v0, Lcom/android/settings/framework/util/log/HtcLog$LogType;->$VALUES:[Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/util/log/HtcLog$LogType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

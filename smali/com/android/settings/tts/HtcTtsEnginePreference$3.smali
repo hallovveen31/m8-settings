@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/HtcTtsEnginePreference;Lcom/htc/widget/HtcCompoundButton;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 232
     iput-object p1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$3;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
 
     iput-object p2, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$3;->val$buttonView:Lcom/htc/widget/HtcCompoundButton;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 235
     iget-object v0, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$3;->this$0:Lcom/android/settings/tts/HtcTtsEnginePreference;
 
     iget-object v1, p0, Lcom/android/settings/tts/HtcTtsEnginePreference$3;->val$buttonView:Lcom/htc/widget/HtcCompoundButton;
@@ -56,6 +48,5 @@
     #calls: Lcom/android/settings/tts/HtcTtsEnginePreference;->makeCurrentEngine(Landroid/widget/Checkable;)V
     invoke-static {v0, v1}, Lcom/android/settings/tts/HtcTtsEnginePreference;->access$400(Lcom/android/settings/tts/HtcTtsEnginePreference;Landroid/widget/Checkable;)V
 
-    .line 236
     return-void
 .end method

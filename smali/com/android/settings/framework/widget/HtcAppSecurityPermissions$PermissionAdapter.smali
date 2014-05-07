@@ -27,16 +27,11 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/widget/HtcAppSecurityPermissions;Landroid/content/Context;)V
     .locals 3
-    .parameter
-    .parameter "context"
 
-    .prologue
-    .line 569
     iput-object p1, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->this$0:Lcom/android/settings/framework/widget/HtcAppSecurityPermissions;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 563
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/view/View;
@@ -54,17 +49,14 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->ITEMS:[Landroid/view/View;
 
-    .line 565
     iget-object v0, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->ITEMS:[Landroid/view/View;
 
     array-length v0, v0
 
     iput v0, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->ITEM_COUNT:I
 
-    .line 570
     iput-object p2, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->mContext:Landroid/content/Context;
 
-    .line 571
     return-void
 .end method
 
@@ -73,8 +65,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 575
     iget v0, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->ITEM_COUNT:I
 
     return v0
@@ -82,10 +72,7 @@
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter "position"
 
-    .prologue
-    .line 580
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -95,10 +82,7 @@
 
 .method public getItemId(I)J
     .locals 2
-    .parameter "position"
 
-    .prologue
-    .line 585
     int-to-long v0, p1
 
     return-wide v0
@@ -106,17 +90,10 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
-    .line 591
     iget-object v1, p0, Lcom/android/settings/framework/widget/HtcAppSecurityPermissions$PermissionAdapter;->ITEMS:[Landroid/view/View;
 
     aget-object v0, v1, p1
 
-    .line 593
-    .local v0, item:Landroid/view/View;
     return-object v0
 .end method

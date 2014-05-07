@@ -31,8 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 53
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;-><init>()V
 
     return-void
@@ -42,16 +40,12 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "icicle"
 
-    .prologue
-    .line 180
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 182
     new-instance v0, Lcom/android/settings/applications/AppOpsState;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -59,19 +53,17 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/AppOpsDetails;->mState:Lcom/android/settings/applications/AppOpsState;
 
-    .line 183
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/applications/AppOpsDetails;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 184
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -85,8 +77,7 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/AppOpsDetails;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 185
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -100,42 +91,30 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/AppOpsDetails;->mAppOps:Landroid/app/AppOpsManager;
 
-    .line 187
     invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->retrieveAppEntry()Ljava/lang/String;
 
-    .line 189
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/applications/AppOpsDetails;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Fragment;->setHasOptionsMenu(Z)V
 
-    .line 190
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
-    .parameter "inflater"
-    .parameter "container"
-    .parameter "savedInstanceState"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 195
     const v1, 0x7f040006
 
     invoke-virtual {p1, v1, p2, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    .line 196
-    .local v0, view:Landroid/view/View;
     invoke-static {p2, v0, v0, v2}, Lcom/android/settings/Utils;->prepareCustomPreferencesList(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Z)V
 
-    .line 198
     iput-object v0, p0, Lcom/android/settings/applications/AppOpsDetails;->mRootView:Landroid/view/View;
 
-    .line 199
     const v1, 0x7f09000b
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -146,30 +125,24 @@
 
     iput-object v1, p0, Lcom/android/settings/applications/AppOpsDetails;->mOperationsSection:Landroid/widget/LinearLayout;
 
-    .line 200
     return-object v0
 .end method
 
 .method public onResume()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 205
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalFragment;->onResume()V
 
-    .line 206
     invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->refreshUi()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 207
     invoke-virtual {p0, v1, v1}, Lcom/android/settings/applications/AppOpsDetails;->setIntentAndFinish(ZZ)V
 
-    .line 209
     :cond_0
     return-void
 .end method
@@ -177,8 +150,6 @@
 .method protected refreshUi()Z
     .locals 24
 
-    .prologue
-    .line 115
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
@@ -187,14 +158,11 @@
 
     if-nez v20, :cond_0
 
-    .line 116
     const/16 v20, 0x0
 
-    .line 167
     :goto_0
     return v20
 
-    .line 119
     :cond_0
     move-object/from16 v0, p0
 
@@ -208,50 +176,37 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/AppOpsDetails;->setAppLabelAndIcon(Landroid/content/pm/PackageInfo;)V
 
-    .line 121
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v20
 
-    invoke-virtual/range {v20 .. v20}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {v20 .. v20}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v15
 
-    .line 123
-    .local v15, res:Landroid/content/res/Resources;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mOperationsSection:Landroid/widget/LinearLayout;
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {v20 .. v20}, Landroid/widget/LinearLayout;->removeAllViews()V
+    invoke-virtual/range {v20 .. v20}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 124
     const-string v10, ""
 
-    .line 125
-    .local v10, lastPermGroup:Ljava/lang/String;
     sget-object v4, Lcom/android/settings/applications/AppOpsState;->ALL_TEMPLATES:[Lcom/android/settings/applications/AppOpsState$OpsTemplate;
 
-    .local v4, arr$:[Lcom/android/settings/applications/AppOpsState$OpsTemplate;
     array-length v11, v4
 
-    .local v11, len$:I
     const/4 v8, 0x0
 
-    .local v8, i$:I
     move v9, v8
 
-    .end local v8           #i$:I
-    .local v9, i$:I
     :goto_1
     if-ge v9, v11, :cond_4
 
     aget-object v18, v4, v9
 
-    .line 126
-    .local v18, tpl:Lcom/android/settings/applications/AppOpsState$OpsTemplate;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mState:Lcom/android/settings/applications/AppOpsState;
@@ -300,14 +255,10 @@
 
     move-result-object v5
 
-    .line 128
-    .local v5, entries:Ljava/util/List;,"Ljava/util/List<Lcom/android/settings/applications/AppOpsState$AppOpEntry;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
-    .end local v9           #i$:I
-    .local v8, i$:Ljava/util/Iterator;
     :goto_2
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
@@ -321,8 +272,6 @@
 
     check-cast v6, Lcom/android/settings/applications/AppOpsState$AppOpEntry;
 
-    .line 129
-    .local v6, entry:Lcom/android/settings/applications/AppOpsState$AppOpEntry;
     const/16 v20, 0x0
 
     move/from16 v0, v20
@@ -331,8 +280,6 @@
 
     move-result-object v7
 
-    .line 130
-    .local v7, firstOp:Landroid/app/AppOpsManager$OpEntry;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mInflater:Landroid/view/LayoutInflater;
@@ -353,8 +300,6 @@
 
     move-result-object v19
 
-    .line 132
-    .local v19, view:Landroid/view/View;
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mOperationsSection:Landroid/widget/LinearLayout;
@@ -365,9 +310,8 @@
 
     move-object/from16 v1, v19
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 133
     invoke-virtual {v7}, Landroid/app/AppOpsManager$OpEntry;->getOp()I
 
     move-result v20
@@ -376,11 +320,8 @@
 
     move-result-object v12
 
-    .line 134
-    .local v12, perm:Ljava/lang/String;
     if-eqz v12, :cond_1
 
-    .line 136
     :try_start_0
     move-object/from16 v0, p0
 
@@ -398,8 +339,6 @@
 
     move-result-object v14
 
-    .line 137
-    .local v14, pi:Landroid/content/pm/PermissionInfo;
     iget-object v0, v14, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
     move-object/from16 v20, v0
@@ -418,10 +357,8 @@
 
     if-nez v20, :cond_1
 
-    .line 138
     iget-object v10, v14, Landroid/content/pm/PermissionInfo;->group:Ljava/lang/String;
 
-    .line 139
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mPm:Landroid/content/pm/PackageManager;
@@ -438,15 +375,12 @@
 
     move-result-object v13
 
-    .line 140
-    .local v13, pgi:Landroid/content/pm/PermissionGroupInfo;
-    iget v0, v13, Landroid/content/pm/PermissionGroupInfo;->icon:I
+    iget v0, v13, Landroid/content/pm/PackageItemInfo;->icon:I
 
     move/from16 v20, v0
 
     if-eqz v20, :cond_1
 
-    .line 141
     const v20, 0x7f09000c
 
     invoke-virtual/range {v19 .. v20}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -463,7 +397,7 @@
 
     move-object/from16 v0, v21
 
-    invoke-virtual {v13, v0}, Landroid/content/pm/PermissionGroupInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v13, v0}, Landroid/content/pm/PackageItemInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v21
 
@@ -471,9 +405,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
-    .end local v13           #pgi:Landroid/content/pm/PermissionGroupInfo;
-    .end local v14           #pi:Landroid/content/pm/PermissionInfo;
     :cond_1
     :goto_3
     const v20, 0x7f09000d
@@ -498,7 +429,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 150
     const v20, 0x7f09000e
 
     invoke-virtual/range {v19 .. v20}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -517,7 +447,6 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 152
     const v20, 0x7f09000f
 
     invoke-virtual/range {v19 .. v20}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -526,8 +455,6 @@
 
     check-cast v16, Landroid/widget/Switch;
 
-    .line 153
-    .local v16, sw:Landroid/widget/Switch;
     invoke-virtual {v7}, Landroid/app/AppOpsManager$OpEntry;->getOp()I
 
     move-result v20
@@ -536,8 +463,6 @@
 
     move-result v17
 
-    .line 154
-    .local v17, switchOp:I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsDetails;->mAppOps:Landroid/app/AppOpsManager;
@@ -583,7 +508,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 156
     new-instance v20, Lcom/android/settings/applications/AppOpsDetails$1;
 
     move-object/from16 v0, v20
@@ -598,50 +522,27 @@
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     goto/16 :goto_2
 
-    .line 154
     :cond_2
     const/16 v20, 0x0
 
     goto :goto_4
 
-    .line 125
-    .end local v6           #entry:Lcom/android/settings/applications/AppOpsState$AppOpEntry;
-    .end local v7           #firstOp:Landroid/app/AppOpsManager$OpEntry;
-    .end local v12           #perm:Ljava/lang/String;
-    .end local v16           #sw:Landroid/widget/Switch;
-    .end local v17           #switchOp:I
-    .end local v19           #view:Landroid/view/View;
     :cond_3
     add-int/lit8 v8, v9, 0x1
 
-    .local v8, i$:I
     move v9, v8
 
-    .end local v8           #i$:I
-    .restart local v9       #i$:I
     goto/16 :goto_1
 
-    .line 167
-    .end local v5           #entries:Ljava/util/List;,"Ljava/util/List<Lcom/android/settings/applications/AppOpsState$AppOpEntry;>;"
-    .end local v18           #tpl:Lcom/android/settings/applications/AppOpsState$OpsTemplate;
     :cond_4
     const/16 v20, 0x1
 
     goto/16 :goto_0
 
-    .line 145
-    .end local v9           #i$:I
-    .restart local v5       #entries:Ljava/util/List;,"Ljava/util/List<Lcom/android/settings/applications/AppOpsState$AppOpEntry;>;"
-    .restart local v6       #entry:Lcom/android/settings/applications/AppOpsState$AppOpEntry;
-    .restart local v7       #firstOp:Landroid/app/AppOpsManager$OpEntry;
-    .local v8, i$:Ljava/util/Iterator;
-    .restart local v12       #perm:Ljava/lang/String;
-    .restart local v18       #tpl:Lcom/android/settings/applications/AppOpsState$OpsTemplate;
-    .restart local v19       #view:Landroid/view/View;
     :catch_0
     move-exception v20
 
@@ -651,16 +552,12 @@
 .method protected retrieveAppEntry()Ljava/lang/String;
     .locals 8
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 93
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 94
-    .local v0, args:Landroid/os/Bundle;
     if-eqz v0, :cond_1
 
     const-string v4, "package"
@@ -669,15 +566,12 @@
 
     move-result-object v3
 
-    .line 95
-    .local v3, packageName:Ljava/lang/String;
     :goto_0
     if-nez v3, :cond_0
 
-    .line 96
     if-nez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -685,12 +579,9 @@
 
     move-result-object v2
 
-    .line 98
-    .local v2, intent:Landroid/content/Intent;
     :goto_1
     if-eqz v2, :cond_0
 
-    .line 99
     invoke-virtual {v2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v4
@@ -699,8 +590,6 @@
 
     move-result-object v3
 
-    .line 103
-    .end local v2           #intent:Landroid/content/Intent;
     :cond_0
     :try_start_0
     iget-object v4, p0, Lcom/android/settings/applications/AppOpsDetails;->mPm:Landroid/content/pm/PackageManager;
@@ -715,19 +604,14 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
     :goto_2
     return-object v3
 
-    .end local v3           #packageName:Ljava/lang/String;
     :cond_1
     move-object v3, v5
 
-    .line 94
     goto :goto_0
 
-    .line 96
-    .restart local v3       #packageName:Ljava/lang/String;
     :cond_2
     const-string v4, "intent"
 
@@ -741,12 +625,9 @@
 
     goto :goto_1
 
-    .line 106
     :catch_0
     move-exception v1
 
-    .line 107
-    .local v1, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const-string v4, "AppOpsDetails"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -769,7 +650,6 @@
 
     invoke-static {v4, v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 108
     iput-object v5, p0, Lcom/android/settings/applications/AppOpsDetails;->mPackageInfo:Landroid/content/pm/PackageInfo;
 
     goto :goto_2
@@ -777,14 +657,11 @@
 
 .method protected setAppLabelAndIcon(Landroid/content/pm/PackageInfo;)V
     .locals 9
-    .parameter "pkgInfo"
 
-    .prologue
     const v5, 0x7f090008
 
     const/4 v8, 0x0
 
-    .line 69
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mRootView:Landroid/view/View;
 
     const v4, 0x7f09000a
@@ -793,8 +670,6 @@
 
     move-result-object v0
 
-    .line 70
-    .local v0, appSnippet:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v3
@@ -805,7 +680,6 @@
 
     invoke-virtual {v0, v8, v3, v8, v4}, Landroid/view/View;->setPaddingRelative(IIII)V
 
-    .line 73
     const v3, 0x7f090010
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -814,8 +688,6 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItemColorIcon;
 
-    .line 74
-    .local v1, icon:Lcom/htc/widget/HtcListItemColorIcon;
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v4, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -826,7 +698,6 @@
 
     invoke-virtual {v1, v3}, Lcom/htc/widget/HtcListItemColorIcon;->setColorIconImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 77
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
@@ -837,8 +708,6 @@
 
     move-result-object v2
 
-    .line 78
-    .local v2, label:Landroid/widget/TextView;
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v4, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -849,7 +718,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 81
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
@@ -862,20 +730,17 @@
 
     iput-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mAppVersion:Landroid/widget/TextView;
 
-    .line 83
     iget-object v3, p1, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 84
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mAppVersion:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 85
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mAppVersion:Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v4
 
@@ -893,57 +758,45 @@
 
     aput-object v7, v6, v8
 
-    invoke-virtual {v4, v5, v6}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 90
     :goto_0
     return-void
 
-    .line 88
     :cond_0
     iget-object v3, p0, Lcom/android/settings/applications/AppOpsDetails;->mAppVersion:Landroid/widget/TextView;
 
     const/4 v4, 0x4
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
 
 .method protected setIntentAndFinish(ZZ)V
     .locals 3
-    .parameter "finish"
-    .parameter "appChanged"
 
-    .prologue
-    .line 171
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 172
-    .local v0, intent:Landroid/content/Intent;
     const-string v2, "chg"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 173
-    invoke-virtual {p0}, Lcom/android/settings/applications/AppOpsDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     check-cast v1, Landroid/preference/PreferenceActivity;
 
-    .line 174
-    .local v1, pa:Landroid/preference/PreferenceActivity;
     const/4 v2, -0x1
 
     invoke-virtual {v1, p0, v2, v0}, Landroid/preference/PreferenceActivity;->finishPreferencePanel(Landroid/app/Fragment;ILandroid/content/Intent;)V
 
-    .line 175
     return-void
 .end method

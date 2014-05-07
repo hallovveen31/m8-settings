@@ -13,8 +13,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/android/settings/SettingsPreferenceFragment;-><init>()V
 
     return-void
@@ -25,9 +23,7 @@
 .method public getHtcListView()Lcom/htc/widget/HtcListView;
     .locals 1
 
-    .prologue
-    .line 32
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getHtcListView()Lcom/htc/widget/HtcListView;
+    invoke-super {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getHtcListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 
@@ -37,9 +33,7 @@
 .method public getListView()Lcom/htc/widget/HtcListView;
     .locals 1
 
-    .prologue
-    .line 27
-    invoke-super {p0}, Lcom/android/settings/SettingsPreferenceFragment;->getHtcListView()Lcom/htc/widget/HtcListView;
+    invoke-super {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getHtcListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 

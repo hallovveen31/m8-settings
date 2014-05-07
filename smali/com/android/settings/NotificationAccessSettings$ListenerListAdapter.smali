@@ -32,20 +32,14 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationAccessSettings;Landroid/content/Context;)V
     .locals 2
-    .parameter
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 309
     iput-object p1, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->this$0:Lcom/android/settings/NotificationAccessSettings;
 
-    .line 310
     invoke-direct {p0, p2, v0, v0}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;II)V
 
-    .line 311
-    invoke-virtual {p1}, Lcom/android/settings/NotificationAccessSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -59,7 +53,6 @@
 
     iput-object v0, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 313
     return-void
 .end method
 
@@ -67,27 +60,19 @@
 # virtual methods
 .method public bindView(Landroid/view/View;I)V
     .locals 4
-    .parameter "view"
-    .parameter "position"
 
-    .prologue
-    .line 346
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/settings/NotificationAccessSettings$ViewHolder;
 
-    .line 347
-    .local v1, vh:Lcom/android/settings/NotificationAccessSettings$ViewHolder;
-    invoke-virtual {p0, p2}, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ServiceInfo;
 
-    .line 349
-    .local v0, info:Landroid/content/pm/ServiceInfo;
     iget-object v2, v1, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->icon:Landroid/widget/ImageView;
 
     iget-object v3, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->this$0:Lcom/android/settings/NotificationAccessSettings;
@@ -97,13 +82,12 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroid/content/pm/ServiceInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, v3}, Landroid/content/pm/PackageItemInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 350
     iget-object v2, v1, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->name:Landroid/widget/TextView;
 
     iget-object v3, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->this$0:Lcom/android/settings/NotificationAccessSettings;
@@ -113,20 +97,18 @@
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Landroid/content/pm/ServiceInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v3}, Landroid/content/pm/ComponentInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 355
     iget-object v2, v1, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->description:Landroid/widget/TextView;
 
     const/16 v3, 0x8
 
-    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 357
     iget-object v2, v1, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->checkbox:Landroid/widget/CheckBox;
 
     iget-object v3, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->this$0:Lcom/android/settings/NotificationAccessSettings;
@@ -135,18 +117,14 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Landroid/widget/CheckBox;->setChecked(Z)V
+    invoke-virtual {v2, v3}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 358
     return-void
 .end method
 
 .method public getItemId(I)J
     .locals 2
-    .parameter "position"
 
-    .prologue
-    .line 320
     int-to-long v0, p1
 
     return-wide v0
@@ -154,41 +132,27 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 1
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
-    .line 325
     if-nez p2, :cond_0
 
-    .line 326
     invoke-virtual {p0, p3}, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->newView(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 330
-    .local v0, v:Landroid/view/View;
     :goto_0
     invoke-virtual {p0, v0, p1}, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->bindView(Landroid/view/View;I)V
 
-    .line 331
     return-object v0
 
-    .line 328
-    .end local v0           #v:Landroid/view/View;
     :cond_0
     move-object v0, p2
 
-    .restart local v0       #v:Landroid/view/View;
     goto :goto_0
 .end method
 
 .method public hasStableIds()Z
     .locals 1
 
-    .prologue
-    .line 316
     const/4 v0, 0x1
 
     return v0
@@ -196,10 +160,7 @@
 
 .method public newView(Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 5
-    .parameter "parent"
 
-    .prologue
-    .line 335
     iget-object v2, p0, Lcom/android/settings/NotificationAccessSettings$ListenerListAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v3, 0x7f0400ae
@@ -210,14 +171,10 @@
 
     move-result-object v1
 
-    .line 336
-    .local v1, v:Landroid/view/View;
     new-instance v0, Lcom/android/settings/NotificationAccessSettings$ViewHolder;
 
     invoke-direct {v0}, Lcom/android/settings/NotificationAccessSettings$ViewHolder;-><init>()V
 
-    .line 337
-    .local v0, h:Lcom/android/settings/NotificationAccessSettings$ViewHolder;
     const v2, 0x7f090029
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -228,7 +185,6 @@
 
     iput-object v2, v0, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    .line 338
     const v2, 0x7f090169
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -239,7 +195,6 @@
 
     iput-object v2, v0, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->name:Landroid/widget/TextView;
 
-    .line 339
     const v2, 0x7f090093
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -250,7 +205,6 @@
 
     iput-object v2, v0, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->checkbox:Landroid/widget/CheckBox;
 
-    .line 340
     const v2, 0x7f0900a1
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -261,9 +215,7 @@
 
     iput-object v2, v0, Lcom/android/settings/NotificationAccessSettings$ViewHolder;->description:Landroid/widget/TextView;
 
-    .line 341
     invoke-virtual {v1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 342
     return-object v1
 .end method

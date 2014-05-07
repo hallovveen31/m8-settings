@@ -23,19 +23,12 @@
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
-    .parameter "title"
-    .parameter "color"
 
-    .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     iput p1, p0, Lcom/android/settings/deviceinfo/StorageVolumePreferenceCategory$CategoryInfo;->mTitle:I
 
-    .line 78
     iput p2, p0, Lcom/android/settings/deviceinfo/StorageVolumePreferenceCategory$CategoryInfo;->mColor:I
 
-    .line 79
     return-void
 .end method

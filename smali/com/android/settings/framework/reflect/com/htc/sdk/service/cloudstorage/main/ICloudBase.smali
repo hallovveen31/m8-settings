@@ -39,8 +39,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 27
     const-string v0, "com.htc.sdk.service.cloudstorage.main.ICloudBase"
 
     invoke-static {v0}, Lcom/android/settings/framework/content/HtcClassManager;->getClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -49,7 +47,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sClass:Ljava/lang/Class;
 
-    .line 37
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase$1;
@@ -60,7 +57,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sMethod_init:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 49
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase$2;
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sMethod_release:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 60
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase$3;
@@ -87,21 +82,15 @@
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "instance"
 
-    .prologue
-    .line 73
     invoke-direct {p0, p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;-><init>(Ljava/lang/Object;)V
 
-    .line 74
     return-void
 .end method
 
 .method static synthetic access$000()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 25
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sClass:Ljava/lang/Class;
 
     return-object v0
@@ -121,11 +110,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 105
     sget-object v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sMethod_getAccountManager:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -137,8 +124,6 @@
 
     move-result-object v0
 
-    .line 107
-    .local v0, instance:Ljava/lang/Object;
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;
 
     invoke-direct {v1, v0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;-><init>(Ljava/lang/Object;)V
@@ -148,13 +133,10 @@
 
 .method public init(Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;)V
     .locals 5
-    .parameter "account"
 
-    .prologue
-    .line 86
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sMethod_init:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -164,7 +146,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -172,18 +154,15 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/settings/framework/reflect/HtcMethodReference;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     return-void
 .end method
 
 .method public release()V
     .locals 3
 
-    .prologue
-    .line 93
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->sMethod_release:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/ICloudBase;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -193,6 +172,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/settings/framework/reflect/HtcMethodReference;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     return-void
 .end method

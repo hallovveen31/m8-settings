@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/map/MapActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 79
     iput-object p1, p0, Lcom/amap/mapapi/map/aa;->a:Lcom/amap/mapapi/map/MapActivity;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 81
     iget-object v0, p0, Lcom/amap/mapapi/map/aa;->a:Lcom/amap/mapapi/map/MapActivity;
 
     invoke-static {v0}, Lcom/amap/mapapi/map/MapActivity;->b(Lcom/amap/mapapi/map/MapActivity;)Landroid/os/Handler;
@@ -49,6 +44,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 82
     return-void
 .end method

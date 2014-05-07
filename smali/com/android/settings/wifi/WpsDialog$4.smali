@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WpsDialog;Lcom/android/settings/wifi/WpsDialog$DialogState;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     iput-object p2, p0, Lcom/android/settings/wifi/WpsDialog$4;->val$state:Lcom/android/settings/wifi/WpsDialog$DialogState;
@@ -50,15 +45,13 @@
 .method public run()V
     .locals 4
 
-    .prologue
     const/16 v3, 0x8
 
-    .line 216
     sget-object v0, Lcom/android/settings/wifi/WpsDialog$5;->$SwitchMap$com$android$settings$wifi$WpsDialog$DialogState:[I
 
     iget-object v1, p0, Lcom/android/settings/wifi/WpsDialog$4;->val$state:Lcom/android/settings/wifi/WpsDialog$DialogState;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WpsDialog$DialogState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -66,7 +59,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 233
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
@@ -80,11 +72,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 234
     :goto_1
     return-void
 
-    .line 218
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
@@ -97,7 +87,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 219
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mTextView:Landroid/widget/TextView;
@@ -111,13 +100,12 @@
 
     goto :goto_1
 
-    .line 223
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/WpsDialog;->getButton(I)Landroid/widget/Button;
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAlertDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
 
@@ -134,9 +122,8 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 224
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mWpsIcon:Landroid/view/View;
@@ -146,7 +133,6 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 225
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mTimeoutBar:Lcom/htc/widget/HtcProgressBar;
@@ -154,9 +140,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/htc/widget/HtcProgressBar;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 226
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mProgressBar:Landroid/view/View;
@@ -166,7 +151,6 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 227
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -176,7 +160,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mContext:Landroid/content/Context;
@@ -193,7 +176,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 229
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$4;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     const/4 v1, 0x0
@@ -203,7 +185,6 @@
 
     goto :goto_0
 
-    .line 216
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 20
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,22 +52,18 @@
 
     sput-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->TAG:Ljava/lang/String;
 
-    .line 23
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->DEBUG:Z
 
-    .line 101
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->DISPLAY_DEFAULT_VALUE:Z
 
-    .line 102
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->sConfiguredButton:Ljava/lang/reflect/Field;
 
-    .line 106
     :try_start_0
     const-class v1, Landroid/content/pm/ApplicationInfo;
 
@@ -83,18 +77,12 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
-    .local v0, e:Ljava/lang/NoSuchFieldException;
     :goto_0
     return-void
 
-    .line 108
-    .end local v0           #e:Ljava/lang/NoSuchFieldException;
     :catch_0
     move-exception v0
 
-    .line 109
-    .restart local v0       #e:Ljava/lang/NoSuchFieldException;
     const-string v1, "The framework does not support the field \'configuredButton\'."
 
     invoke-static {v1, v0}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->log(Ljava/lang/String;Ljava/lang/Throwable;)V
@@ -105,36 +93,27 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Landroid/content/pm/ApplicationInfo;-><init>()V
 
-    .line 58
     return-void
 .end method
 
 .method public static getConfiguredButton(Landroid/content/pm/ApplicationInfo;)Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
     .locals 5
-    .parameter "appInfo"
 
-    .prologue
-    .line 121
     sget-object v3, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->sConfiguredButton:Ljava/lang/reflect/Field;
 
     if-eqz v3, :cond_0
 
     if-nez p0, :cond_2
 
-    .line 122
     :cond_0
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DEFAULT:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
-    .line 138
     :cond_1
     :goto_0
     return-object v1
 
-    .line 125
     :cond_2
     :try_start_0
     sget-object v3, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->sConfiguredButton:Ljava/lang/reflect/Field;
@@ -143,19 +122,14 @@
 
     move-result v2
 
-    .line 126
-    .local v2, value:I
     invoke-static {v2}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->getConfiguredButtonState(I)Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     move-result-object v1
 
-    .line 129
-    .local v1, state:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
     sget-boolean v3, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 130
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -180,17 +154,11 @@
 
     goto :goto_0
 
-    .line 133
-    .end local v1           #state:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
-    .end local v2           #value:I
     :catch_0
     move-exception v0
 
-    .line 134
-    .local v0, e:Ljava/lang/Exception;
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 135
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -217,7 +185,6 @@
 
     invoke-static {v3, v0}, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->log(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 138
     sget-object v1, Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;->DEFAULT:Lcom/android/settings/framework/content/pm/HtcApplicationInfo$ConfiguredButtonState;
 
     goto :goto_0
@@ -225,29 +192,20 @@
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 142
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     return-void
 .end method
 
 .method private static log(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .parameter "message"
-    .parameter "e"
 
-    .prologue
-    .line 146
     sget-object v0, Lcom/android/settings/framework/content/pm/HtcApplicationInfo;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0, p1}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 147
     return-void
 .end method

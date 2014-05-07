@@ -30,23 +30,18 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 88
     const-string v0, "com.htc.3lm.intent.EMERGENCY_LOCK_POLICY_STATUS_CHANGE"
 
     sput-object v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer$Policy;->ACTION_EMERGENCY_LOCK_POLICY_STATUS_CHANGE:Ljava/lang/String;
 
-    .line 104
     const-string v0, "com.htc.3lm.intent.extra.POLICY_STATUS"
 
     sput-object v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer$Policy;->EXTRA_EMERGENCY_LOCK_POLICY_STATUS:Ljava/lang/String;
 
-    .line 114
     const/4 v0, 0x0
 
     sput v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer$Policy;->EXTRA_EMERGENCY_LOCK_POLICY_STATUS_DISABLED:I
 
-    .line 123
     const/4 v0, 0x1
 
     sput v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer$Policy;->EXTRA_EMERGENCY_LOCK_POLICY_STATUS_ENABLED:I
@@ -57,8 +52,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

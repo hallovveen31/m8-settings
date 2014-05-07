@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1064
     iput-object p1, p0, Lcom/android/settings/SmartNSUtility$8;->val$mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,18 +36,12 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 1069
     iget-object v0, p0, Lcom/android/settings/SmartNSUtility$8;->val$mContext:Landroid/content/Context;
 
     invoke-static {p2, v0}, Lcom/android/settings/SmartNSUtility;->setSelectedDunId(ILandroid/content/Context;)V
 
-    .line 1074
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1075
     return-void
 .end method

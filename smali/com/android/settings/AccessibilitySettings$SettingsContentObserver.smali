@@ -17,13 +17,9 @@
 # direct methods
 .method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
-    .parameter "handler"
 
-    .prologue
-    .line 1082
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1083
     return-void
 .end method
 
@@ -34,12 +30,9 @@
 
 .method public register(Landroid/content/ContentResolver;)V
     .locals 2
-    .parameter "contentResolver"
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1086
     const-string v0, "accessibility_enabled"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -48,7 +41,6 @@
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1088
     const-string v0, "enabled_accessibility_services"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -57,18 +49,13 @@
 
     invoke-virtual {p1, v0, v1, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1090
     return-void
 .end method
 
 .method public unregister(Landroid/content/ContentResolver;)V
     .locals 0
-    .parameter "contentResolver"
 
-    .prologue
-    .line 1093
     invoke-virtual {p1, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 1094
     return-void
 .end method

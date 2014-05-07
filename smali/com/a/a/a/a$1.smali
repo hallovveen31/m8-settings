@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,10 +30,7 @@
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 2
-    .parameter
 
-    .prologue
-    .line 76
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/location/Location;->getProvider()Ljava/lang/String;
@@ -50,20 +45,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 82
     invoke-static {p1}, Lcom/a/a/a/a;->b(Landroid/location/Location;)Landroid/location/Location;
 
-    .line 84
     :cond_0
     return-void
 .end method
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 104
     const-string v0, "gps"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -72,24 +62,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 108
     invoke-static {}, Lcom/a/a/a/a;->c()Landroid/location/Location;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/location/Location;->reset()V
 
-    .line 110
     :cond_0
     return-void
 .end method
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 96
     const-string v0, "network"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -98,19 +83,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     :cond_0
     return-void
 .end method
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 1
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 88
     const-string v0, "network"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -119,7 +98,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 93
     :cond_0
     return-void
 .end method

@@ -42,7 +42,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -53,7 +52,6 @@
 
     const/4 v3, 0x0
 
-    .line 20
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_ERROR"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 26
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_INIT"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_INIT:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 32
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_SYNC"
@@ -80,7 +76,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 38
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_FAKE_OFF"
@@ -89,7 +84,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_FAKE_OFF:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 43
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_OFF"
@@ -98,7 +92,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 48
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_TURNING_ON"
@@ -109,7 +102,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 53
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_ON"
@@ -120,7 +112,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_ON:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 58
     new-instance v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     const-string v1, "STATE_TURNING_OFF"
@@ -131,7 +122,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    .line 14
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
@@ -181,16 +171,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 14
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -198,43 +184,34 @@
 
 .method public static getBaseState(I)Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 67
     packed-switch p0, :pswitch_data_0
 
-    .line 79
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     :goto_0
     return-object v0
 
-    .line 69
     :pswitch_0
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     goto :goto_0
 
-    .line 71
     :pswitch_1
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     goto :goto_0
 
-    .line 73
     :pswitch_2
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     goto :goto_0
 
-    .line 75
     :pswitch_3
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->STATE_ON:Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     goto :goto_0
 
-    .line 67
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -246,10 +223,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 14
     const-class v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -264,11 +238,9 @@
 .method public static values()[Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
     .locals 1
 
-    .prologue
-    .line 14
     sget-object v0, Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->$VALUES:[Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/core/wireless/wimax/HtcWimaxState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

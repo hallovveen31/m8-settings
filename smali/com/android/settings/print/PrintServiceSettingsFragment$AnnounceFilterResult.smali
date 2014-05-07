@@ -28,10 +28,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 610
     iput-object p1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +38,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/print/PrintServiceSettingsFragment;Lcom/android/settings/print/PrintServiceSettingsFragment$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 610
     invoke-direct {p0, p1}, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;-><init>(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
 
     return-void
@@ -56,54 +49,45 @@
 .method public post()V
     .locals 3
 
-    .prologue
-    .line 614
     invoke-virtual {p0}, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->remove()V
 
-    .line 615
     iget-object v0, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getListView()Lcom/htc/widget/HtcListView;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 
     const-wide/16 v1, 0x3e8
 
-    invoke-virtual {v0, p0, v1, v2}, Lcom/htc/widget/HtcListView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, p0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 616
     return-void
 .end method
 
 .method public remove()V
     .locals 1
 
-    .prologue
-    .line 619
     iget-object v0, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getListView()Lcom/htc/widget/HtcListView;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/htc/widget/HtcListView;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 620
     return-void
 .end method
 
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 624
     iget-object v2, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getListView()Lcom/htc/widget/HtcListView;
+    invoke-virtual {v2}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcListView;->getAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {v2}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v2
 
@@ -111,43 +95,35 @@
 
     move-result v0
 
-    .line 626
-    .local v0, count:I
     if-gtz v0, :cond_0
 
-    .line 627
     iget-object v2, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     const v3, 0x7f0c109a
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/app/Fragment;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 632
-    .local v1, text:Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getListView()Lcom/htc/widget/HtcListView;
+    invoke-virtual {v2}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/htc/widget/HtcListView;->announceForAccessibility(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v1}, Landroid/view/View;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 633
     return-void
 
-    .line 629
-    .end local v1           #text:Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$AnnounceFilterResult;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v2}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -169,6 +145,5 @@
 
     move-result-object v1
 
-    .restart local v1       #text:Ljava/lang/String;
     goto :goto_0
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/IccLockSettingsDualMode;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/settings/IccLockSettingsDualMode$2;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,29 +33,22 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
-    .parameter "msg"
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 146
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 147
-    .local v0, ar:Landroid/os/AsyncResult;
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 161
     :goto_0
     return-void
 
-    .line 149
     :pswitch_0
     iget-object v3, p0, Lcom/android/settings/IccLockSettingsDualMode$2;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
@@ -77,7 +67,6 @@
 
     goto :goto_1
 
-    .line 152
     :pswitch_1
     iget-object v3, p0, Lcom/android/settings/IccLockSettingsDualMode$2;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
@@ -96,7 +85,6 @@
 
     goto :goto_2
 
-    .line 156
     :pswitch_2
     iget-object v3, p0, Lcom/android/settings/IccLockSettingsDualMode$2;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
@@ -115,7 +103,6 @@
 
     goto :goto_3
 
-    .line 147
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

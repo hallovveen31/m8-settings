@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 385
     iput-object p1, p0, Lcom/android/settings/wifi/WifiSettings$5;->this$0:Lcom/android/settings/wifi/WifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 388
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$5;->this$0:Lcom/android/settings/wifi/WifiSettings;
 
     #calls: Lcom/android/settings/wifi/WifiSettings;->isPhone()Z
@@ -60,7 +54,6 @@
 
     if-nez v0, :cond_0
 
-    .line 389
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$5;->this$0:Lcom/android/settings/wifi/WifiSettings;
 
     const/4 v1, 0x4
@@ -68,11 +61,9 @@
     #calls: Lcom/android/settings/wifi/WifiSettings;->showDialog(I)V
     invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiSettings;->access$600(Lcom/android/settings/wifi/WifiSettings;I)V
 
-    .line 393
     :goto_0
     return-void
 
-    .line 391
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/WifiSettings$5;->this$0:Lcom/android/settings/wifi/WifiSettings;
 

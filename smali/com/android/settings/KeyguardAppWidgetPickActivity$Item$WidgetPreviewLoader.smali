@@ -58,60 +58,47 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;Landroid/content/Context;Landroid/widget/ImageView;)V
     .locals 2
-    .parameter
-    .parameter "context"
-    .parameter "v"
 
-    .prologue
-    .line 205
     iput-object p1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->this$0:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;
 
-    .line 206
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 292
     new-instance v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$CanvasCache;
 
     invoke-direct {v1, p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$CanvasCache;-><init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewCanvas:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$CanvasCache;
 
-    .line 293
     new-instance v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
     invoke-direct {v1, p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;-><init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewSrcRect:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
-    .line 294
     new-instance v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
     invoke-direct {v1, p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;-><init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewDestRect:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
-    .line 295
     new-instance v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;
 
     invoke-direct {v1, p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;-><init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewPaint:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;
 
-    .line 207
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mResources:Landroid/content/res/Resources;
 
-    .line 208
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 209
     const-string v1, "activity"
 
     invoke-virtual {p2, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -120,48 +107,33 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 211
-    .local v0, activityManager:Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getLauncherLargeIconDensity()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mIconDpi:I
 
-    .line 212
     iput-object p3, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mView:Landroid/widget/ImageView;
 
-    .line 213
     return-void
 .end method
 
 .method private getWidgetPreview(Landroid/content/ComponentName;IIII)Landroid/graphics/Bitmap;
     .locals 26
-    .parameter "provider"
-    .parameter "previewImage"
-    .parameter "iconId"
-    .parameter "maxWidth"
-    .parameter "maxHeight"
 
-    .prologue
-    .line 300
     invoke-virtual/range {p1 .. p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v22
 
-    .line 301
-    .local v22, packageName:Ljava/lang/String;
     if-gez p4, :cond_0
 
     const p4, 0x7fffffff
 
-    .line 302
     :cond_0
     if-gez p5, :cond_1
 
     const p5, 0x7fffffff
 
-    .line 305
     :cond_1
     move-object/from16 v0, p0
 
@@ -173,15 +145,10 @@
 
     move-result v9
 
-    .line 307
-    .local v9, appIconSize:I
     const/4 v11, 0x0
 
-    .line 308
-    .local v11, drawable:Landroid/graphics/drawable/Drawable;
     if-eqz p2, :cond_2
 
-    .line 309
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -196,10 +163,8 @@
 
     move-result-object v11
 
-    .line 310
     if-nez v11, :cond_2
 
-    .line 311
     const-string v4, "KeyguardAppWidgetPickActivity"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -238,47 +203,34 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 318
     :cond_2
     const/4 v6, 0x0
 
-    .line 319
-    .local v6, defaultPreview:Landroid/graphics/Bitmap;
     if-eqz v11, :cond_5
 
     const/16 v25, 0x1
 
-    .line 320
-    .local v25, widgetPreviewExists:Z
     :goto_0
     if-eqz v25, :cond_6
 
-    .line 321
     invoke-virtual {v11}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v18
 
-    .line 322
-    .local v18, bitmapWidth:I
     invoke-virtual {v11}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v17
 
-    .line 344
-    .local v17, bitmapHeight:I
     :cond_3
     :goto_1
     const/high16 v23, 0x3f80
 
-    .line 345
-    .local v23, scale:F
     move/from16 v0, v18
 
     move/from16 v1, p4
 
     if-le v0, v1, :cond_4
 
-    .line 346
     move/from16 v0, p4
 
     int-to-float v4, v0
@@ -289,7 +241,6 @@
 
     div-float v23, v4, v7
 
-    .line 348
     :cond_4
     move/from16 v0, v18
 
@@ -299,8 +250,6 @@
 
     float-to-int v15, v4
 
-    .line 349
-    .local v15, finalPreviewWidth:I
     move/from16 v0, v17
 
     int-to-float v4, v0
@@ -311,11 +260,8 @@
 
     move/from16 v16, v0
 
-    .line 351
-    .local v16, finalPreviewHeight:I
     move/from16 v18, v15
 
-    .line 352
     move/from16 v0, v16
 
     move/from16 v1, p5
@@ -324,7 +270,6 @@
 
     move-result v17
 
-    .line 354
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     move/from16 v0, v18
@@ -335,11 +280,8 @@
 
     move-result-object v12
 
-    .line 358
-    .local v12, preview:Landroid/graphics/Bitmap;
     if-eqz v25, :cond_8
 
-    .line 359
     const/4 v13, 0x0
 
     const/4 v14, 0x0
@@ -348,34 +290,19 @@
 
     invoke-direct/range {v10 .. v16}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->renderDrawableToBitmap(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;IIII)V
 
-    .line 378
     :goto_2
     return-object v12
 
-    .line 319
-    .end local v12           #preview:Landroid/graphics/Bitmap;
-    .end local v15           #finalPreviewWidth:I
-    .end local v16           #finalPreviewHeight:I
-    .end local v17           #bitmapHeight:I
-    .end local v18           #bitmapWidth:I
-    .end local v23           #scale:F
-    .end local v25           #widgetPreviewExists:Z
     :cond_5
     const/16 v25, 0x0
 
     goto :goto_0
 
-    .line 325
-    .restart local v25       #widgetPreviewExists:Z
     :cond_6
     move/from16 v18, v9
 
-    .line 326
-    .restart local v18       #bitmapWidth:I
     move/from16 v17, v9
 
-    .line 327
-    .restart local v17       #bitmapHeight:I
     sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     move/from16 v0, v18
@@ -386,14 +313,10 @@
 
     move-result-object v6
 
-    .line 331
     const/4 v5, 0x0
 
-    .line 332
-    .local v5, icon:Landroid/graphics/drawable/Drawable;
     if-lez p3, :cond_7
 
-    .line 333
     :try_start_0
     move-object/from16 v0, p0
 
@@ -405,11 +328,9 @@
 
     move-result-object v5
 
-    .line 334
     :cond_7
     if-eqz v5, :cond_3
 
-    .line 335
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -424,60 +345,46 @@
 
     goto :goto_1
 
-    .line 338
     :catch_0
     move-exception v4
 
     goto :goto_1
 
-    .line 362
-    .end local v5           #icon:Landroid/graphics/drawable/Drawable;
-    .restart local v12       #preview:Landroid/graphics/Bitmap;
-    .restart local v15       #finalPreviewWidth:I
-    .restart local v16       #finalPreviewHeight:I
-    .restart local v23       #scale:F
     :cond_8
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewCanvas:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$CanvasCache;
 
-    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$CanvasCache;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v19
 
     check-cast v19, Landroid/graphics/Canvas;
 
-    .line 363
-    .local v19, c:Landroid/graphics/Canvas;
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewSrcRect:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
-    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v24
 
     check-cast v24, Landroid/graphics/Rect;
 
-    .line 364
-    .local v24, src:Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewDestRect:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;
 
-    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$RectCache;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v20
 
     check-cast v20, Landroid/graphics/Rect;
 
-    .line 365
-    .local v20, dest:Landroid/graphics/Rect;
     move-object/from16 v0, v19
 
     invoke-virtual {v0, v12}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 366
     const/4 v4, 0x0
 
     const/4 v7, 0x0
@@ -494,7 +401,6 @@
 
     invoke-virtual {v0, v4, v7, v8, v10}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 367
     const/4 v4, 0x0
 
     const/4 v7, 0x0
@@ -505,45 +411,36 @@
 
     invoke-virtual {v0, v4, v7, v15, v1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 369
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewPaint:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;
 
-    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;->get()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v21
 
     check-cast v21, Landroid/graphics/Paint;
 
-    .line 370
-    .local v21, p:Landroid/graphics/Paint;
     if-nez v21, :cond_9
 
-    .line 371
     new-instance v21, Landroid/graphics/Paint;
 
-    .end local v21           #p:Landroid/graphics/Paint;
     invoke-direct/range {v21 .. v21}, Landroid/graphics/Paint;-><init>()V
 
-    .line 372
-    .restart local v21       #p:Landroid/graphics/Paint;
     const/4 v4, 0x1
 
     move-object/from16 v0, v21
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->sCachedAppWidgetPreviewPaint:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;
 
     move-object/from16 v0, v21
 
-    invoke-virtual {v4, v0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$PaintCache;->set(Ljava/lang/Object;)V
+    invoke-virtual {v4, v0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 375
     :cond_9
     move-object/from16 v0, v19
 
@@ -555,7 +452,6 @@
 
     invoke-virtual {v0, v6, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 376
     const/4 v4, 0x0
 
     move-object/from16 v0, v19
@@ -567,15 +463,7 @@
 
 .method private renderDrawableToBitmap(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;IIII)V
     .locals 8
-    .parameter "d"
-    .parameter "bitmap"
-    .parameter "x"
-    .parameter "y"
-    .parameter "w"
-    .parameter "h"
 
-    .prologue
-    .line 412
     const/high16 v7, 0x3f80
 
     move-object v0, p0
@@ -594,60 +482,38 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->renderDrawableToBitmap(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;IIIIF)V
 
-    .line 413
     return-void
 .end method
 
 .method private renderDrawableToBitmap(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;IIIIF)V
     .locals 4
-    .parameter "d"
-    .parameter "bitmap"
-    .parameter "x"
-    .parameter "y"
-    .parameter "w"
-    .parameter "h"
-    .parameter "scale"
 
-    .prologue
-    .line 417
     if-eqz p2, :cond_0
 
-    .line 418
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0, p2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 419
-    .local v0, c:Landroid/graphics/Canvas;
     invoke-virtual {v0, p7, p7}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 420
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->copyBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 421
-    .local v1, oldBounds:Landroid/graphics/Rect;
     add-int v2, p3, p5
 
     add-int v3, p4, p6
 
     invoke-virtual {p1, p3, p4, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 422
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 423
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 424
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 426
-    .end local v0           #c:Landroid/graphics/Canvas;
-    .end local v1           #oldBounds:Landroid/graphics/Rect;
     :cond_0
     return-void
 .end method
@@ -656,13 +522,9 @@
 # virtual methods
 .method public bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 200
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
 
     move-result-object v0
@@ -672,17 +534,13 @@
 
 .method public varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 7
-    .parameter "params"
 
-    .prologue
-    .line 215
-    invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 216
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x7f0e001e
@@ -691,8 +549,6 @@
 
     move-result v4
 
-    .line 218
-    .local v4, appWidgetPreviewWidth:I
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mResources:Landroid/content/res/Resources;
 
     const v1, 0x7f0e001f
@@ -701,8 +557,6 @@
 
     move-result v5
 
-    .line 220
-    .local v5, appWidgetPreviewHeight:I
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->this$0:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;
@@ -729,8 +583,6 @@
 
     move-result-object v6
 
-    .line 223
-    .local v6, b:Landroid/graphics/Bitmap;
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/graphics/Bitmap;
@@ -739,12 +591,8 @@
 
     aput-object v6, v0, v1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->publishProgress([Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Landroid/os/AsyncTask;->publishProgress([Ljava/lang/Object;)V
 
-    .line 225
-    .end local v4           #appWidgetPreviewWidth:I
-    .end local v5           #appWidgetPreviewHeight:I
-    .end local v6           #b:Landroid/graphics/Bitmap;
     :cond_0
     const/4 v0, 0x0
 
@@ -754,8 +602,6 @@
 .method public getFullResDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 381
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -771,11 +617,7 @@
 
 .method public getFullResIcon(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
     .locals 3
-    .parameter "resources"
-    .parameter "iconId"
 
-    .prologue
-    .line 388
     :try_start_0
     iget v2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mIconDpi:I
 
@@ -785,28 +627,19 @@
 
     move-result-object v0
 
-    .line 393
-    .local v0, d:Landroid/graphics/drawable/Drawable;
     :goto_0
     if-eqz v0, :cond_0
 
-    .end local v0           #d:Landroid/graphics/drawable/Drawable;
     :goto_1
     return-object v0
 
-    .line 389
     :catch_0
     move-exception v1
 
-    .line 390
-    .local v1, e:Landroid/content/res/Resources$NotFoundException;
     const/4 v0, 0x0
 
-    .restart local v0       #d:Landroid/graphics/drawable/Drawable;
     goto :goto_0
 
-    .line 393
-    .end local v1           #e:Landroid/content/res/Resources$NotFoundException;
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->getFullResDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
 
@@ -817,11 +650,7 @@
 
 .method public getFullResIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
     .locals 3
-    .parameter "packageName"
-    .parameter "iconId"
 
-    .prologue
-    .line 399
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mPackageManager:Landroid/content/pm/PackageManager;
 
@@ -831,37 +660,25 @@
 
     move-result-object v1
 
-    .line 403
-    .local v1, resources:Landroid/content/res/Resources;
     :goto_0
     if-eqz v1, :cond_0
 
-    .line 404
     if-eqz p2, :cond_0
 
-    .line 405
     invoke-virtual {p0, v1, p2}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->getFullResIcon(Landroid/content/res/Resources;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 408
     :goto_1
     return-object v2
 
-    .line 400
-    .end local v1           #resources:Landroid/content/res/Resources;
     :catch_0
     move-exception v0
 
-    .line 401
-    .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v1, 0x0
 
-    .restart local v1       #resources:Landroid/content/res/Resources;
     goto :goto_0
 
-    .line 408
-    .end local v0           #e:Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->getFullResDefaultActivityIcon()Landroid/graphics/drawable/Drawable;
 
@@ -872,42 +689,30 @@
 
 .method public varargs onProgressUpdate([Landroid/graphics/Bitmap;)V
     .locals 2
-    .parameter "values"
 
-    .prologue
-    .line 228
-    invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->isCancelled()Z
+    invoke-virtual {p0}, Landroid/os/AsyncTask;->isCancelled()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 229
     const/4 v1, 0x0
 
     aget-object v0, p1, v1
 
-    .line 230
-    .local v0, b:Landroid/graphics/Bitmap;
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->mView:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 232
-    .end local v0           #b:Landroid/graphics/Bitmap;
     :cond_0
     return-void
 .end method
 
 .method public bridge synthetic onProgressUpdate([Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 200
     check-cast p1, [Landroid/graphics/Bitmap;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->onProgressUpdate([Landroid/graphics/Bitmap;)V
 
     return-void

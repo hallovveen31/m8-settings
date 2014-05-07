@@ -45,20 +45,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     return-void
 .end method
 
 .method static getSetupMiniConfig(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 123
     invoke-static {p0}, Lcom/android/settings/bluetooth/HtcHeadsetUtils;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -76,10 +70,7 @@
 
 .method private static getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 119
     const-string v0, "htcmini_settings"
 
     const/4 v1, 0x0
@@ -93,23 +84,17 @@
 
 .method public static isAnyFinding(Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;)Z
     .locals 5
-    .parameter "deviceManager"
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 54
     invoke-virtual {p0}, Lcom/android/settings/bluetooth/CachedBluetoothDeviceManager;->getCachedDevicesCopy()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 56
-    .local v1, cachedDevices:Ljava/util/Collection;,"Ljava/util/Collection<Lcom/android/settings/bluetooth/CachedBluetoothDevice;>;"
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
     :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -123,14 +108,10 @@
 
     check-cast v0, Lcom/android/settings/bluetooth/CachedBluetoothDevice;
 
-    .line 57
-    .local v0, cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     iget v4, v0, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->mFind:I
 
     if-ne v4, v3, :cond_0
 
-    .line 59
-    .end local v0           #cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     :goto_0
     return v3
 
@@ -142,15 +123,11 @@
 
 .method public static isHtcBoomBass(Ljava/lang/String;)Z
     .locals 1
-    .parameter "deviceName"
 
-    .prologue
-    .line 109
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 110
     :goto_0
     return v0
 
@@ -166,15 +143,11 @@
 
 .method public static isHtcMini(Ljava/lang/String;)Z
     .locals 2
-    .parameter "deviceName"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 104
     if-nez p0, :cond_1
 
-    .line 105
     :cond_0
     :goto_0
     return v0
@@ -204,11 +177,7 @@
 
 .method static saveSetupMiniConfig(Landroid/content/Context;Z)V
     .locals 2
-    .parameter "context"
-    .parameter "never"
 
-    .prologue
-    .line 128
     invoke-static {p0}, Lcom/android/settings/bluetooth/HtcHeadsetUtils;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -217,27 +186,18 @@
 
     move-result-object v0
 
-    .line 129
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
     const-string v1, "show_htc_mini_setup_page"
 
     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 130
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 131
     return-void
 .end method
 
 .method public static setFindMeEnabled(Landroid/content/Context;Lcom/android/settings/bluetooth/CachedBluetoothDevice;I)V
     .locals 4
-    .parameter "context"
-    .parameter "cachedDevice"
-    .parameter "state"
 
-    .prologue
-    .line 44
     sget-boolean v1, Lcom/android/settings/bluetooth/Utils;->D:Z
 
     if-eqz v1, :cond_0
@@ -274,27 +234,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     :cond_0
     if-nez p1, :cond_1
 
-    .line 51
     :goto_0
     return-void
 
-    .line 46
     :cond_1
     iput p2, p1, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->mFind:I
 
-    .line 47
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.accessory.action.SEARCH_ACCESSORY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 48
-    .local v0, intent:Landroid/content/Intent;
     const-string v1, "android.bluetooth.device.extra.DEVICE"
 
     invoke-virtual {p1}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
@@ -303,12 +257,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 49
     const-string v1, "mode"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 50
     const-string v1, "com.htc.accessory.permission.SEARCH_ACCESSORY"
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
@@ -318,23 +270,17 @@
 
 .method public static showBoomBassDialog(Landroid/content/Context;Lcom/htc/widget/HtcAlertDialog;)Lcom/htc/widget/HtcAlertDialog;
     .locals 3
-    .parameter "context"
-    .parameter "dialog"
 
-    .prologue
-    .line 91
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/htc/widget/HtcAlertDialog;->isShowing()Z
+    invoke-virtual {p1}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 92
-    invoke-virtual {p1}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {p1}, Landroid/app/Dialog;->dismiss()V
 
-    .line 94
     :cond_0
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -364,43 +310,31 @@
 
     move-result-object p1
 
-    .line 99
-    invoke-virtual {p1}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {p1}, Landroid/app/Dialog;->show()V
 
-    .line 100
     return-object p1
 .end method
 
 .method public static showFindMeDialog(Landroid/content/Context;Lcom/android/settings/bluetooth/CachedBluetoothDevice;Landroid/view/LayoutInflater;Lcom/htc/widget/HtcAlertDialog;)Lcom/htc/widget/HtcAlertDialog;
     .locals 5
-    .parameter "context"
-    .parameter "cachedDevice"
-    .parameter "inflater"
-    .parameter "dialog"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 65
     if-eqz p3, :cond_0
 
-    invoke-virtual {p3}, Lcom/htc/widget/HtcAlertDialog;->isShowing()Z
+    invoke-virtual {p3}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 66
-    invoke-virtual {p3}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {p3}, Landroid/app/Dialog;->dismiss()V
 
-    .line 68
     :cond_0
     invoke-virtual {p1}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 69
-    .local v0, deviceName:Ljava/lang/String;
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v1, p0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -449,18 +383,15 @@
 
     move-result-object p3
 
-    .line 84
-    invoke-virtual {p3}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {p3}, Landroid/app/Dialog;->show()V
 
-    .line 85
     const v1, 0x102000d
 
-    invoke-virtual {p3, v1}, Lcom/htc/widget/HtcAlertDialog;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p3, v1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 86
     return-object p3
 .end method

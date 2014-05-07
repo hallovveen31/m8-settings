@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/Display;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/settings/Display$1;->this$0:Lcom/android/settings/Display;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,9 @@
 # virtual methods
 .method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
-    .parameter "av"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
 
-    .prologue
-    .line 119
     if-nez p3, :cond_0
 
-    .line 120
     iget-object v0, p0, Lcom/android/settings/Display$1;->this$0:Lcom/android/settings/Display;
 
     #getter for: Lcom/android/settings/Display;->mCurConfig:Landroid/content/res/Configuration;
@@ -60,23 +50,19 @@
 
     iput v1, v0, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 127
     :goto_0
     iget-object v0, p0, Lcom/android/settings/Display$1;->this$0:Lcom/android/settings/Display;
 
     #calls: Lcom/android/settings/Display;->updateFontScale()V
     invoke-static {v0}, Lcom/android/settings/Display;->access$100(Lcom/android/settings/Display;)V
 
-    .line 128
     return-void
 
-    .line 121
     :cond_0
     const/4 v0, 0x2
 
     if-ne p3, v0, :cond_1
 
-    .line 122
     iget-object v0, p0, Lcom/android/settings/Display$1;->this$0:Lcom/android/settings/Display;
 
     #getter for: Lcom/android/settings/Display;->mCurConfig:Landroid/content/res/Configuration;
@@ -90,7 +76,6 @@
 
     goto :goto_0
 
-    .line 124
     :cond_1
     iget-object v0, p0, Lcom/android/settings/Display$1;->this$0:Lcom/android/settings/Display;
 
@@ -108,9 +93,6 @@
 
 .method public onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
-    .parameter "av"
 
-    .prologue
-    .line 131
     return-void
 .end method

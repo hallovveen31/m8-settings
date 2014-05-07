@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ISActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 415
     iput-object p1, p0, Lcom/android/settings/ISActivity$14;->this$0:Lcom/android/settings/ISActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 417
     iget-object v0, p0, Lcom/android/settings/ISActivity$14;->this$0:Lcom/android/settings/ISActivity;
 
     iget-object v0, v0, Lcom/android/settings/ISActivity;->mContext:Landroid/content/Context;
@@ -66,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 418
     iget-object v0, p0, Lcom/android/settings/ISActivity$14;->this$0:Lcom/android/settings/ISActivity;
 
     iget-object v0, v0, Lcom/android/settings/ISActivity;->mContext:Landroid/content/Context;
@@ -79,7 +71,6 @@
 
     invoke-static {v0, v1, v3}, Lcom/htc/wrap/android/provider/HtcWrapSettings$Secure;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 421
     :cond_0
     iget-object v0, p0, Lcom/android/settings/ISActivity$14;->this$0:Lcom/android/settings/ISActivity;
 
@@ -87,11 +78,9 @@
 
     invoke-static {v3, v0}, Lcom/android/settings/SmartNSUtility;->setNetSharing(ZLandroid/content/Context;)V
 
-    .line 423
     iget-object v0, p0, Lcom/android/settings/ISActivity$14;->this$0:Lcom/android/settings/ISActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/ISActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 424
     return-void
 .end method

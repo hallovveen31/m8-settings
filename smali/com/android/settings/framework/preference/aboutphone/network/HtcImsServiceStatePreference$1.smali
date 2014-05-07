@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 136
     iput-object p1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,14 +33,9 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 139
     if-eqz p2, :cond_1
 
-    .line 140
     iget-object v1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;
 
     #getter for: Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->mImsServiceState:Ljava/lang/String;
@@ -51,14 +43,11 @@
 
     move-result-object v0
 
-    .line 141
-    .local v0, imsSrvState:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;
 
     #calls: Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->checkimsStateReceiverIntent(Landroid/content/Intent;)V
     invoke-static {v1, p2}, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->access$100(Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;Landroid/content/Intent;)V
 
-    .line 142
     iget-object v1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;
 
     #getter for: Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->mImsServiceState:Ljava/lang/String;
@@ -81,12 +70,10 @@
 
     if-nez v1, :cond_1
 
-    .line 143
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_0
 
-    .line 144
     invoke-static {}, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->access$200()Ljava/lang/String;
 
     move-result-object v1
@@ -128,7 +115,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;
 
@@ -146,10 +132,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/framework/preference/aboutphone/network/HtcImsServiceStatePreference;->setSummaryInForeground(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Lcom/android/settings/framework/preference/HtcAbsStatusPreference;->setSummaryInForeground(Ljava/lang/CharSequence;)V
 
-    .line 148
-    .end local v0           #imsSrvState:Ljava/lang/String;
     :cond_1
     return-void
 .end method

@@ -19,8 +19,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +29,6 @@
 .method public getmCode()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/amap/mapapi/busline/BusStationItem;->d:Ljava/lang/String;
 
     return-object v0
@@ -41,8 +37,6 @@
 .method public getmCoord()Lcom/amap/mapapi/core/GeoPoint;
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/amap/mapapi/busline/BusStationItem;->b:Lcom/amap/mapapi/core/GeoPoint;
 
     return-object v0
@@ -51,8 +45,6 @@
 .method public getmName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcom/amap/mapapi/busline/BusStationItem;->a:Ljava/lang/String;
 
     return-object v0
@@ -61,8 +53,6 @@
 .method public getmSpell()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lcom/amap/mapapi/busline/BusStationItem;->c:Ljava/lang/String;
 
     return-object v0
@@ -71,8 +61,6 @@
 .method public getmStationNum()I
     .locals 1
 
-    .prologue
-    .line 37
     iget v0, p0, Lcom/amap/mapapi/busline/BusStationItem;->e:I
 
     return v0
@@ -80,69 +68,47 @@
 
 .method public setmCode(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 34
     iput-object p1, p0, Lcom/amap/mapapi/busline/BusStationItem;->d:Ljava/lang/String;
 
-    .line 35
     return-void
 .end method
 
 .method public setmCoord(Lcom/amap/mapapi/core/GeoPoint;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 22
     iput-object p1, p0, Lcom/amap/mapapi/busline/BusStationItem;->b:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 23
     return-void
 .end method
 
 .method public setmName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 16
     iput-object p1, p0, Lcom/amap/mapapi/busline/BusStationItem;->a:Ljava/lang/String;
 
-    .line 17
     return-void
 .end method
 
 .method public setmSpell(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 28
     iput-object p1, p0, Lcom/amap/mapapi/busline/BusStationItem;->c:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
 .method public setmStationNum(I)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 40
     iput p1, p0, Lcom/amap/mapapi/busline/BusStationItem;->e:I
 
-    .line 41
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 44
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

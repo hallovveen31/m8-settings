@@ -37,10 +37,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TtsEngineSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/settings/tts/TtsEngineSettingsFragment$3;->this$0:Lcom/android/settings/tts/TtsEngineSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,8 +49,6 @@
 # virtual methods
 .method public compare(Landroid/util/Pair;Landroid/util/Pair;)I
     .locals 2
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -70,10 +65,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 220
-    .local p1, lhs:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
-    .local p2, rhs:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -91,17 +82,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 217
     check-cast p1, Landroid/util/Pair;
 
-    .end local p1
     check-cast p2, Landroid/util/Pair;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/tts/TtsEngineSettingsFragment$3;->compare(Landroid/util/Pair;Landroid/util/Pair;)I
 
     move-result v0

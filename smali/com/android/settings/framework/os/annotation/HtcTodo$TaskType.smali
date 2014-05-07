@@ -45,7 +45,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -56,7 +55,6 @@
 
     const/4 v3, 0x0
 
-    .line 40
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "MIGRATION"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->MIGRATION:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 48
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "PORTING"
@@ -74,7 +71,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->PORTING:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 54
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "SENSE_55"
@@ -83,7 +79,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->SENSE_55:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 60
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "SENSE_60"
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->SENSE_60:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 66
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "SENSE_65"
@@ -101,7 +95,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->SENSE_65:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 72
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "TODO"
@@ -112,7 +105,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->TODO:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 79
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     const-string v1, "NOT_PERFECT"
@@ -123,7 +115,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->NOT_PERFECT:Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    .line 32
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
@@ -167,16 +158,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -184,10 +171,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 32
     const-class v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -202,11 +186,9 @@
 .method public static values()[Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
     .locals 1
 
-    .prologue
-    .line 32
     sget-object v0, Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->$VALUES:[Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/os/annotation/HtcTodo$TaskType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

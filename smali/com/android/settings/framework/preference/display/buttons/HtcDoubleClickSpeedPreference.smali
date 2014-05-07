@@ -12,26 +12,17 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;)V
 
-    .line 31
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 35
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 36
     return-void
 .end method
 
@@ -40,9 +31,7 @@
 .method protected getCustomEntries()[Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 46
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/display/buttons/HtcDoubleClickSpeedPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -56,9 +45,7 @@
 .method protected getCustomEntryValues()[Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 51
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/display/buttons/HtcDoubleClickSpeedPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -72,9 +59,7 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 40
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/display/buttons/HtcDoubleClickSpeedPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -89,16 +74,11 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 58
     invoke-static {p1}, Lcom/android/settings/framework/core/display/HtcButtonManager;->getDoubleClickSpeed(Landroid/content/Context;)Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;
 
     move-result-object v0
 
-    .line 59
-    .local v0, speed:Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;
     invoke-virtual {v0}, Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;->getValue()I
 
     move-result v1
@@ -112,17 +92,11 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "newValue"
 
-    .prologue
-    .line 67
     invoke-static {p2}, Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;->toDoubleClickSpeed(Ljava/lang/String;)Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;
 
     move-result-object v0
 
-    .line 68
-    .local v0, speed:Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;
     invoke-static {p1, v0}, Lcom/android/settings/framework/core/display/HtcButtonManager;->setDoubleClickSpeed(Landroid/content/Context;Lcom/android/settings/framework/core/display/HtcButtonManager$DoubleClickSpeed;)Z
 
     move-result v1

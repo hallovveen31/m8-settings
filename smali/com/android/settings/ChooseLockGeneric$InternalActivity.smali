@@ -18,8 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Lcom/android/settings/ChooseLockGeneric;-><init>()V
 
     return-void

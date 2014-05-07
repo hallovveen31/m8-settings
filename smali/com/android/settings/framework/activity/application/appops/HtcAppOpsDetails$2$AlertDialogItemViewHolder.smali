@@ -25,10 +25,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$2;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 329
     iput-object p1, p0, Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$2$AlertDialogItemViewHolder;->this$1:Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

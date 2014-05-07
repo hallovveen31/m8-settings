@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;Landroid/content/DialogInterface;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 311
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2$1;->this$1:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;
 
     iput-object p2, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2$1;->val$dialog:Landroid/content/DialogInterface;
@@ -44,18 +40,12 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "hugeWarningDialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 313
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 314
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2$1;->val$dialog:Landroid/content/DialogInterface;
 
     invoke-interface {v0}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 315
     return-void
 .end method

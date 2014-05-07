@@ -10,16 +10,11 @@
 # direct methods
 .method public constructor <init>(Lcom/amap/mapapi/map/RouteOverlay;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lcom/amap/mapapi/map/ap;->c:Lcom/amap/mapapi/map/RouteOverlay;
 
-    .line 24
     return-void
 .end method
 
@@ -27,11 +22,7 @@
 # virtual methods
 .method protected a(Lcom/amap/mapapi/map/MapView;Lcom/amap/mapapi/core/GeoPoint;)Landroid/graphics/Point;
     .locals 2
-    .parameter
-    .parameter
 
-    .prologue
-    .line 31
     invoke-virtual {p1}, Lcom/amap/mapapi/map/MapView;->getProjection()Lcom/amap/mapapi/map/Projection;
 
     move-result-object v0
@@ -47,11 +38,7 @@
 
 .method protected a(Lcom/amap/mapapi/map/MapView;Landroid/graphics/Point;)Lcom/amap/mapapi/core/GeoPoint;
     .locals 3
-    .parameter
-    .parameter
 
-    .prologue
-    .line 35
     invoke-virtual {p1}, Lcom/amap/mapapi/map/MapView;->getProjection()Lcom/amap/mapapi/map/Projection;
 
     move-result-object v0
@@ -69,31 +56,19 @@
 
 .method public a(Landroid/graphics/Canvas;Lcom/amap/mapapi/map/MapView;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 28
     return-void
 .end method
 
 .method public a(Lcom/amap/mapapi/map/MapView;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 39
     return-void
 .end method
 
 .method public a(Landroid/view/MotionEvent;Lcom/amap/mapapi/map/MapView;)Z
     .locals 1
-    .parameter
-    .parameter
 
-    .prologue
-    .line 45
     const/4 v0, 0x0
 
     return v0
@@ -101,9 +76,6 @@
 
 .method public b(Lcom/amap/mapapi/map/MapView;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 42
     return-void
 .end method

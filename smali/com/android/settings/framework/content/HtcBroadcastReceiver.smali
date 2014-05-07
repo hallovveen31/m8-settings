@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -55,25 +53,18 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 66
     return-void
 .end method
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 127
     sget-object v0, Lcom/android/settings/framework/content/HtcBroadcastReceiver;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     return-void
 .end method
 
@@ -82,23 +73,16 @@
 .method protected onPreCreateBackgroundThread()V
     .locals 0
 
-    .prologue
-    .line 45
     return-void
 .end method
 
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 33
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,11 +119,9 @@
 
     invoke-static {v0}, Lcom/android/settings/framework/content/HtcBroadcastReceiver;->log(Ljava/lang/String;)V
 
-    .line 37
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/framework/content/HtcBroadcastReceiver;->onPreCreateBackgroundThread()V
 
-    .line 38
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/settings/framework/content/HtcBroadcastReceiver$ReceiverRunnable;
@@ -150,7 +132,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 39
     return-void
 .end method
 

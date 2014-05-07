@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 49
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
@@ -40,8 +38,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,7 +45,6 @@
 
 .method public static getEntries(Landroid/content/Context;)Ljava/util/ArrayList;
     .locals 3
-    .parameter "context"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -62,18 +57,14 @@
         }
     .end annotation
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 65
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 66
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->readCustomizedData(Landroid/content/Context;)V
 
-    .line 69
     :cond_0
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isTmousSku()Z
 
@@ -81,7 +72,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -90,7 +80,6 @@
 
     if-nez v0, :cond_2
 
-    .line 71
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -99,14 +88,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 76
     :cond_1
     :goto_0
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     return-object v0
 
-    .line 72
     :cond_2
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
@@ -130,7 +117,6 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 73
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -144,10 +130,7 @@
 
 .method private static readCustomizedData(Landroid/content/Context;)V
     .locals 8
-    .parameter "context"
 
-    .prologue
-    .line 85
     const-string v5, "system"
 
     const-string v6, "Settings"
@@ -156,23 +139,18 @@
 
     move-result-object v0
 
-    .line 89
-    .local v0, customizedData:Lcom/android/settings/framework/storage/customize/HtcCustomizedData;
     invoke-virtual {v0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedData;->getCustomizedData()Landroid/os/Bundle;
 
     move-result-object v5
 
     if-nez v5, :cond_1
 
-    .line 90
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->readDefaultData(Landroid/content/Context;)V
 
-    .line 127
     :cond_0
     :goto_0
     return-void
 
-    .line 94
     :cond_1
     const-string v5, "inactivity_time"
 
@@ -180,16 +158,12 @@
 
     move-result-object v4
 
-    .line 98
-    .local v4, valuesBundle:Landroid/os/Bundle;
     if-nez v4, :cond_2
 
-    .line 99
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->readDefaultData(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 103
     :cond_2
     sget-boolean v5, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
@@ -201,7 +175,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     :cond_3
     new-instance v5, Ljava/util/ArrayList;
 
@@ -211,10 +184,8 @@
 
     sput-object v5, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
-    .line 107
     const/4 v3, 0x0
 
-    .local v3, i:I
     :goto_1
     invoke-virtual {v4}, Landroid/os/Bundle;->size()I
 
@@ -222,7 +193,6 @@
 
     if-ge v3, v5, :cond_5
 
-    .line 108
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,13 +217,10 @@
 
     move-result-object v2
 
-    .line 110
-    .local v2, entry:Ljava/lang/String;
     sget-boolean v5, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v5, :cond_4
 
-    .line 111
     const-string v5, "HtcCustomizedInactivityTime"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -280,7 +247,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_4
     :try_start_0
     sget-object v5, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
@@ -297,25 +263,18 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 107
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 116
     :catch_0
     move-exception v1
 
-    .line 117
-    .local v1, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v1}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 
-    .line 123
-    .end local v1           #e:Ljava/lang/NumberFormatException;
-    .end local v2           #entry:Ljava/lang/String;
     :cond_5
     sget-object v5, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
@@ -325,7 +284,6 @@
 
     if-nez v5, :cond_0
 
-    .line 124
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->readDefaultData(Landroid/content/Context;)V
 
     goto/16 :goto_0
@@ -333,22 +291,17 @@
 
 .method private static readDefaultData(Landroid/content/Context;)V
     .locals 6
-    .parameter "context"
 
-    .prologue
-    .line 134
     sget-boolean v4, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v4, :cond_0
 
-    .line 135
     const-string v4, "HtcCustomizedInactivityTime"
 
     const-string v5, "no SIE data, read default data"
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -360,8 +313,6 @@
 
     move-result-object v3
 
-    .line 142
-    .local v3, values:[Ljava/lang/String;
     new-instance v4, Ljava/util/ArrayList;
 
     const/16 v5, 0x8
@@ -370,16 +321,13 @@
 
     sput-object v4, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
-    .line 143
     const/4 v1, 0x0
 
-    .local v1, i:I
     :goto_0
     array-length v4, v3
 
     if-ge v1, v4, :cond_1
 
-    .line 145
     :try_start_0
     aget-object v4, v3, v1
 
@@ -387,8 +335,6 @@
 
     move-result v2
 
-    .line 146
-    .local v2, value:I
     sget-object v4, Lcom/android/settings/framework/storage/customize/HtcCustomizedInactivityTime;->mValueList:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -399,25 +345,18 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 143
-    .end local v2           #value:I
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 147
     :catch_0
     move-exception v0
 
-    .line 148
-    .local v0, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_1
 
-    .line 151
-    .end local v0           #e:Ljava/lang/NumberFormatException;
     :cond_1
     return-void
 .end method

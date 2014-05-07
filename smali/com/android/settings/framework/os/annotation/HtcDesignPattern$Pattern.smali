@@ -59,7 +59,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -70,7 +69,6 @@
 
     const/4 v3, 0x0
 
-    .line 15
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "ABSTRACT_FACTORY"
@@ -79,7 +77,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->ABSTRACT_FACTORY:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 18
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "ADAPTER"
@@ -88,7 +85,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->ADAPTER:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 21
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "BUILDER"
@@ -97,7 +93,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->BUILDER:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 27
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "DECORATOR"
@@ -106,7 +101,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->DECORATOR:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 30
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "FACADE"
@@ -115,7 +109,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->FACADE:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 33
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "FACTORY"
@@ -126,7 +119,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->FACTORY:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 36
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "OBSERVER"
@@ -137,7 +129,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->OBSERVER:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 39
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "PROTOTYPE"
@@ -148,7 +139,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->PROTOTYPE:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 46
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "PROXY"
@@ -159,7 +149,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->PROXY:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 49
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "SRP"
@@ -170,7 +159,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->SRP:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 52
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "STATE"
@@ -181,7 +169,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->STATE:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 55
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "STRATEGY"
@@ -192,7 +179,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->STRATEGY:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 58
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "TEMPLATE"
@@ -203,7 +189,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->TEMPLATE:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 60
     new-instance v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     const-string v1, "NONE"
@@ -214,7 +199,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->NONE:Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    .line 12
     const/16 v0, 0xe
 
     new-array v0, v0, [Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
@@ -300,16 +284,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -317,10 +297,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 12
     const-class v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -335,11 +312,9 @@
 .method public static values()[Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
     .locals 1
 
-    .prologue
-    .line 12
     sget-object v0, Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->$VALUES:[Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/os/annotation/HtcDesignPattern$Pattern;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

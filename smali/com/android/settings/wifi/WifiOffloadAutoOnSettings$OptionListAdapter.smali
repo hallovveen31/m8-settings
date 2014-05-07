@@ -30,11 +30,6 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;Landroid/content/Context;IILjava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter "context"
-    .parameter "resource"
-    .parameter "textViewResourceId"
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -47,15 +42,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 73
-    .local p5, objects:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/settings/wifi/WifiOffloadAutoOnSettings$OptionListAdapter;->this$0:Lcom/android/settings/wifi/WifiOffloadAutoOnSettings;
 
-    .line 74
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;IILjava/util/List;)V
 
-    .line 75
     return-void
 .end method
 
@@ -63,30 +53,20 @@
 # virtual methods
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
-    .line 79
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 80
-    .local v0, result:Landroid/view/View;
     const v2, 0x7f0900fd
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 81
-    .local v1, summary:Landroid/view/View;
     const/16 v2, 0x8
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 82
     return-object v0
 .end method

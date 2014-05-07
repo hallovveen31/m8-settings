@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/location/LocationManagerProxy;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 397
     iput-object p1, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 8
-    .parameter
 
-    .prologue
-    .line 400
     iget-object v0, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-static {v0}, Lcom/amap/mapapi/location/LocationManagerProxy;->c(Lcom/amap/mapapi/location/LocationManagerProxy;)Z
@@ -63,17 +57,14 @@
 
     if-lez v0, :cond_2
 
-    .line 401
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
 
-    .line 402
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v2
 
-    .line 403
     iget-object v4, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-static {v4}, Lcom/amap/mapapi/location/LocationManagerProxy;->e(Lcom/amap/mapapi/location/LocationManagerProxy;)D
@@ -116,7 +107,6 @@
 
     move-result-wide v1
 
-    .line 408
     iget-object v0, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-static {v0}, Lcom/amap/mapapi/location/LocationManagerProxy;->d(Lcom/amap/mapapi/location/LocationManagerProxy;)Ljava/util/ArrayList;
@@ -141,12 +131,10 @@
 
     check-cast v0, Landroid/app/PendingIntent;
 
-    .line 409
     invoke-static {}, Lcom/amap/mapapi/core/e;->a()J
 
     move-result-wide v4
 
-    .line 410
     iget-object v6, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-static {v6}, Lcom/amap/mapapi/location/LocationManagerProxy;->g(Lcom/amap/mapapi/location/LocationManagerProxy;)J
@@ -169,14 +157,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 411
     iget-object v4, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
     invoke-virtual {v4, v0}, Lcom/amap/mapapi/location/LocationManagerProxy;->removeProximityAlert(Landroid/app/PendingIntent;)V
 
     goto :goto_0
 
-    .line 413
     :cond_1
     iget-object v4, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
@@ -198,32 +184,26 @@
 
     move-result-wide v4
 
-    .line 415
     const-wide/high16 v6, 0x3fe0
 
     cmpg-double v4, v4, v6
 
     if-gez v4, :cond_0
 
-    .line 416
     new-instance v4, Landroid/content/Intent;
 
     invoke-direct {v4}, Landroid/content/Intent;-><init>()V
 
-    .line 417
     new-instance v5, Landroid/os/Bundle;
 
     invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
-    .line 418
     const-string v6, "location"
 
     invoke-virtual {v5, v6, p1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 421
     invoke-virtual {v4, v5}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 423
     :try_start_0
     iget-object v5, p0, Lcom/amap/mapapi/location/LocationManagerProxy$a;->a:Lcom/amap/mapapi/location/LocationManagerProxy;
 
@@ -239,45 +219,31 @@
 
     goto :goto_0
 
-    .line 424
     :catch_0
     move-exception v0
 
-    .line 425
-    invoke-virtual {v0}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
-    .line 431
     :cond_2
     return-void
 .end method
 
 .method public onProviderDisabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 443
     return-void
 .end method
 
 .method public onProviderEnabled(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 439
     return-void
 .end method
 
 .method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 435
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/LanInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,23 +33,17 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     const v7, 0x7f0c048a
 
-    .line 44
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 45
-    .local v0, action:Ljava/lang/String;
     const-string v3, "android.net.wifi.STATE_CHANGE"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -61,7 +52,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 47
     const-string v3, "networkInfo"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -70,8 +60,6 @@
 
     check-cast v2, Landroid/net/NetworkInfo;
 
-    .line 49
-    .local v2, netinfo:Landroid/net/NetworkInfo;
     if-eqz v2, :cond_1
 
     move v3, v4
@@ -85,13 +73,11 @@
 
     if-eqz v3, :cond_2
 
-    .line 50
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #setter for: Lcom/android/settings/wifi/LanInfo;->mIsConnected:Z
     invoke-static {v3, v4}, Lcom/android/settings/wifi/LanInfo;->access$002(Lcom/android/settings/wifi/LanInfo;Z)Z
 
-    .line 51
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -103,11 +89,8 @@
 
     move-result-object v1
 
-    .line 52
-    .local v1, info:Landroid/net/DhcpInfo;
     if-eqz v1, :cond_0
 
-    .line 53
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mIpPref:Lcom/htc/preference/HtcPreference;
@@ -123,7 +106,6 @@
 
     invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 54
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mGatewayPref:Lcom/htc/preference/HtcPreference;
@@ -139,7 +121,6 @@
 
     invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 55
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mNetMaskPref:Lcom/htc/preference/HtcPreference;
@@ -155,28 +136,21 @@
 
     invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 69
-    .end local v1           #info:Landroid/net/DhcpInfo;
-    .end local v2           #netinfo:Landroid/net/NetworkInfo;
     :cond_0
     :goto_1
     return-void
 
-    .restart local v2       #netinfo:Landroid/net/NetworkInfo;
     :cond_1
     move v3, v5
 
-    .line 49
     goto :goto_0
 
-    .line 62
     :cond_2
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #setter for: Lcom/android/settings/wifi/LanInfo;->mIsConnected:Z
     invoke-static {v3, v5}, Lcom/android/settings/wifi/LanInfo;->access$002(Lcom/android/settings/wifi/LanInfo;Z)Z
 
-    .line 63
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mIpPref:Lcom/htc/preference/HtcPreference;
@@ -186,7 +160,6 @@
 
     invoke-virtual {v3, v7}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
-    .line 64
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mNetMaskPref:Lcom/htc/preference/HtcPreference;
@@ -196,7 +169,6 @@
 
     invoke-virtual {v3, v7}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
-    .line 65
     iget-object v3, p0, Lcom/android/settings/wifi/LanInfo$1;->this$0:Lcom/android/settings/wifi/LanInfo;
 
     #getter for: Lcom/android/settings/wifi/LanInfo;->mGatewayPref:Lcom/htc/preference/HtcPreference;

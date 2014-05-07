@@ -34,20 +34,15 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;)V
     .locals 2
-    .parameter
 
-    .prologue
-    .line 314
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->this$1:Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
 
-    .line 315
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsSizeForThisStatsObserver:J
 
-    .line 316
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -59,11 +54,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;Lcom/android/settings/deviceinfo/MemoryMeasurement$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 314
     invoke-direct {p0, p1}, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;-><init>(Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;)V
 
     return-void
@@ -71,10 +62,7 @@
 
 .method static synthetic access$1300(Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;)Ljava/util/List;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 314
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
     return-object v0
@@ -94,8 +82,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 343
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
     return-object v0
@@ -103,11 +89,7 @@
 
 .method public onGetStatsCompleted(Landroid/content/pm/PackageStats;Z)V
     .locals 6
-    .parameter "stats"
-    .parameter "succeeded"
 
-    .prologue
-    .line 318
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->this$1:Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;
 
     #getter for: Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;->mStatsObserver:Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;
@@ -121,15 +103,12 @@
 
     if-nez v0, :cond_0
 
-    .line 337
     :goto_0
     return-void
 
-    .line 322
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 323
     iget-wide v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsSizeForThisStatsObserver:J
 
     iget-wide v2, p1, Landroid/content/pm/PackageStats;->codeSize:J
@@ -158,13 +137,11 @@
 
     iput-wide v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsSizeForThisStatsObserver:J
 
-    .line 328
     :cond_1
     iget-object v1, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 329
     :try_start_0
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
@@ -172,7 +149,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 331
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -181,7 +157,6 @@
 
     if-nez v0, :cond_2
 
-    .line 332
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->this$1:Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;
 
     iget-object v0, v0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;->this$0:Lcom/android/settings/deviceinfo/MemoryMeasurement;
@@ -191,13 +166,11 @@
     #setter for: Lcom/android/settings/deviceinfo/MemoryMeasurement;->mInternalAppsSize:J
     invoke-static {v0, v2, v3}, Lcom/android/settings/deviceinfo/MemoryMeasurement;->access$602(Lcom/android/settings/deviceinfo/MemoryMeasurement;J)J
 
-    .line 334
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->this$1:Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;
 
     #calls: Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;->onInternalMeasurementComplete()V
     invoke-static {v0}, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;->access$700(Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler;)V
 
-    .line 336
     :cond_2
     monitor-exit v1
 
@@ -215,14 +188,10 @@
 
 .method public queuePackageMeasurementLocked(Ljava/lang/String;)V
     .locals 1
-    .parameter "packageName"
 
-    .prologue
-    .line 340
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$MeasurementHandler$StatsObserver;->mAppsList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 341
     return-void
 .end method

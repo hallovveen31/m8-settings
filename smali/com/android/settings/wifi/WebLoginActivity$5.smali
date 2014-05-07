@@ -21,12 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WebLoginActivity;JJ)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/settings/wifi/WebLoginActivity$5;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
@@ -39,22 +34,16 @@
 .method public onFinish()V
     .locals 1
 
-    .prologue
-    .line 302
     iget-object v0, p0, Lcom/android/settings/wifi/WebLoginActivity$5;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/wifi/WebLoginActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 303
     return-void
 .end method
 
 .method public onTick(J)V
     .locals 7
-    .parameter "millisUntilFinished"
 
-    .prologue
-    .line 294
     iget-object v1, p0, Lcom/android/settings/wifi/WebLoginActivity$5;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     #getter for: Lcom/android/settings/wifi/WebLoginActivity;->mNoticeCountDown:Landroid/widget/TextView;
@@ -64,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 295
     iget-object v1, p0, Lcom/android/settings/wifi/WebLoginActivity$5;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     const v2, 0x7f0c0b31
@@ -85,12 +73,10 @@
 
     aput-object v5, v3, v4
 
-    invoke-virtual {v1, v2, v3}, Lcom/android/settings/wifi/WebLoginActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 297
-    .local v0, noticeText:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/settings/wifi/WebLoginActivity$5;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     #getter for: Lcom/android/settings/wifi/WebLoginActivity;->mNoticeCountDown:Landroid/widget/TextView;
@@ -100,8 +86,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 299
-    .end local v0           #noticeText:Ljava/lang/String;
     :cond_0
     return-void
 .end method

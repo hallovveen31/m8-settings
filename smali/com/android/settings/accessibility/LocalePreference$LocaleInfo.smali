@@ -41,8 +41,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 130
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
@@ -54,20 +52,13 @@
 
 .method public constructor <init>(Ljava/lang/String;Ljava/util/Locale;)V
     .locals 0
-    .parameter "label"
-    .parameter "locale"
 
-    .prologue
-    .line 135
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 136
     iput-object p1, p0, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->label:Ljava/lang/String;
 
-    .line 137
     iput-object p2, p0, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->locale:Ljava/util/Locale;
 
-    .line 138
     return-void
 .end method
 
@@ -75,10 +66,7 @@
 # virtual methods
 .method public compareTo(Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;)I
     .locals 3
-    .parameter "another"
 
-    .prologue
-    .line 147
     sget-object v0, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->sCollator:Ljava/text/Collator;
 
     iget-object v1, p0, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->label:Ljava/lang/String;
@@ -94,13 +82,9 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 129
     check-cast p1, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->compareTo(Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;)I
 
     move-result v0
@@ -111,8 +95,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/settings/accessibility/LocalePreference$LocaleInfo;->label:Ljava/lang/String;
 
     return-object v0

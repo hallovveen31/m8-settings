@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/AdvancedWifiSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 558
     iput-object p1, p0, Lcom/android/settings/wifi/AdvancedWifiSettings$1;->this$0:Lcom/android/settings/wifi/AdvancedWifiSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter "dialog"
 
-    .prologue
-    .line 561
     iget-object v1, p0, Lcom/android/settings/wifi/AdvancedWifiSettings$1;->this$0:Lcom/android/settings/wifi/AdvancedWifiSettings;
 
     #getter for: Lcom/android/settings/wifi/AdvancedWifiSettings;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -54,8 +48,6 @@
 
     move-result v0
 
-    .line 562
-    .local v0, enable:Z
     iget-object v1, p0, Lcom/android/settings/wifi/AdvancedWifiSettings$1;->this$0:Lcom/android/settings/wifi/AdvancedWifiSettings;
 
     #getter for: Lcom/android/settings/wifi/AdvancedWifiSettings;->mAutoDisconnCheckBox:Lcom/htc/preference/HtcCheckBoxPreference;
@@ -65,6 +57,5 @@
 
     invoke-virtual {v1, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 563
     return-void
 .end method

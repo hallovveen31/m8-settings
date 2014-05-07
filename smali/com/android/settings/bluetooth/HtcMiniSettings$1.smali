@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/HtcMiniSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 154
     iput-object p1, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,13 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 9
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    .line 157
     const-string v3, "android.bluetooth.device.extra.DEVICE"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -55,24 +48,18 @@
 
     check-cast v0, Landroid/bluetooth/BluetoothDevice;
 
-    .line 158
-    .local v0, device:Landroid/bluetooth/BluetoothDevice;
     const-string v3, "android.bluetooth.profile.extra.STATE"
 
     invoke-virtual {p2, v3, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 159
-    .local v1, newState:I
     const-string v3, "android.bluetooth.profile.extra.PREVIOUS_STATE"
 
     invoke-virtual {p2, v3, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 160
-    .local v2, oldState:I
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -83,15 +70,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 161
     if-nez v1, :cond_1
 
-    .line 162
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     invoke-static {v3}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$010(Lcom/android/settings/bluetooth/HtcMiniSettings;)I
 
-    .line 163
     invoke-static {}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$100()Z
 
     move-result v3
@@ -127,7 +111,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_0
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
@@ -153,16 +136,13 @@
     :goto_0
     invoke-virtual {v6, v3}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 166
     :cond_1
     if-ne v1, v8, :cond_7
 
-    .line 167
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     invoke-static {v3}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$008(Lcom/android/settings/bluetooth/HtcMiniSettings;)I
 
-    .line 168
     invoke-static {}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$100()Z
 
     move-result v3
@@ -198,7 +178,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     :cond_2
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
@@ -222,7 +201,6 @@
     :goto_1
     invoke-virtual {v3, v4}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 170
     :cond_3
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
@@ -231,7 +209,6 @@
     #calls: Lcom/android/settings/bluetooth/HtcMiniSettings;->onHandleStateChanged(I)V
     invoke-static {v3, v4}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$200(Lcom/android/settings/bluetooth/HtcMiniSettings;I)V
 
-    .line 191
     :cond_4
     :goto_2
     return-void
@@ -239,22 +216,18 @@
     :cond_5
     move v3, v5
 
-    .line 164
     goto :goto_0
 
     :cond_6
     move v4, v5
 
-    .line 169
     goto :goto_1
 
-    .line 171
     :cond_7
     if-nez v1, :cond_4
 
     if-ne v2, v4, :cond_4
 
-    .line 173
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     #getter for: Lcom/android/settings/bluetooth/HtcMiniSettings;->mProcessingCachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
@@ -281,7 +254,6 @@
 
     if-nez v3, :cond_9
 
-    .line 175
     :cond_8
     const-string v3, "HtcMiniSettings"
 
@@ -291,7 +263,6 @@
 
     goto :goto_2
 
-    .line 179
     :cond_9
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
@@ -302,7 +273,6 @@
 
     if-ne v3, v8, :cond_4
 
-    .line 180
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     #getter for: Lcom/android/settings/bluetooth/HtcMiniSettings;->mRetryConnectTimes:I
@@ -312,12 +282,10 @@
 
     if-lez v3, :cond_a
 
-    .line 181
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     invoke-static {v3}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$510(Lcom/android/settings/bluetooth/HtcMiniSettings;)I
 
-    .line 187
     :goto_3
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
@@ -328,14 +296,12 @@
 
     goto :goto_2
 
-    .line 183
     :cond_a
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     #setter for: Lcom/android/settings/bluetooth/HtcMiniSettings;->mRetryConnectTimes:I
     invoke-static {v3, v4}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$502(Lcom/android/settings/bluetooth/HtcMiniSettings;I)I
 
-    .line 184
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     #getter for: Lcom/android/settings/bluetooth/HtcMiniSettings;->mPairedHtcMini:Ljava/util/List;
@@ -352,7 +318,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 185
     iget-object v3, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$1;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     const/4 v4, 0x0

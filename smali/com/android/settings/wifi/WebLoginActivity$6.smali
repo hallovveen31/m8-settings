@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WebLoginActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 372
     iput-object p1, p0, Lcom/android/settings/wifi/WebLoginActivity$6;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,11 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 374
     iget-object v1, p0, Lcom/android/settings/wifi/WebLoginActivity$6;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/WebLoginActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -69,8 +64,6 @@
 
     move-result-object v0
 
-    .line 375
-    .local v0, failTitle:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/settings/wifi/WebLoginActivity$6;->this$0:Lcom/android/settings/wifi/WebLoginActivity;
 
     invoke-static {v1, v0, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
@@ -79,6 +72,5 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 376
     return-void
 .end method

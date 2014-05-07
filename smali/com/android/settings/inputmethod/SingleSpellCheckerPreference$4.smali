@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/SingleSpellCheckerPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 177
     iput-object p1, p0, Lcom/android/settings/inputmethod/SingleSpellCheckerPreference$4;->this$0:Lcom/android/settings/inputmethod/SingleSpellCheckerPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 180
     if-nez p2, :cond_0
 
-    .line 181
     iget-object v0, p0, Lcom/android/settings/inputmethod/SingleSpellCheckerPreference$4;->this$0:Lcom/android/settings/inputmethod/SingleSpellCheckerPreference;
 
     #getter for: Lcom/android/settings/inputmethod/SingleSpellCheckerPreference;->mTsm:Landroid/view/textservice/TextServicesManager;
@@ -58,14 +50,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/textservice/TextServicesManager;->setSpellCheckerSubtype(Landroid/view/textservice/SpellCheckerSubtype;)V
 
-    .line 190
     :goto_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 191
     return-void
 
-    .line 183
     :cond_0
     iget-object v0, p0, Lcom/android/settings/inputmethod/SingleSpellCheckerPreference$4;->this$0:Lcom/android/settings/inputmethod/SingleSpellCheckerPreference;
 

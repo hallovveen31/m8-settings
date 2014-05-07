@@ -36,22 +36,15 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Landroid/content/pm/PackageManager;Landroid/content/pm/ResolveInfo;)V
     .locals 2
-    .parameter "context"
-    .parameter "pm"
-    .parameter "resolveInfo"
 
-    .prologue
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 237
     invoke-virtual {p3, p2}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
 
-    .line 238
     iget-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_0
@@ -60,14 +53,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 239
     iget-object v0, p3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+    iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
 
-    .line 242
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->getResizer(Landroid/content/Context;)Lcom/android/settings/ActivityPicker$IconResizer;
 
@@ -83,40 +74,30 @@
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 243
     iget-object v0, p3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v0, v0, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->packageName:Ljava/lang/String;
 
-    .line 244
     iget-object v0, p3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
+    iget-object v0, v0, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->className:Ljava/lang/String;
 
-    .line 245
     return-void
 .end method
 
 .method constructor <init>(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/graphics/drawable/Drawable;)V
     .locals 1
-    .parameter "context"
-    .parameter "label"
-    .parameter "icon"
 
-    .prologue
-    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
     iput-object p2, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
 
-    .line 229
     invoke-virtual {p0, p1}, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->getResizer(Landroid/content/Context;)Lcom/android/settings/ActivityPicker$IconResizer;
 
     move-result-object v0
@@ -127,7 +108,6 @@
 
     iput-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->icon:Landroid/graphics/drawable/Drawable;
 
-    .line 230
     return-void
 .end method
 
@@ -135,16 +115,11 @@
 # virtual methods
 .method getIntent(Landroid/content/Intent;)Landroid/content/Intent;
     .locals 3
-    .parameter "baseIntent"
 
-    .prologue
-    .line 253
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 254
-    .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->packageName:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -153,35 +128,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 256
     iget-object v1, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->packageName:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->className:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 257
     iget-object v1, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->extras:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
-    .line 258
     iget-object v1, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 265
     :cond_0
     :goto_0
     return-object v0
 
-    .line 262
     :cond_1
     const-string v1, "android.intent.action.CREATE_SHORTCUT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 263
     const-string v1, "android.intent.extra.shortcut.NAME"
 
     iget-object v2, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
@@ -194,8 +163,6 @@
 .method public getLabel()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 269
     iget-object v0, p0, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->label:Ljava/lang/CharSequence;
 
     return-object v0
@@ -203,21 +170,15 @@
 
 .method protected getResizer(Landroid/content/Context;)Lcom/android/settings/ActivityPicker$IconResizer;
     .locals 4
-    .parameter "context"
 
-    .prologue
-    .line 210
     sget-object v2, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->sResizer:Lcom/android/settings/ActivityPicker$IconResizer;
 
     if-nez v2, :cond_0
 
-    .line 211
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 212
-    .local v0, resources:Landroid/content/res/Resources;
     const/high16 v2, 0x105
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -226,8 +187,6 @@
 
     float-to-int v1, v2
 
-    .line 213
-    .local v1, size:I
     new-instance v2, Lcom/android/settings/ActivityPicker$IconResizer;
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
@@ -238,9 +197,6 @@
 
     sput-object v2, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->sResizer:Lcom/android/settings/ActivityPicker$IconResizer;
 
-    .line 215
-    .end local v0           #resources:Landroid/content/res/Resources;
-    .end local v1           #size:I
     :cond_0
     sget-object v2, Lcom/android/settings/ActivityPicker$PickAdapter$Item;->sResizer:Lcom/android/settings/ActivityPicker$IconResizer;
 

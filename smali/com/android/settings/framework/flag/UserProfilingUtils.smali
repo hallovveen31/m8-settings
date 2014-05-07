@@ -13,22 +13,14 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     return-void
 .end method
 
 .method public static userProfilingSettings(Ljava/lang/String;ZLjava/lang/String;)Z
     .locals 1
-    .parameter "key"
-    .parameter "on"
-    .parameter "appid"
 
-    .prologue
-    .line 53
     const-string v0, "settings_retrieve"
 
     invoke-static {p0, p1, p2, v0}, Lcom/android/settings/framework/flag/UserProfilingUtils;->userProfilingSettings(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Z
@@ -40,13 +32,7 @@
 
 .method public static userProfilingSettings(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Z
     .locals 1
-    .parameter "key"
-    .parameter "on"
-    .parameter "appid"
-    .parameter "category"
 
-    .prologue
-    .line 70
     if-eqz p1, :cond_0
 
     const-string v0, "on"

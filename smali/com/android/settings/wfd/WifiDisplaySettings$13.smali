@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 605
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 608
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     #getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mPendingChanges:I
@@ -49,8 +44,6 @@
 
     move-result v0
 
-    .line 609
-    .local v0, changes:I
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     const/4 v2, 0x0
@@ -58,12 +51,10 @@
     #setter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mPendingChanges:I
     invoke-static {v1, v2}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1002(Lcom/android/settings/wfd/WifiDisplaySettings;I)I
 
-    .line 610
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$13;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     #calls: Lcom/android/settings/wfd/WifiDisplaySettings;->update(I)V
     invoke-static {v1, v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$1100(Lcom/android/settings/wfd/WifiDisplaySettings;I)V
 
-    .line 611
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$1;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 133
     invoke-static {}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->access$000()Z
 
     move-result v0
@@ -60,7 +54,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_0
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$1;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
@@ -83,11 +76,9 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 135
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$1;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
-    invoke-virtual {v0}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->finish()V
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalFragment;->finish()V
 
-    .line 136
     return-void
 .end method

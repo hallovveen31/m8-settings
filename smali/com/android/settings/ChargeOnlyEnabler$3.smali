@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChargeOnlyEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,16 +33,13 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
-    .parameter "msg"
 
-    .prologue
     const v5, 0x7f0c0555
 
     const/4 v4, 0x0
 
     const/4 v3, 0x1
 
-    .line 220
     const-string v0, "SmartNS_ChargeOnly_Enabler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -70,83 +64,72 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 241
     :goto_0
     return-void
 
-    .line 226
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcSwitchPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 227
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v4}, Lcom/htc/preference/HtcSwitchPreference;->setChecked(Z)V
+    invoke-virtual {v0, v4}, Lcom/htc/preference/HtcTwoStatePreference;->setChecked(Z)V
 
-    .line 228
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcSwitchPreference;->setSummary(I)V
+    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
     goto :goto_0
 
-    .line 231
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcSwitchPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 232
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcSwitchPreference;->setChecked(Z)V
+    invoke-virtual {v0, v3}, Lcom/htc/preference/HtcTwoStatePreference;->setChecked(Z)V
 
-    .line 233
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcSwitchPreference;->setSummary(I)V
+    invoke-virtual {v0, v5}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
     goto :goto_0
 
-    .line 237
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
-    invoke-virtual {v0, v4}, Lcom/htc/preference/HtcSwitchPreference;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 238
     iget-object v0, p0, Lcom/android/settings/ChargeOnlyEnabler$3;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
 
     iget-object v0, v0, Lcom/android/settings/ChargeOnlyEnabler;->mChargeOnlyEnabler:Lcom/htc/preference/HtcSwitchPreference;
 
     const v1, 0x7f0c0512
 
-    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcSwitchPreference;->setSummary(I)V
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
     goto :goto_0
 
-    .line 223
     nop
 
     :pswitch_data_0

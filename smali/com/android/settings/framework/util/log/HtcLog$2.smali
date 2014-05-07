@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 958
     invoke-static {}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->values()[Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->VERBOSE:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->DEBUG:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->INFO:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->WARN:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ERROR:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ASSERT:Lcom/android/settings/framework/util/log/HtcLog$LogType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/util/log/HtcLog$LogType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

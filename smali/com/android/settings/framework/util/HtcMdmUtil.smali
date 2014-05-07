@@ -15,8 +15,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +22,7 @@
 
 .method public static isDeviceAdminLocked(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 38
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -38,16 +33,12 @@
 
     move-result-object v0
 
-    .line 41
-    .local v0, name:Ljava/lang/String;
     return-object v0
 .end method
 
 .method public static isMDMApiSupported()Z
     .locals 1
 
-    .prologue
-    .line 45
     invoke-static {}, Landroid/app/admin/DevicePolicyManager;->isMDMAPIPhase2Supported()Z
 
     move-result v0
@@ -57,12 +48,9 @@
 
 .method public static isUnknownSourcesLocked(Landroid/content/Context;)Z
     .locals 5
-    .parameter "context"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 16
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -75,11 +63,8 @@
 
     move-result v0
 
-    .line 19
-    .local v0, value:I
     if-ne v0, v1, :cond_0
 
-    .line 23
     :goto_0
     return v1
 
@@ -91,12 +76,9 @@
 
 .method public static isUsbDebuggingLocked(Landroid/content/Context;)Z
     .locals 5
-    .parameter "context"
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 27
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -109,11 +91,8 @@
 
     move-result v0
 
-    .line 30
-    .local v0, value:I
     if-ne v0, v1, :cond_0
 
-    .line 34
     :goto_0
     return v1
 

@@ -25,18 +25,11 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;IZ)V
     .locals 2
-    .parameter "storageType"
-    .parameter "index"
-    .parameter "isMountable"
 
-    .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 68
     if-nez p1, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "\'type\' should not be null."
@@ -45,17 +38,13 @@
 
     throw v0
 
-    .line 72
     :cond_0
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    .line 73
     iput p2, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mIndex:I
 
-    .line 74
     iput-boolean p3, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mIsMountable:Z
 
-    .line 75
     return-void
 .end method
 
@@ -64,8 +53,6 @@
 .method public getIndex()I
     .locals 1
 
-    .prologue
-    .line 86
     iget v0, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mIndex:I
 
     return v0
@@ -74,8 +61,6 @@
 .method public getStorageType()Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
     .locals 1
 
-    .prologue
-    .line 82
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mStorageType:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
     return-object v0
@@ -84,8 +69,6 @@
 .method public isMountable()Z
     .locals 1
 
-    .prologue
-    .line 90
     iget-boolean v0, p0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;->mIsMountable:Z
 
     return v0

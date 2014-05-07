@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
-    .line 780
     :try_start_0
     const-class v1, Landroid/net/wifi/WifiManager;
 
@@ -43,8 +41,6 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 785
-    .local v0, e:Ljava/lang/NoSuchMethodException;
     :goto_0
     :try_start_1
     const-class v1, Landroid/net/wifi/WifiManager;
@@ -69,17 +65,12 @@
     :try_end_1
     .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 789
     :goto_1
     return-void
 
-    .line 781
-    .end local v0           #e:Ljava/lang/NoSuchMethodException;
     :catch_0
     move-exception v0
 
-    .line 782
-    .restart local v0       #e:Ljava/lang/NoSuchMethodException;
     const-string v1, "AdvancedWifiSettings"
 
     const-string v2, "no getWanDetectionEnabled method"
@@ -88,11 +79,9 @@
 
     goto :goto_0
 
-    .line 786
     :catch_1
     move-exception v0
 
-    .line 787
     const-string v1, "AdvancedWifiSettings"
 
     const-string v2, "no setWanDetectionEnabled method"
@@ -105,8 +94,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 774
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -114,26 +101,20 @@
 
 .method public static getWanDetectionEnabled(Landroid/net/wifi/WifiManager;)Z
     .locals 5
-    .parameter "wifiManager"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 792
     if-nez p0, :cond_1
 
-    .line 803
     :cond_0
     :goto_0
     return v2
 
-    .line 795
     :cond_1
     sget-object v3, Lcom/android/settings/wifi/AdvancedWifiSettings$HtcWifiManagerWrapper;->sMethod_getWanDetectionEnabled:Ljava/lang/reflect/Method;
 
     if-eqz v3, :cond_0
 
-    .line 799
     :try_start_0
     sget-object v3, Lcom/android/settings/wifi/AdvancedWifiSettings$HtcWifiManagerWrapper;->sMethod_getWanDetectionEnabled:Ljava/lang/reflect/Method;
 
@@ -145,11 +126,8 @@
 
     move-result-object v1
 
-    .line 800
-    .local v1, result:Ljava/lang/Object;
     check-cast v1, Ljava/lang/Boolean;
 
-    .end local v1           #result:Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -158,12 +136,9 @@
 
     goto :goto_0
 
-    .line 801
     :catch_0
     move-exception v0
 
-    .line 802
-    .local v0, e:Ljava/lang/Exception;
     const-string v3, "AdvancedWifiSettings"
 
     const-string v4, "failed to invoke isWanDetectionEnabled (...)"
@@ -175,25 +150,18 @@
 
 .method public static setWanDetectionEnabled(Landroid/net/wifi/WifiManager;Ljava/lang/Boolean;)V
     .locals 4
-    .parameter "wifiManager"
-    .parameter "enable"
 
-    .prologue
-    .line 808
     if-nez p0, :cond_1
 
-    .line 819
     :cond_0
     :goto_0
     return-void
 
-    .line 811
     :cond_1
     sget-object v1, Lcom/android/settings/wifi/AdvancedWifiSettings$HtcWifiManagerWrapper;->sMethod_setWanDetectionEnabled:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 815
     :try_start_0
     sget-object v1, Lcom/android/settings/wifi/AdvancedWifiSettings$HtcWifiManagerWrapper;->sMethod_setWanDetectionEnabled:Ljava/lang/reflect/Method;
 
@@ -211,12 +179,9 @@
 
     goto :goto_0
 
-    .line 816
     :catch_0
     move-exception v0
 
-    .line 817
-    .local v0, e:Ljava/lang/Exception;
     const-string v1, "AdvancedWifiSettings"
 
     const-string v2, "failed to invoke isWanDetectionEnabled (...)"

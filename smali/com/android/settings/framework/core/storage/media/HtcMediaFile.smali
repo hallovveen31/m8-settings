@@ -23,8 +23,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,8 +33,6 @@
 .method public isDirectory()Z
     .locals 4
 
-    .prologue
-    .line 114
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/media/HtcMediaFile;->displayName:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -49,10 +45,8 @@
 
     if-nez v0, :cond_0
 
-    .line 115
     const/4 v0, 0x1
 
-    .line 117
     :goto_0
     return v0
 
@@ -65,19 +59,14 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 124
-    .local v0, sb:Ljava/lang/StringBuilder;
     iget v1, p0, Lcom/android/settings/framework/core/storage/media/HtcMediaFile;->id:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 125
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -100,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -146,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,7 +155,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -192,7 +177,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 130
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -215,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

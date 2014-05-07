@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,22 +30,14 @@
 # virtual methods
 .method public requestSendAccessibilityEvent(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 3
-    .parameter "parent"
-    .parameter "child"
-    .parameter "event"
 
-    .prologue
-    .line 42
     if-nez p2, :cond_0
 
-    .line 43
     const/4 v1, 0x0
 
-    .line 48
     :goto_0
     return v1
 
-    .line 45
     :cond_0
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -61,11 +51,8 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    .line 47
-    .local v0, manager:Landroid/view/accessibility/AccessibilityManager;
     invoke-virtual {v0, p3}, Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 48
     const/4 v1, 0x1
 
     goto :goto_0

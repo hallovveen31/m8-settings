@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1309
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$12;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,11 +34,8 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 1312
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 1314
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$12;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -53,9 +47,7 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/SmartNSUtility;->enableNCM(Landroid/content/Context;Z)V
 
-    .line 1315
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 1317
     return-void
 .end method

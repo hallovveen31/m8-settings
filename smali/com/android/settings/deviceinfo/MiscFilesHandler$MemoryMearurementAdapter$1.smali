@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter;Landroid/widget/ListView;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 258
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter$1;->this$1:Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter;
 
     iput-object p2, p0, Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter$1;->val$listView:Landroid/widget/ListView;
@@ -49,17 +44,12 @@
 # virtual methods
 .method public onCheckedChanged(Lcom/htc/widget/HtcCompoundButton;Z)V
     .locals 2
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 262
     iget-object v0, p0, Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter$1;->val$listView:Landroid/widget/ListView;
 
     iget v1, p0, Lcom/android/settings/deviceinfo/MiscFilesHandler$MemoryMearurementAdapter$1;->val$listPosition:I
 
-    invoke-virtual {v0, v1, p2}, Landroid/widget/ListView;->setItemChecked(IZ)V
+    invoke-virtual {v0, v1, p2}, Landroid/widget/AbsListView;->setItemChecked(IZ)V
 
-    .line 263
     return-void
 .end method

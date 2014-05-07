@@ -3,15 +3,15 @@
 .source "HtcAbsWidgetEnabler.java"
 
 # interfaces
-.implements Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver$HtcIntentStreamListener;
-.implements Lcom/android/settings/framework/widget/HtcToggleButton$OnToggleChangeListener;
-.implements Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;
-.implements Lcom/android/settings/framework/widget/HtcToggleButton$OnEnabledChangeListener;
-.implements Lcom/android/settings/framework/app/HtcActivityListener$OnResumeInBackgroundListener;
-.implements Lcom/android/settings/framework/app/HtcActivityListener$OnPauseInBackgroundListener;
 .implements Lcom/android/settings/framework/app/HtcActivityListener$OnDestroyInBackgroundListener;
 .implements Lcom/android/settings/framework/app/HtcActivityListener$OnDestroyListener;
 .implements Lcom/android/settings/framework/app/HtcActivityListener$OnHandleMessageListener;
+.implements Lcom/android/settings/framework/app/HtcActivityListener$OnPauseInBackgroundListener;
+.implements Lcom/android/settings/framework/app/HtcActivityListener$OnResumeInBackgroundListener;
+.implements Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver$HtcIntentStreamListener;
+.implements Lcom/android/settings/framework/widget/HtcToggleButton$OnEnabledChangeListener;
+.implements Lcom/android/settings/framework/widget/HtcToggleButton$OnToggleChangeListener;
+.implements Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;
 
 
 # annotations
@@ -115,8 +115,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +141,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG:Ljava/lang/String;
 
-    .line 63
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
@@ -153,16 +150,11 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v2, 0x0
 
-    .line 222
     invoke-direct {p0, p1}, Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver;-><init>(Landroid/content/Context;)V
 
-    .line 61
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG:Ljava/lang/String;
@@ -171,31 +163,22 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
-    .line 68
     iput-boolean v2, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsFinishingOrFinished:Z
 
-    .line 194
     iput-boolean v2, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
-    .line 223
     iput-object p1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mContext:Landroid/content/Context;
 
-    .line 227
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setAllowQueue(Z)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver;->setAllowQueue(Z)V
 
-    .line 231
     return-void
 .end method
 
 .method private bindHeaderViewInBackground(Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 466
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/util/log/HtcLog$TagInfo;->getSubTag()Ljava/lang/String;
@@ -204,31 +187,22 @@
 
     invoke-virtual {p1, v0}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->setViewName(Ljava/lang/String;)V
 
-    .line 467
     iput-object p1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .line 468
     invoke-virtual {p1}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getToggleButton()Lcom/android/settings/framework/widget/HtcToggleButton;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->bindToggleButtonInBackground(Lcom/android/settings/framework/widget/HtcToggleButton;)V
 
-    .line 469
     return-void
 .end method
 
 .method private bindToggleButtonInBackground(Lcom/android/settings/framework/widget/HtcToggleButton;)V
     .locals 3
-    .parameter "toggleButton"
 
-    .prologue
-    .line 514
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v0, 0x0
 
-    .line 518
-    .local v0, rebound:Z
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mState:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;
 
     if-eqz v1, :cond_0
@@ -237,16 +211,13 @@
 
     if-eq v1, p1, :cond_0
 
-    .line 519
     const/4 v0, 0x1
 
-    .line 522
     :cond_0
     sget-boolean v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 523
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,46 +238,33 @@
 
     invoke-direct {p0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 527
     :cond_1
     invoke-virtual {p1, p0}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnToggleChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnToggleChangeListener;)V
 
-    .line 528
-    invoke-virtual {p1, p0}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
+    invoke-virtual {p1, p0}, Lcom/htc/widget/HtcToggleButtonLight;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
 
-    .line 529
     invoke-virtual {p1, p0}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnEnabledChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnEnabledChangeListener;)V
 
-    .line 530
     iput-object p1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .line 532
     if-eqz v0, :cond_2
 
-    .line 533
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onRebindViewInBackground()V
 
-    .line 535
     :cond_2
     return-void
 .end method
 
 .method private decodeBooleanState(I)Ljava/lang/Boolean;
     .locals 2
-    .parameter "code"
 
-    .prologue
-    .line 1280
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     packed-switch p1, :pswitch_data_0
 
-    .line 1287
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 1282
     :pswitch_0
     new-instance v0, Ljava/lang/Boolean;
 
@@ -316,7 +274,6 @@
 
     goto :goto_0
 
-    .line 1284
     :pswitch_1
     new-instance v0, Ljava/lang/Boolean;
 
@@ -326,7 +283,6 @@
 
     goto :goto_0
 
-    .line 1280
     nop
 
     :pswitch_data_0
@@ -338,21 +294,14 @@
 
 .method private encodeBooleanState(Ljava/lang/Boolean;)I
     .locals 1
-    .parameter "booleanState"
 
-    .prologue
-    .line 1265
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     if-nez p1, :cond_0
 
-    .line 1266
     const/4 v0, 0x0
 
-    .line 1270
     :goto_0
     return v0
 
-    .line 1267
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -360,12 +309,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1268
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 1270
     :cond_1
     const/4 v0, 0x1
 
@@ -375,19 +322,14 @@
 .method private interruptUiMessagesOnDestroy()V
     .locals 2
 
-    .prologue
-    .line 364
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsFinishingOrFinished:Z
 
-    .line 365
     sget-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 366
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,67 +358,47 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 372
     :cond_0
     return-void
 .end method
 
 .method private final log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 1357
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     invoke-static {v0, p1}, Lcom/android/settings/framework/util/log/HtcLog;->v(Lcom/android/settings/framework/util/log/HtcLog$TagInfo;Ljava/lang/String;)I
 
-    .line 1358
     return-void
 .end method
 
 .method private final logE(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 1365
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     invoke-static {v0, p1}, Lcom/android/settings/framework/util/log/HtcLog;->e(Lcom/android/settings/framework/util/log/HtcLog$TagInfo;Ljava/lang/String;)I
 
-    .line 1366
     return-void
 .end method
 
 .method private final logW(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 1361
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     invoke-static {v0, p1}, Lcom/android/settings/framework/util/log/HtcLog;->w(Lcom/android/settings/framework/util/log/HtcLog$TagInfo;Ljava/lang/String;)I
 
-    .line 1362
     return-void
 .end method
 
 .method private onActivateEnablerInBackground()V
     .locals 2
 
-    .prologue
-    .line 430
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -517,7 +439,6 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 438
     :cond_0
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onGetDefaultState()Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;
 
@@ -525,55 +446,38 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mState:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;
 
-    .line 441
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mState:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;
 
     invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onHandleStateChangedInBackground(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;)V
 
-    .line 444
-    invoke-virtual {p0, p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->bindIntentStreamListener(Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver$HtcIntentStreamListener;)V
+    invoke-virtual {p0, p0}, Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver;->bindIntentStreamListener(Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver$HtcIntentStreamListener;)V
 
-    .line 445
     return-void
 .end method
 
 .method private final onHandleUiMessage(Landroid/os/Message;Ljava/lang/Object;)Z
     .locals 11
-    .parameter "msg"
-    .parameter "arg"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v10, 0x1
 
-    .line 1057
     iget-object v3, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .line 1058
-    .local v3, itemView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
     iget-object v5, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .line 1060
-    .local v5, toggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
     sget-boolean v7, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 1061
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1063
-    .local v0, builder:Ljava/lang/StringBuilder;
     const-string v7, ">> onHandleUiMessage(...)"
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1066
     if-eqz v3, :cond_3
 
-    .line 1071
     const-string v7, "\n - mView: not null"
 
     invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -617,7 +521,6 @@
     :goto_0
     invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 1082
     :goto_1
     const-string v7, "\n - mToggleButton: "
 
@@ -687,45 +590,34 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1088
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
     invoke-direct {p0, v7}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 1091
-    .end local v0           #builder:Ljava/lang/StringBuilder;
     :cond_0
     iget-boolean v7, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsFinishingOrFinished:Z
 
     if-eqz v7, :cond_4
 
-    .line 1092
     sget-boolean v7, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v7, :cond_1
 
-    .line 1093
     const-string v7, "The enabler is finising or finished. No need to refresh UI."
 
     invoke-direct {p0, v7}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 1189
-    .end local p2
     :cond_1
     :goto_2
     return v10
 
-    .line 1071
-    .restart local v0       #builder:Ljava/lang/StringBuilder;
-    .restart local p2
     :cond_2
     const-string v7, "null"
 
     goto :goto_0
 
-    .line 1079
     :cond_3
     const-string v7, "\n - mView: null"
 
@@ -733,8 +625,6 @@
 
     goto :goto_1
 
-    .line 1099
-    .end local v0           #builder:Ljava/lang/StringBuilder;
     :cond_4
     sget-object v7, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$1;->$SwitchMap$com$android$settings$framework$core$HtcAbsWidgetEnabler$WidgetActionType:[I
 
@@ -746,7 +636,7 @@
 
     aget-object v8, v8, v9
 
-    invoke-virtual {v8}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v8}, Ljava/lang/Enum;->ordinal()I
 
     move-result v8
 
@@ -754,32 +644,25 @@
 
     packed-switch v7, :pswitch_data_0
 
-    .line 1186
-    .end local p2
     :cond_5
     :goto_3
     sget-boolean v7, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v7, :cond_1
 
-    .line 1187
     const-string v7, "<< onHandleUiMessage(...)"
 
     invoke-direct {p0, v7}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 1101
-    .restart local p2
     :pswitch_0
     if-eqz v3, :cond_5
 
     if-eqz p2, :cond_5
 
-    .line 1102
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
@@ -788,40 +671,30 @@
 
     goto :goto_3
 
-    .line 1107
-    .restart local p2
     :pswitch_1
     if-eqz v3, :cond_5
 
-    .line 1108
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getSummaryTextView()Landroid/widget/TextView;
 
     move-result-object v7
 
     check-cast p2, Ljava/lang/CharSequence;
 
-    .end local p2
     invoke-virtual {v7, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_3
 
-    .line 1113
-    .restart local p2
     :pswitch_2
     if-eqz v3, :cond_5
 
     if-eqz p2, :cond_5
 
-    .line 1114
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getIconImageView()Landroid/widget/ImageView;
 
     move-result-object v2
 
-    .line 1116
-    .local v2, icon:Landroid/widget/ImageView;
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
@@ -830,18 +703,13 @@
 
     goto :goto_3
 
-    .line 1122
-    .end local v2           #icon:Landroid/widget/ImageView;
-    .restart local p2
     :pswitch_3
     if-eqz v5, :cond_5
 
     if-eqz p2, :cond_5
 
-    .line 1123
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
@@ -850,26 +718,19 @@
 
     goto :goto_3
 
-    .line 1128
-    .restart local p2
     :pswitch_4
     if-eqz v5, :cond_5
 
     if-eqz p2, :cond_5
 
-    .line 1129
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v6
 
-    .line 1131
-    .local v6, toggled:Z
-    invoke-virtual {v5, v6}, Lcom/android/settings/framework/widget/HtcToggleButton;->setChecked(Z)V
+    invoke-virtual {v5, v6}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 1134
     if-eqz v3, :cond_5
 
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->supportIconFilterEffect()Z
@@ -878,7 +739,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 1135
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getIconImageView()Landroid/widget/ImageView;
 
     move-result-object v7
@@ -887,73 +747,57 @@
 
     goto :goto_3
 
-    .end local v6           #toggled:Z
-    .restart local p2
     :pswitch_5
     move-object v4, p2
 
-    .line 1143
     check-cast v4, Ljava/lang/CharSequence;
 
-    .line 1144
-    .local v4, summary:Ljava/lang/CharSequence;
     iget v7, p1, Landroid/os/Message;->arg1:I
 
     invoke-direct {p0, v7}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->decodeBooleanState(I)Ljava/lang/Boolean;
 
     move-result-object v6
 
-    .line 1145
-    .local v6, toggled:Ljava/lang/Boolean;
     iget v7, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v7}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->decodeBooleanState(I)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    .line 1147
-    .local v1, enabled:Ljava/lang/Boolean;
     if-eqz v3, :cond_6
 
-    .line 1150
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getSummaryTextView()Landroid/widget/TextView;
 
     move-result-object v7
 
     invoke-virtual {v7, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1152
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_8
 
-    .line 1153
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getSummaryTextView()Landroid/widget/TextView;
 
     move-result-object v7
 
     const/16 v8, 0x8
 
-    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1159
     :cond_6
     :goto_4
     if-eqz v5, :cond_5
 
-    .line 1160
     if-eqz v6, :cond_7
 
-    .line 1161
     invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
 
-    invoke-virtual {v5, v7}, Lcom/android/settings/framework/widget/HtcToggleButton;->setChecked(Z)V
+    invoke-virtual {v5, v7}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 1164
     if-eqz v3, :cond_7
 
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->supportIconFilterEffect()Z
@@ -962,7 +806,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 1165
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getIconImageView()Landroid/widget/ImageView;
 
     move-result-object v7
@@ -973,11 +816,9 @@
 
     invoke-virtual {p0, v7, v8}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetIconColorInForeground(Landroid/widget/ImageView;Z)V
 
-    .line 1171
     :cond_7
     if-eqz v1, :cond_5
 
-    .line 1172
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
@@ -986,7 +827,6 @@
 
     goto/16 :goto_3
 
-    .line 1155
     :cond_8
     invoke-virtual {v3}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->getSummaryTextView()Landroid/widget/TextView;
 
@@ -994,30 +834,23 @@
 
     const/4 v8, 0x0
 
-    invoke-virtual {v7, v8}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v7, v8}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_4
 
-    .line 1178
-    .end local v1           #enabled:Ljava/lang/Boolean;
-    .end local v4           #summary:Ljava/lang/CharSequence;
-    .end local v6           #toggled:Ljava/lang/Boolean;
     :pswitch_6
     check-cast p2, Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .end local p2
     invoke-virtual {p2}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 1179
     iget-object v7, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mOnDialogCreatedListener:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$OnDialogCreatedListener;
 
     if-eqz v7, :cond_5
 
-    .line 1180
     iget-object v7, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mOnDialogCreatedListener:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$OnDialogCreatedListener;
 
     iget-object v8, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -1026,7 +859,6 @@
 
     goto/16 :goto_3
 
-    .line 1099
     nop
 
     :pswitch_data_0
@@ -1043,17 +875,12 @@
 
 .method private setWidgetStatusImmediately(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
     .locals 4
-    .parameter "actionType"
-    .parameter "argument"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/RuntimeException;
         }
     .end annotation
 
-    .prologue
-    .line 949
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
@@ -1064,7 +891,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 950
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1107,37 +933,31 @@
 
     throw v1
 
-    .line 957
     :cond_0
     iget-boolean v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
     if-nez v1, :cond_2
 
-    .line 958
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_1
 
-    .line 959
     const-string v1, "The enabler is still inactive. You can\'t use the UI handler."
 
     invoke-direct {p0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logW(Ljava/lang/String;)V
 
-    .line 978
     :cond_1
     :goto_0
     return-void
 
-    .line 965
     :cond_2
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_3
 
-    .line 966
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -1149,16 +969,12 @@
 
     move-result-object v0
 
-    .line 973
-    .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
 
     goto :goto_0
 
-    .line 976
-    .end local v0           #msg:Landroid/os/Message;
     :cond_3
     const-string v1, "Could not find the UI handler to set the widget."
 
@@ -1170,24 +986,16 @@
 .method private unbindHeaderViewInBackground()V
     .locals 2
 
-    .prologue
-    .line 486
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .line 488
-    .local v0, view:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .line 489
     if-eqz v0, :cond_0
 
-    .line 490
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->unbindToggleButtonInBackground()V
 
-    .line 492
     :cond_0
     return-void
 .end method
@@ -1195,41 +1003,29 @@
 .method private unbindToggleButtonInBackground()V
     .locals 3
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v2, 0x0
 
-    .line 553
     sget-boolean v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 554
     const-string v1, "unbindToggleButtonInBackground(...)"
 
     invoke-direct {p0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 557
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .line 559
-    .local v0, toggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
     iput-object v2, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .line 560
     if-eqz v0, :cond_1
 
-    .line 561
     invoke-virtual {v0, v2}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnToggleChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnToggleChangeListener;)V
 
-    .line 562
-    invoke-virtual {v0, v2}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v2}, Lcom/htc/widget/HtcToggleButtonLight;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
 
-    .line 563
     invoke-virtual {v0, v2}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnEnabledChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnEnabledChangeListener;)V
 
-    .line 565
     :cond_1
     return-void
 .end method
@@ -1238,59 +1034,42 @@
 # virtual methods
 .method public final bindHeaderView(Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 455
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_BIND_HEADER_VIEW:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 457
     return-void
 .end method
 
 .method public final bindToggleButton(Lcom/android/settings/framework/widget/HtcToggleButton;)V
     .locals 1
-    .parameter "toggleButton"
 
-    .prologue
-    .line 502
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_BIND_TOGGLE_BUTTON:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 505
     return-void
 .end method
 
 .method public createDialog(Lcom/htc/widget/HtcAlertDialog$Builder;)V
     .locals 3
-    .parameter "builder"
 
-    .prologue
-    .line 1327
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     if-nez p1, :cond_0
 
-    .line 1341
     :goto_0
     return-void
 
-    .line 1331
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_1
 
-    .line 1332
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->CREATE_ALERT_DIALOG:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1306,7 +1085,6 @@
 
     goto :goto_0
 
-    .line 1338
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1334,9 +1112,6 @@
 .method public getAlertDialog()Lcom/htc/widget/HtcAlertDialog;
     .locals 1
 
-    .prologue
-    .line 1353
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     return-object v0
@@ -1345,9 +1120,6 @@
 .method public final isEnablerActive()Z
     .locals 1
 
-    .prologue
-    .line 404
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
     return v0
@@ -1356,17 +1128,13 @@
 .method public final isWidgetChecked()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 762
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 763
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/widget/HtcToggleButton;->isChecked()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcToggleButtonLight;->isChecked()Z
 
     move-result v0
 
@@ -1374,17 +1142,14 @@
 
     move-result-object v0
 
-    .line 766
     :goto_0
     return-object v0
 
-    .line 765
     :cond_0
     const-string v0, "mToggleButton are not bound!!"
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logE(Ljava/lang/String;)V
 
-    .line 766
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1397,17 +1162,13 @@
 .method public final isWidgetEnabled()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 673
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
     if-eqz v0, :cond_0
 
-    .line 675
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -1415,20 +1176,17 @@
 
     move-result-object v0
 
-    .line 681
     :goto_0
     return-object v0
 
-    .line 676
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_1
 
-    .line 678
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/widget/HtcToggleButton;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
@@ -1438,13 +1196,11 @@
 
     goto :goto_0
 
-    .line 680
     :cond_1
     const-string v0, "mView or mToggleButton are not bound!!"
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logE(Ljava/lang/String;)V
 
-    .line 681
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1457,9 +1213,6 @@
 .method public final isWidgetToggled()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 781
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->isWidgetChecked()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -1470,50 +1223,34 @@
 .method public final onActivateEnabler()V
     .locals 2
 
-    .prologue
-    .line 416
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
-    .line 417
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_ACTIVATE_ENABLER:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 419
     return-void
 .end method
 
 .method public onCheckedChanged(Lcom/android/settings/framework/widget/HtcToggleButton;Z)V
     .locals 0
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 623
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     return-void
 .end method
 
 .method public final onCheckedChanged(Lcom/htc/widget/HtcToggleButtonLight;Z)V
     .locals 4
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 608
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     move-object v0, p1
 
     check-cast v0, Lcom/android/settings/framework/widget/HtcToggleButton;
 
     invoke-virtual {p0, v0, p2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onCheckedChanged(Lcom/android/settings/framework/widget/HtcToggleButton;Z)V
 
-    .line 611
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_CHECKED_CHANGED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     const/4 v1, 0x2
@@ -1534,107 +1271,71 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 614
     return-void
 .end method
 
 .method public onCheckedChangedInBackground(Lcom/android/settings/framework/widget/HtcToggleButton;Z)V
     .locals 0
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 632
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     return-void
 .end method
 
 .method public onDestroy(Landroid/app/Activity;)V
     .locals 0
-    .parameter "activity"
 
-    .prologue
-    .line 338
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->interruptUiMessagesOnDestroy()V
 
-    .line 339
     return-void
 .end method
 
 .method public onDestroyInBackground(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v1, 0x0
 
-    .line 320
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->interruptUiMessagesOnDestroy()V
 
-    .line 324
-    invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->unbindIntentStreamListener()V
+    invoke-virtual {p0}, Lcom/android/settings/framework/receiver/HtcAbsBufferedReceiver;->unbindIntentStreamListener()V
 
-    .line 326
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 327
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnToggleChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnToggleChangeListener;)V
 
-    .line 328
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButtonLight;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
 
-    .line 329
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/widget/HtcToggleButton;->setOnEnabledChangeListener(Lcom/android/settings/framework/widget/HtcToggleButton$OnEnabledChangeListener;)V
 
-    .line 331
     :cond_0
     iput-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .line 332
     iput-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .line 333
     iput-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 334
     return-void
 .end method
 
 .method public final onDispatchHandlers(Landroid/app/Activity;Landroid/os/Handler;Landroid/os/Handler;)V
     .locals 0
-    .parameter "activity"
-    .parameter "uiHandler"
-    .parameter "nonUiHandler"
 
-    .prologue
-    .line 815
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iput-object p2, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
-    .line 816
     iput-object p3, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mNonUiHandler:Landroid/os/Handler;
 
-    .line 817
     return-void
 .end method
 
 .method public onEnabledChange(Z)Z
     .locals 1
-    .parameter "enabled"
 
-    .prologue
-    .line 594
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v0, 0x1
 
     return v0
@@ -1650,37 +1351,28 @@
 
 .method public final onHandleNonUiMessage(Landroid/os/Message;)Z
     .locals 3
-    .parameter "msg"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v1, 0x0
 
-    .line 1195
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v2, v2, Lcom/android/settings/framework/os/HtcMessageParcel;
 
     if-nez v2, :cond_1
 
-    .line 1207
     :cond_0
     :goto_0
     return v1
 
-    .line 1200
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/settings/framework/os/HtcMessageParcel;
 
-    .line 1203
-    .local v0, parcel:Lcom/android/settings/framework/os/HtcMessageParcel;
     iget-object v2, v0, Lcom/android/settings/framework/os/HtcMessageParcel;->id:Ljava/lang/Object;
 
     if-ne v2, p0, :cond_0
 
-    .line 1207
     iget-object v1, v0, Lcom/android/settings/framework/os/HtcMessageParcel;->args:Ljava/lang/Object;
 
     invoke-virtual {p0, p1, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onHandleNonUiMessage(Landroid/os/Message;Ljava/lang/Object;)Z
@@ -1692,14 +1384,9 @@
 
 .method protected onHandleNonUiMessage(Landroid/os/Message;Ljava/lang/Object;)Z
     .locals 5
-    .parameter "msg"
-    .parameter "arg"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v4, 0x1
 
-    .line 1219
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$1;->$SwitchMap$com$android$settings$framework$core$HtcAbsWidgetEnabler$InternalActionType:[I
 
     invoke-static {}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->values()[Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
@@ -1710,7 +1397,7 @@
 
     aget-object v2, v2, v3
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -1718,73 +1405,54 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1256
-    .end local p2
     :goto_0
     return v4
 
-    .line 1221
-    .restart local p2
     :pswitch_0
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onActivateEnablerInBackground()V
 
     goto :goto_0
 
-    .line 1225
     :pswitch_1
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mContext:Landroid/content/Context;
 
     check-cast p2, Landroid/content/Intent;
 
-    .end local p2
     invoke-virtual {p0, v1, p2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onReceiveInBackground(Landroid/content/Context;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 1229
-    .restart local p2
     :pswitch_2
     check-cast p2, Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
-    .end local p2
     invoke-direct {p0, p2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->bindHeaderViewInBackground(Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;)V
 
     goto :goto_0
 
-    .line 1234
-    .restart local p2
     :pswitch_3
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->unbindHeaderViewInBackground()V
 
     goto :goto_0
 
-    .line 1238
     :pswitch_4
     check-cast p2, Lcom/android/settings/framework/widget/HtcToggleButton;
 
-    .end local p2
     invoke-direct {p0, p2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->bindToggleButtonInBackground(Lcom/android/settings/framework/widget/HtcToggleButton;)V
 
     goto :goto_0
 
-    .line 1242
-    .restart local p2
     :pswitch_5
     invoke-direct {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->unbindToggleButtonInBackground()V
 
     goto :goto_0
 
-    .line 1246
     :pswitch_6
     check-cast p2, [Ljava/lang/Object;
 
-    .end local p2
     move-object v0, p2
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 1247
-    .local v0, args:[Ljava/lang/Object;
     const/4 v1, 0x0
 
     aget-object v1, v0, v1
@@ -1803,13 +1471,9 @@
 
     goto :goto_0
 
-    .line 1252
-    .end local v0           #args:[Ljava/lang/Object;
-    .restart local p2
     :pswitch_7
     check-cast p2, Ljava/lang/Boolean;
 
-    .end local p2
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -1818,7 +1482,6 @@
 
     goto :goto_0
 
-    .line 1219
     nop
 
     :pswitch_data_0
@@ -1836,53 +1499,39 @@
 
 .method protected onHandleStateChangedInBackground(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .prologue
-    .line 1304
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
-    .local p1, state:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$HtcAbstractState;,"TT;"
     return-void
 .end method
 
 .method public final onHandleUiMessage(Landroid/os/Message;)Z
     .locals 3
-    .parameter "msg"
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v1, 0x0
 
-    .line 1033
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     instance-of v2, v2, Lcom/android/settings/framework/os/HtcMessageParcel;
 
     if-nez v2, :cond_1
 
-    .line 1045
     :cond_0
     :goto_0
     return v1
 
-    .line 1038
     :cond_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/settings/framework/os/HtcMessageParcel;
 
-    .line 1041
-    .local v0, parcel:Lcom/android/settings/framework/os/HtcMessageParcel;
     iget-object v2, v0, Lcom/android/settings/framework/os/HtcMessageParcel;->id:Ljava/lang/Object;
 
     if-ne v2, p0, :cond_0
 
-    .line 1045
     iget-object v1, v0, Lcom/android/settings/framework/os/HtcMessageParcel;->args:Ljava/lang/Object;
 
     invoke-direct {p0, p1, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->onHandleUiMessage(Landroid/os/Message;Ljava/lang/Object;)Z
@@ -1894,37 +1543,25 @@
 
 .method public onIntentReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 253
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_RECEIVE:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     invoke-virtual {p0, v0, p2}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 255
     return-void
 .end method
 
 .method public onPauseInBackground(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
 
-    .prologue
-    .line 302
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v0, :cond_1
 
-    .line 303
     sget-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 304
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1937,7 +1574,7 @@
 
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v1}, Lcom/htc/widget/HtcAlertDialog;->isShowing()Z
+    invoke-virtual {v1}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v1
 
@@ -1951,36 +1588,31 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 308
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->isShowing()Z
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 309
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->onSaveInstanceState()Landroid/os/Bundle;
+    invoke-virtual {v0}, Landroid/app/Dialog;->onSaveInstanceState()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialogState:Landroid/os/Bundle;
 
-    .line 311
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 316
     :cond_1
     :goto_0
     return-void
 
-    .line 313
     :cond_2
     const/4 v0, 0x0
 
@@ -1994,22 +1626,13 @@
 
 .method protected onReceiveInBackground(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 270
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     return-void
 .end method
 
 .method public onResumeInBackground(Landroid/app/Activity;)V
     .locals 2
-    .parameter "activity"
 
-    .prologue
-    .line 280
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v0, :cond_1
@@ -2018,12 +1641,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 281
     sget-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 282
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2046,26 +1667,20 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 286
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     iget-object v1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mAlertDialogState:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcAlertDialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Landroid/app/Dialog;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 289
     :cond_1
     return-void
 .end method
 
 .method public onToggleChange(Z)Z
     .locals 2
-    .parameter "newState"
 
-    .prologue
-    .line 575
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_TOGGLE_CHANGE:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2074,7 +1689,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 577
     const/4 v0, 0x0
 
     return v0
@@ -2082,30 +1696,20 @@
 
 .method public onToggleChangeInBackground(Z)V
     .locals 0
-    .parameter "newState"
 
-    .prologue
-    .line 590
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     return-void
 .end method
 
 .method protected postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
     .locals 3
-    .parameter "actionType"
-    .parameter "argument"
 
-    .prologue
-    .line 828
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mNonUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 829
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mNonUiHandler:Landroid/os/Handler;
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -2119,11 +1723,9 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 837
     :goto_0
     return-void
 
-    .line 835
     :cond_0
     const-string v0, "Could not find the non-UI handler to set the switch"
 
@@ -2137,29 +1739,19 @@
 
 .method public setOnDialogCreatedListener(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$OnDialogCreatedListener;)V
     .locals 0
-    .parameter "listener"
 
-    .prologue
-    .line 1318
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iput-object p1, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mOnDialogCreatedListener:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$OnDialogCreatedListener;
 
-    .line 1319
     return-void
 .end method
 
 .method public final setSwitchEnabled(Z)V
     .locals 2
-    .parameter "enabled"
 
-    .prologue
-    .line 743
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 745
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2168,23 +1760,17 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatus(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
 
-    .line 748
     :cond_0
     return-void
 .end method
 
 .method public final setWidgetChecked(Z)V
     .locals 2
-    .parameter "checked"
 
-    .prologue
-    .line 791
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 792
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_TOGGLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2193,23 +1779,17 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatus(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
 
-    .line 795
     :cond_0
     return-void
 .end method
 
 .method public final setWidgetEnabled(Z)V
     .locals 2
-    .parameter "enabled"
 
-    .prologue
-    .line 695
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
     if-eqz v0, :cond_1
 
-    .line 697
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_LISTITEM_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2218,18 +1798,15 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatus(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
 
-    .line 704
     :cond_0
     :goto_0
     return-void
 
-    .line 699
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 701
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2243,21 +1820,16 @@
 
 .method public final setWidgetEnabledImmediately(Z)V
     .locals 2
-    .parameter "enabled"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/RuntimeException;
         }
     .end annotation
 
-    .prologue
-    .line 725
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
     if-eqz v0, :cond_1
 
-    .line 727
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_LISTITEM_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2266,18 +1838,15 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatusImmediately(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
 
-    .line 734
     :cond_0
     :goto_0
     return-void
 
-    .line 729
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mToggleButton:Lcom/android/settings/framework/widget/HtcToggleButton;
 
     if-eqz v0, :cond_0
 
-    .line 731
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2291,31 +1860,23 @@
 
 .method protected final setWidgetIconColor(Z)V
     .locals 4
-    .parameter "toggled"
 
-    .prologue
-    .line 849
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
     if-nez v0, :cond_1
 
-    .line 850
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 851
     const-string v0, "The enabler is still inactive. You can\'t use the UI handler."
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logW(Ljava/lang/String;)V
 
-    .line 871
     :cond_0
     :goto_0
     return-void
 
-    .line 858
     :cond_1
     invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->supportIconFilterEffect()Z
 
@@ -2323,17 +1884,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 862
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_2
 
-    .line 863
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_ICON_COLOR_FILTER_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -2353,7 +1912,6 @@
 
     goto :goto_0
 
-    .line 869
     :cond_2
     const-string v0, "Could not find the UI handler to set the icon color"
 
@@ -2364,17 +1922,11 @@
 
 .method protected setWidgetIconColorInForeground(Landroid/widget/ImageView;Z)V
     .locals 2
-    .parameter "icon"
-    .parameter "toggled"
 
-    .prologue
-    .line 884
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-boolean v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 885
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2401,34 +1953,24 @@
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->log(Ljava/lang/String;)V
 
-    .line 887
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 888
     check-cast p1, Lcom/android/settings/framework/widget/HtcColorFilterImageView;
 
-    .end local p1
-    invoke-virtual {p0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/receiver/HtcAbsReceiver;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-virtual {p1, v0, p2}, Lcom/android/settings/framework/widget/HtcColorFilterImageView;->setColorFilterEnabled(Landroid/content/Context;Z)V
 
-    .line 891
     :cond_1
     return-void
 .end method
 
 .method protected setWidgetStatus(ILjava/lang/Boolean;Ljava/lang/Boolean;)V
     .locals 1
-    .parameter "summaryResId"
-    .parameter "toggled"
-    .parameter "toggleButtonEnabled"
 
-    .prologue
-    .line 992
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2437,47 +1979,36 @@
 
     invoke-virtual {p0, v0, p2, p3}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatus(Ljava/lang/CharSequence;Ljava/lang/Boolean;Ljava/lang/Boolean;)V
 
-    .line 994
     return-void
 .end method
 
 .method protected setWidgetStatus(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
     .locals 3
-    .parameter "actionType"
-    .parameter "argument"
 
-    .prologue
-    .line 903
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
     if-nez v0, :cond_1
 
-    .line 904
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 905
     const-string v0, "The enabler is still inactive. You can\'t use the UI handler."
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logW(Ljava/lang/String;)V
 
-    .line 920
     :cond_0
     :goto_0
     return-void
 
-    .line 911
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_2
 
-    .line 912
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -2493,7 +2024,6 @@
 
     goto :goto_0
 
-    .line 918
     :cond_2
     const-string v0, "Could not find the UI handler to set the switch"
 
@@ -2504,44 +2034,33 @@
 
 .method protected setWidgetStatus(Ljava/lang/CharSequence;Ljava/lang/Boolean;Ljava/lang/Boolean;)V
     .locals 5
-    .parameter "summary"
-    .parameter "toggled"
-    .parameter "toggleButtonEnabled"
 
-    .prologue
-    .line 1008
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-boolean v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mIsEnablerActive:Z
 
     if-nez v0, :cond_1
 
-    .line 1009
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 1010
     const-string v0, "The enabler is still inactive. You can\'t use the UI handler."
 
     invoke-direct {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->logW(Ljava/lang/String;)V
 
-    .line 1027
     :cond_0
     :goto_0
     return-void
 
-    .line 1016
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_2
 
-    .line 1017
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mUiHandler:Landroid/os/Handler;
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_MULTI_PROPERTIES:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -2565,7 +2084,6 @@
 
     goto :goto_0
 
-    .line 1025
     :cond_2
     const-string v0, "Could not find the UI handler to set the switch"
 
@@ -2576,16 +2094,11 @@
 
 .method public final setWidgetSummary(I)V
     .locals 1
-    .parameter "summaryResId"
 
-    .prologue
-    .line 639
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
     if-eqz v0, :cond_0
 
-    .line 642
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -2594,51 +2107,36 @@
 
     invoke-virtual {p0, v0}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetSummary(Ljava/lang/CharSequence;)V
 
-    .line 644
     :cond_0
     return-void
 .end method
 
 .method public final setWidgetSummary(Ljava/lang/CharSequence;)V
     .locals 1
-    .parameter "summary"
 
-    .prologue
-    .line 651
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     iget-object v0, p0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->mView:Lcom/android/settings/framework/widget/HtcPreferenceHeaderSwitchItemView;
 
     if-eqz v0, :cond_0
 
-    .line 652
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_LISTITEM_SUMMARY:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
     invoke-virtual {p0, v0, p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetStatus(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;Ljava/lang/Object;)V
 
-    .line 655
     :cond_0
     return-void
 .end method
 
 .method public final setWidgetToggled(Z)V
     .locals 0
-    .parameter "toggled"
 
-    .prologue
-    .line 804
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     invoke-virtual {p0, p1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->setWidgetToggled(Z)V
 
-    .line 805
     return-void
 .end method
 
 .method protected supportIconFilterEffect()Z
     .locals 1
 
-    .prologue
-    .line 389
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     const/4 v0, 0x1
 
     return v0
@@ -2647,31 +2145,23 @@
 .method public final unbindHeaderView()V
     .locals 2
 
-    .prologue
-    .line 477
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_UNBIND_HEADER_VIEW:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 479
     return-void
 .end method
 
 .method public final unbindToggleButton()V
     .locals 2
 
-    .prologue
-    .line 543
-    .local p0, this:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;,"Lcom/android/settings/framework/core/HtcAbsWidgetEnabler<TT;>;"
     sget-object v0, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_UNBIND_TOGGLE_BUTTON:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler;->postInternalAction(Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;Ljava/lang/Object;)V
 
-    .line 546
     return-void
 .end method

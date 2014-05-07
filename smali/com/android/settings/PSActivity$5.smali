@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/PSActivity;Lcom/htc/widget/HtcCheckBox;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 184
     iput-object p1, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
     iput-object p2, p0, Lcom/android/settings/PSActivity$5;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
     #getter for: Lcom/android/settings/PSActivity;->DBG:Z
@@ -88,7 +80,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     :cond_0
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
@@ -113,7 +104,7 @@
 
     iget-object v2, p0, Lcom/android/settings/PSActivity$5;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v2}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v2
 
@@ -127,7 +118,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     :cond_1
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
@@ -137,20 +127,18 @@
 
     iget-object v2, p0, Lcom/android/settings/PSActivity$5;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v2}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v2
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 189
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
     iget-object v0, v0, Lcom/android/settings/PSActivity;->ed:Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 190
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
     #getter for: Lcom/android/settings/PSActivity;->DBG:Z
@@ -194,12 +182,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :cond_2
     iget-object v0, p0, Lcom/android/settings/PSActivity$5;->this$0:Lcom/android/settings/PSActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/PSActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 192
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 240
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     #getter for: Lcom/android/settings/wifi/RedirectDialog;->mDialogId:I
@@ -52,7 +46,6 @@
 
     if-lez v0, :cond_0
 
-    .line 241
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     iget-object v1, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
@@ -62,9 +55,8 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/RedirectDialog;->dismissDialog(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->dismissDialog(I)V
 
-    .line 243
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
@@ -73,13 +65,11 @@
     #setter for: Lcom/android/settings/wifi/RedirectDialog;->mDialogId:I
     invoke-static {v0, v1}, Lcom/android/settings/wifi/RedirectDialog;->access$602(Lcom/android/settings/wifi/RedirectDialog;I)I
 
-    .line 244
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$8;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     const/16 v1, 0x3ed
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/wifi/RedirectDialog;->showDialog(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->showDialog(I)V
 
-    .line 245
     return-void
 .end method

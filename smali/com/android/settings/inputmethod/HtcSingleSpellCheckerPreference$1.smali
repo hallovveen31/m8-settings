@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 106
     iput-object p1, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$1;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "arg0"
 
-    .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$1;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 
     #calls: Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;->onLeftButtonClicked(Landroid/view/View;)V
     invoke-static {v0, p1}, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;->access$000(Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;Landroid/view/View;)V
 
-    .line 110
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/Settings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 160
     iput-object p1, p0, Lcom/android/settings/Settings$1;->this$0:Lcom/android/settings/Settings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 163
     iget-object v0, p0, Lcom/android/settings/Settings$1;->this$0:Lcom/android/settings/Settings;
 
     #calls: Lcom/android/settings/Settings;->syncWrapHeaders()V
     invoke-static {v0}, Lcom/android/settings/Settings;->access$000(Lcom/android/settings/Settings;)V
 
-    .line 164
     return-void
 .end method

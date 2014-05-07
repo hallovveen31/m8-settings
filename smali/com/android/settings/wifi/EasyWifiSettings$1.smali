@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/EasyWifiSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 125
     iput-object p1, p0, Lcom/android/settings/wifi/EasyWifiSettings$1;->this$0:Lcom/android/settings/wifi/EasyWifiSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 128
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 129
-    .local v0, action:Ljava/lang/String;
     const-string v2, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 130
     const-string v2, "wifi_state"
 
     const/4 v3, 0x4
@@ -64,8 +54,6 @@
 
     move-result v1
 
-    .line 132
-    .local v1, state:I
     iget-object v2, p0, Lcom/android/settings/wifi/EasyWifiSettings$1;->this$0:Lcom/android/settings/wifi/EasyWifiSettings;
 
     #getter for: Lcom/android/settings/wifi/EasyWifiSettings;->mWifiState:I
@@ -75,13 +63,11 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 133
     iget-object v2, p0, Lcom/android/settings/wifi/EasyWifiSettings$1;->this$0:Lcom/android/settings/wifi/EasyWifiSettings;
 
     #setter for: Lcom/android/settings/wifi/EasyWifiSettings;->mWifiState:I
     invoke-static {v2, v1}, Lcom/android/settings/wifi/EasyWifiSettings;->access$002(Lcom/android/settings/wifi/EasyWifiSettings;I)I
 
-    .line 134
     iget-object v2, p0, Lcom/android/settings/wifi/EasyWifiSettings$1;->this$0:Lcom/android/settings/wifi/EasyWifiSettings;
 
     #getter for: Lcom/android/settings/wifi/EasyWifiSettings;->mAdapter:Lcom/android/settings/wifi/EasyWifiSettings$ApplicationsAdapter;
@@ -91,7 +77,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 135
     iget-object v2, p0, Lcom/android/settings/wifi/EasyWifiSettings$1;->this$0:Lcom/android/settings/wifi/EasyWifiSettings;
 
     #getter for: Lcom/android/settings/wifi/EasyWifiSettings;->mAdapter:Lcom/android/settings/wifi/EasyWifiSettings$ApplicationsAdapter;
@@ -99,10 +84,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settings/wifi/EasyWifiSettings$ApplicationsAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v2}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 140
-    .end local v1           #state:I
     :cond_0
     return-void
 .end method

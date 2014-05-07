@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;Lcom/htc/widget/HtcCheckBox;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 257
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$10;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     iput-object p2, p0, Lcom/android/settings/wifi/RedirectDialog$10;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
@@ -44,14 +40,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 260
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$10;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->performClick()Z
 
-    .line 261
     return-void
 .end method

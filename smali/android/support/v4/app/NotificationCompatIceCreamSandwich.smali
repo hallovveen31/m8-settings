@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,22 +14,7 @@
 
 .method static add(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)Landroid/app/Notification;
     .locals 8
-    .parameter "context"
-    .parameter "n"
-    .parameter "contentTitle"
-    .parameter "contentText"
-    .parameter "contentInfo"
-    .parameter "tickerView"
-    .parameter "number"
-    .parameter "contentIntent"
-    .parameter "fullScreenIntent"
-    .parameter "largeIcon"
-    .parameter "mProgressMax"
-    .parameter "mProgress"
-    .parameter "mProgressIndeterminate"
 
-    .prologue
-    .line 31
     new-instance v4, Landroid/app/Notification$Builder;
 
     invoke-direct {v4, p0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
@@ -188,16 +171,12 @@
 
     move-result-object v3
 
-    .line 54
-    .local v3, b:Landroid/app/Notification$Builder;
     invoke-virtual {v3}, Landroid/app/Notification$Builder;->getNotification()Landroid/app/Notification;
 
     move-result-object v4
 
     return-object v4
 
-    .line 31
-    .end local v3           #b:Landroid/app/Notification$Builder;
     :cond_0
     const/4 v4, 0x0
 

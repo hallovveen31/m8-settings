@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
-    .line 20
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,12 +43,10 @@
 
     sput-object v1, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->TAG:Ljava/lang/String;
 
-    .line 23
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v1, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->DEBUG:Z
 
-    .line 34
     :try_start_0
     const-class v1, Lcom/htc/wrap/android/net/wifi/HtcWrapWifiManager;
 
@@ -78,7 +74,6 @@
 
     sput-object v1, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->sMethod_setAssociationManual:Ljava/lang/reflect/Method;
 
-    .line 36
     const-class v1, Lcom/htc/wrap/android/net/wifi/HtcWrapWifiManager;
 
     const-string v2, "getAssociationManual"
@@ -101,24 +96,17 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 43
-    .local v0, e:Ljava/lang/NoSuchMethodException;
     :cond_0
     :goto_0
     return-void
 
-    .line 38
-    .end local v0           #e:Ljava/lang/NoSuchMethodException;
     :catch_0
     move-exception v0
 
-    .line 39
-    .restart local v0       #e:Ljava/lang/NoSuchMethodException;
     sget-boolean v1, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 40
     sget-object v1, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->TAG:Ljava/lang/String;
 
     const-string v2, "NoSuchMethodException"
@@ -131,8 +119,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -140,21 +126,16 @@
 
 .method public static getAssociationManual(Landroid/net/wifi/WifiManager;)I
     .locals 7
-    .parameter "wifiManager"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 62
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->sMethod_getAssociationManual:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_0
 
-    .line 72
     :goto_0
     return v2
 
-    .line 67
     :cond_0
     :try_start_0
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->sMethod_getAssociationManual:Ljava/lang/reflect/Method;
@@ -173,11 +154,8 @@
 
     move-result-object v1
 
-    .line 69
-    .local v1, result:Ljava/lang/Object;
     check-cast v1, Ljava/lang/Integer;
 
-    .end local v1           #result:Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -186,12 +164,9 @@
 
     goto :goto_0
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
-    .local v0, e:Ljava/lang/Exception;
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->TAG:Ljava/lang/String;
 
     const-string v4, "failed to invoke getAssociationManual(...)"
@@ -203,22 +178,16 @@
 
 .method public static setAssociationManual(Landroid/net/wifi/WifiManager;I)Z
     .locals 8
-    .parameter "wifiManager"
-    .parameter "isManual"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 47
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->sMethod_setAssociationManual:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_0
 
-    .line 57
     :goto_0
     return v2
 
-    .line 52
     :cond_0
     :try_start_0
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->sMethod_setAssociationManual:Ljava/lang/reflect/Method;
@@ -245,11 +214,8 @@
 
     move-result-object v1
 
-    .line 54
-    .local v1, result:Ljava/lang/Object;
     check-cast v1, Ljava/lang/Boolean;
 
-    .end local v1           #result:Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -258,12 +224,9 @@
 
     goto :goto_0
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
-    .local v0, e:Ljava/lang/Exception;
     sget-object v3, Lcom/android/settings/framework/reflect/com/htc/wrap/android/net/wifi/HtcRefWrapWifiManager;->TAG:Ljava/lang/String;
 
     const-string v4, "failed to invoke setAssociationManual(...)"

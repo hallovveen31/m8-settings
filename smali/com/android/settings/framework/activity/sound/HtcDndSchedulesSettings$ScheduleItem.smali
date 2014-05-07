@@ -51,10 +51,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleItem;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -64,11 +61,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 313
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleItem;-><init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;)V
 
     return-void

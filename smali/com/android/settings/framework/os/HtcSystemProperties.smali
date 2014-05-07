@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/android/settings/framework/os/HtcSystemProperties;->TAG:Ljava/lang/String;
 
-    .line 22
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/os/HtcSystemProperties;->DEBUG:Z
@@ -63,8 +60,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/SystemProperties;-><init>()V
 
     return-void
@@ -73,8 +68,6 @@
 .method public static getBuildDateTimeValue()J
     .locals 4
 
-    .prologue
-    .line 83
     const-string v0, "persist.sys.ui.hw"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -99,8 +92,6 @@
 .method public static getHardwareAcceleration()Z
     .locals 2
 
-    .prologue
-    .line 92
     const-string v0, "persist.sys.ui.hw"
 
     const/4 v1, 0x0
@@ -114,23 +105,17 @@
 
 .method public static getHardwareVersion(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "def"
 
-    .prologue
-    .line 113
     const-string v1, "ro.revision"
 
     invoke-static {v1, p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 114
-    .local v0, value:Ljava/lang/String;
     sget-boolean v1, Lcom/android/settings/framework/os/HtcSystemProperties;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 115
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -151,30 +136,23 @@
 
     invoke-static {v1}, Lcom/android/settings/framework/os/HtcSystemProperties;->log(Ljava/lang/String;)V
 
-    .line 117
     :cond_0
     return-object v0
 .end method
 
 .method public static getPublicHardwareVersion(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
-    .parameter "def"
 
-    .prologue
-    .line 126
     const-string v1, "ro.devicerev"
 
     invoke-static {v1, p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
-    .local v0, value:Ljava/lang/String;
     sget-boolean v1, Lcom/android/settings/framework/os/HtcSystemProperties;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 128
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -195,7 +173,6 @@
 
     invoke-static {v1}, Lcom/android/settings/framework/os/HtcSystemProperties;->log(Ljava/lang/String;)V
 
-    .line 130
     :cond_0
     return-object v0
 .end method
@@ -203,8 +180,6 @@
 .method public static isPhoneStorageFuse()Z
     .locals 2
 
-    .prologue
-    .line 153
     const-string v0, "persist.fuse_sdcard"
 
     const/4 v1, 0x0
@@ -218,24 +193,17 @@
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 157
     sget-object v0, Lcom/android/settings/framework/os/HtcSystemProperties;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
     return-void
 .end method
 
 .method public static setHardwareAcceleration(Z)V
     .locals 2
-    .parameter "enabled"
 
-    .prologue
-    .line 100
     const-string v1, "persist.sys.ui.hw"
 
     if-eqz p0, :cond_0
@@ -245,10 +213,8 @@
     :goto_0
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
     return-void
 
-    .line 100
     :cond_0
     const-string v0, "false"
 

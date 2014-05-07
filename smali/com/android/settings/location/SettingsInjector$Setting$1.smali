@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/location/SettingsInjector$Setting;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 427
     iput-object p1, p0, Lcom/android/settings/location/SettingsInjector$Setting$1;->this$1:Lcom/android/settings/location/SettingsInjector$Setting;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,24 +33,17 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 7
-    .parameter "msg"
 
-    .prologue
-    .line 430
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 431
-    .local v0, bundle:Landroid/os/Bundle;
     const-string v3, "summary"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 432
-    .local v2, summary:Ljava/lang/String;
     const-string v3, "enabled"
 
     const/4 v4, 0x1
@@ -62,13 +52,10 @@
 
     move-result v1
 
-    .line 433
-    .local v1, enabled:Z
     sget-boolean v3, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v3, :cond_0
 
-    .line 434
     const-string v3, "SettingsInjector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -109,7 +96,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 435
     const-string v3, "SettingsInjector"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -156,7 +142,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     :cond_0
     iget-object v3, p0, Lcom/android/settings/location/SettingsInjector$Setting$1;->this$1:Lcom/android/settings/location/SettingsInjector$Setting;
 
@@ -164,14 +149,12 @@
 
     invoke-virtual {v3, v2}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 438
     iget-object v3, p0, Lcom/android/settings/location/SettingsInjector$Setting$1;->this$1:Lcom/android/settings/location/SettingsInjector$Setting;
 
     iget-object v3, v3, Lcom/android/settings/location/SettingsInjector$Setting;->preference:Lcom/htc/preference/HtcPreference;
 
     invoke-virtual {v3, v1}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 439
     iget-object v3, p0, Lcom/android/settings/location/SettingsInjector$Setting$1;->this$1:Lcom/android/settings/location/SettingsInjector$Setting;
 
     iget-object v3, v3, Lcom/android/settings/location/SettingsInjector$Setting;->this$0:Lcom/android/settings/location/SettingsInjector;
@@ -200,6 +183,5 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 441
     return-void
 .end method

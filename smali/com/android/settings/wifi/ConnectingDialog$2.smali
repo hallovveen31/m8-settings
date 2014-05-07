@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/ConnectingDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 317
     iput-object p1, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,32 +33,25 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/16 v7, 0x191
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 320
     if-nez p2, :cond_1
 
-    .line 321
     const-string v3, "OOBE_ConnectingDialog"
 
     const-string v4, "intent null!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     :cond_0
     :goto_0
     return-void
 
-    .line 323
     :cond_1
     iget-object v4, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
@@ -76,14 +66,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 324
     const-string v3, "OOBE_ConnectingDialog"
 
     const-string v4, "pass first sticky intent!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     iget-object v3, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
     const/4 v4, 0x0
@@ -93,14 +81,11 @@
 
     goto :goto_0
 
-    .line 329
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 330
-    .local v0, action:Ljava/lang/String;
     const-string v4, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -109,7 +94,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 331
     const-string v4, "noConnectivity"
 
     invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -118,8 +102,6 @@
 
     if-nez v4, :cond_3
 
-    .line 332
-    .local v2, isConnected:Z
     :goto_1
     const-string v4, "OOBE_ConnectingDialog"
 
@@ -143,7 +125,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     if-nez v2, :cond_4
 
     #calls: Lcom/android/settings/wifi/ConnectingDialog;->hasWifiAPToConnect(Landroid/content/Context;)Z
@@ -153,7 +134,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 336
     const-string v3, "OOBE_ConnectingDialog"
 
     const-string v4, "still have wifi connecting!"
@@ -162,15 +142,11 @@
 
     goto :goto_0
 
-    .end local v2           #isConnected:Z
     :cond_3
     move v2, v3
 
-    .line 331
     goto :goto_1
 
-    .line 338
-    .restart local v2       #isConnected:Z
     :cond_4
     iget-object v4, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
@@ -204,8 +180,6 @@
 
     goto :goto_2
 
-    .line 341
-    .end local v2           #isConnected:Z
     :cond_6
     const-string v4, "android.net.wifi.supplicant.STATE_CHANGE"
 
@@ -215,25 +189,20 @@
 
     if-eqz v4, :cond_8
 
-    .line 342
     const-string v4, "supplicantError"
 
     invoke-virtual {p2, v4, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 343
-    .local v1, errorCode:I
     if-ne v1, v2, :cond_7
 
-    .line 344
     const-string v4, "OOBE_ConnectingDialog"
 
     const-string v5, "authenticating fail!"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
     iget-object v4, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
     #getter for: Lcom/android/settings/wifi/ConnectingDialog;->mHandler:Landroid/os/Handler;
@@ -258,7 +227,6 @@
 
     goto/16 :goto_0
 
-    .line 348
     :cond_7
     iget-object v3, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
@@ -267,8 +235,6 @@
 
     goto/16 :goto_0
 
-    .line 352
-    .end local v1           #errorCode:I
     :cond_8
     const-string v3, "android.net.wifi.STATE_CHANGE"
 
@@ -278,7 +244,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 353
     iget-object v3, p0, Lcom/android/settings/wifi/ConnectingDialog$2;->this$0:Lcom/android/settings/wifi/ConnectingDialog;
 
     #calls: Lcom/android/settings/wifi/ConnectingDialog;->updateDialogMessage(Landroid/content/Context;)V

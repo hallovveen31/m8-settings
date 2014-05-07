@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChargeOnlyEnabler$1;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,10 +34,8 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 96
     iget-object v2, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
 
     iget-object v2, v2, Lcom/android/settings/ChargeOnlyEnabler$1;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
@@ -53,8 +48,6 @@
 
     move-result v0
 
-    .line 98
-    .local v0, hasTethered:Z
     if-nez v0, :cond_0
 
     iget-object v2, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
@@ -71,7 +64,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 99
     :cond_0
     invoke-static {}, Lcom/android/settings/ChargeOnlyEnabler;->access$100()Landroid/os/ConditionVariable;
 
@@ -81,7 +73,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/os/ConditionVariable;->block(J)Z
 
-    .line 101
     :cond_1
     iget-object v2, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
 
@@ -94,14 +85,12 @@
 
     invoke-static {v2}, Lcom/android/settings/SmartNSEnabler;->waitIPTClose(Landroid/content/Context;)V
 
-    .line 104
     const-string v2, "SmartNS_ChargeOnly_Enabler"
 
     const-string v3, "enable Charge only mode"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     iget-object v2, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
 
     iget-object v2, v2, Lcom/android/settings/ChargeOnlyEnabler$1;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
@@ -120,22 +109,18 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 109
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.htc.settings.action.CHARGE_ONLY"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 110
-    .local v1, intent:Landroid/content/Intent;
     const-string v2, "enabled"
 
     const/4 v3, 0x1
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 111
     iget-object v2, p0, Lcom/android/settings/ChargeOnlyEnabler$1$1;->this$1:Lcom/android/settings/ChargeOnlyEnabler$1;
 
     iget-object v2, v2, Lcom/android/settings/ChargeOnlyEnabler$1;->this$0:Lcom/android/settings/ChargeOnlyEnabler;
@@ -149,13 +134,11 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 112
     const-string v2, "SmartNS_ChargeOnly_Enabler"
 
     const-string v3, "broadcast enable Charge only mode: true"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     return-void
 .end method

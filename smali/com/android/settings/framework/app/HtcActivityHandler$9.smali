@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcActivityHandler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 737
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcActivityHandler$9;->this$0:Lcom/android/settings/framework/app/HtcActivityHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 747
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcActivityHandler$9;->this$0:Lcom/android/settings/framework/app/HtcActivityHandler;
 
     #calls: Lcom/android/settings/framework/app/HtcActivityHandler;->destroyHandlers()V
     invoke-static {v0}, Lcom/android/settings/framework/app/HtcActivityHandler;->access$200(Lcom/android/settings/framework/app/HtcActivityHandler;)V
 
-    .line 752
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationStation;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/settings/NotificationStation$2;->this$0:Lcom/android/settings/NotificationStation;
 
     invoke-direct {p0}, Landroid/service/notification/INotificationListener$Stub;-><init>()V
@@ -36,15 +33,12 @@
 # virtual methods
 .method public onNotificationPosted(Landroid/service/notification/StatusBarNotification;)V
     .locals 3
-    .parameter "notification"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .prologue
-    .line 97
     invoke-static {}, Lcom/android/settings/NotificationStation;->access$200()Ljava/lang/String;
 
     move-result-object v0
@@ -69,30 +63,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     iget-object v0, p0, Lcom/android/settings/NotificationStation$2;->this$0:Lcom/android/settings/NotificationStation;
 
     invoke-virtual {v0}, Lcom/android/settings/NotificationStation;->refresh()V
 
-    .line 107
     return-void
 .end method
 
 .method public onNotificationRemoved(Landroid/service/notification/StatusBarNotification;)V
     .locals 1
-    .parameter "notification"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/settings/NotificationStation$2;->this$0:Lcom/android/settings/NotificationStation;
 
     invoke-virtual {v0}, Lcom/android/settings/NotificationStation;->refresh()V
 
-    .line 119
     return-void
 .end method

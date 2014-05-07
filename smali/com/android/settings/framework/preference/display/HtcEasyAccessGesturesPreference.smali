@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -44,13 +42,9 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 17
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsActionPreference;-><init>(Landroid/content/Context;)V
 
-    .line 18
     return-void
 .end method
 
@@ -59,8 +53,6 @@
 .method protected getCustomActionType()Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
     .locals 1
 
-    .prologue
-    .line 44
     sget-object v0, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_ACTIVITY:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
     return-object v0
@@ -69,8 +61,6 @@
 .method protected getCustomIntent()Landroid/content/Intent;
     .locals 4
 
-    .prologue
-    .line 37
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
@@ -85,16 +75,12 @@
 
     move-result-object v0
 
-    .line 39
-    .local v0, intent:Landroid/content/Intent;
     return-object v0
 .end method
 
 .method protected getCustomSummary()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 32
     const/4 v0, 0x0
 
     return-object v0
@@ -103,9 +89,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 27
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/display/HtcEasyAccessGesturesPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,8 +105,6 @@
 .method protected getCustomTitleRes()I
     .locals 1
 
-    .prologue
-    .line 22
     const v0, 0x7f0c015b
 
     return v0

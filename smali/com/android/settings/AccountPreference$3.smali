@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccountPreference;Landroid/view/View;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 331
     iput-object p1, p0, Lcom/android/settings/AccountPreference$3;->this$0:Lcom/android/settings/AccountPreference;
 
     iput-object p2, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
@@ -45,13 +41,10 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 334
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
 
     if-eqz v3, :cond_0
 
-    .line 335
     iget-object v4, p0, Lcom/android/settings/AccountPreference$3;->this$0:Lcom/android/settings/AccountPreference;
 
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
@@ -63,44 +56,34 @@
 
     move-result v1
 
-    .line 336
-    .local v1, dimen:I
     if-eqz v1, :cond_0
 
-    .line 337
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 338
-    .local v0, bounds:Landroid/graphics/Rect;
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
 
     invoke-virtual {v3, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 339
     iget v3, v0, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v3, v1
 
     iput v3, v0, Landroid/graphics/Rect;->right:I
 
-    .line 340
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v3, v1
 
     iput v3, v0, Landroid/graphics/Rect;->left:I
 
-    .line 341
     new-instance v2, Landroid/view/TouchDelegate;
 
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
 
     invoke-direct {v2, v0, v3}, Landroid/view/TouchDelegate;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
 
-    .line 343
-    .local v2, touchDelegate:Landroid/view/TouchDelegate;
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -119,7 +102,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 345
     iget-object v3, p0, Lcom/android/settings/AccountPreference$3;->val$view:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -130,10 +112,6 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
 
-    .line 350
-    .end local v0           #bounds:Landroid/graphics/Rect;
-    .end local v1           #dimen:I
-    .end local v2           #touchDelegate:Landroid/view/TouchDelegate;
     :cond_0
     return-void
 .end method

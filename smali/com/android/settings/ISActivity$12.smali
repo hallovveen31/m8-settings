@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ISActivity;Lcom/htc/widget/HtcCheckBox;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 350
     iput-object p1, p0, Lcom/android/settings/ISActivity$12;->this$0:Lcom/android/settings/ISActivity;
 
     iput-object p2, p0, Lcom/android/settings/ISActivity$12;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
@@ -44,20 +40,15 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/settings/ISActivity$12;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 353
     iget-object v0, p0, Lcom/android/settings/ISActivity$12;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->performClick()Z
 
-    .line 355
     :cond_0
     return-void
 .end method

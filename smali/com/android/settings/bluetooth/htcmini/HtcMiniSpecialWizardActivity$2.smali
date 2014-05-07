@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 256
     iput-object p1, p0, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$2;->this$0:Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,9 +46,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 258
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$2;->this$0:Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;
 
     #getter for: Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;->mAdapter:Landroid/widget/BaseAdapter;
@@ -67,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 259
     iget-object v0, p0, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$2;->this$0:Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;
 
     #getter for: Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;->mAdapter:Landroid/widget/BaseAdapter;
@@ -79,7 +68,6 @@
 
     invoke-virtual {v0, p3}, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$HtcItemContainerAdapter;->onItemClick(I)V
 
-    .line 261
     :cond_0
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1553
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$3;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 1556
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$000()Z
 
     move-result v0
@@ -58,7 +51,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1557
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$3;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -81,7 +73,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1558
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$3;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
     #getter for: Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->mUiStage:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
@@ -93,17 +84,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1559
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$3;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
     #calls: Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->removeFingerprintAndExit()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$400(Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;)V
 
-    .line 1563
     :goto_0
     return-void
 
-    .line 1561
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$3;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1241
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$10;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 1244
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$10;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -56,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1246
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$10;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1247
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$10;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -82,7 +75,6 @@
 
     invoke-static {v0}, Lcom/android/settings/SmartNSEnabler;->waitIPTClose(Landroid/content/Context;)V
 
-    .line 1252
     :cond_0
     iget-object v0, p0, Lcom/android/settings/SmartNSEnabler$10;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -99,6 +91,5 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1253
     return-void
 .end method

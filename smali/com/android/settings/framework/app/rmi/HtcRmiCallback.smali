@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     const-class v0, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -35,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,35 +42,20 @@
 # virtual methods
 .method public onRequest(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 0
-    .parameter "context"
-    .parameter "methodName"
-    .parameter "input"
-    .parameter "output"
 
-    .prologue
-    .line 80
     return-void
 .end method
 
 .method public request(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Bundle;)V
     .locals 6
-    .parameter "context"
-    .parameter "methodName"
-    .parameter "input"
-    .parameter "output"
 
-    .prologue
-    .line 41
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 45
-    .local v0, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     :try_start_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->onRequest(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Bundle;)V
 
-    .line 47
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Class;
@@ -101,8 +82,6 @@
 
     move-result-object v2
 
-    .line 49
-    .local v2, m:Ljava/lang/reflect/Method;
     const/4 v3, 0x3
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -127,23 +106,17 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 67
-    .end local v2           #m:Ljava/lang/reflect/Method;
     :goto_0
     return-void
 
-    .line 51
     :catch_0
     move-exception v1
 
-    .line 52
-    .local v1, e:Ljava/lang/SecurityException;
-    invoke-virtual {v1}, Ljava/lang/SecurityException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 53
     sget-object v3, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/SecurityException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -151,19 +124,14 @@
 
     goto :goto_0
 
-    .line 54
-    .end local v1           #e:Ljava/lang/SecurityException;
     :catch_1
     move-exception v1
 
-    .line 55
-    .local v1, e:Ljava/lang/NoSuchMethodException;
-    invoke-virtual {v1}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 56
     sget-object v3, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/NoSuchMethodException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -171,19 +139,14 @@
 
     goto :goto_0
 
-    .line 57
-    .end local v1           #e:Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v1
 
-    .line 58
-    .local v1, e:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 59
     sget-object v3, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -191,19 +154,14 @@
 
     goto :goto_0
 
-    .line 60
-    .end local v1           #e:Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v1
 
-    .line 61
-    .local v1, e:Ljava/lang/IllegalAccessException;
-    invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 62
     sget-object v3, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 
@@ -211,19 +169,14 @@
 
     goto :goto_0
 
-    .line 63
-    .end local v1           #e:Ljava/lang/IllegalAccessException;
     :catch_4
     move-exception v1
 
-    .line 64
-    .local v1, e:Ljava/lang/reflect/InvocationTargetException;
-    invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 65
     sget-object v3, Lcom/android/settings/framework/app/rmi/HtcRmiCallback;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/reflect/InvocationTargetException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v4
 

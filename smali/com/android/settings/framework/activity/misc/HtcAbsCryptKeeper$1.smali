@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 189
     iput-object p1, p0, Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper$1;->this$0:Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,26 +36,20 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "view"
 
-    .prologue
-    .line 192
     iget-object v1, p0, Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper$1;->this$0:Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper;
 
     const v2, 0x7f09005b
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/framework/activity/misc/HtcAbsCryptKeeper;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/EditText;
 
-    .line 193
-    .local v0, passwordEntry:Landroid/widget/EditText;
     const/4 v1, 0x6
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->onEditorAction(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->onEditorAction(I)V
 
-    .line 194
     return-void
 .end method

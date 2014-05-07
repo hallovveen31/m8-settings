@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartPCStorageDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 280
     iput-object p1, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,16 +34,12 @@
 .method public run()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x0
 
-    .line 282
     const/4 v0, 0x0
 
-    .line 283
-    .local v0, counter:I
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     iget-object v4, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
@@ -61,8 +54,6 @@
 
     move-result v1
 
-    .line 284
-    .local v1, unmount_feedback:I
     const-string v3, "SmartPCStorageDialog"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -85,10 +76,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     if-nez v1, :cond_2
 
-    .line 287
     :goto_0
     invoke-static {}, Lcom/htc/wrap/android/os/HtcWrapEnvironment;->getRemovableStorageState()Ljava/lang/String;
 
@@ -112,10 +101,8 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 288
     add-int/lit8 v0, v0, 0x1
 
-    .line 289
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #getter for: Lcom/android/settings/SmartPCStorageDialog;->pause:Landroid/os/ConditionVariable;
@@ -127,7 +114,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/os/ConditionVariable;->block(J)Z
 
-    .line 290
     const-string v3, "SmartPCStorageDialog"
 
     const-string v4, "Block MTP 1 sec due to SD card not mounted."
@@ -136,7 +122,6 @@
 
     goto :goto_0
 
-    .line 292
     :cond_0
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isUsbConnected()Z
 
@@ -144,7 +129,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 293
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #getter for: Lcom/android/settings/SmartPCStorageDialog;->mContext:Landroid/content/Context;
@@ -160,30 +144,23 @@
 
     check-cast v2, Landroid/hardware/usb/UsbManager;
 
-    .line 294
-    .local v2, usbManager:Landroid/hardware/usb/UsbManager;
     invoke-virtual {v2, v7, v6}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;Z)V
 
-    .line 302
-    .end local v2           #usbManager:Landroid/hardware/usb/UsbManager;
     :cond_1
     :goto_1
     return-void
 
-    .line 296
     :cond_2
     const/4 v3, -0x1
 
     if-ne v1, v3, :cond_1
 
-    .line 297
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isUsbConnected()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 298
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$3;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #getter for: Lcom/android/settings/SmartPCStorageDialog;->mContext:Landroid/content/Context;
@@ -199,8 +176,6 @@
 
     check-cast v2, Landroid/hardware/usb/UsbManager;
 
-    .line 299
-    .restart local v2       #usbManager:Landroid/hardware/usb/UsbManager;
     invoke-virtual {v2, v7, v6}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;Z)V
 
     goto :goto_1

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings$1;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 353
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$1$1;->this$1:Lcom/android/settings/wfd/WifiDisplaySettings$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 356
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$1$1;->this$1:Lcom/android/settings/wfd/WifiDisplaySettings$1;
 
     iget-object v0, v0, Lcom/android/settings/wfd/WifiDisplaySettings$1;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
@@ -54,6 +48,5 @@
 
     invoke-virtual {v0}, Landroid/hardware/display/DisplayManager;->pauseWifiDisplay()V
 
-    .line 357
     return-void
 .end method

@@ -92,29 +92,22 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    .line 91
     sput-object v5, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 92
     sput-object v5, Lcom/android/settings/NotificationFlashSettings;->sMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 93
     sput-object v5, Lcom/android/settings/NotificationFlashSettings;->sTelephonyMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 99
     new-instance v0, Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;
 
     invoke-direct {v0}, Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;-><init>()V
 
-    .line 100
-    .local v0, custManager:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;
     const-string v3, "System"
 
     invoke-virtual {v0, v3, v6, v4}, Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;->getCustomizationReader(Ljava/lang/String;IZ)Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
@@ -123,7 +116,6 @@
 
     sput-object v3, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 101
     const-string v3, "Message"
 
     invoke-virtual {v0, v3, v6, v4}, Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;->getCustomizationReader(Ljava/lang/String;IZ)Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
@@ -132,7 +124,6 @@
 
     sput-object v3, Lcom/android/settings/NotificationFlashSettings;->sMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 102
     const-string v3, "Android_TelephonyMessage"
 
     invoke-virtual {v0, v3, v6, v4}, Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationManager;->getCustomizationReader(Ljava/lang/String;IZ)Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
@@ -141,68 +132,57 @@
 
     sput-object v3, Lcom/android/settings/NotificationFlashSettings;->sTelephonyMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
-    .line 104
     sget-object v3, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
     if-nez v3, :cond_0
 
-    .line 105
     const-string v3, "__NOTIFY_FLASH__"
 
     const-string v4, "systemCustReader is null!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     :cond_0
     sget-object v3, Lcom/android/settings/NotificationFlashSettings;->sMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
     if-nez v3, :cond_1
 
-    .line 109
     const-string v3, "__NOTIFY_FLASH__"
 
     const-string v4, "messageCustReader is null!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :cond_1
     sget-object v3, Lcom/android/settings/NotificationFlashSettings;->sTelephonyMessageCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
     if-nez v3, :cond_2
 
-    .line 113
     const-string v3, "__NOTIFY_FLASH__"
 
     const-string v4, "frameworkCustReader is null!"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     :cond_2
     const/high16 v3, 0x40b0
 
     sput v3, Lcom/android/settings/NotificationFlashSettings;->sSenseVersion:F
 
-    .line 118
     sget-object v3, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
     if-nez v3, :cond_4
 
-    .line 119
     const-string v3, "__NOTIFY_FLASH__"
 
     const-string v4, "systemCustReader is null! return null"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     :cond_3
     :goto_0
     return-void
 
-    .line 121
     :cond_4
     sget-object v3, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
@@ -212,8 +192,6 @@
 
     move-result-object v2
 
-    .line 122
-    .local v2, senseVersion:Ljava/lang/String;
     const-string v3, "__NOTIFY_FLASH__"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -236,10 +214,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     if-eqz v2, :cond_3
 
-    .line 127
     :try_start_0
     const-string v3, "a"
 
@@ -251,7 +227,6 @@
 
     if-eq v3, v4, :cond_5
 
-    .line 128
     const-string v3, "a"
 
     const-string v4, ""
@@ -260,7 +235,6 @@
 
     move-result-object v2
 
-    .line 130
     :cond_5
     invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -272,15 +246,11 @@
 
     goto :goto_0
 
-    .line 132
     :catch_0
     move-exception v1
 
-    .line 133
-    .local v1, e:Ljava/lang/NumberFormatException;
-    invoke-virtual {v1}, Ljava/lang/NumberFormatException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 134
     const-string v3, "__NOTIFY_FLASH__"
 
     const-string v4, "get wrong Sense version!!!"
@@ -293,35 +263,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 44
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;-><init>()V
 
-    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/NotificationFlashSettings;->mColorItems:Ljava/util/ArrayList;
 
-    .line 491
     new-instance v0, Lcom/android/settings/NotificationFlashSettings$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/NotificationFlashSettings$1;-><init>(Lcom/android/settings/NotificationFlashSettings;)V
 
     iput-object v0, p0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
 
-    .line 630
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/android/settings/NotificationFlashSettings;Landroid/content/Context;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1}, Lcom/android/settings/NotificationFlashSettings;->refreshUi(Landroid/content/Context;)V
 
     return-void
@@ -329,33 +290,23 @@
 
 .method private getColorDialogListView(Landroid/content/Context;Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;)Lcom/htc/widget/HtcListView;
     .locals 2
-    .parameter "ctx"
-    .parameter "adapter"
 
-    .prologue
-    .line 618
     new-instance v0, Lcom/htc/widget/HtcListView;
 
     invoke-direct {v0, p1}, Lcom/htc/widget/HtcListView;-><init>(Landroid/content/Context;)V
 
-    .line 619
-    .local v0, listView:Lcom/htc/widget/HtcListView;
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->setChoiceMode(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->setChoiceMode(I)V
 
-    .line 620
-    invoke-virtual {v0, p2}, Lcom/htc/widget/HtcListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, p2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 622
     return-object v0
 .end method
 
 .method public static getSenseVersion()F
     .locals 1
 
-    .prologue
-    .line 140
     sget v0, Lcom/android/settings/NotificationFlashSettings;->sSenseVersion:F
 
     return v0
@@ -364,28 +315,21 @@
 .method public static getSkuId()I
     .locals 4
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 773
     sget-object v1, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
     if-nez v1, :cond_0
 
-    .line 774
     const-string v1, "__NOTIFY_FLASH__"
 
     const-string v2, "systemCustReader is null! return -1"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
-    .local v0, skuId:I
     :goto_0
     return v0
 
-    .line 778
-    .end local v0           #skuId:I
     :cond_0
     sget-object v1, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
@@ -395,8 +339,6 @@
 
     move-result v0
 
-    .line 779
-    .restart local v0       #skuId:I
     const-string v1, "__NOTIFY_FLASH__"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -425,8 +367,6 @@
 .method private static isSupport8Color()Z
     .locals 2
 
-    .prologue
-    .line 152
     const/16 v0, 0x1f
 
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->getSkuId()I
@@ -435,10 +375,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 153
     const/4 v0, 0x1
 
-    .line 155
     :goto_0
     return v0
 
@@ -451,8 +389,6 @@
 .method public static isSupportVoicemailNotificationLed()Z
     .locals 2
 
-    .prologue
-    .line 171
     const/16 v0, 0x1b
 
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->getSkuId()I
@@ -477,11 +413,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 174
     :cond_0
     const/4 v0, 0x0
 
-    .line 176
     :goto_0
     return v0
 
@@ -493,9 +427,7 @@
 
 .method private refreshUi(Landroid/content/Context;)V
     .locals 12
-    .parameter "context"
 
-    .prologue
     const/4 v11, 0x4
 
     const/4 v10, 0x3
@@ -506,54 +438,37 @@
 
     const/4 v6, -0x1
 
-    .line 310
     invoke-static {p1}, Lcom/htc/util/settings/NotificationFlashLightUtility;->getAllData(Landroid/content/Context;)[Z
 
     move-result-object v0
 
-    .line 312
-    .local v0, bData:[Z
     invoke-static {p1}, Lcom/htc/util/settings/NotificationFlashLightUtility;->getAllDataColor(Landroid/content/Context;)[I
 
     move-result-object v3
 
-    .line 321
-    .local v3, colors:[I
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
 
     move-result v7
 
     if-eqz v7, :cond_7
 
-    .line 322
     const-string v7, "missed_call_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 323
-    .local v5, preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_0
 
-    .line 324
     aget v2, v3, v8
 
-    .line 325
-    .local v2, color:I
     aget-boolean v4, v0, v8
 
-    .line 326
-    .local v4, on:Z
     if-eqz v4, :cond_6
 
-    .end local v2           #color:I
     :goto_0
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 336
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_0
     :goto_1
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
@@ -562,35 +477,23 @@
 
     if-eqz v7, :cond_9
 
-    .line 337
     const-string v7, "incoming_message_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 338
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_1
 
-    .line 339
     aget v2, v3, v9
 
-    .line 340
-    .restart local v2       #color:I
     aget-boolean v4, v0, v9
 
-    .line 341
-    .restart local v4       #on:Z
     if-eqz v4, :cond_8
 
-    .end local v2           #color:I
     :goto_2
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 351
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_1
     :goto_3
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
@@ -599,35 +502,23 @@
 
     if-eqz v7, :cond_b
 
-    .line 352
     const-string v7, "incoming_email_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 353
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_2
 
-    .line 354
     aget v2, v3, v10
 
-    .line 355
-    .restart local v2       #color:I
     aget-boolean v4, v0, v10
 
-    .line 356
-    .restart local v4       #on:Z
     if-eqz v4, :cond_a
 
-    .end local v2           #color:I
     :goto_4
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 366
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_2
     :goto_5
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
@@ -636,35 +527,23 @@
 
     if-eqz v7, :cond_d
 
-    .line 367
     const-string v7, "incoming_voice_mail_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 368
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_3
 
-    .line 369
     aget v2, v3, v11
 
-    .line 370
-    .restart local v2       #color:I
     aget-boolean v4, v0, v11
 
-    .line 371
-    .restart local v4       #on:Z
     if-eqz v4, :cond_c
 
-    .end local v2           #color:I
     :goto_6
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 381
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_3
     :goto_7
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
@@ -673,39 +552,27 @@
 
     if-eqz v7, :cond_f
 
-    .line 382
     const-string v7, "reminider_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 383
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_4
 
-    .line 384
     const/4 v7, 0x5
 
     aget v2, v3, v7
 
-    .line 385
-    .restart local v2       #color:I
     const/4 v7, 0x5
 
     aget-boolean v4, v0, v7
 
-    .line 386
-    .restart local v4       #on:Z
     if-eqz v4, :cond_e
 
-    .end local v2           #color:I
     :goto_8
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 396
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_4
     :goto_9
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
@@ -714,206 +581,135 @@
 
     if-eqz v7, :cond_11
 
-    .line 397
     const-string v7, "alarm_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v5
 
-    .line 398
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v5, :cond_5
 
-    .line 399
     const/4 v7, 0x6
 
     aget v2, v3, v7
 
-    .line 400
-    .restart local v2       #color:I
     const/4 v7, 0x6
 
     aget-boolean v4, v0, v7
 
-    .line 401
-    .restart local v4       #on:Z
     if-eqz v4, :cond_10
 
-    .end local v2           #color:I
     :goto_a
     invoke-direct {p0, v5, v4, v2}, Lcom/android/settings/NotificationFlashSettings;->set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
 
-    .line 409
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_5
     :goto_b
     return-void
 
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_6
     move v2, v6
 
-    .line 326
     goto :goto_0
 
-    .line 329
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_7
     const-string v7, "missed_call_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 330
-    .local v1, cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_0
 
-    .line 331
     aget-boolean v7, v0, v8
 
     invoke-virtual {v1, v7}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
     goto/16 :goto_1
 
-    .end local v1           #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_8
     move v2, v6
 
-    .line 341
     goto :goto_2
 
-    .line 344
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_9
     const-string v7, "incoming_message_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 345
-    .restart local v1       #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_1
 
-    .line 346
     aget-boolean v7, v0, v9
 
     invoke-virtual {v1, v7}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
     goto/16 :goto_3
 
-    .end local v1           #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_a
     move v2, v6
 
-    .line 356
     goto :goto_4
 
-    .line 359
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_b
     const-string v7, "incoming_email_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 360
-    .restart local v1       #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_2
 
-    .line 361
     aget-boolean v7, v0, v10
 
     invoke-virtual {v1, v7}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
     goto/16 :goto_5
 
-    .end local v1           #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_c
     move v2, v6
 
-    .line 371
     goto :goto_6
 
-    .line 374
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_d
     const-string v7, "incoming_voice_mail_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 375
-    .restart local v1       #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_3
 
-    .line 376
     aget-boolean v7, v0, v11
 
     invoke-virtual {v1, v7}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
     goto :goto_7
 
-    .end local v1           #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_e
     move v2, v6
 
-    .line 386
     goto :goto_8
 
-    .line 389
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_f
     const-string v7, "reminider_title"
 
-    invoke-virtual {p0, v7}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v7}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 390
-    .restart local v1       #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_4
 
-    .line 391
     const/4 v7, 0x5
 
     aget-boolean v7, v0, v7
@@ -922,34 +718,22 @@
 
     goto :goto_9
 
-    .end local v1           #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v2       #color:I
-    .restart local v4       #on:Z
-    .restart local v5       #preference:Lcom/htc/preference/HtcPreference;
     :cond_10
     move v2, v6
 
-    .line 401
     goto :goto_a
 
-    .line 404
-    .end local v2           #color:I
-    .end local v4           #on:Z
-    .end local v5           #preference:Lcom/htc/preference/HtcPreference;
     :cond_11
     const-string v6, "alarm_title"
 
-    invoke-virtual {p0, v6}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v6}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 405
-    .restart local v1       #cbPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     if-eqz v1, :cond_5
 
-    .line 406
     const/4 v6, 0x6
 
     aget-boolean v6, v0, v6
@@ -961,31 +745,22 @@
 
 .method private set8ColorPreferenceSummary(Lcom/htc/preference/HtcPreference;ZI)V
     .locals 3
-    .parameter "preference"
-    .parameter "on"
-    .parameter "color"
 
-    .prologue
-    .line 289
     if-nez p1, :cond_1
 
-    .line 302
     :cond_0
     :goto_0
     return-void
 
-    .line 292
     :cond_1
     if-nez p2, :cond_2
 
-    .line 293
     const v2, 0x7f0c106f
 
     invoke-virtual {p1, v2}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
     goto :goto_0
 
-    .line 295
     :cond_2
     iget-object v2, p0, Lcom/android/settings/NotificationFlashSettings;->mColorItems:Ljava/util/ArrayList;
 
@@ -993,7 +768,6 @@
 
     move-result-object v0
 
-    .local v0, i$:Ljava/util/Iterator;
     :cond_3
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -1007,13 +781,10 @@
 
     check-cast v1, Lcom/android/settings/NotificationFlashSettings$ColorItem;
 
-    .line 296
-    .local v1, item:Lcom/android/settings/NotificationFlashSettings$ColorItem;
     iget v2, v1, Lcom/android/settings/NotificationFlashSettings$ColorItem;->colorValue:I
 
     if-ne p3, v2, :cond_3
 
-    .line 297
     iget-object v2, v1, Lcom/android/settings/NotificationFlashSettings$ColorItem;->colorName:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
@@ -1023,33 +794,23 @@
 
 .method private showColorPickerDialog(ILandroid/os/Message;)V
     .locals 11
-    .parameter "color"
-    .parameter "response"
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 545
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 546
-    .local v2, ctx:Landroid/content/Context;
     iput p1, p2, Landroid/os/Message;->arg1:I
 
-    .line 548
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 550
-    .local v1, builder:Lcom/htc/widget/HtcAlertDialog$Builder;
     const v9, 0x7f0c049c
 
     invoke-virtual {v1, v9}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 552
     const v9, 0x2040174
 
     new-instance v10, Lcom/android/settings/NotificationFlashSettings$2;
@@ -1058,7 +819,6 @@
 
     invoke-virtual {v1, v9, v10}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 560
     const v9, 0x2040179
 
     new-instance v10, Lcom/android/settings/NotificationFlashSettings$3;
@@ -1067,74 +827,51 @@
 
     invoke-virtual {v1, v9, v10}, Lcom/htc/widget/HtcAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 567
     invoke-virtual {v1}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
 
     move-result-object v3
 
-    .line 568
-    .local v3, dialog:Lcom/htc/widget/HtcAlertDialog;
     new-instance v0, Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;
 
     iget-object v9, p0, Lcom/android/settings/NotificationFlashSettings;->mColorItems:Ljava/util/ArrayList;
 
     invoke-direct {v0, p0, v9, p1}, Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;-><init>(Lcom/android/settings/NotificationFlashSettings;Ljava/util/ArrayList;I)V
 
-    .line 569
-    .local v0, adapter:Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;
     invoke-direct {p0, v2, v0}, Lcom/android/settings/NotificationFlashSettings;->getColorDialogListView(Landroid/content/Context;Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;)Lcom/htc/widget/HtcListView;
 
     move-result-object v6
 
-    .line 572
-    .local v6, listView:Lcom/htc/widget/HtcListView;
     invoke-virtual {v0}, Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;->getSelectColorPosition()I
 
     move-result v5
 
-    .line 573
-    .local v5, index:I
-    invoke-virtual {v6, v7}, Lcom/htc/widget/HtcListView;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v8
 
-    .line 574
-    .local v8, v:Landroid/view/View;
     if-nez v8, :cond_0
 
-    .line 575
-    .local v7, top:I
     :goto_0
-    invoke-virtual {v6, v5, v7}, Lcom/htc/widget/HtcListView;->setSelectionFromTop(II)V
+    invoke-virtual {v6, v5, v7}, Landroid/widget/ListView;->setSelectionFromTop(II)V
 
-    .line 577
     new-instance v9, Lcom/android/settings/NotificationFlashSettings$4;
 
     invoke-direct {v9, p0, v0, v6, p2}, Lcom/android/settings/NotificationFlashSettings$4;-><init>(Lcom/android/settings/NotificationFlashSettings;Lcom/android/settings/NotificationFlashSettings$ColorListViewAdapter;Lcom/htc/widget/HtcListView;Landroid/os/Message;)V
 
-    invoke-virtual {v6, v9}, Lcom/htc/widget/HtcListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v6, v9}, Landroid/widget/AdapterView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 604
     new-instance v4, Lcom/android/settings/NotificationFlashSettings$5;
 
     invoke-direct {v4, p0}, Lcom/android/settings/NotificationFlashSettings$5;-><init>(Lcom/android/settings/NotificationFlashSettings;)V
 
-    .line 611
-    .local v4, dismissListener:Landroid/content/DialogInterface$OnDismissListener;
-    invoke-virtual {v3, v4}, Lcom/htc/widget/HtcAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-virtual {v3, v4}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 613
     invoke-virtual {v3, v6}, Lcom/htc/widget/HtcAlertDialog;->setView(Landroid/view/View;)V
 
-    .line 614
-    invoke-virtual {v3}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
 
-    .line 615
     return-void
 
-    .line 574
-    .end local v4           #dismissListener:Landroid/content/DialogInterface$OnDismissListener;
-    .end local v7           #top:I
     :cond_0
     invoke-virtual {v8}, Landroid/view/View;->getTop()I
 
@@ -1148,8 +885,6 @@
 .method protected getParentFragmentName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 737
     const-class v0, Lcom/android/settings/DisplaySettings;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -1162,13 +897,9 @@
 .method protected getParentFragmentTitleResId()I
     .locals 4
 
-    .prologue
-    .line 747
     const v2, 0x7f0c0152
 
-    .line 749
-    .local v2, titleResource:I
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1176,9 +907,7 @@
 
     move-result v1
 
-    .line 750
-    .local v1, gestures:Z
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1186,57 +915,41 @@
 
     move-result v0
 
-    .line 751
-    .local v0, buttons:Z
     if-eqz v1, :cond_0
 
-    .line 752
     const v2, 0x7f0c0153
 
-    .line 754
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 755
     const v2, 0x7f0c0154
 
-    .line 757
     :cond_1
     if-eqz v1, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 758
     const v2, 0x7f0c0155
 
-    .line 761
     :cond_2
     return v2
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 14
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 182
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 183
-    .local v0, activity:Landroid/app/Activity;
     if-nez v0, :cond_0
 
-    .line 274
     :goto_0
     return-void
 
-    .line 186
     :cond_0
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 189
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->getSenseVersion()F
 
     move-result v9
@@ -1249,55 +962,43 @@
 
     if-ltz v9, :cond_7
 
-    .line 191
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 192
     const v9, 0x7f060028
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/NotificationFlashSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v9}, Lcom/htc/preference/HtcPreferenceFragment;->addPreferencesFromResource(I)V
 
-    .line 195
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    .line 199
-    .local v7, res:Landroid/content/res/Resources;
     const v9, 0x7f0800bb
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 209
-    .local v2, defaultColorStrings:[Ljava/lang/String;
     const v9, 0x7f0800bc
 
     invoke-virtual {v7, v9}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 212
-    .local v3, defaultColors:[Ljava/lang/String;
     if-eqz v2, :cond_2
 
     if-eqz v3, :cond_2
 
-    .line 213
     const/4 v4, 0x0
 
-    .local v4, i:I
     :goto_1
     array-length v9, v2
 
     if-ge v4, v9, :cond_2
 
-    .line 214
     iget-object v9, p0, Lcom/android/settings/NotificationFlashSettings;->mColorItems:Ljava/util/ArrayList;
 
     new-instance v10, Lcom/android/settings/NotificationFlashSettings$ColorItem;
@@ -1316,22 +1017,15 @@
 
     invoke-virtual {v9, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 213
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 219
-    .end local v2           #defaultColorStrings:[Ljava/lang/String;
-    .end local v3           #defaultColors:[Ljava/lang/String;
-    .end local v4           #i:I
-    .end local v7           #res:Landroid/content/res/Resources;
     :cond_1
     const v9, 0x7f06002a
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/NotificationFlashSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v9}, Lcom/htc/preference/HtcPreferenceFragment;->addPreferencesFromResource(I)V
 
-    .line 226
     :cond_2
     :goto_2
     const-string v9, "ro.phone.function"
@@ -1340,8 +1034,6 @@
 
     move-result-object v5
 
-    .line 227
-    .local v5, phoneFlag:Ljava/lang/String;
     const-string v9, "0"
 
     invoke-virtual {v5, v9}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1355,59 +1047,43 @@
     :goto_3
     iput-boolean v9, p0, Lcom/android/settings/NotificationFlashSettings;->mHasPhoneFunction:Z
 
-    .line 228
     iget-boolean v9, p0, Lcom/android/settings/NotificationFlashSettings;->mHasPhoneFunction:Z
 
     if-nez v9, :cond_4
 
-    .line 230
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v8
 
-    .line 231
-    .local v8, screen:Lcom/htc/preference/HtcPreferenceScreen;
     const-string v9, "notification_flash_category"
 
-    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcPreferenceCategory;
 
-    .line 235
-    .local v1, category:Lcom/htc/preference/HtcPreferenceCategory;
     const-string v9, "missed_call_title"
 
-    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v6
 
-    .line 236
-    .local v6, preference:Lcom/htc/preference/HtcPreference;
     if-eqz v6, :cond_3
 
-    .line 237
-    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceCategory;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 240
     :cond_3
     const-string v9, "incoming_voice_mail_title"
 
-    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v6
 
-    .line 241
     if-eqz v6, :cond_4
 
-    .line 242
-    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceCategory;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 246
-    .end local v1           #category:Lcom/htc/preference/HtcPreferenceCategory;
-    .end local v6           #preference:Lcom/htc/preference/HtcPreference;
-    .end local v8           #screen:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_4
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupportVoicemailNotificationLed()Z
 
@@ -1415,40 +1091,28 @@
 
     if-nez v9, :cond_5
 
-    .line 248
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v8
 
-    .line 249
-    .restart local v8       #screen:Lcom/htc/preference/HtcPreferenceScreen;
     const-string v9, "notification_flash_category"
 
-    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcPreferenceCategory;
 
-    .line 253
-    .restart local v1       #category:Lcom/htc/preference/HtcPreferenceCategory;
     const-string v9, "incoming_voice_mail_title"
 
-    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v6
 
-    .line 254
-    .restart local v6       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v6, :cond_5
 
-    .line 255
-    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceCategory;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 260
-    .end local v1           #category:Lcom/htc/preference/HtcPreferenceCategory;
-    .end local v6           #preference:Lcom/htc/preference/HtcPreference;
-    .end local v8           #screen:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_5
     sget-object v9, Lcom/android/settings/NotificationFlashSettings;->sSystemCustReader:Lcom/htc/wrap/com/htc/customization/HtcWrapCustomizationReader;
 
@@ -1464,56 +1128,40 @@
 
     if-ne v9, v10, :cond_6
 
-    .line 262
-    invoke-virtual {p0}, Lcom/android/settings/NotificationFlashSettings;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v8
 
-    .line 263
-    .restart local v8       #screen:Lcom/htc/preference/HtcPreferenceScreen;
     const-string v9, "notification_flash_category"
 
-    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceScreen;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v8, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v1
 
     check-cast v1, Lcom/htc/preference/HtcPreferenceCategory;
 
-    .line 267
-    .restart local v1       #category:Lcom/htc/preference/HtcPreferenceCategory;
     const-string v9, "incoming_message_title"
 
-    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceCategory;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v1, v9}, Lcom/htc/preference/HtcPreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v6
 
-    .line 268
-    .restart local v6       #preference:Lcom/htc/preference/HtcPreference;
     if-eqz v6, :cond_6
 
-    .line 269
-    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceCategory;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v1, v6}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 273
-    .end local v1           #category:Lcom/htc/preference/HtcPreferenceCategory;
-    .end local v6           #preference:Lcom/htc/preference/HtcPreference;
-    .end local v8           #screen:Lcom/htc/preference/HtcPreferenceScreen;
     :cond_6
     invoke-direct {p0, v0}, Lcom/android/settings/NotificationFlashSettings;->refreshUi(Landroid/content/Context;)V
 
     goto/16 :goto_0
 
-    .line 222
-    .end local v5           #phoneFlag:Ljava/lang/String;
     :cond_7
     const v9, 0x7f060029
 
-    invoke-virtual {p0, v9}, Lcom/android/settings/NotificationFlashSettings;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v9}, Lcom/htc/preference/HtcPreferenceFragment;->addPreferencesFromResource(I)V
 
     goto/16 :goto_2
 
-    .line 227
-    .restart local v5       #phoneFlag:Ljava/lang/String;
     :cond_8
     const/4 v9, 0x0
 
@@ -1523,63 +1171,46 @@
 .method public onPause()V
     .locals 3
 
-    .prologue
-    .line 278
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->onPause()V
 
-    .line 281
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 282
     const-string v1, "notification"
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/NotificationFlashSettings;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    .line 283
-    .local v0, notiMgr:Landroid/app/NotificationManager;
     const-string v1, "notification_led_preview_tag"
 
     const/16 v2, 0x7b
 
     invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
 
-    .line 285
-    .end local v0           #notiMgr:Landroid/app/NotificationManager;
     :cond_0
     return-void
 .end method
 
 .method public onPreferenceTreeClick(Lcom/htc/preference/HtcPreferenceScreen;Lcom/htc/preference/HtcPreference;)Z
     .locals 22
-    .parameter "HtcPreferenceScreen"
-    .parameter "preference"
 
-    .prologue
-    .line 414
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/NotificationFlashSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual/range {p0 .. p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    .line 415
-    .local v2, activity:Landroid/app/Activity;
     if-nez v2, :cond_0
 
-    .line 416
     const/16 v20, 0x0
 
-    .line 488
     :goto_0
     return v20
 
-    .line 418
     :cond_0
     invoke-static {}, Lcom/android/settings/NotificationFlashSettings;->isSupport8Color()Z
 
@@ -1587,96 +1218,82 @@
 
     if-nez v20, :cond_7
 
-    .line 419
     const-string v20, "missed_call_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v12
 
     check-cast v12, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 420
-    .local v12, missedCallCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     const-string v20, "incoming_message_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v10
 
     check-cast v10, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 421
-    .local v10, messageCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     const-string v20, "incoming_voice_mail_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v18
 
     check-cast v18, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 422
-    .local v18, voiceMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     const-string v20, "incoming_email_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v8
 
     check-cast v8, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 423
-    .local v8, eMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     const-string v20, "reminider_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v15
 
     check-cast v15, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 424
-    .local v15, remindersCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     const-string v20, "alarm_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v3
 
     check-cast v3, Lcom/htc/preference/HtcCheckBoxPreference;
 
-    .line 426
-    .local v3, alarmCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     move-object/from16 v0, p2
 
     if-ne v0, v12, :cond_2
 
-    .line 427
     invoke-virtual {v12}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1685,32 +1302,17 @@
 
     invoke-static {v2, v0}, Lcom/htc/util/settings/NotificationFlashLightUtility;->setMissCall(Landroid/content/Context;Z)V
 
-    .line 488
-    .end local v3           #alarmCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v8           #eMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v10           #messageCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v12           #missedCallCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v15           #remindersCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v18           #voiceMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     :cond_1
     :goto_1
     const/16 v20, 0x1
 
     goto :goto_0
 
-    .line 428
-    .restart local v3       #alarmCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v8       #eMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v10       #messageCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v12       #missedCallCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v15       #remindersCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .restart local v18       #voiceMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     :cond_2
     move-object/from16 v0, p2
 
     if-ne v0, v10, :cond_3
 
-    .line 429
     invoke-virtual {v10}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1721,13 +1323,11 @@
 
     goto :goto_1
 
-    .line 430
     :cond_3
     move-object/from16 v0, p2
 
     if-ne v0, v8, :cond_4
 
-    .line 431
     invoke-virtual {v8}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1738,7 +1338,6 @@
 
     goto :goto_1
 
-    .line 432
     :cond_4
     move-object/from16 v0, p2
 
@@ -1746,7 +1345,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 433
     invoke-virtual/range {v18 .. v18}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1757,13 +1355,11 @@
 
     goto :goto_1
 
-    .line 434
     :cond_5
     move-object/from16 v0, p2
 
     if-ne v0, v15, :cond_6
 
-    .line 435
     invoke-virtual {v15}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1774,13 +1370,11 @@
 
     goto :goto_1
 
-    .line 436
     :cond_6
     move-object/from16 v0, p2
 
     if-ne v0, v3, :cond_1
 
-    .line 437
     invoke-virtual {v3}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v20
@@ -1791,15 +1385,8 @@
 
     goto :goto_1
 
-    .line 441
-    .end local v3           #alarmCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v8           #eMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v10           #messageCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v12           #missedCallCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v15           #remindersCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
-    .end local v18           #voiceMailCheckBoxPreference:Lcom/htc/preference/HtcCheckBoxPreference;
     :cond_7
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/NotificationFlashSettings;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v20
 
@@ -1807,9 +1394,7 @@
 
     move-result-object v5
 
-    .line 443
-    .local v5, bData:[Z
-    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/NotificationFlashSettings;->getContext()Landroid/content/Context;
+    invoke-virtual/range {p0 .. p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v20
 
@@ -1817,107 +1402,84 @@
 
     move-result-object v7
 
-    .line 445
-    .local v7, colors:[I
     const-string v20, "missed_call_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v13
 
-    .line 446
-    .local v13, missedCallPreference:Lcom/htc/preference/HtcPreference;
     const-string v20, "incoming_message_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v11
 
-    .line 447
-    .local v11, messagePreference:Lcom/htc/preference/HtcPreference;
     const-string v20, "incoming_voice_mail_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v19
 
-    .line 448
-    .local v19, voiceMailPreference:Lcom/htc/preference/HtcPreference;
     const-string v20, "incoming_email_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v9
 
-    .line 449
-    .local v9, eMailPreference:Lcom/htc/preference/HtcPreference;
     const-string v20, "reminider_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v16
 
-    .line 450
-    .local v16, remindersPreference:Lcom/htc/preference/HtcPreference;
     const-string v20, "alarm_title"
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v20
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/NotificationFlashSettings;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v4
 
-    .line 452
-    .local v4, alarmPreference:Lcom/htc/preference/HtcPreference;
     const/4 v14, 0x0
 
-    .line 453
-    .local v14, on:Z
     const/4 v6, -0x1
 
-    .line 454
-    .local v6, color:I
     const/16 v17, 0x0
 
-    .line 455
-    .local v17, response:Landroid/os/Message;
     move-object/from16 v0, p2
 
     if-ne v0, v13, :cond_9
 
-    .line 456
     const/16 v20, 0x1
 
     aget-boolean v14, v5, v20
 
-    .line 457
     const/16 v20, 0x1
 
     aget v6, v7, v20
 
-    .line 458
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -1930,15 +1492,12 @@
 
     move-result-object v17
 
-    .line 481
     :cond_8
     :goto_2
     if-eqz v17, :cond_f
 
-    .line 482
     if-eqz v14, :cond_e
 
-    .end local v6           #color:I
     :goto_3
     move-object/from16 v0, p0
 
@@ -1948,24 +1507,19 @@
 
     goto/16 :goto_1
 
-    .line 459
-    .restart local v6       #color:I
     :cond_9
     move-object/from16 v0, p2
 
     if-ne v0, v11, :cond_a
 
-    .line 460
     const/16 v20, 0x2
 
     aget-boolean v14, v5, v20
 
-    .line 461
     const/16 v20, 0x2
 
     aget v6, v7, v20
 
-    .line 462
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -1980,23 +1534,19 @@
 
     goto :goto_2
 
-    .line 463
     :cond_a
     move-object/from16 v0, p2
 
     if-ne v0, v9, :cond_b
 
-    .line 464
     const/16 v20, 0x3
 
     aget-boolean v14, v5, v20
 
-    .line 465
     const/16 v20, 0x3
 
     aget v6, v7, v20
 
-    .line 466
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -2011,7 +1561,6 @@
 
     goto :goto_2
 
-    .line 467
     :cond_b
     move-object/from16 v0, p2
 
@@ -2019,17 +1568,14 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 468
     const/16 v20, 0x4
 
     aget-boolean v14, v5, v20
 
-    .line 469
     const/16 v20, 0x4
 
     aget v6, v7, v20
 
-    .line 470
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -2044,7 +1590,6 @@
 
     goto :goto_2
 
-    .line 471
     :cond_c
     move-object/from16 v0, p2
 
@@ -2052,17 +1597,14 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 472
     const/16 v20, 0x5
 
     aget-boolean v14, v5, v20
 
-    .line 473
     const/16 v20, 0x5
 
     aget v6, v7, v20
 
-    .line 474
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -2077,23 +1619,19 @@
 
     goto :goto_2
 
-    .line 475
     :cond_d
     move-object/from16 v0, p2
 
     if-ne v0, v4, :cond_8
 
-    .line 476
     const/16 v20, 0x6
 
     aget-boolean v14, v5, v20
 
-    .line 477
     const/16 v20, 0x6
 
     aget v6, v7, v20
 
-    .line 478
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/settings/NotificationFlashSettings;->mHandler:Landroid/os/Handler;
@@ -2108,13 +1646,11 @@
 
     goto/16 :goto_2
 
-    .line 482
     :cond_e
     const/4 v6, -0x1
 
     goto/16 :goto_3
 
-    .line 484
     :cond_f
     const-string v20, "__NOTIFY_FLASH__"
 

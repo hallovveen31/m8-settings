@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WpsDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 170
     iput-object p1, p0, Lcom/android/settings/wifi/WpsDialog$3;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 173
     iget-object v0, p0, Lcom/android/settings/wifi/WpsDialog$3;->this$0:Lcom/android/settings/wifi/WpsDialog;
 
     #getter for: Lcom/android/settings/wifi/WpsDialog;->mHandler:Landroid/os/Handler;
@@ -52,6 +47,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 180
     return-void
 .end method

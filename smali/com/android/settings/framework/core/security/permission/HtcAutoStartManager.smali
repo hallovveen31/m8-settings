@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,8 +51,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,10 +58,7 @@
 
 .method public static isInBlackList(Ljava/lang/String;)Z
     .locals 1
-    .parameter "packageName"
 
-    .prologue
-    .line 36
     const-string v0, "com.htc.android.omadm.service"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -74,10 +67,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 37
     const/4 v0, 0x1
 
-    .line 40
     :goto_0
     return v0
 
@@ -90,8 +81,6 @@
 .method public static support()Z
     .locals 1
 
-    .prologue
-    .line 31
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager;->support()Z
 
     move-result v0

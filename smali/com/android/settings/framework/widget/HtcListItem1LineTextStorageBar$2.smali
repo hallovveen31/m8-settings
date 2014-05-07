@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 245
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;->values()[Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;
 
     move-result-object v0
@@ -41,7 +39,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;->CHECKING:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -57,7 +55,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;->FORMATTING:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$MediaState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -67,7 +65,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 183
     :goto_1
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->values()[Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
@@ -84,7 +81,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -100,7 +97,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->PHONE_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -116,7 +113,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->SD_CARD:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -144,7 +141,6 @@
 
     goto :goto_2
 
-    .line 245
     :catch_3
     move-exception v0
 

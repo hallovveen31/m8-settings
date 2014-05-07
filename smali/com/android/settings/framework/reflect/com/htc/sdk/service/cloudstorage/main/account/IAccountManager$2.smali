@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public onGetMethod()Ljava/lang/reflect/Method;
     .locals 3
 
-    .prologue
-    .line 78
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sClass:Ljava/lang/Class;
 
     const-string v1, "getAccountCount"
@@ -52,11 +48,7 @@
 
 .method public varargs onNotFoundMethod(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "obj"
-    .parameter "args"
 
-    .prologue
-    .line 83
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

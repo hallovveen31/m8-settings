@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ApnEditor;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1774
     iput-object p1, p0, Lcom/android/settings/ApnEditor$1;->this$0:Lcom/android/settings/ApnEditor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1776
     iget-object v0, p0, Lcom/android/settings/ApnEditor$1;->this$0:Lcom/android/settings/ApnEditor;
 
     #calls: Lcom/android/settings/ApnEditor;->backKeyEvent()Z
@@ -52,7 +46,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1777
     iget-object v0, p0, Lcom/android/settings/ApnEditor$1;->this$0:Lcom/android/settings/ApnEditor;
 
     #getter for: Lcom/android/settings/ApnEditor;->mSave:Z
@@ -71,13 +64,11 @@
 
     if-nez v0, :cond_1
 
-    .line 1778
     :cond_0
     iget-object v0, p0, Lcom/android/settings/ApnEditor$1;->this$0:Lcom/android/settings/ApnEditor;
 
-    invoke-virtual {v0}, Lcom/android/settings/ApnEditor;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 1781
     :cond_1
     return-void
 .end method

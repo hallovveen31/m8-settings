@@ -23,11 +23,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 17
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -38,17 +35,14 @@
 
     iput-object v0, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->TAG:Ljava/lang/String;
 
-    .line 18
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     iput-boolean v0, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->DBG:Z
 
-    .line 21
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->istrigger:Z
 
-    .line 22
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->network_id:I
@@ -60,11 +54,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 26
     const-string v1, "com.htc.settings.wifi.launchwifidialog"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -83,7 +73,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 28
     const-string v1, "network_id"
 
     const/4 v2, -0x1
@@ -94,7 +83,6 @@
 
     iput v1, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->network_id:I
 
-    .line 29
     const-string v1, "istrigger"
 
     const/4 v2, 0x0
@@ -105,7 +93,6 @@
 
     iput-boolean v1, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->istrigger:Z
 
-    .line 30
     iget-boolean v1, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->DBG:Z
 
     if-eqz v1, :cond_0
@@ -134,14 +121,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 32
-    .local v0, mIntent:Landroid/content/Intent;
     const-string v1, "com.android.settings"
 
     const-class v2, Lcom/android/settings/wifi/WiFiDialogActivity;
@@ -152,23 +136,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 34
     const-string v1, "network_id"
 
     iget v2, p0, Lcom/android/settings/wifi/WiFiDialogReceiver;->network_id:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 35
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 36
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 40
-    .end local v0           #mIntent:Landroid/content/Intent;
     :cond_1
     return-void
 .end method

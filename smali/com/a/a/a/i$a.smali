@@ -25,22 +25,17 @@
 # direct methods
 .method constructor <init>(Lcom/a/a/a/i;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 81
     iput-object p1, p0, Lcom/a/a/a/i$a;->b:Lcom/a/a/a/i;
 
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 83
     new-instance v0, Lcom/a/a/a/g;
 
     invoke-direct {v0}, Lcom/a/a/a/g;-><init>()V
 
     iput-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
-    .line 84
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
@@ -54,17 +49,12 @@
 # virtual methods
 .method public characters([CII)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/xml/sax/SAXException;
         }
     .end annotation
 
-    .prologue
-    .line 89
     iget-object v0, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
 
     new-instance v1, Ljava/lang/String;
@@ -77,28 +67,21 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 90
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/DefaultHandler;->characters([CII)V
 
-    .line 91
     return-void
 .end method
 
 .method public endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/xml/sax/SAXException;
         }
     .end annotation
 
-    .prologue
     const-wide/16 v3, 0x0
 
-    .line 96
     const-string v0, "result"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -107,7 +90,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 97
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     iget-object v1, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
@@ -118,15 +100,12 @@
 
     invoke-virtual {v0, v1}, Lcom/a/a/a/g;->d(Ljava/lang/String;)V
 
-    .line 125
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2, p3}, Lorg/xml/sax/helpers/DefaultHandler;->endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
     return-void
 
-    .line 98
     :cond_1
     const-string v0, "rdesc"
 
@@ -136,7 +115,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 99
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     iget-object v1, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
@@ -149,7 +127,6 @@
 
     goto :goto_0
 
-    .line 100
     :cond_2
     const-string v0, "cenx"
 
@@ -159,7 +136,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 102
     :try_start_0
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
@@ -183,18 +159,15 @@
 
     goto :goto_0
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 104
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     invoke-virtual {v0, v3, v4}, Lcom/a/a/a/g;->a(D)V
 
     goto :goto_0
 
-    .line 106
     :cond_3
     const-string v0, "ceny"
 
@@ -204,7 +177,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 108
     :try_start_1
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
@@ -228,18 +200,15 @@
 
     goto :goto_0
 
-    .line 109
     :catch_1
     move-exception v0
 
-    .line 110
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     invoke-virtual {v0, v3, v4}, Lcom/a/a/a/g;->b(D)V
 
     goto :goto_0
 
-    .line 112
     :cond_4
     const-string v0, "radius"
 
@@ -249,7 +218,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 114
     :try_start_2
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
@@ -273,18 +241,15 @@
 
     goto :goto_0
 
-    .line 115
     :catch_2
     move-exception v0
 
-    .line 116
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     invoke-virtual {v0, v3, v4}, Lcom/a/a/a/g;->c(D)V
 
     goto :goto_0
 
-    .line 118
     :cond_5
     const-string v0, "citycode"
 
@@ -294,7 +259,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 119
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     iget-object v1, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
@@ -307,7 +271,6 @@
 
     goto/16 :goto_0
 
-    .line 120
     :cond_6
     const-string v0, "desc"
 
@@ -317,7 +280,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 121
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     iget-object v1, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
@@ -330,7 +292,6 @@
 
     goto/16 :goto_0
 
-    .line 122
     :cond_7
     const-string v0, "adcode"
 
@@ -340,7 +301,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
     iget-object v0, p0, Lcom/a/a/a/i$a;->a:Lcom/a/a/a/g;
 
     iget-object v1, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
@@ -356,18 +316,12 @@
 
 .method public startElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/xml/sax/SAXException;
         }
     .end annotation
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/a/a/a/i$a;->c:Ljava/lang/StringBuffer;
 
     const/4 v1, 0x0
@@ -384,9 +338,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->delete(II)Ljava/lang/StringBuffer;
 
-    .line 132
     invoke-super {p0, p1, p2, p3, p4}, Lorg/xml/sax/helpers/DefaultHandler;->startElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lorg/xml/sax/Attributes;)V
 
-    .line 134
     return-void
 .end method

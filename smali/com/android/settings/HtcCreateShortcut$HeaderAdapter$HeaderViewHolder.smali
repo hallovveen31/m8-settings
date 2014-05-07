@@ -27,10 +27,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/HtcCreateShortcut$HeaderAdapter;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/settings/HtcCreateShortcut$HeaderAdapter$HeaderViewHolder;->this$1:Lcom/android/settings/HtcCreateShortcut$HeaderAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +37,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/HtcCreateShortcut$HeaderAdapter;Lcom/android/settings/HtcCreateShortcut$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 283
     invoke-direct {p0, p1}, Lcom/android/settings/HtcCreateShortcut$HeaderAdapter$HeaderViewHolder;-><init>(Lcom/android/settings/HtcCreateShortcut$HeaderAdapter;)V
 
     return-void

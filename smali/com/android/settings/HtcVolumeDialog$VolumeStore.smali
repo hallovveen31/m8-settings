@@ -24,16 +24,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 213
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 214
     iput v0, p0, Lcom/android/settings/HtcVolumeDialog$VolumeStore;->volume:I
 
-    .line 215
     iput v0, p0, Lcom/android/settings/HtcVolumeDialog$VolumeStore;->originalVolume:I
 
     return-void

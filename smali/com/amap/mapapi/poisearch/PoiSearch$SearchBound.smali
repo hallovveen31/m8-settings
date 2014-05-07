@@ -50,25 +50,17 @@
 # direct methods
 .method public constructor <init>(Lcom/amap/mapapi/core/GeoPoint;I)V
     .locals 2
-    .parameter
-    .parameter
 
-    .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     const-string v0, "bound"
 
     iput-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->e:Ljava/lang/String;
 
-    .line 155
     iput p2, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->c:I
 
-    .line 156
     iput-object p1, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->d:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 157
     invoke-static {p2}, Lcom/amap/mapapi/core/e;->b(I)I
 
     move-result v0
@@ -79,47 +71,34 @@
 
     invoke-direct {p0, p1, v0, v1}, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a(Lcom/amap/mapapi/core/GeoPoint;II)V
 
-    .line 159
     return-void
 .end method
 
 .method public constructor <init>(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
     .locals 1
-    .parameter
-    .parameter
 
-    .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
     const-string v0, "Rectangle"
 
     iput-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->e:Ljava/lang/String;
 
-    .line 163
     invoke-direct {p0, p1, p2}, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
 
-    .line 164
     return-void
 .end method
 
 .method public constructor <init>(Lcom/amap/mapapi/map/MapView;)V
     .locals 4
-    .parameter
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 167
     const-string v0, "Rectangle"
 
     iput-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->e:Ljava/lang/String;
 
-    .line 168
     invoke-virtual {p1}, Lcom/amap/mapapi/map/MapView;->getProjection()Lcom/amap/mapapi/map/Projection;
 
     move-result-object v0
@@ -130,7 +109,6 @@
 
     move-result-object v0
 
-    .line 169
     invoke-virtual {p1}, Lcom/amap/mapapi/map/MapView;->getProjection()Lcom/amap/mapapi/map/Projection;
 
     move-result-object v1
@@ -141,16 +119,13 @@
 
     move-result-object v1
 
-    .line 170
     invoke-direct {p0, v0, v1}, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
 
-    .line 171
     return-void
 .end method
 
 .method public constructor <init>(Ljava/util/List;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -161,46 +136,32 @@
         }
     .end annotation
 
-    .prologue
-    .line 173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 174
     const-string v0, "Polygon"
 
     iput-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->e:Ljava/lang/String;
 
-    .line 175
     iput-object p1, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->f:Ljava/util/List;
 
-    .line 176
     return-void
 .end method
 
 .method private a(Lcom/amap/mapapi/core/GeoPoint;II)V
     .locals 11
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 197
     div-int/lit8 v0, p2, 0x2
 
-    .line 198
     div-int/lit8 v1, p3, 0x2
 
-    .line 200
     invoke-virtual {p1}, Lcom/amap/mapapi/core/GeoPoint;->b()J
 
     move-result-wide v2
 
-    .line 201
     invoke-virtual {p1}, Lcom/amap/mapapi/core/GeoPoint;->a()J
 
     move-result-wide v4
 
-    .line 202
     new-instance v6, Lcom/amap/mapapi/core/GeoPoint;
 
     int-to-long v7, v0
@@ -227,25 +188,18 @@
 
     invoke-direct {p0, v6, v7}, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
 
-    .line 204
     return-void
 .end method
 
 .method private a(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
     .locals 9
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/16 v7, 0x2
 
-    .line 179
     iput-object p1, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 180
     iput-object p2, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 182
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/mapapi/core/GeoPoint;
 
     invoke-virtual {v0}, Lcom/amap/mapapi/core/GeoPoint;->b()J
@@ -278,7 +232,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 186
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -288,7 +241,6 @@
 
     throw v0
 
-    .line 188
     :cond_1
     new-instance v0, Lcom/amap/mapapi/core/GeoPoint;
 
@@ -328,7 +280,6 @@
 
     iput-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->d:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 193
     return-void
 .end method
 
@@ -337,8 +288,6 @@
 .method public getCenter()Lcom/amap/mapapi/core/GeoPoint;
     .locals 1
 
-    .prologue
-    .line 215
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->d:Lcom/amap/mapapi/core/GeoPoint;
 
     return-object v0
@@ -347,8 +296,6 @@
 .method public getLatSpanInMeter()I
     .locals 2
 
-    .prologue
-    .line 224
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/mapapi/core/GeoPoint;
 
     invoke-virtual {v0}, Lcom/amap/mapapi/core/GeoPoint;->getLatitudeE6()I
@@ -373,8 +320,6 @@
 .method public getLonSpanInMeter()I
     .locals 2
 
-    .prologue
-    .line 219
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/mapapi/core/GeoPoint;
 
     invoke-virtual {v0}, Lcom/amap/mapapi/core/GeoPoint;->getLongitudeE6()I
@@ -399,8 +344,6 @@
 .method public getLowerLeft()Lcom/amap/mapapi/core/GeoPoint;
     .locals 1
 
-    .prologue
-    .line 207
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/mapapi/core/GeoPoint;
 
     return-object v0
@@ -418,8 +361,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 237
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->f:Ljava/util/List;
 
     return-object v0
@@ -428,8 +369,6 @@
 .method public getRange()I
     .locals 1
 
-    .prologue
-    .line 229
     iget v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->c:I
 
     return v0
@@ -438,8 +377,6 @@
 .method public getShape()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 233
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->e:Ljava/lang/String;
 
     return-object v0
@@ -448,8 +385,6 @@
 .method public getUpperRight()Lcom/amap/mapapi/core/GeoPoint;
     .locals 1
 
-    .prologue
-    .line 211
     iget-object v0, p0, Lcom/amap/mapapi/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/mapapi/core/GeoPoint;
 
     return-object v0

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 171
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndSubtypeEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 174
     return-void
 .end method

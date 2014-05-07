@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,15 +31,12 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 79
     invoke-static {}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,7 +62,6 @@
     #calls: Lcom/android/settings/framework/activity/HtcEntryManager;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$100(Ljava/lang/String;)V
 
-    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -97,7 +91,6 @@
     #calls: Lcom/android/settings/framework/activity/HtcEntryManager;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$100(Ljava/lang/String;)V
 
-    .line 87
     :cond_0
     new-instance v0, Landroid/content/res/Resources;
 
@@ -137,7 +130,6 @@
 
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$202(Landroid/content/res/Resources;)Landroid/content/res/Resources;
 
-    .line 92
     invoke-static {}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$300()Landroid/content/Context;
 
     move-result-object v0
@@ -145,20 +137,17 @@
     #calls: Lcom/android/settings/framework/activity/HtcEntryManager;->onRefresh(Landroid/content/Context;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$400(Landroid/content/Context;)V
 
-    .line 94
     invoke-static {}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 95
     const-string v0, "<< asyncLoadingAllWrapHeaders$.run()"
 
     #calls: Lcom/android/settings/framework/activity/HtcEntryManager;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcEntryManager;->access$100(Ljava/lang/String;)V
 
-    .line 97
     :cond_1
     return-void
 .end method

@@ -32,10 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 261
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$3;->this$0:Lcom/android/settings/users/UserSettings;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -47,13 +44,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 261
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$3;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
 
     move-result-object v0
@@ -63,10 +56,7 @@
 
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
     .locals 4
-    .parameter "values"
 
-    .prologue
-    .line 269
     iget-object v2, p0, Lcom/android/settings/users/UserSettings$3;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
@@ -82,8 +72,6 @@
 
     move-result-object v1
 
-    .line 270
-    .local v1, user:Landroid/content/pm/UserInfo;
     iget-object v2, v1, Landroid/content/pm/UserInfo;->iconPath:Ljava/lang/String;
 
     if-eqz v2, :cond_0
@@ -98,14 +86,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 271
     :cond_0
     iget-object v2, p0, Lcom/android/settings/users/UserSettings$3;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->assignProfilePhoto(Landroid/content/pm/UserInfo;)V
     invoke-static {v2, v1}, Lcom/android/settings/users/UserSettings;->access$700(Lcom/android/settings/users/UserSettings;Landroid/content/pm/UserInfo;)V
 
-    .line 273
     :cond_1
     iget-object v2, p0, Lcom/android/settings/users/UserSettings$3;->this$0:Lcom/android/settings/users/UserSettings;
 
@@ -114,20 +100,14 @@
 
     move-result-object v0
 
-    .line 274
-    .local v0, profileName:Ljava/lang/String;
     return-object v0
 .end method
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 261
     check-cast p1, Ljava/lang/String;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$3;->onPostExecute(Ljava/lang/String;)V
 
     return-void
@@ -135,15 +115,11 @@
 
 .method protected onPostExecute(Ljava/lang/String;)V
     .locals 1
-    .parameter "result"
 
-    .prologue
-    .line 264
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$3;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->finishLoadProfile(Ljava/lang/String;)V
     invoke-static {v0, p1}, Lcom/android/settings/users/UserSettings;->access$500(Lcom/android/settings/users/UserSettings;Ljava/lang/String;)V
 
-    .line 265
     return-void
 .end method

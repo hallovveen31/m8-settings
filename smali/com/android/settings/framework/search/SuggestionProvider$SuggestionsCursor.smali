@@ -32,8 +32,6 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/search/SuggestionProvider;Ljava/util/ArrayList;)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -44,17 +42,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 374
-    .local p2, suggestions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Lcom/android/settings/framework/search/SuggestionProvider$Target;>;"
     iput-object p1, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->this$0:Lcom/android/settings/framework/search/SuggestionProvider;
 
     invoke-direct {p0}, Landroid/database/AbstractCursor;-><init>()V
 
-    .line 375
     iput-object p2, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mSuggestions:Ljava/util/ArrayList;
 
-    .line 376
     return-void
 .end method
 
@@ -63,8 +56,6 @@
 .method public getColumnNames()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 385
     invoke-static {}, Lcom/android/settings/framework/search/SuggestionProvider;->access$000()[Ljava/lang/String;
 
     move-result-object v0
@@ -75,8 +66,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 380
     iget-object v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mSuggestions:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -88,10 +77,7 @@
 
 .method public getDouble(I)D
     .locals 1
-    .parameter "column"
 
-    .prologue
-    .line 404
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -101,10 +87,7 @@
 
 .method public getFloat(I)F
     .locals 1
-    .parameter "column"
 
-    .prologue
-    .line 409
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -114,10 +97,7 @@
 
 .method public getInt(I)I
     .locals 1
-    .parameter "column"
 
-    .prologue
-    .line 414
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -127,20 +107,15 @@
 
 .method public getLong(I)J
     .locals 2
-    .parameter "column"
 
-    .prologue
-    .line 419
     if-nez p1, :cond_0
 
-    .line 420
-    iget v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mPos:I
+    iget v0, p0, Landroid/database/AbstractCursor;->mPos:I
 
     int-to-long v0, v0
 
     return-wide v0
 
-    .line 422
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -151,10 +126,7 @@
 
 .method public getShort(I)S
     .locals 1
-    .parameter "column"
 
-    .prologue
-    .line 427
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -164,25 +136,20 @@
 
 .method public getString(I)Ljava/lang/String;
     .locals 2
-    .parameter "column"
 
-    .prologue
-    .line 390
-    iget v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mPos:I
+    iget v0, p0, Landroid/database/AbstractCursor;->mPos:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 391
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 392
     iget-object v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mSuggestions:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mPos:I
+    iget v1, p0, Landroid/database/AbstractCursor;->mPos:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -192,20 +159,17 @@
 
     iget-object v0, v0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->title:Ljava/lang/String;
 
-    .line 399
     :goto_0
     return-object v0
 
-    .line 393
     :cond_0
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_1
 
-    .line 394
     iget-object v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mSuggestions:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mPos:I
+    iget v1, p0, Landroid/database/AbstractCursor;->mPos:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -217,16 +181,14 @@
 
     goto :goto_0
 
-    .line 395
     :cond_1
     const/4 v0, 0x3
 
     if-ne p1, v0, :cond_2
 
-    .line 396
     iget-object v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mSuggestions:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/android/settings/framework/search/SuggestionProvider$SuggestionsCursor;->mPos:I
+    iget v1, p0, Landroid/database/AbstractCursor;->mPos:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -242,7 +204,6 @@
 
     goto :goto_0
 
-    .line 399
     :cond_2
     const/4 v0, 0x0
 
@@ -251,10 +212,7 @@
 
 .method public isNull(I)Z
     .locals 1
-    .parameter "column"
 
-    .prologue
-    .line 432
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

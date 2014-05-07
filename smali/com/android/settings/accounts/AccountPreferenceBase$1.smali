@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/AccountPreferenceBase;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 111
     iput-object p1, p0, Lcom/android/settings/accounts/AccountPreferenceBase$1;->this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onStatusChanged(I)V
     .locals 2
-    .parameter "which"
 
-    .prologue
-    .line 113
     iget-object v0, p0, Lcom/android/settings/accounts/AccountPreferenceBase$1;->this$0:Lcom/android/settings/accounts/AccountPreferenceBase;
 
     #getter for: Lcom/android/settings/accounts/AccountPreferenceBase;->mHandler:Landroid/os/Handler;
@@ -56,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 118
     return-void
 .end method

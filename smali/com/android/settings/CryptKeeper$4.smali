@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/CryptKeeper;Landroid/view/inputmethod/InputMethodManager;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 744
     iput-object p1, p0, Lcom/android/settings/CryptKeeper$4;->this$0:Lcom/android/settings/CryptKeeper;
 
     iput-object p2, p0, Lcom/android/settings/CryptKeeper$4;->val$imm:Landroid/view/inputmethod/InputMethodManager;
@@ -45,8 +41,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 746
     iget-object v0, p0, Lcom/android/settings/CryptKeeper$4;->val$imm:Landroid/view/inputmethod/InputMethodManager;
 
     const/4 v1, 0x0
@@ -55,6 +49,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInputUnchecked(ILandroid/os/ResultReceiver;)V
 
-    .line 747
     return-void
 .end method

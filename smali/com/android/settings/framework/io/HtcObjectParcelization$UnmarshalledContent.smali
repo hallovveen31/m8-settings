@@ -28,8 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,11 +35,7 @@
 
 .method static synthetic access$002(Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;Landroid/os/Parcel;)Landroid/os/Parcel;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 27
     iput-object p1, p0, Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;->mParcel:Landroid/os/Parcel;
 
     return-object p1
@@ -49,11 +43,7 @@
 
 .method static synthetic access$102(Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;Ljava/lang/Exception;)Ljava/lang/Exception;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 27
     iput-object p1, p0, Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;->mException:Ljava/lang/Exception;
 
     return-object p1
@@ -64,8 +54,6 @@
 .method public getException()Ljava/lang/Exception;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;->mException:Ljava/lang/Exception;
 
     return-object v0
@@ -74,8 +62,6 @@
 .method public getParcel()Landroid/os/Parcel;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/android/settings/framework/io/HtcObjectParcelization$UnmarshalledContent;->mParcel:Landroid/os/Parcel;
 
     return-object v0
@@ -84,8 +70,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/deviceinfo/Status;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 169
     iput-object p1, p0, Lcom/android/settings/deviceinfo/Status$2;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -36,21 +33,16 @@
 # virtual methods
 .method public onDataConnectionStateChanged(I)V
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 172
     iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$2;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     #calls: Lcom/android/settings/deviceinfo/Status;->updateDataState()V
     invoke-static {v0}, Lcom/android/settings/deviceinfo/Status;->access$400(Lcom/android/settings/deviceinfo/Status;)V
 
-    .line 173
     iget-object v0, p0, Lcom/android/settings/deviceinfo/Status$2;->this$0:Lcom/android/settings/deviceinfo/Status;
 
     #calls: Lcom/android/settings/deviceinfo/Status;->updateNetworkType()V
     invoke-static {v0}, Lcom/android/settings/deviceinfo/Status;->access$500(Lcom/android/settings/deviceinfo/Status;)V
 
-    .line 174
     return-void
 .end method

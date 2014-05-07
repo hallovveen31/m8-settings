@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DreamSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 203
     iput-object p1, p0, Lcom/android/settings/DreamSettings$1;->this$0:Lcom/android/settings/DreamSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,13 +36,7 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
-    .parameter "parent"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
 
-    .prologue
-    .line 205
     if-eqz p2, :cond_0
 
     iget-object v1, p0, Lcom/android/settings/DreamSettings$1;->this$0:Lcom/android/settings/DreamSettings;
@@ -57,26 +48,21 @@
 
     if-nez v1, :cond_1
 
-    .line 211
     :cond_0
     :goto_0
     return-void
 
-    .line 208
     :cond_1
     const/4 v1, 0x1
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 209
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/settings/DreamBackend$DreamInfo;
 
-    .line 210
-    .local v0, info:Lcom/android/settings/DreamBackend$DreamInfo;
     iget-object v1, p0, Lcom/android/settings/DreamSettings$1;->this$0:Lcom/android/settings/DreamSettings;
 
     #getter for: Lcom/android/settings/DreamSettings;->mAdapter:Lcom/android/settings/DreamSettings$DreamInfoAdapter;

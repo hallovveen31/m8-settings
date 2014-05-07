@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 490
     invoke-static {}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->values()[Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->BROADCAST:Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->START_ACTIVITY:Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->START_FRAGMENT:Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

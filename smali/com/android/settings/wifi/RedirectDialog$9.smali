@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 249
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$9;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onCheckedChanged(Lcom/htc/widget/HtcCompoundButton;Z)V
     .locals 5
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 252
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$9;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     #getter for: Lcom/android/settings/wifi/RedirectDialog;->DEBUG:Z
@@ -84,7 +77,6 @@
 
     invoke-static {v3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 253
     :cond_0
     iget-object v0, p0, Lcom/android/settings/wifi/RedirectDialog$9;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
@@ -98,18 +90,15 @@
     :goto_1
     invoke-static {v0, v1}, Lcom/htc/wrap/android/net/wifi/HtcWrapWifiManager;->setWanDetectionDialogEnabled(Landroid/net/wifi/WifiManager;Z)Z
 
-    .line 254
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 252
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 253
     goto :goto_1
 .end method

@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 17
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/carrier"
@@ -29,7 +27,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ROOT:Ljava/io/File;
 
-    .line 22
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ROOT:Ljava/io/File;
@@ -40,7 +37,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->EN_US_LEGAL_FILE:Ljava/io/File;
 
-    .line 28
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ROOT:Ljava/io/File;
@@ -51,7 +47,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ES_US_LEGAL_FILE:Ljava/io/File;
 
-    .line 34
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ROOT:Ljava/io/File;
@@ -62,7 +57,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->BRAND_ALPHA_FILE:Ljava/io/File;
 
-    .line 40
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/android/settings/framework/core/about/legal/HtcOmadmSpec;->ROOT:Ljava/io/File;

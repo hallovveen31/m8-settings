@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 210
     invoke-static {}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->values()[Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_INIT:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_FAKE_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ON:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +149,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/wireless/vowifi/HtcVoWifiState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

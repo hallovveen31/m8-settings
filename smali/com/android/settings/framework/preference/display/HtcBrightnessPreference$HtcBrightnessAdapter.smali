@@ -23,23 +23,17 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "c"
 
-    .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 243
     invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->adapterLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 244
     return-void
 .end method
 
@@ -48,8 +42,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 351
     const/4 v0, 0x2
 
     return v0
@@ -57,10 +49,7 @@
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter "position"
 
-    .prologue
-    .line 357
     const/4 v0, 0x0
 
     return-object v0
@@ -68,10 +57,7 @@
 
 .method public getItemId(I)J
     .locals 2
-    .parameter "position"
 
-    .prologue
-    .line 363
     int-to-long v0, p1
 
     return-wide v0
@@ -79,30 +65,21 @@
 
 .method public getItemViewType(I)I
     .locals 0
-    .parameter "position"
 
-    .prologue
-    .line 345
     return p1
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 6
-    .parameter "position"
-    .parameter "view"
-    .parameter "parent"
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v3, 0x0
 
     const/4 v0, 0x1
 
-    .line 248
     if-nez p1, :cond_2
 
-    .line 249
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->adapterLayoutInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x7f06001a
@@ -111,7 +88,6 @@
 
     move-result-object p2
 
-    .line 251
     iget-object v4, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f0900dd
@@ -124,14 +100,12 @@
 
     iput-object v2, v4, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mAutomaticContainer:Lcom/htc/widget/HtcListItem;
 
-    .line 252
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mAutomaticContainer:Lcom/htc/widget/HtcListItem;
 
     invoke-virtual {v2, v0}, Lcom/htc/widget/HtcListItem;->setLastComponentAlign(Z)V
 
-    .line 254
     iget-object v4, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f0900de
@@ -144,7 +118,6 @@
 
     iput-object v2, v4, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBoxText:Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 255
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBoxText:Lcom/htc/widget/HtcListItem2LineText;
@@ -153,7 +126,6 @@
 
     invoke-virtual {v2, v4}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(I)V
 
-    .line 256
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBoxText:Lcom/htc/widget/HtcListItem2LineText;
@@ -162,7 +134,6 @@
 
     invoke-virtual {v2, v4}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 258
     iget-object v4, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f0900df
@@ -175,7 +146,6 @@
 
     iput-object v2, v4, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    .line 260
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mContext:Landroid/content/Context;
@@ -193,39 +163,27 @@
 
     move-result v1
 
-    .line 265
-    .local v1, mode:I
     if-ne v1, v0, :cond_1
 
-    .line 268
-    .local v0, enable:Z
     :goto_0
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCheckBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v2, v0}, Lcom/htc/widget/HtcCheckBox;->setChecked(Z)V
+    invoke-virtual {v2, v0}, Lcom/htc/widget/HtcCompoundButton;->setChecked(Z)V
 
-    .line 335
-    .end local v0           #enable:Z
-    .end local v1           #mode:I
     :cond_0
     :goto_1
     return-object p2
 
-    .restart local v1       #mode:I
     :cond_1
     move v0, v3
 
-    .line 265
     goto :goto_0
 
-    .line 269
-    .end local v1           #mode:I
     :cond_2
     if-ne p1, v0, :cond_0
 
-    .line 270
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->adapterLayoutInflater:Landroid/view/LayoutInflater;
 
     const v3, 0x7f06001b
@@ -234,7 +192,6 @@
 
     move-result-object p2
 
-    .line 271
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f0902f8
@@ -247,7 +204,6 @@
 
     iput-object v2, v3, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mSeekbarContainer:Lcom/htc/widget/HtcListItem;
 
-    .line 274
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f090229
@@ -260,7 +216,6 @@
 
     iput-object v2, v3, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    .line 275
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mCurrentBrightnessMode:I
@@ -270,16 +225,14 @@
 
     if-ne v2, v0, :cond_3
 
-    .line 276
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/16 v3, 0x64
 
-    invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setMax(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/AbsSeekBar;->setMax(I)V
 
-    .line 277
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
@@ -291,9 +244,8 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 283
     :goto_2
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
@@ -305,7 +257,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 328
     iget-object v3, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     const v2, 0x7f0900e0
@@ -318,7 +269,6 @@
 
     iput-object v2, v3, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mBrightnessLevelText:Landroid/widget/TextView;
 
-    .line 332
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mBrightnessLevelText:Landroid/widget/TextView;
@@ -329,7 +279,6 @@
 
     goto :goto_1
 
-    .line 279
     :cond_3
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
@@ -341,7 +290,6 @@
 
     invoke-interface {v2, v3}, Lcom/android/settings/framework/preference/display/HtcIBrightnessMappingScheme;->setProgressMax(Landroid/widget/SeekBar;)V
 
-    .line 280
     iget-object v2, p0, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference$HtcBrightnessAdapter;->this$0:Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;
 
     iget-object v2, v2, Lcom/android/settings/framework/preference/display/HtcBrightnessPreference;->mSeekBar:Landroid/widget/SeekBar;
@@ -361,7 +309,7 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v2, v3}, Landroid/widget/ProgressBar;->setProgress(I)V
 
     goto :goto_2
 .end method
@@ -369,8 +317,6 @@
 .method public getViewTypeCount()I
     .locals 1
 
-    .prologue
-    .line 340
     const/4 v0, 0x2
 
     return v0

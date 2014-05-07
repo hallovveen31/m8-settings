@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 190
     iput-object p1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$1;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,17 +33,13 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter "msg"
 
-    .prologue
-    .line 193
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 194
     iget-object v0, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$1;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
 
     #getter for: Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->mActivity:Landroid/app/Activity;
@@ -56,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v1, p0, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$1;->this$0:Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -65,7 +57,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment;->updateStage(Lcom/android/settings/ChooseLockPassword$ChooseLockPasswordFragment$Stage;)V
 
-    .line 198
     :cond_0
     return-void
 .end method

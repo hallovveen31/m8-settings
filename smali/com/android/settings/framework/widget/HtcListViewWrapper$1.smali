@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public onGetMethod()Ljava/lang/reflect/Method;
     .locals 5
 
-    .prologue
-    .line 64
     const-class v0, Lcom/htc/widget/HtcListView;
 
     const-string v1, "fillEmptySpace"

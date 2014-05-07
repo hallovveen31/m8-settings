@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/Settings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 305
     iput-object p1, p0, Lcom/android/settings/Settings$3;->this$0:Lcom/android/settings/Settings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +37,9 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 309
     iget-object v0, p0, Lcom/android/settings/Settings$3;->this$0:Lcom/android/settings/Settings;
 
-    invoke-virtual {v0}, Lcom/android/settings/Settings;->getListAdapter()Landroid/widget/ListAdapter;
+    invoke-virtual {v0}, Lcom/htc/preference/HtcListActivity;->getListAdapter()Landroid/widget/ListAdapter;
 
     move-result-object v0
 
@@ -54,6 +49,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/activity/HtcHeaderAdapter;->onActivateEnabler(Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;)V
 
-    .line 311
     return-void
 .end method

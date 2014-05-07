@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcInternalAlertActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 111
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcInternalAlertActivity$1;->this$0:Lcom/android/settings/framework/app/HtcInternalAlertActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,10 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 114
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalAlertActivity$1;->this$0:Lcom/android/settings/framework/app/HtcInternalAlertActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->recreate()V
+    invoke-virtual {v0}, Landroid/app/Activity;->recreate()V
 
-    .line 115
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalAlertActivity$1;->this$0:Lcom/android/settings/framework/app/HtcInternalAlertActivity;
 
     #getter for: Lcom/android/settings/framework/app/HtcInternalAlertActivity;->DEBUG:Z
@@ -56,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalAlertActivity$1;->this$0:Lcom/android/settings/framework/app/HtcInternalAlertActivity;
 
     #getter for: Lcom/android/settings/framework/app/HtcInternalAlertActivity;->TAG:Ljava/lang/String;
@@ -68,7 +61,6 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     :cond_0
     return-void
 .end method

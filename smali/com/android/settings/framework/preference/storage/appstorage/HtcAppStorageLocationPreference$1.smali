@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 58
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,19 +33,13 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 6
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 62
     const-string v3, "com.htc.intent.extra.package"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
-    .local v0, packageName:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
     #getter for: Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->mPackageName:Ljava/lang/String;
@@ -62,10 +53,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 66
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v3}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -86,8 +76,6 @@
 
     move-result v2
 
-    .line 68
-    .local v2, value:I
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -121,31 +109,24 @@
     #calls: Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->Log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->access$200(Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;Ljava/lang/String;)V
 
-    .line 70
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 71
-    .local v1, selectedValue:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
-    invoke-virtual {v3, v1}, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {v3, v1}, Lcom/htc/preference/HtcListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 74
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
     iget-object v4, p0, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;
 
-    invoke-virtual {v4}, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->getEntry()Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Lcom/htc/preference/HtcListPreference;->getEntry()Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/framework/preference/storage/appstorage/HtcAppStorageLocationPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v4}, Lcom/htc/preference/HtcListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 77
-    .end local v1           #selectedValue:Ljava/lang/String;
-    .end local v2           #value:I
     :cond_0
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/location/LocationSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 549
     iput-object p1, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialogInterface"
-    .parameter "which"
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x1
 
-    .line 553
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
@@ -76,11 +69,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 554
     :cond_0
     packed-switch p2, :pswitch_data_0
 
-    .line 569
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_1
@@ -93,16 +84,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     :cond_1
     :goto_0
     return-void
 
-    .line 556
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -110,10 +99,9 @@
 
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 557
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,11 +109,10 @@
 
     goto :goto_0
 
-    .line 560
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -133,10 +120,9 @@
 
     invoke-static {v0, v1, v3}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 561
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -144,11 +130,10 @@
 
     goto :goto_0
 
-    .line 564
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -156,10 +141,9 @@
 
     invoke-static {v0, v1, v4}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 565
     iget-object v0, p0, Lcom/android/settings/location/LocationSettings$3;->this$0:Lcom/android/settings/location/LocationSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/location/LocationSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -167,7 +151,6 @@
 
     goto :goto_0
 
-    .line 554
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

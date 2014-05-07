@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,11 +14,7 @@
 
 .method public static formatDate(Landroid/content/Context;J)Ljava/lang/String;
     .locals 2
-    .parameter "context"
-    .parameter "milliseconds"
 
-    .prologue
-    .line 119
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcDateTimeUtil;->getDateFormatPattern(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -42,11 +36,7 @@
 
 .method public static formatDate(Landroid/content/Context;Ljava/util/Date;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
-    .parameter "date"
 
-    .prologue
-    .line 133
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcDateTimeUtil;->getDateFormatPattern(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -64,11 +54,7 @@
 
 .method public static formatDateAndTime(Landroid/content/Context;J)Ljava/lang/String;
     .locals 1
-    .parameter "context"
-    .parameter "milliseconds"
 
-    .prologue
-    .line 148
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
@@ -82,23 +68,15 @@
 
 .method public static formatDateAndTime(Landroid/content/Context;Ljava/util/Date;)Ljava/lang/String;
     .locals 5
-    .parameter "context"
-    .parameter "date"
 
-    .prologue
-    .line 161
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcDateTimeUtil;->formatDate(Landroid/content/Context;Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
-    .local v0, datePart:Ljava/lang/String;
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcDateTimeUtil;->formatTime(Landroid/content/Context;Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 163
-    .local v1, timePart:Ljava/lang/String;
     const v2, 0x7f0c00f8
 
     const/4 v3, 0x2
@@ -122,11 +100,7 @@
 
 .method public static formatTime(Landroid/content/Context;J)Ljava/lang/String;
     .locals 1
-    .parameter "context"
-    .parameter "milliseconds"
 
-    .prologue
-    .line 93
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
@@ -140,11 +114,7 @@
 
 .method public static formatTime(Landroid/content/Context;Ljava/util/Date;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
-    .parameter "date"
 
-    .prologue
-    .line 106
     invoke-static {p0}, Lcom/android/settings/framework/util/HtcDateTimeUtil;->getTimeFormatter(Landroid/content/Context;)Ljava/text/DateFormat;
 
     move-result-object v0
@@ -158,10 +128,7 @@
 
 .method public static getDateFormatPattern(Landroid/content/Context;)Ljava/lang/CharSequence;
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 70
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -172,15 +139,12 @@
 
     move-result-object v0
 
-    .line 76
-    .local v0, dateFormatPattern:Ljava/lang/CharSequence;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 77
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -191,17 +155,13 @@
 
     move-result-object v0
 
-    .line 80
     :cond_0
     return-object v0
 .end method
 
 .method private static getTimeFormatter(Landroid/content/Context;)Ljava/text/DateFormat;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 45
     invoke-static {p0}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
 
     move-result-object v0
@@ -213,12 +173,9 @@
 # virtual methods
 .method public isAutoTime(Landroid/content/Context;)Z
     .locals 3
-    .parameter "context"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 34
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1

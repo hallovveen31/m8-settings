@@ -21,11 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/quicklaunch/BookmarkPicker;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter "x0"
 
-    .prologue
-    .line 151
     iput-object p1, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -38,37 +34,29 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 154
     iget-object v3, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
     monitor-enter v3
 
-    .line 159
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 160
-    .local v1, newResolveList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/pm/ResolveInfo;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 162
-    .local v0, newAdapterList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
     iget-object v2, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
     #calls: Lcom/android/settings/quicklaunch/BookmarkPicker;->fillResolveList(Ljava/util/List;)V
     invoke-static {v2, v1}, Lcom/android/settings/quicklaunch/BookmarkPicker;->access$000(Lcom/android/settings/quicklaunch/BookmarkPicker;Ljava/util/List;)V
 
-    .line 163
     new-instance v2, Landroid/content/pm/ResolveInfo$DisplayNameComparator;
 
     iget-object v4, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
-    invoke-virtual {v4}, Lcom/android/settings/quicklaunch/BookmarkPicker;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v4}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
@@ -76,27 +64,20 @@
 
     invoke-static {v1, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 166
     iget-object v2, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
     #calls: Lcom/android/settings/quicklaunch/BookmarkPicker;->fillAdapterList(Ljava/util/List;Ljava/util/List;)V
     invoke-static {v2, v0, v1}, Lcom/android/settings/quicklaunch/BookmarkPicker;->access$100(Lcom/android/settings/quicklaunch/BookmarkPicker;Ljava/util/List;Ljava/util/List;)V
 
-    .line 168
     iget-object v2, p0, Lcom/android/settings/quicklaunch/BookmarkPicker$1;->this$0:Lcom/android/settings/quicklaunch/BookmarkPicker;
 
     #calls: Lcom/android/settings/quicklaunch/BookmarkPicker;->updateAdapterToUseNewLists(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     invoke-static {v2, v0, v1}, Lcom/android/settings/quicklaunch/BookmarkPicker;->access$200(Lcom/android/settings/quicklaunch/BookmarkPicker;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 169
     monitor-exit v3
 
-    .line 170
     return-void
 
-    .line 169
-    .end local v0           #newAdapterList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/Map<Ljava/lang/String;*>;>;"
-    .end local v1           #newResolveList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/content/pm/ResolveInfo;>;"
     :catchall_0
     move-exception v2
 

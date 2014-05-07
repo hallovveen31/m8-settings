@@ -30,13 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails;Lcom/android/settings/applications/AppOpsState$AppOpEntry;Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$ViewHolder;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 294
     iput-object p1, p0, Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$1;->this$0:Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$1;->val$entry:Lcom/android/settings/applications/AppOpsState$AppOpEntry;
@@ -54,18 +48,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 7
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 302
     move v5, p2
 
-    .line 303
-    .local v5, nextOpModeTypeIndex:I
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 304
     iget-object v0, p0, Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$1;->this$0:Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails;
 
     const/4 v2, -0x1
@@ -80,6 +67,5 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails;->onClick(Landroid/content/DialogInterface;ILcom/android/settings/applications/AppOpsState$AppOpEntry;Lcom/android/settings/framework/activity/application/appops/HtcAppOpsDetails$ViewHolder;II)V
 
-    .line 311
     return-void
 .end method

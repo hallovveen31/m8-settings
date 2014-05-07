@@ -25,12 +25,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;Landroid/os/Handler;Ljava/lang/Runnable;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 842
     iput-object p1, p0, Lcom/android/settings/RadioInfo$4;->this$0:Lcom/android/settings/RadioInfo;
 
     iput-object p2, p0, Lcom/android/settings/RadioInfo$4;->val$handler:Landroid/os/Handler;
@@ -47,20 +42,16 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 845
     iget-object v0, p0, Lcom/android/settings/RadioInfo$4;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->pingIpAddr()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$3000(Lcom/android/settings/RadioInfo;)V
 
-    .line 846
     iget-object v0, p0, Lcom/android/settings/RadioInfo$4;->val$handler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/settings/RadioInfo$4;->val$updatePingResults:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 847
     return-void
 .end method

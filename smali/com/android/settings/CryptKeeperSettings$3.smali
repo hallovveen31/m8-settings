@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/CryptKeeperSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/settings/CryptKeeperSettings$3;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,27 +36,21 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 119
     packed-switch p2, :pswitch_data_0
 
-    .line 144
     :cond_0
     :goto_0
     return-void
 
-    .line 122
     :pswitch_0
     iget-object v1, p0, Lcom/android/settings/CryptKeeperSettings$3;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/CryptKeeperSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -69,29 +60,24 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 126
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.internal.os.storage.FORMAT_ONLY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 127
-    .local v0, intent:Landroid/content/Intent;
     sget-object v1, Lcom/android/internal/os/storage/ExternalStorageFormatter;->COMPONENT_NAME:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 128
     iget-object v1, p0, Lcom/android/settings/CryptKeeperSettings$3;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/CryptKeeperSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-virtual {v1, v0}, Landroid/content/ContextWrapper;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 131
     iget-object v1, p0, Lcom/android/settings/CryptKeeperSettings$3;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
     const/16 v2, 0x37
@@ -103,12 +89,11 @@
 
     if-nez v1, :cond_0
 
-    .line 133
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v2, p0, Lcom/android/settings/CryptKeeperSettings$3;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/CryptKeeperSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -144,11 +129,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v1}, Landroid/app/Dialog;->show()V
 
     goto :goto_0
 
-    .line 119
     nop
 
     :pswitch_data_0

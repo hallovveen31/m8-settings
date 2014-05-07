@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,19 +30,13 @@
 # virtual methods
 .method public addLikelySubtags(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
-    .parameter "locale"
 
-    .prologue
-    .line 36
     return-object p1
 .end method
 
 .method public getScript(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "locale"
 
-    .prologue
-    .line 31
     const/4 v0, 0x0
 
     return-object v0

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/RequestPermissionActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 77
     iput-object p1, p0, Lcom/android/settings/bluetooth/RequestPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/RequestPermissionActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,19 +33,13 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 81
     if-nez p2, :cond_1
 
-    .line 93
     :cond_0
     :goto_0
     return-void
 
-    .line 84
     :cond_1
     iget-object v1, p0, Lcom/android/settings/bluetooth/RequestPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/RequestPermissionActivity;
 
@@ -71,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 86
     const-string v1, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v2, -0x8000
@@ -80,13 +70,10 @@
 
     move-result v0
 
-    .line 87
-    .local v0, state:I
     const/16 v1, 0xc
 
     if-ne v0, v1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lcom/android/settings/bluetooth/RequestPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/RequestPermissionActivity;
 
     #getter for: Lcom/android/settings/bluetooth/RequestPermissionActivity;->mUserConfirmed:Z
@@ -96,7 +83,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 89
     iget-object v1, p0, Lcom/android/settings/bluetooth/RequestPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/RequestPermissionActivity;
 
     #calls: Lcom/android/settings/bluetooth/RequestPermissionActivity;->proceedAndFinish()V

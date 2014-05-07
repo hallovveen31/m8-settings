@@ -21,15 +21,10 @@
 # direct methods
 .method constructor <init>(Landroid/os/PowerManager$WakeLock;)V
     .locals 0
-    .parameter "_wakelock"
 
-    .prologue
-    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
     iput-object p1, p0, Lcom/android/settings/CryptKeeper$NonConfigurationInstanceState;->wakelock:Landroid/os/PowerManager$WakeLock;
 
-    .line 132
     return-void
 .end method

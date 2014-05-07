@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TtsEnginePreference;Landroid/widget/RadioButton;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/settings/tts/TtsEnginePreference$2;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
 
     iput-object p2, p0, Lcom/android/settings/tts/TtsEnginePreference$2;->val$rb:Landroid/widget/RadioButton;
@@ -44,23 +40,18 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 149
     iget-object v0, p0, Lcom/android/settings/tts/TtsEnginePreference$2;->val$rb:Landroid/widget/RadioButton;
 
-    invoke-virtual {v0}, Landroid/widget/RadioButton;->isChecked()Z
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 154
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     iget-object v1, p0, Lcom/android/settings/tts/TtsEnginePreference$2;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
 
@@ -68,7 +59,7 @@
 
     iget-object v0, p0, Lcom/android/settings/tts/TtsEnginePreference$2;->val$rb:Landroid/widget/RadioButton;
 
-    invoke-virtual {v0}, Landroid/widget/RadioButton;->isChecked()Z
+    invoke-virtual {v0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 

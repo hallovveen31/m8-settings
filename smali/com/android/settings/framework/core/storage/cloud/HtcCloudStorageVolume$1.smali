@@ -24,11 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 233
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume.1;"
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;->this$0:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,20 +37,14 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 237
-    .local p0, this:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;,"Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume.1;"
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 238
-    .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 239
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;->this$0:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
 
     #getter for: Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mThis:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
@@ -70,7 +60,6 @@
 
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 240
     iget-object v1, p0, Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume$1;->this$0:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
 
     #getter for: Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;->mThis:Lcom/android/settings/framework/core/storage/cloud/HtcCloudStorageVolume;
@@ -85,6 +74,5 @@
 
     invoke-virtual {v1, v0}, Lcom/android/settings/framework/os/response/HtcResponser;->broadcast(Landroid/os/Message;)V
 
-    .line 241
     return-void
 .end method

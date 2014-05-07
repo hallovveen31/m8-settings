@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 418
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,10 +34,8 @@
 .method public run()V
     .locals 7
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 421
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
@@ -50,11 +45,11 @@
 
     iget-object v2, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/users/UserSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -68,17 +63,13 @@
 
     move-result-object v0
 
-    .line 423
-    .local v0, user:Landroid/content/pm/UserInfo;
     if-eqz v0, :cond_0
 
-    .line 424
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->assignDefaultPhoto(Landroid/content/pm/UserInfo;)V
     invoke-static {v1, v0}, Lcom/android/settings/users/UserSettings;->access$1400(Lcom/android/settings/users/UserSettings;Landroid/content/pm/UserInfo;)V
 
-    .line 426
     :cond_0
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
@@ -89,7 +80,6 @@
 
     monitor-enter v2
 
-    .line 427
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
@@ -98,7 +88,6 @@
     #setter for: Lcom/android/settings/users/UserSettings;->mAddingUser:Z
     invoke-static {v1, v3}, Lcom/android/settings/users/UserSettings;->access$1502(Lcom/android/settings/users/UserSettings;Z)Z
 
-    .line 428
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
@@ -110,7 +99,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 429
     iget-object v1, p0, Lcom/android/settings/users/UserSettings$8;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mHandler:Landroid/os/Handler;
@@ -137,13 +125,10 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 431
     monitor-exit v2
 
-    .line 432
     return-void
 
-    .line 431
     :catchall_0
     move-exception v1
 

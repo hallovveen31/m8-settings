@@ -75,7 +75,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -86,7 +85,6 @@
 
     const/4 v3, 0x0
 
-    .line 29
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_CREATE"
@@ -95,7 +93,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_CREATE:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 30
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_POST_CREATE"
@@ -104,7 +101,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_POST_CREATE:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 31
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_START"
@@ -113,7 +109,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_START:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 32
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_RESTART"
@@ -122,7 +117,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESTART:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 33
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_RESUME"
@@ -131,7 +125,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESUME:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 34
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_POST_RESUME"
@@ -142,7 +135,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_POST_RESUME:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 55
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_DISPLAY"
@@ -153,7 +145,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_DISPLAY:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 56
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_PAUSE"
@@ -164,7 +155,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_PAUSE:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 57
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_STOP"
@@ -175,7 +165,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_STOP:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 58
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_DESTROY"
@@ -186,7 +175,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_DESTROY:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 59
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_ACTIVITY_RESULT"
@@ -197,7 +185,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_ACTIVITY_RESULT:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 64
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_CREATE_IN_BACKGROUND"
@@ -208,7 +195,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_CREATE_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 65
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_POST_CREATE_IN_BACKGROUND"
@@ -219,7 +205,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_POST_CREATE_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 66
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_START_IN_BACKGROUND"
@@ -230,7 +215,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_START_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 67
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_RESTART_IN_BACKGROUND"
@@ -241,7 +225,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESTART_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 68
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_RESUME_IN_BACKGROUND"
@@ -252,7 +235,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_RESUME_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 69
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_POST_RESUME_IN_BACKGROUND"
@@ -263,7 +245,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_POST_RESUME_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 72
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_DISPLAY_IN_BACKGROUND"
@@ -274,7 +255,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_DISPLAY_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 73
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_PAUSE_IN_BACKGROUND"
@@ -285,7 +265,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_PAUSE_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 74
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_STOP_IN_BACKGROUND"
@@ -296,7 +275,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_STOP_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 75
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_DESTROY_IN_BACKGROUND"
@@ -307,7 +285,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_DESTROY_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 76
     new-instance v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     const-string v1, "ON_ACTIVITY_RESULT_IN_BACKGROUND"
@@ -318,7 +295,6 @@
 
     sput-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->ON_ACTIVITY_RESULT_IN_BACKGROUND:Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    .line 24
     const/16 v0, 0x16
 
     new-array v0, v0, [Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
@@ -452,16 +428,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -469,10 +441,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 24
     const-class v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -487,11 +456,9 @@
 .method public static values()[Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->$VALUES:[Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/app/HtcActivityListener$ActivityLifecycle;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

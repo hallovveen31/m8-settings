@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DevelopmentSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 686
     iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$1;->this$0:Lcom/android/settings/DevelopmentSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 690
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/DevelopmentSettings$1;->this$0:Lcom/android/settings/DevelopmentSettings;
 
@@ -54,11 +49,9 @@
 
     move-result v0
 
-    .line 691
-    .local v0, b:Z
     iget-object v1, p0, Lcom/android/settings/DevelopmentSettings$1;->this$0:Lcom/android/settings/DevelopmentSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/DevelopmentSettings;->getUiHandler()Landroid/os/Handler;
+    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getUiHandler()Landroid/os/Handler;
 
     move-result-object v1
 
@@ -70,12 +63,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 704
-    .end local v0           #b:Z
     :goto_0
     return-void
 
-    .line 701
     :catch_0
     move-exception v1
 

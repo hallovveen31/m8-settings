@@ -19,13 +19,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 42
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
-    .line 43
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mHasCustomizedData:Z
@@ -36,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,42 +40,33 @@
 
 .method public static get(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 60
     sget-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mHasCustomizedData:Z
 
     if-eqz v0, :cond_1
 
-    .line 61
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 64
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->readCustomizedData(Landroid/content/Context;)Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mHasCustomizedData:Z
 
-    .line 65
     sget-boolean v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mHasCustomizedData:Z
 
     if-nez v0, :cond_0
 
-    .line 66
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->readDefaultData(Landroid/content/Context;)V
 
-    .line 75
     :cond_0
     :goto_0
     sget-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
     return-object v0
 
-    .line 73
     :cond_1
     invoke-static {p0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->readDefaultData(Landroid/content/Context;)V
 
@@ -89,12 +75,9 @@
 
 .method private static readCustomizedData(Landroid/content/Context;)Z
     .locals 6
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 84
     const-string v3, "system"
 
     const-string v4, "deviceData"
@@ -103,22 +86,16 @@
 
     move-result-object v0
 
-    .line 87
-    .local v0, customizedData:Lcom/android/settings/framework/storage/customize/HtcCustomizedData;
     invoke-virtual {v0}, Lcom/android/settings/framework/storage/customize/HtcCustomizedData;->getCustomizedData()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 90
-    .local v1, deviceName:Landroid/os/Bundle;
     if-nez v1, :cond_1
 
-    .line 104
     :cond_0
     :goto_0
     return v2
 
-    .line 94
     :cond_1
     const-string v3, "device_name"
 
@@ -128,12 +105,10 @@
 
     sput-object v3, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
-    .line 96
     sget-boolean v3, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v3, :cond_2
 
-    .line 97
     const-string v3, "HtcCustomizedDeviceName"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -158,7 +133,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :cond_2
     sget-object v3, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
@@ -182,7 +156,6 @@
 
     if-nez v3, :cond_0
 
-    .line 104
     const/4 v2, 0x1
 
     goto :goto_0
@@ -190,10 +163,7 @@
 
 .method private static readDefaultData(Landroid/content/Context;)V
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 114
     const-string v0, "ro.product.model"
 
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -212,6 +182,5 @@
 
     sput-object v0, Lcom/android/settings/framework/storage/customize/HtcCustomizedDeviceName;->mDeviceName:Ljava/lang/String;
 
-    .line 118
     return-void
 .end method

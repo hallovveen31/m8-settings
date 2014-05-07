@@ -48,20 +48,13 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Ljava/lang/CharSequence;)V
     .locals 0
-    .parameter "context"
-    .parameter "label"
 
-    .prologue
-    .line 158
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 159
     iput-object p2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->label:Ljava/lang/CharSequence;
 
-    .line 160
     iput-object p1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mContext:Landroid/content/Context;
 
-    .line 161
     return-void
 .end method
 
@@ -70,25 +63,20 @@
 .method cancelLoadingWidgetPreview()V
     .locals 2
 
-    .prologue
-    .line 169
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mWidgetPreviewLoader:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     if-eqz v0, :cond_0
 
-    .line 170
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mWidgetPreviewLoader:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->cancel(Z)Z
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
-    .line 171
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mWidgetPreviewLoader:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
-    .line 173
     :cond_0
     return-void
 .end method
@@ -96,14 +84,10 @@
 .method getIntent()Landroid/content/Intent;
     .locals 3
 
-    .prologue
-    .line 181
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 182
-    .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->packageName:Ljava/lang/String;
 
     if-eqz v1, :cond_1
@@ -112,35 +96,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 184
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->packageName:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->className:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 185
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->extras:Landroid/os/Bundle;
 
     if-eqz v1, :cond_0
 
-    .line 186
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->extras:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 193
     :cond_0
     :goto_0
     return-object v0
 
-    .line 190
     :cond_1
     const-string v1, "android.intent.action.CREATE_SHORTCUT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 191
     const-string v1, "android.intent.extra.shortcut.NAME"
 
     iget-object v2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->label:Ljava/lang/CharSequence;
@@ -153,8 +131,6 @@
 .method public getLabel()Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 197
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->label:Ljava/lang/CharSequence;
 
     return-object v0
@@ -162,10 +138,7 @@
 
 .method loadWidgetPreview(Landroid/widget/ImageView;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 164
     new-instance v0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mContext:Landroid/content/Context;
@@ -174,7 +147,6 @@
 
     iput-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mWidgetPreviewLoader:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
-    .line 165
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->mWidgetPreviewLoader:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     sget-object v2, Landroid/os/AsyncTask;->SERIAL_EXECUTOR:Ljava/util/concurrent/Executor;
@@ -183,8 +155,7 @@
 
     check-cast v0, [Ljava/lang/Void;
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v1, v2, v0}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 166
     return-void
 .end method

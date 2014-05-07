@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 995
     iput-object p1, p0, Lcom/android/settings/RadioInfo$13;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 998
     iget-object v0, p0, Lcom/android/settings/RadioInfo$13;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->phone:Lcom/android/internal/telephony/Phone;
@@ -64,10 +58,8 @@
     :goto_0
     invoke-interface {v1, v0}, Lcom/android/internal/telephony/Phone;->setRadioPower(Z)V
 
-    .line 999
     return-void
 
-    .line 998
     :cond_0
     const/4 v0, 0x0
 

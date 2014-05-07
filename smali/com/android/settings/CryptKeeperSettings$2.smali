@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/CryptKeeperSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 95
     iput-object p1, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 99
     const-string v0, "1"
 
     const-string v1, "ro.3lm.legacy_encryption"
@@ -57,18 +51,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
     iget-object v0, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
     #calls: Lcom/android/settings/CryptKeeperSettings;->showEncryptDialog()V
     invoke-static {v0}, Lcom/android/settings/CryptKeeperSettings;->access$300(Lcom/android/settings/CryptKeeperSettings;)V
 
-    .line 113
     :cond_0
     :goto_0
     return-void
 
-    .line 104
     :cond_1
     iget-object v0, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
@@ -81,12 +72,11 @@
 
     if-nez v0, :cond_0
 
-    .line 106
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/settings/CryptKeeperSettings$2;->this$0:Lcom/android/settings/CryptKeeperSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/CryptKeeperSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -116,7 +106,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     goto :goto_0
 .end method

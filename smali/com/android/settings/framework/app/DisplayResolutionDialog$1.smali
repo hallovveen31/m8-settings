@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/DisplayResolutionDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$1;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,22 +36,16 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$1;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->setResult(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
-    .line 77
     iget-object v0, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$1;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 78
     return-void
 .end method

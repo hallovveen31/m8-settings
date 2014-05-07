@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,10 +14,7 @@
 
 .method public static isOpaque(Landroid/view/View;)Z
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 24
     invoke-virtual {p0}, Landroid/view/View;->isOpaque()Z
 
     move-result v0

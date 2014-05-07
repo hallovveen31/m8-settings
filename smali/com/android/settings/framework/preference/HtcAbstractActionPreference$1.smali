@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/HtcAbstractActionPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 402
     iput-object p1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +37,11 @@
 .method public run()V
     .locals 10
 
-    .prologue
-    .line 426
     const/4 v9, 0x0
 
-    .line 431
-    .local v9, packageName:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -60,15 +53,12 @@
 
     move-result-object v9
 
-    .line 432
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    .line 433
-    .local v7, context:Landroid/content/Context;
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
     #getter for: Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->mActivity:Landroid/app/Activity;
@@ -78,8 +68,6 @@
 
     check-cast v0, Lcom/htc/preference/HtcPreferenceActivity;
 
-    .line 436
-    .local v0, activity:Lcom/htc/preference/HtcPreferenceActivity;
     invoke-virtual {v7}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -90,43 +78,40 @@
 
     if-nez v1, :cond_0
 
-    .line 437
     invoke-static {v7, v9}, Landroid/content/HtcContext;->createPackageContext(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object v7
 
-    .line 441
     :cond_0
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     if-ne v7, v1, :cond_1
 
-    .line 443
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getFragment()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getFragment()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v2}, Lcom/htc/preference/HtcPreference;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getTitleRes()I
+    invoke-virtual {v3}, Lcom/htc/preference/HtcPreference;->getTitleRes()I
 
     move-result v3
 
     iget-object v4, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v4}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v4}, Lcom/htc/preference/HtcPreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -136,21 +121,19 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/htc/preference/HtcPreferenceActivity;->startPreferencePanel(Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/CharSequence;Landroid/app/Fragment;I)V
 
-    .line 464
     :goto_0
     return-void
 
-    .line 452
     :cond_1
     iget-object v1, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getFragment()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/htc/preference/HtcPreference;->getFragment()Ljava/lang/String;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v2}, Lcom/htc/preference/HtcPreference;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
@@ -158,9 +141,7 @@
 
     move-result-object v8
 
-    .line 456
-    .local v8, fragment:Landroid/app/Fragment;
-    invoke-virtual {v0}, Lcom/htc/preference/HtcPreferenceActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {v0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
@@ -176,7 +157,7 @@
 
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractActionPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractActionPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/preference/HtcAbstractActionPreference;->getTitle()Ljava/lang/CharSequence;
+    invoke-virtual {v2}, Lcom/htc/preference/HtcPreference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v2
 

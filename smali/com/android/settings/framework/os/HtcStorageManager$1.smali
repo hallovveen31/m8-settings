@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1019
     invoke-direct {p0}, Lcom/android/settings/framework/os/HtcConditionScanner;-><init>()V
 
     return-void
@@ -29,10 +27,7 @@
 # virtual methods
 .method protected dumpStates(I)V
     .locals 2
-    .parameter "round"
 
-    .prologue
-    .line 1023
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/os/HtcStorageManager$1;->getTimeInterval()I
+    invoke-virtual {p0}, Lcom/android/settings/framework/os/HtcConditionScanner;->getTimeInterval()I
 
     move-result v1
 
@@ -90,41 +85,32 @@
     #calls: Lcom/android/settings/framework/os/HtcStorageManager;->Log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/os/HtcStorageManager;->access$000(Ljava/lang/String;)V
 
-    .line 1026
     return-void
 .end method
 
 .method protected finish(Z)V
     .locals 1
-    .parameter "successful"
 
-    .prologue
-    .line 1074
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 1075
     const-string v0, "\t SdCard:finish scanning"
 
     #calls: Lcom/android/settings/framework/os/HtcStorageManager;->Log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/os/HtcStorageManager;->access$000(Ljava/lang/String;)V
 
-    .line 1076
     if-eqz p1, :cond_1
 
-    .line 1077
     const-string v0, "\t SdCard:successful"
 
     #calls: Lcom/android/settings/framework/os/HtcStorageManager;->Log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/os/HtcStorageManager;->access$000(Ljava/lang/String;)V
 
-    .line 1082
     :cond_0
     :goto_0
     return-void
 
-    .line 1079
     :cond_1
     const-string v0, "\t SdCard:failed"
 
@@ -137,16 +123,12 @@
 .method protected until()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1030
     invoke-static {}, Lcom/android/settings/framework/os/HtcStorageManager;->getSdCardStorageState()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1033
-    .local v0, state:Ljava/lang/String;
     const-string v2, "unmounted"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -171,12 +153,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1069
     :cond_0
     :goto_0
     return v1
 
-    .line 1041
     :cond_1
     const-string v2, "unmountable"
 
@@ -186,7 +166,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1069
     const/4 v1, 0x0
 
     goto :goto_0

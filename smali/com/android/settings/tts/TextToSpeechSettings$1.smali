@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TextToSpeechSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 129
     iput-object p1, p0, Lcom/android/settings/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onInit(I)V
     .locals 1
-    .parameter "status"
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/android/settings/tts/TextToSpeechSettings$1;->this$0:Lcom/android/settings/tts/TextToSpeechSettings;
 
     invoke-virtual {v0, p1}, Lcom/android/settings/tts/TextToSpeechSettings;->onInitEngine(I)V
 
-    .line 133
     return-void
 .end method

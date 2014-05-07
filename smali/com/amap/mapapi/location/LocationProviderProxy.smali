@@ -22,28 +22,19 @@
 # direct methods
 .method protected constructor <init>(Landroid/location/LocationManager;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->a:Landroid/location/LocationManager;
 
-    .line 20
     iput-object p2, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
 .method private a()Landroid/location/LocationProvider;
     .locals 2
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->a:Landroid/location/LocationManager;
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -57,11 +48,7 @@
 
 .method static a(Landroid/location/LocationManager;Ljava/lang/String;)Lcom/amap/mapapi/location/LocationProviderProxy;
     .locals 1
-    .parameter
-    .parameter
 
-    .prologue
-    .line 25
     new-instance v0, Lcom/amap/mapapi/location/LocationProviderProxy;
 
     invoke-direct {v0, p0, p1}, Lcom/amap/mapapi/location/LocationProviderProxy;-><init>(Landroid/location/LocationManager;Ljava/lang/String;)V
@@ -74,8 +61,6 @@
 .method public getAccuracy()I
     .locals 2
 
-    .prologue
-    .line 34
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -86,10 +71,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 35
     const/4 v0, 0x2
 
-    .line 37
     :goto_0
     return v0
 
@@ -108,8 +91,6 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 42
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -120,10 +101,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 43
     const-string v0, "lbs"
 
-    .line 45
     :goto_0
     return-object v0
 
@@ -142,8 +121,6 @@
 .method public getPowerRequirement()I
     .locals 2
 
-    .prologue
-    .line 50
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -154,10 +131,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 51
     const/4 v0, 0x2
 
-    .line 53
     :goto_0
     return v0
 
@@ -176,8 +151,6 @@
 .method public hasMonetaryCost()Z
     .locals 2
 
-    .prologue
-    .line 58
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -188,10 +161,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 59
     const/4 v0, 0x0
 
-    .line 61
     :goto_0
     return v0
 
@@ -209,12 +180,9 @@
 
 .method public meetsCriteria(Landroid/location/Criteria;)Z
     .locals 3
-    .parameter
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 66
     const-string v1, "lbs"
 
     iget-object v2, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -225,15 +193,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 67
     if-nez p1, :cond_1
 
-    .line 74
     :cond_0
     :goto_0
     return v0
 
-    .line 70
     :cond_1
     invoke-virtual {p1}, Landroid/location/Criteria;->isAltitudeRequired()Z
 
@@ -264,7 +229,6 @@
 
     goto :goto_0
 
-    .line 74
     :cond_3
     invoke-direct {p0}, Lcom/amap/mapapi/location/LocationProviderProxy;->a()Landroid/location/LocationProvider;
 
@@ -280,8 +244,6 @@
 .method public requiresCell()Z
     .locals 2
 
-    .prologue
-    .line 79
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -292,10 +254,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 80
     const/4 v0, 0x1
 
-    .line 82
     :goto_0
     return v0
 
@@ -314,8 +274,6 @@
 .method public requiresNetwork()Z
     .locals 2
 
-    .prologue
-    .line 87
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -326,10 +284,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 88
     const/4 v0, 0x1
 
-    .line 90
     :goto_0
     return v0
 
@@ -348,8 +304,6 @@
 .method public requiresSatellite()Z
     .locals 2
 
-    .prologue
-    .line 95
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -360,10 +314,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
     const/4 v0, 0x0
 
-    .line 98
     :goto_0
     return v0
 
@@ -382,8 +334,6 @@
 .method public supportsAltitude()Z
     .locals 2
 
-    .prologue
-    .line 103
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -394,10 +344,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 104
     const/4 v0, 0x0
 
-    .line 106
     :goto_0
     return v0
 
@@ -416,8 +364,6 @@
 .method public supportsBearing()Z
     .locals 2
 
-    .prologue
-    .line 111
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -428,10 +374,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 112
     const/4 v0, 0x0
 
-    .line 114
     :goto_0
     return v0
 
@@ -450,8 +394,6 @@
 .method public supportsSpeed()Z
     .locals 2
 
-    .prologue
-    .line 119
     const-string v0, "lbs"
 
     iget-object v1, p0, Lcom/amap/mapapi/location/LocationProviderProxy;->b:Ljava/lang/String;
@@ -462,10 +404,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 120
     const/4 v0, 0x0
 
-    .line 122
     :goto_0
     return v0
 

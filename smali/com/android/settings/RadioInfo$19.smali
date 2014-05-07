@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1118
     iput-object p1, p0, Lcom/android/settings/RadioInfo$19;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 1120
     iget-object v0, p0, Lcom/android/settings/RadioInfo$19;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updatePingState()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$4400(Lcom/android/settings/RadioInfo;)V
 
-    .line 1121
     return-void
 .end method

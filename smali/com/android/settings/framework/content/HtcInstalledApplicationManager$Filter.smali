@@ -37,14 +37,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 30
     new-instance v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
     const-string v1, "ALL"
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->ALL:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    .line 31
     new-instance v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
     const-string v1, "RUNNING"
@@ -62,7 +59,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->RUNNING:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    .line 32
     new-instance v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
     const-string v1, "THIRD_PARTY"
@@ -71,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->THIRD_PARTY:Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    .line 29
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
@@ -95,16 +90,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -112,10 +103,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 29
     const-class v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -130,11 +118,9 @@
 .method public static values()[Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
     .locals 1
 
-    .prologue
-    .line 29
     sget-object v0, Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->$VALUES:[Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/content/HtcInstalledApplicationManager$Filter;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

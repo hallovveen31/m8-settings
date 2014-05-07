@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1219
     invoke-static {}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->values()[Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
     move-result-object v0
@@ -41,7 +39,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_ACTIVATE_ENABLER:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -57,7 +55,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_RECEIVE:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -73,7 +71,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_BIND_HEADER_VIEW:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -89,7 +87,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_UNBIND_HEADER_VIEW:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -105,7 +103,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_BIND_TOGGLE_BUTTON:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -121,7 +119,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_UNBIND_TOGGLE_BUTTON:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -137,7 +135,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_CHECKED_CHANGED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -153,7 +151,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->POST_ON_TOGGLE_CHANGE:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$InternalActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -163,7 +161,6 @@
     :try_end_7
     .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    .line 1099
     :goto_7
     invoke-static {}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->values()[Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
@@ -180,7 +177,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_LISTITEM_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -196,7 +193,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_LISTITEM_SUMMARY:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -212,7 +209,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_ICON_COLOR_FILTER_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -228,7 +225,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_ENABLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -244,7 +241,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_SWITCH_TOGGLED:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -260,7 +257,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->SET_MULTI_PROPERTIES:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -276,7 +273,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->CREATE_ALERT_DIALOG:Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/HtcAbsWidgetEnabler$WidgetActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -324,7 +321,6 @@
 
     goto :goto_8
 
-    .line 1219
     :catch_7
     move-exception v0
 

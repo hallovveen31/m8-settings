@@ -14,24 +14,17 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 36
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/accessibility/HtcTypeSelectionPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 38
     const v0, 0x7f04004d
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/PresetPreference;->setDialogLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcDialogPreference;->setDialogLayoutResource(I)V
 
-    .line 39
     const v0, 0x7f0400d2
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/PresetPreference;->setListItemLayoutResource(I)V
+    invoke-virtual {p0, v0}, Lcom/android/settings/accessibility/ListDialogPreference;->setListItemLayoutResource(I)V
 
-    .line 41
     const-string v0, "captioning"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -42,7 +35,6 @@
 
     iput-object v0, p0, Lcom/android/settings/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
-    .line 43
     return-void
 .end method
 
@@ -50,11 +42,7 @@
 # virtual methods
 .method protected onBindListItem(Landroid/view/View;I)V
     .locals 5
-    .parameter "view"
-    .parameter "index"
 
-    .prologue
-    .line 53
     const v4, 0x7f090096
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -63,39 +51,30 @@
 
     check-cast v0, Lcom/android/internal/widget/SubtitleView;
 
-    .line 54
-    .local v0, previewText:Lcom/android/internal/widget/SubtitleView;
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/PresetPreference;->getValueAt(I)I
+    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/ListDialogPreference;->getValueAt(I)I
 
     move-result v3
 
-    .line 55
-    .local v3, value:I
     iget-object v4, p0, Lcom/android/settings/accessibility/PresetPreference;->mCaptioningManager:Landroid/view/accessibility/CaptioningManager;
 
     invoke-static {v4, v0, v3}, Lcom/android/settings/accessibility/ToggleCaptioningPreferenceFragment;->applyCaptionProperties(Landroid/view/accessibility/CaptioningManager;Lcom/android/internal/widget/SubtitleView;I)V
 
-    .line 63
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/PresetPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {p0, v4}, Lcom/android/settings/accessibility/PresetPreference;->getPreviewFontSize(Landroid/content/Context;)F
+    invoke-virtual {p0, v4}, Lcom/android/settings/framework/preference/accessibility/HtcTypeSelectionPreference;->getPreviewFontSize(Landroid/content/Context;)F
 
     move-result v4
 
     invoke-virtual {v0, v4}, Lcom/android/internal/widget/SubtitleView;->setTextSize(F)V
 
-    .line 66
-    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/PresetPreference;->getTitleAt(I)Ljava/lang/CharSequence;
+    invoke-virtual {p0, p2}, Lcom/android/settings/accessibility/ListDialogPreference;->getTitleAt(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
-    .line 67
-    .local v2, title:Ljava/lang/CharSequence;
     if-eqz v2, :cond_0
 
-    .line 68
     const v4, 0x7f09003a
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -104,12 +83,8 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 69
-    .local v1, summary:Landroid/widget/TextView;
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 71
-    .end local v1           #summary:Landroid/widget/TextView;
     :cond_0
     return-void
 .end method
@@ -117,9 +92,7 @@
 .method public shouldDisableDependents()Z
     .locals 2
 
-    .prologue
-    .line 47
-    invoke-virtual {p0}, Lcom/android/settings/accessibility/PresetPreference;->getValue()I
+    invoke-virtual {p0}, Lcom/android/settings/accessibility/ListDialogPreference;->getValue()I
 
     move-result v0
 
@@ -127,7 +100,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-super {p0}, Lcom/android/settings/framework/preference/accessibility/HtcTypeSelectionPreference;->shouldDisableDependents()Z
+    invoke-super {p0}, Lcom/htc/preference/HtcPreference;->shouldDisableDependents()Z
 
     move-result v0
 

@@ -40,10 +40,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/RunningServiceDetails;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,10 +52,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 19
-    .parameter "v"
 
-    .prologue
-    .line 125
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mReportButton:Landroid/widget/Button;
@@ -67,33 +61,28 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 126
     new-instance v17, Landroid/app/ApplicationErrorReport;
 
     invoke-direct/range {v17 .. v17}, Landroid/app/ApplicationErrorReport;-><init>()V
 
-    .line 127
-    .local v17, report:Landroid/app/ApplicationErrorReport;
     const/4 v2, 0x5
 
     move-object/from16 v0, v17
 
     iput v2, v0, Landroid/app/ApplicationErrorReport;->type:I
 
-    .line 128
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mServiceItem:Lcom/android/settings/applications/RunningState$ServiceItem;
 
     iget-object v2, v2, Lcom/android/settings/applications/RunningState$ServiceItem;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    iget-object v2, v2, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v2, v2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     move-object/from16 v0, v17
 
     iput-object v2, v0, Landroid/app/ApplicationErrorReport;->packageName:Ljava/lang/String;
 
-    .line 129
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mInstaller:Landroid/content/ComponentName;
@@ -106,7 +95,6 @@
 
     iput-object v2, v0, Landroid/app/ApplicationErrorReport;->installerPackageName:Ljava/lang/String;
 
-    .line 130
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mServiceItem:Lcom/android/settings/applications/RunningState$ServiceItem;
@@ -119,7 +107,6 @@
 
     iput-object v2, v0, Landroid/app/ApplicationErrorReport;->processName:Ljava/lang/String;
 
-    .line 131
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -128,14 +115,13 @@
 
     iput-wide v2, v0, Landroid/app/ApplicationErrorReport;->time:J
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mServiceItem:Lcom/android/settings/applications/RunningState$ServiceItem;
 
     iget-object v2, v2, Lcom/android/settings/applications/RunningState$ServiceItem;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    iget-object v2, v2, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v2, v2, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v2, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -150,13 +136,10 @@
 
     iput-boolean v2, v0, Landroid/app/ApplicationErrorReport;->systemApp:Z
 
-    .line 134
     new-instance v12, Landroid/app/ApplicationErrorReport$RunningServiceInfo;
 
     invoke-direct {v12}, Landroid/app/ApplicationErrorReport$RunningServiceInfo;-><init>()V
 
-    .line 136
-    .local v12, info:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mActiveItem:Lcom/android/settings/applications/RunningProcessesView$ActiveItem;
@@ -169,7 +152,6 @@
 
     if-ltz v2, :cond_3
 
-    .line 137
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
@@ -184,7 +166,6 @@
 
     iput-wide v2, v12, Landroid/app/ApplicationErrorReport$RunningServiceInfo;->durationMillis:J
 
-    .line 141
     :goto_1
     new-instance v9, Landroid/content/ComponentName;
 
@@ -194,7 +175,7 @@
 
     iget-object v2, v2, Lcom/android/settings/applications/RunningState$ServiceItem;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    iget-object v2, v2, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
+    iget-object v2, v2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
@@ -202,32 +183,26 @@
 
     iget-object v3, v3, Lcom/android/settings/applications/RunningState$ServiceItem;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    iget-object v3, v3, Landroid/content/pm/ServiceInfo;->name:Ljava/lang/String;
+    iget-object v3, v3, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     invoke-direct {v9, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
-    .local v9, comp:Landroid/content/ComponentName;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/RunningServiceDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     const-string v3, "service_dump.txt"
 
-    invoke-virtual {v2, v3}, Landroid/app/Activity;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
+    invoke-virtual {v2, v3}, Landroid/content/ContextWrapper;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v11
 
-    .line 144
-    .local v11, filename:Ljava/io/File;
     const/4 v15, 0x0
 
-    .line 146
-    .local v15, output:Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v16, Ljava/io/FileOutputStream;
 
@@ -238,9 +213,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 147
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .local v16, output:Ljava/io/FileOutputStream;
     :try_start_1
     const-string v2, "activity"
 
@@ -277,7 +249,6 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_c
 
-    .line 152
     if-eqz v16, :cond_b
 
     :try_start_2
@@ -287,15 +258,10 @@
 
     move-object/from16 v15, v16
 
-    .line 154
-    .end local v16           #output:Ljava/io/FileOutputStream;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
     :cond_0
     :goto_2
     const/4 v13, 0x0
 
-    .line 156
-    .local v13, input:Ljava/io/FileInputStream;
     :try_start_3
     new-instance v14, Ljava/io/FileInputStream;
 
@@ -304,9 +270,6 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 157
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .local v14, input:Ljava/io/FileInputStream;
     :try_start_4
     invoke-virtual {v11}, Ljava/io/File;->length()J
 
@@ -316,11 +279,8 @@
 
     new-array v8, v2, [B
 
-    .line 158
-    .local v8, buffer:[B
-    invoke-virtual {v14, v8}, Ljava/io/FileInputStream;->read([B)I
+    invoke-virtual {v14, v8}, Ljava/io/InputStream;->read([B)I
 
-    .line 159
     new-instance v2, Ljava/lang/String;
 
     invoke-direct {v2, v8}, Ljava/lang/String;-><init>([B)V
@@ -330,7 +290,6 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_b
 
-    .line 163
     if-eqz v14, :cond_a
 
     :try_start_5
@@ -340,15 +299,10 @@
 
     move-object v13, v14
 
-    .line 165
-    .end local v8           #buffer:[B
-    .end local v14           #input:Ljava/io/FileInputStream;
-    .restart local v13       #input:Ljava/io/FileInputStream;
     :cond_1
     :goto_3
     invoke-virtual {v11}, Ljava/io/File;->delete()Z
 
-    .line 166
     const-string v2, "Settings:RunningServicesDetails"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -373,12 +327,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     move-object/from16 v0, v17
 
     iput-object v12, v0, Landroid/app/ApplicationErrorReport;->runningServiceInfo:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
 
-    .line 168
     new-instance v18, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.APP_ERROR"
@@ -387,8 +339,6 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 169
-    .local v18, result:Landroid/content/Intent;
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mInstaller:Landroid/content/ComponentName;
@@ -397,7 +347,6 @@
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 170
     const-string v2, "android.intent.extra.BUG_REPORT"
 
     move-object/from16 v0, v18
@@ -406,42 +355,28 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 171
     const/high16 v2, 0x1000
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     move-object/from16 v0, v18
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/applications/RunningServiceDetails;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v0}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 200
-    .end local v9           #comp:Landroid/content/ComponentName;
-    .end local v11           #filename:Ljava/io/File;
-    .end local v12           #info:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .end local v17           #report:Landroid/app/ApplicationErrorReport;
-    .end local v18           #result:Landroid/content/Intent;
     :goto_4
     return-void
 
-    .line 132
-    .restart local v17       #report:Landroid/app/ApplicationErrorReport;
     :cond_2
     const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 139
-    .restart local v12       #info:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
     :cond_3
     const-wide/16 v2, -0x1
 
@@ -449,25 +384,16 @@
 
     goto/16 :goto_1
 
-    .line 152
-    .restart local v9       #comp:Landroid/content/ComponentName;
-    .restart local v11       #filename:Ljava/io/File;
-    .restart local v16       #output:Ljava/io/FileOutputStream;
     :catch_0
     move-exception v2
 
     move-object/from16 v15, v16
 
-    .end local v16           #output:Ljava/io/FileOutputStream;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
     goto :goto_2
 
-    .line 149
     :catch_1
     move-exception v10
 
-    .line 150
-    .local v10, e:Ljava/io/IOException;
     :goto_5
     :try_start_6
     const-string v2, "Settings:RunningServicesDetails"
@@ -494,7 +420,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 152
     if-eqz v15, :cond_0
 
     :try_start_7
@@ -509,7 +434,6 @@
 
     goto/16 :goto_2
 
-    .end local v10           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v2
 
@@ -525,25 +449,16 @@
     :goto_7
     throw v2
 
-    .line 163
-    .restart local v8       #buffer:[B
-    .restart local v14       #input:Ljava/io/FileInputStream;
     :catch_3
     move-exception v2
 
     move-object v13, v14
 
-    .end local v14           #input:Ljava/io/FileInputStream;
-    .restart local v13       #input:Ljava/io/FileInputStream;
     goto/16 :goto_3
 
-    .line 160
-    .end local v8           #buffer:[B
     :catch_4
     move-exception v10
 
-    .line 161
-    .restart local v10       #e:Ljava/io/IOException;
     :goto_8
     :try_start_9
     const-string v2, "Settings:RunningServicesDetails"
@@ -570,7 +485,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 163
     if-eqz v13, :cond_1
 
     :try_start_a
@@ -585,7 +499,6 @@
 
     goto/16 :goto_3
 
-    .end local v10           #e:Ljava/io/IOException;
     :catchall_1
     move-exception v2
 
@@ -601,13 +514,6 @@
     :goto_a
     throw v2
 
-    .line 176
-    .end local v9           #comp:Landroid/content/ComponentName;
-    .end local v11           #filename:Ljava/io/File;
-    .end local v12           #info:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .end local v17           #report:Landroid/app/ApplicationErrorReport;
     :cond_6
     move-object/from16 v0, p0
 
@@ -615,13 +521,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 178
     :try_start_c
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
-    invoke-virtual {v2}, Lcom/android/settings/applications/RunningServiceDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
@@ -649,46 +554,33 @@
 
     goto/16 :goto_4
 
-    .line 182
     :catch_6
     move-exception v10
 
-    .line 183
-    .local v10, e:Landroid/content/IntentSender$SendIntentException;
     const-string v2, "Settings:RunningServicesDetails"
 
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_4
 
-    .line 184
-    .end local v10           #e:Landroid/content/IntentSender$SendIntentException;
     :catch_7
     move-exception v10
 
-    .line 185
-    .local v10, e:Ljava/lang/IllegalArgumentException;
     const-string v2, "Settings:RunningServicesDetails"
 
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_4
 
-    .line 186
-    .end local v10           #e:Ljava/lang/IllegalArgumentException;
     :catch_8
     move-exception v10
 
-    .line 187
-    .local v10, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "Settings:RunningServicesDetails"
 
     invoke-static {v2, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto/16 :goto_4
 
-    .line 189
-    .end local v10           #e:Landroid/content/ActivityNotFoundException;
     :cond_7
     move-object/from16 v0, p0
 
@@ -696,7 +588,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 190
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -705,7 +596,6 @@
 
     goto/16 :goto_4
 
-    .line 191
     :cond_8
     move-object/from16 v0, p0
 
@@ -717,7 +607,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
@@ -736,7 +625,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ActivityManager;->killBackgroundProcesses(Ljava/lang/String;)V
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
@@ -745,7 +633,6 @@
 
     goto/16 :goto_4
 
-    .line 197
     :cond_9
     move-object/from16 v0, p0
 
@@ -765,7 +652,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 198
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
@@ -774,109 +660,65 @@
 
     goto/16 :goto_4
 
-    .line 152
-    .restart local v9       #comp:Landroid/content/ComponentName;
-    .restart local v11       #filename:Ljava/io/File;
-    .restart local v12       #info:Landroid/app/ApplicationErrorReport$RunningServiceInfo;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
-    .restart local v17       #report:Landroid/app/ApplicationErrorReport;
     :catch_9
     move-exception v3
 
     goto/16 :goto_7
 
-    .line 163
-    .restart local v13       #input:Ljava/io/FileInputStream;
     :catch_a
     move-exception v3
 
     goto/16 :goto_a
 
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .restart local v14       #input:Ljava/io/FileInputStream;
     :catchall_2
     move-exception v2
 
     move-object v13, v14
 
-    .end local v14           #input:Ljava/io/FileInputStream;
-    .restart local v13       #input:Ljava/io/FileInputStream;
     goto/16 :goto_9
 
-    .line 160
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .restart local v14       #input:Ljava/io/FileInputStream;
     :catch_b
     move-exception v10
 
     move-object v13, v14
 
-    .end local v14           #input:Ljava/io/FileInputStream;
-    .restart local v13       #input:Ljava/io/FileInputStream;
     goto/16 :goto_8
 
-    .line 152
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .restart local v16       #output:Ljava/io/FileOutputStream;
     :catchall_3
     move-exception v2
 
     move-object/from16 v15, v16
 
-    .end local v16           #output:Ljava/io/FileOutputStream;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
     goto/16 :goto_6
 
-    .line 149
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .restart local v16       #output:Ljava/io/FileOutputStream;
     :catch_c
     move-exception v10
 
     move-object/from16 v15, v16
 
-    .end local v16           #output:Ljava/io/FileOutputStream;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
     goto/16 :goto_5
 
-    .restart local v8       #buffer:[B
-    .restart local v14       #input:Ljava/io/FileInputStream;
     :cond_a
     move-object v13, v14
 
-    .end local v14           #input:Ljava/io/FileInputStream;
-    .restart local v13       #input:Ljava/io/FileInputStream;
     goto/16 :goto_3
 
-    .end local v8           #buffer:[B
-    .end local v13           #input:Ljava/io/FileInputStream;
-    .end local v15           #output:Ljava/io/FileOutputStream;
-    .restart local v16       #output:Ljava/io/FileOutputStream;
     :cond_b
     move-object/from16 v15, v16
 
-    .end local v16           #output:Ljava/io/FileOutputStream;
-    .restart local v15       #output:Ljava/io/FileOutputStream;
     goto/16 :goto_2
 .end method
 
 .method stopActiveService(Z)V
     .locals 4
-    .parameter "confirmed"
 
-    .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->mServiceItem:Lcom/android/settings/applications/RunningState$ServiceItem;
 
-    .line 103
-    .local v0, si:Lcom/android/settings/applications/RunningState$ServiceItem;
     if-nez p1, :cond_0
 
-    .line 104
     iget-object v1, v0, Lcom/android/settings/applications/RunningState$ServiceItem;->mServiceInfo:Landroid/content/pm/ServiceInfo;
 
-    iget-object v1, v1, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+    iget-object v1, v1, Landroid/content/pm/ComponentInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -884,7 +726,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 105
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     iget-object v2, v0, Lcom/android/settings/applications/RunningState$ServiceItem;->mRunningService:Landroid/app/ActivityManager$RunningServiceInfo;
@@ -894,15 +735,13 @@
     #calls: Lcom/android/settings/applications/RunningServiceDetails;->showConfirmStopDialog(Landroid/content/ComponentName;)V
     invoke-static {v1, v2}, Lcom/android/settings/applications/RunningServiceDetails;->access$000(Lcom/android/settings/applications/RunningServiceDetails;Landroid/content/ComponentName;)V
 
-    .line 122
     :goto_0
     return-void
 
-    .line 109
     :cond_0
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/RunningServiceDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -918,30 +757,26 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->stopService(Landroid/content/Intent;)Z
+    invoke-virtual {v1, v2}, Landroid/content/ContextWrapper;->stopService(Landroid/content/Intent;)Z
 
-    .line 110
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     iget-object v1, v1, Lcom/android/settings/applications/RunningServiceDetails;->mMergedItem:Lcom/android/settings/applications/RunningState$MergedItem;
 
     if-nez v1, :cond_1
 
-    .line 112
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     iget-object v1, v1, Lcom/android/settings/applications/RunningServiceDetails;->mState:Lcom/android/settings/applications/RunningState;
 
     invoke-virtual {v1}, Lcom/android/settings/applications/RunningState;->updateNow()V
 
-    .line 113
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     invoke-virtual {v1}, Lcom/android/settings/applications/RunningServiceDetails;->finish()V
 
     goto :goto_0
 
-    .line 114
     :cond_1
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
@@ -963,21 +798,18 @@
 
     if-gt v1, v2, :cond_2
 
-    .line 117
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     iget-object v1, v1, Lcom/android/settings/applications/RunningServiceDetails;->mState:Lcom/android/settings/applications/RunningState;
 
     invoke-virtual {v1}, Lcom/android/settings/applications/RunningState;->updateNow()V
 
-    .line 118
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     invoke-virtual {v1}, Lcom/android/settings/applications/RunningServiceDetails;->finish()V
 
     goto :goto_0
 
-    .line 120
     :cond_2
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$ActiveDetail;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 

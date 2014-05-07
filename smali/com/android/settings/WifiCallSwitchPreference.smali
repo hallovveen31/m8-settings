@@ -48,71 +48,51 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 118
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/WifiCallSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 119
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 122
     const v0, 0x101036d
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/WifiCallSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 123
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 6
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 126
     invoke-direct {p0, p1, p2, p3}, Lcom/htc/preference/HtcCheckBoxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 100
     iput-boolean v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->registered:Z
 
-    .line 101
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
-    .line 105
     new-instance v2, Lcom/android/settings/WifiCallSwitchPreference$1;
 
     invoke-direct {v2, p0}, Lcom/android/settings/WifiCallSwitchPreference$1;-><init>(Lcom/android/settings/WifiCallSwitchPreference;)V
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mHandler:Landroid/os/Handler;
 
-    .line 313
     new-instance v2, Lcom/android/settings/WifiCallSwitchPreference$4;
 
     invoke-direct {v2, p0}, Lcom/android/settings/WifiCallSwitchPreference$4;-><init>(Lcom/android/settings/WifiCallSwitchPreference;)V
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPPhonefReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 127
     iput-object p1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
-    .line 131
     :try_start_0
     const-string v2, "com.movial.ipphone.IPUtils"
 
@@ -122,7 +102,6 @@
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPUtils:Ljava/lang/Class;
 
-    .line 132
     const-string v2, "com.movial.ipphone.IPStateListener4Setting"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -171,20 +150,16 @@
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPStateListener:Ljava/lang/Object;
 
-    .line 136
     const/4 v2, 0x3
 
     new-array v1, v2, [Ljava/lang/Class;
 
-    .line 137
-    .local v1, param:[Ljava/lang/Class;
     const/4 v2, 0x0
 
     sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     aput-object v3, v1, v2
 
-    .line 138
     const/4 v2, 0x1
 
     const-string v3, "com.movial.ipphone.IPStateListener"
@@ -195,14 +170,12 @@
 
     aput-object v3, v1, v2
 
-    .line 141
     const/4 v2, 0x2
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v3, v1, v2
 
-    .line 142
     const-string v2, "com.movial.ipphone.IPManager"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -217,7 +190,6 @@
 
     iput-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPMlisten:Ljava/lang/reflect/Method;
 
-    .line 144
     const-string v2, "com.movial.ipphone.IPManager"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -254,27 +226,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
-    .end local v1           #param:[Ljava/lang/Class;
     :goto_0
     const v2, 0x7f040075
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/WifiCallSwitchPreference;->setLayoutResource(I)V
+    invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->setLayoutResource(I)V
 
-    .line 155
     const-string v2, "Wi-Fi Calling"
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/WifiCallSwitchPreference;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v2}, Lcom/htc/preference/HtcPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 156
     return-void
 
-    .line 146
     :catch_0
     move-exception v0
 
-    .line 147
-    .local v0, e:Ljava/lang/Exception;
     const-string v2, "WifiCallSwitchPreference"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -287,7 +252,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -306,12 +271,8 @@
 
 .method static synthetic access$000(Lcom/android/settings/WifiCallSwitchPreference;Ljava/lang/Object;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 80
-    invoke-virtual {p0, p1}, Lcom/android/settings/WifiCallSwitchPreference;->callChangeListener(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Lcom/htc/preference/HtcPreference;->callChangeListener(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -320,10 +281,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/WifiCallSwitchPreference;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPStateListener:Ljava/lang/Object;
 
     return-object v0
@@ -331,10 +289,7 @@
 
 .method static synthetic access$200(Lcom/android/settings/WifiCallSwitchPreference;)Ljava/lang/Class;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPUtils:Ljava/lang/Class;
 
     return-object v0
@@ -342,10 +297,7 @@
 
 .method static synthetic access$300(Lcom/android/settings/WifiCallSwitchPreference;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPMInstance:Ljava/lang/Object;
 
     return-object v0
@@ -353,10 +305,7 @@
 
 .method static synthetic access$400(Lcom/android/settings/WifiCallSwitchPreference;)Ljava/lang/reflect/Method;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPMlisten:Ljava/lang/reflect/Method;
 
     return-object v0
@@ -365,19 +314,14 @@
 .method private registerIPPhoneReceiver()V
     .locals 5
 
-    .prologue
-    .line 334
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 335
-    .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "com.htc.intent.action.WifiCallStateChanged"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 336
     iget-object v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPPhonefReceiver:Landroid/content/BroadcastReceiver;
@@ -388,37 +332,28 @@
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 337
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->registered:Z
 
-    .line 338
     const-string v1, "WifiCallSwitchPreference"
 
     const-string v2, "registerIPPhoneReceiver()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     return-void
 .end method
 
 .method private registerToIPRegistry(Z)V
     .locals 1
-    .parameter "register"
 
-    .prologue
-    .line 278
     new-instance v0, Lcom/android/settings/WifiCallSwitchPreference$3;
 
     invoke-direct {v0, p0, p1}, Lcom/android/settings/WifiCallSwitchPreference$3;-><init>(Lcom/android/settings/WifiCallSwitchPreference;Z)V
 
-    .line 309
-    .local v0, t:Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 310
     return-void
 .end method
 
@@ -426,50 +361,39 @@
 # virtual methods
 .method protected onBindView(Landroid/view/View;)V
     .locals 3
-    .parameter "view"
 
-    .prologue
-    .line 160
     invoke-super {p0, p1}, Lcom/htc/preference/HtcCheckBoxPreference;->onBindView(Landroid/view/View;)V
 
-    .line 163
     const v1, 0x7f09000f
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 164
-    .local v0, checkableView:Landroid/view/View;
     if-eqz v0, :cond_0
 
     instance-of v1, v0, Lcom/htc/widget/HtcToggleButtonLight;
 
     if-eqz v1, :cond_0
 
-    .line 165
     check-cast v0, Lcom/htc/widget/HtcToggleButtonLight;
 
-    .end local v0           #checkableView:Landroid/view/View;
     iput-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
-    .line 166
     iget-object v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcToggleButtonLight;->setClickable(Z)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setClickable(Z)V
 
-    .line 167
     iget-object v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
-    invoke-virtual {p0}, Lcom/android/settings/WifiCallSwitchPreference;->isChecked()Z
+    invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v2
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 169
     iget-object v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     new-instance v2, Lcom/android/settings/WifiCallSwitchPreference$2;
@@ -478,7 +402,6 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcToggleButtonLight;->setOnCheckedChangeListener(Lcom/htc/widget/HtcToggleButtonLight$OnCheckedChangeListener;)V
 
-    .line 184
     :cond_0
     return-void
 .end method
@@ -486,15 +409,12 @@
 .method protected onClick()V
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 188
     invoke-super {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->onClick()V
 
-    .line 189
     const-string v0, "WifiCallSwitchPreference"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -507,7 +427,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcom/android/settings/WifiCallSwitchPreference;->isChecked()Z
+    invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v4
 
@@ -521,12 +441,10 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     if-eqz v0, :cond_0
 
-    .line 191
     const-string v0, "WifiCallSwitchPreference"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -555,7 +473,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     iget-boolean v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
@@ -564,14 +481,12 @@
     move v0, v1
 
     :goto_0
-    invoke-virtual {p0, v0}, Lcom/android/settings/WifiCallSwitchPreference;->setChecked(Z)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 194
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     if-eqz v0, :cond_1
 
-    .line 195
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     iget-boolean v3, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
@@ -581,32 +496,27 @@
     :goto_1
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 196
     :cond_1
     return-void
 
     :cond_2
     move v0, v2
 
-    .line 193
     goto :goto_0
 
     :cond_3
     move v1, v2
 
-    .line 195
     goto :goto_1
 .end method
 
 .method public onSwitchClicked()V
     .locals 11
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    .line 199
     const-string v4, "WifiCallSwitchPreference"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -619,7 +529,7 @@
 
     move-result-object v7
 
-    invoke-virtual {p0}, Lcom/android/settings/WifiCallSwitchPreference;->isChecked()Z
+    invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v8
 
@@ -633,15 +543,12 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
-    invoke-virtual {p0, v6}, Lcom/android/settings/WifiCallSwitchPreference;->setEnabled(Z)V
+    invoke-virtual {p0, v6}, Lcom/htc/preference/HtcPreference;->setEnabled(Z)V
 
-    .line 201
     iget-object v4, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     if-eqz v4, :cond_0
 
-    .line 202
     const-string v4, "WifiCallSwitchPreference"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -670,9 +577,8 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/WifiCallSwitchPreference;->isChecked()Z
+    invoke-virtual {p0}, Lcom/htc/preference/HtcCheckBoxPreference;->isChecked()Z
 
     move-result v4
 
@@ -683,7 +589,6 @@
     :goto_0
     iput-boolean v4, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
-    .line 208
     :try_start_0
     const-string v4, "com.movial.ipphone.IPPhoneSettings"
 
@@ -703,8 +608,6 @@
 
     move-result-object v0
 
-    .line 210
-    .local v0, CELL_ONLY:Ljava/lang/Object;
     const-string v4, "com.movial.ipphone.IPPhoneSettings"
 
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -739,14 +642,10 @@
 
     move-result-object v3
 
-    .line 213
-    .local v3, putBoolean:Ljava/lang/reflect/Method;
     const/4 v4, 0x3
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    .line 214
-    .local v2, param:[Ljava/lang/Object;
     const/4 v4, 0x0
 
     iget-object v7, p0, Lcom/android/settings/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
@@ -757,12 +656,10 @@
 
     aput-object v7, v2, v4
 
-    .line 215
     const/4 v4, 0x1
 
     aput-object v0, v2, v4
 
-    .line 216
     const/4 v4, 0x2
 
     iget-boolean v7, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
@@ -773,17 +670,12 @@
 
     aput-object v7, v2, v4
 
-    .line 217
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
-    .end local v0           #CELL_ONLY:Ljava/lang/Object;
-    .end local v2           #param:[Ljava/lang/Object;
-    .end local v3           #putBoolean:Ljava/lang/reflect/Method;
     :goto_1
     iget-boolean v4, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
@@ -792,21 +684,16 @@
     :goto_2
     invoke-direct {p0, v5}, Lcom/android/settings/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 223
     return-void
 
     :cond_1
     move v4, v6
 
-    .line 204
     goto :goto_0
 
-    .line 218
     :catch_0
     move-exception v1
 
-    .line 219
-    .local v1, e:Ljava/lang/Exception;
     const-string v4, "WifiCallSwitchPreference"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -819,7 +706,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v8
 
@@ -835,41 +722,33 @@
 
     goto :goto_1
 
-    .end local v1           #e:Ljava/lang/Exception;
     :cond_2
     move v5, v6
 
-    .line 222
     goto :goto_2
 .end method
 
 .method public pause()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 266
     invoke-direct {p0, v2}, Lcom/android/settings/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 269
     iget-boolean v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->registered:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 270
     iget-object v0, p0, Lcom/android/settings/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/settings/WifiCallSwitchPreference;->mIPPhonefReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 271
     iput-boolean v2, p0, Lcom/android/settings/WifiCallSwitchPreference;->registered:Z
 
-    .line 273
     :cond_0
     const-string v0, "WifiCallSwitchPreference"
 
@@ -877,23 +756,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     return-void
 .end method
 
 .method public resume()V
     .locals 12
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x1
 
-    .line 228
     const/4 v3, 0x0
 
-    .line 230
-    .local v3, oCellOnly:Ljava/lang/Object;
     :try_start_0
     const-string v5, "com.movial.ipphone.IPPhoneSettings"
 
@@ -913,8 +787,6 @@
 
     move-result-object v0
 
-    .line 232
-    .local v0, CELL_ONLY:Ljava/lang/Object;
     const-string v5, "com.movial.ipphone.IPPhoneSettings"
 
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -949,14 +821,10 @@
 
     move-result-object v2
 
-    .line 235
-    .local v2, getBoolean:Ljava/lang/reflect/Method;
     const/4 v5, 0x3
 
     new-array v4, v5, [Ljava/lang/Object;
 
-    .line 236
-    .local v4, param:[Ljava/lang/Object;
     const/4 v5, 0x0
 
     iget-object v8, p0, Lcom/android/settings/WifiCallSwitchPreference;->mContext:Landroid/content/Context;
@@ -967,12 +835,10 @@
 
     aput-object v8, v4, v5
 
-    .line 237
     const/4 v5, 0x1
 
     aput-object v0, v4, v5
 
-    .line 238
     const/4 v5, 0x2
 
     const/4 v8, 0x1
@@ -983,7 +849,6 @@
 
     aput-object v8, v4, v5
 
-    .line 239
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -992,11 +857,6 @@
 
     move-result-object v3
 
-    .line 243
-    .end local v0           #CELL_ONLY:Ljava/lang/Object;
-    .end local v2           #getBoolean:Ljava/lang/reflect/Method;
-    .end local v3           #oCellOnly:Ljava/lang/Object;
-    .end local v4           #param:[Ljava/lang/Object;
     :goto_0
     check-cast v3, Ljava/lang/Boolean;
 
@@ -1006,7 +866,6 @@
 
     iput-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
-    .line 250
     const-string v5, "WifiCallSwitchPreference"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1031,7 +890,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     iget-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-nez v5, :cond_4
@@ -1039,14 +897,12 @@
     move v5, v6
 
     :goto_1
-    invoke-virtual {p0, v5}, Lcom/android/settings/WifiCallSwitchPreference;->setChecked(Z)V
+    invoke-virtual {p0, v5}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 253
     iget-object v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     if-eqz v5, :cond_0
 
-    .line 254
     iget-object v8, p0, Lcom/android/settings/WifiCallSwitchPreference;->mToggleButton:Lcom/htc/widget/HtcToggleButtonLight;
 
     iget-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
@@ -1058,18 +914,15 @@
     :goto_2
     invoke-virtual {v8, v5}, Lcom/htc/widget/HtcToggleButtonLight;->setChecked(Z)V
 
-    .line 255
     :cond_0
     iget-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
     if-eqz v5, :cond_1
 
-    .line 256
     const-string v5, "Disabled"
 
-    invoke-virtual {p0, v5}, Lcom/android/settings/WifiCallSwitchPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v5}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 257
     :cond_1
     iget-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->mCellOnly:Z
 
@@ -1080,7 +933,6 @@
     :goto_3
     invoke-direct {p0, v5}, Lcom/android/settings/WifiCallSwitchPreference;->registerToIPRegistry(Z)V
 
-    .line 260
     iget-boolean v5, p0, Lcom/android/settings/WifiCallSwitchPreference;->registered:Z
 
     if-nez v5, :cond_2
@@ -1090,20 +942,14 @@
     :cond_2
     if-ne v7, v6, :cond_3
 
-    .line 261
     invoke-direct {p0}, Lcom/android/settings/WifiCallSwitchPreference;->registerIPPhoneReceiver()V
 
-    .line 263
     :cond_3
     return-void
 
-    .line 240
-    .restart local v3       #oCellOnly:Ljava/lang/Object;
     :catch_0
     move-exception v1
 
-    .line 241
-    .local v1, e:Ljava/lang/Exception;
     const-string v5, "WifiCallSwitchPreference"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1116,7 +962,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v9
 
@@ -1132,23 +978,18 @@
 
     goto :goto_0
 
-    .end local v1           #e:Ljava/lang/Exception;
-    .end local v3           #oCellOnly:Ljava/lang/Object;
     :cond_4
     move v5, v7
 
-    .line 252
     goto :goto_1
 
     :cond_5
     move v5, v7
 
-    .line 254
     goto :goto_2
 
     :cond_6
     move v5, v7
 
-    .line 257
     goto :goto_3
 .end method

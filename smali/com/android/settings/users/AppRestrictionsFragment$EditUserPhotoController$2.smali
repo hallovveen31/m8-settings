@@ -32,10 +32,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1139
     iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -47,10 +44,7 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
     .locals 1
-    .parameter "params"
 
-    .prologue
-    .line 1142
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->mCropPictureUri:Landroid/net/Uri;
@@ -71,13 +65,9 @@
 
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 1139
     check-cast p1, [Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->doInBackground([Ljava/lang/Void;)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -87,16 +77,12 @@
 
 .method protected onPostExecute(Landroid/graphics/Bitmap;)V
     .locals 3
-    .parameter "bitmap"
 
-    .prologue
-    .line 1146
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     #setter for: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->mNewUserPhotoBitmap:Landroid/graphics/Bitmap;
     invoke-static {v0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->access$2302(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    .line 1147
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
@@ -106,7 +92,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -124,7 +110,6 @@
     #setter for: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->mNewUserPhotoDrawable:Landroid/graphics/drawable/Drawable;
     invoke-static {v0, v1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->access$2402(Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
-    .line 1149
     iget-object v0, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;->mImageView:Landroid/widget/ImageView;
@@ -141,7 +126,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1151
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
@@ -159,7 +143,6 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1152
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->this$0:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
@@ -177,19 +160,14 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 1153
     return-void
 .end method
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 1139
     check-cast p1, Landroid/graphics/Bitmap;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController$2;->onPostExecute(Landroid/graphics/Bitmap;)V
 
     return-void

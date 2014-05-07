@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 201
     invoke-static {}, Lcom/android/settings/framework/core/umc/HtcUmcState;->values()[Lcom/android/settings/framework/core/umc/HtcUmcState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/umc/HtcUmcState;->STATE_INIT:Lcom/android/settings/framework/core/umc/HtcUmcState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/umc/HtcUmcState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/umc/HtcUmcState;->STATE_ON:Lcom/android/settings/framework/core/umc/HtcUmcState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/umc/HtcUmcState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/umc/HtcUmcState;->STATE_OFF:Lcom/android/settings/framework/core/umc/HtcUmcState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/umc/HtcUmcState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

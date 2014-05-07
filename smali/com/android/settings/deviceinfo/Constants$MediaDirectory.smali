@@ -25,23 +25,14 @@
 # direct methods
 .method varargs constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 0
-    .parameter "pref"
-    .parameter "debugInfo"
-    .parameter "paths"
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p3, p0, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;->mDirPaths:[Ljava/lang/String;
 
-    .line 42
     iput-object p2, p0, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;->mKey:Ljava/lang/String;
 
-    .line 43
     iput-object p1, p0, Lcom/android/settings/deviceinfo/Constants$MediaDirectory;->mPreferenceName:Ljava/lang/String;
 
-    .line 44
     return-void
 .end method

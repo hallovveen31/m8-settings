@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/DisplayResolutionDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 81
     iput-object p1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 83
     if-eqz p1, :cond_2
 
     if-ltz p2, :cond_2
@@ -52,7 +45,6 @@
 
     if-lt v1, p2, :cond_2
 
-    .line 85
     iget-object v1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     #getter for: Lcom/android/settings/framework/app/DisplayResolutionDialog;->mDefItem:I
@@ -62,16 +54,14 @@
 
     if-eq v1, p2, :cond_0
 
-    .line 86
     iget-object v1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     #setter for: Lcom/android/settings/framework/app/DisplayResolutionDialog;->mDefItem:I
     invoke-static {v1, p2}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->access$002(Lcom/android/settings/framework/app/DisplayResolutionDialog;I)I
 
-    .line 90
     iget-object v1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -86,14 +76,11 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 93
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 94
-    .local v0, target:Landroid/content/Intent;
     if-eqz v0, :cond_1
 
     const-string v1, "com.htc.content.intent.extra.Extra_DEF_TYPE"
@@ -107,21 +94,17 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 95
     :cond_1
     iget-object v1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
     const/4 v2, -0x1
 
-    invoke-virtual {v1, v2, v0}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->setResult(ILandroid/content/Intent;)V
+    invoke-virtual {v1, v2, v0}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
 
-    .line 96
     iget-object v1, p0, Lcom/android/settings/framework/app/DisplayResolutionDialog$2;->this$0:Lcom/android/settings/framework/app/DisplayResolutionDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/DisplayResolutionDialog;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 98
-    .end local v0           #target:Landroid/content/Intent;
     :cond_2
     return-void
 .end method

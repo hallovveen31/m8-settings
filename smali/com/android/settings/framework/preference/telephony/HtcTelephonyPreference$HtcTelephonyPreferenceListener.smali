@@ -23,15 +23,11 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 463
     iput-object p1, p0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;->this$0:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
 
-    .line 466
     const-class v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -45,11 +41,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 463
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;-><init>(Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;)V
 
     return-void
@@ -59,10 +51,7 @@
 # virtual methods
 .method public onDataConnectionStateChanged(I)V
     .locals 3
-    .parameter "state"
 
-    .prologue
-    .line 474
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,7 +76,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
     iget-object v0, p0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;->this$0:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;
 
     iget-object v1, p0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;->this$0:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;
@@ -102,40 +90,31 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 478
     return-void
 .end method
 
 .method public onServiceStateChanged(Landroid/telephony/ServiceState;)V
     .locals 2
-    .parameter "serviceState"
 
-    .prologue
-    .line 494
     iget-object v0, p0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;->TAG:Ljava/lang/String;
 
     const-string v1, "Service state changed."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 496
     return-void
 .end method
 
 .method public onSignalStrengthsChanged(Landroid/telephony/SignalStrength;)V
     .locals 2
-    .parameter "signalStrength"
 
-    .prologue
-    .line 485
     iget-object v0, p0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$HtcTelephonyPreferenceListener;->TAG:Ljava/lang/String;
 
     const-string v1, "Signal strength changed."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
     return-void
 .end method

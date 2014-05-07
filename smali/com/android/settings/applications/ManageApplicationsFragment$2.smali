@@ -26,15 +26,11 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ManageApplicationsFragment;)V
     .locals 4
-    .parameter
 
-    .prologue
-    .line 1005
     iput-object p1, p0, Lcom/android/settings/applications/ManageApplicationsFragment$2;->this$0:Lcom/android/settings/applications/ManageApplicationsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1006
     const-string v0, "FPS (%s tab fling and pan in Apps)"
 
     const/4 v1, 0x1
@@ -65,38 +61,26 @@
 # virtual methods
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
-    .parameter "view"
-    .parameter "firstVisibleItem"
-    .parameter "visibleItemCount"
-    .parameter "totalItemCount"
 
-    .prologue
-    .line 1035
     return-void
 .end method
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 3
-    .parameter "view"
-    .parameter "scrollState"
 
-    .prologue
-    .line 1012
     invoke-static {}, Lcom/android/settings/framework/util/log/HtcAutoTestLog;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1013
     packed-switch p2, :pswitch_data_0
 
-    .line 1026
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$2;->this$0:Lcom/android/settings/applications/ManageApplicationsFragment;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/ManageApplicationsFragment;->getInternalActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalFragment;->getInternalActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -110,7 +94,7 @@
 
     iget-object v1, p0, Lcom/android/settings/applications/ManageApplicationsFragment$2;->this$0:Lcom/android/settings/applications/ManageApplicationsFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/ManageApplicationsFragment;->getInternalActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcInternalFragment;->getInternalActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -130,10 +114,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 1030
     return-void
 
-    .line 1015
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$2;->ITEM_NAME:Ljava/lang/String;
 
@@ -141,7 +123,6 @@
 
     goto :goto_0
 
-    .line 1018
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$2;->ITEM_NAME:Ljava/lang/String;
 
@@ -149,7 +130,6 @@
 
     goto :goto_0
 
-    .line 1013
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

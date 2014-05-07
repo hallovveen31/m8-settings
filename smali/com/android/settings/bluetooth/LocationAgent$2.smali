@@ -37,11 +37,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/LocationAgent;Lcom/htc/util/mail/MailAccount;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 207
     iput-object p1, p0, Lcom/android/settings/bluetooth/LocationAgent$2;->this$0:Lcom/android/settings/bluetooth/LocationAgent;
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/LocationAgent$2;->val$account:Lcom/htc/util/mail/MailAccount;
@@ -55,13 +51,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 207
     check-cast p1, [Ljava/util/List;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/bluetooth/LocationAgent$2;->doInBackground([Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object v0
@@ -71,7 +63,6 @@
 
 .method protected varargs doInBackground([Ljava/util/List;)Ljava/lang/Void;
     .locals 4
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -83,9 +74,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 210
-    .local p1, args:[Ljava/util/List;,"[Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     const/4 v2, 0x0
 
     aget-object v2, p1, v2
@@ -94,7 +82,6 @@
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -108,8 +95,6 @@
 
     check-cast v0, Landroid/bluetooth/BluetoothDevice;
 
-    .line 211
-    .local v0, device:Landroid/bluetooth/BluetoothDevice;
     iget-object v2, p0, Lcom/android/settings/bluetooth/LocationAgent$2;->this$0:Lcom/android/settings/bluetooth/LocationAgent;
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/LocationAgent$2;->val$account:Lcom/htc/util/mail/MailAccount;
@@ -119,8 +104,6 @@
 
     goto :goto_0
 
-    .line 213
-    .end local v0           #device:Landroid/bluetooth/BluetoothDevice;
     :cond_0
     const/4 v2, 0x0
 

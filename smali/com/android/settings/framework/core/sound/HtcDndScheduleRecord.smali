@@ -25,37 +25,26 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mId:I
 
-    .line 15
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartHour:I
 
-    .line 16
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartMinute:I
 
-    .line 17
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndHour:I
 
-    .line 18
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndMinute:I
 
-    .line 19
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mRepeat:I
 
-    .line 20
     iput v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mAllowedContacts:I
 
-    .line 21
     iput-boolean v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEnabled:Z
 
-    .line 22
     return-void
 .end method
 
@@ -64,8 +53,6 @@
 .method public getAllowedContacts()I
     .locals 1
 
-    .prologue
-    .line 73
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mAllowedContacts:I
 
     return v0
@@ -74,8 +61,6 @@
 .method public getEndHour()I
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndHour:I
 
     return v0
@@ -84,8 +69,6 @@
 .method public getEndMinute()I
     .locals 1
 
-    .prologue
-    .line 57
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndMinute:I
 
     return v0
@@ -94,8 +77,6 @@
 .method public getId()I
     .locals 1
 
-    .prologue
-    .line 25
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mId:I
 
     return v0
@@ -104,8 +85,6 @@
 .method public getRepeat()I
     .locals 1
 
-    .prologue
-    .line 65
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mRepeat:I
 
     return v0
@@ -114,8 +93,6 @@
 .method public getStartHour()I
     .locals 1
 
-    .prologue
-    .line 33
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartHour:I
 
     return v0
@@ -124,8 +101,6 @@
 .method public getStartMinute()I
     .locals 1
 
-    .prologue
-    .line 41
     iget v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartMinute:I
 
     return v0
@@ -134,8 +109,6 @@
 .method public isEnabled()Z
     .locals 1
 
-    .prologue
-    .line 81
     iget-boolean v0, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEnabled:Z
 
     return v0
@@ -143,96 +116,64 @@
 
 .method public setAllowedContacts(I)V
     .locals 0
-    .parameter "value"
 
-    .prologue
-    .line 77
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mAllowedContacts:I
 
-    .line 78
     return-void
 .end method
 
 .method public setEnabled(Z)V
     .locals 0
-    .parameter "bEnabled"
 
-    .prologue
-    .line 85
     iput-boolean p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEnabled:Z
 
-    .line 86
     return-void
 .end method
 
 .method public setEndHour(I)V
     .locals 0
-    .parameter "hour"
 
-    .prologue
-    .line 53
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndHour:I
 
-    .line 54
     return-void
 .end method
 
 .method public setEndMinute(I)V
     .locals 0
-    .parameter "minute"
 
-    .prologue
-    .line 61
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mEndMinute:I
 
-    .line 62
     return-void
 .end method
 
 .method public setId(I)V
     .locals 0
-    .parameter "id"
 
-    .prologue
-    .line 29
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mId:I
 
-    .line 30
     return-void
 .end method
 
 .method public setRepeat(I)V
     .locals 0
-    .parameter "repeat"
 
-    .prologue
-    .line 69
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mRepeat:I
 
-    .line 70
     return-void
 .end method
 
 .method public setStartHour(I)V
     .locals 0
-    .parameter "hour"
 
-    .prologue
-    .line 37
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartHour:I
 
-    .line 38
     return-void
 .end method
 
 .method public setStartMinute(I)V
     .locals 0
-    .parameter "minute"
 
-    .prologue
-    .line 45
     iput p1, p0, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->mStartMinute:I
 
-    .line 46
     return-void
 .end method

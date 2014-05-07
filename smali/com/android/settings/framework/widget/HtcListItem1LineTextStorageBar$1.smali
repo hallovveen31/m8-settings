@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar$1;->this$0:Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar;
 
     iput-object p2, p0, Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar$1;->val$title:Ljava/lang/String;
@@ -45,14 +41,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 317
     iget-object v0, p0, Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar$1;->this$0:Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar;
 
     iget-object v1, p0, Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar$1;->val$title:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/widget/HtcListItem1LineTextStorageBar;->setStampText(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem1LineTextProgressBar;->setStampText(Ljava/lang/String;)V
 
-    .line 318
     return-void
 .end method

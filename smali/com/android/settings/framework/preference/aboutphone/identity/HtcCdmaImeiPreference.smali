@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,49 +48,33 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 42
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 43
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 52
     const v0, 0x7f0f0017
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 64
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 29
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
-    .line 65
     return-void
 .end method
 
@@ -101,13 +83,11 @@
 .method protected canGetSummaryImmediately()Z
     .locals 3
 
-    .prologue
-    .line 78
     invoke-static {}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->getSingleton()Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -119,19 +99,16 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
-    .line 83
     iget-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 85
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->formatting(Ljava/lang/String;)Ljava/lang/String;
@@ -140,11 +117,9 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
-    .line 89
     :cond_0
     const/4 v0, 0x1
 
-    .line 91
     :goto_0
     return v0
 
@@ -157,9 +132,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 69
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -175,8 +148,6 @@
 .method protected getPhoneTask()Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
     .locals 1
 
-    .prologue
-    .line 99
     sget-object v0, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_IMEI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
     return-object v0
@@ -185,8 +156,6 @@
 .method protected isConstantSummary()Z
     .locals 1
 
-    .prologue
-    .line 74
     const/4 v0, 0x1
 
     return v0
@@ -195,8 +164,6 @@
 .method protected onGetSummary()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcCdmaImeiPreference;->result:Ljava/lang/String;
 
     return-object v0

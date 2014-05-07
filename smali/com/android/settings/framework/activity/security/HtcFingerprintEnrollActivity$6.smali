@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 731
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->values()[Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Tutorial:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Naming:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Processing:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Success:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->Fail:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->SetAltLock:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$Stage;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

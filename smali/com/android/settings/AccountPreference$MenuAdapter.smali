@@ -23,21 +23,15 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/AccountPreference;Landroid/content/Context;)V
     .locals 1
-    .parameter
-    .parameter "context"
 
-    .prologue
-    .line 373
     iput-object p1, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 371
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 374
     const-string v0, "layout_inflater"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -48,7 +42,6 @@
 
     iput-object v0, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 375
     return-void
 .end method
 
@@ -57,8 +50,6 @@
 .method public getCount()I
     .locals 4
 
-    .prologue
-    .line 379
     iget-object v1, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #getter for: Lcom/android/settings/AccountPreference;->mAccount:Landroid/accounts/Account;
@@ -68,7 +59,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 380
     iget-object v1, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #getter for: Lcom/android/settings/AccountPreference;->mContext:Landroid/content/Context;
@@ -93,11 +83,8 @@
 
     move-result-object v0
 
-    .line 382
-    .local v0, CanRemove:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 383
     const-string v1, "AccountPreference"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -120,7 +107,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 384
     const-string v1, "false"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -129,11 +115,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 385
     const/4 v1, 0x1
 
-    .line 389
-    .end local v0           #CanRemove:Ljava/lang/String;
     :goto_0
     return v1
 
@@ -145,10 +128,7 @@
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter "pos"
 
-    .prologue
-    .line 394
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -158,10 +138,7 @@
 
 .method public getItemId(I)J
     .locals 2
-    .parameter "pos"
 
-    .prologue
-    .line 399
     int-to-long v0, p1
 
     return-wide v0
@@ -169,16 +146,11 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 6
-    .parameter "pos"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v4, 0x1
 
-    .line 404
     iget-object v2, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v3, 0x7f04009d
@@ -189,36 +161,27 @@
 
     check-cast v1, Lcom/htc/widget/HtcListItem;
 
-    .line 405
-    .local v1, view:Lcom/htc/widget/HtcListItem;
-    invoke-virtual {v1, v5}, Lcom/htc/widget/HtcListItem;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v5}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 406
     invoke-virtual {v1, v4}, Lcom/htc/widget/HtcListItem;->setEnabled(Z)V
 
-    .line 408
     const v2, 0x7f090021
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lcom/htc/widget/HtcListItem2LineText;
 
-    .line 411
-    .local v0, text:Lcom/htc/widget/HtcListItem2LineText;
     if-eqz v0, :cond_0
 
-    .line 412
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryTextVisibility(I)V
 
-    .line 415
     :cond_0
     if-nez p1, :cond_3
 
-    .line 416
     iget-object v2, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #calls: Lcom/android/settings/AccountPreference;->isAnySyncActiveOrPending()Z
@@ -228,17 +191,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 417
     const v2, 0x2040256
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(I)V
 
-    .line 418
     const-string v2, "tag_cancel_sync"
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 424
     :goto_0
     invoke-static {}, Landroid/content/ContentResolver;->getMasterSyncAutomatically()Z
 
@@ -255,64 +215,52 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 426
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->setEnabled(Z)V
 
-    .line 432
     :cond_1
     :goto_1
     return-object v1
 
-    .line 420
     :cond_2
     const v2, 0x7f0c11c3
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(I)V
 
-    .line 421
     const-string v2, "tag_sync_now"
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 428
     :cond_3
     if-ne p1, v4, :cond_1
 
-    .line 429
     const v2, 0x2040272
 
     invoke-virtual {v0, v2}, Lcom/htc/widget/HtcListItem2LineText;->setPrimaryText(I)V
 
-    .line 430
     const-string v2, "tag_remove_account"
 
-    invoke-virtual {v1, v2}, Lcom/htc/widget/HtcListItem;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
 
 .method public onItemClick(Landroid/view/View;I)Z
     .locals 4
-    .parameter "view"
-    .parameter "pos"
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 436
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 437
     const-string v2, "tag_remove_account"
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -325,18 +273,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 438
     iget-object v1, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #calls: Lcom/android/settings/AccountPreference;->removeAccountDialog()V
     invoke-static {v1}, Lcom/android/settings/AccountPreference;->access$800(Lcom/android/settings/AccountPreference;)V
 
-    .line 447
     :cond_0
     :goto_0
     return v0
 
-    .line 439
     :cond_1
     const-string v2, "tag_sync_now"
 
@@ -350,7 +295,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 440
     iget-object v1, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #calls: Lcom/android/settings/AccountPreference;->requestOrCancelSyncForEnabledProviders(Z)V
@@ -358,7 +302,6 @@
 
     goto :goto_0
 
-    .line 441
     :cond_2
     const-string v2, "tag_cancel_sync"
 
@@ -372,7 +315,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 442
     iget-object v2, p0, Lcom/android/settings/AccountPreference$MenuAdapter;->this$0:Lcom/android/settings/AccountPreference;
 
     #calls: Lcom/android/settings/AccountPreference;->requestOrCancelSyncForEnabledProviders(Z)V
@@ -383,6 +325,5 @@
     :cond_3
     move v0, v1
 
-    .line 447
     goto :goto_0
 .end method

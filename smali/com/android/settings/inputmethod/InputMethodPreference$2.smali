@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodPreference;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 122
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodPreference$2;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$2;->val$imiId:Ljava/lang/String;
@@ -44,23 +40,17 @@
 # virtual methods
 .method public onLongClick(Landroid/view/View;)Z
     .locals 4
-    .parameter "arg0"
 
-    .prologue
-    .line 125
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 126
-    .local v0, bundle:Landroid/os/Bundle;
     const-string v1, "input_method_id"
 
     iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$2;->val$imiId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodPreference$2;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     #getter for: Lcom/android/settings/inputmethod/InputMethodPreference;->mFragment:Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;
@@ -78,7 +68,6 @@
 
     invoke-static {v1, v2, v3, v0}, Lcom/android/settings/inputmethod/InputMethodPreference;->startFragment(Landroid/app/Fragment;Ljava/lang/String;ILandroid/os/Bundle;)Z
 
-    .line 129
     const/4 v1, 0x1
 
     return v1

@@ -17,10 +17,8 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 15
     const-class v1, Lcom/android/settings/wifi/WifiManagerWrapper;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -29,12 +27,10 @@
 
     sput-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
-    .line 21
     new-array v1, v2, [Ljava/lang/Class;
 
     sput-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->para:[Ljava/lang/Class;
 
-    .line 27
     :try_start_0
     const-class v1, Landroid/net/wifi/WifiManager;
 
@@ -62,7 +58,6 @@
 
     sput-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_setVFAutoJoin:Ljava/lang/reflect/Method;
 
-    .line 29
     const-class v1, Landroid/net/wifi/WifiManager;
 
     const-string v2, "getVFAutoJoin"
@@ -83,38 +78,30 @@
 
     sput-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_getVFAutoJoin:Ljava/lang/reflect/Method;
 
-    .line 31
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_setVFAutoJoin:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 32
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "get setVFAutoJoin() method"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :goto_0
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_getVFAutoJoin:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_1
 
-    .line 38
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "get getVFAutoJoin() method"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
-    .local v0, e:Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 34
-    .end local v0           #e:Ljava/lang/Exception;
     :cond_0
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
@@ -126,12 +113,9 @@
 
     goto :goto_0
 
-    .line 44
     :catch_0
     move-exception v0
 
-    .line 45
-    .restart local v0       #e:Ljava/lang/Exception;
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "NoSuchMethodException"
@@ -140,8 +124,6 @@
 
     goto :goto_1
 
-    .line 40
-    .end local v0           #e:Ljava/lang/Exception;
     :cond_1
     :try_start_1
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
@@ -158,8 +140,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -167,27 +147,20 @@
 
 .method public static getVFAutoJoin(Landroid/net/wifi/WifiManager;I)I
     .locals 7
-    .parameter "wifiManager"
-    .parameter "networkId"
 
-    .prologue
     const/4 v2, -0x1
 
-    .line 69
     if-nez p0, :cond_1
 
-    .line 80
     :cond_0
     :goto_0
     return v2
 
-    .line 71
     :cond_1
     sget-object v3, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_getVFAutoJoin:Ljava/lang/reflect/Method;
 
     if-eqz v3, :cond_0
 
-    .line 76
     :try_start_0
     sget-object v3, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_getVFAutoJoin:Ljava/lang/reflect/Method;
 
@@ -207,11 +180,8 @@
 
     move-result-object v1
 
-    .line 77
-    .local v1, result:Ljava/lang/Object;
     check-cast v1, Ljava/lang/Integer;
 
-    .end local v1           #result:Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -220,12 +190,9 @@
 
     goto :goto_0
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
-    .local v0, e:Ljava/lang/Exception;
     sget-object v3, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v4, "failed to invoke getWQEEnabled(...)"
@@ -237,33 +204,24 @@
 
 .method public static setVFAutoJoin(Landroid/net/wifi/WifiManager;ZI)V
     .locals 5
-    .parameter "wifiManager"
-    .parameter "enable"
-    .parameter "networkId"
 
-    .prologue
-    .line 52
     if-nez p0, :cond_1
 
-    .line 65
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :cond_1
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_setVFAutoJoin:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
-    .line 56
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "setVFAutoJoin called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     :try_start_0
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->sMethod_setVFAutoJoin:Ljava/lang/reflect/Method;
 
@@ -293,12 +251,9 @@
 
     goto :goto_0
 
-    .line 61
     :catch_0
     move-exception v0
 
-    .line 62
-    .local v0, e:Ljava/lang/Exception;
     sget-object v1, Lcom/android/settings/wifi/WifiManagerWrapper;->TAG:Ljava/lang/String;
 
     const-string v2, "failed to invoke setWQEEnabled(...)"

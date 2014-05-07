@@ -5035,4 +5035,5 @@ Any user can accept updated app permissions on behalf of all other users."</stri
     <string name="user_image_take_photo">Take photo</string>
     <string name="user_image_choose_photo">Choose photo from Gallery</string>
     <string name="regulatory_info_text" />
+    <string name="app_ops_settings_summary">Manage app permissions</string>
 </resources>

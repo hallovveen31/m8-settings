@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartPCStorageDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 7
-    .parameter
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,31 +46,20 @@
         }
     .end annotation
 
-    .prologue
-    .line 87
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     move v2, p3
 
-    .line 88
-    .local v2, selected:I
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isMTPIOBusy()Z
 
     move-result v0
 
-    .line 89
-    .local v0, isMTPIOBusy:Z
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isUsbConnected()Z
 
     move-result v1
 
-    .line 90
-    .local v1, isUsbConnected:Z
     if-eqz v1, :cond_3
 
-    .line 91
     if-eqz v0, :cond_0
 
-    .line 92
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     new-instance v4, Lcom/htc/widget/HtcAlertDialog$Builder;
@@ -125,7 +107,6 @@
     #setter for: Lcom/android/settings/SmartPCStorageDialog;->mWarningDialog:Lcom/htc/widget/HtcAlertDialog;
     invoke-static {v3, v4}, Lcom/android/settings/SmartPCStorageDialog;->access$002(Lcom/android/settings/SmartPCStorageDialog;Lcom/htc/widget/HtcAlertDialog;)Lcom/htc/widget/HtcAlertDialog;
 
-    .line 112
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #getter for: Lcom/android/settings/SmartPCStorageDialog;->mWarningDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -133,13 +114,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v3}, Landroid/app/Dialog;->show()V
 
-    .line 127
     :goto_0
     return-void
 
-    .line 114
     :cond_0
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
@@ -160,13 +139,11 @@
 
     if-nez v3, :cond_2
 
-    .line 115
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #calls: Lcom/android/settings/SmartPCStorageDialog;->enableMTP()V
     invoke-static {v3}, Lcom/android/settings/SmartPCStorageDialog;->access$200(Lcom/android/settings/SmartPCStorageDialog;)V
 
-    .line 120
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
@@ -176,16 +153,14 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcListView;->invalidateViews()V
+    invoke-virtual {v3}, Landroid/widget/AbsListView;->invalidateViews()V
 
-    .line 121
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
-    invoke-virtual {v3}, Lcom/android/settings/SmartPCStorageDialog;->finish()V
+    invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
-    .line 116
     :cond_2
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
@@ -208,7 +183,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 117
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     #calls: Lcom/android/settings/SmartPCStorageDialog;->enableUMS()V
@@ -216,7 +190,6 @@
 
     goto :goto_1
 
-    .line 124
     :cond_3
     const-string v3, "SmartPCStorageDialog"
 
@@ -224,10 +197,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     iget-object v3, p0, Lcom/android/settings/SmartPCStorageDialog$1;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
-    invoke-virtual {v3}, Lcom/android/settings/SmartPCStorageDialog;->finish()V
+    invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 .end method

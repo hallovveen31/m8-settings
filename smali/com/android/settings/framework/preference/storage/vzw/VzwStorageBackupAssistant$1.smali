@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 122
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$1;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +37,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$1;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->doBindServiceInBackground()V
 
-    .line 128
     return-void
 .end method

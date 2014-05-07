@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 235
     iput-object p1, p0, Lcom/android/settings/wifi/WifiEnabler$2;->this$0:Lcom/android/settings/wifi/WifiEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 237
     iget-object v0, p0, Lcom/android/settings/wifi/WifiEnabler$2;->this$0:Lcom/android/settings/wifi/WifiEnabler;
 
     const/4 v1, 0x0
@@ -51,7 +44,6 @@
     #setter for: Lcom/android/settings/wifi/WifiEnabler;->mHotspotTurnOffDialog:Lcom/htc/widget/HtcAlertDialog;
     invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiEnabler;->access$1002(Lcom/android/settings/wifi/WifiEnabler;Lcom/htc/widget/HtcAlertDialog;)Lcom/htc/widget/HtcAlertDialog;
 
-    .line 238
     iget-object v0, p0, Lcom/android/settings/wifi/WifiEnabler$2;->this$0:Lcom/android/settings/wifi/WifiEnabler;
 
     const/4 v1, 0x0
@@ -59,6 +51,5 @@
     #calls: Lcom/android/settings/wifi/WifiEnabler;->setSwitchChecked(Z)V
     invoke-static {v0, v1}, Lcom/android/settings/wifi/WifiEnabler;->access$1100(Lcom/android/settings/wifi/WifiEnabler;Z)V
 
-    .line 239
     return-void
 .end method

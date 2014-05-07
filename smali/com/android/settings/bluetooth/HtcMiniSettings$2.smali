@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/HtcMiniSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 504
     iput-object p1, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$2;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "v"
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 507
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -53,21 +47,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 508
     iget-object v0, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$2;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
-    #calls: Lcom/android/settings/bluetooth/HtcMiniSettings;->isRestrictedAndNotPinProtected()Z
+    #calls: Lcom/android/settings/RestrictedSettingsFragment;->isRestrictedAndNotPinProtected()Z
     invoke-static {v0}, Lcom/android/settings/bluetooth/HtcMiniSettings;->access$800(Lcom/android/settings/bluetooth/HtcMiniSettings;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 520
     :goto_0
     return-void
 
-    .line 509
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -75,16 +66,12 @@
 
     check-cast v7, Lcom/android/settings/bluetooth/CachedBluetoothDevice;
 
-    .line 511
-    .local v7, device:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     new-instance v2, Landroid/os/Bundle;
 
     const/4 v0, 0x1
 
     invoke-direct {v2, v0}, Landroid/os/Bundle;-><init>(I)V
 
-    .line 512
-    .local v2, args:Landroid/os/Bundle;
     const-string v0, "device"
 
     invoke-virtual {v7}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->getDevice()Landroid/bluetooth/BluetoothDevice;
@@ -93,10 +80,9 @@
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 514
     iget-object v0, p0, Lcom/android/settings/bluetooth/HtcMiniSettings$2;->this$0:Lcom/android/settings/bluetooth/HtcMiniSettings;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/HtcMiniSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -118,9 +104,6 @@
 
     goto :goto_0
 
-    .line 518
-    .end local v2           #args:Landroid/os/Bundle;
-    .end local v7           #device:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
     :cond_1
     const-string v0, "HtcMiniSettings"
 

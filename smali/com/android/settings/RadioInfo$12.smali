@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 975
     iput-object p1, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,24 +36,19 @@
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 5
-    .parameter "item"
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 977
     iget-object v2, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
 
     const-string v3, "connectivity"
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/RadioInfo;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 979
-    .local v0, cm:Landroid/net/ConnectivityManager;
     iget-object v2, p0, Lcom/android/settings/RadioInfo$12;->this$0:Lcom/android/settings/RadioInfo;
 
     #getter for: Lcom/android/settings/RadioInfo;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -68,16 +60,12 @@
 
     move-result v1
 
-    .line 980
-    .local v1, state:I
     packed-switch v1, :pswitch_data_0
 
-    .line 991
     :goto_0
     :pswitch_0
     return v4
 
-    .line 982
     :pswitch_1
     const/4 v2, 0x0
 
@@ -85,13 +73,11 @@
 
     goto :goto_0
 
-    .line 985
     :pswitch_2
     invoke-virtual {v0, v4}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
     goto :goto_0
 
-    .line 980
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2

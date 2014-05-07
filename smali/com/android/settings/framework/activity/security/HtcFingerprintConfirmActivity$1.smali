@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 573
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,12 +33,9 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter "msg"
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 576
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
     move-result v1
@@ -56,16 +50,13 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     :cond_0
     if-nez p1, :cond_2
 
-    .line 611
     :cond_1
     :goto_0
     return-void
 
-    .line 581
     :cond_2
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -99,7 +90,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :cond_3
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -107,7 +97,6 @@
 
     goto :goto_0
 
-    .line 584
     :pswitch_0
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -123,7 +112,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     :cond_4
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -135,7 +123,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 586
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
     move-result v0
@@ -168,7 +155,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     :cond_5
     iget-object v1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
@@ -180,7 +166,6 @@
 
     goto :goto_0
 
-    .line 592
     :pswitch_1
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -196,7 +181,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
     :cond_6
     iget-object v1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
@@ -215,7 +199,6 @@
 
     goto :goto_1
 
-    .line 597
     :pswitch_2
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -231,7 +214,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 598
     :cond_8
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
@@ -240,7 +222,6 @@
 
     goto/16 :goto_0
 
-    .line 602
     :pswitch_3
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -256,7 +237,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
     :cond_9
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
@@ -265,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 607
     :pswitch_4
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;->access$000()Z
 
@@ -281,7 +260,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     :cond_a
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity;
 
@@ -290,7 +268,6 @@
 
     goto/16 :goto_0
 
-    .line 582
     :pswitch_data_0
     .packed-switch 0xc8
         :pswitch_0

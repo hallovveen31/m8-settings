@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 104
     iput-object p1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -35,8 +32,6 @@
 .method private invalidateOptionsMenuIfNeeded()V
     .locals 2
 
-    .prologue
-    .line 117
     iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment;->mPrintersAdapter:Lcom/android/settings/print/PrintServiceSettingsFragment$PrintersAdapter;
@@ -48,8 +43,6 @@
 
     move-result v0
 
-    .line 118
-    .local v0, unfilteredItemCount:I
     iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintServiceSettingsFragment;->mLastUnfilteredItemCount:I
@@ -73,24 +66,21 @@
 
     if-gtz v0, :cond_2
 
-    .line 120
     :cond_1
     iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
-    invoke-virtual {v1}, Lcom/android/settings/print/PrintServiceSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/app/Activity;->invalidateOptionsMenu()V
 
-    .line 122
     :cond_2
     iget-object v1, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     #setter for: Lcom/android/settings/print/PrintServiceSettingsFragment;->mLastUnfilteredItemCount:I
     invoke-static {v1, v0}, Lcom/android/settings/print/PrintServiceSettingsFragment;->access$302(Lcom/android/settings/print/PrintServiceSettingsFragment;I)I
 
-    .line 123
     return-void
 .end method
 
@@ -99,27 +89,20 @@
 .method public onChanged()V
     .locals 1
 
-    .prologue
-    .line 107
     invoke-direct {p0}, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->invalidateOptionsMenuIfNeeded()V
 
-    .line 108
     iget-object v0, p0, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->this$0:Lcom/android/settings/print/PrintServiceSettingsFragment;
 
     #calls: Lcom/android/settings/print/PrintServiceSettingsFragment;->updateEmptyView()V
     invoke-static {v0}, Lcom/android/settings/print/PrintServiceSettingsFragment;->access$100(Lcom/android/settings/print/PrintServiceSettingsFragment;)V
 
-    .line 109
     return-void
 .end method
 
 .method public onInvalidated()V
     .locals 0
 
-    .prologue
-    .line 113
     invoke-direct {p0}, Lcom/android/settings/print/PrintServiceSettingsFragment$2;->invalidateOptionsMenuIfNeeded()V
 
-    .line 114
     return-void
 .end method

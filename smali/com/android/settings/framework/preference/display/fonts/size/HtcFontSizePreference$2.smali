@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 295
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,26 +36,20 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 298
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->setValueIndex(I)V
+    invoke-virtual {v0, p2}, Lcom/htc/preference/HtcListPreference;->setValueIndex(I)V
 
-    .line 304
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->onClick(Landroid/content/DialogInterface;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/htc/preference/HtcDialogPreference;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 306
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/htc/preference/HtcListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
@@ -70,7 +61,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 307
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v1, p0, Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference$2;->this$0:Lcom/android/settings/framework/preference/display/fonts/size/HtcFontSizePreference;
@@ -112,11 +102,9 @@
 
     invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog$Builder;->show()Lcom/htc/widget/HtcAlertDialog;
 
-    .line 322
     :goto_0
     return-void
 
-    .line 320
     :cond_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 

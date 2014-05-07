@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/GSensorCalibration;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 294
     iput-object p1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,29 +36,19 @@
 # virtual methods
 .method public onAccuracyChanged(II)V
     .locals 0
-    .parameter "arg0"
-    .parameter "arg1"
 
-    .prologue
-    .line 298
     return-void
 .end method
 
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .parameter "sensor"
-    .parameter "accuracy"
 
-    .prologue
-    .line 303
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 10
-    .parameter "event"
 
-    .prologue
     const/high16 v4, 0x41f0
 
     const/high16 v3, -0x3e10
@@ -72,11 +59,8 @@
 
     const/4 v7, 0x1
 
-    .line 306
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
-    .line 310
-    .local v0, values:[F
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->noOrientation:Ljava/lang/Boolean;
@@ -87,7 +71,6 @@
 
     if-eqz v1, :cond_15
 
-    .line 312
     aget v1, v0, v8
 
     const/high16 v2, 0x4120
@@ -96,7 +79,6 @@
 
     aput v1, v0, v8
 
-    .line 313
     aget v1, v0, v7
 
     const/high16 v2, 0x4120
@@ -105,7 +87,6 @@
 
     aput v1, v0, v7
 
-    .line 315
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget v1, v1, Lcom/android/settings/GSensorCalibration;->dpi:I
@@ -114,7 +95,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 318
     aget v1, v0, v8
 
     const/high16 v2, 0x4270
@@ -127,7 +107,6 @@
 
     aput v1, v0, v8
 
-    .line 320
     :cond_0
     :goto_0
     aget v1, v0, v7
@@ -142,7 +121,6 @@
 
     aput v1, v0, v7
 
-    .line 393
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
@@ -155,7 +133,6 @@
 
     if-eqz v1, :cond_2a
 
-    .line 394
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     new-instance v2, Landroid/view/animation/TranslateAnimation;
@@ -174,38 +151,33 @@
 
     iput-object v2, v1, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
-    .line 395
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     aget v2, v0, v8
 
     iput v2, v1, Lcom/android/settings/GSensorCalibration;->oldValue_V:F
 
-    .line 401
     :goto_2
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v7}, Landroid/view/animation/TranslateAnimation;->setFillBefore(Z)V
+    invoke-virtual {v1, v7}, Landroid/view/animation/Animation;->setFillBefore(Z)V
 
-    .line 402
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v1, v7}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 403
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
     const-wide/16 v2, 0xc8
 
-    invoke-virtual {v1, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v1, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 404
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->imgBubble_V:Landroid/widget/ImageView;
@@ -214,9 +186,8 @@
 
     iget-object v2, v2, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 406
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->noOrientation:Ljava/lang/Boolean;
@@ -227,7 +198,6 @@
 
     if-eqz v1, :cond_2b
 
-    .line 407
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     new-instance v2, Landroid/view/animation/TranslateAnimation;
@@ -248,7 +218,6 @@
 
     iput-object v2, v1, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
-    .line 408
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     aget v2, v0, v7
@@ -257,31 +226,27 @@
 
     iput v2, v1, Lcom/android/settings/GSensorCalibration;->oldValue_H:F
 
-    .line 414
     :goto_3
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v7}, Landroid/view/animation/TranslateAnimation;->setFillBefore(Z)V
+    invoke-virtual {v1, v7}, Landroid/view/animation/Animation;->setFillBefore(Z)V
 
-    .line 415
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v7}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v1, v7}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 416
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
     const-wide/16 v2, 0xc8
 
-    invoke-virtual {v1, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v1, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 417
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v1, v1, Lcom/android/settings/GSensorCalibration;->imgBubble_H:Landroid/widget/ImageView;
@@ -290,12 +255,10 @@
 
     iget-object v2, v2, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v1, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 419
     return-void
 
-    .line 319
     :cond_2
     aget v1, v0, v8
 
@@ -311,7 +274,6 @@
 
     goto/16 :goto_0
 
-    .line 321
     :cond_3
     aget v1, v0, v7
 
@@ -327,7 +289,6 @@
 
     goto/16 :goto_1
 
-    .line 323
     :cond_4
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -337,7 +298,6 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 324
     aget v1, v0, v8
 
     cmpl-float v1, v1, v4
@@ -346,7 +306,6 @@
 
     aput v4, v0, v8
 
-    .line 326
     :cond_5
     :goto_4
     aget v1, v0, v7
@@ -359,7 +318,6 @@
 
     goto/16 :goto_1
 
-    .line 325
     :cond_6
     aget v1, v0, v9
 
@@ -371,7 +329,6 @@
 
     goto :goto_4
 
-    .line 327
     :cond_7
     aget v1, v0, v7
 
@@ -383,7 +340,6 @@
 
     goto/16 :goto_1
 
-    .line 329
     :cond_8
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -393,7 +349,6 @@
 
     if-ne v1, v2, :cond_c
 
-    .line 331
     aget v1, v0, v8
 
     iget-object v2, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
@@ -414,7 +369,6 @@
 
     aput v1, v0, v8
 
-    .line 333
     :cond_9
     :goto_5
     aget v1, v0, v7
@@ -439,7 +393,6 @@
 
     goto/16 :goto_1
 
-    .line 332
     :cond_a
     aget v1, v0, v8
 
@@ -467,7 +420,6 @@
 
     goto :goto_5
 
-    .line 334
     :cond_b
     aget v1, v0, v7
 
@@ -495,7 +447,6 @@
 
     goto/16 :goto_1
 
-    .line 336
     :cond_c
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -513,7 +464,6 @@
 
     if-ne v1, v2, :cond_11
 
-    .line 338
     :cond_d
     aget v1, v0, v8
 
@@ -535,7 +485,6 @@
 
     aput v1, v0, v8
 
-    .line 340
     :cond_e
     :goto_6
     aget v1, v0, v7
@@ -560,7 +509,6 @@
 
     goto/16 :goto_1
 
-    .line 339
     :cond_f
     aget v1, v0, v8
 
@@ -588,7 +536,6 @@
 
     goto :goto_6
 
-    .line 341
     :cond_10
     aget v1, v0, v7
 
@@ -616,7 +563,6 @@
 
     goto/16 :goto_1
 
-    .line 345
     :cond_11
     aget v1, v0, v8
 
@@ -626,7 +572,6 @@
 
     aput v4, v0, v8
 
-    .line 347
     :cond_12
     :goto_7
     aget v1, v0, v7
@@ -643,7 +588,6 @@
 
     goto/16 :goto_1
 
-    .line 346
     :cond_13
     aget v1, v0, v8
 
@@ -659,7 +603,6 @@
 
     goto :goto_7
 
-    .line 348
     :cond_14
     aget v1, v0, v7
 
@@ -671,7 +614,6 @@
 
     goto/16 :goto_1
 
-    .line 353
     :cond_15
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -681,7 +623,6 @@
 
     if-ne v1, v2, :cond_19
 
-    .line 356
     aget v1, v0, v9
 
     const/high16 v2, 0x4248
@@ -694,7 +635,6 @@
 
     aput v1, v0, v9
 
-    .line 358
     :cond_16
     :goto_8
     aget v1, v0, v7
@@ -711,7 +651,6 @@
 
     goto/16 :goto_1
 
-    .line 357
     :cond_17
     aget v1, v0, v9
 
@@ -727,7 +666,6 @@
 
     goto :goto_8
 
-    .line 359
     :cond_18
     aget v1, v0, v7
 
@@ -743,7 +681,6 @@
 
     goto/16 :goto_1
 
-    .line 361
     :cond_19
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -753,7 +690,6 @@
 
     if-ne v1, v2, :cond_1d
 
-    .line 362
     aget v1, v0, v9
 
     cmpl-float v1, v1, v4
@@ -762,7 +698,6 @@
 
     aput v4, v0, v9
 
-    .line 364
     :cond_1a
     :goto_9
     aget v1, v0, v7
@@ -775,7 +710,6 @@
 
     goto/16 :goto_1
 
-    .line 363
     :cond_1b
     aget v1, v0, v9
 
@@ -787,7 +721,6 @@
 
     goto :goto_9
 
-    .line 365
     :cond_1c
     aget v1, v0, v7
 
@@ -799,7 +732,6 @@
 
     goto/16 :goto_1
 
-    .line 367
     :cond_1d
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -809,7 +741,6 @@
 
     if-ne v1, v2, :cond_21
 
-    .line 369
     aget v1, v0, v8
 
     iget-object v2, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
@@ -830,7 +761,6 @@
 
     aput v1, v0, v8
 
-    .line 371
     :cond_1e
     :goto_a
     aget v1, v0, v7
@@ -855,7 +785,6 @@
 
     goto/16 :goto_1
 
-    .line 370
     :cond_1f
     aget v1, v0, v8
 
@@ -883,7 +812,6 @@
 
     goto :goto_a
 
-    .line 372
     :cond_20
     aget v1, v0, v7
 
@@ -911,7 +839,6 @@
 
     goto/16 :goto_1
 
-    .line 374
     :cond_21
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -929,7 +856,6 @@
 
     if-ne v1, v2, :cond_26
 
-    .line 375
     :cond_22
     aget v1, v0, v9
 
@@ -939,7 +865,6 @@
 
     aput v1, v0, v9
 
-    .line 376
     aget v1, v0, v7
 
     const/high16 v2, 0x4040
@@ -948,7 +873,6 @@
 
     aput v1, v0, v7
 
-    .line 378
     aget v1, v0, v9
 
     const/high16 v2, 0x4348
@@ -961,7 +885,6 @@
 
     aput v1, v0, v9
 
-    .line 380
     :cond_23
     :goto_b
     aget v1, v0, v7
@@ -978,7 +901,6 @@
 
     goto/16 :goto_1
 
-    .line 379
     :cond_24
     aget v1, v0, v9
 
@@ -994,7 +916,6 @@
 
     goto :goto_b
 
-    .line 381
     :cond_25
     aget v1, v0, v7
 
@@ -1010,7 +931,6 @@
 
     goto/16 :goto_1
 
-    .line 385
     :cond_26
     aget v1, v0, v9
 
@@ -1024,7 +944,6 @@
 
     aput v1, v0, v9
 
-    .line 387
     :cond_27
     :goto_c
     aget v1, v0, v7
@@ -1041,7 +960,6 @@
 
     goto/16 :goto_1
 
-    .line 386
     :cond_28
     aget v1, v0, v9
 
@@ -1057,7 +975,6 @@
 
     goto :goto_c
 
-    .line 388
     :cond_29
     aget v1, v0, v7
 
@@ -1073,7 +990,6 @@
 
     goto/16 :goto_1
 
-    .line 398
     :cond_2a
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -1093,7 +1009,6 @@
 
     iput-object v2, v1, Lcom/android/settings/GSensorCalibration;->animBubble_V:Landroid/view/animation/TranslateAnimation;
 
-    .line 399
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     aget v2, v0, v9
@@ -1102,7 +1017,6 @@
 
     goto/16 :goto_2
 
-    .line 411
     :cond_2b
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -1122,7 +1036,6 @@
 
     iput-object v2, v1, Lcom/android/settings/GSensorCalibration;->animBubble_H:Landroid/view/animation/TranslateAnimation;
 
-    .line 412
     iget-object v1, p0, Lcom/android/settings/GSensorCalibration$1;->this$0:Lcom/android/settings/GSensorCalibration;
 
     aget v2, v0, v7

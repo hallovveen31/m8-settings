@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/storage/HtcAppsStatistician;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 364
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$1;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +37,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 366
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$1;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     #calls: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->requestPackageSizeInfo()V
     invoke-static {v0}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->access$000(Lcom/android/settings/framework/core/storage/HtcAppsStatistician;)V
 
-    .line 367
     return-void
 .end method

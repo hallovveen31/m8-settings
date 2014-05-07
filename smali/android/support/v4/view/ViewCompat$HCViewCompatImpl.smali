@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 384
     invoke-direct {p0}, Landroid/support/v4/view/ViewCompat$GBViewCompatImpl;-><init>()V
 
     return-void
@@ -29,10 +27,7 @@
 # virtual methods
 .method public getAlpha(Landroid/view/View;)F
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 391
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getAlpha(Landroid/view/View;)F
 
     move-result v0
@@ -43,8 +38,6 @@
 .method getFrameTime()J
     .locals 2
 
-    .prologue
-    .line 387
     invoke-static {}, Landroid/support/v4/view/ViewCompatHC;->getFrameTime()J
 
     move-result-wide v0
@@ -54,10 +47,7 @@
 
 .method public getLayerType(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 399
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getLayerType(Landroid/view/View;)I
 
     move-result v0
@@ -67,10 +57,7 @@
 
 .method public getMeasuredHeightAndState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 419
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredHeightAndState(Landroid/view/View;)I
 
     move-result v0
@@ -80,10 +67,7 @@
 
 .method public getMeasuredState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 423
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredState(Landroid/view/View;)I
 
     move-result v0
@@ -93,10 +77,7 @@
 
 .method public getMeasuredWidthAndState(Landroid/view/View;)I
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 415
     invoke-static {p1}, Landroid/support/v4/view/ViewCompatHC;->getMeasuredWidthAndState(Landroid/view/View;)I
 
     move-result v0
@@ -106,12 +87,7 @@
 
 .method public resolveSizeAndState(III)I
     .locals 1
-    .parameter "size"
-    .parameter "measureSpec"
-    .parameter "childMeasuredState"
 
-    .prologue
-    .line 411
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/ViewCompatHC;->resolveSizeAndState(III)I
 
     move-result v0
@@ -121,34 +97,22 @@
 
 .method public setLayerPaint(Landroid/view/View;Landroid/graphics/Paint;)V
     .locals 1
-    .parameter "view"
-    .parameter "paint"
 
-    .prologue
-    .line 405
     invoke-virtual {p0, p1}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;->getLayerType(Landroid/view/View;)I
 
     move-result v0
 
     invoke-virtual {p0, p1, v0, p2}, Landroid/support/v4/view/ViewCompat$HCViewCompatImpl;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 407
     invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
-    .line 408
     return-void
 .end method
 
 .method public setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
     .locals 0
-    .parameter "view"
-    .parameter "layerType"
-    .parameter "paint"
 
-    .prologue
-    .line 395
     invoke-static {p1, p2, p3}, Landroid/support/v4/view/ViewCompatHC;->setLayerType(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 396
     return-void
 .end method

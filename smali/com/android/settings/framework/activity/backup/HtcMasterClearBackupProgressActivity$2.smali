@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$2;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$2;->val$context:Landroid/content/Context;
@@ -45,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 144
     iget-object v0, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$2;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;
 
     iget-object v1, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$2;->val$context:Landroid/content/Context;
@@ -54,6 +48,5 @@
     #calls: Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->doBackupInBackground(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->access$100(Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;Landroid/content/Context;)V
 
-    .line 145
     return-void
 .end method

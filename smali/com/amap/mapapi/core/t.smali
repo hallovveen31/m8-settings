@@ -34,11 +34,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 164
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -52,16 +49,12 @@
 # virtual methods
 .method public declared-synchronized add(ILjava/lang/Object;)V
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)V"
         }
     .end annotation
 
-    .prologue
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -71,12 +64,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 39
     monitor-exit p0
 
     return-void
 
-    .line 38
     :catchall_0
     move-exception v0
 
@@ -87,15 +78,12 @@
 
 .method public declared-synchronized add(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"
         }
     .end annotation
 
-    .prologue
-    .line 158
     monitor-enter p0
 
     :try_start_0
@@ -121,8 +109,6 @@
 
 .method public declared-synchronized addAll(ILjava/util/Collection;)Z
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -131,8 +117,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 48
     monitor-enter p0
 
     :try_start_0
@@ -158,7 +142,6 @@
 
 .method public declared-synchronized addAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -167,8 +150,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 43
     monitor-enter p0
 
     :try_start_0
@@ -194,15 +175,12 @@
 
 .method public declared-synchronized c(Ljava/lang/Object;)V
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .prologue
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -210,12 +188,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     monitor-exit p0
 
     return-void
 
-    .line 14
     :catchall_0
     move-exception v0
 
@@ -227,8 +203,6 @@
 .method public declared-synchronized clear()V
     .locals 1
 
-    .prologue
-    .line 53
     monitor-enter p0
 
     :try_start_0
@@ -238,12 +212,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
     monitor-exit p0
 
     return-void
 
-    .line 53
     :catchall_0
     move-exception v0
 
@@ -254,10 +226,7 @@
 
 .method public declared-synchronized contains(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
-    .prologue
-    .line 58
     monitor-enter p0
 
     :try_start_0
@@ -283,7 +252,6 @@
 
 .method public declared-synchronized containsAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -292,14 +260,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 63
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->containsAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -319,20 +285,16 @@
 
 .method public declared-synchronized get(I)Ljava/lang/Object;
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
         }
     .end annotation
 
-    .prologue
-    .line 69
     monitor-enter p0
 
     const/4 v0, 0x0
 
-    .line 72
     :try_start_0
     iget-object v1, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
@@ -343,25 +305,21 @@
 
     move-result-object v0
 
-    .line 78
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 74
     :catch_0
     move-exception v1
 
-    .line 76
     :try_start_1
-    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 69
     :catchall_0
     move-exception v0
 
@@ -372,10 +330,7 @@
 
 .method public declared-synchronized indexOf(Ljava/lang/Object;)I
     .locals 1
-    .parameter
 
-    .prologue
-    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -402,14 +357,12 @@
 .method public declared-synchronized isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 88
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -437,14 +390,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 93
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->listIterator()Ljava/util/ListIterator;
+    invoke-virtual {v0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -464,10 +415,7 @@
 
 .method public declared-synchronized lastIndexOf(Ljava/lang/Object;)I
     .locals 1
-    .parameter
 
-    .prologue
-    .line 98
     monitor-enter p0
 
     :try_start_0
@@ -501,14 +449,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 103
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0}, Ljava/util/LinkedList;->listIterator()Ljava/util/ListIterator;
+    invoke-virtual {v0}, Ljava/util/AbstractList;->listIterator()Ljava/util/ListIterator;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -528,7 +474,6 @@
 
 .method public declared-synchronized listIterator(I)Ljava/util/ListIterator;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
@@ -537,8 +482,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 108
     monitor-enter p0
 
     :try_start_0
@@ -564,15 +507,12 @@
 
 .method public declared-synchronized remove(I)Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)TT;"
         }
     .end annotation
 
-    .prologue
-    .line 113
     monitor-enter p0
 
     :try_start_0
@@ -598,10 +538,7 @@
 
 .method public declared-synchronized remove(Ljava/lang/Object;)Z
     .locals 1
-    .parameter
 
-    .prologue
-    .line 118
     monitor-enter p0
 
     :try_start_0
@@ -627,7 +564,6 @@
 
 .method public declared-synchronized removeAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -636,14 +572,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 123
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->removeAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->removeAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -663,7 +597,6 @@
 
 .method public declared-synchronized retainAll(Ljava/util/Collection;)Z
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -672,14 +605,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 128
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->retainAll(Ljava/util/Collection;)Z
+    invoke-virtual {v0, p1}, Ljava/util/AbstractCollection;->retainAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -699,16 +630,12 @@
 
 .method public declared-synchronized set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ITT;)TT;"
         }
     .end annotation
 
-    .prologue
-    .line 133
     monitor-enter p0
 
     :try_start_0
@@ -735,8 +662,6 @@
 .method public declared-synchronized size()I
     .locals 1
 
-    .prologue
-    .line 138
     monitor-enter p0
 
     :try_start_0
@@ -762,8 +687,6 @@
 
 .method public declared-synchronized subList(II)Ljava/util/List;
     .locals 1
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
@@ -772,14 +695,12 @@
         }
     .end annotation
 
-    .prologue
-    .line 143
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/mapapi/core/t;->a:Ljava/util/LinkedList;
 
-    invoke-virtual {v0, p1, p2}, Ljava/util/LinkedList;->subList(II)Ljava/util/List;
+    invoke-virtual {v0, p1, p2}, Ljava/util/AbstractList;->subList(II)Ljava/util/List;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -800,8 +721,6 @@
 .method public declared-synchronized toArray()[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 148
     monitor-enter p0
 
     :try_start_0
@@ -827,7 +746,6 @@
 
 .method public declared-synchronized toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<V:",
@@ -836,8 +754,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 153
     monitor-enter p0
 
     :try_start_0

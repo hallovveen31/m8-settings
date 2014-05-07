@@ -30,16 +30,11 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;Ljava/lang/String;)V
     .locals 3
-    .parameter
-    .parameter "who"
 
-    .prologue
-    .line 607
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment$PreferenceListViewListener;->this$0:Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 608
     const-string v0, "FPS (%s fling and pan)"
 
     const/4 v1, 0x1
@@ -56,7 +51,6 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment$PreferenceListViewListener;->WHICH_ITEM:Ljava/lang/String;
 
-    .line 609
     return-void
 .end method
 
@@ -64,30 +58,18 @@
 # virtual methods
 .method public onScroll(Landroid/widget/AbsListView;III)V
     .locals 0
-    .parameter "arg0"
-    .parameter "arg1"
-    .parameter "arg2"
-    .parameter "arg3"
 
-    .prologue
-    .line 627
     return-void
 .end method
 
 .method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
     .locals 1
-    .parameter "view"
-    .parameter "scrollState"
 
-    .prologue
-    .line 613
     packed-switch p2, :pswitch_data_0
 
-    .line 623
     :goto_0
     return-void
 
-    .line 615
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment$PreferenceListViewListener;->WHICH_ITEM:Ljava/lang/String;
 
@@ -95,7 +77,6 @@
 
     goto :goto_0
 
-    .line 618
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment$PreferenceListViewListener;->WHICH_ITEM:Ljava/lang/String;
 
@@ -103,7 +84,6 @@
 
     goto :goto_0
 
-    .line 613
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

@@ -37,14 +37,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 453
     new-instance v0, Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
 
     const-string v1, "DRAW_RETICLE_NEVER"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/amap/mapapi/map/MapView$ReticleDrawMode;->DRAW_RETICLE_UNDER:Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
 
-    .line 452
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
@@ -93,16 +90,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 452
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -110,10 +103,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
     .locals 1
-    .parameter
 
-    .prologue
-    .line 452
     const-class v0, Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -128,11 +118,9 @@
 .method public static values()[Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
     .locals 1
 
-    .prologue
-    .line 452
     sget-object v0, Lcom/amap/mapapi/map/MapView$ReticleDrawMode;->a:[Lcom/amap/mapapi/map/MapView$ReticleDrawMode;
 
-    invoke-virtual {v0}, [Lcom/amap/mapapi/map/MapView$ReticleDrawMode;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

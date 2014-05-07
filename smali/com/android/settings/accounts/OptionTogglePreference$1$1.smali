@@ -23,11 +23,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/OptionTogglePreference$1;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 38
     iput-object p1, p0, Lcom/android/settings/accounts/OptionTogglePreference$1$1;->this$1:Lcom/android/settings/accounts/OptionTogglePreference$1;
 
     iput-boolean p2, p0, Lcom/android/settings/accounts/OptionTogglePreference$1$1;->val$check:Z
@@ -42,12 +38,9 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 40
     iget-boolean v0, p0, Lcom/android/settings/accounts/OptionTogglePreference$1$1;->val$check:Z
 
     invoke-static {v0}, Landroid/content/ContentResolver;->setMasterSyncAutomatically(Z)V
 
-    .line 41
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/map/MapView$g;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1332
     iput-object p1, p0, Lcom/amap/mapapi/map/ah;->a:Lcom/amap/mapapi/map/MapView$g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 1334
     iget-object v0, p0, Lcom/amap/mapapi/map/ah;->a:Lcom/amap/mapapi/map/MapView$g;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/MapView$g;->i:Lcom/amap/mapapi/map/MapView;
@@ -52,11 +47,9 @@
 
     if-nez v0, :cond_0
 
-    .line 1338
     :goto_0
     return-void
 
-    .line 1337
     :cond_0
     iget-object v0, p0, Lcom/amap/mapapi/map/ah;->a:Lcom/amap/mapapi/map/MapView$g;
 

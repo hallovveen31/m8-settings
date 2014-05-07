@@ -24,10 +24,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/GSensorCalibration;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 516
     iput-object p1, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/GSensorCalibration;Lcom/android/settings/GSensorCalibration$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 516
     invoke-direct {p0, p1}, Lcom/android/settings/GSensorCalibration$Calibrate;-><init>(Lcom/android/settings/GSensorCalibration;)V
 
     return-void
@@ -52,24 +45,20 @@
 .method public run()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 521
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget v0, v0, Lcom/android/settings/GSensorCalibration;->code:I
 
     if-nez v0, :cond_2
 
-    .line 524
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v0, v0, Lcom/android/settings/GSensorCalibration;->actionBarText:Lcom/htc/widget/ActionBarText;
 
     if-eqz v0, :cond_0
 
-    .line 525
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v0, v0, Lcom/android/settings/GSensorCalibration;->actionBarText:Lcom/htc/widget/ActionBarText;
@@ -78,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarText;->setSecondaryText(I)V
 
-    .line 526
     :cond_0
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -86,9 +74,8 @@
 
     const v1, 0x7f0c04c1
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 527
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     #getter for: Lcom/android/settings/GSensorCalibration;->alive:Z
@@ -98,7 +85,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 528
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     #getter for: Lcom/android/settings/GSensorCalibration;->sp:Landroid/content/SharedPreferences;
@@ -118,7 +104,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 541
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
@@ -156,17 +141,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 543
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v0, v0, Lcom/android/settings/GSensorCalibration;->calibrateBtn:Landroid/widget/Button;
 
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 546
     return-void
 
-    .line 532
     :cond_2
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -174,7 +156,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 533
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
     iget-object v0, v0, Lcom/android/settings/GSensorCalibration;->actionBarText:Lcom/htc/widget/ActionBarText;
@@ -183,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/ActionBarText;->setSecondaryText(I)V
 
-    .line 534
     :cond_3
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Calibrate;->this$0:Lcom/android/settings/GSensorCalibration;
 
@@ -191,7 +171,7 @@
 
     const v1, 0x7f0c04c0
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_0
 .end method

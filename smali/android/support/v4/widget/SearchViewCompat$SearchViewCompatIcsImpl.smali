@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 234
     invoke-direct {p0}, Landroid/support/v4/widget/SearchViewCompat$SearchViewCompatHoneycombImpl;-><init>()V
 
     return-void
@@ -29,10 +27,7 @@
 # virtual methods
 .method public newSearchView(Landroid/content/Context;)Landroid/view/View;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 238
     invoke-static {p1}, Landroid/support/v4/widget/SearchViewCompatIcs;->newSearchView(Landroid/content/Context;)Landroid/view/View;
 
     move-result-object v0
@@ -42,26 +37,16 @@
 
 .method public setImeOptions(Landroid/view/View;I)V
     .locals 0
-    .parameter "searchView"
-    .parameter "imeOptions"
 
-    .prologue
-    .line 243
     invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->setImeOptions(Landroid/view/View;I)V
 
-    .line 244
     return-void
 .end method
 
 .method public setInputType(Landroid/view/View;I)V
     .locals 0
-    .parameter "searchView"
-    .parameter "inputType"
 
-    .prologue
-    .line 248
     invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->setInputType(Landroid/view/View;I)V
 
-    .line 249
     return-void
 .end method

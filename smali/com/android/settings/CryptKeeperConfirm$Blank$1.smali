@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/CryptKeeperConfirm$Blank;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 65
     iput-object p1, p0, Lcom/android/settings/CryptKeeperConfirm$Blank$1;->this$0:Lcom/android/settings/CryptKeeperConfirm$Blank;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,46 +37,36 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 67
     const-string v4, "mount"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 68
-    .local v3, service:Landroid/os/IBinder;
     if-nez v3, :cond_0
 
-    .line 69
     const-string v4, "CryptKeeper"
 
     const-string v5, "Failed to find the mount service"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     iget-object v4, p0, Lcom/android/settings/CryptKeeperConfirm$Blank$1;->this$0:Lcom/android/settings/CryptKeeperConfirm$Blank;
 
-    invoke-virtual {v4}, Lcom/android/settings/CryptKeeperConfirm$Blank;->finish()V
+    invoke-virtual {v4}, Landroid/app/Activity;->finish()V
 
-    .line 84
     :goto_0
     return-void
 
-    .line 74
     :cond_0
     invoke-static {v3}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v2
 
-    .line 76
-    .local v2, mountService:Landroid/os/storage/IMountService;
     :try_start_0
     iget-object v4, p0, Lcom/android/settings/CryptKeeperConfirm$Blank$1;->this$0:Lcom/android/settings/CryptKeeperConfirm$Blank;
 
-    invoke-virtual {v4}, Lcom/android/settings/CryptKeeperConfirm$Blank;->getIntent()Landroid/content/Intent;
+    invoke-virtual {v4}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v4
 
@@ -87,11 +74,8 @@
 
     move-result-object v0
 
-    .line 78
-    .local v0, args:Landroid/os/Bundle;
     invoke-static {v0}, Lcom/android/settings/framework/core/security/crypto/HtcXorCrypto;->decrypt(Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 80
     const-string v4, "password"
 
     invoke-virtual {v0, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -104,13 +88,9 @@
 
     goto :goto_0
 
-    .line 81
-    .end local v0           #args:Landroid/os/Bundle;
     :catch_0
     move-exception v1
 
-    .line 82
-    .local v1, e:Ljava/lang/Exception;
     const-string v4, "CryptKeeper"
 
     const-string v5, "Error while encrypting..."

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RadioInfo;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 165
     iput-object p1, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -36,28 +33,22 @@
 # virtual methods
 .method public onCallForwardingIndicatorChanged(Z)V
     .locals 1
-    .parameter "cfi"
 
-    .prologue
-    .line 192
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #setter for: Lcom/android/settings/RadioInfo;->mCfiValue:Z
     invoke-static {v0, p1}, Lcom/android/settings/RadioInfo;->access$802(Lcom/android/settings/RadioInfo;Z)Z
 
-    .line 193
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateCallRedirect()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$900(Lcom/android/settings/RadioInfo;)V
 
-    .line 194
     return-void
 .end method
 
 .method public onCellInfoChanged(Ljava/util/List;)V
     .locals 3
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -68,9 +59,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 198
-    .local p1, arrayCi:Ljava/util/List;,"Ljava/util/List<Landroid/telephony/CellInfo;>;"
     const-string v0, "phone"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,96 +81,74 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateCellInfoTv(Ljava/util/List;)V
     invoke-static {v0, p1}, Lcom/android/settings/RadioInfo;->access$1000(Lcom/android/settings/RadioInfo;Ljava/util/List;)V
 
-    .line 200
     return-void
 .end method
 
 .method public onCellLocationChanged(Landroid/telephony/CellLocation;)V
     .locals 1
-    .parameter "location"
 
-    .prologue
-    .line 181
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateLocation(Landroid/telephony/CellLocation;)V
     invoke-static {v0, p1}, Lcom/android/settings/RadioInfo;->access$500(Lcom/android/settings/RadioInfo;Landroid/telephony/CellLocation;)V
 
-    .line 182
     return-void
 .end method
 
 .method public onDataActivity(I)V
     .locals 1
-    .parameter "direction"
 
-    .prologue
-    .line 176
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateDataStats2()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$400(Lcom/android/settings/RadioInfo;)V
 
-    .line 177
     return-void
 .end method
 
 .method public onDataConnectionStateChanged(I)V
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 168
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateDataState()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$000(Lcom/android/settings/RadioInfo;)V
 
-    .line 169
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateDataStats()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$100(Lcom/android/settings/RadioInfo;)V
 
-    .line 170
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updatePdpList()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$200(Lcom/android/settings/RadioInfo;)V
 
-    .line 171
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateNetworkType()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$300(Lcom/android/settings/RadioInfo;)V
 
-    .line 172
     return-void
 .end method
 
 .method public onMessageWaitingIndicatorChanged(Z)V
     .locals 1
-    .parameter "mwi"
 
-    .prologue
-    .line 186
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #setter for: Lcom/android/settings/RadioInfo;->mMwiValue:Z
     invoke-static {v0, p1}, Lcom/android/settings/RadioInfo;->access$602(Lcom/android/settings/RadioInfo;Z)Z
 
-    .line 187
     iget-object v0, p0, Lcom/android/settings/RadioInfo$1;->this$0:Lcom/android/settings/RadioInfo;
 
     #calls: Lcom/android/settings/RadioInfo;->updateMessageWaiting()V
     invoke-static {v0}, Lcom/android/settings/RadioInfo;->access$700(Lcom/android/settings/RadioInfo;)V
 
-    .line 188
     return-void
 .end method

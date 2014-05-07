@@ -30,13 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcActivityCallbackProxy;Ljava/lang/Class;Landroid/content/Context;Lcom/htc/preference/HtcPreferenceGroup;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 217
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcActivityCallbackProxy$1;->this$0:Lcom/android/settings/framework/app/HtcActivityCallbackProxy;
 
     iput-object p2, p0, Lcom/android/settings/framework/app/HtcActivityCallbackProxy$1;->val$preferenceCallback:Ljava/lang/Class;
@@ -55,8 +49,6 @@
 .method public createCallbackInstance()Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 230
     :try_start_0
     iget-object v4, p0, Lcom/android/settings/framework/app/HtcActivityCallbackProxy$1;->val$preferenceCallback:Ljava/lang/Class;
 
@@ -74,8 +66,6 @@
 
     move-result-object v0
 
-    .line 233
-    .local v0, constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
     const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -92,25 +82,17 @@
 
     check-cast v3, Lcom/htc/preference/HtcPreference;
 
-    .line 234
-    .local v3, item:Lcom/htc/preference/HtcPreference;
     iget-object v4, p0, Lcom/android/settings/framework/app/HtcActivityCallbackProxy$1;->val$container:Lcom/htc/preference/HtcPreferenceGroup;
 
     invoke-virtual {v4, v3}, Lcom/htc/preference/HtcPreferenceGroup;->addPreference(Lcom/htc/preference/HtcPreference;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     return-object v3
 
-    .line 236
-    .end local v0           #constructor:Ljava/lang/reflect/Constructor;,"Ljava/lang/reflect/Constructor<*>;"
-    .end local v3           #item:Lcom/htc/preference/HtcPreference;
     :catch_0
     move-exception v1
 
-    .line 237
-    .local v1, e:Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -121,7 +103,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 
@@ -171,15 +153,12 @@
 
     move-result-object v2
 
-    .line 242
-    .local v2, errorMessage:Ljava/lang/String;
     invoke-static {}, Lcom/android/settings/framework/app/HtcActivityCallbackProxy;->access$000()Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v4, v2}, Lcom/android/settings/framework/util/log/HtcLog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     new-instance v4, Ljava/lang/RuntimeException;
 
     invoke-direct {v4, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -197,8 +176,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 221
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcActivityCallbackProxy$1;->val$preferenceCallback:Ljava/lang/Class;
 
     return-object v0

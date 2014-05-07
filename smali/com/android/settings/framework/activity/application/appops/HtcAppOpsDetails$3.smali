@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 135
     invoke-static {}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->values()[Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->ALLOW:Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->ALWAYS_ASK:Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->DENY:Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/security/permission/HtcPermissionManager$OpModeType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

@@ -7125,6 +7125,7 @@
     <public type="string" name="user_image_take_photo" id="0x7f0c12f2" />
     <public type="string" name="user_image_choose_photo" id="0x7f0c12f3" />
     <public type="string" name="regulatory_info_text" id="0x7f0c12f4" />
+    <public type="string" name="app_ops_settings_summary" id="0x7f0c12f5" />
     <public type="integer" name="maximum_user_dictionary_word_length" id="0x7f0d0000" />
     <public type="integer" name="keyguard_appwidget_picker_cols" id="0x7f0d0001" />
     <public type="integer" name="preference_scrollbar_style" id="0x7f0d0002" />

@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 366
     iput-object p1, p0, Lcom/android/settings/ChargeOnlyEnabler$4;->val$context:Landroid/content/Context;
 
     iput-boolean p2, p0, Lcom/android/settings/ChargeOnlyEnabler$4;->val$apply:Z
@@ -45,20 +41,15 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 369
     new-instance v0, Lcom/htc/mdm/connectivity/MDMUsb;
 
     iget-object v1, p0, Lcom/android/settings/ChargeOnlyEnabler$4;->val$context:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lcom/htc/mdm/connectivity/MDMUsb;-><init>(Landroid/content/Context;)V
 
-    .line 370
-    .local v0, sMdmUsb:Lcom/htc/mdm/connectivity/MDMUsb;
     iget-boolean v1, p0, Lcom/android/settings/ChargeOnlyEnabler$4;->val$apply:Z
 
     invoke-virtual {v0, v1}, Lcom/htc/mdm/connectivity/MDMUsb;->setUsbStatus(Z)Z
 
-    .line 371
     return-void
 .end method

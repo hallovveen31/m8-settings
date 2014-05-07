@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccessibilitySettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 554
     iput-object p1, p0, Lcom/android/settings/AccessibilitySettings$3;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,18 +36,13 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 559
     iget-object v3, p0, Lcom/android/settings/AccessibilitySettings$3;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Lcom/android/settings/AccessibilitySettings;->removeDialog(I)V
+    invoke-virtual {v3, v4}, Lcom/android/settings/SettingsPreferenceFragment;->removeDialog(I)V
 
-    .line 560
     const-string v3, "ro.screenreader.market"
 
     const-string v4, "market://search?q=pname:com.google.android.marvin.talkback"
@@ -59,26 +51,19 @@
 
     move-result-object v2
 
-    .line 563
-    .local v2, screenreaderMarketLink:Ljava/lang/String;
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 564
-    .local v1, marketUri:Landroid/net/Uri;
     new-instance v0, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
 
     invoke-direct {v0, v3, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 565
-    .local v0, marketIntent:Landroid/content/Intent;
     iget-object v3, p0, Lcom/android/settings/AccessibilitySettings$3;->this$0:Lcom/android/settings/AccessibilitySettings;
 
-    invoke-virtual {v3, v0}, Lcom/android/settings/AccessibilitySettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v3, v0}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
 
-    .line 566
     return-void
 .end method

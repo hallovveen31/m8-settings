@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccessibilitySettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 176
     iput-object p1, p0, Lcom/android/settings/AccessibilitySettings$2;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     invoke-direct {p0}, Lcom/android/internal/view/RotationPolicy$RotationPolicyListener;-><init>()V
@@ -37,13 +34,10 @@
 .method public onChange()V
     .locals 1
 
-    .prologue
-    .line 179
     iget-object v0, p0, Lcom/android/settings/AccessibilitySettings$2;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #calls: Lcom/android/settings/AccessibilitySettings;->updateLockScreenRotationCheckbox()V
     invoke-static {v0}, Lcom/android/settings/AccessibilitySettings;->access$300(Lcom/android/settings/AccessibilitySettings;)V
 
-    .line 180
     return-void
 .end method

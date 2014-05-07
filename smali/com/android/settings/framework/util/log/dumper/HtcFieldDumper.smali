@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,8 +54,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/android/settings/framework/util/log/dumper/HtcAbsDumper;-><init>()V
 
     return-void
@@ -65,9 +61,6 @@
 
 .method private append1DIntArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     .locals 4
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "field"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;,
@@ -75,8 +68,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 78
     const/4 v2, 0x0
 
     invoke-virtual {p3, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -89,8 +80,6 @@
 
     check-cast v0, [I
 
-    .line 80
-    .local v0, array:[I
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -113,16 +102,13 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 81
     const/4 v1, 0x0
 
-    .local v1, i:I
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
-    .line 82
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -165,21 +151,16 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 81
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 84
     :cond_0
     return-void
 .end method
 
 .method private append1DStringArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     .locals 4
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "field"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;,
@@ -187,8 +168,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 123
     const/4 v2, 0x0
 
     invoke-virtual {p3, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -201,8 +180,6 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 125
-    .local v0, array:[Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,16 +202,13 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
     const/4 v1, 0x0
 
-    .local v1, i:I
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_0
 
-    .line 127
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,21 +251,16 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 129
     :cond_0
     return-void
 .end method
 
 .method private append2DIntArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     .locals 5
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "field"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/IllegalArgumentException;,
@@ -299,8 +268,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 99
     const/4 v3, 0x0
 
     invoke-virtual {p3, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -313,17 +280,13 @@
 
     check-cast v0, [[I
 
-    .line 101
-    .local v0, array:[[I
     const/4 v1, 0x0
 
-    .local v1, i:I
     :goto_0
     array-length v3, v0
 
     if-ge v1, v3, :cond_1
 
-    .line 102
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -366,10 +329,8 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     const/4 v2, 0x0
 
-    .local v2, j:I
     :goto_1
     aget-object v3, v0, v1
 
@@ -377,7 +338,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 105
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,19 +392,15 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 104
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 101
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 109
-    .end local v2           #j:I
     :cond_1
     return-void
 .end method
@@ -453,15 +409,9 @@
 # virtual methods
 .method public bridge synthetic appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 17
     check-cast p3, Ljava/lang/reflect/Field;
 
-    .end local p3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
 
     return-void
@@ -469,12 +419,7 @@
 
 .method public appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     .locals 5
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "field"
 
-    .prologue
-    .line 37
     invoke-virtual {p3}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v2
@@ -483,8 +428,6 @@
 
     move-result-object v1
 
-    .line 40
-    .local v1, typeName:Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -516,7 +459,6 @@
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 41
     const-string v2, "int[]"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -525,14 +467,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 42
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;->append1DIntArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
 
-    .line 63
     :goto_0
     return-void
 
-    .line 44
     :cond_0
     const-string v2, "int[][]"
 
@@ -542,7 +481,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;->append2DIntArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
@@ -550,18 +488,13 @@
 
     goto :goto_0
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 58
-    .local v0, e:Ljava/lang/IllegalArgumentException;
-    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
-    .line 47
-    .end local v0           #e:Ljava/lang/IllegalArgumentException;
     :cond_1
     :try_start_1
     const-string v2, "java.lang.String[]"
@@ -572,7 +505,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 48
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;->append1DStringArray(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/reflect/Field;)V
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
@@ -580,18 +512,13 @@
 
     goto :goto_0
 
-    .line 59
     :catch_1
     move-exception v0
 
-    .line 61
-    .local v0, e:Ljava/lang/IllegalAccessException;
-    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
-    .line 51
-    .end local v0           #e:Ljava/lang/IllegalAccessException;
     :cond_2
     :try_start_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -711,8 +638,6 @@
 .method public getClassName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 29
     const-class v0, Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -725,8 +650,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;->TAG:Ljava/lang/String;
 
     return-object v0

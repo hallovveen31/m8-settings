@@ -21,8 +21,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,10 +28,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/bluetooth/BluetoothDeviceFilter$1;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 78
     invoke-direct {p0}, Lcom/android/settings/bluetooth/BluetoothDeviceFilter$AllFilter;-><init>()V
 
     return-void
@@ -43,10 +38,7 @@
 # virtual methods
 .method public matches(Landroid/bluetooth/BluetoothDevice;)Z
     .locals 1
-    .parameter "device"
 
-    .prologue
-    .line 80
     const/4 v0, 0x1
 
     return v0

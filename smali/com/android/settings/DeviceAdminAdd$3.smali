@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DeviceAdminAdd;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 222
     iput-object p1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,19 +36,15 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 5
-    .parameter "v"
 
-    .prologue
     const/4 v4, -0x1
 
-    .line 224
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
     iget-boolean v1, v1, Lcom/android/settings/DeviceAdminAdd;->mAdding:Z
 
     if-eqz v1, :cond_1
 
-    .line 226
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
@@ -71,32 +64,26 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/app/admin/DevicePolicyManager;->setActiveAdmin(Landroid/content/ComponentName;Z)V
 
-    .line 227
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
     const/4 v2, -0x1
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/DeviceAdminAdd;->setResult(I)V
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->setResult(I)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 237
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
-    invoke-virtual {v1}, Lcom/android/settings/DeviceAdminAdd;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 269
     :goto_1
     return-void
 
-    .line 228
     :catch_0
     move-exception v0
 
-    .line 231
-    .local v0, e:Ljava/lang/RuntimeException;
     sget-object v1, Lcom/android/settings/DeviceAdminAdd;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -127,7 +114,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 233
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
     iget-object v1, v1, Lcom/android/settings/DeviceAdminAdd;->mDPM:Landroid/app/admin/DevicePolicyManager;
@@ -146,15 +132,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
-    invoke-virtual {v1, v4}, Lcom/android/settings/DeviceAdminAdd;->setResult(I)V
+    invoke-virtual {v1, v4}, Landroid/app/Activity;->setResult(I)V
 
     goto :goto_0
 
-    .line 242
-    .end local v0           #e:Ljava/lang/RuntimeException;
     :cond_1
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -165,7 +148,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 245
     :goto_2
     iget-object v1, p0, Lcom/android/settings/DeviceAdminAdd$3;->this$0:Lcom/android/settings/DeviceAdminAdd;
 
@@ -191,7 +173,6 @@
 
     goto :goto_1
 
-    .line 243
     :catch_1
     move-exception v1
 

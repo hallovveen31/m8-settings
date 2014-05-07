@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public onGetMethod()Ljava/lang/reflect/Method;
     .locals 5
 
-    .prologue
-    .line 84
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;->sClass:Ljava/lang/Class;
 
     const-string v1, "setId"

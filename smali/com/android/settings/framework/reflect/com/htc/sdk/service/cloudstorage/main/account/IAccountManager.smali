@@ -49,8 +49,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 31
     const-string v0, "com.htc.sdk.service.cloudstorage.main.account.IAccountManager"
 
     invoke-static {v0}, Lcom/android/settings/framework/content/HtcClassManager;->getClass(Ljava/lang/String;)Ljava/lang/Class;
@@ -59,7 +57,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sClass:Ljava/lang/Class;
 
-    .line 61
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager$1;
@@ -70,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccountById:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 73
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager$2;
@@ -81,7 +77,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccountCount:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 90
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager$3;
@@ -92,7 +87,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccounts:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 103
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager$4;
@@ -103,7 +97,6 @@
 
     sput-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getQuota:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    .line 116
     new-instance v0, Lcom/android/settings/framework/reflect/HtcMethodReference;
 
     new-instance v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager$5;
@@ -119,14 +112,9 @@
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "instance"
 
-    .prologue
-    .line 129
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
     invoke-direct {p0, p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;-><init>(Ljava/lang/Object;)V
 
-    .line 130
     return-void
 .end method
 
@@ -134,7 +122,6 @@
 # virtual methods
 .method public getAccountById(Ljava/lang/String;)Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
     .locals 5
-    .parameter "Id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -149,12 +136,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 193
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
     sget-object v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccountById:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -170,14 +154,10 @@
 
     move-result-object v0
 
-    .line 195
-    .local v0, instance:Ljava/lang/Object;
     if-nez v0, :cond_0
 
-    .line 196
     const/4 v1, 0x0
 
-    .line 198
     :goto_0
     return-object v1
 
@@ -192,14 +172,11 @@
 .method public getAccountCount()I
     .locals 5
 
-    .prologue
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
     const/4 v1, 0x0
 
-    .line 154
     sget-object v2, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccountCount:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -209,19 +186,14 @@
 
     move-result-object v0
 
-    .line 156
-    .local v0, result:Ljava/lang/Object;
     if-eqz v0, :cond_0
 
-    .line 157
     check-cast v0, Ljava/lang/Integer;
 
-    .end local v0           #result:Ljava/lang/Object;
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    .line 159
     :cond_0
     return v1
 .end method
@@ -242,12 +214,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 170
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
     sget-object v4, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getAccounts:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -261,30 +230,22 @@
 
     check-cast v2, Ljava/util/List;
 
-    .line 172
-    .local v2, list:Ljava/util/List;,"Ljava/util/List<*>;"
     if-nez v2, :cond_1
 
-    .line 173
     const/4 v3, 0x0
 
-    .line 180
     :cond_0
     return-object v3
 
-    .line 175
     :cond_1
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 177
-    .local v3, newList:Ljava/util/List;,"Ljava/util/List<TT;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .local v1, i$:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -296,8 +257,6 @@
 
     move-result-object v0
 
-    .line 178
-    .local v0, account:Ljava/lang/Object;
     new-instance v4, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;
 
     invoke-direct {v4, v0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;-><init>(Ljava/lang/Object;)V
@@ -309,7 +268,6 @@
 
 .method public getQuota(Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;)Landroid/os/Bundle;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
@@ -323,13 +281,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 218
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
-    .local p1, account:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;,"TT;"
     sget-object v0, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_getQuota:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -339,7 +293,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/model/CloudStorageAccount;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -368,12 +322,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 141
-    .local p0, this:Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;,"Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager<TT;>;"
     sget-object v1, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->sMethod_signin:Lcom/android/settings/framework/reflect/HtcMethodReference;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/account/IAccountManager;->getInstance()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/android/settings/framework/reflect/HtcAbsWrapper;->getInstance()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -385,14 +336,10 @@
 
     move-result-object v0
 
-    .line 142
-    .local v0, instance:Ljava/lang/Object;
     if-nez v0, :cond_0
 
-    .line 143
     const/4 v1, 0x0
 
-    .line 145
     :goto_0
     return-object v1
 

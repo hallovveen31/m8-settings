@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/GyroscopeCalibration;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 116
     iput-object p1, p0, Lcom/android/settings/GyroscopeCalibration$1;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 120
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v0, :cond_0
 
-    .line 121
     iget-object v0, p0, Lcom/android/settings/GyroscopeCalibration$1;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->TAG:Ljava/lang/String;
@@ -82,7 +75,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :cond_0
     iget-object v0, p0, Lcom/android/settings/GyroscopeCalibration$1;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
@@ -93,16 +85,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 124
     iget-object v0, p0, Lcom/android/settings/GyroscopeCalibration$1;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
-    invoke-virtual {v0}, Lcom/android/settings/GyroscopeCalibration;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 128
     :goto_0
     return-void
 
-    .line 126
     :cond_1
     new-instance v0, Lcom/android/settings/GyroscopeCalibration$CalibrationAsyncTask;
 
@@ -114,7 +103,7 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/GyroscopeCalibration$CalibrationAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto :goto_0
 .end method

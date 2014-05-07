@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 239
     iput-object p1, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$3;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 242
     iget-object v1, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$3;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
     #getter for: Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
@@ -51,7 +46,7 @@
 
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$3;->this$0:Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/htc/preference/HtcListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v2
 
@@ -64,15 +59,12 @@
 
     move-result v0
 
-    .line 244
-    .local v0, raws:I
     invoke-static {}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->access$500()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 245
     invoke-static {}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->access$600()Ljava/lang/String;
 
     move-result-object v1
@@ -97,7 +89,6 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     :cond_0
     return-void
 .end method

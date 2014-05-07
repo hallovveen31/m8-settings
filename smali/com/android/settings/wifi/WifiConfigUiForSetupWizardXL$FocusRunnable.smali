@@ -26,19 +26,13 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;Landroid/view/View;)V
     .locals 0
-    .parameter
-    .parameter "viewToBeFocused"
 
-    .prologue
-    .line 191
     iput-object p1, p0, Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL$FocusRunnable;->this$0:Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 192
     iput-object p2, p0, Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL$FocusRunnable;->mViewToBeFocused:Landroid/view/View;
 
-    .line 193
     return-void
 .end method
 
@@ -47,8 +41,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 198
     iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL$FocusRunnable;->this$0:Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;
 
     #getter for: Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
@@ -64,11 +56,8 @@
 
     move-result v0
 
-    .line 200
-    .local v0, showSoftInputResult:Z
     if-eqz v0, :cond_0
 
-    .line 201
     iget-object v1, p0, Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL$FocusRunnable;->this$0:Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;
 
     #getter for: Lcom/android/settings/wifi/WifiConfigUiForSetupWizardXL;->mActivity:Lcom/android/settings/wifi/WifiSettingsForSetupWizardXL;
@@ -80,11 +69,9 @@
 
     invoke-virtual {v1, v2}, Lcom/android/settings/wifi/WifiSettingsForSetupWizardXL;->setPaddingVisibility(I)V
 
-    .line 205
     :goto_0
     return-void
 
-    .line 203
     :cond_0
     const-string v1, "SetupWizard"
 

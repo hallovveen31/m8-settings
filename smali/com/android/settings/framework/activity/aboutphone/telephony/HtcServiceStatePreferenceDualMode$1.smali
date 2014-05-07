@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode$1;->this$0:Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onServiceStateChangedExt(Landroid/telephony/ServiceState;I)V
     .locals 3
-    .parameter "state"
-    .parameter "phoneType"
 
-    .prologue
-    .line 58
     const-string v0, "HtcServiceStatePreferenceDualMode"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -63,7 +56,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     const-string v0, "HtcServiceStatePreferenceDualMode"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,7 +78,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 60
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode$1;->this$0:Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;
 
     #getter for: Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;->mCurrentPhoneType:I
@@ -96,24 +87,20 @@
 
     if-eq v0, p2, :cond_0
 
-    .line 61
     const-string v0, "HtcServiceStatePreferenceDualMode"
 
     const-string v1, "is not current phone"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :goto_0
     return-void
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode$1;->this$0:Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;
 
     iput-object p1, v0, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;->mServiceState:Landroid/telephony/ServiceState;
 
-    .line 65
     iget-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode$1;->this$0:Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/activity/aboutphone/telephony/HtcServiceStatePreferenceDualMode;->updateServiceState()V

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/BandMode;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 229
     iput-object p1, p0, Lcom/android/settings/BandMode$2;->this$0:Lcom/android/settings/BandMode;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,27 +33,20 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 4
-    .parameter "msg"
 
-    .prologue
-    .line 232
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 251
     :cond_0
     :goto_0
     return-void
 
-    .line 234
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 236
-    .local v0, ar:Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/settings/BandMode$2;->this$0:Lcom/android/settings/BandMode;
 
     #calls: Lcom/android/settings/BandMode;->bandListLoaded(Landroid/os/AsyncResult;)V
@@ -64,18 +54,14 @@
 
     goto :goto_0
 
-    .line 240
-    .end local v0           #ar:Landroid/os/AsyncResult;
     :sswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 242
-    .restart local v0       #ar:Landroid/os/AsyncResult;
     iget-object v1, p0, Lcom/android/settings/BandMode$2;->this$0:Lcom/android/settings/BandMode;
 
-    invoke-virtual {v1}, Lcom/android/settings/BandMode;->getWindow()Landroid/view/Window;
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -85,16 +71,14 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/Window;->setFeatureInt(II)V
 
-    .line 246
     iget-object v1, p0, Lcom/android/settings/BandMode$2;->this$0:Lcom/android/settings/BandMode;
 
-    invoke-virtual {v1}, Lcom/android/settings/BandMode;->isFinishing()Z
+    invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 247
     iget-object v1, p0, Lcom/android/settings/BandMode$2;->this$0:Lcom/android/settings/BandMode;
 
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
@@ -104,7 +88,6 @@
 
     goto :goto_0
 
-    .line 232
     nop
 
     :sswitch_data_0

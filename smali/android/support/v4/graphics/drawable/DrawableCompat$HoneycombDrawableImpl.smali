@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 56
     invoke-direct {p0}, Landroid/support/v4/graphics/drawable/DrawableCompat$BaseDrawableImpl;-><init>()V
 
     return-void
@@ -29,12 +27,8 @@
 # virtual methods
 .method public jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
     .locals 0
-    .parameter "drawable"
 
-    .prologue
-    .line 59
     invoke-static {p1}, Landroid/support/v4/graphics/drawable/DrawableCompatHoneycomb;->jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
 
-    .line 60
     return-void
 .end method

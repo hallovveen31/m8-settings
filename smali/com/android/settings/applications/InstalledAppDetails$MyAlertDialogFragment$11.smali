@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 2005
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$11;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 2007
     iget-object v2, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$11;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
     invoke-virtual {v2}, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;->getOwner()Lcom/android/settings/applications/InstalledAppDetails;
@@ -57,7 +50,6 @@
 
     if-nez v2, :cond_1
 
-    .line 2008
     const-string v2, "Settings:InstalledAppDetails"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -91,12 +83,10 @@
 
     invoke-static {v2, v3}, Lcom/android/settings/framework/util/log/HtcLog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2021
     :cond_0
     :goto_0
     return-void
 
-    .line 2013
     :cond_1
     iget-object v2, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$11;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 
@@ -109,22 +99,16 @@
 
     move-result-object v0
 
-    .line 2014
-    .local v0, checkBox:Lcom/htc/widget/HtcCheckBox;
     if-eqz v0, :cond_0
 
-    .line 2015
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v1
 
-    .line 2016
-    .local v1, isChecked:Z
     sget-boolean v2, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v2, :cond_2
 
-    .line 2017
     const-string v2, "Settings:InstalledAppDetails"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -147,7 +131,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2019
     :cond_2
     iget-object v2, p0, Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment$11;->this$0:Lcom/android/settings/applications/InstalledAppDetails$MyAlertDialogFragment;
 

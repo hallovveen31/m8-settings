@@ -38,41 +38,31 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/GyroscopeCalibration;)V
     .locals 2
-    .parameter
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 329
     iput-object p1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 330
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->IGNORE_COUNT:I
 
-    .line 331
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->CONSECUTIVE_COUNT:I
 
-    .line 332
     const/high16 v0, 0x4040
 
     iput v0, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->THRESHOLD:F
 
-    .line 334
     iput v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mIgnoreCount:I
 
-    .line 335
     iput v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mCount:I
 
-    .line 336
     iput-boolean v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mOutOfBound:Z
 
-    .line 337
     sget-object v0, Lcom/android/settings/GyroscopeCalibration$FeedbackState;->NOT_COMPLETED:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
 
     iput-object v0, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mState:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
@@ -82,11 +72,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/GyroscopeCalibration;Lcom/android/settings/GyroscopeCalibration$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 329
     invoke-direct {p0, p1}, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;-><init>(Lcom/android/settings/GyroscopeCalibration;)V
 
     return-void
@@ -97,8 +83,6 @@
 .method public getState()Lcom/android/settings/GyroscopeCalibration$FeedbackState;
     .locals 1
 
-    .prologue
-    .line 340
     iget-object v0, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mState:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
 
     return-object v0
@@ -106,19 +90,13 @@
 
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
-    .parameter "sensor"
-    .parameter "accuracy"
 
-    .prologue
-    .line 345
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 11
-    .parameter "event"
 
-    .prologue
     const/4 v10, 0x2
 
     const/4 v9, 0x0
@@ -129,7 +107,6 @@
 
     const-wide v5, 0x400921fb54442d18L
 
-    .line 349
     iget-object v1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v1}, Landroid/hardware/Sensor;->getType()I
@@ -140,12 +117,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 350
     sget-boolean v1, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v1, :cond_0
 
-    .line 351
     iget-object v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->TAG:Ljava/lang/String;
@@ -235,7 +210,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     :cond_0
     iget v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mIgnoreCount:I
 
@@ -243,19 +217,16 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 354
     iget v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mIgnoreCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mIgnoreCount:I
 
-    .line 374
     :cond_1
     :goto_0
     return-void
 
-    .line 355
     :cond_2
     iget v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mCount:I
 
@@ -263,20 +234,16 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 356
     iget v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mCount:I
 
-    .line 358
     const/4 v1, 0x3
 
     new-array v0, v1, [F
 
-    .line 359
-    .local v0, absValues:[F
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v1, v1, v9
@@ -295,7 +262,6 @@
 
     aput v1, v0, v9
 
-    .line 360
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v1, v1, v8
@@ -314,7 +280,6 @@
 
     aput v1, v0, v8
 
-    .line 361
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v1, v1, v10
@@ -333,7 +298,6 @@
 
     aput v1, v0, v10
 
-    .line 364
     aget v1, v0, v9
 
     const/high16 v2, 0x4040
@@ -358,21 +322,17 @@
 
     if-lez v1, :cond_4
 
-    .line 365
     :cond_3
     iput-boolean v8, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mOutOfBound:Z
 
-    .line 366
     const/16 v1, 0xa
 
     iput v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mCount:I
 
-    .line 367
     sget-object v1, Lcom/android/settings/GyroscopeCalibration$FeedbackState;->FAIL:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
 
     iput-object v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mState:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
 
-    .line 370
     :cond_4
     iget-boolean v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mOutOfBound:Z
 
@@ -384,7 +344,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 371
     sget-object v1, Lcom/android/settings/GyroscopeCalibration$FeedbackState;->PASS:Lcom/android/settings/GyroscopeCalibration$FeedbackState;
 
     iput-object v1, p0, Lcom/android/settings/GyroscopeCalibration$GyroscopeFeedbackListener;->mState:Lcom/android/settings/GyroscopeCalibration$FeedbackState;

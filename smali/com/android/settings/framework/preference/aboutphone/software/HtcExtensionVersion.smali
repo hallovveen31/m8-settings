@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-class v0, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -26,13 +24,9 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 24
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbstractStatusPreference;-><init>(Landroid/content/Context;)V
 
-    .line 25
     return-void
 .end method
 
@@ -41,9 +35,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 29
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -59,8 +51,6 @@
 .method protected isConstantSummary()Z
     .locals 1
 
-    .prologue
-    .line 35
     const/4 v0, 0x1
 
     return v0
@@ -69,11 +59,9 @@
 .method protected onGetSummary()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const v5, 0x7f0c0b48
 
-    .line 40
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -81,14 +69,10 @@
 
     move-result-object v2
 
-    .line 43
-    .local v2, summary:Ljava/lang/String;
     invoke-static {}, Lcom/htc/customization/FrameworkCustomization;->getInstance()Lcom/htc/customization/HtcCustomization;
 
     move-result-object v0
 
-    .line 45
-    .local v0, c:Lcom/htc/customization/HtcCustomization;
     :try_start_0
     const-string v4, "sdk.sdkinfo.ext.version"
 
@@ -98,12 +82,8 @@
 
     move-result-object v3
 
-    .line 47
-    .local v3, version:Ljava/lang/String;
     move-object v2, v3
 
-    .line 56
-    .end local v3           #version:Ljava/lang/String;
     :goto_0
     invoke-static {}, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDisclosed()Z
 
@@ -111,8 +91,7 @@
 
     if-nez v4, :cond_0
 
-    .line 57
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -122,17 +101,13 @@
 
     move-result-object v2
 
-    .line 61
     :cond_0
     return-object v2
 
-    .line 48
     :catch_0
     move-exception v1
 
-    .line 49
-    .local v1, e:Lcom/htc/customization/CustomizationValueNotFoundException;
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
@@ -140,10 +115,9 @@
 
     move-result-object v2
 
-    .line 52
     sget-object v4, Lcom/android/settings/framework/preference/aboutphone/software/HtcExtensionVersion;->TAG:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/htc/customization/CustomizationValueNotFoundException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v5
 

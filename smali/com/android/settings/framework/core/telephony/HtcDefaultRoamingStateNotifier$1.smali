@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier$1;->this$0:Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -36,10 +33,7 @@
 # virtual methods
 .method public onServiceStateChanged(Landroid/telephony/ServiceState;)V
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier$1;->this$0:Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;
 
     #getter for: Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;->mThis:Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;
@@ -50,6 +44,5 @@
     #calls: Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;->onServiceStateChanged(Landroid/telephony/ServiceState;)V
     invoke-static {v0, p1}, Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;->access$100(Lcom/android/settings/framework/core/telephony/HtcDefaultRoamingStateNotifier;Landroid/telephony/ServiceState;)V
 
-    .line 47
     return-void
 .end method

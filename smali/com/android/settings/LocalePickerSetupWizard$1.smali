@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/LocalePickerSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 268
     iput-object p1, p0, Lcom/android/settings/LocalePickerSetupWizard$1;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,10 +33,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
-    .parameter "message"
 
-    .prologue
-    .line 270
     const-string v0, "OOBE_LocalePickerSetupWizard"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,43 +58,36 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 281
     const-string v0, "OOBE_LocalePickerSetupWizard"
 
     const-string v1, "never should happen"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     :goto_0
     return-void
 
-    .line 273
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$1;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     const/16 v1, 0x65
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/LocalePickerSetupWizard;->removeDialog(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->removeDialog(I)V
 
-    .line 274
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$1;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/LocalePickerSetupWizard;->setResult(I)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->setResult(I)V
 
-    .line 275
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$1;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
-    invoke-virtual {v0}, Lcom/android/settings/LocalePickerSetupWizard;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 277
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$1;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #calls: Lcom/android/settings/LocalePickerSetupWizard;->startLocaleChangeService()V
@@ -108,7 +95,6 @@
 
     goto :goto_0
 
-    .line 271
     nop
 
     :pswitch_data_0

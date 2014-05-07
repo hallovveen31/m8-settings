@@ -32,8 +32,6 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
     .locals 1
-    .parameter "context"
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -45,12 +43,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 450
-    .local p2, items:Ljava/util/List;,"Ljava/util/List<Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;>;"
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 451
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -61,10 +55,8 @@
 
     iput-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 452
     iput-object p2, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mItems:Ljava/util/List;
 
-    .line 453
     return-void
 .end method
 
@@ -73,11 +65,8 @@
 .method public cancelAllWidgetPreviewLoaders()V
     .locals 2
 
-    .prologue
-    .line 494
     const/4 v0, 0x0
 
-    .local v0, i:I
     :goto_0
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mItems:Ljava/util/List;
 
@@ -87,7 +76,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 495
     iget-object v1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mItems:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -98,12 +86,10 @@
 
     invoke-virtual {v1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->cancelLoadingWidgetPreview()V
 
-    .line 494
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 497
     :cond_0
     return-void
 .end method
@@ -111,8 +97,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 459
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mItems:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -124,10 +108,7 @@
 
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
-    .parameter "position"
 
-    .prologue
-    .line 466
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mItems:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -139,10 +120,7 @@
 
 .method public getItemId(I)J
     .locals 2
-    .parameter "position"
 
-    .prologue
-    .line 473
     int-to-long v0, p1
 
     return-wide v0
@@ -150,15 +128,9 @@
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 6
-    .parameter "position"
-    .parameter "convertView"
-    .parameter "parent"
 
-    .prologue
-    .line 480
     if-nez p2, :cond_0
 
-    .line 481
     iget-object v3, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x7f040094
@@ -169,7 +141,6 @@
 
     move-result-object p2
 
-    .line 484
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/settings/KeyguardAppWidgetPickActivity$AppWidgetAdapter;->getItem(I)Ljava/lang/Object;
 
@@ -177,8 +148,6 @@
 
     check-cast v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;
 
-    .line 485
-    .local v1, item:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;
     const v3, 0x7f09013b
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -187,13 +156,10 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 486
-    .local v2, textView:Landroid/widget/TextView;
     iget-object v3, v1, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->label:Ljava/lang/CharSequence;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 487
     const v3, 0x7f090029
 
     invoke-virtual {p2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -202,15 +168,11 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 488
-    .local v0, iconView:Landroid/widget/ImageView;
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 489
     invoke-virtual {v1, v0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item;->loadWidgetPreview(Landroid/widget/ImageView;)V
 
-    .line 490
     return-object p2
 .end method

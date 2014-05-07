@@ -21,25 +21,17 @@
 # direct methods
 .method private constructor <init>(Lcom/a/a/a/a;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 492
     iput-object p1, p0, Lcom/a/a/a/a$a;->a:Lcom/a/a/a/a;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 494
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/a/a/a/a;Lcom/a/a/a/a$1;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 491
     invoke-direct {p0, p1}, Lcom/a/a/a/a$a;-><init>(Lcom/a/a/a/a;)V
 
     return-void
@@ -49,11 +41,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter
-    .parameter
 
-    .prologue
-    .line 501
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -66,7 +54,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 503
     invoke-static {}, Lcom/a/a/a/a;->d()Landroid/net/wifi/WifiManager;
 
     move-result-object v0
@@ -77,12 +64,10 @@
 
     invoke-static {v0}, Lcom/a/a/a/a;->a(Ljava/util/List;)Ljava/util/List;
 
-    .line 516
     :cond_0
     :goto_0
     return-void
 
-    .line 510
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -108,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 514
     :cond_2
     const-wide/16 v0, 0x0
 

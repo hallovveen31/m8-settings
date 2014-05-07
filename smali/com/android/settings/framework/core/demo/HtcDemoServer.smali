@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -50,7 +48,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/demo/HtcDemoServer;->TAG:Ljava/lang/String;
 
-    .line 28
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/demo/HtcDemoServer;->DEBUG:Z
@@ -61,19 +58,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     return-void
 .end method
 
 .method static synthetic access$000()Z
     .locals 1
 
-    .prologue
-    .line 23
     sget-boolean v0, Lcom/android/settings/framework/core/demo/HtcDemoServer;->DEBUG:Z
 
     return v0
@@ -81,10 +73,7 @@
 
 .method static synthetic access$100(Ljava/lang/String;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 23
     invoke-static {p0}, Lcom/android/settings/framework/core/demo/HtcDemoServer;->log(Ljava/lang/String;)V
 
     return-void
@@ -92,14 +81,10 @@
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 171
     sget-object v0, Lcom/android/settings/framework/core/demo/HtcDemoServer;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcLog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ApnSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 181
     iput-object p1, p0, Lcom/android/settings/ApnSettings$1;->this$0:Lcom/android/settings/ApnSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 184
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -53,17 +46,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 186
     #calls: Lcom/android/settings/ApnSettings;->getMobileDataState(Landroid/content/Intent;)Lcom/android/internal/telephony/PhoneConstants$DataState;
     invoke-static {p2}, Lcom/android/settings/ApnSettings;->access$000(Landroid/content/Intent;)Lcom/android/internal/telephony/PhoneConstants$DataState;
 
     move-result-object v0
 
-    .line 187
-    .local v0, state:Lcom/android/internal/telephony/PhoneConstants$DataState;
     sget-object v1, Lcom/android/settings/ApnSettings$4;->$SwitchMap$com$android$internal$telephony$PhoneConstants$DataState:[I
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/PhoneConstants$DataState;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -71,14 +61,10 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 197
-    .end local v0           #state:Lcom/android/internal/telephony/PhoneConstants$DataState;
     :cond_0
     :goto_0
     return-void
 
-    .line 189
-    .restart local v0       #state:Lcom/android/internal/telephony/PhoneConstants$DataState;
     :pswitch_0
     invoke-static {}, Lcom/android/settings/ApnSettings;->access$100()Z
 
@@ -86,7 +72,6 @@
 
     if-nez v1, :cond_1
 
-    .line 190
     iget-object v1, p0, Lcom/android/settings/ApnSettings$1;->this$0:Lcom/android/settings/ApnSettings;
 
     #calls: Lcom/android/settings/ApnSettings;->fillList()V
@@ -94,17 +79,15 @@
 
     goto :goto_0
 
-    .line 192
     :cond_1
     iget-object v1, p0, Lcom/android/settings/ApnSettings$1;->this$0:Lcom/android/settings/ApnSettings;
 
     const/16 v2, 0x3e9
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/ApnSettings;->showDialog(I)V
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->showDialog(I)V
 
     goto :goto_0
 
-    .line 187
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

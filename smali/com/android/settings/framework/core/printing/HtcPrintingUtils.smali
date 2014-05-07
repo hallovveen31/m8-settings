@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const/4 v0, 0x0
 
     sput v0, Lcom/android/settings/framework/core/printing/HtcPrintingUtils;->sLastPrintingServiceSize:I
@@ -23,8 +21,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +29,6 @@
 .method public static getLastPrintingServiceSize()I
     .locals 1
 
-    .prologue
-    .line 48
     sget v0, Lcom/android/settings/framework/core/printing/HtcPrintingUtils;->sLastPrintingServiceSize:I
 
     return v0
@@ -42,7 +36,6 @@
 
 .method public static getPrintingServices(Landroid/content/Context;)Ljava/util/List;
     .locals 3
-    .parameter "context"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -55,8 +48,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -78,12 +69,8 @@
 
 .method public static setLastPrintingServiceSize(I)V
     .locals 0
-    .parameter "size"
 
-    .prologue
-    .line 56
     sput p0, Lcom/android/settings/framework/core/printing/HtcPrintingUtils;->sLastPrintingServiceSize:I
 
-    .line 57
     return-void
 .end method

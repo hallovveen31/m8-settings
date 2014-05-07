@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/DreamSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 457
     iput-object p1, p0, Lcom/android/settings/DreamSettings$PackageReceiver;->this$0:Lcom/android/settings/DreamSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/DreamSettings;Lcom/android/settings/DreamSettings$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 457
     invoke-direct {p0, p1}, Lcom/android/settings/DreamSettings$PackageReceiver;-><init>(Lcom/android/settings/DreamSettings;)V
 
     return-void
@@ -48,11 +41,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 460
     const-string v0, "PackageReceiver.onReceive"
 
     const/4 v1, 0x0
@@ -62,12 +51,10 @@
     #calls: Lcom/android/settings/DreamSettings;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
     invoke-static {v0, v1}, Lcom/android/settings/DreamSettings;->access$300(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 461
     iget-object v0, p0, Lcom/android/settings/DreamSettings$PackageReceiver;->this$0:Lcom/android/settings/DreamSettings;
 
     #calls: Lcom/android/settings/DreamSettings;->refreshFromBackend()V
     invoke-static {v0}, Lcom/android/settings/DreamSettings;->access$400(Lcom/android/settings/DreamSettings;)V
 
-    .line 462
     return-void
 .end method

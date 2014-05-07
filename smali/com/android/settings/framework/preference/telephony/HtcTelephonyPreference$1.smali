@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 197
     invoke-static {}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->values()[Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->DATE_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMEI:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMEI_SV:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMSI:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->LINE1_NUMBER:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_COUNTRY_ISO:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_OPERATOR:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +149,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_OPERATOR_NAME:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +165,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_ROME_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -183,7 +181,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_TYPE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -199,7 +197,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->PHONE_TYPE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -215,7 +213,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIGNAL_STRENGTH:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -231,7 +229,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_COUNTRY_ISO:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -247,7 +245,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_OPERATOR:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -263,7 +261,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_OPERATOR_NAME:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -279,7 +277,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_SERIAL_NUMBER:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -295,7 +293,7 @@
 
     sget-object v1, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/HTCAccountSyncListPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 29
     iput-object p1, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,17 +36,12 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
 
     #setter for: Lcom/android/settings/accounts/HTCAccountSyncListPreference;->mClickedDialogEntryIndex:I
     invoke-static {v0, p2}, Lcom/android/settings/accounts/HTCAccountSyncListPreference;->access$002(Lcom/android/settings/accounts/HTCAccountSyncListPreference;I)I
 
-    .line 32
     iget-object v0, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
 
     iget-object v1, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
@@ -59,23 +51,19 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/accounts/HTCAccountSyncListPreference;->setValueIndex(I)V
+    invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setValueIndex(I)V
 
-    .line 34
     iget-object v0, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
 
-    invoke-virtual {v0, p2}, Lcom/android/settings/accounts/HTCAccountSyncListPreference;->setValueIndex(I)V
+    invoke-virtual {v0, p2}, Landroid/preference/ListPreference;->setValueIndex(I)V
 
-    .line 39
     iget-object v0, p0, Lcom/android/settings/accounts/HTCAccountSyncListPreference$1;->this$0:Lcom/android/settings/accounts/HTCAccountSyncListPreference;
 
     const/4 v1, -0x1
 
-    invoke-virtual {v0, p1, v1}, Lcom/android/settings/accounts/HTCAccountSyncListPreference;->onClick(Landroid/content/DialogInterface;I)V
+    invoke-virtual {v0, p1, v1}, Landroid/preference/DialogPreference;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 40
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 41
     return-void
 .end method

@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DreamSettings$DreamInfoAdapter;Landroid/view/View;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 422
     iput-object p1, p0, Lcom/android/settings/DreamSettings$DreamInfoAdapter$1;->this$1:Lcom/android/settings/DreamSettings$DreamInfoAdapter;
 
     iput-object p2, p0, Lcom/android/settings/DreamSettings$DreamInfoAdapter$1;->val$row:Landroid/view/View;
@@ -44,10 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 425
     iget-object v0, p0, Lcom/android/settings/DreamSettings$DreamInfoAdapter$1;->this$1:Lcom/android/settings/DreamSettings$DreamInfoAdapter;
 
     iget-object v0, v0, Lcom/android/settings/DreamSettings$DreamInfoAdapter;->this$0:Lcom/android/settings/DreamSettings;
@@ -67,6 +60,5 @@
 
     invoke-virtual {v1, v0}, Lcom/android/settings/DreamBackend;->launchSettings(Lcom/android/settings/DreamBackend$DreamInfo;)V
 
-    .line 426
     return-void
 .end method

@@ -21,11 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;Landroid/os/Handler;)V
     .locals 0
-    .parameter
-    .parameter "x0"
 
-    .prologue
-    .line 459
     iput-object p1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -37,13 +33,9 @@
 # virtual methods
 .method public onChange(Z)V
     .locals 4
-    .parameter "selfChange"
 
-    .prologue
-    .line 462
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 463
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     #getter for: Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->mSeekBar:Landroid/widget/SeekBar;
@@ -62,7 +54,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 464
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     #getter for: Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->mAudioManager:Landroid/media/AudioManager;
@@ -83,8 +74,6 @@
 
     move-result v0
 
-    .line 467
-    .local v0, volume:I
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     invoke-virtual {v1}, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->isMuted()Z
@@ -106,7 +95,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 468
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
     #getter for: Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;->LOG_FLAG:Z
@@ -156,11 +144,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
     :cond_0
     const/4 v0, 0x0
 
-    .line 471
     :cond_1
     iget-object v1, p0, Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer$2;->this$1:Lcom/android/settings/HtcVolumeDialog$SeekBarVolumizer;
 
@@ -169,10 +155,8 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v1, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
-    .line 473
-    .end local v0           #volume:I
     :cond_2
     return-void
 .end method

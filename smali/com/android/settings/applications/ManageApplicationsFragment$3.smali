@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ManageApplicationsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1129
     iput-object p1, p0, Lcom/android/settings/applications/ManageApplicationsFragment$3;->this$0:Lcom/android/settings/applications/ManageApplicationsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,34 +36,19 @@
 # virtual methods
 .method public afterTextChanged(Landroid/text/Editable;)V
     .locals 0
-    .parameter "s"
 
-    .prologue
-    .line 1144
     return-void
 .end method
 
 .method public beforeTextChanged(Ljava/lang/CharSequence;III)V
     .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "count"
-    .parameter "after"
 
-    .prologue
-    .line 1140
     return-void
 .end method
 
 .method public onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 1
-    .parameter "s"
-    .parameter "start"
-    .parameter "before"
-    .parameter "count"
 
-    .prologue
-    .line 1134
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$3;->this$0:Lcom/android/settings/applications/ManageApplicationsFragment;
 
     #getter for: Lcom/android/settings/applications/ManageApplicationsFragment;->mApplicationsAdapter:Lcom/android/settings/applications/ManageApplicationsFragment$ApplicationsAdapter;
@@ -80,6 +62,5 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/Filter;->filter(Ljava/lang/CharSequence;)V
 
-    .line 1135
     return-void
 .end method

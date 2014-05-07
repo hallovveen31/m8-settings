@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 521
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$9;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     iput-boolean p2, p0, Lcom/android/settings/wfd/WifiDisplaySettings$9;->val$enable:Z
@@ -44,10 +40,7 @@
 # virtual methods
 .method public onFailure(I)V
     .locals 3
-    .parameter "reason"
 
-    .prologue
-    .line 532
     const-string v1, "WifiDisplaySettings"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -93,10 +86,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
     return-void
 
-    .line 532
     :cond_0
     const-string v0, "exited"
 
@@ -106,7 +97,5 @@
 .method public onSuccess()V
     .locals 0
 
-    .prologue
-    .line 528
     return-void
 .end method

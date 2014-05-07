@@ -65,7 +65,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -76,7 +75,6 @@
 
     const/4 v3, 0x0
 
-    .line 37
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "DATE_STATE"
@@ -85,7 +83,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->DATE_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 53
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "IMEI"
@@ -94,7 +91,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMEI:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 62
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "IMEI_SV"
@@ -103,7 +99,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMEI_SV:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 77
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "IMSI"
@@ -112,7 +107,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->IMSI:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 85
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "LINE1_NUMBER"
@@ -121,7 +115,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->LINE1_NUMBER:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 88
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "NETWORK_COUNTRY_ISO"
@@ -132,7 +125,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_COUNTRY_ISO:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 91
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "NETWORK_OPERATOR"
@@ -143,7 +135,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_OPERATOR:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 94
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "NETWORK_OPERATOR_NAME"
@@ -154,7 +145,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_OPERATOR_NAME:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 97
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "NETWORK_ROME_STATE"
@@ -165,7 +155,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_ROME_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 100
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "NETWORK_TYPE"
@@ -176,7 +165,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->NETWORK_TYPE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 103
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "PHONE_TYPE"
@@ -187,7 +175,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->PHONE_TYPE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 109
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIGNAL_STRENGTH"
@@ -198,7 +185,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIGNAL_STRENGTH:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 116
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIM_COUNTRY_ISO"
@@ -209,7 +195,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_COUNTRY_ISO:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 124
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIM_OPERATOR"
@@ -220,7 +205,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_OPERATOR:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 130
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIM_OPERATOR_NAME"
@@ -231,7 +215,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_OPERATOR_NAME:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 136
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIM_SERIAL_NUMBER"
@@ -242,7 +225,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_SERIAL_NUMBER:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 142
     new-instance v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     const-string v1, "SIM_STATE"
@@ -253,7 +235,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->SIM_STATE:Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    .line 30
     const/16 v0, 0x11
 
     new-array v0, v0, [Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
@@ -357,16 +338,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 30
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -374,10 +351,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 30
     const-class v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -392,11 +366,9 @@
 .method public static values()[Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
     .locals 1
 
-    .prologue
-    .line 30
     sget-object v0, Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->$VALUES:[Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/preference/telephony/HtcTelephonyPreference$SummaryType;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

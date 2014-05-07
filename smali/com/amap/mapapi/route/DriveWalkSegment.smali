@@ -19,11 +19,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Lcom/amap/mapapi/route/Segment;-><init>()V
 
-    .line 15
     return-void
 .end method
 
@@ -32,8 +29,6 @@
 .method public getActionCode()I
     .locals 1
 
-    .prologue
-    .line 26
     iget v0, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mActionCode:I
 
     return v0
@@ -42,8 +37,6 @@
 .method public getActionDescription()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mActionDes:Ljava/lang/String;
 
     return-object v0
@@ -52,8 +45,6 @@
 .method public getRoadName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mRoadName:Ljava/lang/String;
 
     return-object v0
@@ -61,36 +52,24 @@
 
 .method public setActionCode(I)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 30
     iput p1, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mActionCode:I
 
-    .line 31
     return-void
 .end method
 
 .method public setActionDescription(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 22
     iput-object p1, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mActionDes:Ljava/lang/String;
 
-    .line 23
     return-void
 .end method
 
 .method public setRoadName(Ljava/lang/String;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 38
     iput-object p1, p0, Lcom/amap/mapapi/route/DriveWalkSegment;->mRoadName:Ljava/lang/String;
 
-    .line 39
     return-void
 .end method

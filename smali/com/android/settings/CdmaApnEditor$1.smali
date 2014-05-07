@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/CdmaApnEditor;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1249
     iput-object p1, p0, Lcom/android/settings/CdmaApnEditor$1;->this$0:Lcom/android/settings/CdmaApnEditor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 1251
     iget-object v0, p0, Lcom/android/settings/CdmaApnEditor$1;->this$0:Lcom/android/settings/CdmaApnEditor;
 
     #calls: Lcom/android/settings/CdmaApnEditor;->backKeyEvent()Z
@@ -52,7 +46,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1252
     iget-object v0, p0, Lcom/android/settings/CdmaApnEditor$1;->this$0:Lcom/android/settings/CdmaApnEditor;
 
     #getter for: Lcom/android/settings/CdmaApnEditor;->mSave:Z
@@ -71,13 +64,11 @@
 
     if-nez v0, :cond_1
 
-    .line 1253
     :cond_0
     iget-object v0, p0, Lcom/android/settings/CdmaApnEditor$1;->this$0:Lcom/android/settings/CdmaApnEditor;
 
-    invoke-virtual {v0}, Lcom/android/settings/CdmaApnEditor;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 1256
     :cond_1
     return-void
 .end method

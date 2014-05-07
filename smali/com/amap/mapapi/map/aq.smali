@@ -16,11 +16,8 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     new-instance v0, Lcom/amap/mapapi/map/f;
 
     sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
@@ -29,7 +26,6 @@
 
     iput-object v0, p0, Lcom/amap/mapapi/map/aq;->a:Lcom/amap/mapapi/map/f;
 
-    .line 12
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
@@ -39,16 +35,11 @@
 
 .method public static a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
     .locals 6
-    .parameter
-    .parameter
 
-    .prologue
-    .line 33
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 34
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -61,7 +52,6 @@
 
     float-to-int v1, v1
 
-    .line 35
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -80,7 +70,6 @@
 
     double-to-int v2, v2
 
-    .line 36
     iget v3, v0, Landroid/graphics/Rect;->left:I
 
     add-int/2addr v3, v2
@@ -99,7 +88,6 @@
 
     invoke-virtual {p0, v3, v4, v2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 38
     return-void
 .end method
 
@@ -107,13 +95,9 @@
 # virtual methods
 .method public a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 3
-    .parameter
 
-    .prologue
-    .line 15
     iput-object p1, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 16
     iget-object v0, p0, Lcom/amap/mapapi/map/aq;->a:Lcom/amap/mapapi/map/f;
 
     iget-object v1, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
@@ -130,17 +114,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/amap/mapapi/map/f;->a(II)V
 
-    .line 17
     iget-object v0, p0, Lcom/amap/mapapi/map/aq;->a:Lcom/amap/mapapi/map/f;
 
     invoke-virtual {v0, p0}, Lcom/amap/mapapi/map/f;->a(Lcom/amap/mapapi/map/g;)V
 
-    .line 18
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 19
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v1, p0, Lcom/amap/mapapi/map/aq;->a:Lcom/amap/mapapi/map/f;
@@ -156,11 +137,7 @@
 
 .method public a(Landroid/graphics/Canvas;)V
     .locals 3
-    .parameter
 
-    .prologue
-    .line 24
-    .line 25
     iget-object v0, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
 
     const/high16 v1, 0x7f00
@@ -169,30 +146,25 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 26
     const v0, -0x4099999a
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->skew(FF)V
 
-    .line 27
     const/high16 v0, 0x3f80
 
     const/high16 v1, 0x3f00
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 28
     iget-object v0, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 29
     iget-object v0, p0, Lcom/amap/mapapi/map/aq;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
 
-    .line 30
     return-void
 .end method

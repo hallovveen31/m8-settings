@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/PSActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/settings/PSActivity$2;->this$0:Lcom/android/settings/PSActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,30 +36,22 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 128
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.htc.InternetPS.TriggerOK"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 129
-    .local v0, inta:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/settings/PSActivity$2;->this$0:Lcom/android/settings/PSActivity;
 
     iget-object v1, v1, Lcom/android/settings/PSActivity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 130
     iget-object v1, p0, Lcom/android/settings/PSActivity$2;->this$0:Lcom/android/settings/PSActivity;
 
-    invoke-virtual {v1}, Lcom/android/settings/PSActivity;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 131
     return-void
 .end method

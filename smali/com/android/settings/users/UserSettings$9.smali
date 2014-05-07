@@ -37,11 +37,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/UserSettings;Landroid/content/res/Resources;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 529
     iput-object p1, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
 
     iput-object p2, p0, Lcom/android/settings/users/UserSettings$9;->val$resources:Landroid/content/res/Resources;
@@ -55,13 +51,9 @@
 # virtual methods
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 529
     check-cast p1, [Ljava/util/List;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$9;->doInBackground([Ljava/util/List;)Ljava/lang/Void;
 
     move-result-object v0
@@ -71,7 +63,6 @@
 
 .method protected varargs doInBackground([Ljava/util/List;)Ljava/lang/Void;
     .locals 5
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -83,9 +74,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 537
-    .local p1, values:[Ljava/util/List;,"[Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v4, 0x0
 
     aget-object v4, p1, v4
@@ -94,7 +82,6 @@
 
     move-result-object v2
 
-    .local v2, i$:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -112,8 +99,6 @@
 
     move-result v3
 
-    .line 538
-    .local v3, userId:I
     iget-object v4, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mUserManager:Landroid/os/UserManager;
@@ -125,16 +110,12 @@
 
     move-result-object v0
 
-    .line 539
-    .local v0, bitmap:Landroid/graphics/Bitmap;
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v4, p0, Lcom/android/settings/users/UserSettings$9;->val$resources:Landroid/content/res/Resources;
 
     invoke-direct {v1, v4, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 540
-    .local v1, d:Landroid/graphics/drawable/Drawable;
     iget-object v4, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
 
     #getter for: Lcom/android/settings/users/UserSettings;->mUserIcons:Landroid/util/SparseArray;
@@ -146,10 +127,6 @@
 
     goto :goto_0
 
-    .line 542
-    .end local v0           #bitmap:Landroid/graphics/Bitmap;
-    .end local v1           #d:Landroid/graphics/drawable/Drawable;
-    .end local v3           #userId:I
     :cond_0
     const/4 v4, 0x0
 
@@ -158,13 +135,9 @@
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 529
     check-cast p1, Ljava/lang/Void;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/users/UserSettings$9;->onPostExecute(Ljava/lang/Void;)V
 
     return-void
@@ -172,15 +145,11 @@
 
 .method protected onPostExecute(Ljava/lang/Void;)V
     .locals 1
-    .parameter "result"
 
-    .prologue
-    .line 532
     iget-object v0, p0, Lcom/android/settings/users/UserSettings$9;->this$0:Lcom/android/settings/users/UserSettings;
 
     #calls: Lcom/android/settings/users/UserSettings;->updateUserList()V
     invoke-static {v0}, Lcom/android/settings/users/UserSettings;->access$000(Lcom/android/settings/users/UserSettings;)V
 
-    .line 533
     return-void
 .end method

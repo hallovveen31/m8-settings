@@ -38,24 +38,15 @@
 # direct methods
 .method constructor <init>(Ljava/lang/String;JJ)V
     .locals 0
-    .parameter "fileName"
-    .parameter "size"
-    .parameter "id"
 
-    .prologue
-    .line 516
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 517
     iput-object p1, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->mFileName:Ljava/lang/String;
 
-    .line 518
     iput-wide p2, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->mSize:J
 
-    .line 519
     iput-wide p4, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->mId:J
 
-    .line 520
     return-void
 .end method
 
@@ -63,10 +54,7 @@
 # virtual methods
 .method public compareTo(Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;)I
     .locals 4
-    .parameter "that"
 
-    .prologue
-    .line 523
     if-eq p0, p1, :cond_0
 
     iget-wide v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->mSize:J
@@ -80,11 +68,9 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 525
     :goto_0
     return v0
 
-    .line 524
     :cond_1
     iget-wide v0, p0, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->mSize:J
 
@@ -98,7 +84,6 @@
 
     goto :goto_0
 
-    .line 525
     :cond_2
     const/4 v0, -0x1
 
@@ -107,13 +92,9 @@
 
 .method public bridge synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 512
     check-cast p1, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;
 
-    .end local p1
     invoke-virtual {p0, p1}, Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;->compareTo(Lcom/android/settings/deviceinfo/MemoryMeasurement$FileInfo;)I
 
     move-result v0
@@ -124,8 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 529
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

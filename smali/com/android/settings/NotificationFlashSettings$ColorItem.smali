@@ -25,22 +25,14 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationFlashSettings;Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter "name"
-    .parameter "value"
 
-    .prologue
-    .line 162
     iput-object p1, p0, Lcom/android/settings/NotificationFlashSettings$ColorItem;->this$0:Lcom/android/settings/NotificationFlashSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
     iput-object p2, p0, Lcom/android/settings/NotificationFlashSettings$ColorItem;->colorName:Ljava/lang/String;
 
-    .line 164
     iput p3, p0, Lcom/android/settings/NotificationFlashSettings$ColorItem;->colorValue:I
 
-    .line 165
     return-void
 .end method

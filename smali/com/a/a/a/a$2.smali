@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/a/a/a/a;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 265
     iput-object p1, p0, Lcom/a/a/a/a$2;->a:Lcom/a/a/a/a;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,14 +34,11 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 267
     invoke-static {}, Lcom/a/a/a/a;->d()Landroid/net/wifi/WifiManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->startScan()Z
 
-    .line 268
     return-void
 .end method

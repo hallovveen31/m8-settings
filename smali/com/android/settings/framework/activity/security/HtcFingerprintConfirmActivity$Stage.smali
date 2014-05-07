@@ -47,7 +47,6 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .prologue
     const/4 v15, 0x3
 
     const/4 v14, 0x2
@@ -58,7 +57,6 @@
 
     const/4 v4, -0x1
 
-    .line 175
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
     const-string v1, "Processing"
@@ -71,7 +69,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->Processing:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
-    .line 181
     new-instance v5, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
     const-string v6, "Success"
@@ -86,7 +83,6 @@
 
     sput-object v5, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->Success:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
-    .line 187
     new-instance v8, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
     const-string v9, "Fail"
@@ -103,7 +99,6 @@
 
     sput-object v8, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->Fail:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
-    .line 193
     new-instance v8, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
     const-string v9, "UseAltLock"
@@ -120,7 +115,6 @@
 
     sput-object v8, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->UseAltLock:Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
-    .line 173
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
@@ -148,40 +142,26 @@
 
 .method private constructor <init>(Ljava/lang/String;IIII)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "headerMessage"
-    .parameter "footerMessage"
-    .parameter "statusImg"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(III)V"
         }
     .end annotation
 
-    .prologue
-    .line 208
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 209
     iput p3, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->headerMessage:I
 
-    .line 210
     iput p4, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->footerMessage:I
 
-    .line 211
     iput p5, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->statusImg:I
 
-    .line 212
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 173
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -196,11 +176,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
     .locals 1
 
-    .prologue
-    .line 173
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcFingerprintConfirmActivity$Stage;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

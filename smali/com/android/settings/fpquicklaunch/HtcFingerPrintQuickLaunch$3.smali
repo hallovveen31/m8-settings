@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 173
     iput-object p1, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 177
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     #calls: Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->isEnrolledFingerRecordExisted()Z
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 178
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     #getter for: Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->mSelection:I
@@ -80,7 +73,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 179
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     iget-object v1, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
@@ -93,7 +85,6 @@
     #calls: Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->sendQuickLaunchAppRecord(I)V
     invoke-static {v0, v1}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->access$900(Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;I)V
 
-    .line 181
     :cond_0
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
@@ -118,7 +109,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunchManager;->saveSelection(Landroid/content/Context;II)V
 
-    .line 182
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
     iget-object v1, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
@@ -131,7 +121,6 @@
     #calls: Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->saveQuickLaunchAppByPosition(I)V
     invoke-static {v0, v1}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->access$1000(Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;I)V
 
-    .line 184
     :cond_1
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
@@ -154,15 +143,13 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 185
     iget-object v0, p0, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch$3;->this$0:Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;
 
-    invoke-virtual {v0}, Lcom/android/settings/fpquicklaunch/HtcFingerPrintQuickLaunch;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 186
     return-void
 .end method

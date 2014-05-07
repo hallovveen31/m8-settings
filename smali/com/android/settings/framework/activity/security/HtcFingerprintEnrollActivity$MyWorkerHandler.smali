@@ -21,17 +21,11 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;Landroid/os/Looper;)V
     .locals 0
-    .parameter
-    .parameter "looper"
 
-    .prologue
-    .line 1773
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
-    .line 1774
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1775
     return-void
 .end method
 
@@ -39,10 +33,7 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
-    .parameter "msg"
 
-    .prologue
-    .line 1779
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$000()Z
 
     move-result v0
@@ -57,16 +48,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1780
     :cond_0
     if-nez p1, :cond_1
 
-    .line 1814
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1784
     :cond_1
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;->access$000()Z
 
@@ -100,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1785
     :cond_2
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -108,7 +95,6 @@
 
     goto :goto_0
 
-    .line 1787
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -117,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1790
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -126,7 +111,6 @@
 
     goto :goto_0
 
-    .line 1796
     :pswitch_3
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -135,7 +119,6 @@
 
     goto :goto_0
 
-    .line 1800
     :pswitch_4
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -144,7 +127,6 @@
 
     goto :goto_0
 
-    .line 1804
     :pswitch_5
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -153,7 +135,6 @@
 
     goto :goto_0
 
-    .line 1808
     :pswitch_6
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity$MyWorkerHandler;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintEnrollActivity;
 
@@ -162,7 +143,6 @@
 
     goto :goto_0
 
-    .line 1785
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_1

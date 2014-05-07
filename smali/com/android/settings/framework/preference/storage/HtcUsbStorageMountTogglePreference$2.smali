@@ -30,13 +30,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference;Landroid/os/storage/IMountService;Ljava/lang/String;Z)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference$2;->this$0:Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference;
 
     iput-object p2, p0, Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference$2;->val$service:Landroid/os/storage/IMountService;
@@ -55,8 +49,6 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 227
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference$2;->val$service:Landroid/os/storage/IMountService;
 
@@ -70,27 +62,22 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 232
     :goto_0
     return-void
 
-    .line 228
     :catch_0
     move-exception v0
 
-    .line 229
-    .local v0, e:Landroid/os/RemoteException;
     invoke-static {}, Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference;->access$100()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->getMessage()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v1, v2, v0}, Lcom/android/settings/framework/util/log/HtcLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 230
     iget-object v1, p0, Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference$2;->this$0:Lcom/android/settings/framework/preference/storage/HtcUsbStorageMountTogglePreference;
 
     const/4 v2, 0x2

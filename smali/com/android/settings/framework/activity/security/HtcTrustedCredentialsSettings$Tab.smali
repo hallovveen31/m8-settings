@@ -47,7 +47,6 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .prologue
     const v5, 0x7f0900f2
 
     const v6, 0x7f090041
@@ -56,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 81
     new-instance v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
     const-string v1, "SYSTEM"
@@ -69,7 +67,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
-    .line 87
     new-instance v8, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
     const-string v9, "USER"
@@ -90,7 +87,6 @@
 
     sput-object v8, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->USER:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
-    .line 80
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
@@ -110,13 +106,6 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;IIIZ)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter "tag"
-    .parameter "label"
-    .parameter "view"
-    .parameter "list"
-    .parameter "checkbox"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -125,35 +114,24 @@
         }
     .end annotation
 
-    .prologue
-    .line 100
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 101
     iput-object p3, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mTag:Ljava/lang/String;
 
-    .line 102
     iput p4, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mLabel:I
 
-    .line 103
     iput p5, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mView:I
 
-    .line 105
     iput p6, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mList:I
 
-    .line 106
     iput-boolean p7, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mCheckbox:Z
 
-    .line 107
     return-void
 .end method
 
 .method static synthetic access$1400(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;)Z
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget-boolean v0, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mCheckbox:Z
 
     return v0
@@ -161,11 +139,7 @@
 
 .method static synthetic access$2000(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;Lcom/android/org/conscrypt/TrustedCertificateStore;)Ljava/util/Set;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 80
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->getAliases(Lcom/android/org/conscrypt/TrustedCertificateStore;)Ljava/util/Set;
 
     move-result-object v0
@@ -175,12 +149,7 @@
 
 .method static synthetic access$2200(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;Lcom/android/org/conscrypt/TrustedCertificateStore;Ljava/lang/String;)Z
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 80
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->deleted(Lcom/android/org/conscrypt/TrustedCertificateStore;Ljava/lang/String;)Z
 
     move-result v0
@@ -190,11 +159,7 @@
 
 .method static synthetic access$2400(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 80
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->getButtonLabel(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
 
     move-result v0
@@ -204,11 +169,7 @@
 
 .method static synthetic access$2500(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 80
     invoke-direct {p0, p1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->getButtonConfirmation(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
 
     move-result v0
@@ -218,12 +179,7 @@
 
 .method static synthetic access$2900(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;ZLcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 80
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->postOperationUpdate(ZLcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)V
 
     return-void
@@ -231,10 +187,7 @@
 
 .method static synthetic access$500(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;)I
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 80
     iget v0, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->mList:I
 
     return v0
@@ -242,16 +195,12 @@
 
 .method private deleted(Lcom/android/org/conscrypt/TrustedCertificateStore;Ljava/lang/String;)Z
     .locals 3
-    .parameter "store"
-    .parameter "alias"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 118
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$framework$activity$security$HtcTrustedCredentialsSettings$Tab:[I
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -259,14 +208,12 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 124
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 120
     :pswitch_0
     invoke-virtual {p1, p2}, Lcom/android/org/conscrypt/TrustedCertificateStore;->containsAlias(Ljava/lang/String;)Z
 
@@ -276,12 +223,10 @@
 
     const/4 v0, 0x1
 
-    .line 122
     :cond_0
     :pswitch_1
     return v0
 
-    .line 118
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -291,7 +236,6 @@
 
 .method private getAliases(Lcom/android/org/conscrypt/TrustedCertificateStore;)Ljava/util/Set;
     .locals 2
-    .parameter "store"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -304,11 +248,9 @@
         }
     .end annotation
 
-    .prologue
-    .line 109
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$framework$activity$security$HtcTrustedCredentialsSettings$Tab:[I
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -316,20 +258,17 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 115
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 111
     :pswitch_0
     invoke-virtual {p1}, Lcom/android/org/conscrypt/TrustedCertificateStore;->allSystemAliases()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 113
     :goto_0
     return-object v0
 
@@ -340,7 +279,6 @@
 
     goto :goto_0
 
-    .line 109
     nop
 
     :pswitch_data_0
@@ -352,13 +290,10 @@
 
 .method private getButtonConfirmation(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
     .locals 2
-    .parameter "certHolder"
 
-    .prologue
-    .line 139
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$framework$activity$security$HtcTrustedCredentialsSettings$Tab:[I
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -366,14 +301,12 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 148
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 141
     :pswitch_0
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mDeleted:Z
     invoke-static {p1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$000(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Z
@@ -382,26 +315,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 142
     const v0, 0x7f0c1280
 
-    .line 146
     :goto_0
     return v0
 
-    .line 144
     :cond_0
     const v0, 0x7f0c1281
 
     goto :goto_0
 
-    .line 146
     :pswitch_1
     const v0, 0x7f0c1282
 
     goto :goto_0
 
-    .line 139
     nop
 
     :pswitch_data_0
@@ -413,13 +341,10 @@
 
 .method private getButtonLabel(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)I
     .locals 2
-    .parameter "certHolder"
 
-    .prologue
-    .line 127
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$4;->$SwitchMap$com$android$settings$framework$activity$security$HtcTrustedCredentialsSettings$Tab:[I
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -427,14 +352,12 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 136
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
 
     throw v0
 
-    .line 129
     :pswitch_0
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mDeleted:Z
     invoke-static {p1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$000(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Z
@@ -443,26 +366,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
     const v0, 0x7f0c127e
 
-    .line 134
     :goto_0
     return v0
 
-    .line 132
     :cond_0
     const v0, 0x7f0c127d
 
     goto :goto_0
 
-    .line 134
     :pswitch_1
     const v0, 0x7f0c127f
 
     goto :goto_0
 
-    .line 127
     nop
 
     :pswitch_data_0
@@ -474,14 +392,9 @@
 
 .method private postOperationUpdate(ZLcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)V
     .locals 1
-    .parameter "ok"
-    .parameter "certHolder"
 
-    .prologue
-    .line 151
     if-eqz p1, :cond_2
 
-    .line 152
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mTab:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
     invoke-static {p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$100(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
@@ -491,7 +404,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 153
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mDeleted:Z
     invoke-static {p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$000(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Z
 
@@ -505,26 +417,22 @@
     #setter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mDeleted:Z
     invoke-static {p2, v0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$002(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;Z)Z
 
-    .line 157
     :goto_1
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mAdapter:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
     invoke-static {p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$200(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 162
     :goto_2
     return-void
 
-    .line 153
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 155
     :cond_1
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mAdapter:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
     invoke-static {p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$200(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
@@ -540,7 +448,6 @@
 
     goto :goto_1
 
-    .line 160
     :cond_2
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mAdapter:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
     invoke-static {p2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->access$200(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
@@ -555,10 +462,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 80
     const-class v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -573,11 +477,9 @@
 .method public static values()[Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
     .locals 1
 
-    .prologue
-    .line 80
     sget-object v0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->$VALUES:[Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiNotifyBlockManage;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 55
     iput-object p1, p0, Lcom/android/settings/wifi/WifiNotifyBlockManage$1;->this$0:Lcom/android/settings/wifi/WifiNotifyBlockManage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/android/settings/wifi/WifiNotifyBlockManage$1;->this$0:Lcom/android/settings/wifi/WifiNotifyBlockManage;
 
     #getter for: Lcom/android/settings/wifi/WifiNotifyBlockManage;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -60,12 +53,10 @@
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiManager;->RemoveOpenNetworkFromBlockedList(Ljava/lang/String;)I
 
-    .line 58
     iget-object v0, p0, Lcom/android/settings/wifi/WifiNotifyBlockManage$1;->this$0:Lcom/android/settings/wifi/WifiNotifyBlockManage;
 
     #calls: Lcom/android/settings/wifi/WifiNotifyBlockManage;->updateList()V
     invoke-static {v0}, Lcom/android/settings/wifi/WifiNotifyBlockManage;->access$200(Lcom/android/settings/wifi/WifiNotifyBlockManage;)V
 
-    .line 59
     return-void
 .end method

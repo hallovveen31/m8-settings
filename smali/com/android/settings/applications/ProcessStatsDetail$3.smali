@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ProcessStatsDetail;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 383
     iput-object p1, p0, Lcom/android/settings/applications/ProcessStatsDetail$3;->this$0:Lcom/android/settings/applications/ProcessStatsDetail;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 386
     iget-object v0, p0, Lcom/android/settings/applications/ProcessStatsDetail$3;->this$0:Lcom/android/settings/applications/ProcessStatsDetail;
 
     #getter for: Lcom/android/settings/applications/ProcessStatsDetail;->mForceStopButton:Landroid/widget/Button;
@@ -48,7 +41,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/android/settings/applications/ProcessStatsDetail$3;->getResultCode()I
+    invoke-virtual {p0}, Landroid/content/BroadcastReceiver;->getResultCode()I
 
     move-result v0
 
@@ -57,12 +50,10 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 387
     return-void
 
-    .line 386
     :cond_0
     const/4 v0, 0x0
 

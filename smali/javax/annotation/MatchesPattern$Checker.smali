@@ -31,8 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,14 +40,9 @@
 # virtual methods
 .method public bridge synthetic forConstantValue(Ljava/lang/annotation/Annotation;Ljava/lang/Object;)Ljavax/annotation/meta/When;
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 21
     check-cast p1, Ljavax/annotation/MatchesPattern;
 
-    .end local p1
     invoke-virtual {p0, p1, p2}, Ljavax/annotation/MatchesPattern$Checker;->forConstantValue(Ljavax/annotation/MatchesPattern;Ljava/lang/Object;)Ljavax/annotation/meta/When;
 
     move-result-object v0
@@ -59,11 +52,7 @@
 
 .method public forConstantValue(Ljavax/annotation/MatchesPattern;Ljava/lang/Object;)Ljavax/annotation/meta/When;
     .locals 3
-    .parameter "annotation"
-    .parameter "value"
 
-    .prologue
-    .line 23
     invoke-interface {p1}, Ljavax/annotation/MatchesPattern;->value()Ljava/lang/String;
 
     move-result-object v1
@@ -76,11 +65,8 @@
 
     move-result-object v0
 
-    .line 24
-    .local v0, p:Ljava/util/regex/Pattern;
     check-cast p2, Ljava/lang/String;
 
-    .end local p2
     invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
@@ -91,10 +77,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 25
     sget-object v1, Ljavax/annotation/meta/When;->ALWAYS:Ljavax/annotation/meta/When;
 
-    .line 26
     :goto_0
     return-object v1
 

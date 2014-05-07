@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;Landroid/content/ComponentName;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment$2;->this$1:Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;
 
     iput-object p2, p0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment$2;->val$cn:Landroid/content/ComponentName;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "id"
 
-    .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment$2;->this$1:Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;
 
     iget-object v0, v0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;->this$0:Lcom/android/settings/NotificationAccessSettings;
@@ -62,13 +54,11 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 143
     iget-object v0, p0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment$2;->this$1:Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;
 
     iget-object v0, v0, Lcom/android/settings/NotificationAccessSettings$ListenerWarningDialogFragment;->this$0:Lcom/android/settings/NotificationAccessSettings;
 
     invoke-virtual {v0}, Lcom/android/settings/NotificationAccessSettings;->saveEnabledListeners()V
 
-    .line 144
     return-void
 .end method

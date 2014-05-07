@@ -25,15 +25,10 @@
 # direct methods
 .method constructor <init>(Landroid/app/ActivityManager$RunningAppProcessInfo;)V
     .locals 0
-    .parameter "_info"
 
-    .prologue
-    .line 134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
     iput-object p1, p0, Lcom/android/settings/applications/RunningState$AppProcessInfo;->info:Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 136
     return-void
 .end method

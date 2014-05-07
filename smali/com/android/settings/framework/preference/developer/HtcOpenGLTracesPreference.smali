@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,26 +50,17 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 34
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;)V
 
-    .line 35
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
     return-void
 .end method
 
@@ -80,9 +69,7 @@
 .method protected getCustomEntries()[Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 54
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcOpenGLTracesPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -90,25 +77,19 @@
 
     move-result-object v1
 
-    .line 55
-    .local v1, res:Landroid/content/res/Resources;
     const v2, 0x7f080052
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 57
-    .local v0, entries:[Ljava/lang/String;
     return-object v0
 .end method
 
 .method protected getCustomEntryValues()[Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 62
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcOpenGLTracesPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -116,25 +97,19 @@
 
     move-result-object v0
 
-    .line 63
-    .local v0, res:Landroid/content/res/Resources;
     const v2, 0x7f080053
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 65
-    .local v1, values:[Ljava/lang/String;
     return-object v1
 .end method
 
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 49
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcOpenGLTracesPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -149,20 +124,14 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 70
     if-nez p1, :cond_0
 
-    .line 71
     const/4 v0, 0x0
 
-    .line 76
     :goto_0
     return-object v0
 
-    .line 74
     :cond_0
     const-string v1, "debug.egl.trace"
 
@@ -170,47 +139,35 @@
 
     move-result-object v0
 
-    .line 76
-    .local v0, value:Ljava/lang/String;
     goto :goto_0
 .end method
 
 .method protected onMapValueToIndex(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 4
-    .parameter "value"
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 81
     if-nez p1, :cond_0
 
-    .line 82
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    .line 91
     :goto_0
     return-object v2
 
-    .line 85
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcOpenGLTracesPreference;->getEntryValues()[Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcListPreference;->getEntryValues()[Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 86
-    .local v1, values:[Ljava/lang/CharSequence;
     const/4 v0, 0x0
 
-    .local v0, i:I
     :goto_1
     array-length v2, v1
 
     if-ge v0, v2, :cond_2
 
-    .line 87
     aget-object v2, v1, v0
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->contentEquals(Ljava/lang/CharSequence;)Z
@@ -219,20 +176,17 @@
 
     if-eqz v2, :cond_1
 
-    .line 88
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 86
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 91
     :cond_2
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -243,23 +197,14 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
-    .parameter "context"
-    .parameter "newValue"
 
-    .prologue
-    .line 96
     if-nez p1, :cond_0
 
-    .line 97
     const/4 v0, 0x0
 
-    .line 103
-    .end local p2
     :goto_0
     return v0
 
-    .line 100
-    .restart local p2
     :cond_0
     const-string v0, "debug.egl.trace"
 
@@ -267,14 +212,11 @@
 
     const-string p2, ""
 
-    .end local p2
     :cond_1
     invoke-static {v0, p2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcOpenGLTracesPreference;->pokeSystemProperties()V
 
-    .line 103
     const/4 v0, 0x1
 
     goto :goto_0
@@ -283,8 +225,6 @@
 .method pokeSystemProperties()V
     .locals 2
 
-    .prologue
-    .line 107
     new-instance v0, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;-><init>()V
@@ -293,8 +233,7 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 108
     return-void
 .end method

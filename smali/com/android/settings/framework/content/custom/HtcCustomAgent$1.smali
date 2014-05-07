@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 402
     invoke-static {}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->values()[Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_auto_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_auto_time_zone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_accelerometer_rotation:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_inactivity_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_off_timeout:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_animation_scale_jb:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_application_automatic_startup:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +149,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_application_notification:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +165,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_3d_home_screen:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -183,7 +181,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_mode_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -199,7 +197,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_start_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -215,7 +213,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wireless_sleep_end_time:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -231,7 +229,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_time_12_24:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -247,7 +245,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_airplane_mode_toggleable_radios:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -263,7 +261,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_airplane_mode_radios:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -279,7 +277,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_wifi_sleep_policy:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -295,7 +293,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htcspeak_default_lang:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -311,7 +309,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_power_save_3g:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -327,7 +325,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_audible_touch_tones:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -343,7 +341,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_brightness_mode:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -359,7 +357,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_brightness:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -375,7 +373,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_screen_auto_brightness_max:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -391,7 +389,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_alarm:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -407,7 +405,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_ring:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -423,7 +421,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -439,7 +437,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_speaker:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -455,7 +453,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_headphone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -471,7 +469,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_headset:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -487,7 +485,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_volume_music_bt:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -503,7 +501,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_recent_apps_button:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -519,7 +517,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_gestures_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -535,7 +533,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_font_size:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -551,7 +549,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_compass_warning:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -567,7 +565,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_show_all_quick_tips:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -583,7 +581,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_install_non_market_apps:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -599,7 +597,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -615,7 +613,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_gps_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -631,7 +629,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_network_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -647,7 +645,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_location_vzw_lbs_providers_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -663,7 +661,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_fastboot_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -679,7 +677,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_phone_finder_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -695,7 +693,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -711,7 +709,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_sound_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -727,7 +725,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_national_roaming_allowed:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -743,7 +741,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_vzw_global_roaming_options:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -759,7 +757,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_data_roaming_slot2:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -775,7 +773,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_wimax_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -791,7 +789,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_message_notification_preview:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -807,7 +805,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_phone_notification_preview:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -823,7 +821,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_mobile_network_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -839,7 +837,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_sound_effects_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -855,7 +853,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_lockscreen_sounds_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -871,7 +869,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->show_2g_ui:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -887,7 +885,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_2g_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -903,7 +901,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_night_turn_off_wifi:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -919,7 +917,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_user_powersaver_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -935,7 +933,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_reduce_CPU:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -951,7 +949,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_screen_brightness:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -967,7 +965,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_haptic_feedback:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -983,7 +981,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_powersaver_connectivity:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -999,7 +997,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_abnormal_app_monitor_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1015,7 +1013,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_hide_ui_user_powersaver:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1031,7 +1029,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_hide_ui_powersaver_connectivity:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1047,7 +1045,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_nfc_on:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1063,7 +1061,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_dual_sim_ringtone_mode:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1079,7 +1077,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_app_storage_loc:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1095,7 +1093,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1111,7 +1109,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone_mode_cdma:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1127,7 +1125,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_ringtone_mode_wcdma:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1143,7 +1141,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_notification_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1159,7 +1157,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_alarm_alert:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1175,7 +1173,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_calendar_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1191,7 +1189,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_message_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1207,7 +1205,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_email_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1223,7 +1221,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_task_sound:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1239,7 +1237,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_assisted_gps_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1255,7 +1253,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_htc_pull_to_fresh_sound_enabled:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1271,7 +1269,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_home_button_default_option:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1287,7 +1285,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_support_button_default_option:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1303,7 +1301,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_package_verifier_enable:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1319,7 +1317,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_stay_on_while_plugged_in:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -1335,7 +1333,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->def_emergency_tone:Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/custom/HtcCustomAgent$Keys;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

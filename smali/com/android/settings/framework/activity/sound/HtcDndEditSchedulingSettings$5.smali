@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 382
     iput-object p1, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,19 +36,13 @@
 # virtual methods
 .method public onTimeSet(Lcom/htc/widget/HtcTimePicker;III)V
     .locals 5
-    .parameter "view"
-    .parameter "hourOfDay"
-    .parameter "minute"
-    .parameter "second"
 
-    .prologue
     const/4 v4, 0x5
 
     const/4 v3, 0x2
 
     const/4 v2, 0x1
 
-    .line 384
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mStartTimeCalendar:Ljava/util/Calendar;
@@ -63,7 +54,6 @@
 
     invoke-virtual {v0, v1, p2}, Ljava/util/Calendar;->set(II)V
 
-    .line 385
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mStartTimeCalendar:Ljava/util/Calendar;
@@ -75,7 +65,6 @@
 
     invoke-virtual {v0, v1, p3}, Ljava/util/Calendar;->set(II)V
 
-    .line 389
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mEndTimeCalendar:Ljava/util/Calendar;
@@ -96,7 +85,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/Calendar;->set(II)V
 
-    .line 390
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mEndTimeCalendar:Ljava/util/Calendar;
@@ -117,7 +105,6 @@
 
     invoke-virtual {v0, v3, v1}, Ljava/util/Calendar;->set(II)V
 
-    .line 391
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mEndTimeCalendar:Ljava/util/Calendar;
@@ -138,7 +125,6 @@
 
     invoke-virtual {v0, v4, v1}, Ljava/util/Calendar;->set(II)V
 
-    .line 392
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->mStartTimeCalendar:Ljava/util/Calendar;
@@ -155,12 +141,10 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/core/sound/HtcDndUtils;->adjustEndTime(Ljava/util/Calendar;Ljava/util/Calendar;)Z
 
-    .line 395
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings$5;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;
 
     #calls: Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->refreshScheduleUI()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;->access$600(Lcom/android/settings/framework/activity/sound/HtcDndEditSchedulingSettings;)V
 
-    .line 396
     return-void
 .end method

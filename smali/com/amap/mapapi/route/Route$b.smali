@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/route/Route;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 796
     iput-object p1, p0, Lcom/amap/mapapi/route/Route$b;->a:Lcom/amap/mapapi/route/Route;
 
     invoke-direct {p0, p1}, Lcom/amap/mapapi/route/Route$e;-><init>(Lcom/amap/mapapi/route/Route;)V
@@ -36,10 +33,7 @@
 # virtual methods
 .method protected f(I)Landroid/graphics/drawable/Drawable;
     .locals 1
-    .parameter
 
-    .prologue
-    .line 799
     sget-object v0, Lcom/amap/mapapi/core/r;->d:Landroid/graphics/drawable/Drawable;
 
     return-object v0

@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 55
     const-string v0, "content://com.google.settings/partner"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -47,8 +45,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,39 +53,26 @@
 .method private static getSetUseLocationIntent()Landroid/content/Intent;
     .locals 2
 
-    .prologue
-    .line 76
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.android.gsf.action.SET_USE_LOCATION_FOR_SERVICES"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 77
-    .local v0, i:Landroid/content/Intent;
     return-object v0
 .end method
 
 .method public static getUseLocationForServices(Landroid/content/Context;)I
     .locals 12
-    .parameter "context"
 
-    .prologue
-    .line 86
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 87
-    .local v0, resolver:Landroid/content/ContentResolver;
     const/4 v6, 0x0
 
-    .line 88
-    .local v6, c:Landroid/database/Cursor;
     const/4 v9, 0x0
 
-    .line 90
-    .local v9, stringValue:Ljava/lang/String;
     :try_start_0
     sget-object v1, Lcom/android/settings/GoogleLocationSettingHelper;->GOOGLE_SETTINGS_CONTENT_URI:Landroid/net/Uri;
 
@@ -121,7 +104,6 @@
 
     move-result-object v6
 
-    .line 92
     if-eqz v6, :cond_0
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -130,7 +112,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 93
     const/4 v1, 0x0
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -140,31 +121,23 @@
 
     move-result-object v9
 
-    .line 98
     :cond_0
     if-eqz v6, :cond_1
 
-    .line 99
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 102
     :cond_1
     if-nez v9, :cond_3
 
-    .line 103
     const/4 v10, 0x2
 
-    .line 111
     :goto_1
     return v10
 
-    .line 95
     :catch_0
     move-exception v7
 
-    .line 96
-    .local v7, e:Ljava/lang/RuntimeException;
     :try_start_1
     const-string v1, "GoogleLocationSettingHelper"
 
@@ -174,25 +147,20 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 98
     if-eqz v6, :cond_1
 
     goto :goto_0
 
-    .end local v7           #e:Ljava/lang/RuntimeException;
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_2
 
-    .line 99
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 98
     :cond_2
     throw v1
 
-    .line 107
     :cond_3
     :try_start_2
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -201,28 +169,19 @@
 
     move-result v10
 
-    .local v10, value:I
     goto :goto_1
 
-    .line 108
-    .end local v10           #value:I
     :catch_1
     move-exception v8
 
-    .line 109
-    .local v8, nfe:Ljava/lang/NumberFormatException;
     const/4 v10, 0x2
 
-    .restart local v10       #value:I
     goto :goto_1
 .end method
 
 .method public static isAvailable(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
 
-    .prologue
-    .line 70
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -237,8 +196,6 @@
 
     move-result-object v0
 
-    .line 72
-    .local v0, ri:Landroid/content/pm/ResolveInfo;
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
@@ -254,22 +211,15 @@
 
 .method public static setUseLocationForServices(Landroid/content/Context;Z)V
     .locals 4
-    .parameter "context"
-    .parameter "use"
 
-    .prologue
-    .line 119
     invoke-static {}, Lcom/android/settings/GoogleLocationSettingHelper;->getSetUseLocationIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 120
-    .local v1, i:Landroid/content/Intent;
     const/high16 v2, 0x1000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 121
     const-string v3, "disable"
 
     if-nez p1, :cond_0
@@ -279,28 +229,22 @@
     :goto_0
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 123
     :try_start_0
     invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 127
     :goto_1
     return-void
 
-    .line 121
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 124
     :catch_0
     move-exception v0
 
-    .line 125
-    .local v0, e:Landroid/content/ActivityNotFoundException;
     const-string v2, "GoogleLocationSettingHelper"
 
     const-string v3, "Problem while starting GSF location activity"

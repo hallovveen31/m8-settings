@@ -30,23 +30,17 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/map/MapController;)V
     .locals 1
-    .parameter
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 426
     iput-object p1, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 427
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
-    .line 428
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
-    .line 429
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->d:Ljava/lang/Runnable;
 
     return-void
@@ -54,10 +48,7 @@
 
 .method private b(Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/map/az;
     .locals 7
-    .parameter
 
-    .prologue
-    .line 442
     new-instance v0, Lcom/amap/mapapi/map/az;
 
     const/16 v1, 0x1f4
@@ -98,19 +89,14 @@
 .method private c()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 449
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
-    .line 450
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
-    .line 451
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->d:Ljava/lang/Runnable;
 
-    .line 452
     return-void
 .end method
 
@@ -119,37 +105,28 @@
 .method public a()V
     .locals 1
 
-    .prologue
-    .line 455
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
     if-eqz v0, :cond_0
 
-    .line 456
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
-    invoke-virtual {v0}, Lcom/amap/mapapi/map/az;->d()V
+    invoke-virtual {v0}, Lcom/amap/mapapi/map/a;->d()V
 
-    .line 458
     :cond_0
     return-void
 .end method
 
 .method public a(Lcom/amap/mapapi/core/GeoPoint;)V
     .locals 4
-    .parameter
 
-    .prologue
     const-wide/high16 v2, -0x8000
 
-    .line 462
     if-nez p1, :cond_0
 
-    .line 473
     :goto_0
     return-void
 
-    .line 465
     :cond_0
     invoke-virtual {p1}, Lcom/amap/mapapi/core/GeoPoint;->b()J
 
@@ -167,7 +144,6 @@
 
     if-nez v0, :cond_2
 
-    .line 467
     :cond_1
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
@@ -181,14 +157,12 @@
 
     move-result-object v0
 
-    .line 469
     iget-object v1, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-virtual {v1, v0}, Lcom/amap/mapapi/map/MapController;->setCenter(Lcom/amap/mapapi/core/GeoPoint;)V
 
     goto :goto_0
 
-    .line 472
     :cond_2
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
@@ -199,12 +173,7 @@
 
 .method public a(Lcom/amap/mapapi/core/GeoPoint;Landroid/os/Message;Ljava/lang/Runnable;)V
     .locals 2
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 432
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-static {v0}, Lcom/amap/mapapi/map/MapController;->a(Lcom/amap/mapapi/map/MapController;)Lcom/amap/mapapi/map/ai;
@@ -217,7 +186,6 @@
 
     iput-boolean v1, v0, Lcom/amap/mapapi/map/ai$b;->a:Z
 
-    .line 433
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-static {v0}, Lcom/amap/mapapi/map/MapController;->a(Lcom/amap/mapapi/map/MapController;)Lcom/amap/mapapi/map/ai;
@@ -232,68 +200,54 @@
 
     iput-object v1, v0, Lcom/amap/mapapi/map/ad;->k:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 434
     invoke-virtual {p0}, Lcom/amap/mapapi/map/MapController$a;->a()V
 
-    .line 435
     invoke-direct {p0, p1}, Lcom/amap/mapapi/map/MapController$a;->b(Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/map/az;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
-    .line 436
     iput-object p2, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
-    .line 437
     iput-object p3, p0, Lcom/amap/mapapi/map/MapController$a;->d:Ljava/lang/Runnable;
 
-    .line 438
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->b:Lcom/amap/mapapi/map/az;
 
-    invoke-virtual {v0}, Lcom/amap/mapapi/map/az;->c()V
+    invoke-virtual {v0}, Lcom/amap/mapapi/map/a;->c()V
 
-    .line 439
     return-void
 .end method
 
 .method public b()V
     .locals 2
 
-    .prologue
-    .line 477
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
     if-eqz v0, :cond_0
 
-    .line 478
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->getTarget()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 479
     iget-object v1, p0, Lcom/amap/mapapi/map/MapController$a;->c:Landroid/os/Message;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 481
     :cond_0
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->d:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 482
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->d:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 484
     :cond_1
     invoke-direct {p0}, Lcom/amap/mapapi/map/MapController$a;->c()V
 
-    .line 485
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-static {v0}, Lcom/amap/mapapi/map/MapController;->a(Lcom/amap/mapapi/map/MapController;)Lcom/amap/mapapi/map/ai;
@@ -304,7 +258,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 486
     iget-object v0, p0, Lcom/amap/mapapi/map/MapController$a;->a:Lcom/amap/mapapi/map/MapController;
 
     invoke-static {v0}, Lcom/amap/mapapi/map/MapController;->a(Lcom/amap/mapapi/map/MapController;)Lcom/amap/mapapi/map/ai;
@@ -317,7 +270,6 @@
 
     iput-boolean v1, v0, Lcom/amap/mapapi/map/ai$b;->a:Z
 
-    .line 488
     :cond_2
     return-void
 .end method

@@ -31,8 +31,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,15 +40,11 @@
 # virtual methods
 .method public compare(Lcom/android/settings/applications/ProcStatsEntry;Lcom/android/settings/applications/ProcStatsEntry;)I
     .locals 6
-    .parameter "lhs"
-    .parameter "rhs"
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, -0x1
 
-    .line 76
     iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mWeight:J
 
     iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mWeight:J
@@ -59,12 +53,10 @@
 
     if-gez v2, :cond_1
 
-    .line 85
     :cond_0
     :goto_0
     return v0
 
-    .line 78
     :cond_1
     iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mWeight:J
 
@@ -76,10 +68,8 @@
 
     move v0, v1
 
-    .line 79
     goto :goto_0
 
-    .line 80
     :cond_2
     iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mDuration:J
 
@@ -89,7 +79,6 @@
 
     if-ltz v2, :cond_0
 
-    .line 82
     iget-wide v2, p1, Lcom/android/settings/applications/ProcStatsEntry;->mDuration:J
 
     iget-wide v4, p2, Lcom/android/settings/applications/ProcStatsEntry;->mDuration:J
@@ -100,10 +89,8 @@
 
     move v0, v1
 
-    .line 83
     goto :goto_0
 
-    .line 85
     :cond_3
     const/4 v0, 0x0
 
@@ -112,17 +99,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 73
     check-cast p1, Lcom/android/settings/applications/ProcStatsEntry;
 
-    .end local p1
     check-cast p2, Lcom/android/settings/applications/ProcStatsEntry;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ProcessStatsUi$1;->compare(Lcom/android/settings/applications/ProcStatsEntry;Lcom/android/settings/applications/ProcStatsEntry;)I
 
     move-result v0

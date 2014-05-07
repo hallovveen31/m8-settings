@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 286
     iput-object p1, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/print/PrintSettingsFragment;Lcom/android/settings/print/PrintSettingsFragment$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 286
     invoke-direct {p0, p1}, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;-><init>(Lcom/android/settings/print/PrintSettingsFragment;)V
 
     return-void
@@ -48,11 +41,7 @@
 # virtual methods
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 1
-    .parameter "packageName"
-    .parameter "uid"
 
-    .prologue
-    .line 289
     iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
@@ -66,17 +55,12 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 290
     return-void
 .end method
 
 .method public onPackageAppeared(Ljava/lang/String;I)V
     .locals 1
-    .parameter "packageName"
-    .parameter "reason"
 
-    .prologue
-    .line 294
     iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
@@ -90,17 +74,12 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 295
     return-void
 .end method
 
 .method public onPackageDisappeared(Ljava/lang/String;I)V
     .locals 1
-    .parameter "packageName"
-    .parameter "reason"
 
-    .prologue
-    .line 299
     iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
@@ -114,17 +93,12 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 300
     return-void
 .end method
 
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 1
-    .parameter "packageName"
-    .parameter "uid"
 
-    .prologue
-    .line 304
     iget-object v0, p0, Lcom/android/settings/print/PrintSettingsFragment$SettingsPackageMonitor;->this$0:Lcom/android/settings/print/PrintSettingsFragment;
 
     #getter for: Lcom/android/settings/print/PrintSettingsFragment;->mHandler:Landroid/os/Handler;
@@ -138,6 +112,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 305
     return-void
 .end method

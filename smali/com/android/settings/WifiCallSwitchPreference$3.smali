@@ -23,11 +23,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/WifiCallSwitchPreference;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 278
     iput-object p1, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
 
     iput-boolean p2, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->val$register:Z
@@ -42,15 +38,11 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 286
     const/4 v3, 0x3
 
     :try_start_0
     new-array v2, v3, [Ljava/lang/Object;
 
-    .line 287
-    .local v2, param:[Ljava/lang/Object;
     const/4 v3, 0x0
 
     const/4 v4, 0x1
@@ -61,7 +53,6 @@
 
     aput-object v4, v2, v3
 
-    .line 288
     const/4 v3, 0x1
 
     iget-object v4, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
@@ -73,16 +64,12 @@
 
     aput-object v4, v2, v3
 
-    .line 289
     const/4 v1, 0x0
 
-    .line 290
-    .local v1, field:Ljava/lang/reflect/Field;
     iget-boolean v3, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->val$register:Z
 
     if-eqz v3, :cond_0
 
-    .line 293
     iget-object v3, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
 
     #getter for: Lcom/android/settings/WifiCallSwitchPreference;->mIPUtils:Ljava/lang/Class;
@@ -96,7 +83,6 @@
 
     move-result-object v1
 
-    .line 294
     const/4 v3, 0x2
 
     const/4 v4, 0x0
@@ -107,7 +93,6 @@
 
     aput-object v4, v2, v3
 
-    .line 295
     iget-object v3, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
 
     #getter for: Lcom/android/settings/WifiCallSwitchPreference;->mIPMlisten:Ljava/lang/reflect/Method;
@@ -124,15 +109,9 @@
 
     invoke-virtual {v3, v4, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 307
-    .end local v1           #field:Ljava/lang/reflect/Field;
-    .end local v2           #param:[Ljava/lang/Object;
     :goto_0
     return-void
 
-    .line 299
-    .restart local v1       #field:Ljava/lang/reflect/Field;
-    .restart local v2       #param:[Ljava/lang/Object;
     :cond_0
     iget-object v3, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
 
@@ -147,7 +126,6 @@
 
     move-result-object v1
 
-    .line 300
     const/4 v3, 0x2
 
     const/4 v4, 0x0
@@ -158,7 +136,6 @@
 
     aput-object v4, v2, v3
 
-    .line 301
     iget-object v3, p0, Lcom/android/settings/WifiCallSwitchPreference$3;->this$0:Lcom/android/settings/WifiCallSwitchPreference;
 
     #getter for: Lcom/android/settings/WifiCallSwitchPreference;->mIPMlisten:Ljava/lang/reflect/Method;
@@ -179,14 +156,9 @@
 
     goto :goto_0
 
-    .line 304
-    .end local v1           #field:Ljava/lang/reflect/Field;
-    .end local v2           #param:[Ljava/lang/Object;
     :catch_0
     move-exception v0
 
-    .line 305
-    .local v0, e:Ljava/lang/Exception;
     const-string v3, "WifiCallSwitchPreference"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -199,7 +171,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v5
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/RedirectDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 175
     iput-object p1, p0, Lcom/android/settings/wifi/RedirectDialog$4;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 177
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -61,22 +54,17 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 178
-    .local v0, browser:Landroid/content/Intent;
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 179
     iget-object v1, p0, Lcom/android/settings/wifi/RedirectDialog$4;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
-    invoke-virtual {v1, v0}, Lcom/android/settings/wifi/RedirectDialog;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 180
     iget-object v1, p0, Lcom/android/settings/wifi/RedirectDialog$4;->this$0:Lcom/android/settings/wifi/RedirectDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/wifi/RedirectDialog;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 181
     return-void
 .end method

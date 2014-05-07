@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/htc/widget/HtcCheckBox;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 128
     iput-object p1, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$1;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,20 +36,15 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$1;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lcom/android/settings/framework/activity/HtcHeaderEventDelegator$1;->val$checkBox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->performClick()Z
 
-    .line 133
     :cond_0
     return-void
 .end method

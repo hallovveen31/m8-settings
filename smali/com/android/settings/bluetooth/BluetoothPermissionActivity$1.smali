@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothPermissionActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 64
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 65
-    .local v0, action:Ljava/lang/String;
     const-string v3, "android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 66
     const-string v3, "android.bluetooth.device.extra.ACCESS_REQUEST_TYPE"
 
     const/4 v4, 0x2
@@ -64,8 +54,6 @@
 
     move-result v2
 
-    .line 68
-    .local v2, requestType:I
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mRequestType:I
@@ -75,14 +63,10 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 72
-    .end local v2           #requestType:I
     :cond_0
     :goto_0
     return-void
 
-    .line 69
-    .restart local v2       #requestType:I
     :cond_1
     const-string v3, "android.bluetooth.device.extra.DEVICE"
 
@@ -92,8 +76,6 @@
 
     check-cast v1, Landroid/bluetooth/BluetoothDevice;
 
-    .line 70
-    .local v1, device:Landroid/bluetooth/BluetoothDevice;
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothPermissionActivity$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPermissionActivity;
 
     #getter for: Lcom/android/settings/bluetooth/BluetoothPermissionActivity;->mDevice:Landroid/bluetooth/BluetoothDevice;

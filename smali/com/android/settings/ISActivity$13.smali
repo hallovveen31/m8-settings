@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ISActivity;Lcom/htc/widget/HtcCheckBox;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 369
     iput-object p1, p0, Lcom/android/settings/ISActivity$13;->this$0:Lcom/android/settings/ISActivity;
 
     iput-object p2, p0, Lcom/android/settings/ISActivity$13;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 5
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 372
     iget-object v2, p0, Lcom/android/settings/ISActivity$13;->this$0:Lcom/android/settings/ISActivity;
 
     iget-object v2, v2, Lcom/android/settings/ISActivity;->mContext:Landroid/content/Context;
@@ -61,28 +53,22 @@
 
     move-result-object v1
 
-    .line 373
-    .local v1, sp:Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 374
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
     const-string v2, "once_acg"
 
     iget-object v3, p0, Lcom/android/settings/ISActivity$13;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v3}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v3}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v3
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 375
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 376
     const-string v2, "NetSharing_ISActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -97,7 +83,7 @@
 
     iget-object v4, p0, Lcom/android/settings/ISActivity$13;->val$checkbox:Lcom/htc/widget/HtcCheckBox;
 
-    invoke-virtual {v4}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v4}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v4
 
@@ -111,11 +97,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     iget-object v2, p0, Lcom/android/settings/ISActivity$13;->this$0:Lcom/android/settings/ISActivity;
 
-    invoke-virtual {v2}, Lcom/android/settings/ISActivity;->finish()V
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
 
-    .line 378
     return-void
 .end method

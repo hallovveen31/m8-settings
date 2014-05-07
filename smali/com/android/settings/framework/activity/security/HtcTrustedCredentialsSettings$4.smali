@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 109
     invoke-static {}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->values()[Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->SYSTEM:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->USER:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

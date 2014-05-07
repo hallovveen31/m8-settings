@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 212
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$IncomingHandler;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,22 +33,16 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
-    .parameter "msg"
 
-    .prologue
-    .line 216
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 241
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 243
     :goto_0
     return-void
 
-    .line 221
     :pswitch_0
     invoke-static {}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->access$100()Z
 
@@ -59,7 +50,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 222
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,17 +73,13 @@
     #calls: Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->access$200(Ljava/lang/String;)V
 
-    .line 227
     :cond_0
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-nez v2, :cond_1
 
-    .line 228
     const v1, 0x7f0c02d5
 
-    .line 229
-    .local v1, titleId:I
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.htc.vmm.APIFacade"
@@ -108,19 +94,17 @@
 
     move-result-object v0
 
-    .line 235
-    .local v0, intent:Landroid/content/Intent;
     :goto_1
     iget-object v2, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$IncomingHandler;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
-    #getter for: Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->mMessageDispatcher:Lcom/android/settings/framework/os/HtcMessageDispatcher;
+    #getter for: Lcom/android/settings/framework/preference/HtcAbsActionPreference;->mMessageDispatcher:Lcom/android/settings/framework/os/HtcMessageDispatcher;
     invoke-static {v2}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->access$400(Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;)Lcom/android/settings/framework/os/HtcMessageDispatcher;
 
     move-result-object v2
 
     iget-object v3, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$IncomingHandler;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->getContext()Landroid/content/Context;
+    invoke-virtual {v3}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -130,31 +114,23 @@
 
     invoke-virtual {v2, v3}, Lcom/android/settings/framework/os/HtcMessageDispatcher;->setTitleInForeground(Ljava/lang/CharSequence;)V
 
-    .line 237
     iget-object v2, p0, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant$IncomingHandler;->this$0:Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;
 
-    invoke-virtual {v2, v0}, Lcom/android/settings/framework/preference/storage/vzw/VzwStorageBackupAssistant;->setIntent(Landroid/content/Intent;)V
+    invoke-virtual {v2, v0}, Lcom/htc/preference/HtcPreference;->setIntent(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 232
-    .end local v0           #intent:Landroid/content/Intent;
-    .end local v1           #titleId:I
     :cond_1
     const v1, 0x7f0c02d6
 
-    .line 233
-    .restart local v1       #titleId:I
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "com.htc.vmm.settings.GeneralSetting"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .restart local v0       #intent:Landroid/content/Intent;
     goto :goto_1
 
-    .line 216
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

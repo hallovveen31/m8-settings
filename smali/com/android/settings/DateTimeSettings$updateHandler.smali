@@ -21,16 +21,10 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/DateTimeSettings;Landroid/os/Looper;)V
     .locals 0
-    .parameter
-    .parameter "looper"
 
-    .prologue
-    .line 654
     iput-object p1, p0, Lcom/android/settings/DateTimeSettings$updateHandler;->this$0:Lcom/android/settings/DateTimeSettings;
 
-    .line 655
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 656
     return-void
 .end method

@@ -38,20 +38,15 @@
 # direct methods
 .method public constructor <init>(Lcom/amap/mapapi/map/ai;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 384
     iput-object p1, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 465
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/amap/mapapi/map/ai$e;->b:I
 
-    .line 466
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -63,12 +58,9 @@
 
 .method private a(Z)I
     .locals 9
-    .parameter
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 529
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -91,7 +83,6 @@
 
     div-double/2addr v0, v2
 
-    .line 531
     iget-object v2, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v2, v2, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -136,7 +127,6 @@
 
     double-to-int v2, v2
 
-    .line 534
     iget-object v3, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v3, v3, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -181,17 +171,14 @@
 
     double-to-int v0, v0
 
-    .line 538
     invoke-virtual {p0, v8, v0}, Lcom/amap/mapapi/map/ai$e;->fromPixels(II)Lcom/amap/mapapi/core/GeoPoint;
 
     move-result-object v0
 
-    .line 539
     invoke-virtual {p0, v2, v8}, Lcom/amap/mapapi/map/ai$e;->fromPixels(II)Lcom/amap/mapapi/core/GeoPoint;
 
     move-result-object v1
 
-    .line 541
     if-eqz p1, :cond_0
 
     invoke-virtual {v0}, Lcom/amap/mapapi/core/GeoPoint;->getLongitudeE6()I
@@ -234,8 +221,6 @@
 .method public a()I
     .locals 1
 
-    .prologue
-    .line 500
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/amap/mapapi/map/ai$e;->a(Z)I
@@ -248,8 +233,6 @@
 .method public b()I
     .locals 1
 
-    .prologue
-    .line 511
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/amap/mapapi/map/ai$e;->a(Z)I
@@ -261,11 +244,7 @@
 
 .method public fromPixels(II)Lcom/amap/mapapi/core/GeoPoint;
     .locals 7
-    .parameter
-    .parameter
 
-    .prologue
-    .line 456
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -274,7 +253,6 @@
 
     move-result v4
 
-    .line 457
     new-instance v1, Landroid/graphics/PointF;
 
     int-to-float v0, p1
@@ -283,7 +261,6 @@
 
     invoke-direct {v1, v0, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 458
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->f:Lcom/amap/mapapi/map/ad;
@@ -323,15 +300,11 @@
 
 .method public metersToEquatorPixels(F)F
     .locals 5
-    .parameter
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v4, 0x0
 
-    .line 469
-    .line 470
     iget-object v1, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v1, v1, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -340,7 +313,6 @@
 
     move-result v1
 
-    .line 471
     iget-object v2, p0, Lcom/amap/mapapi/map/ai$e;->c:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->size()I
@@ -355,16 +327,13 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 472
     :cond_0
     iput v1, p0, Lcom/amap/mapapi/map/ai$e;->b:I
 
-    .line 473
     iget-object v1, p0, Lcom/amap/mapapi/map/ai$e;->c:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 475
     :cond_1
     iget-object v1, p0, Lcom/amap/mapapi/map/ai$e;->c:Ljava/util/HashMap;
 
@@ -378,19 +347,16 @@
 
     if-nez v1, :cond_3
 
-    .line 476
     invoke-virtual {p0, v4, v4}, Lcom/amap/mapapi/map/ai$e;->fromPixels(II)Lcom/amap/mapapi/core/GeoPoint;
 
     move-result-object v1
 
-    .line 477
     const/16 v2, 0xa
 
     invoke-virtual {p0, v4, v2}, Lcom/amap/mapapi/map/ai$e;->fromPixels(II)Lcom/amap/mapapi/core/GeoPoint;
 
     move-result-object v2
 
-    .line 478
     iget-object v3, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v3, v3, Lcom/amap/mapapi/map/ai;->f:Lcom/amap/mapapi/map/ad;
@@ -399,16 +365,13 @@
 
     move-result v1
 
-    .line 480
     cmpg-float v2, v1, v0
 
     if-gtz v2, :cond_2
 
-    .line 487
     :goto_0
     return v0
 
-    .line 483
     :cond_2
     const/high16 v0, 0x4120
 
@@ -416,7 +379,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 484
     iget-object v1, p0, Lcom/amap/mapapi/map/ai$e;->c:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -429,7 +391,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 486
     :cond_3
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->c:Ljava/util/HashMap;
 
@@ -452,13 +413,9 @@
 
 .method public toPixels(Lcom/amap/mapapi/core/GeoPoint;Landroid/graphics/Point;)Landroid/graphics/Point;
     .locals 10
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/high16 v8, 0x3fe0
 
-    .line 395
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -467,7 +424,6 @@
 
     move-result v1
 
-    .line 396
     iget-object v0, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v0, v0, Lcom/amap/mapapi/map/ai;->f:Lcom/amap/mapapi/map/ad;
@@ -498,7 +454,6 @@
 
     move-result-object v0
 
-    .line 401
     iget-object v1, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v1, v1, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -515,7 +470,6 @@
 
     move-result-object v1
 
-    .line 403
     iget-object v2, p0, Lcom/amap/mapapi/map/ai$e;->a:Lcom/amap/mapapi/map/ai;
 
     iget-object v2, v2, Lcom/amap/mapapi/map/ai;->b:Lcom/amap/mapapi/map/ai$d;
@@ -532,17 +486,14 @@
 
     iget-object v2, v2, Lcom/amap/mapapi/map/ad;->l:Landroid/graphics/Point;
 
-    .line 405
     iget-boolean v3, v1, Lcom/amap/mapapi/map/aj;->m:Z
 
     if-eqz v3, :cond_4
 
-    .line 406
     iget-boolean v2, v1, Lcom/amap/mapapi/map/aj;->l:Z
 
     if-eqz v2, :cond_3
 
-    .line 407
     sget v2, Lcom/amap/mapapi/map/aj;->j:F
 
     iget v3, v0, Landroid/graphics/PointF;->x:F
@@ -577,7 +528,6 @@
 
     add-float/2addr v2, v3
 
-    .line 410
     sget v3, Lcom/amap/mapapi/map/aj;->j:F
 
     iget v0, v0, Landroid/graphics/PointF;->y:F
@@ -612,13 +562,10 @@
 
     add-float v3, v0, v1
 
-    .line 413
     float-to-int v1, v2
 
-    .line 414
     float-to-int v0, v3
 
-    .line 415
     float-to-double v4, v2
 
     int-to-double v6, v1
@@ -629,10 +576,8 @@
 
     if-ltz v2, :cond_0
 
-    .line 416
     add-int/lit8 v1, v1, 0x1
 
-    .line 418
     :cond_0
     float-to-double v2, v3
 
@@ -644,47 +589,38 @@
 
     if-ltz v2, :cond_1
 
-    .line 419
     add-int/lit8 v0, v0, 0x1
 
-    .line 439
     :cond_1
     :goto_0
     new-instance v2, Landroid/graphics/Point;
 
     invoke-direct {v2, v1, v0}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 440
     if-eqz p2, :cond_2
 
-    .line 441
     iget v0, v2, Landroid/graphics/Point;->x:I
 
     iput v0, p2, Landroid/graphics/Point;->x:I
 
-    .line 442
     iget v0, v2, Landroid/graphics/Point;->y:I
 
     iput v0, p2, Landroid/graphics/Point;->y:I
 
-    .line 444
     :cond_2
     return-object v2
 
-    .line 422
     :cond_3
     iget v1, v0, Landroid/graphics/PointF;->x:F
 
     float-to-int v1, v1
 
-    .line 423
     iget v0, v0, Landroid/graphics/PointF;->y:F
 
     float-to-int v0, v0
 
     goto :goto_0
 
-    .line 426
     :cond_4
     sget v1, Lcom/amap/mapapi/map/bh;->h:F
 
@@ -706,7 +642,6 @@
 
     add-float/2addr v3, v1
 
-    .line 428
     sget v1, Lcom/amap/mapapi/map/bh;->h:F
 
     iget v0, v0, Landroid/graphics/PointF;->y:F
@@ -727,13 +662,10 @@
 
     add-float v2, v0, v1
 
-    .line 430
     float-to-int v1, v3
 
-    .line 431
     float-to-int v0, v2
 
-    .line 432
     float-to-double v3, v3
 
     int-to-double v5, v1
@@ -744,10 +676,8 @@
 
     if-ltz v3, :cond_5
 
-    .line 433
     add-int/lit8 v1, v1, 0x1
 
-    .line 435
     :cond_5
     float-to-double v2, v2
 
@@ -759,7 +689,6 @@
 
     if-ltz v2, :cond_1
 
-    .line 436
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

@@ -31,8 +31,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 301
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,11 +40,7 @@
 # virtual methods
 .method public compare(Lcom/android/settings/applications/ProcStatsEntry$Service;Lcom/android/settings/applications/ProcStatsEntry$Service;)I
     .locals 4
-    .parameter "lhs"
-    .parameter "rhs"
 
-    .prologue
-    .line 304
     iget-wide v0, p1, Lcom/android/settings/applications/ProcStatsEntry$Service;->mDuration:J
 
     iget-wide v2, p2, Lcom/android/settings/applications/ProcStatsEntry$Service;->mDuration:J
@@ -55,14 +49,11 @@
 
     if-gez v0, :cond_0
 
-    .line 305
     const/4 v0, 0x1
 
-    .line 309
     :goto_0
     return v0
 
-    .line 306
     :cond_0
     iget-wide v0, p1, Lcom/android/settings/applications/ProcStatsEntry$Service;->mDuration:J
 
@@ -72,12 +63,10 @@
 
     if-lez v0, :cond_1
 
-    .line 307
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 309
     :cond_1
     const/4 v0, 0x0
 
@@ -86,17 +75,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 301
     check-cast p1, Lcom/android/settings/applications/ProcStatsEntry$Service;
 
-    .end local p1
     check-cast p2, Lcom/android/settings/applications/ProcStatsEntry$Service;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ProcessStatsDetail$1;->compare(Lcom/android/settings/applications/ProcStatsEntry$Service;Lcom/android/settings/applications/ProcStatsEntry$Service;)I
 
     move-result v0

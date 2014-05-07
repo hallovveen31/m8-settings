@@ -23,19 +23,12 @@
 # direct methods
 .method public constructor <init>(II)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 343
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 344
     iput p1, p0, Lcom/amap/mapapi/core/GeoPoint$a;->a:I
 
-    .line 345
     iput p2, p0, Lcom/amap/mapapi/core/GeoPoint$a;->b:I
 
-    .line 346
     return-void
 .end method

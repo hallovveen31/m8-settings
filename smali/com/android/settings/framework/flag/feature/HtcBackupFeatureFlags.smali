@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,8 +43,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,18 +50,13 @@
 
 .method private static final supportActivities(Landroid/content/Context;Landroid/content/Intent;)Z
     .locals 3
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 132
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 138
     :cond_0
     :goto_0
     return v0
@@ -94,10 +85,7 @@
 
 .method public static final supportDefaultTipsAndHelp(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 126
     invoke-static {}, Lcom/android/settings/framework/menu/transfer/HtcTipsAndHelpMenuItem;->getDefaultIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -111,10 +99,7 @@
 
 .method public static final supportDefaultTransfer(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 82
     invoke-static {}, Lcom/android/settings/framework/preference/backup/HtcDefaultTransferPreference;->getDefaultTransferIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -128,10 +113,7 @@
 
 .method public static final supportDnaTransfer(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 63
     invoke-static {p0}, Lcom/android/settings/framework/preference/backup/HtcDnaTransferPreference;->getDnaTransferIntent(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
@@ -145,18 +127,13 @@
 
 .method public static final supportHtcSyncManager(Landroid/content/Context;)Z
     .locals 5
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 101
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 103
-    .local v1, pm:Landroid/content/pm/PackageManager;
     :try_start_0
     const-string v3, "com.nero.android.htc.sync"
 
@@ -172,25 +149,18 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 106
     :goto_0
     return v2
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
-    .local v0, e:Landroid/content/pm/PackageManager$NameNotFoundException;
     goto :goto_0
 .end method
 
 .method public static final supportTransferMyStuff(Landroid/content/Context;)Z
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 43
     invoke-static {p0}, Lcom/android/settings/framework/flag/feature/HtcBackupFeatureFlags;->supportDnaTransfer(Landroid/content/Context;)Z
 
     move-result v0

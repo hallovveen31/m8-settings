@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 185
     iput-object p1, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$2;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 188
     if-nez p2, :cond_0
 
-    .line 189
     iget-object v0, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$2;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 
     #getter for: Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;->mTsm:Landroid/view/textservice/TextServicesManager;
@@ -58,20 +50,16 @@
 
     invoke-virtual {v0, v3}, Landroid/view/textservice/TextServicesManager;->setSpellCheckerSubtype(Landroid/view/textservice/SpellCheckerSubtype;)V
 
-    .line 193
     :goto_0
     iget-object v0, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$2;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 
-    #calls: Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;->callChangeListener(Ljava/lang/Object;)Z
+    #calls: Lcom/htc/preference/HtcPreference;->callChangeListener(Ljava/lang/Object;)Z
     invoke-static {v0, v3}, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;->access$300(Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;Ljava/lang/Object;)Z
 
-    .line 199
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 200
     return-void
 
-    .line 191
     :cond_0
     iget-object v0, p0, Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference$2;->this$0:Lcom/android/settings/inputmethod/HtcSingleSpellCheckerPreference;
 

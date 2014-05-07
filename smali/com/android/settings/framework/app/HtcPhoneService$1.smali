@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 153
     invoke-static {}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->values()[Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_LIFE_TIME_TOTAL_CALL:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_LIFE_TIME_TOTAL_MINS:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_LIFE_TIME_TOTAL_DATA_RX:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_LIFE_TIME_TOTAL_DATA_TX:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_IMEI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_IMEI_SV:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_ERI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +149,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_NAI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +165,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_PRI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -183,7 +181,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_PRL:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -199,7 +197,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_ICC:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -215,7 +213,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_MEID:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -231,7 +229,7 @@
 
     sget-object v1, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->UNKNOWN:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

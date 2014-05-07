@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 204
     iput-object p1, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$4;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,18 +33,13 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 208
     invoke-static {}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 209
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,13 +67,11 @@
     #calls: Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->access$300(Ljava/lang/String;)V
 
-    .line 211
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity$4;->this$0:Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;
 
     #calls: Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->cancelBackupProgressDialog()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;->access$400(Lcom/android/settings/framework/activity/backup/HtcMasterClearBackupProgressActivity;)V
 
-    .line 212
     return-void
 .end method

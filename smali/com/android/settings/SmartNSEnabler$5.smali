@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 977
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,15 +34,12 @@
 .method public run()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 980
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 982
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -59,8 +53,6 @@
 
     move-result v0
 
-    .line 984
-    .local v0, type:I
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -91,11 +83,9 @@
 
     if-eqz v1, :cond_2
 
-    .line 986
     :cond_0
     if-nez v0, :cond_1
 
-    .line 988
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -115,7 +105,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 989
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mHandler:Landroid/os/Handler;
@@ -136,7 +125,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 991
     :cond_1
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -147,7 +135,6 @@
 
     invoke-static {v4, v1}, Lcom/android/settings/SmartNSUtility;->setNetSharing(ZLandroid/content/Context;)V
 
-    .line 993
     :cond_2
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -164,10 +151,8 @@
 
     if-eqz v1, :cond_4
 
-    .line 995
     if-nez v0, :cond_3
 
-    .line 997
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -187,7 +172,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 998
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mHandler:Landroid/os/Handler;
@@ -208,7 +192,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1000
     :cond_3
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -225,7 +208,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1002
     :cond_4
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -240,7 +222,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 1003
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -250,7 +231,6 @@
 
     invoke-static {v4, v1}, Lcom/android/settings/SmartNSUtility;->setDiagEnabled(ZLandroid/content/Context;)V
 
-    .line 1004
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -260,7 +240,6 @@
 
     invoke-static {v4, v1}, Lcom/android/settings/SmartNSUtility;->setMLEnabled(ZLandroid/content/Context;)V
 
-    .line 1005
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -270,7 +249,6 @@
 
     invoke-static {v5, v1}, Lcom/android/settings/SmartNSUtility;->setDataConnection(ZLandroid/content/Context;)V
 
-    .line 1008
     :cond_5
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -287,7 +265,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 1009
     iget-object v1, p0, Lcom/android/settings/SmartNSEnabler$5;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mContext:Landroid/content/Context;
@@ -297,10 +274,8 @@
 
     invoke-static {v1, v4}, Lcom/android/settings/SmartNSUtility;->StartCTModem(Landroid/content/Context;Z)V
 
-    .line 1011
     :cond_6
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 1013
     return-void
 .end method

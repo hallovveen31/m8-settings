@@ -22,47 +22,32 @@
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJI)V
     .locals 3
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 11
     iput-boolean v0, p0, Lcom/amap/mapapi/offlinemap/b;->e:Z
 
-    .line 12
     iput-boolean v0, p0, Lcom/amap/mapapi/offlinemap/b;->f:Z
 
-    .line 13
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/amap/mapapi/offlinemap/b;->g:Lcom/amap/mapapi/offlinemap/a;
 
-    .line 17
     iput-object p1, p0, Lcom/amap/mapapi/offlinemap/b;->a:Ljava/lang/String;
 
-    .line 18
     iput-wide p3, p0, Lcom/amap/mapapi/offlinemap/b;->b:J
 
-    .line 19
     iput-wide p5, p0, Lcom/amap/mapapi/offlinemap/b;->c:J
 
-    .line 20
     iput p7, p0, Lcom/amap/mapapi/offlinemap/b;->d:I
 
-    .line 21
     new-instance v0, Lcom/amap/mapapi/offlinemap/a;
 
     iget-wide v1, p0, Lcom/amap/mapapi/offlinemap/b;->b:J
@@ -71,7 +56,6 @@
 
     iput-object v0, p0, Lcom/amap/mapapi/offlinemap/b;->g:Lcom/amap/mapapi/offlinemap/a;
 
-    .line 22
     return-void
 .end method
 
@@ -80,21 +64,16 @@
 .method public a()V
     .locals 1
 
-    .prologue
-    .line 69
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/amap/mapapi/offlinemap/b;->f:Z
 
-    .line 70
     return-void
 .end method
 
 .method public run()V
     .locals 7
 
-    .prologue
-    .line 25
     :goto_0
     iget-wide v0, p0, Lcom/amap/mapapi/offlinemap/b;->b:J
 
@@ -108,7 +87,6 @@
 
     if-nez v0, :cond_1
 
-    .line 27
     :try_start_0
     new-instance v0, Ljava/net/URL;
 
@@ -116,26 +94,22 @@
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    .line 31
     const-string v1, "GET"
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 32
     const-string v1, "Content-Type"
 
     const-string v2, "text/xml;"
 
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,25 +136,20 @@
 
     move-result-object v1
 
-    .line 34
     const-string v2, "RANGE"
 
-    invoke-virtual {v0, v2, v1}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     invoke-static {v1}, Lcom/amap/mapapi/offlinemap/h;->a(Ljava/lang/String;)V
 
-    .line 36
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+    invoke-virtual {v0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 38
     const/16 v1, 0x400
 
     new-array v1, v1, [B
 
-    .line 41
     :goto_1
     const/4 v2, 0x0
 
@@ -204,7 +173,6 @@
 
     if-nez v3, :cond_0
 
-    .line 42
     iget-wide v3, p0, Lcom/amap/mapapi/offlinemap/b;->b:J
 
     iget-object v5, p0, Lcom/amap/mapapi/offlinemap/b;->g:Lcom/amap/mapapi/offlinemap/a;
@@ -225,16 +193,13 @@
 
     goto :goto_1
 
-    .line 50
     :catch_0
     move-exception v0
 
-    .line 51
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
-    .line 47
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -265,7 +230,6 @@
 
     invoke-static {v0}, Lcom/amap/mapapi/offlinemap/h;->a(Ljava/lang/String;)V
 
-    .line 48
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/amap/mapapi/offlinemap/b;->e:Z
@@ -274,7 +238,6 @@
 
     goto/16 :goto_0
 
-    .line 54
     :cond_1
     return-void
 .end method

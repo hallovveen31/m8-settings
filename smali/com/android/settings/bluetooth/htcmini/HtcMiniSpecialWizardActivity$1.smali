@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 89
     iput-object p1, p0, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$1;->this$0:Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,19 +37,15 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 92
     const-string v0, "HtcMiniSpecialWizardActivity"
 
     const-string v1, "Font scale or theme Changed!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     iget-object v0, p0, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity$1;->this$0:Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/bluetooth/htcmini/HtcMiniSpecialWizardActivity;->recreate()V
+    invoke-virtual {v0}, Landroid/app/Activity;->recreate()V
 
-    .line 94
     return-void
 .end method

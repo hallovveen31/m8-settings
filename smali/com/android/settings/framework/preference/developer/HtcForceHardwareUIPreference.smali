@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,40 +50,25 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;)V
 
-    .line 37
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 45
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 54
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 55
     return-void
 .end method
 
@@ -94,9 +77,7 @@
 .method protected getCustomSummary()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 65
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcForceHardwareUIPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -112,9 +93,7 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 60
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcForceHardwareUIPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -129,10 +108,7 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/Boolean;
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 70
     const-string v0, "persist.sys.ui.hw"
 
     const/4 v1, 0x0
@@ -150,11 +126,7 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Z)Z
     .locals 2
-    .parameter "context"
-    .parameter "newState"
 
-    .prologue
-    .line 75
     const-string v1, "persist.sys.ui.hw"
 
     if-eqz p2, :cond_0
@@ -164,12 +136,10 @@
     :goto_0
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     const/4 v0, 0x1
 
     return v0
 
-    .line 75
     :cond_0
     const-string v0, "false"
 

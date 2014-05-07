@@ -34,10 +34,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccountPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 555
     iput-object p1, p0, Lcom/android/settings/AccountPreference$5;->this$0:Lcom/android/settings/AccountPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +46,6 @@
 # virtual methods
 .method public run(Landroid/accounts/AccountManagerFuture;)V
     .locals 6
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -60,13 +56,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 557
-    .local p1, future:Landroid/accounts/AccountManagerFuture;,"Landroid/accounts/AccountManagerFuture<Ljava/lang/Boolean;>;"
     const/4 v2, 0x0
 
-    .line 559
-    .local v2, removed:Z
     :try_start_0
     invoke-interface {p1}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
 
@@ -82,7 +73,6 @@
 
     move-result v2
 
-    .line 567
     :goto_0
     const-string v3, "AccountPreference"
 
@@ -106,7 +96,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     :try_start_1
     iget-object v3, p0, Lcom/android/settings/AccountPreference$5;->this$0:Lcom/android/settings/AccountPreference;
 
@@ -117,7 +106,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 572
     iget-object v3, p0, Lcom/android/settings/AccountPreference$5;->this$0:Lcom/android/settings/AccountPreference;
 
     #getter for: Lcom/android/settings/AccountPreference;->mRemoveProgress:Lcom/htc/app/HtcProgressDialog;
@@ -127,11 +115,9 @@
 
     invoke-virtual {v3}, Lcom/htc/app/HtcProgressDialog;->dismiss()V
 
-    .line 574
     :cond_0
     if-nez v2, :cond_1
 
-    .line 575
     new-instance v3, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v4, p0, Lcom/android/settings/AccountPreference$5;->this$0:Lcom/android/settings/AccountPreference;
@@ -168,17 +154,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 588
     :cond_1
     :goto_1
     return-void
 
-    .line 583
     :catch_0
     move-exception v0
 
-    .line 584
-    .local v0, e:Ljava/lang/IllegalStateException;
     const-string v3, "AccountPreference"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -203,13 +185,9 @@
 
     goto :goto_1
 
-    .line 585
-    .end local v0           #e:Ljava/lang/IllegalStateException;
     :catch_1
     move-exception v1
 
-    .line 586
-    .local v1, e2:Ljava/lang/IllegalArgumentException;
     const-string v3, "AccountPreference"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -234,20 +212,16 @@
 
     goto :goto_1
 
-    .line 564
-    .end local v1           #e2:Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v3
 
     goto/16 :goto_0
 
-    .line 562
     :catch_3
     move-exception v3
 
     goto/16 :goto_0
 
-    .line 560
     :catch_4
     move-exception v3
 

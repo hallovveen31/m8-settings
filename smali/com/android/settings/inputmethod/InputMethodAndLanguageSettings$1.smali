@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;Ljava/lang/String;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 524
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
 
     iput-object p2, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->val$inputDeviceDescriptor:Ljava/lang/String;
@@ -44,10 +40,7 @@
 # virtual methods
 .method public onPreferenceClick(Lcom/htc/preference/HtcPreference;)Z
     .locals 2
-    .parameter "preference"
 
-    .prologue
-    .line 527
     iget-object v0, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->this$0:Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;
 
     iget-object v1, p0, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings$1;->val$inputDeviceDescriptor:Ljava/lang/String;
@@ -55,7 +48,6 @@
     #calls: Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->showKeyboardLayoutDialog(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;->access$000(Lcom/android/settings/inputmethod/InputMethodAndLanguageSettings;Ljava/lang/String;)V
 
-    .line 528
     const/4 v0, 0x1
 
     return v0

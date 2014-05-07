@@ -23,15 +23,11 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/framework/core/storage/HtcAppsStatistician;)V
     .locals 2
-    .parameter
 
-    .prologue
-    .line 472
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
 
-    .line 473
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->mAppsSize:J
@@ -41,11 +37,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/framework/core/storage/HtcAppsStatistician;Lcom/android/settings/framework/core/storage/HtcAppsStatistician$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 472
     invoke-direct {p0, p1}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;-><init>(Lcom/android/settings/framework/core/storage/HtcAppsStatistician;)V
 
     return-void
@@ -55,16 +47,12 @@
 # virtual methods
 .method public onGetStatsCompleted(Landroid/content/pm/PackageStats;Z)V
     .locals 8
-    .parameter "stats"
-    .parameter "succeeded"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .prologue
-    .line 480
     iget-object v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     #getter for: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->mStop:Z
@@ -74,20 +62,15 @@
 
     if-eqz v4, :cond_1
 
-    .line 559
     :cond_0
     :goto_0
     return-void
 
-    .line 489
     :cond_1
     const-wide/16 v2, 0x0
 
-    .line 491
-    .local v2, size:J
     if-eqz p2, :cond_2
 
-    .line 492
     sget-object v4, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$2;->$SwitchMap$com$android$settings$framework$core$storage$HtcAppsStatistician$AppsType:[I
 
     iget-object v5, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
@@ -97,7 +80,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$AppsType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v5
 
@@ -105,7 +88,6 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 521
     :cond_2
     :goto_1
     const-wide/16 v4, 0x0
@@ -114,10 +96,8 @@
 
     if-eqz v4, :cond_3
 
-    .line 522
     monitor-enter p0
 
-    .line 523
     :try_start_0
     iget-wide v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->mAppsSize:J
 
@@ -125,12 +105,10 @@
 
     iput-wide v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->mAppsSize:J
 
-    .line 531
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 534
     :cond_3
     iget-object v4, p1, Landroid/content/pm/PackageStats;->packageName:Ljava/lang/String;
 
@@ -142,14 +120,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 535
     invoke-static {}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->access$400()Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 536
     iget-object v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     #getter for: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->mContext:Landroid/content/Context;
@@ -163,8 +139,6 @@
 
     move-result-object v0
 
-    .line 538
-    .local v0, formatted:Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,8 +172,6 @@
     #calls: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->log(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->access$600(Ljava/lang/String;)V
 
-    .line 542
-    .end local v0           #formatted:Ljava/lang/String;
     :cond_4
     const/4 v4, 0x0
 
@@ -215,8 +187,6 @@
 
     move-result-object v1
 
-    .line 547
-    .local v1, message:Landroid/os/Message;
     iget-object v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     #getter for: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->mResponser:Lcom/android/settings/framework/os/response/HtcIResponser;
@@ -226,7 +196,6 @@
 
     invoke-interface {v4, v1}, Lcom/android/settings/framework/os/response/HtcIResponser;->broadcast(Landroid/os/Message;)V
 
-    .line 557
     iget-object v4, p0, Lcom/android/settings/framework/core/storage/HtcAppsStatistician$StatsObserver;->this$0:Lcom/android/settings/framework/core/storage/HtcAppsStatistician;
 
     #getter for: Lcom/android/settings/framework/core/storage/HtcAppsStatistician;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
@@ -240,8 +209,6 @@
 
     goto :goto_0
 
-    .line 495
-    .end local v1           #message:Landroid/os/Message;
     :pswitch_0
     iget-wide v4, p1, Landroid/content/pm/PackageStats;->codeSize:J
 
@@ -249,10 +216,8 @@
 
     add-long v2, v4, v6
 
-    .line 496
     goto :goto_1
 
-    .line 499
     :pswitch_1
     iget-wide v4, p1, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
@@ -272,17 +237,13 @@
 
     add-long v2, v4, v6
 
-    .line 505
     goto/16 :goto_1
 
-    .line 508
     :pswitch_2
     iget-wide v2, p1, Landroid/content/pm/PackageStats;->externalCodeSize:J
 
-    .line 509
     goto/16 :goto_1
 
-    .line 512
     :pswitch_3
     iget-wide v4, p1, Landroid/content/pm/PackageStats;->codeSize:J
 
@@ -308,7 +269,6 @@
 
     goto/16 :goto_1
 
-    .line 531
     :catchall_0
     move-exception v4
 
@@ -319,7 +279,6 @@
 
     throw v4
 
-    .line 492
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

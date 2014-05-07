@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,8 +43,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,151 +50,117 @@
 
 .method public static dump(Landroid/util/TypedValue;)V
     .locals 1
-    .parameter "typedValue"
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/android/settings/framework/util/log/HtcTypedValueDumper;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcTypedValueDumper;->dump(Ljava/lang/String;Landroid/util/TypedValue;)V
 
-    .line 27
     return-void
 .end method
 
 .method public static dump(Ljava/lang/String;Landroid/util/TypedValue;)V
     .locals 1
-    .parameter "tag"
-    .parameter "typedValue"
 
-    .prologue
-    .line 35
     const-string v0, ""
 
     invoke-static {p0, v0, p1}, Lcom/android/settings/framework/util/log/HtcTypedValueDumper;->dump(Ljava/lang/String;Ljava/lang/String;Landroid/util/TypedValue;)V
 
-    .line 36
     return-void
 .end method
 
 .method public static dump(Ljava/lang/String;Ljava/lang/String;Landroid/util/TypedValue;)V
     .locals 1
-    .parameter "tag"
-    .parameter "indent"
-    .parameter "typedValue"
 
-    .prologue
-    .line 45
     invoke-static {p1, p2}, Lcom/android/settings/framework/util/log/HtcTypedValueDumper;->toString(Ljava/lang/String;Landroid/util/TypedValue;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, v0}, Lcom/android/settings/framework/util/log/HtcLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     return-void
 .end method
 
 .method public static getTypeName(I)Ljava/lang/String;
     .locals 1
-    .parameter "type"
 
-    .prologue
-    .line 106
     packed-switch p0, :pswitch_data_0
 
-    .line 140
     :pswitch_0
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 108
     :pswitch_1
     const-string v0, "TYPE_NULL"
 
     goto :goto_0
 
-    .line 110
     :pswitch_2
     const-string v0, "TYPE_REFERENCE"
 
     goto :goto_0
 
-    .line 112
     :pswitch_3
     const-string v0, "TYPE_ATTRIBUTE"
 
     goto :goto_0
 
-    .line 114
     :pswitch_4
     const-string v0, "TYPE_STRING"
 
     goto :goto_0
 
-    .line 116
     :pswitch_5
     const-string v0, "TYPE_FLOAT"
 
     goto :goto_0
 
-    .line 118
     :pswitch_6
     const-string v0, "TYPE_DIMENSION"
 
     goto :goto_0
 
-    .line 120
     :pswitch_7
     const-string v0, "TYPE_FRACTION"
 
     goto :goto_0
 
-    .line 124
     :pswitch_8
     const-string v0, "TYPE_INT_DEC"
 
     goto :goto_0
 
-    .line 126
     :pswitch_9
     const-string v0, "TYPE_INT_HEX"
 
     goto :goto_0
 
-    .line 128
     :pswitch_a
     const-string v0, "TYPE_INT_BOOLEAN"
 
     goto :goto_0
 
-    .line 132
     :pswitch_b
     const-string v0, "TYPE_INT_COLOR_ARGB8"
 
     goto :goto_0
 
-    .line 134
     :pswitch_c
     const-string v0, "TYPE_INT_COLOR_RGB8"
 
     goto :goto_0
 
-    .line 136
     :pswitch_d
     const-string v0, "TYPE_INT_COLOR_ARGB4"
 
     goto :goto_0
 
-    .line 138
     :pswitch_e
     const-string v0, "TYPE_INT_COLOR_RGB4"
 
     goto :goto_0
 
-    .line 106
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -238,16 +200,11 @@
 
 .method public static getTypeName(Landroid/util/TypedValue;)Ljava/lang/String;
     .locals 1
-    .parameter "typedValue"
 
-    .prologue
-    .line 94
     if-nez p0, :cond_0
 
-    .line 95
     const-string v0, "UNKNOWN"
 
-    .line 97
     :goto_0
     return-object v0
 
@@ -263,10 +220,7 @@
 
 .method public static toString(Landroid/util/TypedValue;)Ljava/lang/String;
     .locals 1
-    .parameter "typedValue"
 
-    .prologue
-    .line 54
     const-string v0, ""
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcTypedValueDumper;->toString(Ljava/lang/String;Landroid/util/TypedValue;)Ljava/lang/String;
@@ -278,11 +232,7 @@
 
 .method public static toString(Ljava/lang/String;Landroid/util/TypedValue;)Ljava/lang/String;
     .locals 4
-    .parameter "indent"
-    .parameter "typedValue"
 
-    .prologue
-    .line 64
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -301,17 +251,12 @@
 
     move-result-object v0
 
-    .line 65
-    .local v0, PREFIX:Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 68
-    .local v1, sb:Ljava/lang/StringBuffer;
     if-nez p1, :cond_0
 
-    .line 69
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -348,16 +293,13 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 71
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 85
     :goto_0
     return-object v2
 
-    .line 74
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -397,7 +339,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 75
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -430,7 +371,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 76
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -463,7 +403,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 77
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -496,7 +435,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 78
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -529,7 +467,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 79
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -562,7 +499,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 80
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -599,7 +535,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 81
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -654,7 +589,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 82
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -687,7 +621,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 83
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -722,7 +655,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 85
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2

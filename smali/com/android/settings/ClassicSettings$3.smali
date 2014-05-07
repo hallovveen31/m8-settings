@@ -34,10 +34,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ClassicSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 551
     iput-object p1, p0, Lcom/android/settings/ClassicSettings$3;->this$0:Lcom/android/settings/ClassicSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,11 +46,7 @@
 # virtual methods
 .method public compare(Landroid/preference/PreferenceActivity$Header;Landroid/preference/PreferenceActivity$Header;)I
     .locals 2
-    .parameter "h1"
-    .parameter "h2"
 
-    .prologue
-    .line 554
     iget-object v0, p1, Landroid/preference/PreferenceActivity$Header;->title:Ljava/lang/CharSequence;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -75,17 +68,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 551
     check-cast p1, Landroid/preference/PreferenceActivity$Header;
 
-    .end local p1
     check-cast p2, Landroid/preference/PreferenceActivity$Header;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/ClassicSettings$3;->compare(Landroid/preference/PreferenceActivity$Header;Landroid/preference/PreferenceActivity$Header;)I
 
     move-result v0

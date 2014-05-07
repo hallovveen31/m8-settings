@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 214
     invoke-static {}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->values()[Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->SEND_BROADCAST:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_SERVICE:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_ACTIVITY:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_ACTIVITY_FOR_RESULT:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_ACTIVITY_FROM_FRAGMENT_FOR_RESULT:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_FRAGMENT:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_FRAGMENT_FOR_RESULT:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

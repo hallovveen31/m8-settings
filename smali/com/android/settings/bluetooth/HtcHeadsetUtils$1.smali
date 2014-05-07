@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;Lcom/android/settings/bluetooth/CachedBluetoothDevice;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 78
     iput-object p1, p0, Lcom/android/settings/bluetooth/HtcHeadsetUtils$1;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/HtcHeadsetUtils$1;->val$cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
@@ -44,10 +40,7 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 3
-    .parameter "dialog"
 
-    .prologue
-    .line 80
     iget-object v0, p0, Lcom/android/settings/bluetooth/HtcHeadsetUtils$1;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/settings/bluetooth/HtcHeadsetUtils$1;->val$cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
@@ -56,6 +49,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/settings/bluetooth/HtcHeadsetUtils;->setFindMeEnabled(Landroid/content/Context;Lcom/android/settings/bluetooth/CachedBluetoothDevice;I)V
 
-    .line 81
     return-void
 .end method

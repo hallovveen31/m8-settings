@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcIInternalHost;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 40
     iput-object p1, p0, Lcom/android/settings/framework/menu/transfer/HtcTipsAndHelpMenuItem$1;->val$host:Lcom/android/settings/framework/app/HtcIInternalHost;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onMenuItemClick(Landroid/view/MenuItem;)Z
     .locals 3
-    .parameter "item"
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/settings/framework/menu/transfer/HtcTipsAndHelpMenuItem$1;->val$host:Lcom/android/settings/framework/app/HtcIInternalHost;
 
     invoke-static {}, Lcom/android/settings/framework/menu/transfer/HtcTipsAndHelpMenuItem;->getDefaultIntent()Landroid/content/Intent;
@@ -53,7 +47,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/settings/framework/content/HtcSettingsContext;->startIntent(Lcom/android/settings/framework/app/HtcIInternalHost;Landroid/content/Intent;Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;)V
 
-    .line 47
     const/4 v0, 0x0
 
     return v0

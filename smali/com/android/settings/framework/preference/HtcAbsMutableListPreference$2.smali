@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 252
     iput-object p1, p0, Lcom/android/settings/framework/preference/HtcAbsMutableListPreference$2;->this$0:Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
-    .parameter "dialog"
 
-    .prologue
-    .line 256
     iget-object v0, p0, Lcom/android/settings/framework/preference/HtcAbsMutableListPreference$2;->this$0:Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;
 
     const/4 v1, 0x0
@@ -50,6 +44,5 @@
     #setter for: Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;->mIsFirstBound:Z
     invoke-static {v0, v1}, Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;->access$102(Lcom/android/settings/framework/preference/HtcAbsMutableListPreference;Z)Z
 
-    .line 257
     return-void
 .end method

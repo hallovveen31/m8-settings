@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/AccessibilitySettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 611
     iput-object p1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/AccessibilitySettings;Lcom/android/settings/AccessibilitySettings$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 611
     invoke-direct {p0, p1}, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;-><init>(Lcom/android/settings/AccessibilitySettings;)V
 
     return-void
@@ -48,11 +41,7 @@
 # virtual methods
 .method public onPackageAdded(Ljava/lang/String;I)V
     .locals 4
-    .parameter "packageName"
-    .parameter "uid"
 
-    .prologue
-    .line 615
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -64,8 +53,6 @@
 
     move-result-object v0
 
-    .line 616
-    .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -77,17 +64,12 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 617
     return-void
 .end method
 
 .method public onPackageAppeared(Ljava/lang/String;I)V
     .locals 4
-    .parameter "packageName"
-    .parameter "reason"
 
-    .prologue
-    .line 621
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -99,8 +81,6 @@
 
     move-result-object v0
 
-    .line 622
-    .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -112,17 +92,12 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 623
     return-void
 .end method
 
 .method public onPackageDisappeared(Ljava/lang/String;I)V
     .locals 4
-    .parameter "packageName"
-    .parameter "reason"
 
-    .prologue
-    .line 627
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -134,8 +109,6 @@
 
     move-result-object v0
 
-    .line 628
-    .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -147,17 +120,12 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 629
     return-void
 .end method
 
 .method public onPackageRemoved(Ljava/lang/String;I)V
     .locals 4
-    .parameter "packageName"
-    .parameter "uid"
 
-    .prologue
-    .line 633
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -169,8 +137,6 @@
 
     move-result-object v0
 
-    .line 634
-    .local v0, message:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/AccessibilitySettings$SettingsPackageMonitor;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #getter for: Lcom/android/settings/AccessibilitySettings;->mHandler:Landroid/os/Handler;
@@ -182,6 +148,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 635
     return-void
 .end method

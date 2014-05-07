@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 232
     new-instance v0, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState$1;
 
     invoke-direct {v0}, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState$1;-><init>()V
@@ -48,15 +46,11 @@
 
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
-    .parameter "source"
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 218
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 219
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -66,10 +60,8 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;->isShowing:Z
 
-    .line 220
     return-void
 
-    .line 219
     :cond_0
     const/4 v0, 0x0
 
@@ -78,13 +70,9 @@
 
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
-    .parameter "superState"
 
-    .prologue
-    .line 223
     invoke-direct {p0, p1}, Lcom/htc/preference/HtcPreference$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 224
     return-void
 .end method
 
@@ -92,14 +80,9 @@
 # virtual methods
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
-    .parameter "dest"
-    .parameter "flags"
 
-    .prologue
-    .line 228
-    invoke-super {p0, p1, p2}, Lcom/htc/preference/HtcPreference$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-super {p0, p1, p2}, Landroid/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 229
     iget-boolean v0, p0, Lcom/android/settings/framework/preference/HtcConfirmCheckBoxPreference$SavedState;->isShowing:Z
 
     if-eqz v0, :cond_0
@@ -109,10 +92,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 230
     return-void
 
-    .line 229
     :cond_0
     const/4 v0, 0x0
 

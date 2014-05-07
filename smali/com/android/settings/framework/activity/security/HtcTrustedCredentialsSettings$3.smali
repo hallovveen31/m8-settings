@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;Landroid/app/Dialog;)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 449
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3;->this$0:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3;->val$certHolder:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;
@@ -49,27 +44,21 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 4
-    .parameter "v"
 
-    .prologue
-    .line 451
     new-instance v1, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v2, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3;->this$0:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
     invoke-direct {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 452
-    .local v1, builder:Lcom/htc/widget/HtcAlertDialog$Builder;
     const v2, 0x7f0c00b8
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setTitle(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 453
     iget-object v2, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3;->val$certHolder:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;
 
     #getter for: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;->mTab:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$Tab;
@@ -86,7 +75,6 @@
 
     invoke-virtual {v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setMessage(I)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 454
     const v2, 0x1040013
 
     new-instance v3, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3$1;
@@ -95,7 +83,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 462
     const v2, 0x1040009
 
     new-instance v3, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$3$2;
@@ -104,15 +91,11 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 468
     invoke-virtual {v1}, Lcom/htc/widget/HtcAlertDialog$Builder;->create()Lcom/htc/widget/HtcAlertDialog;
 
     move-result-object v0
 
-    .line 469
-    .local v0, alert:Lcom/htc/widget/HtcAlertDialog;
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 470
     return-void
 .end method

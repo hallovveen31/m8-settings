@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,11 +30,7 @@
 # virtual methods
 .method public draw(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
     .locals 1
-    .parameter "edgeEffect"
-    .parameter "canvas"
 
-    .prologue
-    .line 86
     const/4 v0, 0x0
 
     return v0
@@ -44,19 +38,13 @@
 
 .method public finish(Ljava/lang/Object;)V
     .locals 0
-    .parameter "edgeEffect"
 
-    .prologue
-    .line 71
     return-void
 .end method
 
 .method public isFinished(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "edgeEffect"
 
-    .prologue
-    .line 67
     const/4 v0, 0x1
 
     return v0
@@ -64,10 +52,7 @@
 
 .method public newEdgeEffect(Landroid/content/Context;)Ljava/lang/Object;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 60
     const/4 v0, 0x0
 
     return-object v0
@@ -75,11 +60,7 @@
 
 .method public onAbsorb(Ljava/lang/Object;I)Z
     .locals 1
-    .parameter "edgeEffect"
-    .parameter "velocity"
 
-    .prologue
-    .line 82
     const/4 v0, 0x0
 
     return v0
@@ -87,11 +68,7 @@
 
 .method public onPull(Ljava/lang/Object;F)Z
     .locals 1
-    .parameter "edgeEffect"
-    .parameter "deltaDistance"
 
-    .prologue
-    .line 74
     const/4 v0, 0x0
 
     return v0
@@ -99,10 +76,7 @@
 
 .method public onRelease(Ljava/lang/Object;)Z
     .locals 1
-    .parameter "edgeEffect"
 
-    .prologue
-    .line 78
     const/4 v0, 0x0
 
     return v0
@@ -110,11 +84,6 @@
 
 .method public setSize(Ljava/lang/Object;II)V
     .locals 0
-    .parameter "edgeEffect"
-    .parameter "width"
-    .parameter "height"
 
-    .prologue
-    .line 64
     return-void
 .end method

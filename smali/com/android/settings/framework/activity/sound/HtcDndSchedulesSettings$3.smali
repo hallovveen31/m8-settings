@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 260
     iput-object p1, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 7
-    .parameter
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,9 +46,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 263
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mAdapter:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleAdapter;
@@ -65,14 +55,12 @@
 
     if-nez v0, :cond_1
 
-    .line 264
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 265
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v0
@@ -81,12 +69,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     :cond_0
     :goto_0
     return-void
 
-    .line 270
     :cond_1
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
@@ -99,18 +85,14 @@
 
     move-result-object v6
 
-    .line 271
-    .local v6, item:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleItem;
     if-nez v6, :cond_2
 
-    .line 272
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 273
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v0
@@ -137,7 +119,6 @@
 
     goto :goto_0
 
-    .line 278
     :cond_2
     iget v0, v6, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleItem;->mType:I
 
@@ -145,7 +126,6 @@
 
     goto :goto_0
 
-    .line 280
     :pswitch_0
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
@@ -153,7 +133,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 281
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v0
@@ -180,7 +159,6 @@
 
     goto :goto_0
 
-    .line 286
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
@@ -195,7 +173,6 @@
 
     goto :goto_0
 
-    .line 290
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$3;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
@@ -210,7 +187,6 @@
 
     goto :goto_0
 
-    .line 278
     nop
 
     :pswitch_data_0

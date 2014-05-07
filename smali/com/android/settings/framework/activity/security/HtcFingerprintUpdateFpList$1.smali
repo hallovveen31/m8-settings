@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 310
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 313
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$1;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;
 
     #calls: Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;->backToSecuritySettingsAndFinish()V
     invoke-static {v0}, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;->access$900(Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;)V
 
-    .line 314
     return-void
 .end method

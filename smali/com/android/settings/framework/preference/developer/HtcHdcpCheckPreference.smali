@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 23
     const-class v0, Lcom/android/settings/framework/preference/developer/HtcAppProcessLimitPreference;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -34,26 +32,17 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 33
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;)V
 
-    .line 34
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 44
     return-void
 .end method
 
@@ -62,9 +51,7 @@
 .method protected getCustomDialogTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 53
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -80,9 +67,7 @@
 .method protected getCustomEntries()[Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 58
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -90,25 +75,19 @@
 
     move-result-object v1
 
-    .line 59
-    .local v1, res:Landroid/content/res/Resources;
     const v2, 0x7f080047
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 61
-    .local v0, entries:[Ljava/lang/String;
     return-object v0
 .end method
 
 .method protected getCustomEntryValues()[Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 72
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -116,26 +95,19 @@
 
     move-result-object v0
 
-    .line 73
-    .local v0, res:Landroid/content/res/Resources;
     const v2, 0x7f080048
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 75
-    .local v1, values:[Ljava/lang/String;
     return-object v1
 .end method
 
 .method protected getCustomSummary(I)Ljava/lang/CharSequence;
     .locals 3
-    .parameter "indexOfEntries"
 
-    .prologue
-    .line 65
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -149,8 +121,6 @@
 
     move-result-object v0
 
-    .line 67
-    .local v0, summaries:[Ljava/lang/String;
     aget-object v1, v0, p1
 
     return-object v1
@@ -159,9 +129,7 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 48
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -176,10 +144,7 @@
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 101
     const-string v0, "persist.sys.hdcp_checking"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -191,28 +156,21 @@
 
 .method protected onMapValueToIndex(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 2
-    .parameter "value"
 
-    .prologue
-    .line 106
-    invoke-virtual {p0, p1}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->findIndexOfValue(Ljava/lang/String;)I
+    invoke-virtual {p0, p1}, Lcom/htc/preference/HtcListPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 107
-    .local v0, index:I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 110
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 112
     :goto_0
     return-object v1
 
@@ -226,11 +184,7 @@
 
 .method protected onSetValueInBackground(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
-    .parameter "context"
-    .parameter "newValue"
 
-    .prologue
-    .line 117
     const-string v0, "persist.sys.hdcp_checking"
 
     invoke-virtual {p2}, Ljava/lang/String;->toString()Ljava/lang/String;
@@ -239,10 +193,8 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 118
     invoke-virtual {p0}, Lcom/android/settings/framework/preference/developer/HtcHdcpCheckPreference;->pokeSystemProperties()V
 
-    .line 119
     const/4 v0, 0x1
 
     return v0
@@ -251,8 +203,6 @@
 .method pokeSystemProperties()V
     .locals 2
 
-    .prologue
-    .line 123
     new-instance v0, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;-><init>()V
@@ -261,8 +211,7 @@
 
     new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/util/HtcSystemPropertyPoker;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 124
     return-void
 .end method

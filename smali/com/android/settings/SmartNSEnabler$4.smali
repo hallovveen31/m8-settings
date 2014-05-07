@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartNSEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 834
     iput-object p1, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 8
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,17 +46,12 @@
         }
     .end annotation
 
-    .prologue
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    .line 838
     move v0, p3
 
-    .line 840
-    .local v0, selected:I
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -77,8 +65,6 @@
 
     move-result v1
 
-    .line 841
-    .local v1, type:I
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mTypeArray:Ljava/util/ArrayList;
@@ -96,7 +82,6 @@
 
     invoke-static {v2}, Lcom/android/settings/SmartNSEnabler;->access$602(I)I
 
-    .line 843
     const-string v2, "SmartNS_Enabler"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -133,14 +118,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 844
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isUsbConnected()Z
 
     move-result v2
 
     invoke-static {v2}, Lcom/android/settings/SmartNSEnabler;->access$802(Z)Z
 
-    .line 846
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -160,7 +143,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 847
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -180,7 +162,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 848
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -217,7 +198,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 850
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isMTPIOBusy()Z
 
     move-result v2
@@ -230,7 +210,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 851
     new-instance v2, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     iget-object v3, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
@@ -276,11 +255,9 @@
 
     invoke-virtual {v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->show()Lcom/htc/widget/HtcAlertDialog;
 
-    .line 955
     :goto_0
     return-void
 
-    .line 911
     :cond_0
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -322,7 +299,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 912
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -342,7 +318,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 913
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -379,7 +354,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 914
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     iget-object v3, v2, Lcom/android/settings/SmartNSEnabler;->mSNSEnabler:Lcom/htc/preference/HtcPreference;
@@ -399,7 +373,6 @@
 
     invoke-virtual {v3, v2}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 916
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mTypeArray:Ljava/util/ArrayList;
@@ -419,7 +392,6 @@
 
     if-ne v2, v7, :cond_2
 
-    .line 917
     new-instance v2, Lcom/android/settings/SmartNSEnabler$WarningDialog;
 
     iget-object v3, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
@@ -428,7 +400,6 @@
 
     invoke-direct {v2, v3, v4}, Lcom/android/settings/SmartNSEnabler$WarningDialog;-><init>(Lcom/android/settings/SmartNSEnabler;Lcom/android/settings/SmartNSEnabler$1;)V
 
-    .line 918
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->sp:Landroid/content/SharedPreferences;
@@ -448,7 +419,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 923
     :goto_1
     invoke-static {}, Lcom/android/settings/SmartNSEnabler;->access$800()Z
 
@@ -456,7 +426,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 924
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mTypeArray:Ljava/util/ArrayList;
@@ -476,7 +445,6 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 952
     :cond_1
     :goto_2
     :pswitch_0
@@ -487,9 +455,8 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcListView;->invalidateViews()V
+    invoke-virtual {v2}, Landroid/widget/AbsListView;->invalidateViews()V
 
-    .line 953
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     #getter for: Lcom/android/settings/SmartNSEnabler;->mDialog:Lcom/htc/widget/HtcAlertDialog;
@@ -497,11 +464,10 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v2}, Landroid/app/Dialog;->dismiss()V
 
     goto/16 :goto_0
 
-    .line 920
     :cond_2
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -524,7 +490,6 @@
 
     goto :goto_1
 
-    .line 926
     :pswitch_1
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -532,7 +497,6 @@
 
     goto :goto_2
 
-    .line 931
     :pswitch_2
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isApnAvailable()Z
 
@@ -540,14 +504,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 932
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
     invoke-virtual {v2}, Lcom/android/settings/SmartNSEnabler;->enableTetheringWithApn()V
 
     goto :goto_2
 
-    .line 934
     :cond_3
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -555,7 +517,6 @@
 
     goto :goto_2
 
-    .line 938
     :pswitch_3
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -563,7 +524,6 @@
 
     goto :goto_2
 
-    .line 941
     :pswitch_4
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -571,7 +531,6 @@
 
     goto :goto_2
 
-    .line 944
     :pswitch_5
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -579,7 +538,6 @@
 
     goto :goto_2
 
-    .line 947
     :pswitch_6
     iget-object v2, p0, Lcom/android/settings/SmartNSEnabler$4;->this$0:Lcom/android/settings/SmartNSEnabler;
 
@@ -587,7 +545,6 @@
 
     goto :goto_2
 
-    .line 924
     nop
 
     :pswitch_data_0

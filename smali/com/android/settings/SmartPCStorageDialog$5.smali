@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartPCStorageDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/settings/SmartPCStorageDialog$5;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 380
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 381
-    .local v0, action:Ljava/lang/String;
     const-string v1, "SmartPCStorageDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,19 +60,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 382
     invoke-static {}, Lcom/android/settings/SmartNSUtility;->isUsbConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 383
     iget-object v1, p0, Lcom/android/settings/SmartPCStorageDialog$5;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
-    invoke-virtual {v1}, Lcom/android/settings/SmartPCStorageDialog;->finish()V
+    invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 385
     :cond_0
     return-void
 .end method

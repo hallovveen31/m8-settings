@@ -49,7 +49,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/16 v6, 0x400
 
     const/16 v5, 0x200
@@ -60,21 +59,18 @@
 
     const/16 v1, 0x15
 
-    .line 25
     new-array v0, v1, [D
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/amap/mapapi/core/GeoPoint;->a:[D
 
-    .line 34
     new-array v0, v1, [D
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/amap/mapapi/core/GeoPoint;->b:[D
 
-    .line 43
     new-array v0, v1, [Lcom/amap/mapapi/core/GeoPoint$a;
 
     const/4 v1, 0x0
@@ -315,7 +311,6 @@
 
     sput-object v0, Lcom/amap/mapapi/core/GeoPoint;->c:[Lcom/amap/mapapi/core/GeoPoint$a;
 
-    .line 318
     new-instance v0, Lcom/amap/mapapi/core/f;
 
     invoke-direct {v0}, Lcom/amap/mapapi/core/f;-><init>()V
@@ -324,7 +319,6 @@
 
     return-void
 
-    .line 25
     nop
 
     :array_0
@@ -352,7 +346,6 @@
         0x17t 0x6ct 0xc1t 0x16t 0x6ct 0xc1t 0x26t 0x41t
     .end array-data
 
-    .line 34
     :array_1
     .array-data 0x8
         0x83t 0xc8t 0xc9t 0x6dt 0x30t 0x5ft 0x44t 0x40t
@@ -382,137 +375,98 @@
 .method public constructor <init>()V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x0
 
     const-wide/high16 v2, -0x8000
 
     const-wide/16 v0, 0x1
 
-    .line 108
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 109
     iput-wide v4, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 110
     iput-wide v4, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 111
     return-void
 .end method
 
 .method public constructor <init>(DDJJ)V
     .locals 4
-    .parameter
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/high16 v2, -0x8000
 
     const-wide/16 v0, 0x1
 
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 148
     iput-wide p1, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 149
     iput-wide p3, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 150
     iput-wide p5, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 151
     iput-wide p7, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 152
     return-void
 .end method
 
 .method public constructor <init>(DDZ)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/high16 v4, -0x8000
 
     const-wide v2, 0x412e848000000000L
 
     const-wide/16 v0, 0x1
 
-    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v4, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v4, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 127
     const/4 v0, 0x1
 
     if-ne p5, v0, :cond_0
 
-    .line 128
     mul-double v0, p1, v2
 
     double-to-long v0, v0
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 129
     mul-double v0, p3, v2
 
     double-to-long v0, v0
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 134
     :goto_0
     return-void
 
-    .line 131
     :cond_0
     iput-wide p1, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 132
     iput-wide p3, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
     goto :goto_0
@@ -520,127 +474,91 @@
 
 .method public constructor <init>(II)V
     .locals 4
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/high16 v2, -0x8000
 
     const-wide/16 v0, 0x1
 
-    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 115
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 116
     int-to-long v0, p2
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 117
     return-void
 .end method
 
 .method public constructor <init>(JJ)V
     .locals 4
-    .parameter
-    .parameter
 
-    .prologue
     const-wide/high16 v2, -0x8000
 
     const-wide/16 v0, 0x1
 
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 121
     iput-wide p1, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 122
     iput-wide p3, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 123
     return-void
 .end method
 
 .method private constructor <init>(Landroid/os/Parcel;)V
     .locals 4
-    .parameter
 
-    .prologue
     const-wide/high16 v2, -0x8000
 
     const-wide/16 v0, 0x1
 
-    .line 313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 59
     iput-wide v2, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 60
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 61
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 314
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
-    .line 315
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
-    .line 316
     return-void
 .end method
 
 .method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/mapapi/core/f;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 20
     invoke-direct {p0, p1}, Lcom/amap/mapapi/core/GeoPoint;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -651,8 +569,6 @@
 .method public a()J
     .locals 2
 
-    .prologue
-    .line 210
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
     return-wide v0
@@ -660,21 +576,15 @@
 
 .method public a(D)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 138
     iput-wide p1, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 139
     return-void
 .end method
 
 .method public b()J
     .locals 2
 
-    .prologue
-    .line 215
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
     return-wide v0
@@ -682,44 +592,34 @@
 
 .method public b(D)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 143
     iput-wide p1, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 144
     return-void
 .end method
 
 .method public c()D
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x1
 
-    .line 224
     sget-object v0, Lcom/amap/mapapi/core/c;->h:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     sget-object v1, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;->projection_custBeijing54:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     if-ne v0, v1, :cond_1
 
-    .line 225
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
     cmpl-double v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    .line 226
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 237
     :goto_0
     return-wide v0
 
-    .line 228
     :cond_0
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
@@ -729,7 +629,6 @@
 
     goto :goto_0
 
-    .line 230
     :cond_1
     sget-object v0, Lcom/amap/mapapi/core/c;->h:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
@@ -737,21 +636,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 231
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
     cmpl-double v0, v0, v2
 
     if-nez v0, :cond_2
 
-    .line 232
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
     invoke-static {v0, v1}, Lcom/amap/mapapi/core/e;->a(J)D
 
     move-result-wide v0
 
-    .line 233
     const-wide v2, 0x41731bf84570a3d7L
 
     mul-double/2addr v0, v2
@@ -760,10 +656,8 @@
 
     div-double/2addr v0, v2
 
-    .line 234
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
-    .line 237
     :cond_2
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
@@ -773,31 +667,25 @@
 .method public d()D
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x1
 
-    .line 246
     sget-object v0, Lcom/amap/mapapi/core/c;->h:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     sget-object v1, Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;->projection_custBeijing54:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
     if-ne v0, v1, :cond_1
 
-    .line 247
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
     cmpl-double v0, v0, v2
 
     if-eqz v0, :cond_0
 
-    .line 248
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 262
     :goto_0
     return-wide v0
 
-    .line 250
     :cond_0
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
@@ -807,7 +695,6 @@
 
     goto :goto_0
 
-    .line 252
     :cond_1
     sget-object v0, Lcom/amap/mapapi/core/c;->h:Lcom/amap/mapapi/core/GeoPoint$EnumMapProjection;
 
@@ -815,21 +702,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 253
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
     cmpl-double v0, v0, v2
 
     if-nez v0, :cond_2
 
-    .line 254
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
     invoke-static {v0, v1}, Lcom/amap/mapapi/core/e;->a(J)D
 
     move-result-wide v0
 
-    .line 255
     const-wide v2, 0x4056800000000000L
 
     add-double/2addr v0, v2
@@ -854,7 +738,6 @@
 
     div-double/2addr v0, v2
 
-    .line 258
     const-wide v2, 0x41731bf84570a3d7L
 
     mul-double/2addr v0, v2
@@ -863,10 +746,8 @@
 
     div-double/2addr v0, v2
 
-    .line 259
     iput-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
-    .line 262
     :cond_2
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
@@ -876,8 +757,6 @@
 .method public describeContents()I
     .locals 1
 
-    .prologue
-    .line 330
     const/4 v0, 0x0
 
     return v0
@@ -886,8 +765,6 @@
 .method public e()Lcom/amap/mapapi/core/GeoPoint;
     .locals 9
 
-    .prologue
-    .line 274
     new-instance v0, Lcom/amap/mapapi/core/GeoPoint;
 
     iget-wide v1, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
@@ -905,20 +782,15 @@
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 5
-    .parameter
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 172
     if-nez p1, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return v0
 
-    .line 175
     :cond_1
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -930,10 +802,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 178
     check-cast p1, Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 180
     iget-wide v1, p0, Lcom/amap/mapapi/core/GeoPoint;->f:D
 
     iget-wide v3, p1, Lcom/amap/mapapi/core/GeoPoint;->f:D
@@ -974,8 +844,6 @@
 .method public f()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 279
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1022,8 +890,6 @@
 .method public getLatitudeE6()I
     .locals 2
 
-    .prologue
-    .line 206
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
     long-to-int v0, v0
@@ -1034,8 +900,6 @@
 .method public getLongitudeE6()I
     .locals 2
 
-    .prologue
-    .line 201
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
     long-to-int v0, v0
@@ -1046,8 +910,6 @@
 .method public hashCode()I
     .locals 6
 
-    .prologue
-    .line 187
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->g:D
 
     const-wide/high16 v2, 0x401c
@@ -1070,8 +932,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 193
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1109,20 +969,14 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
-    .parameter
-    .parameter
 
-    .prologue
-    .line 335
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->d:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 336
     iget-wide v0, p0, Lcom/amap/mapapi/core/GeoPoint;->e:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 337
     return-void
 .end method

@@ -35,11 +35,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 171
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
@@ -53,11 +50,7 @@
 # virtual methods
 .method public compare(Lcom/android/settings/applications/ApplicationsState$AppEntry;Lcom/android/settings/applications/ApplicationsState$AppEntry;)I
     .locals 3
-    .parameter "object1"
-    .parameter "object2"
 
-    .prologue
-    .line 184
     iget-object v0, p0, Lcom/android/settings/applications/ApplicationsState$1;->sCollator:Ljava/text/Collator;
 
     iget-object v1, p1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->label:Ljava/lang/String;
@@ -73,17 +66,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 170
     check-cast p1, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .end local p1
     check-cast p2, Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/applications/ApplicationsState$1;->compare(Lcom/android/settings/applications/ApplicationsState$AppEntry;Lcom/android/settings/applications/ApplicationsState$AppEntry;)I
 
     move-result v0

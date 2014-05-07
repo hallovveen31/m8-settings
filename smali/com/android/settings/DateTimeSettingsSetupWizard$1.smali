@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DateTimeSettingsSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 331
     iput-object p1, p0, Lcom/android/settings/DateTimeSettingsSetupWizard$1;->this$0:Lcom/android/settings/DateTimeSettingsSetupWizard;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,16 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 334
     iget-object v0, p0, Lcom/android/settings/DateTimeSettingsSetupWizard$1;->this$0:Lcom/android/settings/DateTimeSettingsSetupWizard;
 
     #calls: Lcom/android/settings/DateTimeSettingsSetupWizard;->updateTimeAndDateDisplay()V
     invoke-static {v0}, Lcom/android/settings/DateTimeSettingsSetupWizard;->access$000(Lcom/android/settings/DateTimeSettingsSetupWizard;)V
 
-    .line 335
     return-void
 .end method

@@ -24,17 +24,11 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/applications/AppOpsSummary;Landroid/app/FragmentManager;)V
     .locals 0
-    .parameter
-    .parameter "fm"
 
-    .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;->this$0:Lcom/android/settings/applications/AppOpsSummary;
 
-    .line 75
     invoke-direct {p0, p2}, Lcom/htc/view/viewpager/HtcFragmentPagerAdapter;-><init>(Landroid/app/FragmentManager;)V
 
-    .line 76
     return-void
 .end method
 
@@ -43,8 +37,6 @@
 .method public getCount()I
     .locals 1
 
-    .prologue
-    .line 85
     sget-object v0, Lcom/android/settings/applications/AppOpsSummary;->sPageTemplates:[Lcom/android/settings/applications/AppOpsState$OpsTemplate;
 
     array-length v0, v0
@@ -54,10 +46,7 @@
 
 .method public getItem(I)Landroid/app/Fragment;
     .locals 2
-    .parameter "position"
 
-    .prologue
-    .line 80
     new-instance v0, Lcom/android/settings/applications/AppOpsCategory;
 
     sget-object v1, Lcom/android/settings/applications/AppOpsSummary;->sPageTemplates:[Lcom/android/settings/applications/AppOpsState$OpsTemplate;
@@ -71,10 +60,7 @@
 
 .method public getPageTitle(I)Ljava/lang/CharSequence;
     .locals 1
-    .parameter "position"
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;->this$0:Lcom/android/settings/applications/AppOpsSummary;
 
     iget-object v0, v0, Lcom/android/settings/applications/AppOpsSummary;->mPageNames:[Ljava/lang/CharSequence;
@@ -86,44 +72,30 @@
 
 .method public onPageScrollStateChanged(I)V
     .locals 0
-    .parameter "state"
 
-    .prologue
-    .line 95
     if-nez p1, :cond_0
 
-    .line 98
     :cond_0
     return-void
 .end method
 
 .method public onPageScrolled(IFI)V
     .locals 0
-    .parameter "position"
-    .parameter "positionOffset"
-    .parameter "positionOffsetPixels"
 
-    .prologue
-    .line 102
     return-void
 .end method
 
 .method public onPageSelected(I)V
     .locals 3
-    .parameter "position"
 
-    .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/settings/applications/AppOpsSummary$MyPagerAdapter;->this$0:Lcom/android/settings/applications/AppOpsSummary;
 
     iput p1, v0, Lcom/android/settings/applications/AppOpsSummary;->mCurPos:I
 
-    .line 108
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 109
     invoke-static {}, Lcom/android/settings/applications/AppOpsSummary;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -152,7 +124,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     :cond_0
     return-void
 .end method

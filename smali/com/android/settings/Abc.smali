@@ -7,15 +7,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 12
     const-string v0, "Abc"
 
     const-string v1, "This file is un-bundled"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     const-string v0, "Abc"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -42,15 +39,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

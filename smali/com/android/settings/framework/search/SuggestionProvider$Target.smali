@@ -38,8 +38,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 48
     const/4 v0, 0x0
 
     sput v0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->count:I
@@ -49,16 +47,11 @@
 
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
-    .parameter "title"
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->title:Ljava/lang/String;
 
-    .line 60
     sget v0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->count:I
 
     add-int/lit8 v1, v0, 0x1
@@ -67,12 +60,10 @@
 
     iput v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->index:I
 
-    .line 61
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->enabled:Z
 
-    .line 62
     return-void
 .end method
 
@@ -81,8 +72,6 @@
 .method getIntent()Landroid/content/Intent;
     .locals 1
 
-    .prologue
-    .line 76
     iget-object v0, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->intent:Landroid/content/Intent;
 
     return-object v0
@@ -90,36 +79,24 @@
 
 .method setEnabled(Z)Lcom/android/settings/framework/search/SuggestionProvider$Target;
     .locals 0
-    .parameter "b"
 
-    .prologue
-    .line 80
     iput-boolean p1, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->enabled:Z
 
-    .line 82
     return-object p0
 .end method
 
 .method setIntent(Landroid/content/Intent;)Lcom/android/settings/framework/search/SuggestionProvider$Target;
     .locals 0
-    .parameter "i"
 
-    .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->intent:Landroid/content/Intent;
 
-    .line 72
     return-object p0
 .end method
 
 .method setSearchKeyword(Ljava/lang/String;)Lcom/android/settings/framework/search/SuggestionProvider$Target;
     .locals 0
-    .parameter "keyword"
 
-    .prologue
-    .line 65
     iput-object p1, p0, Lcom/android/settings/framework/search/SuggestionProvider$Target;->searchKeyword:Ljava/lang/String;
 
-    .line 66
     return-object p0
 .end method

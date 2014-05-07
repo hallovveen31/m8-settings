@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ProxySelector;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 289
     iput-object p1, p0, Lcom/android/settings/ProxySelector$3;->this$0:Lcom/android/settings/ProxySelector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 292
     iget-object v0, p0, Lcom/android/settings/ProxySelector$3;->this$0:Lcom/android/settings/ProxySelector;
 
     invoke-virtual {v0}, Lcom/android/settings/ProxySelector;->populateFields()V
 
-    .line 293
     return-void
 .end method

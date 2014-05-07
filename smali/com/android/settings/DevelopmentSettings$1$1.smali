@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DevelopmentSettings$1;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 691
     iput-object p1, p0, Lcom/android/settings/DevelopmentSettings$1$1;->this$1:Lcom/android/settings/DevelopmentSettings$1;
 
     iput-boolean p2, p0, Lcom/android/settings/DevelopmentSettings$1$1;->val$b:Z
@@ -45,13 +41,10 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 694
     iget-boolean v0, p0, Lcom/android/settings/DevelopmentSettings$1$1;->val$b:Z
 
     if-eqz v0, :cond_0
 
-    .line 695
     iget-object v0, p0, Lcom/android/settings/DevelopmentSettings$1$1;->this$1:Lcom/android/settings/DevelopmentSettings$1;
 
     iget-object v0, v0, Lcom/android/settings/DevelopmentSettings$1;->this$0:Lcom/android/settings/DevelopmentSettings;
@@ -63,13 +56,11 @@
 
     const v1, 0x7f0c117d
 
-    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceScreen;->setSummary(I)V
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
-    .line 699
     :goto_0
     return-void
 
-    .line 697
     :cond_0
     iget-object v0, p0, Lcom/android/settings/DevelopmentSettings$1$1;->this$1:Lcom/android/settings/DevelopmentSettings$1;
 
@@ -82,7 +73,7 @@
 
     const v1, 0x7f0c117c
 
-    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceScreen;->setSummary(I)V
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreference;->setSummary(I)V
 
     goto :goto_0
 .end method

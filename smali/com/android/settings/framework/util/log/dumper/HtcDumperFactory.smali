@@ -86,8 +86,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -105,20 +103,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 35
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sBundleDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 36
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sBundleDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 38
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sBundleDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -137,20 +131,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 46
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sConfigurationDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 47
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcConfigurationDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcConfigurationDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sConfigurationDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 49
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sConfigurationDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -169,20 +159,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 57
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sContextDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 58
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcContextDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcContextDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sContextDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 60
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sContextDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -201,20 +187,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 68
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sFieldDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 69
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcFieldDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sFieldDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 71
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sFieldDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -233,20 +215,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 79
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sIntentDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 80
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcIntentDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcIntentDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sIntentDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 82
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sIntentDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -265,20 +243,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 90
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sRunningServiceInfoDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 91
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcRunningServiceInfoDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcRunningServiceInfoDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sRunningServiceInfoDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 93
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sRunningServiceInfoDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
@@ -297,20 +271,16 @@
         }
     .end annotation
 
-    .prologue
-    .line 101
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sUriDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
     if-nez v0, :cond_0
 
-    .line 102
     new-instance v0, Lcom/android/settings/framework/util/log/dumper/HtcUriDumper;
 
     invoke-direct {v0}, Lcom/android/settings/framework/util/log/dumper/HtcUriDumper;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sUriDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 
-    .line 104
     :cond_0
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcDumperFactory;->sUriDumper:Lcom/android/settings/framework/util/log/dumper/HtcIDumper;
 

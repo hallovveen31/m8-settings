@@ -29,10 +29,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$1;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 379
     iput-object p1, p0, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$1$ViewHolder;->this$1:Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

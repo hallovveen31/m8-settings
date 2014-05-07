@@ -41,23 +41,17 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;)V
     .locals 1
-    .parameter
 
-    .prologue
-    .line 235
-    .local p0, this:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;,"Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal<TT;>;"
     iput-object p1, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->this$1:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 236
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
     iput-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->mThreadLocal:Ljava/lang/ThreadLocal;
 
-    .line 237
     return-void
 .end method
 
@@ -71,9 +65,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 246
-    .local p0, this:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;,"Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal<TT;>;"
     iget-object v3, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->mThreadLocal:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -82,17 +73,12 @@
 
     check-cast v2, Ljava/lang/ref/WeakReference;
 
-    .line 248
-    .local v2, reference:Ljava/lang/ref/WeakReference;,"Ljava/lang/ref/WeakReference<TT;>;"
     if-nez v2, :cond_0
 
-    .line 249
     invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->initialValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 250
-    .local v0, obj:Ljava/lang/Object;,"TT;"
     iget-object v3, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->mThreadLocal:Ljava/lang/ThreadLocal;
 
     new-instance v4, Ljava/lang/ref/WeakReference;
@@ -103,29 +89,20 @@
 
     move-object v1, v0
 
-    .line 258
-    .end local v0           #obj:Ljava/lang/Object;,"TT;"
-    .local v1, obj:Ljava/lang/Object;,"TT;"
     :goto_0
     return-object v1
 
-    .line 253
-    .end local v1           #obj:Ljava/lang/Object;,"TT;"
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 254
-    .restart local v0       #obj:Ljava/lang/Object;,"TT;"
     if-nez v0, :cond_1
 
-    .line 255
     invoke-virtual {p0}, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->initialValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 256
     iget-object v3, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->mThreadLocal:Ljava/lang/ThreadLocal;
 
     new-instance v4, Ljava/lang/ref/WeakReference;
@@ -137,9 +114,6 @@
     :cond_1
     move-object v1, v0
 
-    .line 258
-    .end local v0           #obj:Ljava/lang/Object;,"TT;"
-    .restart local v1       #obj:Ljava/lang/Object;,"TT;"
     goto :goto_0
 .end method
 
@@ -153,17 +127,12 @@
 
 .method public set(Ljava/lang/Object;)V
     .locals 2
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"
         }
     .end annotation
 
-    .prologue
-    .line 242
-    .local p0, this:Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;,"Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal<TT;>;"
-    .local p1, t:Ljava/lang/Object;,"TT;"
     iget-object v0, p0, Lcom/android/settings/KeyguardAppWidgetPickActivity$Item$WidgetPreviewLoader$WeakReferenceThreadLocal;->mThreadLocal:Ljava/lang/ThreadLocal;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -172,6 +141,5 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 243
     return-void
 .end method

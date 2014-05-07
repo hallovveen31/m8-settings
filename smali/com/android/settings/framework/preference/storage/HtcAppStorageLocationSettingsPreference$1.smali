@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 119
     iput-object p1, p0, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onStorageStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
-    .parameter "path"
-    .parameter "oldState"
-    .parameter "newState"
 
-    .prologue
-    .line 122
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v0, :cond_0
 
-    .line 123
     invoke-static {}, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -55,7 +46,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     invoke-static {}, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -80,7 +70,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     invoke-static {}, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -105,7 +94,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     invoke-static {}, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->access$000()Ljava/lang/String;
 
     move-result-object v0
@@ -130,13 +118,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 128
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference$1;->this$0:Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;
 
     #calls: Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->updateStatus()V
     invoke-static {v0}, Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;->access$100(Lcom/android/settings/framework/preference/storage/HtcAppStorageLocationSettingsPreference;)V
 
-    .line 129
     return-void
 .end method

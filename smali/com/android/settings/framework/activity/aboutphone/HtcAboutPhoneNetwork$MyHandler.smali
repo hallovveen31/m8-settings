@@ -30,20 +30,15 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;)V
     .locals 1
-    .parameter "activity"
 
-    .prologue
-    .line 369
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 370
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
-    .line 371
     return-void
 .end method
 
@@ -51,29 +46,22 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
-    .parameter "msg"
 
-    .prologue
     const/16 v10, 0xc
 
-    .line 375
     iget-object v8, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v8}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v8}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;
 
-    .line 376
-    .local v7, status:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;
     if-nez v7, :cond_0
 
-    .line 421
     :goto_0
     return-void
 
-    .line 380
     :cond_0
     iget v8, p1, Landroid/os/Message;->what:I
 
@@ -81,30 +69,23 @@
 
     goto :goto_0
 
-    .line 385
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 386
-    .local v0, ar:Landroid/os/AsyncResult;
     const-string v1, "00000400"
 
-    .line 387
-    .local v1, command:Ljava/lang/String;
     iget-object v8, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     if-nez v8, :cond_1
 
-    .line 388
     const-string v8, "HtcAboutPhoneStatus"
 
     const-string v9, "OoO ERR_NV_CMD_FAILED-ar.result == null."
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
     :goto_1
     #calls: Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;->validateStateOfNv(Ljava/lang/String;)I
     invoke-static {v1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;->access$000(Ljava/lang/String;)I
@@ -113,23 +94,18 @@
 
     if-nez v8, :cond_2
 
-    .line 395
     const/16 v8, 0xa
 
     invoke-virtual {v1, v8, v10}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 396
-    .local v6, naiLength:Ljava/lang/String;
     const/16 v8, 0x10
 
     invoke-static {v6, v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 397
-    .local v4, len:I
     mul-int/lit8 v8, v4, 0x2
 
     add-int/lit8 v8, v8, 0xc
@@ -142,8 +118,6 @@
 
     move-result-object v5
 
-    .line 398
-    .local v5, nai:Ljava/lang/String;
     const-string v8, "HtcAboutPhoneStatus"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -166,9 +140,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 404
-    .end local v4           #len:I
-    .end local v6           #naiLength:Ljava/lang/String;
     :goto_2
     const-string v8, "HtcAboutPhoneStatus"
 
@@ -192,30 +163,24 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 406
     iget-object v3, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/String;
 
-    .line 407
-    .local v3, key:Ljava/lang/String;
     monitor-enter v3
 
-    .line 409
     :try_start_0
     invoke-virtual {v3}, Ljava/lang/Object;->notifyAll()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 413
     :goto_3
     :try_start_1
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 415
     invoke-static {}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneNetwork;->access$200()Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;
 
     move-result-object v8
@@ -232,9 +197,6 @@
 
     goto :goto_0
 
-    .line 390
-    .end local v3           #key:Ljava/lang/String;
-    .end local v5           #nai:Ljava/lang/String;
     :cond_1
     iget-object v8, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -244,12 +206,9 @@
 
     goto :goto_1
 
-    .line 400
     :cond_2
     const-string v5, ""
 
-    .line 401
-    .restart local v5       #nai:Ljava/lang/String;
     const-string v8, "HtcAboutPhoneStatus"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -274,20 +233,14 @@
 
     goto :goto_2
 
-    .line 410
-    .restart local v3       #key:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 411
-    .local v2, e:Ljava/lang/Exception;
     :try_start_2
-    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_3
 
-    .line 413
-    .end local v2           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v8
 
@@ -297,7 +250,6 @@
 
     throw v8
 
-    .line 380
     nop
 
     :pswitch_data_0

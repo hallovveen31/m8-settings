@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(ILcom/android/settings/bluetooth/CachedBluetoothDevice;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 137
     iput p1, p0, Lcom/android/settings/bluetooth/Utils$1;->val$action:I
 
     iput-object p2, p0, Lcom/android/settings/bluetooth/Utils$1;->val$cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
@@ -44,13 +40,9 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 139
     iget v0, p0, Lcom/android/settings/bluetooth/Utils$1;->val$action:I
 
     if-eqz v0, :cond_0
@@ -65,18 +57,15 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lcom/android/settings/bluetooth/Utils$1;->val$cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
 
     invoke-virtual {v0}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->startPairing()Z
 
-    .line 145
     :cond_1
     :goto_0
     return-void
 
-    .line 142
     :cond_2
     iget v0, p0, Lcom/android/settings/bluetooth/Utils$1;->val$action:I
 
@@ -84,7 +73,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 143
     iget-object v0, p0, Lcom/android/settings/bluetooth/Utils$1;->val$cachedDevice:Lcom/android/settings/bluetooth/CachedBluetoothDevice;
 
     invoke-virtual {v0, v2}, Lcom/android/settings/bluetooth/CachedBluetoothDevice;->connect(Z)V

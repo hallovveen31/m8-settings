@@ -22,18 +22,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/amap/mapapi/map/ay;->b:Ljava/util/List;
 
-    .line 16
     return-void
 .end method
 
@@ -51,8 +47,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcom/amap/mapapi/map/ay;->b:Ljava/util/List;
 
     return-object v0
@@ -61,8 +55,6 @@
 .method public b()I
     .locals 1
 
-    .prologue
-    .line 43
     iget v0, p0, Lcom/amap/mapapi/map/ay;->a:I
 
     return v0

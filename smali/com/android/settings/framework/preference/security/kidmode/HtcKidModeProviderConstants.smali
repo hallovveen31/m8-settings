@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 24
     const-string v0, "content://com.zoodles.kidmode.provider.settings/settings"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -39,7 +37,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcKidModeProviderConstants;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 43
     sget-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcKidModeProviderConstants;->CONTENT_URI:Landroid/net/Uri;
 
     const-wide/16 v1, 0x64
@@ -50,7 +47,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcKidModeProviderConstants;->ALLOW_INCOMING_CALL_URI:Landroid/net/Uri;
 
-    .line 64
     sget-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcKidModeProviderConstants;->CONTENT_URI:Landroid/net/Uri;
 
     const-wide/16 v1, 0x6e
@@ -67,8 +63,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

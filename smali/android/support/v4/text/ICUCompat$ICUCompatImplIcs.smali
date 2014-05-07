@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,10 +30,7 @@
 # virtual methods
 .method public addLikelySubtags(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "locale"
 
-    .prologue
-    .line 48
     invoke-static {p1}, Landroid/support/v4/text/ICUCompatIcs;->addLikelySubtags(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -45,10 +40,7 @@
 
 .method public getScript(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
-    .parameter "locale"
 
-    .prologue
-    .line 43
     invoke-static {p1}, Landroid/support/v4/text/ICUCompatIcs;->getScript(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0

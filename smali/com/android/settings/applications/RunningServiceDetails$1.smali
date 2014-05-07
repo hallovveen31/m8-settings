@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/RunningServiceDetails;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 536
     iput-object p1, p0, Lcom/android/settings/applications/RunningServiceDetails$1;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,22 +37,16 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 539
     iget-object v1, p0, Lcom/android/settings/applications/RunningServiceDetails$1;->this$0:Lcom/android/settings/applications/RunningServiceDetails;
 
-    invoke-virtual {v1}, Lcom/android/settings/applications/RunningServiceDetails;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 540
-    .local v0, a:Landroid/app/Activity;
     if-eqz v0, :cond_0
 
-    .line 541
     invoke-virtual {v0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 543
     :cond_0
     return-void
 .end method

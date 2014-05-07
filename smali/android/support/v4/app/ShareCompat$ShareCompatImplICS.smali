@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 123
     invoke-direct {p0}, Landroid/support/v4/app/ShareCompat$ShareCompatImplBase;-><init>()V
 
     return-void
@@ -29,11 +27,7 @@
 # virtual methods
 .method public configureMenuItem(Landroid/view/MenuItem;Landroid/support/v4/app/ShareCompat$IntentBuilder;)V
     .locals 2
-    .parameter "item"
-    .parameter "shareIntent"
 
-    .prologue
-    .line 125
     invoke-virtual {p2}, Landroid/support/v4/app/ShareCompat$IntentBuilder;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -44,31 +38,25 @@
 
     invoke-static {p1, v0, v1}, Landroid/support/v4/app/ShareCompatICS;->configureMenuItem(Landroid/view/MenuItem;Landroid/app/Activity;Landroid/content/Intent;)V
 
-    .line 127
     invoke-virtual {p0, p1}, Landroid/support/v4/app/ShareCompat$ShareCompatImplICS;->shouldAddChooserIntent(Landroid/view/MenuItem;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 128
     invoke-virtual {p2}, Landroid/support/v4/app/ShareCompat$IntentBuilder;->createChooserIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-interface {p1, v0}, Landroid/view/MenuItem;->setIntent(Landroid/content/Intent;)Landroid/view/MenuItem;
 
-    .line 130
     :cond_0
     return-void
 .end method
 
 .method shouldAddChooserIntent(Landroid/view/MenuItem;)Z
     .locals 1
-    .parameter "item"
 
-    .prologue
-    .line 133
     invoke-interface {p1}, Landroid/view/MenuItem;->hasSubMenu()Z
 
     move-result v0

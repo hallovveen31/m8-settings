@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/ManageAccountsSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 538
     iput-object p1, p0, Lcom/android/settings/accounts/ManageAccountsSettings$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 541
     sget-object v0, Lcom/android/settings/accounts/Util;->ACTION_TAP_TO_TOP:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 542
     invoke-static {}, Lcom/android/settings/accounts/ManageAccountsSettings;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -62,12 +54,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     iget-object v0, p0, Lcom/android/settings/accounts/ManageAccountsSettings$BackgroundReveiver;->this$0:Lcom/android/settings/accounts/ManageAccountsSettings;
 
     invoke-virtual {v0}, Lcom/android/settings/accounts/ManageAccountsSettings;->backToTop()V
 
-    .line 546
     :cond_0
     return-void
 .end method

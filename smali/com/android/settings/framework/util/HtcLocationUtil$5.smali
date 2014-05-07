@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 215
     iput-object p1, p0, Lcom/android/settings/framework/util/HtcLocationUtil$5;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 218
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_0
 
-    .line 219
     invoke-static {}, Lcom/android/settings/framework/util/HtcLocationUtil;->access$000()Ljava/lang/String;
 
     move-result-object v1
@@ -57,7 +49,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -65,15 +56,11 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 223
-    .local v0, i:Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/settings/framework/util/HtcLocationUtil$5;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 224
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 225
     return-void
 .end method

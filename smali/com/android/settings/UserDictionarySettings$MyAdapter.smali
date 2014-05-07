@@ -26,59 +26,40 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[ILcom/android/settings/UserDictionarySettings;)V
     .locals 3
-    .parameter "context"
-    .parameter "layout"
-    .parameter "c"
-    .parameter "from"
-    .parameter "to"
-    .parameter "settings"
 
-    .prologue
-    .line 261
     invoke-direct/range {p0 .. p5}, Landroid/widget/SimpleCursorAdapter;-><init>(Landroid/content/Context;ILandroid/database/Cursor;[Ljava/lang/String;[I)V
 
-    .line 239
     new-instance v2, Lcom/android/settings/UserDictionarySettings$MyAdapter$1;
 
     invoke-direct {v2, p0}, Lcom/android/settings/UserDictionarySettings$MyAdapter$1;-><init>(Lcom/android/settings/UserDictionarySettings$MyAdapter;)V
 
     iput-object v2, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mViewBinder:Landroid/widget/SimpleCursorAdapter$ViewBinder;
 
-    .line 263
     if-eqz p3, :cond_0
 
-    .line 264
     const v2, 0x1040485
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 266
-    .local v0, alphabet:Ljava/lang/String;
     const-string v2, "word"
 
     invoke-interface {p3, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 267
-    .local v1, wordColIndex:I
     new-instance v2, Landroid/widget/AlphabetIndexer;
 
     invoke-direct {v2, p3, v1, v0}, Landroid/widget/AlphabetIndexer;-><init>(Landroid/database/Cursor;ILjava/lang/CharSequence;)V
 
     iput-object v2, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
-    .line 269
-    .end local v0           #alphabet:Ljava/lang/String;
-    .end local v1           #wordColIndex:I
     :cond_0
     iget-object v2, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mViewBinder:Landroid/widget/SimpleCursorAdapter$ViewBinder;
 
-    invoke-virtual {p0, v2}, Lcom/android/settings/UserDictionarySettings$MyAdapter;->setViewBinder(Landroid/widget/SimpleCursorAdapter$ViewBinder;)V
+    invoke-virtual {p0, v2}, Landroid/widget/SimpleCursorAdapter;->setViewBinder(Landroid/widget/SimpleCursorAdapter$ViewBinder;)V
 
-    .line 270
     return-void
 .end method
 
@@ -86,10 +67,7 @@
 # virtual methods
 .method public getPositionForSection(I)I
     .locals 1
-    .parameter "section"
 
-    .prologue
-    .line 274
     iget-object v0, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-nez v0, :cond_0
@@ -111,10 +89,7 @@
 
 .method public getSectionForPosition(I)I
     .locals 1
-    .parameter "position"
 
-    .prologue
-    .line 279
     iget-object v0, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-nez v0, :cond_0
@@ -137,8 +112,6 @@
 .method public getSections()[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 284
     iget-object v0, p0, Lcom/android/settings/UserDictionarySettings$MyAdapter;->mIndexer:Landroid/widget/AlphabetIndexer;
 
     if-nez v0, :cond_0

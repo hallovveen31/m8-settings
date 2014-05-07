@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 712
     iput-object p1, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onCheckedChanged(Lcom/htc/widget/HtcCompoundButton;Z)V
     .locals 5
-    .parameter "button"
-    .parameter "checked"
 
-    .prologue
-    .line 716
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mScheduleMgr:Lcom/android/settings/framework/core/sound/HtcDndScheduleManager;
@@ -53,14 +46,12 @@
 
     if-nez v2, :cond_1
 
-    .line 717
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 718
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v2
@@ -69,14 +60,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 748
     :cond_0
     :goto_0
     return-void
 
-    .line 723
     :cond_1
-    invoke-virtual {p1}, Lcom/htc/widget/HtcCompoundButton;->getTag()Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -86,8 +75,6 @@
 
     move-result v0
 
-    .line 724
-    .local v0, id:I
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mScheduleMgr:Lcom/android/settings/framework/core/sound/HtcDndScheduleManager;
@@ -99,18 +86,14 @@
 
     move-result-object v1
 
-    .line 726
-    .local v1, record:Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;
     if-nez v1, :cond_2
 
-    .line 727
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 728
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v2
@@ -137,7 +120,6 @@
 
     goto :goto_0
 
-    .line 734
     :cond_2
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$400()Z
 
@@ -145,7 +127,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 735
     invoke-static {}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->access$500()Ljava/lang/String;
 
     move-result-object v2
@@ -180,11 +161,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
     :cond_3
     invoke-virtual {v1, p2}, Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;->setEnabled(Z)V
 
-    .line 740
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mScheduleMgr:Lcom/android/settings/framework/core/sound/HtcDndScheduleManager;
@@ -194,7 +173,6 @@
 
     invoke-virtual {v2, v1}, Lcom/android/settings/framework/core/sound/HtcDndScheduleManager;->addRecord(Lcom/android/settings/framework/core/sound/HtcDndScheduleRecord;)Z
 
-    .line 742
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mAdapter:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleAdapter;
@@ -204,7 +182,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 743
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
     #getter for: Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->mAdapter:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleAdapter;
@@ -214,11 +191,10 @@
 
     invoke-virtual {v2, v0, p2}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$ScheduleAdapter;->updateScheduleEnabled(IZ)V
 
-    .line 747
     :cond_4
     iget-object v2, p0, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings$4;->this$0:Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/activity/sound/HtcDndSchedulesSettings;->getContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/settings/framework/app/HtcInternalFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 

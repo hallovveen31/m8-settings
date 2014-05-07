@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationStation$NotificationHistoryAdapter;Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 398
     iput-object p1, p0, Lcom/android/settings/NotificationStation$NotificationHistoryAdapter$1;->this$1:Lcom/android/settings/NotificationStation$NotificationHistoryAdapter;
 
     iput-object p2, p0, Lcom/android/settings/NotificationStation$NotificationHistoryAdapter$1;->val$info:Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;
@@ -44,15 +40,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 2
-    .parameter "v"
 
-    .prologue
-    .line 401
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setPressed(Z)V
 
-    .line 402
     iget-object v0, p0, Lcom/android/settings/NotificationStation$NotificationHistoryAdapter$1;->this$1:Lcom/android/settings/NotificationStation$NotificationHistoryAdapter;
 
     iget-object v0, v0, Lcom/android/settings/NotificationStation$NotificationHistoryAdapter;->this$0:Lcom/android/settings/NotificationStation;
@@ -64,6 +56,5 @@
     #calls: Lcom/android/settings/NotificationStation;->startApplicationDetailsActivity(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/settings/NotificationStation;->access$500(Lcom/android/settings/NotificationStation;Ljava/lang/String;)V
 
-    .line 403
     return-void
 .end method

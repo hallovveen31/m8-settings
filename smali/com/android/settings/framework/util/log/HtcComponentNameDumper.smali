@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,8 +43,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,41 +50,27 @@
 
 .method public static dump(Landroid/content/ComponentName;)V
     .locals 1
-    .parameter "componentName"
 
-    .prologue
-    .line 23
     sget-object v0, Lcom/android/settings/framework/util/log/HtcComponentNameDumper;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcComponentNameDumper;->dump(Ljava/lang/String;Landroid/content/ComponentName;)V
 
-    .line 24
     return-void
 .end method
 
 .method public static dump(Ljava/lang/String;Landroid/content/ComponentName;)V
     .locals 1
-    .parameter "tag"
-    .parameter "componentName"
 
-    .prologue
-    .line 32
     const-string v0, ""
 
     invoke-static {p0, v0, p1}, Lcom/android/settings/framework/util/log/HtcComponentNameDumper;->dump(Ljava/lang/String;Ljava/lang/String;Landroid/content/ComponentName;)V
 
-    .line 33
     return-void
 .end method
 
 .method public static dump(Ljava/lang/String;Ljava/lang/String;Landroid/content/ComponentName;)V
     .locals 3
-    .parameter "tag"
-    .parameter "indent"
-    .parameter "componentName"
 
-    .prologue
-    .line 44
     :try_start_0
     invoke-static {p1, p2}, Lcom/android/settings/framework/util/log/HtcComponentNameDumper;->toString(Ljava/lang/String;Landroid/content/ComponentName;)Ljava/lang/String;
 
@@ -98,16 +80,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 50
     :goto_0
     return-void
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
-    .local v0, e:Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,10 +137,7 @@
 
 .method public static toString(Landroid/content/ComponentName;)Ljava/lang/String;
     .locals 1
-    .parameter "componentName"
 
-    .prologue
-    .line 58
     const-string v0, ""
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcComponentNameDumper;->toString(Ljava/lang/String;Landroid/content/ComponentName;)Ljava/lang/String;
@@ -174,31 +149,22 @@
 
 .method public static toString(Ljava/lang/String;Landroid/content/ComponentName;)Ljava/lang/String;
     .locals 4
-    .parameter "indent"
-    .parameter "componentName"
 
-    .prologue
-    .line 86
     new-instance v0, Lcom/android/settings/framework/util/log/HtcAssistedDumper;
 
     const-class v1, Landroid/content/ComponentName;
 
     invoke-direct {v0, v1, p0}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 90
-    .local v0, dumper:Lcom/android/settings/framework/util/log/HtcAssistedDumper;
     if-nez p1, :cond_0
 
-    .line 91
     invoke-virtual {v0}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 105
     :goto_0
     return-object v1
 
-    .line 94
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -352,7 +318,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->append(Ljava/lang/String;)Lcom/android/settings/framework/util/log/HtcAssistedDumper;
 
-    .line 105
     invoke-virtual {v0}, Lcom/android/settings/framework/util/log/HtcAssistedDumper;->toString()Ljava/lang/String;
 
     move-result-object v1

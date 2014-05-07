@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SettingsSafetyLegalActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 75
     iput-object p1, p0, Lcom/android/settings/SettingsSafetyLegalActivity$1;->this$0:Lcom/android/settings/SettingsSafetyLegalActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -36,14 +33,10 @@
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
-    .parameter "view"
-    .parameter "url"
 
-    .prologue
-    .line 79
     iget-object v0, p0, Lcom/android/settings/SettingsSafetyLegalActivity$1;->this$0:Lcom/android/settings/SettingsSafetyLegalActivity;
 
-    #getter for: Lcom/android/settings/SettingsSafetyLegalActivity;->mAlert:Lcom/htc/app/HtcAlertController;
+    #getter for: Lcom/htc/app/HtcAlertActivity;->mAlert:Lcom/htc/app/HtcAlertController;
     invoke-static {v0}, Lcom/android/settings/SettingsSafetyLegalActivity;->access$000(Lcom/android/settings/SettingsSafetyLegalActivity;)Lcom/htc/app/HtcAlertController;
 
     move-result-object v0
@@ -52,30 +45,22 @@
 
     const v2, 0x7f0c0f1a
 
-    invoke-virtual {v1, v2}, Lcom/android/settings/SettingsSafetyLegalActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/htc/app/HtcAlertController;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 80
     return-void
 .end method
 
 .method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .parameter "view"
-    .parameter "errorCode"
-    .parameter "description"
-    .parameter "failingUrl"
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/android/settings/SettingsSafetyLegalActivity$1;->this$0:Lcom/android/settings/SettingsSafetyLegalActivity;
 
     #calls: Lcom/android/settings/SettingsSafetyLegalActivity;->showErrorAndFinish(Ljava/lang/String;)V
     invoke-static {v0, p4}, Lcom/android/settings/SettingsSafetyLegalActivity;->access$100(Lcom/android/settings/SettingsSafetyLegalActivity;Ljava/lang/String;)V
 
-    .line 86
     return-void
 .end method

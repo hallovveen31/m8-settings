@@ -47,15 +47,9 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;Landroid/content/pm/ApplicationInfo;I)V
     .locals 1
-    .parameter "activity"
-    .parameter "info"
-    .parameter "state"
 
-    .prologue
-    .line 2169
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2170
     #getter for: Lcom/android/settings/applications/InstalledAppDetails;->mPm:Landroid/content/pm/PackageManager;
     invoke-static {p1}, Lcom/android/settings/applications/InstalledAppDetails;->access$1800(Lcom/android/settings/applications/InstalledAppDetails;)Landroid/content/pm/PackageManager;
 
@@ -63,20 +57,16 @@
 
     iput-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 2171
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mActivity:Ljava/lang/ref/WeakReference;
 
-    .line 2172
     iput-object p2, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 2173
     iput p3, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mState:I
 
-    .line 2174
     return-void
 .end method
 
@@ -84,16 +74,13 @@
 # virtual methods
 .method protected varargs doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
-    .parameter "params"
 
-    .prologue
-    .line 2182
     :try_start_0
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v2, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mInfo:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v2, v2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     iget v3, p0, Lcom/android/settings/applications/InstalledAppDetails$DisableChanger;->mState:I
 
@@ -103,24 +90,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2188
     :cond_0
     :goto_0
     const/4 v1, 0x0
 
     return-object v1
 
-    .line 2183
     :catch_0
     move-exception v0
 
-    .line 2184
-    .local v0, e:Ljava/lang/Exception;
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_0
 
-    .line 2185
     const-string v1, "Settings:InstalledAppDetails"
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0}, Landroid/util/TypedValue;-><init>()V
 
     return-void
@@ -16,11 +14,7 @@
 
 .method public static complexToDimensionPixelOffset(Landroid/content/Context;I)I
     .locals 3
-    .parameter "context"
-    .parameter "attrId"
 
-    .prologue
-    .line 58
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -29,15 +23,11 @@
 
     move-result-object v0
 
-    .line 60
-    .local v0, metrics:Landroid/util/DisplayMetrics;
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcTypedValue;->resolveAttribute(Landroid/content/Context;I)Lcom/android/settings/framework/util/HtcTypedValue;
 
     move-result-object v1
 
-    .line 64
-    .local v1, typedValue:Lcom/android/settings/framework/util/HtcTypedValue;
-    iget v2, v1, Lcom/android/settings/framework/util/HtcTypedValue;->data:I
+    iget v2, v1, Landroid/util/TypedValue;->data:I
 
     invoke-static {v2, v0}, Lcom/android/settings/framework/util/HtcTypedValue;->complexToDimensionPixelOffset(ILandroid/util/DisplayMetrics;)I
 
@@ -48,11 +38,7 @@
 
 .method public static complexToDimensionPixelSize(Landroid/content/Context;I)I
     .locals 3
-    .parameter "context"
-    .parameter "attrId"
 
-    .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -61,15 +47,11 @@
 
     move-result-object v0
 
-    .line 83
-    .local v0, metrics:Landroid/util/DisplayMetrics;
     invoke-static {p0, p1}, Lcom/android/settings/framework/util/HtcTypedValue;->resolveAttribute(Landroid/content/Context;I)Lcom/android/settings/framework/util/HtcTypedValue;
 
     move-result-object v1
 
-    .line 87
-    .local v1, typedValue:Lcom/android/settings/framework/util/HtcTypedValue;
-    iget v2, v1, Lcom/android/settings/framework/util/HtcTypedValue;->data:I
+    iget v2, v1, Landroid/util/TypedValue;->data:I
 
     invoke-static {v2, v0}, Lcom/android/settings/framework/util/HtcTypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
 
@@ -80,17 +62,11 @@
 
 .method public static resolveAttribute(Landroid/content/Context;I)Lcom/android/settings/framework/util/HtcTypedValue;
     .locals 4
-    .parameter "context"
-    .parameter "attrId"
 
-    .prologue
-    .line 34
     new-instance v1, Lcom/android/settings/framework/util/HtcTypedValue;
 
     invoke-direct {v1}, Lcom/android/settings/framework/util/HtcTypedValue;-><init>()V
 
-    .line 35
-    .local v1, outValue:Lcom/android/settings/framework/util/HtcTypedValue;
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v2
@@ -101,16 +77,11 @@
 
     move-result v0
 
-    .line 38
-    .local v0, found:Z
     if-eqz v0, :cond_0
 
-    .line 41
-    .end local v1           #outValue:Lcom/android/settings/framework/util/HtcTypedValue;
     :goto_0
     return-object v1
 
-    .restart local v1       #outValue:Lcom/android/settings/framework/util/HtcTypedValue;
     :cond_0
     const/4 v1, 0x0
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SoundSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 965
     iput-object p1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +37,8 @@
 .method public queueIdle()Z
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 970
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mIsPause:Z
@@ -53,30 +48,25 @@
 
     if-eqz v1, :cond_1
 
-    .line 972
     sget-boolean v1, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     if-eqz v1, :cond_0
 
-    .line 973
     const-string v1, "SoundSettings"
 
     const-string v2, "queueIdle -- activity paused"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     :cond_0
     :goto_0
     return v5
 
-    .line 976
     :cond_1
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     invoke-virtual {v1}, Lcom/android/settings/SoundSettings;->UpdateCustomizeProfileEntry()V
 
-    .line 977
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mHandler:Landroid/os/Handler;
@@ -101,7 +91,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 978
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     const/4 v2, 0x1
@@ -109,27 +98,22 @@
     #calls: Lcom/android/settings/SoundSettings;->updateState(Z)V
     invoke-static {v1, v2}, Lcom/android/settings/SoundSettings;->access$600(Lcom/android/settings/SoundSettings;Z)V
 
-    .line 979
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     #calls: Lcom/android/settings/SoundSettings;->updateHapticFeedback()V
     invoke-static {v1}, Lcom/android/settings/SoundSettings;->access$2100(Lcom/android/settings/SoundSettings;)V
 
-    .line 980
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     #calls: Lcom/android/settings/SoundSettings;->lookupRingtoneNames()V
     invoke-static {v1}, Lcom/android/settings/SoundSettings;->access$2200(Lcom/android/settings/SoundSettings;)V
 
-    .line 981
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.media.RINGER_MODE_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 983
-    .local v0, filter:Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
     #getter for: Lcom/android/settings/SoundSettings;->mHasDockModeProjects:Z
@@ -139,17 +123,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 984
     sget-object v1, Landroid/app/UiModeManager;->ACTION_EXIT_DESK_MODE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 985
     sget-object v1, Landroid/app/UiModeManager;->ACTION_ENTER_DESK_MODE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 987
     :cond_2
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
@@ -160,26 +141,22 @@
 
     if-eqz v1, :cond_3
 
-    .line 989
     const-string v1, "android.media.VOLUME_CHANGED_ACTION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 990
     const-string v1, "com.htc.soundprofile.profile_switched"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 991
     const-string v1, "com.htc.soundprofile.profile_compare_done"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 996
     :cond_3
     iget-object v1, p0, Lcom/android/settings/SoundSettings$5;->this$0:Lcom/android/settings/SoundSettings;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -194,7 +171,7 @@
 
     const/4 v4, 0x0
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/ContextWrapper;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     goto :goto_0
 .end method

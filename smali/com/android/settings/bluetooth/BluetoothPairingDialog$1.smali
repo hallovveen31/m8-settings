@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/BluetoothPairingDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 72
     iput-object p1, p0, Lcom/android/settings/bluetooth/BluetoothPairingDialog$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPairingDialog;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 75
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 76
-    .local v0, action:Ljava/lang/String;
     const-string v3, "android.bluetooth.device.action.BOND_STATE_CHANGED"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 77
     const-string v3, "android.bluetooth.device.extra.BOND_STATE"
 
     const/high16 v4, -0x8000
@@ -64,8 +54,6 @@
 
     move-result v1
 
-    .line 79
-    .local v1, bondState:I
     const/16 v3, 0xc
 
     if-eq v1, v3, :cond_0
@@ -74,19 +62,15 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 81
     :cond_0
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothPairingDialog$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPairingDialog;
 
-    invoke-virtual {v3}, Lcom/android/settings/bluetooth/BluetoothPairingDialog;->dismiss()V
+    invoke-virtual {v3}, Lcom/htc/app/HtcAlertActivity;->dismiss()V
 
-    .line 89
-    .end local v1           #bondState:I
     :cond_1
     :goto_0
     return-void
 
-    .line 83
     :cond_2
     const-string v3, "android.bluetooth.device.action.PAIRING_CANCEL"
 
@@ -96,7 +80,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 84
     const-string v3, "android.bluetooth.device.extra.DEVICE"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -105,8 +88,6 @@
 
     check-cast v2, Landroid/bluetooth/BluetoothDevice;
 
-    .line 85
-    .local v2, device:Landroid/bluetooth/BluetoothDevice;
     if-eqz v2, :cond_3
 
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothPairingDialog$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPairingDialog;
@@ -122,11 +103,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 86
     :cond_3
     iget-object v3, p0, Lcom/android/settings/bluetooth/BluetoothPairingDialog$1;->this$0:Lcom/android/settings/bluetooth/BluetoothPairingDialog;
 
-    invoke-virtual {v3}, Lcom/android/settings/bluetooth/BluetoothPairingDialog;->dismiss()V
+    invoke-virtual {v3}, Lcom/htc/app/HtcAlertActivity;->dismiss()V
 
     goto :goto_0
 .end method

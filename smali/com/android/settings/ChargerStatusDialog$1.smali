@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChargerStatusDialog;I)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/settings/ChargerStatusDialog$1;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
     iput p2, p0, Lcom/android/settings/ChargerStatusDialog$1;->val$type:I
@@ -44,15 +40,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "v"
 
-    .prologue
-    .line 98
     iget v0, p0, Lcom/android/settings/ChargerStatusDialog$1;->val$type:I
 
     if-nez v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lcom/android/settings/ChargerStatusDialog$1;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
     #getter for: Lcom/android/settings/ChargerStatusDialog;->editor:Landroid/content/SharedPreferences$Editor;
@@ -69,13 +61,12 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v2}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v2
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 103
     :goto_0
     iget-object v0, p0, Lcom/android/settings/ChargerStatusDialog$1;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
@@ -86,10 +77,8 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 104
     return-void
 
-    .line 101
     :cond_0
     iget-object v0, p0, Lcom/android/settings/ChargerStatusDialog$1;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
@@ -107,7 +96,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v2}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v2
 

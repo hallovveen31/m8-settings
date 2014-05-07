@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 209
     invoke-static {}, Lcom/android/settings/bluetooth/HtcBluetoothState;->values()[Lcom/android/settings/bluetooth/HtcBluetoothState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_INIT:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_INIT_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_SYNC:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_APPLY_POLICY:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_AIRPLANE_MODE_CHANGED:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -135,7 +133,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -151,7 +149,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_ON:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -167,7 +165,7 @@
 
     sget-object v1, Lcom/android/settings/bluetooth/HtcBluetoothState;->STATE_TURNING_OFF:Lcom/android/settings/bluetooth/HtcBluetoothState;
 
-    invoke-virtual {v1}, Lcom/android/settings/bluetooth/HtcBluetoothState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

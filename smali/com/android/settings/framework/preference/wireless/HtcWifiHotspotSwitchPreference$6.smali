@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;Z)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     iput-boolean p2, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->val$enable:Z
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 4
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 359
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #getter for: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->mDontRemind:Lcom/htc/widget/HtcCheckBox;
@@ -56,13 +48,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/htc/widget/HtcCheckBox;->isChecked()Z
+    invoke-virtual {v1}, Lcom/htc/widget/HtcCompoundButton;->isChecked()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 360
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #getter for: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->mContext:Landroid/content/Context;
@@ -80,7 +71,6 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 364
     :goto_0
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
@@ -91,7 +81,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 365
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #getter for: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -103,8 +92,6 @@
 
     move-result v0
 
-    .line 366
-    .local v0, currentstate:I
     const/16 v1, 0xd
 
     if-eq v0, v1, :cond_0
@@ -113,7 +100,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 367
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     iget-boolean v2, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->val$enable:Z
@@ -121,12 +107,9 @@
     #calls: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->setWifiAPEnable(Z)V
     invoke-static {v1, v2}, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->access$800(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;Z)V
 
-    .line 370
-    .end local v0           #currentstate:I
     :cond_0
     return-void
 
-    .line 362
     :cond_1
     iget-object v1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$6;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 

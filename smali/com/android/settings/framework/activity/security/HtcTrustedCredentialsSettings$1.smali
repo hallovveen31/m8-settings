@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 213
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$1;->this$0:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;
 
     iput-object p2, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$1;->val$adapter:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
@@ -44,10 +40,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
-    .parameter
-    .parameter "view"
-    .parameter "pos"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -58,9 +50,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 215
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$1;->this$0:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;
 
     iget-object v1, p0, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$1;->val$adapter:Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$TrustedCertificateAdapter;
@@ -72,6 +61,5 @@
     #calls: Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;->showCertDialog(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)V
     invoke-static {v0, v1}, Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;->access$700(Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings;Lcom/android/settings/framework/activity/security/HtcTrustedCredentialsSettings$CertHolder;)V
 
-    .line 216
     return-void
 .end method

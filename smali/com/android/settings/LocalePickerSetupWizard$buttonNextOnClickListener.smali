@@ -24,10 +24,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/LocalePickerSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 287
     iput-object p1, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/LocalePickerSetupWizard;Lcom/android/settings/LocalePickerSetupWizard$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 287
     invoke-direct {p0, p1}, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;-><init>(Lcom/android/settings/LocalePickerSetupWizard;)V
 
     return-void
@@ -51,17 +44,13 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 8
-    .parameter "v"
 
-    .prologue
-    .line 289
     const-string v5, "OOBE_LocalePickerSetupWizard"
 
     const-string v6, " BtnNext clicked"
 
     invoke-static {v5, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #getter for: Lcom/android/settings/LocalePickerSetupWizard;->mLocalePicker:Lcom/android/settings/LocalePickerSetupWizardFragment;
@@ -71,64 +60,49 @@
 
     if-nez v5, :cond_2
 
-    .line 293
     const-string v5, "OOBE_LocalePickerSetupWizard"
 
     const-string v6, "mLocalePicker == null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     :cond_0
     :goto_0
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     const/4 v6, -0x1
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/LocalePickerSetupWizard;->setResult(I)V
+    invoke-virtual {v5, v6}, Landroid/app/Activity;->setResult(I)V
 
-    .line 333
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
-    invoke-virtual {v5}, Lcom/android/settings/LocalePickerSetupWizard;->finish()V
+    invoke-virtual {v5}, Landroid/app/Activity;->finish()V
 
-    .line 336
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #calls: Lcom/android/settings/LocalePickerSetupWizard;->startLocaleChangeService()V
     invoke-static {v5}, Lcom/android/settings/LocalePickerSetupWizard;->access$300(Lcom/android/settings/LocalePickerSetupWizard;)V
 
-    .line 337
     :cond_1
     :goto_1
     return-void
 
-    .line 296
     :cond_2
     const/4 v4, 0x0
 
-    .line 297
-    .local v4, isLocaleChanged:Z
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 298
-    .local v0, am:Landroid/app/IActivityManager;
     const/4 v1, 0x0
 
-    .line 300
-    .local v1, config:Landroid/content/res/Configuration;
     :try_start_0
     invoke-interface {v0}, Landroid/app/IActivityManager;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    .line 301
     iget-object v2, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 302
-    .local v2, currentLocale:Ljava/util/Locale;
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     iget-object v6, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
@@ -145,7 +119,6 @@
     #setter for: Lcom/android/settings/LocalePickerSetupWizard;->mSelectedLocale:Ljava/util/Locale;
     invoke-static {v5, v6}, Lcom/android/settings/LocalePickerSetupWizard;->access$502(Lcom/android/settings/LocalePickerSetupWizard;Ljava/util/Locale;)Ljava/util/Locale;
 
-    .line 303
     const-string v5, "OOBE_LocalePickerSetupWizard"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -185,7 +158,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #getter for: Lcom/android/settings/LocalePickerSetupWizard;->mSelectedLocale:Ljava/util/Locale;
@@ -201,11 +173,8 @@
 
     if-nez v5, :cond_3
 
-    .line 305
     const/4 v4, 0x1
 
-    .line 311
-    .end local v2           #currentLocale:Ljava/util/Locale;
     :cond_3
     :goto_2
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
@@ -217,10 +186,8 @@
 
     if-nez v5, :cond_0
 
-    .line 312
     if-eqz v4, :cond_4
 
-    .line 313
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #getter for: Lcom/android/settings/LocalePickerSetupWizard;->mLocaleChangeThread:Ljava/lang/Thread;
@@ -230,21 +197,18 @@
 
     if-nez v5, :cond_1
 
-    .line 314
     const-string v5, "OOBE_LocalePickerSetupWizard"
 
     const-string v6, "mLocalePicker != null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     const/16 v6, 0x65
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/LocalePickerSetupWizard;->showDialog(I)V
+    invoke-virtual {v5, v6}, Landroid/app/Activity;->showDialog(I)V
 
-    .line 316
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     new-instance v6, Ljava/lang/Thread;
@@ -258,7 +222,6 @@
     #setter for: Lcom/android/settings/LocalePickerSetupWizard;->mLocaleChangeThread:Ljava/lang/Thread;
     invoke-static {v5, v6}, Lcom/android/settings/LocalePickerSetupWizard;->access$702(Lcom/android/settings/LocalePickerSetupWizard;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 323
     iget-object v5, p0, Lcom/android/settings/LocalePickerSetupWizard$buttonNextOnClickListener;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     #getter for: Lcom/android/settings/LocalePickerSetupWizard;->mLocaleChangeThread:Ljava/lang/Thread;
@@ -270,12 +233,9 @@
 
     goto/16 :goto_1
 
-    .line 307
     :catch_0
     move-exception v3
 
-    .line 308
-    .local v3, e:Landroid/os/RemoteException;
     const-string v5, "OOBE_LocalePickerSetupWizard"
 
     const-string v6, "am.getConfiguration"
@@ -284,8 +244,6 @@
 
     goto :goto_2
 
-    .line 327
-    .end local v3           #e:Landroid/os/RemoteException;
     :cond_4
     const-string v5, "OOBE_LocalePickerSetupWizard"
 

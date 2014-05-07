@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 278
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$PackageMoveObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageMoveObserver$Stub;-><init>()V
@@ -36,16 +33,12 @@
 # virtual methods
 .method public packageMoved(Ljava/lang/String;I)V
     .locals 3
-    .parameter "packageName"
-    .parameter "returnCode"
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .prologue
-    .line 280
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$PackageMoveObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetails;->mHandler:Landroid/os/Handler;
@@ -59,11 +52,8 @@
 
     move-result-object v0
 
-    .line 281
-    .local v0, msg:Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 282
     iget-object v1, p0, Lcom/android/settings/applications/InstalledAppDetails$PackageMoveObserver;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     #getter for: Lcom/android/settings/applications/InstalledAppDetails;->mHandler:Landroid/os/Handler;
@@ -73,6 +63,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 283
     return-void
 .end method

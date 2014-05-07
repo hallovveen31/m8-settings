@@ -15,15 +15,12 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 21
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/storage/HtcDataStorageVolume;->DEBUG:Z
 
-    .line 23
     new-instance v0, Landroid/os/storage/StorageVolume;
 
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
@@ -50,7 +47,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/storage/HtcDataStorageVolume;->VOLUME:Landroid/os/storage/StorageVolume;
 
-    .line 34
     new-instance v0, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;->INTERNAL_STORAGE:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$StorageType;
@@ -67,15 +63,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 43
     sget-object v0, Lcom/android/settings/framework/core/storage/HtcDataStorageVolume;->VOLUME:Landroid/os/storage/StorageVolume;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/HtcDataStorageVolume;->METADATA:Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;
 
     invoke-direct {p0, v0, v1}, Lcom/android/settings/framework/core/storage/HtcStorageVolume;-><init>(Landroid/os/storage/StorageVolume;Lcom/android/settings/framework/core/storage/HtcIStorageVolume$Metadata;)V
 
-    .line 44
     return-void
 .end method
 
@@ -84,8 +77,6 @@
 .method public getState()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 48
     const-string v0, "mounted"
 
     return-object v0
@@ -93,28 +84,20 @@
 
 .method public getTotalAvailableSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     .locals 5
-    .parameter "statFs"
 
-    .prologue
-    .line 53
     invoke-super {p0, p1}, Lcom/android/settings/framework/core/storage/HtcStorageVolume;->getTotalAvailableSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
 
     move-result-object v0
 
-    .line 56
-    .local v0, space:Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;
     invoke-static {p1}, Lcom/android/settings/framework/core/storage/HtcStorageManager;->getSystemSpace(Lcom/android/settings/framework/core/storage/HtcStatFs;)J
 
     move-result-wide v1
 
-    .line 57
-    .local v1, systemSpace:J
     iget-wide v3, v0, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;->totalSpace:J
 
     add-long/2addr v3, v1
 
     iput-wide v3, v0, Lcom/android/settings/framework/core/storage/HtcStatFs$TotalAvailableSpace;->totalSpace:J
 
-    .line 59
     return-object v0
 .end method

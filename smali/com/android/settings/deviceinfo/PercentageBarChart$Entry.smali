@@ -23,19 +23,12 @@
 # direct methods
 .method protected constructor <init>(FLandroid/graphics/Paint;)V
     .locals 0
-    .parameter "percentage"
-    .parameter "paint"
 
-    .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     iput p1, p0, Lcom/android/settings/deviceinfo/PercentageBarChart$Entry;->percentage:F
 
-    .line 47
     iput-object p2, p0, Lcom/android/settings/deviceinfo/PercentageBarChart$Entry;->paint:Landroid/graphics/Paint;
 
-    .line 48
     return-void
 .end method

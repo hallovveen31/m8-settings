@@ -19,8 +19,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,10 +26,7 @@
 
 .method public static getDateFormat(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
-    .parameter "context"
 
-    .prologue
-    .line 18
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -42,36 +37,27 @@
 
     move-result-object v0
 
-    .line 19
-    .local v0, dateFormat:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 20
     const-string v1, "DateTimeFormatUtil"
 
     const-string v2, "DateTime format empty"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
     const-string v0, "EE, MMM dd, yyyy"
 
-    .line 24
     :cond_0
     return-object v0
 .end method
 
 .method public static getFormattedDate(Ljava/lang/String;Ljava/util/Date;)Ljava/lang/String;
     .locals 1
-    .parameter "dateFormat"
-    .parameter "date"
 
-    .prologue
-    .line 32
     invoke-static {p0, p1}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Date;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -85,11 +71,7 @@
 
 .method public static getFormattedTime(Ljava/text/DateFormat;Ljava/util/Date;)Ljava/lang/String;
     .locals 1
-    .parameter "timeFormat"
-    .parameter "date"
 
-    .prologue
-    .line 36
     invoke-virtual {p0, p1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
@@ -99,10 +81,7 @@
 
 .method public static getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 28
     invoke-static {p0}, Landroid/text/format/DateFormat;->getTimeFormat(Landroid/content/Context;)Ljava/text/DateFormat;
 
     move-result-object v0
@@ -112,11 +91,7 @@
 
 .method private static isToday(JJ)Z
     .locals 2
-    .parameter "todayMin"
-    .parameter "syncTime"
 
-    .prologue
-    .line 40
     cmp-long v0, p2, p0
 
     if-ltz v0, :cond_0
@@ -142,11 +117,7 @@
 
 .method private static isWithinPastWeek(JJ)Z
     .locals 2
-    .parameter "todayMin"
-    .parameter "syncTime"
 
-    .prologue
-    .line 48
     cmp-long v0, p2, p0
 
     if-gez v0, :cond_0
@@ -172,11 +143,7 @@
 
 .method private static isYesterday(JJ)Z
     .locals 2
-    .parameter "todayMin"
-    .parameter "syncTime"
 
-    .prologue
-    .line 44
     cmp-long v0, p2, p0
 
     if-gez v0, :cond_0

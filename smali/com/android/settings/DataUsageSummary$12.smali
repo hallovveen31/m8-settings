@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1287
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,22 +37,17 @@
 .method public onInspectRangeChanged()V
     .locals 1
 
-    .prologue
-    .line 1291
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #calls: Lcom/android/settings/DataUsageSummary;->updateDetailData()V
     invoke-static {v0}, Lcom/android/settings/DataUsageSummary;->access$1500(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 1292
     return-void
 .end method
 
 .method public onLimitChanged()V
     .locals 3
 
-    .prologue
-    .line 1301
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
@@ -72,15 +64,12 @@
     #calls: Lcom/android/settings/DataUsageSummary;->setPolicyLimitBytes(J)V
     invoke-static {v0, v1, v2}, Lcom/android/settings/DataUsageSummary;->access$800(Lcom/android/settings/DataUsageSummary;J)V
 
-    .line 1302
     return-void
 .end method
 
 .method public onWarningChanged()V
     .locals 3
 
-    .prologue
-    .line 1296
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
@@ -97,32 +86,25 @@
     #calls: Lcom/android/settings/DataUsageSummary;->setPolicyWarningBytes(J)V
     invoke-static {v0, v1, v2}, Lcom/android/settings/DataUsageSummary;->access$2400(Lcom/android/settings/DataUsageSummary;J)V
 
-    .line 1297
     return-void
 .end method
 
 .method public requestLimitEdit()V
     .locals 1
 
-    .prologue
-    .line 1311
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-static {v0}, Lcom/android/settings/DataUsageSummary$LimitEditorFragment;->show(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 1312
     return-void
 .end method
 
 .method public requestWarningEdit()V
     .locals 1
 
-    .prologue
-    .line 1306
     iget-object v0, p0, Lcom/android/settings/DataUsageSummary$12;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-static {v0}, Lcom/android/settings/DataUsageSummary$WarningEditorFragment;->show(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 1307
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Lcom/amap/mapapi/map/Overlay;-><init>()V
 
     return-void

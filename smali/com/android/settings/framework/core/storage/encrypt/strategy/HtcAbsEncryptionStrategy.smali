@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,13 +51,9 @@
 
 .method public constructor <init>(Lcom/android/settings/framework/core/storage/HtcIStorageVolume;)V
     .locals 2
-    .parameter "volume"
 
-    .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     sget-object v1, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->TAG:Ljava/lang/String;
@@ -68,10 +62,8 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
-    .line 36
     if-nez p1, :cond_0
 
-    .line 37
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "The volume shouldn\'t be null."
@@ -80,11 +72,9 @@
 
     throw v0
 
-    .line 40
     :cond_0
     iput-object p1, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->mVolume:Lcom/android/settings/framework/core/storage/HtcIStorageVolume;
 
-    .line 41
     return-void
 .end method
 
@@ -92,10 +82,7 @@
 # virtual methods
 .method protected log(Ljava/lang/String;)V
     .locals 3
-    .parameter "message"
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcAbsEncryptionStrategy;->TAG_INFO:Lcom/android/settings/framework/util/log/HtcLog$TagInfo;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -120,6 +107,5 @@
 
     invoke-static {v0, v1}, Lcom/android/settings/framework/util/log/HtcLog;->v(Lcom/android/settings/framework/util/log/HtcLog$TagInfo;Ljava/lang/String;)I
 
-    .line 45
     return-void
 .end method

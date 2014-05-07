@@ -34,10 +34,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/NotificationStation;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/settings/NotificationStation$3;->this$0:Lcom/android/settings/NotificationStation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,11 +46,7 @@
 # virtual methods
 .method public compare(Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;)I
     .locals 4
-    .parameter "lhs"
-    .parameter "rhs"
 
-    .prologue
-    .line 130
     iget-wide v0, p2, Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;->timestamp:J
 
     iget-wide v2, p1, Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;->timestamp:J
@@ -67,17 +60,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 126
     check-cast p1, Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;
 
-    .end local p1
     check-cast p2, Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/NotificationStation$3;->compare(Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;)I
 
     move-result v0

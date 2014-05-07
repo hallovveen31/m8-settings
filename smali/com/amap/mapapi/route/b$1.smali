@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/amap/mapapi/route/b;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 889
     iput-object p1, p0, Lcom/amap/mapapi/route/b$1;->a:Lcom/amap/mapapi/route/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 5
-    .parameter
 
-    .prologue
-    .line 892
     iget-object v0, p0, Lcom/amap/mapapi/route/b$1;->a:Lcom/amap/mapapi/route/b;
 
     invoke-static {v0}, Lcom/amap/mapapi/route/b;->e(Lcom/amap/mapapi/route/b;)Lcom/amap/mapapi/map/RouteMessageHandler;
@@ -75,6 +69,5 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lcom/amap/mapapi/map/RouteMessageHandler;->onRouteEvent(Lcom/amap/mapapi/map/MapView;Lcom/amap/mapapi/map/RouteOverlay;II)Z
 
-    .line 893
     return-void
 .end method

@@ -35,11 +35,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;-><init>()V
 
-    .line 57
     new-instance v0, Lcom/android/settings/print/PrintJobSettingsFragment$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/print/PrintJobSettingsFragment$1;-><init>(Lcom/android/settings/print/PrintJobSettingsFragment;)V
@@ -51,10 +48,7 @@
 
 .method static synthetic access$000(Lcom/android/settings/print/PrintJobSettingsFragment;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->updateUi()V
 
     return-void
@@ -63,9 +57,7 @@
 .method private processArguments()V
     .locals 3
 
-    .prologue
-    .line 154
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -75,23 +67,18 @@
 
     move-result-object v0
 
-    .line 155
-    .local v0, printJobId:Ljava/lang/String;
     invoke-static {v0}, Landroid/print/PrintJobId;->unflattenFromString(Ljava/lang/String;)Landroid/print/PrintJobId;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobId:Landroid/print/PrintJobId;
 
-    .line 156
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobId:Landroid/print/PrintJobId;
 
     if-nez v1, :cond_0
 
-    .line 157
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
-    .line 159
     :cond_0
     return-void
 .end method
@@ -99,7 +86,6 @@
 .method private updateUi()V
     .locals 13
 
-    .prologue
     const v3, 0x7f0c10aa
 
     const/4 v4, 0x3
@@ -108,7 +94,6 @@
 
     const/4 v5, 0x0
 
-    .line 162
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintManager:Landroid/print/PrintManager;
 
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobId:Landroid/print/PrintJobId;
@@ -119,19 +104,15 @@
 
     iput-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
-    .line 164
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
     if-nez v0, :cond_0
 
-    .line 165
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
-    .line 253
     :goto_0
     return-void
 
-    .line 169
     :cond_0
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
@@ -149,13 +130,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 170
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
     goto :goto_0
 
-    .line 174
     :cond_2
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
@@ -163,15 +142,12 @@
 
     move-result-object v6
 
-    .line 176
-    .local v6, info:Landroid/print/PrintJobInfo;
     invoke-virtual {v6}, Landroid/print/PrintJobInfo;->getState()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 204
     :goto_1
     :pswitch_0
     iget-object v9, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
@@ -204,34 +180,28 @@
 
     aput-object v0, v11, v12
 
-    invoke-virtual {p0, v10, v11}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v10, v11}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v9, v0}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 227
     invoke-virtual {v6}, Landroid/print/PrintJobInfo;->getStateReason()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 231
-    .local v7, stateReason:Ljava/lang/String;
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 232
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
     invoke-virtual {v0}, Lcom/htc/preference/HtcPreference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v8
 
-    .line 233
-    .local v8, summary:Ljava/lang/CharSequence;
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -264,25 +234,21 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 235
-    .end local v8           #summary:Ljava/lang/CharSequence;
     :cond_3
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mMessagePreference:Lcom/htc/preference/HtcPreference;
 
     if-eqz v0, :cond_4
 
-    .line 236
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreferenceFragment;->getPreferenceScreen()Lcom/htc/preference/HtcPreferenceScreen;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mMessagePreference:Lcom/htc/preference/HtcPreference;
 
-    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceScreen;->removePreference(Lcom/htc/preference/HtcPreference;)Z
+    invoke-virtual {v0, v1}, Lcom/htc/preference/HtcPreferenceGroup;->removePreference(Lcom/htc/preference/HtcPreference;)Z
 
-    .line 252
     :cond_4
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -290,8 +256,6 @@
 
     goto/16 :goto_0
 
-    .line 179
-    .end local v7           #stateReason:Ljava/lang/String;
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
@@ -305,7 +269,6 @@
 
     if-nez v0, :cond_5
 
-    .line 180
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
     const v1, 0x7f0c10a9
@@ -318,7 +281,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -326,7 +289,6 @@
 
     goto/16 :goto_1
 
-    .line 183
     :cond_5
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
@@ -338,7 +300,7 @@
 
     aput-object v2, v1, v5
 
-    invoke-virtual {p0, v3, v1}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v1}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -346,7 +308,6 @@
 
     goto/16 :goto_1
 
-    .line 189
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
@@ -360,7 +321,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -368,7 +329,6 @@
 
     goto/16 :goto_1
 
-    .line 194
     :pswitch_3
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
@@ -382,7 +342,6 @@
 
     if-nez v0, :cond_6
 
-    .line 195
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
     const v1, 0x7f0c10ac
@@ -395,7 +354,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {p0, v1, v2}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -403,7 +362,6 @@
 
     goto/16 :goto_1
 
-    .line 198
     :cond_6
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
@@ -415,7 +373,7 @@
 
     aput-object v2, v1, v5
 
-    invoke-virtual {p0, v3, v1}, Lcom/android/settings/print/PrintJobSettingsFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v3, v1}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -423,7 +381,6 @@
 
     goto/16 :goto_1
 
-    .line 176
     nop
 
     :pswitch_data_0
@@ -440,37 +397,30 @@
 # virtual methods
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
-    .parameter "icicle"
 
-    .prologue
-    .line 75
-    invoke-super {p0, p1}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 77
     const v0, 0x7f06002e
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/print/PrintJobSettingsFragment;->addPreferencesFromResource(I)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreferenceFragment;->addPreferencesFromResource(I)V
 
-    .line 78
     const-string v0, "print_job_preference"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/print/PrintJobSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobPreference:Lcom/htc/preference/HtcPreference;
 
-    .line 79
     const-string v0, "print_job_message_preference"
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/print/PrintJobSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcPreferenceFragment;->findPreference(Ljava/lang/CharSequence;)Lcom/htc/preference/HtcPreference;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mMessagePreference:Lcom/htc/preference/HtcPreference;
 
-    .line 81
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -492,8 +442,7 @@
 
     iput-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintManager:Landroid/print/PrintManager;
 
-    .line 85
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -501,63 +450,51 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setTitle(I)V
 
-    .line 87
     invoke-direct {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->processArguments()V
 
-    .line 89
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/print/PrintJobSettingsFragment;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, v0}, Landroid/app/Fragment;->setHasOptionsMenu(Z)V
 
-    .line 90
     return-void
 .end method
 
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
-    .parameter "item"
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 136
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 150
-    invoke-super {p0, p1}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Landroid/app/Fragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
     :goto_0
     return v0
 
-    .line 138
     :pswitch_0
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
     invoke-virtual {v1}, Landroid/print/PrintJob;->cancel()V
 
-    .line 139
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
     goto :goto_0
 
-    .line 144
     :pswitch_1
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJob:Landroid/print/PrintJob;
 
     invoke-virtual {v1}, Landroid/print/PrintJob;->restart()V
 
-    .line 145
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->finish()V
+    invoke-virtual {p0}, Lcom/android/settings/SettingsPreferenceFragment;->finish()V
 
     goto :goto_0
 
-    .line 136
     nop
 
     :pswitch_data_0
@@ -570,60 +507,45 @@
 .method public onPause()V
     .locals 2
 
-    .prologue
-    .line 108
-    invoke-super {p0}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;->onPause()V
+    invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->onPause()V
 
-    .line 109
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintManager:Landroid/print/PrintManager;
 
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobStateChangeListener:Landroid/print/PrintManager$PrintJobStateChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/print/PrintManager;->removePrintJobStateChangeListener(Landroid/print/PrintManager$PrintJobStateChangeListener;)V
 
-    .line 111
     return-void
 .end method
 
 .method public onResume()V
     .locals 2
 
-    .prologue
-    .line 100
     invoke-super {p0}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;->onResume()V
 
-    .line 101
     iget-object v0, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintManager:Landroid/print/PrintManager;
 
     iget-object v1, p0, Lcom/android/settings/print/PrintJobSettingsFragment;->mPrintJobStateChangeListener:Landroid/print/PrintManager$PrintJobStateChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/print/PrintManager;->addPrintJobStateChangeListener(Landroid/print/PrintManager$PrintJobStateChangeListener;)V
 
-    .line 103
     invoke-direct {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->updateUi()V
 
-    .line 104
     return-void
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 2
-    .parameter "view"
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 94
-    invoke-super {p0, p1, p2}, Lcom/android/settings/framework/activity/print/HtcAbsPrintJobSettingsFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Landroid/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 95
-    invoke-virtual {p0}, Lcom/android/settings/print/PrintJobSettingsFragment;->getListView()Lcom/htc/widget/HtcListView;
+    invoke-virtual {p0}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getListView()Lcom/htc/widget/HtcListView;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListView;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 96
     return-void
 .end method

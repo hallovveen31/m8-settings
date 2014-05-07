@@ -21,11 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wfd/WifiDisplaySettings;Landroid/content/Context;)V
     .locals 0
-    .parameter
-    .parameter "x0"
 
-    .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     invoke-direct {p0, p2}, Lcom/htc/preference/HtcCheckBoxPreference;-><init>(Landroid/content/Context;)V
@@ -38,8 +34,6 @@
 .method protected onClick()V
     .locals 2
 
-    .prologue
-    .line 392
     iget-object v1, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
@@ -57,7 +51,6 @@
     #setter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mAutoGO:Z
     invoke-static {v1, v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$302(Lcom/android/settings/wfd/WifiDisplaySettings;Z)Z
 
-    .line 393
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     #getter for: Lcom/android/settings/wfd/WifiDisplaySettings;->mAutoGO:Z
@@ -67,13 +60,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 394
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
     #calls: Lcom/android/settings/wfd/WifiDisplaySettings;->startAutoGO()V
     invoke-static {v0}, Lcom/android/settings/wfd/WifiDisplaySettings;->access$400(Lcom/android/settings/wfd/WifiDisplaySettings;)V
 
-    .line 398
     :goto_1
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 
@@ -82,18 +73,15 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/wfd/WifiDisplaySettings$3;->setChecked(Z)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcCheckBoxPreference;->setChecked(Z)V
 
-    .line 399
     return-void
 
-    .line 392
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 396
     :cond_1
     iget-object v0, p0, Lcom/android/settings/wfd/WifiDisplaySettings$3;->this$0:Lcom/android/settings/wfd/WifiDisplaySettings;
 

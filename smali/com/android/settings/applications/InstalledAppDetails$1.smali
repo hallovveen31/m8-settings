@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/InstalledAppDetails;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 239
     iput-object p1, p0, Lcom/android/settings/applications/InstalledAppDetails$1;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,23 +33,18 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
-    .parameter "msg"
 
-    .prologue
-    .line 242
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$1;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
-    invoke-virtual {v0}, Lcom/android/settings/applications/InstalledAppDetails;->getView()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 259
     :goto_0
     return-void
 
-    .line 245
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -61,7 +53,6 @@
     :pswitch_0
     goto :goto_0
 
-    .line 247
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$1;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
@@ -70,7 +61,6 @@
 
     goto :goto_0
 
-    .line 251
     :pswitch_2
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$1;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
@@ -88,13 +78,12 @@
 
     iget-object v1, v1, Lcom/android/settings/applications/ApplicationsState$AppEntry;->info:Landroid/content/pm/ApplicationInfo;
 
-    iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+    iget-object v1, v1, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/android/settings/applications/ApplicationsState;->requestSize(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 254
     :pswitch_3
     iget-object v0, p0, Lcom/android/settings/applications/InstalledAppDetails$1;->this$0:Lcom/android/settings/applications/InstalledAppDetails;
 
@@ -103,7 +92,6 @@
 
     goto :goto_0
 
-    .line 245
     nop
 
     :pswitch_data_0

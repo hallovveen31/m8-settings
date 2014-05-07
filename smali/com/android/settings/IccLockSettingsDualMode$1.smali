@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/IccLockSettingsDualMode;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 128
     iput-object p1, p0, Lcom/android/settings/IccLockSettingsDualMode$1;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -36,13 +33,10 @@
 # virtual methods
 .method public onServiceStateChanged(Landroid/telephony/ServiceState;)V
     .locals 3
-    .parameter "serviceState"
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/settings/IccLockSettingsDualMode$1;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
-    invoke-virtual {v0}, Lcom/android/settings/IccLockSettingsDualMode;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
@@ -58,12 +52,10 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/android/settings/IccLockSettingsDualMode$1;->this$0:Lcom/android/settings/IccLockSettingsDualMode;
 
-    invoke-virtual {v0}, Lcom/android/settings/IccLockSettingsDualMode;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 134
     :cond_0
     return-void
 .end method

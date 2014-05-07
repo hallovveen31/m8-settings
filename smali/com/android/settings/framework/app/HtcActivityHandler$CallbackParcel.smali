@@ -24,25 +24,17 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
-    .parameter "callback"
 
-    .prologue
-    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcActivityHandler$CallbackParcel;->callback:Ljava/lang/Object;
 
-    .line 70
     return-void
 .end method

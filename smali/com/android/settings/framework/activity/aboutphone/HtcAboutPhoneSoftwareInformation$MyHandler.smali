@@ -30,20 +30,15 @@
 # direct methods
 .method public constructor <init>(Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareInformation;)V
     .locals 1
-    .parameter "activity"
 
-    .prologue
-    .line 235
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 236
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareInformation$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
-    .line 237
     return-void
 .end method
 
@@ -51,27 +46,20 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 11
-    .parameter "msg"
 
-    .prologue
-    .line 241
     iget-object v8, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareInformation$MyHandler;->mStatus:Ljava/lang/ref/WeakReference;
 
-    invoke-virtual {v8}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v8}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareInformation;
 
-    .line 242
-    .local v7, status:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneSoftwareInformation;
     if-nez v7, :cond_0
 
-    .line 294
     :goto_0
     return-void
 
-    .line 246
     :cond_0
     iget v8, p1, Landroid/os/Message;->what:I
 
@@ -79,23 +67,17 @@
 
     goto :goto_0
 
-    .line 251
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 256
-    .local v0, ar:Landroid/os/AsyncResult;
     const-string v6, "Not available"
 
-    .line 258
-    .local v6, nERIVersion:Ljava/lang/String;
     iget-object v8, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     if-nez v8, :cond_1
 
-    .line 259
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     const-string v9, "ERR_NV_CMD_FAILED-ar.result == null."
@@ -104,7 +86,6 @@
 
     goto :goto_0
 
-    .line 261
     :cond_1
     iget-object v8, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -112,8 +93,6 @@
 
     move-result-object v1
 
-    .line 262
-    .local v1, command:Ljava/lang/String;
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -136,7 +115,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     const/4 v8, 0x4
 
     const/4 v9, 0x6
@@ -146,8 +124,6 @@
 
     move-result-object v4
 
-    .line 265
-    .local v4, nCMDType:Ljava/lang/String;
     const/4 v8, 0x6
 
     const/16 v9, 0x8
@@ -156,8 +132,6 @@
 
     move-result-object v3
 
-    .line 266
-    .local v3, nCMDStatus:Ljava/lang/String;
     const/16 v8, 0x18
 
     const/16 v9, 0x1c
@@ -168,7 +142,6 @@
 
     move-result-object v6
 
-    .line 273
     :goto_1
     const-string v8, "00"
 
@@ -180,18 +153,14 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 274
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     const-string v9, "OoO Get ERI type ok"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     const/4 v5, 0x0
 
-    .line 278
-    .local v5, nERINumber:I
     const/16 v8, 0x10
 
     :try_start_1
@@ -201,13 +170,11 @@
 
     move-result v5
 
-    .line 282
     :goto_2
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 283
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -232,26 +199,15 @@
 
     goto :goto_0
 
-    .line 267
-    .end local v3           #nCMDStatus:Ljava/lang/String;
-    .end local v4           #nCMDType:Ljava/lang/String;
-    .end local v5           #nERINumber:I
     :catch_0
     move-exception v2
 
-    .line 268
-    .local v2, e:Ljava/lang/Exception;
     const-string v4, ""
 
-    .line 269
-    .restart local v4       #nCMDType:Ljava/lang/String;
     const-string v3, "11"
 
-    .line 270
-    .restart local v3       #nCMDStatus:Ljava/lang/String;
     const-string v6, "Not available"
 
-    .line 271
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     const-string v9, "Get ERI version error!!"
@@ -260,14 +216,9 @@
 
     goto :goto_1
 
-    .line 279
-    .end local v2           #e:Ljava/lang/Exception;
-    .restart local v5       #nERINumber:I
     :catch_1
     move-exception v2
 
-    .line 280
-    .restart local v2       #e:Ljava/lang/Exception;
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
     const-string v9, "OoO Integer.parseInt(nERIVersion, 16)ERROR"
@@ -276,9 +227,6 @@
 
     goto :goto_2
 
-    .line 286
-    .end local v2           #e:Ljava/lang/Exception;
-    .end local v5           #nERINumber:I
     :cond_2
     const-string v8, "HtcAboutPhoneSoftwareInformation"
 
@@ -288,7 +236,6 @@
 
     goto/16 :goto_0
 
-    .line 246
     nop
 
     :pswitch_data_0

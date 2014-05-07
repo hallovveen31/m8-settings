@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ISActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 240
     iput-object p1, p0, Lcom/android/settings/ISActivity$8;->this$0:Lcom/android/settings/ISActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,20 +36,14 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "whichButton"
 
-    .prologue
-    .line 243
     iget-object v0, p0, Lcom/android/settings/ISActivity$8;->this$0:Lcom/android/settings/ISActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/ISActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 244
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/settings/ISActivity;->isShowing:Z
 
-    .line 245
     return-void
 .end method

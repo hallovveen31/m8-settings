@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 17
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,70 +50,47 @@
 
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 1
-    .parameter "context"
-    .parameter "phoneType"
 
-    .prologue
-    .line 34
     const/4 v0, 0x0
 
     check-cast v0, Landroid/util/AttributeSet;
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 35
     iput p2, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->mPhoneType:I
 
-    .line 36
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 51
     const v0, 0x7f0f0017
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 52
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 63
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/HtcAbstractStatusPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 64
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "imei"
 
-    .prologue
-    .line 40
     const/4 v0, 0x0
 
     check-cast v0, Landroid/util/AttributeSet;
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 41
     iput-object p2, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->mIMEI:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -124,9 +99,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 68
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -142,8 +115,6 @@
 .method protected isConstantSummary()Z
     .locals 1
 
-    .prologue
-    .line 96
     const/4 v0, 0x1
 
     return v0
@@ -152,8 +123,6 @@
 .method protected onGetSummary()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 74
     iget-object v2, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->mIMEI:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -162,17 +131,14 @@
 
     if-nez v2, :cond_1
 
-    .line 75
     iget-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->mIMEI:Ljava/lang/String;
 
-    .line 91
     :cond_0
     :goto_0
     return-object v0
 
-    .line 78
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -184,24 +150,19 @@
 
     check-cast v1, Landroid/telephony/TelephonyManager;
 
-    .line 80
-    .local v1, tm:Landroid/telephony/TelephonyManager;
     iget v2, p0, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->mPhoneType:I
 
     invoke-virtual {v1, v2}, Landroid/telephony/TelephonyManager;->getDeviceIdExt(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 87
-    .local v0, IMEI:Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 88
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/identity/HtcImeiPreferenceDualMode;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v2
 

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/WifiApEnabler;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 259
     iput-object p1, p0, Lcom/android/settings/wifi/WifiApEnabler$4;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 261
     iget-object v0, p0, Lcom/android/settings/wifi/WifiApEnabler$4;->this$0:Lcom/android/settings/wifi/WifiApEnabler;
 
     #calls: Lcom/android/settings/wifi/WifiApEnabler;->setHotspotStatus()V
     invoke-static {v0}, Lcom/android/settings/wifi/WifiApEnabler;->access$800(Lcom/android/settings/wifi/WifiApEnabler;)V
 
-    .line 262
     return-void
 .end method

@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 51
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -52,7 +50,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer;->TAG:Ljava/lang/String;
 
-    .line 54
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer;->DEBUG:Z
@@ -63,20 +60,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     return-void
 .end method
 
 .method static synthetic access$000(Landroid/content/Intent;)Z
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 49
     invoke-static {p0}, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer;->isIntentEmpty(Landroid/content/Intent;)Z
 
     move-result v0
@@ -86,10 +77,7 @@
 
 .method private static isIntentEmpty(Landroid/content/Intent;)Z
     .locals 1
-    .parameter "intent"
 
-    .prologue
-    .line 167
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -112,14 +100,10 @@
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "message"
 
-    .prologue
-    .line 172
     sget-object v0, Lcom/android/settings/framework/core/storage/encrypt/ThreelmEnterpriseServer;->TAG:Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/settings/framework/util/log/HtcLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     return-void
 .end method

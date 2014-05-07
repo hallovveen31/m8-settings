@@ -34,10 +34,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/AddAccountSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +46,6 @@
 # virtual methods
 .method public run(Landroid/accounts/AccountManagerFuture;)V
     .locals 8
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -60,13 +56,8 @@
         }
     .end annotation
 
-    .prologue
-    .line 76
-    .local p1, future:Landroid/accounts/AccountManagerFuture;,"Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;"
     const/4 v2, 0x1
 
-    .line 78
-    .local v2, done:Z
     :try_start_0
     invoke-interface {p1}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
 
@@ -74,8 +65,6 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 80
-    .local v1, bundle:Landroid/os/Bundle;
     const-string v5, "intent"
 
     invoke-virtual {v1, v5}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -84,20 +73,14 @@
 
     check-cast v4, Landroid/content/Intent;
 
-    .line 81
-    .local v4, intent:Landroid/content/Intent;
     if-eqz v4, :cond_3
 
-    .line 82
     const/4 v2, 0x0
 
-    .line 83
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 84
-    .local v0, addAccountOptions:Landroid/os/Bundle;
     const-string v5, "pendingIntent"
 
     iget-object v6, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
@@ -109,7 +92,6 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 85
     const-string v5, "hasMultipleUsers"
 
     iget-object v6, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
@@ -120,18 +102,14 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 87
     invoke-virtual {v4, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 88
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     const/4 v6, 0x2
 
-    invoke-virtual {v5, v4, v6}, Lcom/android/settings/accounts/AddAccountSettings;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v5, v4, v6}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 97
-    .end local v0           #addAccountOptions:Landroid/os/Bundle;
     :cond_0
     :goto_0
     invoke-static {}, Lcom/android/settings/accounts/AddAccountSettings;->access$100()Ljava/lang/String;
@@ -175,34 +153,25 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/accounts/AuthenticatorException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 105
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 106
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
-    .end local v1           #bundle:Landroid/os/Bundle;
-    .end local v4           #intent:Landroid/content/Intent;
     :goto_1
-    invoke-virtual {v5}, Lcom/android/settings/accounts/AddAccountSettings;->finish()V
+    invoke-virtual {v5}, Landroid/app/Activity;->finish()V
 
-    .line 109
     :cond_2
     return-void
 
-    .line 90
-    .restart local v1       #bundle:Landroid/os/Bundle;
-    .restart local v4       #intent:Landroid/content/Intent;
     :cond_3
     :try_start_1
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     const/4 v6, -0x1
 
-    invoke-virtual {v5, v6}, Lcom/android/settings/accounts/AddAccountSettings;->setResult(I)V
+    invoke-virtual {v5, v6}, Landroid/app/Activity;->setResult(I)V
 
-    .line 91
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     #getter for: Lcom/android/settings/accounts/AddAccountSettings;->mPendingIntent:Landroid/app/PendingIntent;
@@ -212,7 +181,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 92
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     #getter for: Lcom/android/settings/accounts/AddAccountSettings;->mPendingIntent:Landroid/app/PendingIntent;
@@ -222,7 +190,6 @@
 
     invoke-virtual {v5}, Landroid/app/PendingIntent;->cancel()V
 
-    .line 93
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     const/4 v6, 0x0
@@ -237,14 +204,9 @@
 
     goto :goto_0
 
-    .line 98
-    .end local v1           #bundle:Landroid/os/Bundle;
-    .end local v4           #intent:Landroid/content/Intent;
     :catch_0
     move-exception v3
 
-    .line 99
-    .local v3, e:Landroid/accounts/OperationCanceledException;
     :try_start_2
     invoke-static {}, Lcom/android/settings/accounts/AddAccountSettings;->access$100()Ljava/lang/String;
 
@@ -268,22 +230,16 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 105
     :cond_4
     if-eqz v2, :cond_2
 
-    .line 106
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     goto :goto_1
 
-    .line 100
-    .end local v3           #e:Landroid/accounts/OperationCanceledException;
     :catch_1
     move-exception v3
 
-    .line 101
-    .local v3, e:Ljava/io/IOException;
     :try_start_3
     invoke-static {}, Lcom/android/settings/accounts/AddAccountSettings;->access$100()Ljava/lang/String;
 
@@ -323,22 +279,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 105
     :cond_5
     if-eqz v2, :cond_2
 
-    .line 106
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     goto :goto_1
 
-    .line 102
-    .end local v3           #e:Ljava/io/IOException;
     :catch_2
     move-exception v3
 
-    .line 103
-    .local v3, e:Landroid/accounts/AuthenticatorException;
     :try_start_4
     invoke-static {}, Lcom/android/settings/accounts/AddAccountSettings;->access$100()Ljava/lang/String;
 
@@ -378,28 +328,22 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 105
     :cond_6
     if-eqz v2, :cond_2
 
-    .line 106
     iget-object v5, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
     goto/16 :goto_1
 
-    .line 105
-    .end local v3           #e:Landroid/accounts/AuthenticatorException;
     :catchall_0
     move-exception v5
 
     if-eqz v2, :cond_7
 
-    .line 106
     iget-object v6, p0, Lcom/android/settings/accounts/AddAccountSettings$1;->this$0:Lcom/android/settings/accounts/AddAccountSettings;
 
-    invoke-virtual {v6}, Lcom/android/settings/accounts/AddAccountSettings;->finish()V
+    invoke-virtual {v6}, Landroid/app/Activity;->finish()V
 
-    .line 105
     :cond_7
     throw v5
 .end method

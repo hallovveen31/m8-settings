@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 448
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity$2;->this$0:Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,15 +36,11 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 3
-    .parameter "view"
 
-    .prologue
-    .line 450
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity$2;->this$0:Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->finish()V
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    .line 451
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity$2;->this$0:Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;
 
     new-instance v1, Landroid/content/Intent;
@@ -56,8 +49,7 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/settings/framework/app/HtcInternalPreferenceActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 452
     return-void
 .end method

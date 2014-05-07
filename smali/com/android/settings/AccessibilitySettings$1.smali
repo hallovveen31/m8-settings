@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/AccessibilitySettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 166
     iput-object p1, p0, Lcom/android/settings/AccessibilitySettings$1;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -36,24 +33,18 @@
 # virtual methods
 .method public dispatchMessage(Landroid/os/Message;)V
     .locals 1
-    .parameter "msg"
 
-    .prologue
-    .line 169
     invoke-super {p0, p1}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
 
-    .line 170
     iget-object v0, p0, Lcom/android/settings/AccessibilitySettings$1;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #calls: Lcom/android/settings/AccessibilitySettings;->loadInstalledServices()V
     invoke-static {v0}, Lcom/android/settings/AccessibilitySettings;->access$100(Lcom/android/settings/AccessibilitySettings;)V
 
-    .line 171
     iget-object v0, p0, Lcom/android/settings/AccessibilitySettings$1;->this$0:Lcom/android/settings/AccessibilitySettings;
 
     #calls: Lcom/android/settings/AccessibilitySettings;->updateServicesPreferences()V
     invoke-static {v0}, Lcom/android/settings/AccessibilitySettings;->access$200(Lcom/android/settings/AccessibilitySettings;)V
 
-    .line 172
     return-void
 .end method

@@ -27,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
@@ -36,17 +34,12 @@
 
 .method private showHtcAlertDialog(I)V
     .locals 2
-    .parameter "type"
 
-    .prologue
-    .line 43
     packed-switch p1, :pswitch_data_0
 
-    .line 55
     :goto_0
     return-void
 
-    .line 45
     :pswitch_0
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
@@ -86,14 +79,12 @@
 
     iput-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 52
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
     goto :goto_0
 
-    .line 43
     nop
 
     :pswitch_data_0
@@ -106,44 +97,30 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
-    .parameter "dialog"
 
-    .prologue
-    .line 58
-    invoke-virtual {p0}, Lcom/android/settings/widget/SettingsAppWidgetDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 59
     return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 62
-    invoke-virtual {p0}, Lcom/android/settings/widget/SettingsAppWidgetDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 63
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
-    .parameter "savedInstanceState"
 
-    .prologue
-    .line 24
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 25
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/widget/SettingsAppWidgetDialog;->requestWindowFeature(I)Z
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->requestWindowFeature(I)Z
 
-    .line 27
-    invoke-virtual {p0}, Lcom/android/settings/widget/SettingsAppWidgetDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -155,8 +132,6 @@
 
     move-result v0
 
-    .line 28
-    .local v0, type:I
     const-string v1, "SettingsAppWidgetDialog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -179,44 +154,36 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     invoke-direct {p0, v0}, Lcom/android/settings/widget/SettingsAppWidgetDialog;->showHtcAlertDialog(I)V
 
-    .line 30
     return-void
 .end method
 
 .method protected onDestroy()V
     .locals 1
 
-    .prologue
-    .line 34
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 35
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->isShowing()Z
+    invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 39
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/widget/SettingsAppWidgetDialog;->mDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 40
     return-void
 .end method

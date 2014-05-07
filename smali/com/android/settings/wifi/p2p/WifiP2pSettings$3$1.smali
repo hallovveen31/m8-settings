@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/wifi/p2p/WifiP2pSettings$3;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 232
     iput-object p1, p0, Lcom/android/settings/wifi/p2p/WifiP2pSettings$3$1;->this$1:Lcom/android/settings/wifi/p2p/WifiP2pSettings$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,17 +36,12 @@
 # virtual methods
 .method public onFailure(I)V
     .locals 0
-    .parameter "reason"
 
-    .prologue
-    .line 238
     return-void
 .end method
 
 .method public onSuccess()V
     .locals 0
 
-    .prologue
-    .line 235
     return-void
 .end method

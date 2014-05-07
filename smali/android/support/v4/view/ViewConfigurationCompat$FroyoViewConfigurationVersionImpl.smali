@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,10 +30,7 @@
 # virtual methods
 .method public getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
     .locals 1
-    .parameter "config"
 
-    .prologue
-    .line 49
     invoke-static {p1}, Landroid/support/v4/view/ViewConfigurationCompatFroyo;->getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
 
     move-result v0

@@ -51,19 +51,15 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const v3, 0x7f0c0ad2
 
-    .line 39
     invoke-static {}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcIEncryptionStrategy$SdCardCryptoType;->getCurrentType()Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcIEncryptionStrategy$SdCardCryptoType;
 
     move-result-object v0
 
-    .line 41
-    .local v0, type:Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcIEncryptionStrategy$SdCardCryptoType;
     sget-object v1, Lcom/android/settings/framework/core/storage/StorageR$1;->$SwitchMap$com$android$settings$framework$core$storage$encrypt$strategy$HtcIEncryptionStrategy$SdCardCryptoType:[I
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/core/storage/encrypt/strategy/HtcIEncryptionStrategy$SdCardCryptoType;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
@@ -71,7 +67,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 103
     new-instance v1, Ljava/lang/AssertionError;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -122,131 +117,105 @@
 
     throw v1
 
-    .line 46
     :pswitch_0
     const v1, 0x7f0c0ac9
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt:I
 
-    .line 48
     const v1, 0x7f0c0aca
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt_summary:I
 
-    .line 50
     const v1, 0x7f0c0acb
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt_summary_enabled:I
 
-    .line 53
     const v1, 0x7f0c0acd
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->crypt_keeper_dialog_need_password_title:I
 
-    .line 54
     const v1, 0x7f0c0ace
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->crypt_keeper_dialog_need_password_message:I
 
-    .line 57
     const v1, 0x7f0c0acc
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_settings_description:I
 
-    .line 59
     const v1, 0x7f0c0acf
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_confirm_title:I
 
-    .line 60
     const v1, 0x7f0c0ad0
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_confirm_description:I
 
-    .line 63
     sput v3, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_title:I
 
-    .line 64
     const v1, 0x7f0c0ad1
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_settings_description:I
 
-    .line 66
     sput v3, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_confirm_title:I
 
-    .line 67
     const v1, 0x7f0c0ad3
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_confirm_description:I
 
-    .line 112
     :goto_0
     return-void
 
-    .line 74
     :pswitch_1
     const v1, 0x7f0c0999
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt:I
 
-    .line 76
     const v1, 0x7f0c099a
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt_summary:I
 
-    .line 78
     const v1, 0x7f0c099b
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_encrypt_summary_enabled:I
 
-    .line 81
     const v1, 0x7f0c0c6b
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->crypt_keeper_dialog_need_password_title:I
 
-    .line 82
     const v1, 0x7f0c0c6c
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->crypt_keeper_dialog_need_password_message:I
 
-    .line 85
     const v1, 0x7f0c09a7
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_settings_description:I
 
-    .line 87
     const v1, 0x7f0c09a6
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_confirm_title:I
 
-    .line 88
     const v1, 0x7f0c09a8
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_encrypt_confirm_description:I
 
-    .line 91
     const v1, 0x7f0c09a9
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_title:I
 
-    .line 92
     const v1, 0x7f0c09aa
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_settings_description:I
 
-    .line 94
     sget v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_title:I
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_confirm_title:I
 
-    .line 95
     const v1, 0x7f0c09ab
 
     sput v1, Lcom/android/settings/framework/core/storage/StorageR$string;->sd_card_unencrypt_confirm_description:I
 
     goto :goto_0
 
-    .line 41
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -258,8 +227,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

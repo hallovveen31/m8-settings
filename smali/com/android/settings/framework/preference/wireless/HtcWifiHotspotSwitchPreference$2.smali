@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$2;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,17 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 8
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 96
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 97
-    .local v0, action:Ljava/lang/String;
     const-string v4, "android.net.wifi.WIFI_AP_STATE_CHANGED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -55,7 +46,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 98
     iget-object v4, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$2;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     const-string v5, "wifi_state"
@@ -69,12 +59,10 @@
     #calls: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->handleWifiApStateChanged(I)V
     invoke-static {v4, v5}, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->access$200(Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;I)V
 
-    .line 113
     :cond_0
     :goto_0
     return-void
 
-    .line 100
     :cond_1
     const-string v4, "android.net.conn.TETHER_STATE_CHANGED"
 
@@ -84,31 +72,24 @@
 
     if-eqz v4, :cond_2
 
-    .line 101
     const-string v4, "availableArray"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 103
-    .local v2, available:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "activeArray"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 105
-    .local v1, active:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v4, "erroredArray"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 107
-    .local v3, errored:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$2;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->toArray()[Ljava/lang/Object;
@@ -128,10 +109,6 @@
 
     goto :goto_0
 
-    .line 108
-    .end local v1           #active:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v2           #available:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    .end local v3           #errored:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_2
     const-string v4, "com.htc.admin.ALLOW_INTERNET_SHARING_CHANGE"
 
@@ -141,7 +118,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 109
     iget-object v4, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$2;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #calls: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->checkTetherPolicy()V
@@ -149,7 +125,6 @@
 
     goto :goto_0
 
-    .line 110
     :cond_3
     const-string v4, "com.htc.mdm.wifibt.intent.MDM_TETHERING_ALLOW"
 
@@ -159,7 +134,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 111
     iget-object v4, p0, Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference$2;->this$0:Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;
 
     #calls: Lcom/android/settings/framework/preference/wireless/HtcWifiHotspotSwitchPreference;->checkTetherPolicy()V

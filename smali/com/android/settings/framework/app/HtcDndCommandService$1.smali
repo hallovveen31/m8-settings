@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcDndCommandService;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 735
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcDndCommandService$1;->this$0:Lcom/android/settings/framework/app/HtcDndCommandService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,26 +37,22 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 738
     invoke-static {}, Lcom/android/settings/framework/app/HtcDndCommandService;->access$000()Landroid/widget/Toast;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 739
     invoke-static {}, Lcom/android/settings/framework/app/HtcDndCommandService;->access$000()Landroid/widget/Toast;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    .line 742
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcDndCommandService$1;->this$0:Lcom/android/settings/framework/app/HtcDndCommandService;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcDndCommandService;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/content/ContextWrapper;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -73,13 +66,11 @@
 
     invoke-static {v0}, Lcom/android/settings/framework/app/HtcDndCommandService;->access$002(Landroid/widget/Toast;)Landroid/widget/Toast;
 
-    .line 746
     invoke-static {}, Lcom/android/settings/framework/app/HtcDndCommandService;->access$000()Landroid/widget/Toast;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 747
     return-void
 .end method

@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,21 +52,18 @@
 
     sput-object v0, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->TAG:Ljava/lang/String;
 
-    .line 88
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isDualPhoneEnable:Z
 
-    .line 91
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->dualGSMPhoneEnable()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isDualGSMPhoneEnable:Z
 
-    .line 113
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isModeGG()Z
 
     move-result v0
@@ -97,8 +92,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -107,14 +100,10 @@
 .method private static final getTelephonyReader()Lcom/htc/customization/HtcCustomizationReader;
     .locals 4
 
-    .prologue
-    .line 129
     invoke-static {}, Lcom/htc/customization/HtcCustomizationManager;->getInstance()Lcom/htc/customization/HtcCustomizationManager;
 
     move-result-object v0
 
-    .line 130
-    .local v0, manager:Lcom/htc/customization/HtcCustomizationManager;
     if-eqz v0, :cond_0
 
     const-string v1, "Android_Telephony"
@@ -139,26 +128,20 @@
 .method public static final isAutoTimeDisabled()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 198
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->getTelephonyReader()Lcom/htc/customization/HtcCustomizationReader;
 
     move-result-object v0
 
-    .line 200
-    .local v0, telephoyreader:Lcom/htc/customization/HtcCustomizationReader;
     if-eqz v0, :cond_0
 
-    .line 201
     const-string v2, "cdma_camp_on_disable_auto_time"
 
     invoke-interface {v0, v2, v1}, Lcom/htc/customization/HtcCustomizationReader;->readBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 204
     :cond_0
     return v1
 .end method
@@ -166,22 +149,16 @@
 .method public static isModeCG()Z
     .locals 1
 
-    .prologue
-    .line 97
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->dualPhoneEnable()Z
 
     move-result v0
 
-    .line 98
-    .local v0, result:Z
     return v0
 .end method
 
 .method public static isModeDual()Z
     .locals 2
 
-    .prologue
-    .line 149
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isModeCG()Z
 
     move-result v1
@@ -197,13 +174,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 150
-    .local v0, result:Z
     :goto_0
     return v0
 
-    .line 149
-    .end local v0           #result:Z
     :cond_1
     const/4 v0, 0x0
 
@@ -213,8 +186,6 @@
 .method public static isModeDualAccess()Z
     .locals 2
 
-    .prologue
-    .line 155
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isModeCG()Z
 
     move-result v1
@@ -236,13 +207,9 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 156
-    .local v0, result:Z
     :goto_0
     return v0
 
-    .line 155
-    .end local v0           #result:Z
     :cond_1
     const/4 v0, 0x0
 
@@ -252,22 +219,16 @@
 .method public static isModeGG()Z
     .locals 1
 
-    .prologue
-    .line 103
     invoke-static {}, Lcom/htc/telephony/HtcTelephonyManager;->dualGSMPhoneEnable()Z
 
     move-result v0
 
-    .line 104
-    .local v0, result:Z
     return v0
 .end method
 
 .method public static isModeGGDA()Z
     .locals 2
 
-    .prologue
-    .line 143
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->isModeGG()Z
 
     move-result v1
@@ -282,13 +243,9 @@
 
     const/4 v0, 0x1
 
-    .line 144
-    .local v0, result:Z
     :goto_0
     return v0
 
-    .line 143
-    .end local v0           #result:Z
     :cond_0
     const/4 v0, 0x0
 
@@ -298,47 +255,34 @@
 .method public static isModeGGSA()Z
     .locals 1
 
-    .prologue
-    .line 137
     sget-boolean v0, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->IS_DUAL_GSM_SINGLE_ACTIVE:Z
 
-    .line 138
-    .local v0, result:Z
     return v0
 .end method
 
 .method private static final isSingleActive()Z
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 116
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->getTelephonyReader()Lcom/htc/customization/HtcCustomizationReader;
 
     move-result-object v1
 
-    .line 118
-    .local v1, telephoyreader:Lcom/htc/customization/HtcCustomizationReader;
     if-eqz v1, :cond_0
 
-    .line 121
     const-string v3, "build_phone_feature_stand_by"
 
     invoke-interface {v1, v3, v2}, Lcom/htc/customization/HtcCustomizationReader;->readInteger(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 123
-    .local v0, standby:I
     const/4 v3, 0x2
 
     if-ne v0, v3, :cond_0
 
     const/4 v2, 0x1
 
-    .line 125
-    .end local v0           #standby:I
     :cond_0
     return v2
 .end method
@@ -346,18 +290,14 @@
 .method public static final supportDataUsage()Z
     .locals 1
 
-    .prologue
-    .line 48
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 49
     const/4 v0, 0x0
 
-    .line 52
     :goto_0
     return v0
 
@@ -370,8 +310,6 @@
 .method public static final supportHtcMiniPlus()Z
     .locals 1
 
-    .prologue
-    .line 236
     const/4 v0, 0x1
 
     return v0
@@ -379,10 +317,7 @@
 
 .method public static final supportHtcSyncManager(Landroid/content/Context;)Z
     .locals 5
-    .parameter "context"
 
-    .prologue
-    .line 178
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v2
@@ -393,31 +328,23 @@
 
     if-gez v2, :cond_1
 
-    .line 179
     const/4 v0, 0x0
 
-    .line 191
     :cond_0
     :goto_0
     return v0
 
-    .line 182
     :cond_1
     invoke-static {}, Lcom/android/settings/framework/preference/wireless/HtcSyncManagerPreference;->getHtcSyncManagerIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 184
-    .local v1, intent:Landroid/content/Intent;
     invoke-static {p0, v1}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->supportActivities(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v0
 
-    .line 186
-    .local v0, exist:Z
     if-nez v0, :cond_0
 
-    .line 187
     sget-object v2, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -445,24 +372,19 @@
 
 .method public static final supportMediaLinkSettings(Landroid/content/Context;)Z
     .locals 4
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 69
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 83
     :cond_0
     :goto_0
     return v2
 
-    .line 74
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -470,8 +392,6 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 75
-    .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -480,18 +400,14 @@
 
     move-result-object v1
 
-    .line 77
-    .local v1, list:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v1, :cond_0
 
-    .line 78
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
-    .line 79
     const/4 v2, 0x1
 
     goto :goto_0
@@ -499,33 +415,25 @@
 
 .method public static final supportNfc(Landroid/content/Context;)Z
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 215
     sget-object v1, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->sSupportNfc:Ljava/lang/Boolean;
 
     if-eqz v1, :cond_0
 
-    .line 216
     sget-object v1, Lcom/android/settings/framework/flag/feature/HtcWirelessFeatureFlags;->sSupportNfc:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
-    .line 221
     :goto_0
     return v1
 
-    .line 220
     :cond_0
     invoke-static {p0}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
-    .line 221
-    .local v0, adapter:Landroid/nfc/NfcAdapter;
     if-eqz v0, :cond_1
 
     const/4 v1, 0x1

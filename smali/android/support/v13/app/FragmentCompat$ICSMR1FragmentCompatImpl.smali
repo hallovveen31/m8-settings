@@ -18,8 +18,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 45
     invoke-direct {p0}, Landroid/support/v13/app/FragmentCompat$ICSFragmentCompatImpl;-><init>()V
 
     return-void
@@ -29,13 +27,8 @@
 # virtual methods
 .method public setUserVisibleHint(Landroid/app/Fragment;Z)V
     .locals 0
-    .parameter "f"
-    .parameter "deferStart"
 
-    .prologue
-    .line 48
     invoke-static {p1, p2}, Landroid/support/v13/app/FragmentCompatICSMR1;->setUserVisibleHint(Landroid/app/Fragment;Z)V
 
-    .line 49
     return-void
 .end method

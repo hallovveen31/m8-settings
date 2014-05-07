@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/PSActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 164
     iput-object p1, p0, Lcom/android/settings/PSActivity$3;->this$0:Lcom/android/settings/PSActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,9 +36,6 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 0
-    .parameter "v"
 
-    .prologue
-    .line 166
     return-void
 .end method

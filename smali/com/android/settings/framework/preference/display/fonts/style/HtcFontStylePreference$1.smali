@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,6 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 1
-    .parameter
-    .parameter "view"
-    .parameter "position"
-    .parameter "id"
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -53,9 +46,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 90
-    .local p1, parent:Landroid/widget/AdapterView;,"Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;
 
     #getter for: Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;->mContext:Landroid/content/Context;
@@ -65,15 +55,13 @@
 
     invoke-static {v0, p3}, Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStyleManager;->applyFontStyle(Landroid/content/Context;I)V
 
-    .line 91
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference$1;->this$0:Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/preference/display/fonts/style/HtcFontStylePreference;->getDialog()Landroid/app/Dialog;
+    invoke-virtual {v0}, Lcom/htc/preference/HtcDialogPreference;->getDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 92
     return-void
 .end method

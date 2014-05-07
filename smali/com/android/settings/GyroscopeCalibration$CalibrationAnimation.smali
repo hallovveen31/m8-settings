@@ -26,17 +26,13 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/GyroscopeCalibration;)V
     .locals 4
-    .parameter
 
-    .prologue
     const/4 v3, 0x7
 
-    .line 443
     iput-object p1, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 445
     const/4 v0, 0x4
 
     new-array v0, v0, [[I
@@ -124,11 +120,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/GyroscopeCalibration;Lcom/android/settings/GyroscopeCalibration$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 443
     invoke-direct {p0, p1}, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;-><init>(Lcom/android/settings/GyroscopeCalibration;)V
 
     return-void
@@ -139,7 +131,6 @@
 .method public run()V
     .locals 15
 
-    .prologue
     const-wide/16 v13, 0x1f4
 
     const-wide/16 v11, 0x64
@@ -150,12 +141,10 @@
 
     const/4 v7, 0x0
 
-    .line 453
     sget-boolean v5, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v5, :cond_0
 
-    .line 454
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->TAG:Ljava/lang/String;
@@ -167,20 +156,15 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     :cond_0
     new-instance v0, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v0, v8}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 457
-    .local v0, animSetHorizontal:Landroid/view/animation/AnimationSet;
     new-instance v1, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v1, v8}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 461
-    .local v1, animSetVertical:Landroid/view/animation/AnimationSet;
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubblePosition:F
@@ -192,7 +176,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 462
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
@@ -204,28 +187,20 @@
 
     invoke-direct {v4, v5, v7, v7, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 463
-    .local v4, translateAnim:Landroid/view/animation/TranslateAnimation;
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 464
-    invoke-virtual {v4, v11, v12}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v4, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 465
-    invoke-virtual {v4, v8}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v4, v8}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 466
-    invoke-virtual {v4, v9, v10}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+    invoke-virtual {v4, v9, v10}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 467
     invoke-virtual {v0, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 469
-    .end local v4           #translateAnim:Landroid/view/animation/TranslateAnimation;
     :cond_1
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
@@ -238,7 +213,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 470
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
@@ -250,28 +224,20 @@
 
     invoke-direct {v4, v7, v7, v5, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 471
-    .restart local v4       #translateAnim:Landroid/view/animation/TranslateAnimation;
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 472
-    invoke-virtual {v4, v11, v12}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v4, v11, v12}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 473
-    invoke-virtual {v4, v8}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v4, v8}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 474
-    invoke-virtual {v4, v9, v10}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+    invoke-virtual {v4, v9, v10}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 475
     invoke-virtual {v1, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 478
-    .end local v4           #translateAnim:Landroid/view/animation/TranslateAnimation;
     :cond_2
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
@@ -280,21 +246,17 @@
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/android/settings/GyroscopeCalibration$DPIType;->ordinal()I
+    invoke-virtual {v5}, Ljava/lang/Enum;->ordinal()I
 
     move-result v3
 
-    .line 479
-    .local v3, index:I
     const/4 v2, 0x0
 
-    .local v2, i:I
     :goto_0
     const/4 v5, 0x7
 
     if-ge v2, v5, :cond_3
 
-    .line 480
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->ANIMATION_STEP:[[I
@@ -309,36 +271,28 @@
 
     invoke-direct {v4, v7, v5, v7, v7}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 481
-    .restart local v4       #translateAnim:Landroid/view/animation/TranslateAnimation;
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 482
-    invoke-virtual {v4, v13, v14}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v4, v13, v14}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 483
-    invoke-virtual {v4, v8}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v4, v8}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 484
     mul-int/lit16 v5, v2, 0x1f4
 
     add-int/lit8 v5, v5, 0x64
 
     int-to-long v5, v5
 
-    invoke-virtual {v4, v5, v6}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+    invoke-virtual {v4, v5, v6}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 485
     invoke-virtual {v0, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 487
     new-instance v4, Landroid/view/animation/TranslateAnimation;
 
-    .end local v4           #translateAnim:Landroid/view/animation/TranslateAnimation;
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->ANIMATION_STEP:[[I
 
     aget-object v5, v5, v3
@@ -349,46 +303,36 @@
 
     invoke-direct {v4, v7, v7, v7, v5}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 488
-    .restart local v4       #translateAnim:Landroid/view/animation/TranslateAnimation;
     new-instance v5, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v5}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    invoke-virtual {v4, v5}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v4, v5}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 489
-    invoke-virtual {v4, v13, v14}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v4, v13, v14}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 490
-    invoke-virtual {v4, v8}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-virtual {v4, v8}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 491
     mul-int/lit16 v5, v2, 0x1f4
 
     add-int/lit8 v5, v5, 0x64
 
     int-to-long v5, v5
 
-    invoke-virtual {v4, v5, v6}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+    invoke-virtual {v4, v5, v6}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 492
     invoke-virtual {v1, v4}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 479
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 495
-    .end local v4           #translateAnim:Landroid/view/animation/TranslateAnimation;
     :cond_3
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubblePosition:F
     invoke-static {v5, v7}, Lcom/android/settings/GyroscopeCalibration;->access$2002(Lcom/android/settings/GyroscopeCalibration;F)F
 
-    .line 496
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mUpperBubble:Landroid/widget/ImageView;
@@ -396,15 +340,13 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v5, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 497
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #setter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubblePosition:F
     invoke-static {v5, v7}, Lcom/android/settings/GyroscopeCalibration;->access$2302(Lcom/android/settings/GyroscopeCalibration;F)F
 
-    .line 498
     iget-object v5, p0, Lcom/android/settings/GyroscopeCalibration$CalibrationAnimation;->this$0:Lcom/android/settings/GyroscopeCalibration;
 
     #getter for: Lcom/android/settings/GyroscopeCalibration;->mLowerBubble:Landroid/widget/ImageView;
@@ -412,8 +354,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v5, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 499
     return-void
 .end method

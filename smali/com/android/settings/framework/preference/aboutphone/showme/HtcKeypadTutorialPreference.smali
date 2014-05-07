@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 25
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,40 +65,25 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
-    .parameter "context"
 
-    .prologue
-    .line 40
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/aboutphone/showme/VzwHelpBasePreference;-><init>(Landroid/content/Context;)V
 
-    .line 41
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/aboutphone/showme/VzwHelpBasePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 45
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/preference/aboutphone/showme/VzwHelpBasePreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 50
     return-void
 .end method
 
@@ -109,8 +92,6 @@
 .method protected getCustomActionType()Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
     .locals 1
 
-    .prologue
-    .line 97
     sget-object v0, Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;->START_ACTIVITY:Lcom/android/settings/framework/content/HtcSettingsContext$ActionType;
 
     return-object v0
@@ -119,11 +100,9 @@
 .method protected getCustomIntent()Landroid/content/Intent;
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 69
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/showme/HtcKeypadTutorialPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -137,24 +116,18 @@
 
     move-result-object v1
 
-    .line 76
-    .local v1, preferIME:Ljava/lang/String;
     if-nez v1, :cond_0
 
     move-object v0, v2
 
-    .line 92
     :goto_0
     return-object v0
 
-    .line 80
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 81
-    .local v0, intent:Landroid/content/Intent;
     const-string v3, "com.htc.sense.ime/.HTCIMEService"
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -163,7 +136,6 @@
 
     if-nez v3, :cond_1
 
-    .line 82
     const-string v2, "com.htc.sense.ime"
 
     const-string v3, "com.htc.sense.ime.tutorial.RegionalCorrection"
@@ -172,7 +144,6 @@
 
     goto :goto_0
 
-    .line 83
     :cond_1
     const-string v3, "com.htc.android.cime/.HTCIMEService"
 
@@ -182,7 +153,6 @@
 
     if-nez v3, :cond_2
 
-    .line 84
     const-string v2, "com.htc.android.cime"
 
     const-string v3, "com.htc.android.cime.tutorial.RegionalCorrection"
@@ -194,15 +164,12 @@
     :cond_2
     move-object v0, v2
 
-    .line 89
     goto :goto_0
 .end method
 
 .method protected getCustomKey()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 54
     const-string v0, "keypad_tutorial"
 
     return-object v0
@@ -211,9 +178,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 59
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/aboutphone/showme/HtcKeypadTutorialPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -229,8 +194,6 @@
 .method protected getCustomTitleRes()I
     .locals 1
 
-    .prologue
-    .line 64
     const v0, 0x7f0c01a7
 
     return v0
@@ -239,8 +202,6 @@
 .method protected getLaunchingTag()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 102
     const-string v0, "USERMAN"
 
     return-object v0

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/SmartPCStorageDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 316
     iput-object p1, p0, Lcom/android/settings/SmartPCStorageDialog$4;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,8 +34,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 318
     iget-object v0, p0, Lcom/android/settings/SmartPCStorageDialog$4;->this$0:Lcom/android/settings/SmartPCStorageDialog;
 
     iget-object v1, p0, Lcom/android/settings/SmartPCStorageDialog$4;->this$0:Lcom/android/settings/SmartPCStorageDialog;
@@ -51,6 +46,5 @@
     #calls: Lcom/android/settings/SmartPCStorageDialog;->mountAsUsbStorage(Landroid/content/Context;)V
     invoke-static {v0, v1}, Lcom/android/settings/SmartPCStorageDialog;->access$800(Lcom/android/settings/SmartPCStorageDialog;Landroid/content/Context;)V
 
-    .line 319
     return-void
 .end method

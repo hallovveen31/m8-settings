@@ -30,8 +30,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,11 +39,7 @@
 # virtual methods
 .method updateSizeText(Lcom/android/settings/applications/ManageApplicationsFragment;I)V
     .locals 4
-    .parameter "ma"
-    .parameter "whichSize"
 
-    .prologue
-    .line 304
     sget-boolean v0, Lcom/android/settings/applications/ManageApplicationsFragment;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -102,7 +96,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
     :cond_0
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
@@ -110,10 +103,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 307
     packed-switch p2, :pswitch_data_0
 
-    .line 315
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->appText:Lcom/htc/widget/HtcListItem2LineText;
 
     iget-object v1, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
@@ -122,12 +113,10 @@
 
     invoke-virtual {v0, v1}, Lcom/htc/widget/HtcListItem2LineText;->setSecondaryText(Ljava/lang/String;)V
 
-    .line 321
     :cond_1
     :goto_0
     return-void
 
-    .line 309
     :pswitch_0
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->appText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -139,7 +128,6 @@
 
     goto :goto_0
 
-    .line 312
     :pswitch_1
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->appText:Lcom/htc/widget/HtcListItem2LineText;
 
@@ -151,7 +139,6 @@
 
     goto :goto_0
 
-    .line 318
     :cond_2
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->entry:Lcom/android/settings/applications/ApplicationsState$AppEntry;
 
@@ -163,7 +150,6 @@
 
     if-nez v0, :cond_1
 
-    .line 319
     iget-object v0, p0, Lcom/android/settings/applications/ManageApplicationsFragment$AppViewHolder;->appText:Lcom/htc/widget/HtcListItem2LineText;
 
     #getter for: Lcom/android/settings/applications/ManageApplicationsFragment;->mInvalidSizeStr:Ljava/lang/CharSequence;
@@ -175,7 +161,6 @@
 
     goto :goto_0
 
-    .line 307
     nop
 
     :pswitch_data_0

@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,11 +31,8 @@
 .method public run()V
     .locals 0
 
-    .prologue
-    .line 66
     #calls: Lcom/android/settings/framework/widget/HtcUiStyler;->initialize()V
     invoke-static {}, Lcom/android/settings/framework/widget/HtcUiStyler;->access$000()V
 
-    .line 67
     return-void
 .end method

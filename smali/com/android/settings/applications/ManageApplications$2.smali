@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/applications/ManageApplications;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 290
     iput-object p1, p0, Lcom/android/settings/applications/ManageApplications$2;->this$0:Lcom/android/settings/applications/ManageApplications;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,25 +36,18 @@
 # virtual methods
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 3
-    .parameter "v"
-    .parameter "keyCode"
-    .parameter "event"
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 294
     const/16 v2, 0x42
 
     if-ne p2, v2, :cond_0
 
-    .line 304
     :goto_0
     return v0
 
-    .line 298
     :cond_0
     const/4 v2, 0x4
 
@@ -69,7 +59,6 @@
 
     if-nez v2, :cond_1
 
-    .line 301
     iget-object v2, p0, Lcom/android/settings/applications/ManageApplications$2;->this$0:Lcom/android/settings/applications/ManageApplications;
 
     #calls: Lcom/android/settings/applications/ManageApplications;->switchToSearchContainer(Z)V
@@ -80,6 +69,5 @@
     :cond_1
     move v0, v1
 
-    .line 304
     goto :goto_0
 .end method

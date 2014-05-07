@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public onGetMethod()Ljava/lang/reflect/Method;
     .locals 5
 
-    .prologue
-    .line 67
     invoke-static {}, Lcom/android/settings/framework/reflect/com/htc/sdk/service/cloudstorage/main/CloudStorageManager;->access$000()Ljava/lang/Class;
 
     move-result-object v0
@@ -72,11 +68,7 @@
 
 .method public varargs onNotFoundMethod(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
-    .parameter "obj"
-    .parameter "args"
 
-    .prologue
-    .line 73
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object v0

@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 545
     invoke-static {}, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->values()[Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->STATE_INIT:Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->STATE_SYNC:Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->STATE_ON:Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->STATE_OFF:Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;
 
-    invoke-virtual {v1}, Lcom/android/settings/framework/core/boomsound/HtcBoomSoundState;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

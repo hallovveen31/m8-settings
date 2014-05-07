@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onRoamingStateChanged(Ljava/lang/String;)V
     .locals 1
-    .parameter "roamingState"
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference$1;->this$0:Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference;
 
-    invoke-virtual {v0, p1}, Lcom/android/settings/framework/preference/aboutphone/network/HtcRoamingPreference;->setSummaryInForeground(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/android/settings/framework/preference/HtcAbsStatusPreference;->setSummaryInForeground(Ljava/lang/CharSequence;)V
 
-    .line 76
     return-void
 .end method

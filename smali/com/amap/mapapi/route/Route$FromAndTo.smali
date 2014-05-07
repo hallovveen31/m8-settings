@@ -35,56 +35,38 @@
 # direct methods
 .method public constructor <init>(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;)V
     .locals 1
-    .parameter
-    .parameter
 
-    .prologue
-    .line 252
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/amap/mapapi/route/Route$FromAndTo;-><init>(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;I)V
 
-    .line 253
     return-void
 .end method
 
 .method public constructor <init>(Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     iput-object p1, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mFrom:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 247
     iput-object p2, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mTo:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 248
     iput p3, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mTrans:I
 
-    .line 249
     return-void
 .end method
 
 .method private a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/core/GeoPoint$b;
     .locals 7
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/amap/mapapi/core/AMapException;
         }
     .end annotation
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 291
     invoke-virtual {p2}, Lcom/amap/mapapi/core/GeoPoint;->b()J
 
     move-result-wide v0
@@ -93,7 +75,6 @@
 
     move-result-wide v0
 
-    .line 293
     invoke-virtual {p2}, Lcom/amap/mapapi/core/GeoPoint;->a()J
 
     move-result-wide v2
@@ -102,7 +83,6 @@
 
     move-result-wide v2
 
-    .line 295
     new-instance v4, Lcom/amap/mapapi/core/i;
 
     new-instance v5, Lcom/amap/mapapi/core/GeoPoint$b;
@@ -115,56 +95,42 @@
 
     invoke-direct {v4, v5, v0, v6, v6}, Lcom/amap/mapapi/core/i;-><init>(Lcom/amap/mapapi/core/GeoPoint$b;Ljava/net/Proxy;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 298
-    invoke-virtual {v4}, Lcom/amap/mapapi/core/i;->g()Ljava/lang/Object;
+    invoke-virtual {v4}, Lcom/amap/mapapi/core/m;->g()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/amap/mapapi/core/GeoPoint$b;
 
-    .line 302
     return-object v0
 .end method
 
 .method private a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;I)V
     .locals 6
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/amap/mapapi/core/AMapException;
         }
     .end annotation
 
-    .prologue
-    .line 258
-    .line 259
     iget v0, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mTrans:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 287
     :goto_0
     return-void
 
-    .line 261
     :pswitch_0
     iput-object p2, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mFrom:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 262
     iput-object p3, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mTo:Lcom/amap/mapapi/core/GeoPoint;
 
     goto :goto_0
 
-    .line 266
     :pswitch_1
     invoke-direct {p0, p1, p2}, Lcom/amap/mapapi/route/Route$FromAndTo;->a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/core/GeoPoint$b;
 
     move-result-object v0
 
-    .line 267
     new-instance v1, Lcom/amap/mapapi/core/GeoPoint;
 
     iget-wide v2, v0, Lcom/amap/mapapi/core/GeoPoint$b;->b:D
@@ -185,13 +151,11 @@
 
     goto :goto_0
 
-    .line 272
     :pswitch_2
     invoke-direct {p0, p1, p3}, Lcom/amap/mapapi/route/Route$FromAndTo;->a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/core/GeoPoint$b;
 
     move-result-object v0
 
-    .line 273
     new-instance v1, Lcom/amap/mapapi/core/GeoPoint;
 
     iget-wide v2, v0, Lcom/amap/mapapi/core/GeoPoint$b;->b:D
@@ -212,13 +176,11 @@
 
     goto :goto_0
 
-    .line 278
     :pswitch_3
     invoke-direct {p0, p1, p2}, Lcom/amap/mapapi/route/Route$FromAndTo;->a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/core/GeoPoint$b;
 
     move-result-object v0
 
-    .line 279
     new-instance v1, Lcom/amap/mapapi/core/GeoPoint;
 
     iget-wide v2, v0, Lcom/amap/mapapi/core/GeoPoint$b;->b:D
@@ -237,12 +199,10 @@
 
     iput-object v1, p0, Lcom/amap/mapapi/route/Route$FromAndTo;->mFrom:Lcom/amap/mapapi/core/GeoPoint;
 
-    .line 281
     invoke-direct {p0, p1, p3}, Lcom/amap/mapapi/route/Route$FromAndTo;->a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;)Lcom/amap/mapapi/core/GeoPoint$b;
 
     move-result-object v0
 
-    .line 282
     new-instance v1, Lcom/amap/mapapi/core/GeoPoint;
 
     iget-wide v2, v0, Lcom/amap/mapapi/core/GeoPoint$b;->b:D
@@ -263,7 +223,6 @@
 
     goto :goto_0
 
-    .line 259
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -275,19 +234,12 @@
 
 .method static synthetic a(Lcom/amap/mapapi/route/Route$FromAndTo;Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/amap/mapapi/core/AMapException;
         }
     .end annotation
 
-    .prologue
-    .line 235
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/amap/mapapi/route/Route$FromAndTo;->a(Landroid/content/Context;Lcom/amap/mapapi/core/GeoPoint;Lcom/amap/mapapi/core/GeoPoint;I)V
 
     return-void

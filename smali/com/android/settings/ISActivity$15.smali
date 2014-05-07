@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ISActivity;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 406
     iput-object p1, p0, Lcom/android/settings/ISActivity$15;->this$0:Lcom/android/settings/ISActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,11 +36,7 @@
 # virtual methods
 .method public onCheckedChanged(Lcom/htc/widget/HtcCompoundButton;Z)V
     .locals 4
-    .parameter "buttonView"
-    .parameter "isChecked"
 
-    .prologue
-    .line 410
     iget-object v1, p0, Lcom/android/settings/ISActivity$15;->this$0:Lcom/android/settings/ISActivity;
 
     iget-object v1, v1, Lcom/android/settings/ISActivity;->mContext:Landroid/content/Context;
@@ -56,8 +49,6 @@
 
     move-result-object v0
 
-    .line 411
-    .local v0, sp:Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -70,6 +61,5 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 412
     return-void
 .end method

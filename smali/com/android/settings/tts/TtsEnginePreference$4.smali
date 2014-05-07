@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/tts/TtsEnginePreference;Landroid/widget/CompoundButton;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 246
     iput-object p1, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
 
     iput-object p2, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->val$buttonView:Landroid/widget/CompoundButton;
@@ -44,11 +40,7 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 249
     iget-object v0, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->this$0:Lcom/android/settings/tts/TtsEnginePreference;
 
     iget-object v1, p0, Lcom/android/settings/tts/TtsEnginePreference$4;->val$buttonView:Landroid/widget/CompoundButton;
@@ -56,6 +48,5 @@
     #calls: Lcom/android/settings/tts/TtsEnginePreference;->makeCurrentEngine(Landroid/widget/Checkable;)V
     invoke-static {v0, v1}, Lcom/android/settings/tts/TtsEnginePreference;->access$400(Lcom/android/settings/tts/TtsEnginePreference;Landroid/widget/Checkable;)V
 
-    .line 250
     return-void
 .end method

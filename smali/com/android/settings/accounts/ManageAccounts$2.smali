@@ -28,12 +28,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/accounts/ManageAccounts;Lcom/android/settings/accounts/ManageAccountPreference;I)V
     .locals 0
-    .parameter
-    .parameter
-    .parameter
 
-    .prologue
-    .line 559
     iput-object p1, p0, Lcom/android/settings/accounts/ManageAccounts$2;->this$0:Lcom/android/settings/accounts/ManageAccounts;
 
     iput-object p2, p0, Lcom/android/settings/accounts/ManageAccounts$2;->val$accountPref:Lcom/android/settings/accounts/ManageAccountPreference;
@@ -50,14 +45,11 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 561
     iget-object v0, p0, Lcom/android/settings/accounts/ManageAccounts$2;->val$accountPref:Lcom/android/settings/accounts/ManageAccountPreference;
 
     iget v1, p0, Lcom/android/settings/accounts/ManageAccounts$2;->val$syncStatus:I
 
     invoke-virtual {v0, v1}, Lcom/android/settings/accounts/ManageAccountPreference;->setSyncStatus(I)V
 
-    .line 562
     return-void
 .end method

@@ -40,7 +40,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -51,7 +50,6 @@
 
     const/4 v3, 0x0
 
-    .line 21
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_ERROR"
@@ -60,7 +58,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_ERROR:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 27
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_INIT"
@@ -69,7 +66,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_INIT:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 33
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_SYNC"
@@ -78,7 +74,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_SYNC:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 36
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_OFF"
@@ -87,7 +82,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_OFF:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 39
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_TURNING_ON"
@@ -96,7 +90,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_TURNING_ON:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 42
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_ON"
@@ -107,7 +100,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_ON:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 45
     new-instance v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     const-string v1, "STATE_TURNING_OFF"
@@ -118,7 +110,6 @@
 
     sput-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->STATE_TURNING_OFF:Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    .line 15
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
@@ -162,16 +153,12 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .parameter
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -179,49 +166,39 @@
 
 .method static getServiceStateName(I)Ljava/lang/String;
     .locals 1
-    .parameter "state"
 
-    .prologue
-    .line 56
     packed-switch p0, :pswitch_data_0
 
-    .line 68
     const-string v0, "STATE_UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 58
     :pswitch_0
     const-string v0, "STATE_IN_SERVICE"
 
     goto :goto_0
 
-    .line 60
     :pswitch_1
     const-string v0, "STATE_OUT_OF_SERVICE"
 
     goto :goto_0
 
-    .line 62
     :pswitch_2
     const-string v0, "STATE_EMERGENCY_ONLY"
 
     goto :goto_0
 
-    .line 64
     :pswitch_3
     const-string v0, "STATE_POWER_OFF"
 
     goto :goto_0
 
-    .line 66
     :pswitch_4
     const-string v0, "STATE_NETWORK_SEARCHING"
 
     goto :goto_0
 
-    .line 56
     nop
 
     :pswitch_data_0
@@ -236,10 +213,7 @@
 
 .method public static valueOf(Ljava/lang/String;)Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
     .locals 1
-    .parameter "name"
 
-    .prologue
-    .line 15
     const-class v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -254,11 +228,9 @@
 .method public static values()[Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->$VALUES:[Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;
 
-    invoke-virtual {v0}, [Lcom/android/settings/framework/core/wireless/HtcAirplaneModeState;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 

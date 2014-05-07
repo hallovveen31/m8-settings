@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 796
     iput-object p1, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList$6;->this$0:Lcom/android/settings/framework/activity/security/HtcFingerprintUpdateFpList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,9 +36,6 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 0
-    .parameter "dialog"
 
-    .prologue
-    .line 800
     return-void
 .end method

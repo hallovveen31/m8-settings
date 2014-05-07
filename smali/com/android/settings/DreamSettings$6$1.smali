@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DreamSettings$6;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 486
     iput-object p1, p0, Lcom/android/settings/DreamSettings$6$1;->this$1:Lcom/android/settings/DreamSettings$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,8 +37,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 489
     iget-object v0, p0, Lcom/android/settings/DreamSettings$6$1;->this$1:Lcom/android/settings/DreamSettings$6;
 
     iget-object v0, v0, Lcom/android/settings/DreamSettings$6;->this$0:Lcom/android/settings/DreamSettings;
@@ -53,6 +48,5 @@
 
     invoke-virtual {v0}, Lcom/android/settings/DreamBackend;->startDreaming()V
 
-    .line 490
     return-void
 .end method

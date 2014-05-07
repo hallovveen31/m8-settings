@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1689
     invoke-static {}, Lcom/android/settings/SoundSettings$soundpicker_mode;->values()[Lcom/android/settings/SoundSettings$soundpicker_mode;
 
     move-result-object v0
@@ -39,7 +37,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_ring_general:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -55,7 +53,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_notify:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -71,7 +69,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_alarm:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -87,7 +85,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_cdma:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -103,7 +101,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_wcdma:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
@@ -119,7 +117,7 @@
 
     sget-object v1, Lcom/android/settings/SoundSettings$soundpicker_mode;->mode_gsm:Lcom/android/settings/SoundSettings$soundpicker_mode;
 
-    invoke-virtual {v1}, Lcom/android/settings/SoundSettings$soundpicker_mode;->ordinal()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 

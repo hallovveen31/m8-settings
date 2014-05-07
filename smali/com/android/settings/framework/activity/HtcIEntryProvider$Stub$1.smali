@@ -21,8 +21,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 100
     new-instance v0, Landroid/content/res/Resources;
 
     sget-object v1, Lcom/android/settings/framework/activity/HtcIEntryProvider$Stub;->CONTEXT:Landroid/content/Context;
@@ -67,13 +63,11 @@
 
     invoke-static {v0}, Lcom/android/settings/framework/activity/HtcIEntryProvider$Stub;->access$002(Landroid/content/res/Resources;)Landroid/content/res/Resources;
 
-    .line 105
     invoke-static {}, Lcom/android/settings/framework/activity/HtcIEntryProvider$Stub;->access$100()Lcom/android/settings/framework/activity/HtcIEntryProvider;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/android/settings/framework/activity/HtcIEntryProvider;->loadEntryList()V
 
-    .line 106
     return-void
 .end method

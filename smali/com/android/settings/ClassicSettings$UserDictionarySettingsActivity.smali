@@ -18,8 +18,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 830
     invoke-direct {p0}, Lcom/android/settings/ClassicSettings;-><init>()V
 
     return-void

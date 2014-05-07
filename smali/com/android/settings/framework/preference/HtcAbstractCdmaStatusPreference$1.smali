@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 123
     iput-object p1, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 127
     sget-object v2, Lcom/android/settings/framework/app/HtcPhoneService;->PHONE_TASK_INDEX_NAME:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -49,8 +42,6 @@
 
     move-result v0
 
-    .line 129
-    .local v0, PhoneTaskIndex:I
     sget-boolean v2, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v2, :cond_0
@@ -89,7 +80,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     :cond_0
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 
@@ -103,27 +93,23 @@
 
     if-ne v2, v0, :cond_1
 
-    .line 131
     const-string v2, "com.htc.intent.EXTRA_SUMMARY"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 134
-    .local v1, summary:Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 135
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 
     iget-object v3, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 
-    invoke-virtual {v3}, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v3}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -136,7 +122,6 @@
     #setter for: Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;->mSummary:Ljava/lang/String;
     invoke-static {v2, v3}, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;->access$102(Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 146
     :goto_0
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 
@@ -147,15 +132,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {v2, v3}, Lcom/htc/preference/HtcPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 148
-    .end local v1           #summary:Ljava/lang/String;
     :cond_1
     return-void
 
-    .line 138
-    .restart local v1       #summary:Ljava/lang/String;
     :cond_2
     sget-object v2, Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;->CDMA_IMEI:Lcom/android/settings/framework/app/HtcPhoneService$PhoneTask;
 
@@ -165,19 +146,16 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 139
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->isVerizonSku()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 140
     invoke-static {v1}, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;->formatting(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 144
     :cond_3
     iget-object v2, p0, Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference$1;->this$0:Lcom/android/settings/framework/preference/HtcAbstractCdmaStatusPreference;
 

@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/users/AppRestrictionsFragment;Landroid/widget/EditText;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 1030
     iput-object p1, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     iput-object p2, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->val$userNameView:Landroid/widget/EditText;
@@ -44,31 +40,23 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 7
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 1033
     const/4 v4, -0x1
 
     if-ne p2, v4, :cond_3
 
-    .line 1035
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->val$userNameView:Landroid/widget/EditText;
 
     invoke-virtual {v4}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v3
 
-    .line 1036
-    .local v3, userName:Ljava/lang/CharSequence;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 1037
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment;->mUserNameView:Landroid/widget/TextView;
@@ -80,8 +68,6 @@
 
     move-result-object v2
 
-    .line 1038
-    .local v2, oldUserName:Ljava/lang/CharSequence;
     if-eqz v2, :cond_0
 
     invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -98,7 +84,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1040
     :cond_0
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
@@ -121,7 +106,6 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1042
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment;->mUserManager:Landroid/os/UserManager;
@@ -146,8 +130,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/os/UserManager;->setUserName(ILjava/lang/String;)V
 
-    .line 1047
-    .end local v2           #oldUserName:Ljava/lang/CharSequence;
     :cond_1
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
@@ -160,8 +142,6 @@
 
     move-result-object v1
 
-    .line 1048
-    .local v1, drawable:Landroid/graphics/drawable/Drawable;
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment;->mEditUserPhotoController:Lcom/android/settings/users/AppRestrictionsFragment$EditUserPhotoController;
@@ -173,8 +153,6 @@
 
     move-result-object v0
 
-    .line 1049
-    .local v0, bitmap:Landroid/graphics/Bitmap;
     if-eqz v1, :cond_2
 
     if-eqz v0, :cond_2
@@ -196,7 +174,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1051
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #getter for: Lcom/android/settings/users/AppRestrictionsFragment;->mUserIconView:Landroid/widget/ImageView;
@@ -206,7 +183,6 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1052
     new-instance v5, Lcom/android/settings/users/AppRestrictionsFragment$4$1;
 
     invoke-direct {v5, p0}, Lcom/android/settings/users/AppRestrictionsFragment$4$1;-><init>(Lcom/android/settings/users/AppRestrictionsFragment$4;)V
@@ -217,27 +193,21 @@
 
     check-cast v4, [Ljava/lang/Void;
 
-    invoke-virtual {v5, v6, v4}, Lcom/android/settings/users/AppRestrictionsFragment$4$1;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v5, v6, v4}, Landroid/os/AsyncTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1061
     :cond_2
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     const/4 v5, 0x1
 
-    #calls: Lcom/android/settings/users/AppRestrictionsFragment;->removeDialog(I)V
+    #calls: Lcom/android/settings/SettingsPreferenceFragment;->removeDialog(I)V
     invoke-static {v4, v5}, Lcom/android/settings/users/AppRestrictionsFragment;->access$2000(Lcom/android/settings/users/AppRestrictionsFragment;I)V
 
-    .line 1063
-    .end local v0           #bitmap:Landroid/graphics/Bitmap;
-    .end local v1           #drawable:Landroid/graphics/drawable/Drawable;
-    .end local v3           #userName:Ljava/lang/CharSequence;
     :cond_3
     iget-object v4, p0, Lcom/android/settings/users/AppRestrictionsFragment$4;->this$0:Lcom/android/settings/users/AppRestrictionsFragment;
 
     #calls: Lcom/android/settings/users/AppRestrictionsFragment;->clearEditUserInfoDialog()V
     invoke-static {v4}, Lcom/android/settings/users/AppRestrictionsFragment;->access$1500(Lcom/android/settings/users/AppRestrictionsFragment;)V
 
-    .line 1064
     return-void
 .end method

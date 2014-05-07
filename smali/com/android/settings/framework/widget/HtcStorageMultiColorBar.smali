@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 22
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -62,24 +60,20 @@
 
     sput-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->TAG:Ljava/lang/String;
 
-    .line 37
     invoke-static {}, Lcom/android/settings/framework/app/HtcSettingsApplication;->getApplication()Landroid/app/Application;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/Application;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/ContextWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 38
-    .local v0, res:Landroid/content/res/Resources;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
-    .line 40
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0024
@@ -94,7 +88,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 41
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0025
@@ -109,7 +102,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 42
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0026
@@ -124,7 +116,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 43
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0027
@@ -139,7 +130,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 44
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0028
@@ -154,7 +144,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 45
     sget-object v1, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const v2, 0x7f0b0029
@@ -169,58 +158,40 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 46
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 53
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 54
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 57
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 58
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
-    .parameter "defStyle"
 
-    .prologue
-    .line 62
     invoke-direct {p0, p1, p2, p3}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 63
     return-void
 .end method
 
 .method public static getAppsColor()I
     .locals 2
 
-    .prologue
-    .line 69
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -241,8 +212,6 @@
 .method public static getAvailableColor()I
     .locals 2
 
-    .prologue
-    .line 89
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x5
@@ -263,8 +232,6 @@
 .method public static getDownloadColor()I
     .locals 2
 
-    .prologue
-    .line 81
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x3
@@ -285,8 +252,6 @@
 .method public static getImageAndVideoColor()I
     .locals 2
 
-    .prologue
-    .line 77
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -307,8 +272,6 @@
 .method public static getMusicColor()I
     .locals 2
 
-    .prologue
-    .line 73
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x1
@@ -329,8 +292,6 @@
 .method public static getOtherColor()I
     .locals 2
 
-    .prologue
-    .line 85
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     const/4 v1, 0x4
@@ -353,9 +314,7 @@
 .method protected getBackgroundDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 123
-    invoke-virtual {p0}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -380,8 +339,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 118
     sget-object v0, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->sColorSet:Ljava/util/ArrayList;
 
     return-object v0
@@ -390,9 +347,7 @@
 .method protected getProgressDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 128
-    invoke-virtual {p0}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -407,80 +362,60 @@
 
 .method public setAppsSpace(J)V
     .locals 2
-    .parameter "space"
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     long-to-float v1, p1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->setValue(IF)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;->setValue(IF)V
 
-    .line 98
     return-void
 .end method
 
 .method public setDownloadSpace(J)V
     .locals 2
-    .parameter "space"
 
-    .prologue
-    .line 109
     const/4 v0, 0x3
 
     long-to-float v1, p1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->setValue(IF)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;->setValue(IF)V
 
-    .line 110
     return-void
 .end method
 
 .method public setImageAndVideoSpace(J)V
     .locals 2
-    .parameter "space"
 
-    .prologue
-    .line 105
     const/4 v0, 0x2
 
     long-to-float v1, p1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->setValue(IF)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;->setValue(IF)V
 
-    .line 106
     return-void
 .end method
 
 .method public setMusicSpace(J)V
     .locals 2
-    .parameter "space"
 
-    .prologue
-    .line 101
     const/4 v0, 0x1
 
     long-to-float v1, p1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->setValue(IF)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;->setValue(IF)V
 
-    .line 102
     return-void
 .end method
 
 .method public setOtherSpace(J)V
     .locals 2
-    .parameter "space"
 
-    .prologue
-    .line 113
     const/4 v0, 0x4
 
     long-to-float v1, p1
 
-    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcStorageMultiColorBar;->setValue(IF)V
+    invoke-virtual {p0, v0, v1}, Lcom/android/settings/framework/widget/HtcAbsMultiColorBar;->setValue(IF)V
 
-    .line 114
     return-void
 .end method

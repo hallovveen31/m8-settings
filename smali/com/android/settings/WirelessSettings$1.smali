@@ -21,11 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/WirelessSettings;Landroid/os/Handler;)V
     .locals 0
-    .parameter
-    .parameter "x0"
 
-    .prologue
-    .line 139
     iput-object p1, p0, Lcom/android/settings/WirelessSettings$1;->this$0:Lcom/android/settings/WirelessSettings;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -37,15 +33,11 @@
 # virtual methods
 .method public onChange(Z)V
     .locals 1
-    .parameter "selfChange"
 
-    .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/settings/WirelessSettings$1;->this$0:Lcom/android/settings/WirelessSettings;
 
     #calls: Lcom/android/settings/WirelessSettings;->onAirplaneModeChanged()V
     invoke-static {v0}, Lcom/android/settings/WirelessSettings;->access$000(Lcom/android/settings/WirelessSettings;)V
 
-    .line 143
     return-void
 .end method

@@ -25,13 +25,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment;Landroid/content/Context;Landroid/content/Context;I)V
     .locals 0
-    .parameter
-    .parameter "x0"
-    .parameter
-    .parameter
 
-    .prologue
-    .line 94
     iput-object p1, p0, Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment$1;->this$0:Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment;
 
     iput-object p3, p0, Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment$1;->val$context:Landroid/content/Context;
@@ -48,8 +42,6 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 103
     iget-object v0, p0, Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment$1;->val$context:Landroid/content/Context;
 
     iget v1, p0, Lcom/android/settings/framework/activity/backup/HtcTransferITunesTipsFragment$1;->val$titleResId:I
@@ -68,8 +60,6 @@
 .method protected getCustomTitleRes()I
     .locals 1
 
-    .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0

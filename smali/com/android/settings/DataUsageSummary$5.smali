@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DataUsageSummary;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 1050
     iput-object p1, p0, Lcom/android/settings/DataUsageSummary$5;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 4
-    .parameter "v"
 
-    .prologue
-    .line 1053
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$5;->this$0:Lcom/android/settings/DataUsageSummary;
 
     #getter for: Lcom/android/settings/DataUsageSummary;->mDisableAtLimit:Landroid/widget/CheckBox;
@@ -50,7 +44,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
+    invoke-virtual {v1}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v1
 
@@ -58,29 +52,21 @@
 
     const/4 v0, 0x1
 
-    .line 1054
-    .local v0, disableAtLimit:Z
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1057
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$5;->this$0:Lcom/android/settings/DataUsageSummary;
 
     invoke-static {v1}, Lcom/android/settings/DataUsageSummary$ConfirmLimitFragment;->show(Lcom/android/settings/DataUsageSummary;)V
 
-    .line 1061
     :goto_1
     return-void
 
-    .line 1053
-    .end local v0           #disableAtLimit:Z
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1059
-    .restart local v0       #disableAtLimit:Z
     :cond_1
     iget-object v1, p0, Lcom/android/settings/DataUsageSummary$5;->this$0:Lcom/android/settings/DataUsageSummary;
 

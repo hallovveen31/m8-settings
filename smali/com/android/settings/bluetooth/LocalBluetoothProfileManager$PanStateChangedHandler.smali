@@ -21,17 +21,11 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;Lcom/android/settings/bluetooth/LocalBluetoothProfile;)V
     .locals 0
-    .parameter
-    .parameter "profile"
 
-    .prologue
-    .line 273
     iput-object p1, p0, Lcom/android/settings/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->this$0:Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;
 
-    .line 274
     invoke-direct {p0, p1, p2}, Lcom/android/settings/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;-><init>(Lcom/android/settings/bluetooth/LocalBluetoothProfileManager;Lcom/android/settings/bluetooth/LocalBluetoothProfile;)V
 
-    .line 275
     return-void
 .end method
 
@@ -39,18 +33,11 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
     .locals 4
-    .parameter "context"
-    .parameter "intent"
-    .parameter "device"
 
-    .prologue
-    .line 279
-    iget-object v0, p0, Lcom/android/settings/bluetooth/LocalBluetoothProfileManager$PanStateChangedHandler;->mProfile:Lcom/android/settings/bluetooth/LocalBluetoothProfile;
+    iget-object v0, p0, Lcom/android/settings/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->mProfile:Lcom/android/settings/bluetooth/LocalBluetoothProfile;
 
     check-cast v0, Lcom/android/settings/bluetooth/PanProfile;
 
-    .line 280
-    .local v0, panProfile:Lcom/android/settings/bluetooth/PanProfile;
     const-string v2, "android.bluetooth.pan.extra.LOCAL_ROLE"
 
     const/4 v3, 0x0
@@ -59,13 +46,9 @@
 
     move-result v1
 
-    .line 281
-    .local v1, role:I
     invoke-virtual {v0, p3, v1}, Lcom/android/settings/bluetooth/PanProfile;->setLocalRole(Landroid/bluetooth/BluetoothDevice;I)V
 
-    .line 282
     invoke-super {p0, p1, p2, p3}, Lcom/android/settings/bluetooth/LocalBluetoothProfileManager$StateChangedHandler;->onReceive(Landroid/content/Context;Landroid/content/Intent;Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 283
     return-void
 .end method

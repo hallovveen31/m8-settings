@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -16,12 +14,8 @@
 
 .method public static jumpToCurrentState(Landroid/graphics/drawable/Drawable;)V
     .locals 0
-    .parameter "drawable"
 
-    .prologue
-    .line 26
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 27
     return-void
 .end method

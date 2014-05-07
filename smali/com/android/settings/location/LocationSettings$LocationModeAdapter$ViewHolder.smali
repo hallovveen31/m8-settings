@@ -27,10 +27,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/location/LocationSettings$LocationModeAdapter;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 633
     iput-object p1, p0, Lcom/android/settings/location/LocationSettings$LocationModeAdapter$ViewHolder;->this$1:Lcom/android/settings/location/LocationSettings$LocationModeAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

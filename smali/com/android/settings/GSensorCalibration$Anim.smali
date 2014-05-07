@@ -24,10 +24,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/GSensorCalibration;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 508
     iput-object p1, p0, Lcom/android/settings/GSensorCalibration$Anim;->this$0:Lcom/android/settings/GSensorCalibration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,11 +34,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/GSensorCalibration;Lcom/android/settings/GSensorCalibration$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 508
     invoke-direct {p0, p1}, Lcom/android/settings/GSensorCalibration$Anim;-><init>(Lcom/android/settings/GSensorCalibration;)V
 
     return-void
@@ -52,13 +45,10 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 511
     iget-object v0, p0, Lcom/android/settings/GSensorCalibration$Anim;->this$0:Lcom/android/settings/GSensorCalibration;
 
     #calls: Lcom/android/settings/GSensorCalibration;->startAnim()V
     invoke-static {v0}, Lcom/android/settings/GSensorCalibration;->access$500(Lcom/android/settings/GSensorCalibration;)V
 
-    .line 512
     return-void
 .end method

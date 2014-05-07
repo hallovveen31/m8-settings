@@ -26,11 +26,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcActivityHandler;Landroid/os/Bundle;)V
     .locals 0
-    .parameter
-    .parameter
 
-    .prologue
-    .line 238
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcActivityHandler$1;->this$0:Lcom/android/settings/framework/app/HtcActivityHandler;
 
     iput-object p2, p0, Lcom/android/settings/framework/app/HtcActivityHandler$1;->val$savedInstanceState:Landroid/os/Bundle;
@@ -45,8 +41,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 240
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcActivityHandler$1;->this$0:Lcom/android/settings/framework/app/HtcActivityHandler;
 
     #getter for: Lcom/android/settings/framework/app/HtcActivityHandler;->mHost:Lcom/android/settings/framework/app/HtcIInternalHost;
@@ -58,6 +52,5 @@
 
     invoke-interface {v0, v1}, Lcom/android/settings/framework/app/HtcIInternalHost;->onCreateInBackground(Landroid/os/Bundle;)V
 
-    .line 241
     return-void
 .end method

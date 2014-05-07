@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ChargerStatusDialog;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 109
     iput-object p1, p0, Lcom/android/settings/ChargerStatusDialog$2;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,10 +36,7 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 111
     iget-object v0, p0, Lcom/android/settings/ChargerStatusDialog$2;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
     #getter for: Lcom/android/settings/ChargerStatusDialog;->mCheckbox:Lcom/htc/widget/HtcCheckBox;
@@ -52,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 112
     iget-object v0, p0, Lcom/android/settings/ChargerStatusDialog$2;->this$0:Lcom/android/settings/ChargerStatusDialog;
 
     #getter for: Lcom/android/settings/ChargerStatusDialog;->mCheckbox:Lcom/htc/widget/HtcCheckBox;
@@ -60,9 +53,8 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcCheckBox;->performClick()Z
+    invoke-virtual {v0}, Lcom/htc/widget/HtcCompoundButton;->performClick()Z
 
-    .line 114
     :cond_0
     return-void
 .end method

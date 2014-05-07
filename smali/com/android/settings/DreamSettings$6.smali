@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/DreamSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 483
     iput-object p1, p0, Lcom/android/settings/DreamSettings$6;->this$0:Lcom/android/settings/DreamSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,12 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "view"
 
-    .prologue
-    .line 486
     new-instance v0, Lcom/android/settings/DreamSettings$6$1;
 
     invoke-direct {v0, p0}, Lcom/android/settings/DreamSettings$6$1;-><init>(Lcom/android/settings/DreamSettings$6;)V
 
     invoke-virtual {v0}, Lcom/android/settings/DreamSettings$6$1;->run()V
 
-    .line 492
     return-void
 .end method

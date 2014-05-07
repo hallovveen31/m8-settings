@@ -44,7 +44,6 @@
 # direct methods
 .method constructor <init>(Ljava/util/Map;)V
     .locals 0
-    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -56,15 +55,10 @@
         }
     .end annotation
 
-    .prologue
-    .line 66
-    .local p1, appList:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/CharSequence;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lcom/android/settings/UsageStats$AppNameComparator;->mAppLabelList:Ljava/util/Map;
 
-    .line 68
     return-void
 .end method
 
@@ -72,11 +66,7 @@
 # virtual methods
 .method public final compare(Lcom/android/internal/os/PkgUsageStats;Lcom/android/internal/os/PkgUsageStats;)I
     .locals 4
-    .parameter "a"
-    .parameter "b"
 
-    .prologue
-    .line 70
     iget-object v2, p0, Lcom/android/settings/UsageStats$AppNameComparator;->mAppLabelList:Ljava/util/Map;
 
     iget-object v3, p1, Lcom/android/internal/os/PkgUsageStats;->packageName:Ljava/lang/String;
@@ -91,8 +81,6 @@
 
     move-result-object v0
 
-    .line 71
-    .local v0, alabel:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/UsageStats$AppNameComparator;->mAppLabelList:Ljava/util/Map;
 
     iget-object v3, p2, Lcom/android/internal/os/PkgUsageStats;->packageName:Ljava/lang/String;
@@ -107,8 +95,6 @@
 
     move-result-object v1
 
-    .line 72
-    .local v1, blabel:Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v2
@@ -118,17 +104,11 @@
 
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 64
     check-cast p1, Lcom/android/internal/os/PkgUsageStats;
 
-    .end local p1
     check-cast p2, Lcom/android/internal/os/PkgUsageStats;
 
-    .end local p2
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/UsageStats$AppNameComparator;->compare(Lcom/android/internal/os/PkgUsageStats;Lcom/android/internal/os/PkgUsageStats;)I
 
     move-result v0

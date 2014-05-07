@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/ZonePickerEx;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/settings/ZonePickerEx$1;->this$0:Lcom/android/settings/ZonePickerEx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +36,10 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "v"
 
-    .prologue
-    .line 99
     iget-object v0, p0, Lcom/android/settings/ZonePickerEx$1;->this$0:Lcom/android/settings/ZonePickerEx;
 
-    invoke-virtual {v0}, Lcom/android/settings/ZonePickerEx;->onBackPressed()V
+    invoke-virtual {v0}, Landroid/app/Activity;->onBackPressed()V
 
-    .line 100
     return-void
 .end method

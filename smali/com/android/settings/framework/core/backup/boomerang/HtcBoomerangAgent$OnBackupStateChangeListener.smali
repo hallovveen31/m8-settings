@@ -23,13 +23,9 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
-    .parameter "context"
 
-    .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     new-instance v0, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$OnBackupStateChangeListener$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -40,10 +36,8 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$OnBackupStateChangeListener;->mObserver:Landroid/database/ContentObserver;
 
-    .line 57
     iput-object p1, p0, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$OnBackupStateChangeListener;->mContext:Landroid/content/Context;
 
-    .line 58
     return-void
 .end method
 
@@ -55,8 +49,6 @@
 .method public registerListener()V
     .locals 4
 
-    .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$OnBackupStateChangeListener;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -79,15 +71,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 64
     return-void
 .end method
 
 .method public unregisterListener()V
     .locals 2
 
-    .prologue
-    .line 67
     iget-object v0, p0, Lcom/android/settings/framework/core/backup/boomerang/HtcBoomerangAgent$OnBackupStateChangeListener;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -98,6 +87,5 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 69
     return-void
 .end method

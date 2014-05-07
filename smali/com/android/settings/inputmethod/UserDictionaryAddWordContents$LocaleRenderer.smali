@@ -23,20 +23,13 @@
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
-    .parameter "context"
-    .parameter "localeString"
 
-    .prologue
-    .line 199
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 200
     iput-object p2, p0, Lcom/android/settings/inputmethod/UserDictionaryAddWordContents$LocaleRenderer;->mLocaleString:Ljava/lang/String;
 
-    .line 201
     if-nez p2, :cond_0
 
-    .line 202
     const v0, 0x7f0c1008
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -45,11 +38,9 @@
 
     iput-object v0, p0, Lcom/android/settings/inputmethod/UserDictionaryAddWordContents$LocaleRenderer;->mDescription:Ljava/lang/String;
 
-    .line 208
     :goto_0
     return-void
 
-    .line 203
     :cond_0
     const-string v0, ""
 
@@ -59,7 +50,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 204
     const v0, 0x7f0c1007
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -70,7 +60,6 @@
 
     goto :goto_0
 
-    .line 206
     :cond_1
     invoke-static {p2}, Lcom/android/settings/Utils;->createLocaleFromString(Ljava/lang/String;)Ljava/util/Locale;
 
@@ -90,8 +79,6 @@
 .method public getLocaleString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 214
     iget-object v0, p0, Lcom/android/settings/inputmethod/UserDictionaryAddWordContents$LocaleRenderer;->mLocaleString:Ljava/lang/String;
 
     return-object v0
@@ -100,8 +87,6 @@
 .method public isMoreLanguages()Z
     .locals 1
 
-    .prologue
-    .line 218
     iget-object v0, p0, Lcom/android/settings/inputmethod/UserDictionaryAddWordContents$LocaleRenderer;->mLocaleString:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -120,8 +105,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 211
     iget-object v0, p0, Lcom/android/settings/inputmethod/UserDictionaryAddWordContents$LocaleRenderer;->mDescription:Ljava/lang/String;
 
     return-object v0

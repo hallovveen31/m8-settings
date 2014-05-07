@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/BandMode;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 110
     iput-object p1, p0, Lcom/android/settings/BandMode$1;->this$0:Lcom/android/settings/BandMode;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,16 +36,10 @@
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
-    .parameter "parent"
-    .parameter "v"
-    .parameter "position"
-    .parameter "id"
 
-    .prologue
-    .line 114
     iget-object v1, p0, Lcom/android/settings/BandMode$1;->this$0:Lcom/android/settings/BandMode;
 
-    invoke-virtual {v1}, Lcom/android/settings/BandMode;->getWindow()Landroid/view/Window;
+    invoke-virtual {v1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
@@ -58,7 +49,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/view/Window;->setFeatureInt(II)V
 
-    .line 118
     iget-object v2, p0, Lcom/android/settings/BandMode$1;->this$0:Lcom/android/settings/BandMode;
 
     invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
@@ -74,7 +64,6 @@
     #setter for: Lcom/android/settings/BandMode;->mTargetBand:Lcom/android/settings/BandMode$BandListItem;
     invoke-static {v2, v1}, Lcom/android/settings/BandMode;->access$002(Lcom/android/settings/BandMode;Lcom/android/settings/BandMode$BandListItem;)Lcom/android/settings/BandMode$BandListItem;
 
-    .line 122
     iget-object v1, p0, Lcom/android/settings/BandMode$1;->this$0:Lcom/android/settings/BandMode;
 
     #getter for: Lcom/android/settings/BandMode;->mHandler:Landroid/os/Handler;
@@ -88,8 +77,6 @@
 
     move-result-object v0
 
-    .line 124
-    .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/settings/BandMode$1;->this$0:Lcom/android/settings/BandMode;
 
     #getter for: Lcom/android/settings/BandMode;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -110,6 +97,5 @@
 
     invoke-interface {v1, v2, v0}, Lcom/android/internal/telephony/Phone;->setBandMode(ILandroid/os/Message;)V
 
-    .line 125
     return-void
 .end method

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/inputmethod/InputMethodPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 136
     iput-object p1, p0, Lcom/android/settings/inputmethod/InputMethodPreference$3;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,12 +36,9 @@
 # virtual methods
 .method public onClick(Landroid/view/View;)V
     .locals 9
-    .parameter "arg0"
 
-    .prologue
     const/4 v8, 0x1
 
-    .line 140
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$3;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
@@ -60,20 +54,16 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v3}, Landroid/app/Fragment;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 150
     :goto_0
     return-void
 
-    .line 141
     :catch_0
     move-exception v0
 
-    .line 142
-    .local v0, e:Landroid/content/ActivityNotFoundException;
     invoke-static {}, Lcom/android/settings/inputmethod/InputMethodPreference;->access$500()Ljava/lang/String;
 
     move-result-object v2
@@ -98,7 +88,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$3;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     #getter for: Lcom/android/settings/inputmethod/InputMethodPreference;->mFragment:Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;
@@ -126,11 +115,11 @@
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v7}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v7}, Landroid/content/ContextWrapper;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v7
 
@@ -140,12 +129,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-virtual {v2, v3, v4}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Landroid/app/Fragment;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 147
-    .local v1, msg:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/settings/inputmethod/InputMethodPreference$3;->this$0:Lcom/android/settings/inputmethod/InputMethodPreference;
 
     #getter for: Lcom/android/settings/inputmethod/InputMethodPreference;->mFragment:Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;
@@ -153,7 +140,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/android/settings/framework/app/HtcInternalPreferenceFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 

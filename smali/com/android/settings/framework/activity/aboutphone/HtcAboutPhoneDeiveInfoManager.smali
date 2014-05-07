@@ -39,13 +39,10 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 31
     sput-object v1, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->SingleInstance:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
-    .line 32
     const-class v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -54,7 +51,6 @@
 
     sput-object v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->TAG:Ljava/lang/String;
 
-    .line 35
     sput-object v1, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
     return-void
@@ -63,36 +59,28 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
-    .line 53
     return-void
 .end method
 
 .method public static getSingleton()Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
     .locals 1
 
-    .prologue
-    .line 46
     sget-object v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->SingleInstance:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
     if-nez v0, :cond_0
 
-    .line 47
     new-instance v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
     invoke-direct {v0}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;-><init>()V
 
     sput-object v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->SingleInstance:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
-    .line 48
     :cond_0
     sget-object v0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->SingleInstance:Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;
 
@@ -103,16 +91,11 @@
 # virtual methods
 .method public GetDeviceinfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
-    .parameter "context"
-    .parameter "MethodName"
 
-    .prologue
-    .line 68
     iget-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
     if-nez v3, :cond_0
 
-    .line 69
     const-string v3, "htctelephony"
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -123,38 +106,27 @@
 
     iput-object v3, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
-    .line 71
     :cond_0
     const/4 v2, 0x0
 
-    .line 72
-    .local v2, rsult:Ljava/lang/String;
     const/4 v3, 0x0
 
     invoke-virtual {p0, p2, v3, p1}, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->reflecGeneralGetterInternal(Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 73
-    .local v1, bundleResult:Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 74
     invoke-virtual {v1, p2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
-    .local v0, MethodGet:Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 76
     invoke-virtual {v1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 84
-    .end local v0           #MethodGet:Ljava/lang/String;
     :cond_1
     sget-object v3, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->TAG:Ljava/lang/String;
 
@@ -178,37 +150,24 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     return-object v2
 .end method
 
 .method public reflecGeneralGetterInternal(Ljava/lang/String;Landroid/os/Bundle;Landroid/content/Context;)Landroid/os/Bundle;
     .locals 13
-    .parameter "methodName"
-    .parameter "bundle"
-    .parameter "context"
 
-    .prologue
     const/4 v9, 0x0
 
-    .line 90
     const/4 v1, 0x0
 
-    .line 91
-    .local v1, MethodNameGet:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 92
-    .local v6, generalGetterInternal:Ljava/lang/reflect/Method;
     const/4 v2, 0x0
 
-    .line 93
-    .local v2, bundleResult:Landroid/os/Bundle;
     iget-object v8, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
     if-nez v8, :cond_0
 
-    .line 94
     const-string v8, "htctelephony"
 
     move-object/from16 v0, p3
@@ -221,7 +180,6 @@
 
     iput-object v8, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
-    .line 98
     :cond_0
     :try_start_0
     const-string v8, "com.android.internal.telephony.HtcTelephonyInternal"
@@ -230,25 +188,18 @@
 
     move-result-object v3
 
-    .line 99
-    .local v3, cls:Ljava/lang/Class;
     invoke-virtual {v3, p1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v5
 
-    .line 100
-    .local v5, fld:Ljava/lang/reflect/Field;
     if-eqz v5, :cond_1
 
-    .line 101
     const-string v8, "com.htc.service.HtcTelephonyManager"
 
     invoke-static {v8}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v7
 
-    .line 102
-    .local v7, methodcls:Ljava/lang/Class;
     const/4 v8, 0x0
 
     invoke-virtual {v5, v8}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -261,7 +212,6 @@
 
     move-object v1, v0
 
-    .line 103
     const-string v8, "generalGetterInternal"
 
     const/4 v10, 0x2
@@ -284,12 +234,9 @@
 
     move-result-object v6
 
-    .line 106
-    .end local v7           #methodcls:Ljava/lang/Class;
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 107
     iget-object v8, p0, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->htctm:Lcom/htc/service/HtcTelephonyManager;
 
     const/4 v10, 0x2
@@ -314,30 +261,22 @@
 
     move-object v2, v0
 
-    .line 108
     invoke-virtual {v2, p1, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v8, v2
 
-    .line 119
-    .end local v3           #cls:Ljava/lang/Class;
-    .end local v5           #fld:Ljava/lang/reflect/Field;
     :goto_0
     return-object v8
 
-    .line 113
     :catch_0
     move-exception v4
 
-    .line 114
-    .local v4, e:Ljava/lang/Exception;
     sget-boolean v8, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     if-eqz v8, :cond_2
 
-    .line 115
     sget-object v8, Lcom/android/settings/framework/activity/aboutphone/HtcAboutPhoneDeiveInfoManager;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -370,10 +309,8 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .end local v4           #e:Ljava/lang/Exception;
     :cond_2
     move-object v8, v9
 
-    .line 119
     goto :goto_0
 .end method

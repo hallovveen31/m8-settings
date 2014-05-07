@@ -45,20 +45,13 @@
 # direct methods
 .method public constructor <init>(ZI)V
     .locals 0
-    .parameter "isProcess"
-    .parameter "userId"
 
-    .prologue
-    .line 324
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 325
     iput-boolean p1, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mIsProcess:Z
 
-    .line 326
     iput p2, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mUserId:I
 
-    .line 327
     return-void
 .end method
 
@@ -66,16 +59,11 @@
 # virtual methods
 .method public loadIcon(Landroid/content/Context;Lcom/android/settings/applications/RunningState;)Landroid/graphics/drawable/Drawable;
     .locals 2
-    .parameter "context"
-    .parameter "state"
 
-    .prologue
-    .line 330
     iget-object v0, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
     if-eqz v0, :cond_0
 
-    .line 331
     iget-object v0, p0, Lcom/android/settings/applications/RunningState$BaseItem;->mPackageInfo:Landroid/content/pm/PackageItemInfo;
 
     iget-object v1, p2, Lcom/android/settings/applications/RunningState;->mPm:Landroid/content/pm/PackageManager;
@@ -84,7 +72,6 @@
 
     move-result-object v0
 
-    .line 333
     :goto_0
     return-object v0
 

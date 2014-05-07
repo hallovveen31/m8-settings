@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 31
     iput-object p1, p0, Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;
 
     invoke-direct {p0}, Lcom/android/internal/view/RotationPolicy$RotationPolicyListener;-><init>()V
@@ -37,13 +34,11 @@
 .method public onChange()V
     .locals 2
 
-    .prologue
-    .line 35
     iget-object v1, p0, Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;
 
     iget-object v0, p0, Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference$1;->this$0:Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;
 
-    invoke-virtual {v0}, Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -56,12 +51,10 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {v1, v0}, Lcom/android/settings/framework/preference/display/HtcAccelerometerRotationPreference;->setCheckedInForeground(Z)V
+    invoke-virtual {v1, v0}, Lcom/android/settings/framework/preference/HtcAbsCheckboxPreference;->setCheckedInForeground(Z)V
 
-    .line 37
     return-void
 
-    .line 35
     :cond_0
     const/4 v0, 0x0
 

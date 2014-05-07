@@ -21,10 +21,7 @@
 # direct methods
 .method private constructor <init>(Lcom/android/settings/CdmaApnGroupSettings;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 887
     iput-object p1, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -34,11 +31,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/CdmaApnGroupSettings;Lcom/android/settings/CdmaApnGroupSettings$1;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 887
     invoke-direct {p0, p1}, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;-><init>(Lcom/android/settings/CdmaApnGroupSettings;)V
 
     return-void
@@ -48,40 +41,32 @@
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
     .locals 5
-    .parameter "msg"
 
-    .prologue
-    .line 890
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 919
     :cond_0
     :goto_0
     return-void
 
-    .line 892
     :pswitch_0
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
     #calls: Lcom/android/settings/CdmaApnGroupSettings;->fillList()V
     invoke-static {v2}, Lcom/android/settings/CdmaApnGroupSettings;->access$200(Lcom/android/settings/CdmaApnGroupSettings;)V
 
-    .line 894
     const/4 v2, 0x0
 
     invoke-static {v2}, Lcom/android/settings/CdmaApnGroupSettings;->access$102(Z)Z
 
-    .line 897
     :try_start_0
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
     const/16 v3, 0x3e9
 
-    invoke-virtual {v2, v3}, Lcom/android/settings/CdmaApnGroupSettings;->removeDialog(I)V
+    invoke-virtual {v2, v3}, Landroid/app/Activity;->removeDialog(I)V
 
-    .line 898
     invoke-static {}, Lcom/android/settings/CdmaApnGroupSettings;->access$400()Z
 
     move-result v2
@@ -96,14 +81,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 903
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
     iget-object v3, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
-    invoke-virtual {v3}, Lcom/android/settings/CdmaApnGroupSettings;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v3}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -121,7 +105,6 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 908
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
     #getter for: Lcom/android/settings/CdmaApnGroupSettings;->mIsMVNO:Z
@@ -131,7 +114,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 909
     new-instance v1, Landroid/content/Intent;
 
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
@@ -140,35 +122,27 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 911
-    .local v1, intent:Landroid/content/Intent;
     :try_start_1
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
-    invoke-virtual {v2, v1}, Lcom/android/settings/CdmaApnGroupSettings;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v2, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 912
     iget-object v2, p0, Lcom/android/settings/CdmaApnGroupSettings$RestoreApnUiHandler;->this$0:Lcom/android/settings/CdmaApnGroupSettings;
 
-    invoke-virtual {v2}, Lcom/android/settings/CdmaApnGroupSettings;->finish()V
+    invoke-virtual {v2}, Landroid/app/Activity;->finish()V
     :try_end_1
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 913
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 899
-    .end local v1           #intent:Landroid/content/Intent;
     :catch_1
     move-exception v0
 
-    .line 900
-    .local v0, e:Ljava/lang/Exception;
     const-string v3, "CdmaApnGroupSettings"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -199,13 +173,12 @@
     goto :goto_1
 
     :cond_2
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     goto :goto_2
 
-    .line 890
     nop
 
     :pswitch_data_0

@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/framework/app/HtcInternalDialogFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 261
     iput-object p1, p0, Lcom/android/settings/framework/app/HtcInternalDialogFragment$2;->this$0:Lcom/android/settings/framework/app/HtcInternalDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,18 +36,13 @@
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
-    .line 265
     invoke-static {}, Lcom/android/settings/framework/app/HtcInternalDialogFragment;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 266
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalDialogFragment$2;->this$0:Lcom/android/settings/framework/app/HtcInternalDialogFragment;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,13 +81,11 @@
 
     invoke-virtual {v0, v1}, Lcom/android/settings/framework/app/HtcInternalDialogFragment;->log(Ljava/lang/String;)V
 
-    .line 268
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalDialogFragment$2;->this$0:Lcom/android/settings/framework/app/HtcInternalDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/settings/framework/app/HtcInternalDialogFragment;->onNegativeButtonClick()V
 
-    .line 269
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalDialogFragment$2;->this$0:Lcom/android/settings/framework/app/HtcInternalDialogFragment;
 
     #getter for: Lcom/android/settings/framework/app/HtcInternalDialogFragment;->mExtraNegativeButtonClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -105,7 +95,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 270
     iget-object v0, p0, Lcom/android/settings/framework/app/HtcInternalDialogFragment$2;->this$0:Lcom/android/settings/framework/app/HtcInternalDialogFragment;
 
     #getter for: Lcom/android/settings/framework/app/HtcInternalDialogFragment;->mExtraNegativeButtonClickListener:Landroid/content/DialogInterface$OnClickListener;
@@ -115,7 +104,6 @@
 
     invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 272
     :cond_1
     return-void
 .end method

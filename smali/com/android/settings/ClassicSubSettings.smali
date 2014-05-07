@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Lcom/android/settings/ClassicSettings;-><init>()V
 
     return-void
@@ -18,10 +16,7 @@
 # virtual methods
 .method protected isValidFragment(Ljava/lang/String;)Z
     .locals 3
-    .parameter "fragmentName"
 
-    .prologue
-    .line 38
     const-string v0, "SubSettings"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -44,7 +39,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     const/4 v0, 0x1
 
     return v0
@@ -53,11 +47,8 @@
 .method public onNavigateUp()Z
     .locals 1
 
-    .prologue
-    .line 32
-    invoke-virtual {p0}, Lcom/android/settings/ClassicSubSettings;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 33
     const/4 v0, 0x1
 
     return v0

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 17
     const-class v0, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -30,28 +28,19 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 31
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 32
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 41
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/application/appassociations/HtcAbstractAppAssociationsPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 42
     return-void
 .end method
 
@@ -69,9 +58,7 @@
         }
     .end annotation
 
-    .prologue
-    .line 61
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -85,9 +72,7 @@
 .method protected getCustomSummary()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 51
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -103,9 +88,7 @@
 .method protected getCustomTitle()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 46
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -121,9 +104,7 @@
 .method protected getInfoTypeName()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 56
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -139,9 +120,7 @@
 .method public getPreferenceActivityPackage()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 66
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -154,16 +133,12 @@
 
 .method protected setPreferredActivity(Landroid/content/ComponentName;)V
     .locals 1
-    .parameter "component"
 
-    .prologue
-    .line 71
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/application/appassociations/HtcYoutubeAppAssociationPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/android/settings/framework/util/HtcAppAssociationsUtils;->setYoutubePreferredActivity(Landroid/content/Context;Landroid/content/ComponentName;)V
 
-    .line 72
     return-void
 .end method

@@ -21,10 +21,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/RestrictedSettingsFragment;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/settings/RestrictedSettingsFragment$1;->this$0:Lcom/android/settings/RestrictedSettingsFragment;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -36,11 +33,7 @@
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
-    .parameter "context"
-    .parameter "intent"
 
-    .prologue
-    .line 72
     iget-object v0, p0, Lcom/android/settings/RestrictedSettingsFragment$1;->this$0:Lcom/android/settings/RestrictedSettingsFragment;
 
     const/4 v1, 0x0
@@ -48,7 +41,6 @@
     #setter for: Lcom/android/settings/RestrictedSettingsFragment;->mChallengeSucceeded:Z
     invoke-static {v0, v1}, Lcom/android/settings/RestrictedSettingsFragment;->access$002(Lcom/android/settings/RestrictedSettingsFragment;Z)Z
 
-    .line 73
     iget-object v0, p0, Lcom/android/settings/RestrictedSettingsFragment$1;->this$0:Lcom/android/settings/RestrictedSettingsFragment;
 
     iget-object v1, p0, Lcom/android/settings/RestrictedSettingsFragment$1;->this$0:Lcom/android/settings/RestrictedSettingsFragment;
@@ -64,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v0, p0, Lcom/android/settings/RestrictedSettingsFragment$1;->this$0:Lcom/android/settings/RestrictedSettingsFragment;
 
     const/4 v1, 0x0
@@ -72,7 +63,6 @@
     #calls: Lcom/android/settings/RestrictedSettingsFragment;->ensurePin(Lcom/htc/preference/HtcPreference;)V
     invoke-static {v0, v1}, Lcom/android/settings/RestrictedSettingsFragment;->access$200(Lcom/android/settings/RestrictedSettingsFragment;Lcom/htc/preference/HtcPreference;)V
 
-    .line 76
     :cond_0
     return-void
 .end method

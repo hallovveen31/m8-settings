@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -56,8 +54,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lcom/android/settings/framework/util/log/dumper/HtcAbsDumper;-><init>()V
 
     return-void
@@ -67,12 +63,7 @@
 # virtual methods
 .method public appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/content/Intent;)V
     .locals 4
-    .parameter "builder"
-    .parameter "PREFIX"
-    .parameter "intent"
 
-    .prologue
-    .line 41
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,14 +98,12 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 44
     invoke-virtual {p3}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 45
     invoke-virtual {p3}, Landroid/content/Intent;->getCategories()Ljava/util/Set;
 
     move-result-object v1
@@ -123,8 +112,6 @@
 
     move-result-object v0
 
-    .line 47
-    .local v0, itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +132,6 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -153,7 +139,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 49
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -186,8 +171,6 @@
 
     goto :goto_0
 
-    .line 52
-    .end local v0           #itr:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -209,13 +192,11 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 54
     :cond_1
     const-string v1, "\n"
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 56
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -250,14 +231,12 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 88
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 89
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -278,7 +257,6 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 90
     new-instance v1, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;
 
     invoke-direct {v1}, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;-><init>()V
@@ -307,7 +285,6 @@
 
     invoke-virtual {v1, p1, v2, v3}, Lcom/android/settings/framework/util/log/dumper/HtcBundleDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 96
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -451,10 +428,8 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
     return-void
 
-    .line 93
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -481,15 +456,9 @@
 
 .method public bridge synthetic appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
-    .parameter "x2"
 
-    .prologue
-    .line 19
     check-cast p3, Landroid/content/Intent;
 
-    .end local p3
     invoke-virtual {p0, p1, p2, p3}, Lcom/android/settings/framework/util/log/dumper/HtcIntentDumper;->appendIntrinsicInfo(Ljava/lang/StringBuilder;Ljava/lang/String;Landroid/content/Intent;)V
 
     return-void
@@ -498,8 +467,6 @@
 .method public getClassName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 31
     const-class v0, Landroid/content/Intent;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -512,8 +479,6 @@
 .method public getTag()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 26
     sget-object v0, Lcom/android/settings/framework/util/log/dumper/HtcIntentDumper;->TAG:Ljava/lang/String;
 
     return-object v0

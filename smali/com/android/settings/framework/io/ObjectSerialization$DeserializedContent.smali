@@ -31,8 +31,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,11 +38,7 @@
 
 .method static synthetic access$002(Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;->mObject:Ljava/lang/Object;
 
     return-object p1
@@ -52,11 +46,7 @@
 
 .method static synthetic access$102(Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;Ljava/lang/Exception;)Ljava/lang/Exception;
     .locals 0
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 25
     iput-object p1, p0, Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;->mException:Ljava/lang/Exception;
 
     return-object p1
@@ -67,8 +57,6 @@
 .method public getException()Ljava/lang/Exception;
     .locals 1
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;->mException:Ljava/lang/Exception;
 
     return-object v0
@@ -77,8 +65,6 @@
 .method public getObject()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/android/settings/framework/io/ObjectSerialization$DeserializedContent;->mObject:Ljava/lang/Object;
 
     return-object v0
@@ -87,8 +73,6 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

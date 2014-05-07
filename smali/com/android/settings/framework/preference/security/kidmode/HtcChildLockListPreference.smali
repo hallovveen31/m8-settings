@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -53,7 +51,6 @@
 
     sput-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->TAG:Ljava/lang/String;
 
-    .line 38
     sget-boolean v0, Lcom/android/settings/framework/flag/HtcSkuFlags;->isDebugMode:Z
 
     sput-boolean v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->DEBUG:Z
@@ -63,57 +60,39 @@
 
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 53
     invoke-direct {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;)V
 
-    .line 41
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mIsAlignLastControl:Z
 
-    .line 54
     iput-object p1, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
 
-    .line 55
     invoke-direct {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->init()V
 
-    .line 56
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
-    .parameter "context"
-    .parameter "attrs"
 
-    .prologue
-    .line 64
     invoke-direct {p0, p1, p2}, Lcom/android/settings/framework/preference/HtcAbsListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 41
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mIsAlignLastControl:Z
 
-    .line 65
     iput-object p1, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
 
-    .line 66
     invoke-direct {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->init()V
 
-    .line 67
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;)Landroid/content/Context;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -121,10 +100,7 @@
 
 .method static synthetic access$100(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;)Z
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 33
     iget-boolean v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mIsAlignLastControl:Z
 
     return v0
@@ -132,10 +108,7 @@
 
 .method static synthetic access$200(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;)[Ljava/lang/String;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntries:[Ljava/lang/String;
 
     return-object v0
@@ -143,10 +116,7 @@
 
 .method static synthetic access$300(Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;)[Ljava/lang/String;
     .locals 1
-    .parameter "x0"
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntriesDescription:[Ljava/lang/String;
 
     return-object v0
@@ -154,11 +124,7 @@
 
 .method static synthetic access$400(Landroid/content/Context;I)I
     .locals 1
-    .parameter "x0"
-    .parameter "x1"
 
-    .prologue
-    .line 33
     invoke-static {p0, p1}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->setExitAction(Landroid/content/Context;I)I
 
     move-result v0
@@ -169,8 +135,6 @@
 .method static synthetic access$500()Z
     .locals 1
 
-    .prologue
-    .line 33
     sget-boolean v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->DEBUG:Z
 
     return v0
@@ -179,8 +143,6 @@
 .method static synthetic access$600()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -188,20 +150,13 @@
 
 .method private static getExitAction(Landroid/content/Context;)I
     .locals 8
-    .parameter "context"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 136
     const/4 v7, 0x0
 
-    .line 137
-    .local v7, exitAction:I
     const/4 v6, 0x0
 
-    .line 139
-    .local v6, c:Landroid/database/Cursor;
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -218,17 +173,14 @@
 
     move-result-object v6
 
-    .line 142
     if-eqz v6, :cond_0
 
-    .line 143
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 144
     const-string v0, "prefs_value"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -239,15 +191,12 @@
 
     move-result v7
 
-    .line 148
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 150
     :cond_0
     return v7
 
-    .line 146
     :cond_1
     sget-object v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->TAG:Ljava/lang/String;
 
@@ -261,8 +210,6 @@
 .method private init()V
     .locals 2
 
-    .prologue
-    .line 70
     invoke-static {}, Lcom/android/settings/framework/flag/feature/HtcFeatureFlags;->getSenseVersion()F
 
     move-result v0
@@ -273,12 +220,10 @@
 
     if-ltz v0, :cond_0
 
-    .line 71
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mIsAlignLastControl:Z
 
-    .line 73
     :cond_0
     return-void
 .end method
@@ -286,8 +231,6 @@
 .method private initAdapter()V
     .locals 6
 
-    .prologue
-    .line 170
     new-instance v0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$1;
 
     iget-object v2, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
@@ -304,25 +247,18 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mListAdapter:Landroid/widget/ListAdapter;
 
-    .line 204
     return-void
 .end method
 
 .method private static setExitAction(Landroid/content/Context;I)I
     .locals 4
-    .parameter "context"
-    .parameter "exitAction"
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 161
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 163
-    .local v0, values:Landroid/content/ContentValues;
     const-string v1, "prefs_value"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -331,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 164
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -350,9 +285,7 @@
 .method protected getCustomDialogTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 83
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -368,8 +301,6 @@
 .method protected getCustomEntries()[Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 89
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -384,7 +315,6 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntries:[Ljava/lang/String;
 
-    .line 92
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -399,10 +329,8 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntriesDescription:[Ljava/lang/String;
 
-    .line 95
     invoke-direct {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->initAdapter()V
 
-    .line 97
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mChildLockEntries:[Ljava/lang/String;
 
     return-object v0
@@ -411,8 +339,6 @@
 .method protected getCustomEntryValues()[Ljava/lang/CharSequence;
     .locals 3
 
-    .prologue
-    .line 102
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -443,9 +369,7 @@
 .method protected getCustomTitle()Ljava/lang/CharSequence;
     .locals 2
 
-    .prologue
-    .line 77
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -460,13 +384,9 @@
 
 .method protected onDialogClosed(Z)V
     .locals 2
-    .parameter "positiveResult"
 
-    .prologue
-    .line 236
     if-eqz p1, :cond_0
 
-    .line 239
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference$3;
@@ -477,31 +397,25 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 250
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->setValue(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 251
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getEntry()Ljava/lang/CharSequence;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcListPreference;->getEntry()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->setSummary(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, v0}, Lcom/htc/preference/HtcListPreference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 253
     :cond_0
     return-void
 .end method
 
 .method protected onGetValueInBackground(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
-    .parameter "context"
 
-    .prologue
-    .line 110
     invoke-static {p1}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getExitAction(Landroid/content/Context;)I
 
     move-result v0
@@ -515,10 +429,7 @@
 
 .method protected onMapValueToIndex(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 2
-    .parameter "value"
 
-    .prologue
-    .line 115
     invoke-super {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;->onMapValueToIndex(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v1
@@ -527,16 +438,12 @@
 
     move-result v0
 
-    .line 118
-    .local v0, index:I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 119
     const/4 v0, 0x0
 
-    .line 121
     :cond_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -547,22 +454,18 @@
 
 .method protected onPrepareDialogBuilder(Lcom/htc/widget/HtcAlertDialog$Builder;)V
     .locals 4
-    .parameter "builder"
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 208
-    invoke-super {p0, p1}, Lcom/android/settings/framework/preference/HtcAbsListPreference;->onPrepareDialogBuilder(Lcom/htc/widget/HtcAlertDialog$Builder;)V
+    invoke-super {p0, p1}, Lcom/htc/preference/HtcListPreference;->onPrepareDialogBuilder(Lcom/htc/widget/HtcAlertDialog$Builder;)V
 
-    .line 210
     iget-object v0, p0, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->mListAdapter:Landroid/widget/ListAdapter;
 
-    invoke-virtual {p0}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->getValue()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/htc/preference/HtcListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/settings/framework/preference/security/kidmode/HtcChildLockListPreference;->findIndexOfValue(Ljava/lang/String;)I
+    invoke-virtual {p0, v1}, Lcom/htc/preference/HtcListPreference;->findIndexOfValue(Ljava/lang/String;)I
 
     move-result v1
 
@@ -572,20 +475,14 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/htc/widget/HtcAlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 230
     invoke-virtual {p1, v3, v3}, Lcom/htc/widget/HtcAlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcom/htc/widget/HtcAlertDialog$Builder;
 
-    .line 231
     return-void
 .end method
 
 .method protected onSetValueInBackground(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
-    .parameter "context"
-    .parameter "newValue"
 
-    .prologue
-    .line 127
     const/4 v0, 0x1
 
     return v0

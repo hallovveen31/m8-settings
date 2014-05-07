@@ -24,10 +24,7 @@
 # direct methods
 .method constructor <init>(Lcom/android/settings/LocalePickerSetupWizard;)V
     .locals 0
-    .parameter
 
-    .prologue
-    .line 374
     iput-object p1, p0, Lcom/android/settings/LocalePickerSetupWizard$2;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,19 +37,15 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 377
     const-string v0, "OOBE_LocalePickerSetupWizard"
 
     const-string v1, "recreate"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 378
     iget-object v0, p0, Lcom/android/settings/LocalePickerSetupWizard$2;->this$0:Lcom/android/settings/LocalePickerSetupWizard;
 
-    invoke-virtual {v0}, Lcom/android/settings/LocalePickerSetupWizard;->recreate()V
+    invoke-virtual {v0}, Landroid/app/Activity;->recreate()V
 
-    .line 379
     return-void
 .end method

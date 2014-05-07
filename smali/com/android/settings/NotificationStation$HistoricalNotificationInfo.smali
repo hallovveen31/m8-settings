@@ -38,8 +38,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,10 +45,7 @@
 
 .method synthetic constructor <init>(Lcom/android/settings/NotificationStation$1;)V
     .locals 0
-    .parameter "x0"
 
-    .prologue
-    .line 236
     invoke-direct {p0}, Lcom/android/settings/NotificationStation$HistoricalNotificationInfo;-><init>()V
 
     return-void

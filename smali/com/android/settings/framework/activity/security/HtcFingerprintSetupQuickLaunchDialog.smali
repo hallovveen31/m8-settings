@@ -3,8 +3,8 @@
 .source "HtcFingerprintSetupQuickLaunchDialog.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
 .implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # static fields
@@ -36,13 +36,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     sget-boolean v0, Lcom/htc/htcjavaflag/HtcBuildFlag;->Htc_DEBUG_flag:Z
 
     sput-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
-    .line 32
     const-class v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -57,11 +54,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-direct {p0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;-><init>()V
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mHtcFontScale:F
@@ -72,23 +66,18 @@
 .method private dismissDialog()V
     .locals 1
 
-    .prologue
-    .line 95
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 96
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->dismiss()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->dismiss()V
 
-    .line 97
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 99
     :cond_0
     return-void
 .end method
@@ -96,30 +85,24 @@
 .method private setQuickLaunchForFingerprint()V
     .locals 3
 
-    .prologue
-    .line 102
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 103
-    .local v0, intent:Landroid/content/Intent;
     const-string v1, ":android:show_fragment_title"
 
     const v2, 0x7f0c0238
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 104
     const-string v1, "finger_id"
 
     iget v2, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mFingerId:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 105
     new-instance v1, Landroid/content/ComponentName;
 
     const-class v2, Lcom/android/settings/Settings$HtcFingerPrintQuickLaunchActivity;
@@ -128,10 +111,8 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 106
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 107
     return-void
 .end method
 
@@ -139,10 +120,7 @@
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 3
-    .parameter "dialog"
 
-    .prologue
-    .line 133
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -153,7 +131,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_0
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
@@ -171,25 +148,18 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 135
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 136
     return-void
 .end method
 
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
-    .parameter "dialog"
-    .parameter "which"
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 111
     packed-switch p2, :pswitch_data_0
 
-    .line 124
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -216,15 +186,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :cond_0
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 129
     :goto_0
     return-void
 
-    .line 113
     :pswitch_0
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
@@ -236,11 +203,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
     :cond_1
     invoke-direct {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->setQuickLaunchForFingerprint()V
 
-    .line 115
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -255,12 +220,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 116
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
-    .line 119
     :pswitch_1
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
@@ -272,7 +235,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     :cond_2
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
@@ -288,12 +250,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 121
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
-    .line 111
     nop
 
     :pswitch_data_0
@@ -305,21 +265,16 @@
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
-    .parameter "savedInstanceState"
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 54
     invoke-super {p0, p1}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 56
     invoke-static {p0}, Landroid/content/res/HtcConfiguration;->applyHtcFontscale(Landroid/content/Context;)Z
 
-    .line 57
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -331,20 +286,17 @@
 
     iput v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mHtcFontScale:F
 
-    .line 61
     invoke-static {p0, v3}, Lcom/htc/configuration/HtcWrapConfiguration;->getHtcThemeId(Landroid/content/Context;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mThemeId:I
 
-    .line 62
     iget v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mThemeId:I
 
-    invoke-virtual {p0, v0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->setTheme(I)V
+    invoke-virtual {p0, v0}, Landroid/view/ContextThemeWrapper;->setTheme(I)V
 
-    .line 64
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->getTheme()Landroid/content/res/Resources$Theme;
+    invoke-virtual {p0}, Landroid/view/ContextThemeWrapper;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
 
@@ -352,8 +304,7 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
-    .line 67
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->getIntent()Landroid/content/Intent;
+    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -365,7 +316,6 @@
 
     iput v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mFingerId:I
 
-    .line 68
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -394,13 +344,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     :cond_0
     iget v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mFingerId:I
 
     if-gtz v0, :cond_2
 
-    .line 70
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_1
@@ -411,25 +359,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     :cond_1
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 78
     :goto_0
     return-void
 
-    .line 74
     :cond_2
     const-string v0, "fingerprint_shared_preferences"
 
-    invoke-virtual {p0, v0, v3}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {p0, v0, v3}, Landroid/content/ContextWrapper;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 75
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -444,7 +388,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 76
     invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->showDialog()V
 
     goto :goto_0
@@ -453,8 +396,6 @@
 .method protected onDestroy()V
     .locals 2
 
-    .prologue
-    .line 147
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -465,22 +406,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     invoke-direct {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->dismissDialog()V
 
-    .line 149
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->onDestroy()V
 
-    .line 150
     return-void
 .end method
 
 .method protected onPause()V
     .locals 2
 
-    .prologue
-    .line 140
     sget-boolean v0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -491,25 +427,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     :cond_0
     invoke-super {p0}, Lcom/android/settings/framework/app/HtcInternalAlertActivity;->onPause()V
 
-    .line 142
-    invoke-virtual {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->finish()V
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 144
     return-void
 .end method
 
 .method protected showDialog()V
     .locals 2
 
-    .prologue
-    .line 81
     invoke-direct {p0}, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->dismissDialog()V
 
-    .line 83
     new-instance v0, Lcom/htc/widget/HtcAlertDialog$Builder;
 
     invoke-direct {v0, p0}, Lcom/htc/widget/HtcAlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -548,11 +478,9 @@
 
     iput-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    .line 91
     iget-object v0, p0, Lcom/android/settings/framework/activity/security/HtcFingerprintSetupQuickLaunchDialog;->mAlertDialog:Lcom/htc/widget/HtcAlertDialog;
 
-    invoke-virtual {v0}, Lcom/htc/widget/HtcAlertDialog;->show()V
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
 
-    .line 92
     return-void
 .end method
